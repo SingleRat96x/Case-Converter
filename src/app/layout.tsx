@@ -1,38 +1,34 @@
-import { Inter as FontSans } from 'next/font/google';
-import { Fira_Code as FontMono } from 'next/font/google';
-import { ThemeProvider } from '@/app/providers/theme-provider';
-import './globals.css';
+import type { Metadata } from "next";
+import { Inter } from "next/font/google";
+import "./globals.css";
+import { ThemeProvider } from "./providers";
+import { MainLayout } from "./components/layout/MainLayout";
 
-const fontSans = FontSans({
-  subsets: ['latin'],
-  variable: '--font-sans',
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
 });
 
-const fontMono = FontMono({
-  subsets: ['latin'],
-  variable: '--font-mono',
-});
-
-export const metadata = {
-  title: 'Case Converter - Free Online Text Case Converter Tools',
-  description: 'Convert text case online with our free tools. Change to UPPERCASE, lowercase, Title Case, and more. Simple, fast, and free to use.',
+export const metadata: Metadata = {
+  title: "Case Converter - Free Online Text Case Converter Tools",
+  description: "Transform your text with our free online case converter tools. Convert to uppercase, lowercase, title case, and more. Simple, fast, and easy to use.",
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${fontSans.variable} ${fontMono.variable} font-sans antialiased`}>
+      <body className={`${inter.variable} font-sans antialiased`}>
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          {children}
+          <MainLayout>{children}</MainLayout>
         </ThemeProvider>
       </body>
     </html>
