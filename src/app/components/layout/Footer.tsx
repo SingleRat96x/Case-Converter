@@ -22,6 +22,38 @@ export function Footer() {
     { href: "/tools/remove-text-formatting", label: "Remove Formatting" },
   ];
 
+  const randomGeneratorTools = [
+    { href: "/tools/random-choice", label: "Random Choice" },
+    { href: "/tools/random-date", label: "Random Date" },
+    { href: "/tools/random-ip", label: "Random IP" },
+    { href: "/tools/random-letter", label: "Random Letter" },
+    { href: "/tools/random-month", label: "Random Month" },
+    { href: "/tools/random-number", label: "Random Number" },
+    { href: "/tools/password-generator", label: "Password Generator" },
+    { href: "/tools/uuid-generator", label: "UUID Generator" },
+  ];
+
+  const codeTranslationTools = [
+    { href: "/tools/json-stringify", label: "JSON Stringify" },
+    { href: "/tools/md5-hash", label: "MD5 Hash" },
+    { href: "/tools/morse-code", label: "Morse Code" },
+    { href: "/tools/number-sorter", label: "Number Sorter" },
+    { href: "/tools/rot13", label: "ROT13" },
+    { href: "/tools/slugify-url", label: "Slugify URL" },
+    { href: "/tools/utf8-converter", label: "UTF-8 Converter" },
+    { href: "/tools/url-encode-decode", label: "URL Encode/Decode" },
+    { href: "/tools/utm-builder", label: "UTM Builder" },
+  ];
+
+  const basicTools = [
+    { href: "/tools/sentence-case", label: "Sentence Case" },
+    { href: "/tools/title-case", label: "Title Case" },
+    { href: "/tools/uppercase", label: "UPPERCASE" },
+    { href: "/tools/lowercase", label: "lowercase" },
+    { href: "/tools/alternating-case", label: "aLtErNaTiNg cAsE" },
+    { href: "/tools/text-counter", label: "Text Counter" },
+  ];
+
   // Split tools into chunks of 8
   const chunkSize = 8;
   const textModificationColumns = Array.from({ length: Math.ceil(textModificationTools.length / chunkSize) }, (_, i) =>
@@ -31,60 +63,22 @@ export function Footer() {
   return (
     <footer className="border-t bg-gray-50/50 dark:bg-gray-950/50">
       <div className="container py-12 px-4">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-4">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Text Tools
+              Basic Tools
             </h3>
             <ul className="space-y-2.5">
-              <li>
-                <Link 
-                  href="/tools/sentence-case" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Sentence Case
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/tools/title-case" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Title Case
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/tools/uppercase" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  UPPERCASE
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/tools/lowercase" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  lowercase
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/tools/alternating-case" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  aLtErNaTiNg cAsE
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/tools/text-counter" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Text Counter
-                </Link>
-              </li>
+              {basicTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link 
+                    href={tool.href} 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
@@ -112,82 +106,90 @@ export function Footer() {
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Resources
+              Random Generators
             </h3>
             <ul className="space-y-2.5">
-              <li>
-                <Link 
-                  href="/blog" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Blog
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/docs" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Documentation
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/api" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  API
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/changelog" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Changelog
-                </Link>
-              </li>
+              {randomGeneratorTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link 
+                    href={tool.href} 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Legal
+              Code & Data Tools
             </h3>
             <ul className="space-y-2.5">
-              <li>
-                <Link 
-                  href="/privacy" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Privacy Policy
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/terms" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Terms of Service
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/sitemap.xml" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  Sitemap
-                </Link>
-              </li>
-              <li>
-                <Link 
-                  href="/feed.xml" 
-                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                >
-                  RSS Feed
-                </Link>
-              </li>
+              {codeTranslationTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link 
+                    href={tool.href} 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
+          </div>
+        </div>
+
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Company
+              </h3>
+              <ul className="space-y-2.5">
+                <li>
+                  <Link 
+                    href="/about" 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/contact" 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    Contact Us
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-4">
+              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+                Legal
+              </h3>
+              <ul className="space-y-2.5">
+                <li>
+                  <Link 
+                    href="/privacy" 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link 
+                    href="/terms" 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
 

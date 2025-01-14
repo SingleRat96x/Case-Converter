@@ -23,15 +23,14 @@ export const TOOL_CATEGORIES = {
   CODE_DATA: 'Code & Data Translation',
   IMAGE_TOOLS: 'Image Tools',
   RANDOM_GENERATORS: 'Random Generators',
-  MISC_TOOLS: 'Misc. Tools',
-  RESOURCES: 'Resources'
+  MISC_TOOLS: 'Misc. Tools'
 } as const;
 
-// Cache object to store tool content
+// Cache object to store tool content with improved typing
 const toolContentCache: { [key: string]: { content: ToolContent; timestamp: number } } = {};
 const CACHE_DURATION = 3600000; // 1 hour in milliseconds
 
-// Cache for all tools
+// Cache for all tools with improved typing
 let allToolsCache: { content: ToolContent[]; timestamp: number } = {
   content: [],
   timestamp: 0
@@ -39,35 +38,45 @@ let allToolsCache: { content: ToolContent[]; timestamp: number } = {
 
 export async function getAllTools(timestamp?: string | number): Promise<ToolContent[]> {
   try {
-    // If timestamp is provided, bypass cache completely
-    if (timestamp) {
-      console.log('Timestamp provided, fetching fresh data from Supabase');
+    // If timestamp is provided or cache is invalidated, bypass cache completely
+    if (timestamp || allToolsCache.timestamp < 0) {
+      console.log('Fetching fresh data from Supabase');
       const { data, error } = await supabase
         .from('tools')
         .select('*')
-        .order('name');
+        .order('order', { ascending: true })  // Order by the menu order
+        .order('name');  // Then by name as secondary sort
 
       if (error) {
         console.error('Supabase error fetching tools:', error);
         throw error;
       }
 
+      // Update cache with fresh data
+      if (data) {
+        allToolsCache = {
+          content: data,
+          timestamp: Date.now()
+        };
+      }
+
       return data || [];
     }
 
-    // Check if we have a valid cached version and it's not been invalidated
+    // Check if we have a valid cached version
     const now = Date.now();
     if (allToolsCache.content.length > 0 && 
-        allToolsCache.timestamp > 0 && // Check if cache hasn't been invalidated
         (now - allToolsCache.timestamp) < CACHE_DURATION) {
       console.log('Returning cached tools list');
       return allToolsCache.content;
     }
 
-    console.log('Fetching fresh tools data from Supabase');
+    // Fetch fresh data if cache is expired
+    console.log('Cache expired, fetching fresh data');
     const { data, error } = await supabase
       .from('tools')
       .select('*')
+      .order('order', { ascending: true })
       .order('name');
 
     if (error) {
@@ -76,13 +85,10 @@ export async function getAllTools(timestamp?: string | number): Promise<ToolCont
     }
 
     if (data) {
-      // Update cache with fresh data
       allToolsCache = {
         content: data,
         timestamp: now
       };
-      console.log('Updated tools cache with fresh data');
-      console.log('Tools with show_in_index=true:', data.filter(tool => tool.show_in_index).map(t => t.id));
     }
 
     return data || [];

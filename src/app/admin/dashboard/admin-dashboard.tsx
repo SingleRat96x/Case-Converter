@@ -9,7 +9,7 @@ import { supabase } from '@/lib/supabase';
 import { invalidateToolCache, invalidateAllCaches } from '@/lib/tools';
 import type { ToolContent } from '@/lib/tools';
 import { clearAuthToken, isAuthenticated } from '@/lib/auth';
-import { MenuManagement } from './menu-management';
+import { MenuManager } from './menu-manager';
 import { revalidateToolContent } from '@/lib/actions';
 
 export function AdminDashboard() {
@@ -445,7 +445,7 @@ export function AdminDashboard() {
           )}
 
           {activeTab === 'menu' ? (
-            <MenuManagement />
+            <MenuManager />
           ) : activeTab === 'visibility' ? (
             <div className="space-y-6">
               <h2 className="text-2xl font-bold mb-6">Tool Visibility Settings</h2>

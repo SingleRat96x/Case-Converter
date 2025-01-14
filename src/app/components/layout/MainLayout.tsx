@@ -9,7 +9,7 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
   const isAdminRoute = pathname?.startsWith('/admin');
 
   return (
-    <div className="min-h-screen bg-background transition-colors duration-300">
+    <div className="min-h-screen bg-background theme-transition">
       {!isAdminRoute && <Header />}
       <main className="w-full">
         <div className="container py-4 md:py-6 lg:py-8">

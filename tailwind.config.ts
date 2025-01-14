@@ -8,6 +8,15 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      '2xs': '375px',
+      'xs': '480px',
+      'sm': '640px',
+      'md': '768px',
+      'lg': '1024px',
+      'xl': '1280px',
+      '2xl': '1536px',
+    },
     container: {
       center: true,
       padding: '2rem',
@@ -120,6 +129,18 @@ const config: Config = {
               borderBottomColor: 'hsl(var(--border))',
             },
           },
+        },
+      },
+      backgroundSize: {
+        '300%': '300%',
+      },
+      animation: {
+        'gradient': 'gradient 3s ease infinite',
+      },
+      keyframes: {
+        gradient: {
+          '0%, 100%': { backgroundPosition: '0% 50%' },
+          '50%': { backgroundPosition: '100% 50%' },
         },
       },
     },
