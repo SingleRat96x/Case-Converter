@@ -14,12 +14,12 @@ export function ToolBlock({ title, description, href, example }: ToolBlockProps)
   return (
     <Link
       href={href}
-      className="block p-6 rounded-lg border bg-card hover:bg-accent/10 transition-colors"
+      className="tool-card block"
     >
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold">{title}</h3>
-          <ArrowRight className="h-4 w-4 text-muted-foreground" />
+          <ArrowRight className="h-4 w-4 text-muted-foreground arrow-icon" />
         </div>
         <p className="text-sm text-muted-foreground">{description}</p>
         {example && (
