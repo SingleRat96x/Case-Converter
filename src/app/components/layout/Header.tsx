@@ -64,15 +64,21 @@ export function Header() {
                   {category}
                 </Link>
                 {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
-                  <div className="absolute top-full left-0 mt-1 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 min-w-[200px]">
-                    <div className={`grid ${getColumnCount(toolsByCategory[category]) === 2 ? 'grid-cols-2 min-w-[400px]' : 'grid-cols-1'} gap-1`}>
+                  <div className="absolute top-full left-0 mt-1 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700">
+                    <div className={`grid ${getColumnCount(toolsByCategory[category]) === 2 ? 'grid-cols-2 gap-x-4' : 'grid-cols-1'} gap-y-1 p-2`}
+                         style={{ minWidth: getColumnCount(toolsByCategory[category]) === 2 ? '480px' : '240px' }}>
                       {toolsByCategory[category].map((tool) => (
                         <Link
                           key={tool.id}
                           href={`/tools/${tool.id}`}
-                          className="px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 whitespace-nowrap block"
+                          className="group relative px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md"
+                          title={tool.title}
                         >
-                          {tool.title}
+                          <span className="block truncate">{tool.name || tool.title}</span>
+                          {/* Full title tooltip */}
+                          <div className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 px-2 py-1 bg-gray-900 text-white text-xs rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap pointer-events-none">
+                            {tool.title}
+                          </div>
                         </Link>
                       ))}
                     </div>
@@ -121,10 +127,11 @@ export function Header() {
                       <Link
                         key={tool.id}
                         href={`/tools/${tool.id}`}
-                        className="block rounded-md px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700"
+                        className="block rounded-md px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700 truncate"
                         onClick={() => setIsMenuOpen(false)}
+                        title={tool.title}
                       >
-                        {tool.title}
+                        {tool.name || tool.title}
                       </Link>
                     ))}
                   </div>
