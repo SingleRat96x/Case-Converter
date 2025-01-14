@@ -7,6 +7,7 @@ import { setAuthToken } from '@/lib/auth';
 
 export function AdminLogin() {
   const router = useRouter();
+  const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [errorMessage, setErrorMessage] = useState<string | null>(null);
@@ -17,23 +18,18 @@ export function AdminLogin() {
     setErrorMessage(null);
 
     try {
-      const { data, error: supabaseError } = await supabase
-        .from('admin_settings')
-        .select('password_hash')
-        .single();
+      const { data: { user }, error } = await supabase.auth.signInWithPassword({
+        email,
+        password,
+      });
 
-      if (supabaseError) {
-        throw new Error('Failed to verify password');
-      }
-
-      if (data.password_hash !== password) {
-        throw new Error('Invalid password');
-      }
+      if (error) throw error;
+      if (!user) throw new Error('No user found');
 
       setAuthToken();
       router.push('/admin/dashboard');
     } catch (err) {
-      setErrorMessage(err instanceof Error ? err.message : 'An error occurred');
+      setErrorMessage(err instanceof Error ? err.message : 'Invalid credentials');
     } finally {
       setIsLoading(false);
     }
@@ -50,6 +46,25 @@ export function AdminLogin() {
 
         <form className="mt-8 space-y-6 bg-[#1e293b] p-8 rounded-lg shadow-xl" onSubmit={handleSubmit}>
           <div className="space-y-4">
+            <div>
+              <label htmlFor="email" className="block text-sm font-medium text-gray-200">
+                Email
+              </label>
+              <div className="mt-1">
+                <input
+                  id="email"
+                  name="email"
+                  type="email"
+                  autoComplete="email"
+                  required
+                  className="block w-full rounded-md border border-gray-600 bg-[#0f172a] px-3 py-2 text-white placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
+                  placeholder="Enter your email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+              </div>
+            </div>
+
             <div>
               <label htmlFor="password" className="block text-sm font-medium text-gray-200">
                 Password
