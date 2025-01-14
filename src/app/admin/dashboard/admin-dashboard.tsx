@@ -4,11 +4,13 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { Search, LogOut, Bold, Italic, Strikethrough, List, ListOrdered, Heading1, Heading2, Heading3, Code, Quote, Undo, Redo, Minus, LayoutGrid, Settings, Eye, EyeOff, RefreshCw, ChevronLeft } from 'lucide-react';
+import { Search, LogOut, Bold, Italic, Strikethrough, List, ListOrdered, Heading1, Heading2, Heading3, Code, Quote, Undo, Redo, Minus, LayoutGrid, Settings, Eye, EyeOff, RefreshCw, ChevronLeft, Menu as MenuIcon, Users, FileText } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { invalidateToolCache, invalidateAllCaches } from '@/lib/tools';
 import type { ToolContent } from '@/lib/tools';
 import { clearAuthToken, isAuthenticated } from '@/lib/auth';
+import { MenuManagement } from './menu-management';
+import { revalidateToolContent } from '@/lib/actions';
 
 export function AdminDashboard() {
   const router = useRouter();
@@ -18,7 +20,7 @@ export function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'tools' | 'visibility'>('tools');
+  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu'>('tools');
 
   const editor = useEditor({
     extensions: [StarterKit],
@@ -99,6 +101,14 @@ export function AdminDashboard() {
 
   const handleVisibilityToggle = async (toolId: string, currentValue: boolean) => {
     try {
+      // First update the local state optimistically
+      setTools(prevTools => 
+        prevTools.map(tool => 
+          tool.id === toolId ? { ...tool, show_in_index: !currentValue } : tool
+        )
+      );
+
+      // Then update in the database
       const { error } = await supabase
         .from('tools')
         .update({
@@ -109,25 +119,44 @@ export function AdminDashboard() {
 
       if (error) throw error;
 
-      // Invalidate the cache for this tool
-      invalidateToolCache(toolId);
+      // First invalidate the specific tool cache
+      await invalidateToolCache(toolId);
       
-      // Refresh the tools list
-      fetchTools();
+      // Then invalidate all caches to ensure the index page is updated
+      await invalidateAllCaches();
       
-      setError('Visibility updated successfully!');
+      // Revalidate Next.js cache
+      await revalidateToolContent(toolId);
+      
+      // Finally refresh the tools list to ensure we have the latest data
+      await fetchTools();
+      
+      setError('Visibility updated successfully! Please wait a moment for the changes to take effect.');
     } catch (err) {
+      // Revert the optimistic update on error
+      await fetchTools();
       setError(err instanceof Error ? err.message : 'An error occurred while updating visibility');
     }
   };
 
-  const handleClearCache = () => {
+  const handleClearCache = async () => {
     try {
-      invalidateAllCaches();
-      setError('Cache cleared successfully! The changes will be reflected on the next page load.');
-      fetchTools(); // Refresh the tools list
+      setIsLoading(true);
+      // Make sure to await the cache invalidation
+      await invalidateAllCaches();
+      
+      // Revalidate Next.js cache for all pages
+      await revalidateToolContent('*');
+
+      // Redirect to home page with timestamp to force fresh data
+      window.open(`/?t=${Date.now()}`, '_blank');
+      
+      await fetchTools(); // Refresh the tools list
+      setError('Cache cleared successfully! The changes will be reflected in the new tab.');
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred while clearing the cache');
+    } finally {
+      setIsLoading(false);
     }
   };
 
@@ -284,14 +313,6 @@ export function AdminDashboard() {
     );
   };
 
-  if (isLoading && !isEditing) {
-    return (
-      <div className="min-h-screen bg-white dark:bg-gray-900 text-gray-900 dark:text-white p-8 flex items-center justify-center">
-        <div className="text-xl">Loading...</div>
-      </div>
-    );
-  }
-
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Mobile Header */}
@@ -337,6 +358,17 @@ export function AdminDashboard() {
           >
             <Settings className="h-5 w-5" />
             Visibility
+          </button>
+          <button
+            onClick={() => setActiveTab('menu')}
+            className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-colors ${
+              activeTab === 'menu' 
+                ? 'bg-primary text-primary-foreground' 
+                : 'hover:bg-accent'
+            }`}
+          >
+            <MenuIcon className="h-5 w-5" />
+            Menu
           </button>
         </nav>
       </div>
@@ -389,6 +421,17 @@ export function AdminDashboard() {
                 <Settings className="h-5 w-5" />
                 Visibility Settings
               </button>
+              <button
+                onClick={() => setActiveTab('menu')}
+                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
+                  activeTab === 'menu' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'hover:bg-accent'
+                }`}
+              >
+                <MenuIcon className="h-5 w-5" />
+                Menu Management
+              </button>
             </nav>
           </div>
         </div>
@@ -401,7 +444,9 @@ export function AdminDashboard() {
             </div>
           )}
 
-          {activeTab === 'visibility' ? (
+          {activeTab === 'menu' ? (
+            <MenuManagement />
+          ) : activeTab === 'visibility' ? (
             <div className="space-y-6">
               <h2 className="text-2xl font-bold mb-6">Tool Visibility Settings</h2>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
@@ -510,4 +555,4 @@ export function AdminDashboard() {
       </div>
     </div>
   );
-} 
+}

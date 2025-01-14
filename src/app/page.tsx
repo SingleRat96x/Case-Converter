@@ -2,10 +2,15 @@ import { CaseChangerTool } from '@/components/tools/CaseChangerTool';
 import { ToolBlock } from '@/components/ToolBlock';
 import { getAllTools } from '@/lib/tools';
 
-export const revalidate = 3600; // revalidate every hour
-
-export default async function Home() {
-  const tools = await getAllTools();
+// No caching or dynamic settings
+export default async function Home({
+  searchParams
+}: {
+  searchParams: { [key: string]: string | string[] | undefined }
+}) {
+  // Force fresh data by using the timestamp in the URL
+  const timestamp = searchParams.t || Date.now();
+  const tools = await getAllTools(timestamp as string | number);
   
   console.log('All tools:', tools.map(t => ({ id: t.id, show_in_index: t.show_in_index })));
   console.log('Filtered tools:', tools

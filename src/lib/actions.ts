@@ -4,34 +4,36 @@ import { revalidatePath, revalidateTag } from 'next/cache';
 
 export async function revalidateToolContent(toolId: string) {
   try {
-    // Revalidate the specific tool page
-    revalidatePath(`/tools/${toolId}`);
-    
-    // Revalidate the tool page and its layout
-    revalidatePath(`/tools/${toolId}`, 'page');
-    revalidatePath(`/tools/${toolId}`, 'layout');
-    
-    // Revalidate the home page and tools list
+    // Force revalidate the home page
     revalidatePath('/', 'page');
+    revalidatePath('/', 'layout');
+    
+    // Force revalidate the tools page
     revalidatePath('/tools', 'page');
+    revalidatePath('/tools', 'layout');
+
+    // If a specific tool, revalidate its page
+    if (toolId !== '*') {
+      revalidatePath(`/tools/${toolId}`, 'page');
+      revalidatePath(`/tools/${toolId}`, 'layout');
+    }
     
     // Revalidate all related tags
     revalidateTag('tools');
-    revalidateTag(`tool-${toolId}`);
-    
-    // Force revalidation of the entire app
-    revalidatePath('/(.*)', 'layout');
+    if (toolId !== '*') {
+      revalidateTag(`tool-${toolId}`);
+    }
     
     console.log('Revalidation complete for:', {
       toolId,
       paths: [
-        `/tools/${toolId}`,
         '/',
         '/tools',
-        '/(.*)'
-      ],
-      tags: ['tools', `tool-${toolId}`]
+        ...(toolId !== '*' ? [`/tools/${toolId}`] : [])
+      ]
     });
+
+    return { success: true };
   } catch (error) {
     console.error('Error during revalidation:', error);
     throw error;

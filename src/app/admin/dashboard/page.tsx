@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import { MenuManagement } from './menu-management';
+import { AdminDashboard } from './admin-dashboard';
 
 export const metadata: Metadata = {
   title: 'Admin Dashboard - Text Case Converter',
@@ -8,5 +8,5 @@ export const metadata: Metadata = {
 };
 
 export default function DashboardPage() {
-  return <MenuManagement />;
+  return <AdminDashboard />;
 } 
