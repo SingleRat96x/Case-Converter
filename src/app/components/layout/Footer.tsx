@@ -4,9 +4,9 @@ import Link from 'next/link';
 
 export function Footer() {
   return (
-    <footer className="bg-background border-t">
-      <div className="container mx-auto px-4 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+    <footer className="border-t">
+      <div className="container py-8">
+        <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <h3 className="text-lg font-semibold mb-3">Text Tools</h3>
             <ul className="space-y-2">
@@ -35,6 +35,11 @@ export function Footer() {
                   aLtErNaTiNg cAsE
                 </Link>
               </li>
+              <li>
+                <Link href="/tools/text-counter" className="text-sm text-muted-foreground hover:text-primary">
+                  Text Counter
+                </Link>
+              </li>
             </ul>
           </div>
 
@@ -52,27 +57,6 @@ export function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/tools/italic-text" className="text-sm text-muted-foreground hover:text-primary">
-                  Italic Text
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools/mirror-text" className="text-sm text-muted-foreground hover:text-primary">
-                  Mirror Text
-                </Link>
-              </li>
-              <li>
-                <Link href="/tools/phonetic-spelling" className="text-sm text-muted-foreground hover:text-primary">
-                  Phonetic Spelling
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-3">Special Text</h3>
-            <ul className="space-y-2">
-              <li>
                 <Link href="/tools/bubble-text" className="text-sm text-muted-foreground hover:text-primary">
                   Bubble Text
                 </Link>
@@ -88,42 +72,120 @@ export function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/tools/duplicate-line-remover" className="text-sm text-muted-foreground hover:text-primary">
+                  Remove Duplicates
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/facebook-font" className="text-sm text-muted-foreground hover:text-primary">
+                  Facebook Font
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/instagram-fonts" className="text-sm text-muted-foreground hover:text-primary">
+                  Instagram Fonts
+                </Link>
+              </li>
+              <li>
                 <Link href="/tools/invisible-text" className="text-sm text-muted-foreground hover:text-primary">
                   Invisible Text
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/italic-text" className="text-sm text-muted-foreground hover:text-primary">
+                  Italic Text
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/mirror-text" className="text-sm text-muted-foreground hover:text-primary">
+                  Mirror Text
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/phonetic-spelling" className="text-sm text-muted-foreground hover:text-primary">
+                  Phonetic Spelling
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/pig-latin" className="text-sm text-muted-foreground hover:text-primary">
+                  Pig Latin
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/plain-text" className="text-sm text-muted-foreground hover:text-primary">
+                  Plain Text
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/remove-line-breaks" className="text-sm text-muted-foreground hover:text-primary">
+                  Remove Line Breaks
+                </Link>
+              </li>
+              <li>
+                <Link href="/tools/remove-text-formatting" className="text-sm text-muted-foreground hover:text-primary">
+                  Remove Formatting
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="text-lg font-semibold mb-3">Navigation</h3>
+            <h3 className="text-lg font-semibold mb-3">Resources</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/about" className="text-sm text-muted-foreground hover:text-primary">
-                  About
+                <Link href="/blog" className="text-sm text-muted-foreground hover:text-primary">
+                  Blog
                 </Link>
               </li>
               <li>
-                <Link href="/contact" className="text-sm text-muted-foreground hover:text-primary">
-                  Contact
+                <Link href="/docs" className="text-sm text-muted-foreground hover:text-primary">
+                  Documentation
                 </Link>
               </li>
               <li>
-                <Link href="/privacy-policy" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="/api" className="text-sm text-muted-foreground hover:text-primary">
+                  API
+                </Link>
+              </li>
+              <li>
+                <Link href="/changelog" className="text-sm text-muted-foreground hover:text-primary">
+                  Changelog
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-3">Legal</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/privacy" className="text-sm text-muted-foreground hover:text-primary">
                   Privacy Policy
                 </Link>
               </li>
               <li>
-                <Link href="/terms-of-service" className="text-sm text-muted-foreground hover:text-primary">
+                <Link href="/terms" className="text-sm text-muted-foreground hover:text-primary">
                   Terms of Service
+                </Link>
+              </li>
+              <li>
+                <Link href="/sitemap.xml" className="text-sm text-muted-foreground hover:text-primary">
+                  Sitemap
+                </Link>
+              </li>
+              <li>
+                <Link href="/feed.xml" className="text-sm text-muted-foreground hover:text-primary">
+                  RSS Feed
                 </Link>
               </li>
             </ul>
           </div>
         </div>
 
-        <div className="mt-8 pt-8 border-t text-center text-sm text-muted-foreground">
-          <p>© {new Date().getFullYear()} Case Converter. All rights reserved.</p>
+        <div className="mt-8 pt-8 border-t">
+          <p className="text-sm text-muted-foreground text-center">
+            © {new Date().getFullYear()} Text Case Converter. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>

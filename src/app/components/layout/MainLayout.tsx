@@ -9,11 +9,9 @@ export function MainLayout({ children }: { children: React.ReactNode }) {
   const isAdminRoute = pathname?.startsWith('/admin');
 
   return (
-    <div className="relative min-h-screen flex flex-col bg-background">
+    <div className="relative min-h-screen">
       {!isAdminRoute && <Header />}
-      <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {children}
-      </main>
+      <main className="pb-16">{children}</main>
       {!isAdminRoute && <Footer />}
     </div>
   );

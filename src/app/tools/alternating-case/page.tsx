@@ -1,41 +1,59 @@
 import type { Metadata } from 'next';
 import { AlternatingCaseConverter } from './alternating-case-converter';
+import { getToolContent } from '@/lib/tools';
 
-export const metadata: Metadata = {
-  title: 'aLtErNaTiNg cAsE Converter - Free Online Text Case Converter',
-  description: 'Convert your text to alternating case online. This free tool alternates between uppercase and lowercase letters. Perfect for creating fun, stylized text.',
-};
+// Force dynamic rendering and disable all caching
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
-export default function AlternatingCasePage() {
+export async function generateMetadata(): Promise<Metadata> {
+  const tool = await getToolContent('alternating-case');
+  if (!tool) {
+    return {
+      title: 'aLtErNaTiNg cAsE Converter',
+      description: 'Convert your text to alternating case online.'
+    };
+  }
+
+  return {
+    title: tool.title,
+    description: tool.short_description,
+  };
+}
+
+export default async function AlternatingCasePage() {
+  const tool = await getToolContent('alternating-case');
+  
+  if (!tool) {
+    return <AlternatingCaseConverter />;
+  }
+
   return (
-    <div className="container mx-auto px-4 py-8 space-y-6">
-      <div className="max-w-[900px] mx-auto space-y-4">
-        <h1 className="text-3xl font-bold">aLtErNaTiNg cAsE Converter</h1>
-        <p className="text-muted-foreground">
-          Convert your text to alternating case online. This free tool alternates between uppercase and lowercase letters. Perfect for creating fun, stylized text.
-        </p>
-      </div>
-
-      <AlternatingCaseConverter />
-
-      <div className="max-w-[900px] mx-auto space-y-6">
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold">How Does the aLtErNaTiNg cAsE Generator Work?</h2>
-          <p className="text-muted-foreground">
-            Type out or copy and paste your content into the left panel. As you do this, you should see that the right panel automatically converts your text into alternating case format. You can then copy and paste that alternating case content wherever you need to.
+    <main className="min-h-screen bg-background">
+      {/* Gradient header section */}
+      <div className="bg-gradient-to-b from-primary/10 to-background py-10">
+        <div className="container text-center space-y-4">
+          <h1 className="text-4xl font-bold tracking-tight">{tool.title}</h1>
+          <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
+            {tool.short_description || 'Convert your text to alternating case online.'}
           </p>
         </div>
-
-        <div className="space-y-4">
-          <h2 className="text-2xl font-semibold">Features of Our aLtErNaTiNg cAsE Converter</h2>
-          <ul className="list-disc list-inside space-y-2 text-muted-foreground">
-            <li>Alternates between uppercase and lowercase letters</li>
-            <li>Maintains spacing and punctuation</li>
-            <li>Real-time conversion as you type</li>
-            <li>Preserves original formatting and line breaks</li>
-          </ul>
-        </div>
       </div>
-    </div>
+
+      {/* Tool section */}
+      <div className="container py-8 space-y-8">
+        <div className="bg-card rounded-lg shadow-lg p-6">
+          <AlternatingCaseConverter />
+        </div>
+
+        {/* Description section */}
+        {tool.long_description && (
+          <div 
+            className="max-w-[700px] mx-auto prose dark:prose-invert"
+            dangerouslySetInnerHTML={{ __html: tool.long_description }}
+          />
+        )}
+      </div>
+    </main>
   );
 } 

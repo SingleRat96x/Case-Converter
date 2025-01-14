@@ -1,72 +1,139 @@
 'use client';
 
-import { useState, useEffect } from 'react';
-import Link from 'next/link';
+import { Menu, Moon, Sun } from 'lucide-react';
 import { useTheme } from 'next-themes';
-import { Menu, X, Sun, Moon } from 'lucide-react';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
+import { TOOL_CATEGORIES } from '@/lib/tools';
+import type { ToolContent } from '@/lib/tools';
+import { supabase } from '@/lib/supabase';
 
 export function Header() {
-  const [mounted, setMounted] = useState(false);
   const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
+  const [tools, setTools] = useState<ToolContent[]>([]);
 
   useEffect(() => {
     setMounted(true);
   }, []);
 
-  if (!mounted) {
-    return null;
-  }
+  useEffect(() => {
+    const fetchTools = async () => {
+      const { data } = await supabase.from('tools').select('*').order('title');
+      if (data) setTools(data);
+    };
+    fetchTools();
+  }, []);
+
+  const toolsByCategory = tools.reduce((acc, tool) => {
+    const category = tool.category || 'uncategorized';
+    if (!acc[category]) {
+      acc[category] = [];
+    }
+    acc[category].push(tool);
+    return acc;
+  }, {} as Record<string, ToolContent[]>);
+
+  const getColumnCount = (categoryTools: ToolContent[]) => {
+    return categoryTools.length > 6 ? 2 : 1;
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
       <div className="container flex h-14 max-w-screen-2xl items-center">
         <div className="mr-4 flex">
-          <Link href="/" className="mr-6 flex items-center space-x-2">
-            <span className="font-bold">Case Converter</span>
+          <Link className="mr-6 flex items-center space-x-2" href="/">
+            <span className="hidden font-bold sm:inline-block">
+              Text Case Converter
+            </span>
           </Link>
-        </div>
-
-        <button
-          className="inline-flex items-center justify-center rounded-md p-2.5 text-sm font-medium md:hidden"
-          onClick={() => setIsMenuOpen(!isMenuOpen)}
-        >
-          <span className="sr-only">Open main menu</span>
-          {isMenuOpen ? (
-            <X className="h-6 w-6" aria-hidden="true" />
-          ) : (
-            <Menu className="h-6 w-6" aria-hidden="true" />
-          )}
-        </button>
-
-        <div className={`${isMenuOpen ? 'block' : 'hidden'} absolute top-full left-0 right-0 bg-background border-b border-border/40 md:static md:block md:border-none`}>
-          <nav className="flex flex-col md:flex-row md:items-center">
-            <Link href="/tools" className="px-5 py-2 text-sm font-medium hover:text-primary">
-              Tools
-            </Link>
-            <Link href="/about" className="px-5 py-2 text-sm font-medium hover:text-primary">
-              About
-            </Link>
-            <Link href="/contact" className="px-5 py-2 text-sm font-medium hover:text-primary">
-              Contact
-            </Link>
+          <nav className="hidden md:flex items-center space-x-6 text-sm font-medium">
+            {Object.values(TOOL_CATEGORIES).map((category) => (
+              <div
+                key={category}
+                className="relative"
+                onMouseEnter={() => setHoveredCategory(category)}
+                onMouseLeave={() => setHoveredCategory(null)}
+              >
+                <Link
+                  href={category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  className="transition-colors hover:text-foreground/80 text-foreground/60 py-4"
+                >
+                  {category}
+                </Link>
+                {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
+                  <div className="absolute top-full left-0 mt-1 py-2 bg-white dark:bg-gray-800 rounded-lg shadow-lg border border-gray-200 dark:border-gray-700 min-w-[200px]">
+                    <div className={`grid ${getColumnCount(toolsByCategory[category]) === 2 ? 'grid-cols-2 min-w-[400px]' : 'grid-cols-1'} gap-1`}>
+                      {toolsByCategory[category].map((tool) => (
+                        <Link
+                          key={tool.id}
+                          href={`/tools/${tool.id}`}
+                          className="px-4 py-2 text-sm hover:bg-gray-100 dark:hover:bg-gray-700 whitespace-nowrap block"
+                        >
+                          {tool.title}
+                        </Link>
+                      ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
           </nav>
         </div>
 
-        <div className="flex flex-1 items-center justify-end">
-          <button
-            onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
-            className="inline-flex h-9 w-9 items-center justify-center rounded-md hover:bg-accent hover:text-accent-foreground"
-          >
-            <span className="sr-only">Toggle theme</span>
-            {theme === 'dark' ? (
-              <Sun className="h-5 w-5" aria-hidden="true" />
-            ) : (
-              <Moon className="h-5 w-5" aria-hidden="true" />
-            )}
-          </button>
+        <div className="flex flex-1 items-center justify-between space-x-2 md:justify-end">
+          {mounted && (
+            <button
+              onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
+              className="inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 hover:bg-accent hover:text-accent-foreground h-9 px-3"
+            >
+              {theme === 'dark' ? <Sun className="h-4 w-4" /> : <Moon className="h-4 w-4" />}
+            </button>
+          )}
         </div>
+
+        <button
+          className="inline-flex items-center justify-center rounded-md p-2.5 text-gray-700 md:hidden"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          <Menu className="h-6 w-6" />
+        </button>
       </div>
+
+      {/* Mobile menu */}
+      {isMenuOpen && (
+        <div className="md:hidden">
+          <div className="space-y-1 px-2 pb-3 pt-2">
+            {Object.values(TOOL_CATEGORIES).map((category) => (
+              <div key={category}>
+                <Link
+                  href={category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  className="block rounded-md px-3 py-2 text-base font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-200 dark:hover:bg-gray-700"
+                  onClick={() => setIsMenuOpen(false)}
+                >
+                  {category}
+                </Link>
+                {toolsByCategory[category]?.length > 0 && (
+                  <div className="pl-6 space-y-1">
+                    {toolsByCategory[category].map((tool) => (
+                      <Link
+                        key={tool.id}
+                        href={`/tools/${tool.id}`}
+                        className="block rounded-md px-3 py-1.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 dark:text-gray-300 dark:hover:bg-gray-700"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {tool.title}
+                      </Link>
+                    ))}
+                  </div>
+                )}
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
     </header>
   );
 } 

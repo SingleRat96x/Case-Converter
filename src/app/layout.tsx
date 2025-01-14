@@ -1,33 +1,29 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "./providers";
+import { ThemeProvider } from "./providers/theme-provider";
 import { MainLayout } from "./components/layout/MainLayout";
 
-const inter = Inter({
-  subsets: ["latin"],
-  variable: "--font-inter",
-});
+const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Case Converter - Free Online Text Case Converter Tools",
-  description: "Transform your text with our free online case converter tools. Convert to uppercase, lowercase, title case, and more. Simple, fast, and easy to use.",
+  title: {
+    default: 'Text Case Converter - Free Online Text Case Tools',
+    template: '%s | Text Case Converter',
+  },
+  description: "Free online tools to convert text between different cases. Transform your text to UPPERCASE, lowercase, Title Case, Sentence case, and more.",
+  keywords: ["text case converter", "case changer", "text tools", "uppercase converter", "lowercase converter", "title case converter", "sentence case converter"],
 };
 
 export default function RootLayout({
   children,
-}: Readonly<{
+}: {
   children: React.ReactNode;
-}>) {
+}) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={`${inter.variable} font-sans antialiased`}>
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
+      <body className={inter.className}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <MainLayout>{children}</MainLayout>
         </ThemeProvider>
       </body>
