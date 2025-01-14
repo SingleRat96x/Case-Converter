@@ -98,7 +98,7 @@ export function MenuManagement() {
       
       <DragDropContext onDragEnd={handleDragEnd}>
         <Droppable droppableId="menu-items">
-          {(provided) => (
+          {(provided: any) => (
             <div
               {...provided.droppableProps}
               ref={provided.innerRef}
@@ -106,7 +106,7 @@ export function MenuManagement() {
             >
               {menuItems.map((item, index) => (
                 <Draggable key={item.id} draggableId={item.id} index={index}>
-                  {(provided) => (
+                  {(provided: any) => (
                     <div
                       ref={provided.innerRef}
                       {...provided.draggableProps}
