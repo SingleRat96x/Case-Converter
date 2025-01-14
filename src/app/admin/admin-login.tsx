@@ -18,18 +18,45 @@ export function AdminLogin() {
     setErrorMessage(null);
 
     try {
-      const { data: { user }, error } = await supabase.auth.signInWithPassword({
-        email,
-        password,
+      // First, try to sign in
+      const { data, error } = await supabase.auth.signInWithPassword({
+        email: email.trim(),
+        password: password.trim(),
       });
 
-      if (error) throw error;
-      if (!user) throw new Error('No user found');
+      if (error) {
+        console.error('Login error:', error);
+        if (error.message.includes('Invalid login credentials')) {
+          throw new Error('Invalid email or password. Please try again.');
+        }
+        throw error;
+      }
+
+      if (!data?.user) {
+        throw new Error('No user data returned');
+      }
+
+      // Check if user has admin role (you can customize this based on your needs)
+      const { data: profile, error: profileError } = await supabase
+        .from('profiles')
+        .select('role')
+        .eq('id', data.user.id)
+        .single();
+
+      if (profileError) {
+        console.error('Profile fetch error:', profileError);
+        throw new Error('Failed to verify admin status');
+      }
+
+      if (profile?.role !== 'admin') {
+        throw new Error('Unauthorized access');
+      }
 
       setAuthToken();
       router.push('/admin/dashboard');
     } catch (err) {
-      setErrorMessage(err instanceof Error ? err.message : 'Invalid credentials');
+      console.error('Authentication error:', err);
+      setErrorMessage(err instanceof Error ? err.message : 'Authentication failed');
     } finally {
       setIsLoading(false);
     }
@@ -42,6 +69,9 @@ export function AdminLogin() {
           <h2 className="mt-6 text-center text-3xl font-extrabold text-white">
             Admin Login
           </h2>
+          <p className="mt-2 text-center text-sm text-gray-400">
+            Please enter your admin credentials
+          </p>
         </div>
 
         <form className="mt-8 space-y-6 bg-[#1e293b] p-8 rounded-lg shadow-xl" onSubmit={handleSubmit}>
