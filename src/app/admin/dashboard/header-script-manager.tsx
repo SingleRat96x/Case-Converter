@@ -15,10 +15,11 @@ import { Loader2 } from "lucide-react";
 interface HeaderElement {
   id: string;
   label: string;
-  type: 'script' | 'meta';
+  type: 'script' | 'meta' | 'html';
   script?: string;
   meta_name?: string;
   meta_content?: string;
+  html_content?: string;
   is_enabled: boolean;
   position: number;
 }
@@ -29,9 +30,10 @@ export function HeaderScriptManager() {
   const [newScript, setNewScript] = useState("");
   const [newMetaName, setNewMetaName] = useState("");
   const [newMetaContent, setNewMetaContent] = useState("");
+  const [newHtmlContent, setNewHtmlContent] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
-  const [activeTab, setActiveTab] = useState<'script' | 'meta'>('script');
+  const [activeTab, setActiveTab] = useState<'script' | 'meta' | 'html'>('script');
   const { toast } = useToast();
 
   useEffect(() => {
@@ -89,11 +91,20 @@ export function HeaderScriptManager() {
         });
         return;
       }
-    } else {
+    } else if (activeTab === 'meta') {
       if (!newLabel.trim() || !newMetaName.trim() || !newMetaContent.trim()) {
         toast({
           title: "Error",
           description: "Please provide a label, meta name, and content.",
+          variant: "destructive",
+        });
+        return;
+      }
+    } else if (activeTab === 'html') {
+      if (!newLabel.trim() || !newHtmlContent.trim()) {
+        toast({
+          title: "Error",
+          description: "Please provide both a label and HTML content.",
           variant: "destructive",
         });
         return;
@@ -108,6 +119,7 @@ export function HeaderScriptManager() {
         script: activeTab === 'script' ? newScript : null,
         meta_name: activeTab === 'meta' ? newMetaName : null,
         meta_content: activeTab === 'meta' ? newMetaContent : null,
+        html_content: activeTab === 'html' ? newHtmlContent : null,
         is_enabled: true,
         position: elements.length,
       }]);
@@ -116,13 +128,14 @@ export function HeaderScriptManager() {
 
       toast({
         title: "Success",
-        description: `${activeTab === 'script' ? 'Script' : 'Meta tag'} added successfully.`,
+        description: `${activeTab === 'script' ? 'Script' : activeTab === 'meta' ? 'Meta tag' : 'HTML tag'} added successfully.`,
       });
 
       setNewLabel("");
       setNewScript("");
       setNewMetaName("");
       setNewMetaContent("");
+      setNewHtmlContent("");
       fetchElements();
     } catch (error) {
       console.error("Error adding element:", error);
@@ -202,10 +215,11 @@ export function HeaderScriptManager() {
   return (
     <div className="space-y-6">
       <Card className="p-6">
-        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'script' | 'meta')}>
+        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'script' | 'meta' | 'html')}>
           <TabsList className="mb-4">
             <TabsTrigger value="script">Add Script</TabsTrigger>
             <TabsTrigger value="meta">Add Meta Tag</TabsTrigger>
+            <TabsTrigger value="html">Add HTML Tag</TabsTrigger>
           </TabsList>
 
           <div className="space-y-4">
@@ -275,6 +289,28 @@ export function HeaderScriptManager() {
               </div>
             </TabsContent>
 
+            <TabsContent value="html">
+              <div>
+                <Label htmlFor="html-content">HTML Content</Label>
+                <Textarea
+                  id="html-content"
+                  value={newHtmlContent}
+                  onChange={(e) => setNewHtmlContent(e.target.value)}
+                  placeholder="Paste your HTML tag here..."
+                  className="mt-1 font-mono"
+                  rows={5}
+                />
+              </div>
+              {newHtmlContent && (
+                <div className="mt-4">
+                  <Label>Preview</Label>
+                  <pre className="mt-1 p-4 bg-secondary rounded-md overflow-x-auto">
+                    <code>{newHtmlContent}</code>
+                  </pre>
+                </div>
+              )}
+            </TabsContent>
+
             <Button
               onClick={handleAdd}
               disabled={isSaving}
@@ -286,7 +322,7 @@ export function HeaderScriptManager() {
                   Saving...
                 </>
               ) : (
-                `Add ${activeTab === 'script' ? 'Script' : 'Meta Tag'}`
+                `Add ${activeTab === 'script' ? 'Script' : activeTab === 'meta' ? 'Meta Tag' : 'HTML Tag'}`
               )}
             </Button>
           </div>
@@ -330,6 +366,8 @@ export function HeaderScriptManager() {
                   <code>
                     {element.type === 'meta' 
                       ? `<meta name="${element.meta_name}" content="${element.meta_content}" />`
+                      : element.type === 'html'
+                      ? element.html_content
                       : element.script}
                   </code>
                 </pre>

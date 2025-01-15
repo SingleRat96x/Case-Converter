@@ -5,10 +5,11 @@ import { supabase } from "@/lib/supabase";
 
 interface HeaderElement {
   id: string;
-  type: 'script' | 'meta';
+  type: 'script' | 'meta' | 'html';
   script?: string;
   meta_name?: string;
   meta_content?: string;
+  html_content?: string;
   is_enabled: boolean;
   position: number;
 }
@@ -51,6 +52,15 @@ export function HeaderScripts() {
         <div
           key={element.id}
           dangerouslySetInnerHTML={{ __html: element.script }}
+        />
+      );
+    }
+
+    if (element.type === 'html' && element.html_content) {
+      return (
+        <div
+          key={element.id}
+          dangerouslySetInnerHTML={{ __html: element.html_content }}
         />
       );
     }
