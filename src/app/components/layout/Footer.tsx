@@ -54,6 +54,28 @@ export function Footer() {
     { href: "/tools/text-counter", label: "Text Counter" },
   ];
 
+  const miscTools = [
+    { href: "/tools/nato-phonetic", label: "NATO Phonetic Alphabet" },
+    { href: "/tools/online-notepad", label: "Online Notepad" },
+    { href: "/tools/online-sentence-counter", label: "Sentence Counter" },
+    { href: "/tools/repeat-text", label: "Repeat Text Generator" },
+    { href: "/tools/roman-numeral-date", label: "Roman Numeral Date" },
+    { href: "/tools/sort-words", label: "Sort Words" },
+    { href: "/tools/text-replacement", label: "Text Replacement" },
+    { href: "/tools/word-frequency", label: "Word Frequency Counter" },
+  ];
+
+  const imageTools = [
+    { href: "/tools/ascii-art-generator", label: "ASCII Art Generator" },
+    { href: "/tools/image-to-text", label: "Image to Text" },
+    { href: "/tools/image-cropper", label: "Image Cropper" },
+    { href: "/tools/image-resizer", label: "Image Resizer" },
+    { href: "/tools/jpg-to-png", label: "JPG to PNG" },
+    { href: "/tools/jpg-to-webp", label: "JPG to WebP" },
+    { href: "/tools/png-to-webp", label: "PNG to WebP" },
+    { href: "/tools/webp-to-png", label: "WebP to PNG" }
+  ];
+
   // Split tools into chunks of 8
   const chunkSize = 8;
   const textModificationColumns = Array.from({ length: Math.ceil(textModificationTools.length / chunkSize) }, (_, i) =>
@@ -63,7 +85,7 @@ export function Footer() {
   return (
     <footer className="border-t bg-gray-50/50 dark:bg-gray-950/50">
       <div className="container py-12 px-4">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-5">
+        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-7">
           <div className="space-y-4">
             <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
               Basic Tools
@@ -139,6 +161,42 @@ export function Footer() {
               ))}
             </ul>
           </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+              Image Tools
+            </h3>
+            <ul className="space-y-2.5">
+              {imageTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link 
+                    href={tool.href} 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          <div className="space-y-4">
+            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+              Misc. Tools
+            </h3>
+            <ul className="space-y-2.5">
+              {miscTools.map((tool) => (
+                <li key={tool.href}>
+                  <Link 
+                    href={tool.href} 
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
         <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
@@ -150,7 +208,7 @@ export function Footer() {
               <ul className="space-y-2.5">
                 <li>
                   <Link 
-                    href="/about" 
+                    href="/about-us" 
                     className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
                   >
                     About Us
@@ -158,7 +216,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link 
-                    href="/contact" 
+                    href="/contact-us" 
                     className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
                   >
                     Contact Us
@@ -174,7 +232,7 @@ export function Footer() {
               <ul className="space-y-2.5">
                 <li>
                   <Link 
-                    href="/privacy" 
+                    href="/privacy-policy" 
                     className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
                   >
                     Privacy Policy
@@ -182,7 +240,7 @@ export function Footer() {
                 </li>
                 <li>
                   <Link 
-                    href="/terms" 
+                    href="/terms-of-service" 
                     className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
                   >
                     Terms of Service

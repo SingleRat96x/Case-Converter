@@ -9,6 +9,20 @@ import { supabase } from '@/lib/supabase';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
 
+interface MenuItem {
+  id: string;
+  name: string;
+  category: string;
+  title: string;
+  display_name?: string;
+  text_transform?: 'none' | 'uppercase' | 'lowercase' | 'capitalize' | 'alternating';
+  custom_style?: string;
+  short_description?: string;
+  long_description?: string;
+  updated_at?: string;
+  show_in_index?: boolean;
+}
+
 export function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
@@ -50,22 +64,63 @@ export function Header() {
     }
   }, [isMenuOpen]);
 
-  const toolsByCategory = tools.reduce((acc, tool) => {
-    const category = tool.category || 'uncategorized';
-    if (!acc[category]) {
-      acc[category] = [];
-    }
-    acc[category].push(tool);
-    return acc;
-  }, {} as Record<string, ToolContent[]>);
+  const allCategories = [...Object.values(TOOL_CATEGORIES), 'About Us'] as const;
+  const aboutUsTools: MenuItem[] = [{
+    id: 'contact-us',
+    name: 'Contact Us',
+    category: 'About Us',
+    title: 'Contact Us',
+  }];
+  
+  const toolsByCategory: Record<string, MenuItem[]> = {
+    ...tools.reduce((acc, tool) => {
+      const category = tool.category || 'uncategorized';
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      const menuItem: MenuItem = {
+        id: tool.id,
+        name: tool.name,
+        title: tool.title,
+        display_name: tool.display_name,
+        category,
+        text_transform: tool.text_transform,
+        custom_style: tool.custom_style,
+        short_description: tool.short_description,
+        long_description: tool.long_description,
+        updated_at: tool.updated_at,
+        show_in_index: tool.show_in_index
+      };
+      acc[category].push(menuItem);
+      return acc;
+    }, {} as Record<string, MenuItem[]>),
+    'About Us': aboutUsTools
+  };
 
-  const getColumnCount = (categoryTools: ToolContent[]) => {
+  const getDisplayText = (item: MenuItem) => {
+    let text = item.display_name || item.title;
+    
+    switch (item.text_transform) {
+      case 'uppercase':
+        return text.toUpperCase();
+      case 'lowercase':
+        return text.toLowerCase();
+      case 'capitalize':
+        return text.split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+      case 'alternating':
+        return text.split('').map((char: string, i: number) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
+      default:
+        return text;
+    }
+  };
+
+  const getColumnCount = (categoryTools: MenuItem[]) => {
     if (categoryTools.length <= 7) return 1;
     if (categoryTools.length <= 14) return 2;
     return 3;
   };
 
-  const splitIntoColumns = (tools: ToolContent[], columnCount: number) => {
+  const splitIntoColumns = (tools: MenuItem[], columnCount: number) => {
     const itemsPerColumn = Math.ceil(tools.length / columnCount);
     return Array.from({ length: columnCount }, (_, i) =>
       tools.slice(i * itemsPerColumn, (i + 1) * itemsPerColumn)
@@ -104,7 +159,7 @@ export function Header() {
           <div className="flex items-center space-x-4">
             <Link className="flex items-center" href="/">
               <Home className="h-6 w-6 text-primary md:hidden" />
-              <span className="font-bold text-sm 2xs:text-base xs:text-lg sm:text-lg md:text-base lg:text-lg xl:text-xl 2xl:text-2xl group relative px-2 sm:px-3 py-1">
+              <span className="font-bold text-sm 2xs:text-base xs:text-lg sm:text-lg md:text-base lg:text-lg whitespace-nowrap">
                 <span className="relative z-10 text-gray-900 dark:text-white transition-all duration-300 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
                   Text Case Converter
                 </span>
@@ -114,8 +169,8 @@ export function Header() {
           </div>
           
           <nav className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5 2xl:space-x-6 flex-1 justify-center px-1 sm:px-2 lg:px-4">
-            {/* Tool Categories */}
-            {Object.values(TOOL_CATEGORIES).map((category) => (
+            {/* Tool Categories including About Us */}
+            {allCategories.map((category) => (
               <div
                 key={category}
                 className="relative group whitespace-nowrap"
@@ -123,66 +178,61 @@ export function Header() {
                 onMouseLeave={handleMenuLeave}
               >
                 <Link
-                  href={category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                  className="flex items-center py-2 text-xs md:text-[13px] lg:text-sm xl:text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary rounded-md theme-transition"
+                  href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  className="flex items-center py-2 text-xs md:text-[13px] lg:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary rounded-md transition-all duration-200 ease-in-out relative group/item"
                 >
-                  {category}
-                  {toolsByCategory[category]?.length > 0 && (
-                    <ChevronDown className="h-3 w-3 md:h-3.5 md:w-3.5 lg:h-4 lg:w-4 ml-1 opacity-50 group-hover:opacity-100" />
-                  )}
+                  <span className="relative z-10">
+                    {category}
+                    {toolsByCategory[category]?.length > 0 && (
+                      <ChevronDown className="inline-block h-3 w-3 md:h-3.5 md:w-3.5 lg:h-4 lg:w-4 ml-1 opacity-50 group-hover/item:opacity-100 transition-all duration-200 ease-in-out transform group-hover/item:translate-y-0.5" />
+                    )}
+                  </span>
+                  <span className="absolute inset-0 bg-gray-100 dark:bg-gray-800 rounded-md opacity-0 group-hover/item:opacity-10 transition-all duration-200 ease-in-out transform scale-90 group-hover/item:scale-100"></span>
                 </Link>
                 {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
                   <div 
-                    className="absolute top-full left-0 mt-1 py-2 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 backdrop-blur-sm"
+                    className={`absolute top-full mt-1 py-2 bg-white/95 dark:bg-gray-900/95 rounded-md shadow-xl border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-2xl backdrop-saturate-150 ${category === 'About Us' ? 'right-0 min-w-[180px]' : 'left-1/2 -translate-x-1/2'}`}
                     onMouseEnter={() => handleMenuEnter(category)}
                     onMouseLeave={handleMenuLeave}
-                    style={{ 
-                      minWidth: `${Math.min(getColumnCount(toolsByCategory[category]) * 180, 660)}px`
-                    }}
+                    style={category !== 'About Us' ? { 
+                      maxWidth: 'min(880px, 90vw)',
+                      width: `${Math.min(getColumnCount(toolsByCategory[category]) * 220, 880)}px`
+                    } : undefined}
                   >
-                    <div className="grid gap-x-2 px-2" 
-                         style={{ 
-                           gridTemplateColumns: `repeat(${getColumnCount(toolsByCategory[category])}, 1fr)`
-                         }}>
-                      {splitIntoColumns(toolsByCategory[category], getColumnCount(toolsByCategory[category])).map((columnTools, columnIndex) => (
-                        <div key={columnIndex} className="flex flex-col">
-                          {columnTools.map((tool) => (
-                            <Link
-                              key={tool.id}
-                              href={`/tools/${tool.id}`}
-                              className="px-3 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-md transition-colors"
-                            >
-                              {tool.name || tool.title}
-                            </Link>
-                          ))}
-                        </div>
-                      ))}
+                    <div className={`${category !== 'About Us' ? 'grid gap-x-2 px-2' : 'px-2'}`}
+                         style={category !== 'About Us' ? { 
+                           gridTemplateColumns: `repeat(${getColumnCount(toolsByCategory[category])}, minmax(0, 1fr))`
+                         } : undefined}>
+                      {category === 'About Us' ? (
+                        toolsByCategory[category].map((tool) => (
+                          <Link
+                            key={tool.id}
+                            href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
+                            className="block px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap"
+                          >
+                            {tool.name}
+                          </Link>
+                        ))
+                      ) : (
+                        splitIntoColumns(toolsByCategory[category], getColumnCount(toolsByCategory[category])).map((columnTools, columnIndex) => (
+                          <div key={columnIndex} className="flex flex-col">
+                            {columnTools.map((tool) => (
+                              <Link
+                                key={tool.id}
+                                href={`/tools/${tool.id}`}
+                                className={`px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap ${tool.custom_style || ''}`}
+                              >
+                                {getDisplayText(tool)}
+                              </Link>
+                            ))}
+                          </div>
+                        ))
+                      )}
                     </div>
                   </div>
                 )}
               </div>
             ))}
-
-            {/* About Us Menu */}
-            <div className="relative group">
-              <Link
-                href="/about"
-                className="flex items-center py-2 text-xs md:text-[13px] lg:text-sm xl:text-base font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary rounded-md theme-transition"
-              >
-                About Us
-                <ChevronDown className="h-3 w-3 md:h-3.5 md:w-3.5 lg:h-4 lg:w-4 ml-1 opacity-50 group-hover:opacity-100" />
-              </Link>
-              <div 
-                className="absolute top-full right-0 mt-1 py-2 bg-white dark:bg-gray-800 rounded-md shadow-lg border border-gray-200 dark:border-gray-700 backdrop-blur-sm min-w-[160px] md:min-w-[180px] lg:min-w-[200px] hidden group-hover:block"
-              >
-                <Link
-                  href="/contact"
-                  className="block px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-700"
-                >
-                  Contact Us
-                </Link>
-              </div>
-            </div>
           </nav>
 
           <div className="flex items-center space-x-2">
@@ -265,10 +315,10 @@ export function Header() {
                               <Link
                                 key={tool.id}
                                 href={`/tools/${tool.id}`}
-                                className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
+                                className={`block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ${tool.custom_style || ''}`}
                                 onClick={() => setIsMenuOpen(false)}
                               >
-                                {tool.name || tool.title}
+                                {getDisplayText(tool)}
                               </Link>
                             ))}
                           </div>
@@ -290,13 +340,16 @@ export function Header() {
                     </Link>
                   </div>
                   <div className="mt-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
-                    <Link
-                      href="/contact"
-                      className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-md"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
-                      Contact Us
-                    </Link>
+                    {toolsByCategory['About Us'].map((tool) => (
+                      <Link
+                        key={tool.id}
+                        href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
+                        className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {getDisplayText(tool)}
+                      </Link>
+                    ))}
                   </div>
                 </div>
               </nav>

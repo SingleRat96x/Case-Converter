@@ -4,7 +4,17 @@ import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useEditor, EditorContent } from '@tiptap/react';
 import StarterKit from '@tiptap/starter-kit';
-import { Search, LogOut, Bold, Italic, Strikethrough, List, ListOrdered, Heading1, Heading2, Heading3, Code, Quote, Undo, Redo, Minus, LayoutGrid, Settings, Eye, EyeOff, RefreshCw, ChevronLeft, Menu as MenuIcon, Users, FileText } from 'lucide-react';
+import UnderlineExtension from '@tiptap/extension-underline';
+import TextAlignExtension from '@tiptap/extension-text-align';
+import LinkExtension from '@tiptap/extension-link';
+import ImageExtension from '@tiptap/extension-image';
+import TableExtension from '@tiptap/extension-table';
+import TableRowExtension from '@tiptap/extension-table-row';
+import TableCellExtension from '@tiptap/extension-table-cell';
+import TableHeaderExtension from '@tiptap/extension-table-header';
+import SubscriptExtension from '@tiptap/extension-subscript';
+import SuperscriptExtension from '@tiptap/extension-superscript';
+import { Search, LogOut, Bold, Italic, Strikethrough, List, ListOrdered, Heading1, Heading2, Heading3, Code, Quote, Undo, Redo, Minus, LayoutGrid, Settings, Eye, EyeOff, RefreshCw, ChevronLeft, Menu as MenuIcon, Users, FileText, Link, Image, AlignLeft, AlignCenter, AlignRight, AlignJustify, Underline, Table, FileCode, Superscript, Subscript } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { invalidateToolCache, invalidateAllCaches } from '@/lib/tools';
 import type { ToolContent } from '@/lib/tools';
@@ -20,11 +30,32 @@ export function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu'>('tools');
+  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu' | 'pages'>('tools');
+  const [staticPages, setStaticPages] = useState<Array<{id: string, slug: string, title: string, content: string, last_updated: string}>>([]);
+  const [selectedPage, setSelectedPage] = useState<{id: string, slug: string, title: string, content: string, last_updated: string} | null>(null);
+  const [editorMode, setEditorMode] = useState<'visual' | 'text'>('visual');
 
   const editor = useEditor({
-    extensions: [StarterKit],
-    content: selectedTool?.long_description || '',
+    extensions: [
+      StarterKit,
+      UnderlineExtension,
+      TextAlignExtension.configure({
+        types: ['heading', 'paragraph'],
+      }),
+      LinkExtension.configure({
+        openOnClick: false,
+      }),
+      ImageExtension,
+      TableExtension.configure({
+        resizable: true,
+      }),
+      TableRowExtension,
+      TableHeaderExtension,
+      TableCellExtension,
+      SubscriptExtension,
+      SuperscriptExtension,
+    ],
+    content: selectedTool?.long_description || selectedPage?.content || '',
     editorProps: {
       attributes: {
         class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[300px] p-4 prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300',
@@ -39,6 +70,7 @@ export function AdminDashboard() {
       return;
     }
     fetchTools();
+    fetchStaticPages();
   }, [router]);
 
   const fetchTools = async () => {
@@ -54,6 +86,24 @@ export function AdminDashboard() {
       setTools(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred while fetching tools');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const fetchStaticPages = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from('static_pages')
+        .select('*')
+        .order('title');
+
+      if (error) throw error;
+
+      setStaticPages(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching pages');
     } finally {
       setIsLoading(false);
     }
@@ -160,6 +210,27 @@ export function AdminDashboard() {
     }
   };
 
+  const handleSaveStaticPage = async () => {
+    if (!selectedPage || !editor) return;
+
+    try {
+      const { error } = await supabase
+        .from('static_pages')
+        .update({
+          title: selectedPage.title,
+          content: editor.getHTML(),
+        })
+        .eq('id', selectedPage.id);
+
+      if (error) throw error;
+
+      setError('Page saved successfully!');
+      fetchStaticPages();
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while saving the page');
+    }
+  };
+
   const filteredTools = tools.filter(tool => 
     tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
     tool.short_description.toLowerCase().includes(searchQuery.toLowerCase())
@@ -168,153 +239,318 @@ export function AdminDashboard() {
   const EditorMenuBar = () => {
     if (!editor) return null;
 
-    const setLineHeight = (height: string) => {
-      editor.chain().focus().setParagraph().run();
-      const element = editor.view.dom as HTMLElement;
-      if (height === 'default') {
-        element.style.lineHeight = '';
-      } else {
-        element.style.lineHeight = height;
-      }
-    };
-
-    const setWordSpacing = (spacing: string) => {
-      editor.chain().focus().setParagraph().run();
-      const element = editor.view.dom as HTMLElement;
-      if (spacing === 'default') {
-        element.style.wordSpacing = '';
-      } else {
-        element.style.wordSpacing = spacing;
-      }
-    };
-
     return (
       <div className="border-b border-border p-2 mb-4 flex flex-wrap gap-1 bg-muted rounded-t-lg">
-        <button
-          onClick={() => editor.chain().focus().toggleBold().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('bold') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Bold"
-        >
-          <Bold className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().toggleItalic().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('italic') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Italic"
-        >
-          <Italic className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().toggleStrike().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('strike') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Strikethrough"
-        >
-          <Strikethrough className="h-5 w-5" />
-        </button>
-        <div className="w-px h-6 bg-border mx-1 self-center" />
-        <button
-          onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 1 }) ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Heading 1"
-        >
-          <Heading1 className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 2 }) ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Heading 2"
-        >
-          <Heading2 className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 3 }) ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Heading 3"
-        >
-          <Heading3 className="h-5 w-5" />
-        </button>
-        <div className="w-px h-6 bg-border mx-1 self-center" />
-        <button
-          onClick={() => editor.chain().focus().toggleBulletList().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('bulletList') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Bullet List"
-        >
-          <List className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().toggleOrderedList().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('orderedList') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Numbered List"
-        >
-          <ListOrdered className="h-5 w-5" />
-        </button>
-        <div className="w-px h-6 bg-border mx-1 self-center" />
-        <button
-          onClick={() => editor.chain().focus().toggleCodeBlock().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('codeBlock') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Code Block"
-        >
-          <Code className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().toggleBlockquote().run()}
-          className={`p-2 rounded transition-colors ${editor.isActive('blockquote') ? 'bg-accent' : 'hover:bg-accent'}`}
-          title="Quote"
-        >
-          <Quote className="h-5 w-5" />
-        </button>
-        <div className="w-px h-6 bg-border mx-1 self-center" />
-        <button
-          onClick={() => editor.chain().focus().setHorizontalRule().run()}
-          className="p-2 rounded transition-colors hover:bg-accent"
-          title="Horizontal Line"
-        >
-          <Minus className="h-5 w-5" />
-        </button>
-        <div className="w-px h-6 bg-border mx-1 self-center" />
-        <select
-          onChange={(e) => setLineHeight(e.target.value)}
-          className="p-2 rounded bg-background border border-input hover:bg-accent transition-colors text-sm"
-          title="Line Height"
-        >
-          <option value="default">Line Height</option>
-          <option value="1">Single</option>
-          <option value="1.5">1.5</option>
-          <option value="2">Double</option>
-          <option value="2.5">2.5</option>
-        </select>
-        <select
-          onChange={(e) => setWordSpacing(e.target.value)}
-          className="p-2 rounded bg-background border border-input hover:bg-accent transition-colors text-sm"
-          title="Word Spacing"
-        >
-          <option value="default">Word Spacing</option>
-          <option value="normal">Normal</option>
-          <option value="0.1em">Tight</option>
-          <option value="0.3em">Wide</option>
-          <option value="0.5em">Wider</option>
-        </select>
-        <div className="w-px h-6 bg-border mx-1 self-center" />
-        <button
-          onClick={() => editor.chain().focus().undo().run()}
-          className="p-2 rounded transition-colors hover:bg-accent"
-          title="Undo"
-        >
-          <Undo className="h-5 w-5" />
-        </button>
-        <button
-          onClick={() => editor.chain().focus().redo().run()}
-          className="p-2 rounded transition-colors hover:bg-accent"
-          title="Redo"
-        >
-          <Redo className="h-5 w-5" />
-        </button>
+        <div className="flex w-full justify-end mb-2">
+          <div className="flex items-center gap-2 bg-background rounded-lg p-1">
+            <button
+              onClick={() => setEditorMode('visual')}
+              className={`px-3 py-1 rounded-md transition-colors ${
+                editorMode === 'visual' ? 'bg-primary text-primary-foreground' : 'hover:bg-accent'
+              }`}
+            >
+              Visual
+            </button>
+            <button
+              onClick={() => setEditorMode('text')}
+              className={`px-3 py-1 rounded-md transition-colors ${
+                editorMode === 'text' ? 'bg-primary text-primary-foreground' : 'hover:bg-accent'
+              }`}
+            >
+              HTML
+            </button>
+          </div>
+        </div>
+        
+        {editorMode === 'visual' && (
+          <>
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => editor.chain().focus().toggleBold().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('bold') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Bold"
+              >
+                <Bold className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleItalic().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('italic') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Italic"
+              >
+                <Italic className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleUnderline().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('underline') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Underline"
+              >
+                <Underline className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleStrike().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('strike') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Strikethrough"
+              >
+                <Strikethrough className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleSuperscript().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('superscript') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Superscript"
+              >
+                <Superscript className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleSubscript().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('subscript') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Subscript"
+              >
+                <Subscript className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="w-px h-6 bg-border mx-1 self-center" />
+
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 1 }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Heading 1"
+              >
+                <Heading1 className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 2 }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Heading 2"
+              >
+                <Heading2 className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 3 }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Heading 3"
+              >
+                <Heading3 className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="w-px h-6 bg-border mx-1 self-center" />
+
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => editor.chain().focus().setTextAlign('left').run()}
+                className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'left' }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Align Left"
+              >
+                <AlignLeft className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().setTextAlign('center').run()}
+                className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'center' }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Align Center"
+              >
+                <AlignCenter className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().setTextAlign('right').run()}
+                className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'right' }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Align Right"
+              >
+                <AlignRight className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().setTextAlign('justify').run()}
+                className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'justify' }) ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Justify"
+              >
+                <AlignJustify className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="w-px h-6 bg-border mx-1 self-center" />
+
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => editor.chain().focus().toggleBulletList().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('bulletList') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Bullet List"
+              >
+                <List className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleOrderedList().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('orderedList') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Numbered List"
+              >
+                <ListOrdered className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="w-px h-6 bg-border mx-1 self-center" />
+
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => editor.chain().focus().toggleCodeBlock().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('codeBlock') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Code Block"
+              >
+                <FileCode className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().toggleBlockquote().run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('blockquote') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Quote"
+              >
+                <Quote className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="w-px h-6 bg-border mx-1 self-center" />
+
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => {
+                  const url = window.prompt('Enter the URL:');
+                  if (url) {
+                    editor.chain().focus().setLink({ href: url }).run();
+                  }
+                }}
+                className={`p-2 rounded transition-colors ${editor.isActive('link') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Add Link"
+              >
+                <Link className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => {
+                  const url = window.prompt('Enter the image URL:');
+                  if (url) {
+                    editor.chain().focus().setImage({ src: url }).run();
+                  }
+                }}
+                className="p-2 rounded transition-colors hover:bg-accent"
+                title="Add Image"
+              >
+                <Image className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}
+                className={`p-2 rounded transition-colors ${editor.isActive('table') ? 'bg-accent' : 'hover:bg-accent'}`}
+                title="Insert Table"
+              >
+                <Table className="h-5 w-5" />
+              </button>
+            </div>
+
+            <div className="w-px h-6 bg-border mx-1 self-center" />
+
+            <div className="flex flex-wrap gap-1">
+              <button
+                onClick={() => editor.chain().focus().undo().run()}
+                className="p-2 rounded transition-colors hover:bg-accent"
+                title="Undo"
+              >
+                <Undo className="h-5 w-5" />
+              </button>
+              <button
+                onClick={() => editor.chain().focus().redo().run()}
+                className="p-2 rounded transition-colors hover:bg-accent"
+                title="Redo"
+              >
+                <Redo className="h-5 w-5" />
+              </button>
+            </div>
+          </>
+        )}
       </div>
     );
   };
 
+  // Add this function to group tools by category
+  const groupToolsByCategory = (tools: ToolContent[]) => {
+    return tools.reduce((acc, tool) => {
+      const category = tool.category || 'Uncategorized';
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push(tool);
+      return acc;
+    }, {} as Record<string, ToolContent[]>);
+  };
+
+  // Add this to render tools by category
+  const renderToolsByCategory = () => {
+    const groupedTools = groupToolsByCategory(filteredTools);
+    return Object.entries(groupedTools).map(([category, tools]) => (
+      <div key={category} className="mb-8">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 pb-2 border-b border-gray-200 dark:border-gray-700">
+          {category}
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tools.map((tool) => (
+            <div
+              key={tool.id}
+              className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md transition-shadow"
+            >
+              <div className="flex justify-between items-start mb-2">
+                <h4 className="font-medium text-gray-900 dark:text-white">{tool.title}</h4>
+                <button
+                  onClick={() => handleEditTool(tool)}
+                  className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
+                >
+                  Edit
+                </button>
+              </div>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{tool.short_description}</p>
+              <div className="text-xs text-gray-500 dark:text-gray-400">
+                Last updated: {new Date(tool.updated_at).toLocaleDateString()}
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ));
+  };
+
+  // Add this to render visibility settings by category
+  const renderVisibilityByCategory = () => {
+    const groupedTools = groupToolsByCategory(filteredTools);
+    return Object.entries(groupedTools).map(([category, tools]) => (
+      <div key={category} className="mb-8">
+        <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4 pb-2 border-b border-gray-200 dark:border-gray-700">
+          {category}
+        </h3>
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+          {tools.map((tool) => (
+            <div
+              key={tool.id}
+              className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md transition-shadow"
+            >
+              <div className="flex justify-between items-center">
+                <div>
+                  <h4 className="font-medium text-gray-900 dark:text-white">{tool.title}</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{tool.short_description}</p>
+                </div>
+                <button
+                  onClick={() => handleVisibilityToggle(tool.id, tool.show_in_index)}
+                  className={`p-2 rounded-full transition-colors ${
+                    tool.show_in_index
+                      ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400'
+                      : 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400'
+                  }`}
+                >
+                  {tool.show_in_index ? <Eye className="h-5 w-5" /> : <EyeOff className="h-5 w-5" />}
+                </button>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    ));
+  };
+
   return (
-    <div className="min-h-screen bg-background text-foreground">
+    <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
       {/* Mobile Header */}
       <div className="lg:hidden bg-card border-b border-border p-4">
         <div className="flex items-center justify-between">
@@ -432,6 +668,17 @@ export function AdminDashboard() {
                 <MenuIcon className="h-5 w-5" />
                 Menu Management
               </button>
+              <button
+                onClick={() => setActiveTab('pages')}
+                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
+                  activeTab === 'pages' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'hover:bg-accent'
+                }`}
+              >
+                <FileText className="h-5 w-5" />
+                Static Pages
+              </button>
             </nav>
           </div>
         </div>
@@ -469,6 +716,87 @@ export function AdminDashboard() {
                   </div>
                 ))}
               </div>
+            </div>
+          ) : activeTab === 'pages' ? (
+            <div className="space-y-6">
+              {selectedPage ? (
+                <>
+                  <button
+                    onClick={() => {
+                      setSelectedPage(null);
+                      if (editor) {
+                        editor.commands.setContent('');
+                      }
+                    }}
+                    className="px-4 py-2 bg-muted hover:bg-accent rounded-lg transition-colors inline-flex items-center gap-2"
+                  >
+                    <ChevronLeft className="h-4 w-4" />
+                    Back to Pages
+                  </button>
+
+                  <div className="bg-card rounded-lg border border-border overflow-hidden">
+                    <div className="p-6 space-y-6">
+                      <div>
+                        <label className="block text-sm font-medium mb-2">Title</label>
+                        <input
+                          type="text"
+                          value={selectedPage.title}
+                          onChange={(e) => setSelectedPage(prev => prev ? { ...prev, title: e.target.value } : null)}
+                          className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
+                        />
+                      </div>
+
+                      <div>
+                        <label className="block text-sm font-medium mb-2">Content</label>
+                        <div className="bg-background border border-input rounded-lg overflow-hidden">
+                          <EditorMenuBar />
+                          {editorMode === 'visual' ? (
+                            <EditorContent editor={editor} />
+                          ) : (
+                            <textarea
+                              value={editor?.getHTML() || ''}
+                              onChange={(e) => editor?.commands.setContent(e.target.value)}
+                              className="w-full min-h-[300px] p-4 bg-background text-foreground font-mono text-sm focus:outline-none"
+                              spellCheck={false}
+                            />
+                          )}
+                        </div>
+                      </div>
+
+                      <div className="flex justify-end pt-4">
+                        <button
+                          onClick={handleSaveStaticPage}
+                          className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                        >
+                          Save Changes
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </>
+              ) : (
+                <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                  {staticPages.map((page) => (
+                    <button
+                      key={page.id}
+                      onClick={() => {
+                        setSelectedPage(page);
+                        if (editor) {
+                          editor.commands.setContent(page.content);
+                        }
+                      }}
+                      className="text-left p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors group"
+                    >
+                      <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                        {page.title}
+                      </h3>
+                      <div className="text-xs text-muted-foreground">
+                        Last updated: {new Date(page.last_updated).toLocaleDateString()}
+                      </div>
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           ) : isEditing && selectedTool ? (
             <div className="space-y-6">
@@ -509,7 +837,16 @@ export function AdminDashboard() {
                     <label className="block text-sm font-medium mb-2">Long Description</label>
                     <div className="bg-background border border-input rounded-lg overflow-hidden">
                       <EditorMenuBar />
-                      <EditorContent editor={editor} />
+                      {editorMode === 'visual' ? (
+                        <EditorContent editor={editor} />
+                      ) : (
+                        <textarea
+                          value={editor?.getHTML() || ''}
+                          onChange={(e) => editor?.commands.setContent(e.target.value)}
+                          className="w-full min-h-[300px] p-4 bg-background text-foreground font-mono text-sm focus:outline-none"
+                          spellCheck={false}
+                        />
+                      )}
                     </div>
                   </div>
 
@@ -537,16 +874,32 @@ export function AdminDashboard() {
                 />
               </div>
 
-              <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {filteredTools.map((tool) => (
-                  <button
-                    key={tool.id}
-                    onClick={() => handleEditTool(tool)}
-                    className="text-left p-6 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors group"
-                  >
-                    <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">{tool.title}</h3>
-                    <p className="text-sm text-muted-foreground">{tool.short_description}</p>
-                  </button>
+              <div className="space-y-8">
+                {Object.entries(groupToolsByCategory(filteredTools)).map(([category, tools]) => (
+                  <div key={category} className="bg-card rounded-lg border border-border p-6">
+                    <h2 className="text-xl font-semibold mb-4 text-foreground border-b border-border pb-2">
+                      {category}
+                    </h2>
+                    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                      {tools.map((tool) => (
+                        <button
+                          key={tool.id}
+                          onClick={() => handleEditTool(tool)}
+                          className="text-left p-4 bg-background rounded-lg border border-input hover:border-primary/50 transition-colors group"
+                        >
+                          <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                            {tool.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {tool.short_description}
+                          </p>
+                          <div className="mt-2 text-xs text-muted-foreground">
+                            Last updated: {new Date(tool.updated_at).toLocaleDateString()}
+                          </div>
+                        </button>
+                      ))}
+                    </div>
+                  </div>
                 ))}
               </div>
             </>

@@ -4,11 +4,15 @@ export interface ToolContent {
   id: string;
   name: string;
   title: string;
+  display_name?: string;
+  text_transform?: 'none' | 'uppercase' | 'lowercase' | 'capitalize' | 'alternating';
+  custom_style?: string;
+  category?: string;
   short_description: string;
   long_description: string;
   updated_at: string;
   show_in_index: boolean;
-  category?: string;
+  order?: number;
 }
 
 export interface ToolCategory {
@@ -165,4 +169,29 @@ export function invalidateAllCaches() {
     timestamp: -1 // Set to -1 to force a refresh
   };
   console.log('All caches have been invalidated');
+}
+
+// Function to get a tool by its name
+export async function getToolByName(name: string): Promise<ToolContent> {
+  try {
+    const { data, error } = await supabase
+      .from('tools')
+      .select('*')
+      .eq('id', name)
+      .single();
+
+    if (error) {
+      console.error('Error fetching tool by name:', error);
+      throw error;
+    }
+
+    if (!data) {
+      throw new Error(`Tool not found: ${name}`);
+    }
+
+    return data;
+  } catch (error) {
+    console.error('Error in getToolByName:', error);
+    throw error;
+  }
 } 

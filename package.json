@@ -11,8 +11,20 @@
   "dependencies": {
     "@radix-ui/react-label": "^2.1.1",
     "@radix-ui/react-select": "^2.1.4",
+    "@radix-ui/react-slider": "^1.2.2",
+    "@radix-ui/react-switch": "^1.1.2",
     "@radix-ui/react-tabs": "^1.1.2",
     "@supabase/supabase-js": "^2.47.12",
+    "@tiptap/extension-image": "^2.11.2",
+    "@tiptap/extension-link": "^2.11.2",
+    "@tiptap/extension-subscript": "^2.11.2",
+    "@tiptap/extension-superscript": "^2.11.2",
+    "@tiptap/extension-table": "^2.11.2",
+    "@tiptap/extension-table-cell": "^2.11.2",
+    "@tiptap/extension-table-header": "^2.11.2",
+    "@tiptap/extension-table-row": "^2.11.2",
+    "@tiptap/extension-text-align": "^2.11.2",
+    "@tiptap/extension-underline": "^2.11.2",
     "@tiptap/react": "^2.11.2",
     "@tiptap/starter-kit": "^2.11.2",
     "@types/react-beautiful-dnd": "^13.1.8",
@@ -29,9 +41,11 @@
     "react-beautiful-dnd": "^13.1.1",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^3.1.0",
+    "react-image-crop": "^11.0.7",
     "sonner": "^1.7.1",
     "tailwind-merge": "^2.6.0",
-    "tailwindcss": "^3.4.1"
+    "tailwindcss": "^3.4.1",
+    "tesseract.js": "^6.0.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^2.1.4",

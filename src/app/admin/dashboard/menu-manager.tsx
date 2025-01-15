@@ -19,7 +19,7 @@ interface MenuItem {
   id: string;
   name: string;
   title: string;
-  display_title?: string;
+  display_name?: string;
   category: string;
   order: number;
   show_in_index: boolean;
@@ -135,7 +135,12 @@ export function MenuManager() {
       const { error } = await supabase
         .from('tools')
         .update({
-          ...updates,
+          title: updates.title,
+          display_name: updates.display_name,
+          category: updates.category,
+          order: updates.order,
+          custom_style: updates.custom_style,
+          text_transform: updates.text_transform,
           name: updates.title?.toLowerCase().replace(/\s+/g, '-'),
           updated_at: new Date().toISOString()
         })
@@ -204,8 +209,8 @@ export function MenuManager() {
   };
 
   const filteredItems = menuItems.filter(item => {
-    const matchesSearch = item.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-                         item.category.toLowerCase().includes(searchQuery.toLowerCase());
+    const matchesSearch = item.title?.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                         item.category?.toLowerCase().includes(searchQuery.toLowerCase()) || false;
     const matchesCategory = selectedCategory === 'all' || item.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -213,7 +218,7 @@ export function MenuManager() {
   const categories = ['all', ...new Set(menuItems.map(item => item.category))];
 
   const getDisplayText = (item: MenuItem) => {
-    let text = item.display_title || item.title;
+    let text = item.display_name || item.title;
     
     switch (item.text_transform) {
       case 'uppercase':
@@ -221,9 +226,9 @@ export function MenuManager() {
       case 'lowercase':
         return text.toLowerCase();
       case 'capitalize':
-        return text.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
+        return text.split(' ').map((word: string) => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()).join(' ');
       case 'alternating':
-        return text.split('').map((char, i) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
+        return text.split('').map((char: string, i: number) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
       default:
         return text;
     }
@@ -302,10 +307,10 @@ export function MenuManager() {
                     <label className="block text-sm font-medium mb-1">Display Title (Optional)</label>
                     <input
                       type="text"
-                      value={item.display_title || ''}
+                      value={item.display_name || ''}
                       onChange={(e) => {
                         const updatedItems = menuItems.map(i =>
-                          i.id === item.id ? { ...i, display_title: e.target.value } : i
+                          i.id === item.id ? { ...i, display_name: e.target.value } : i
                         );
                         setMenuItems(updatedItems);
                       }}
@@ -412,7 +417,7 @@ export function MenuManager() {
                 <div>
                   <div className="flex items-center gap-2">
                     <h3 className="font-medium">{item.title}</h3>
-                    {item.display_title && (
+                    {item.display_name && (
                       <span className="text-sm text-muted-foreground">
                         (Displays as: <span className={item.custom_style}>{getDisplayText(item)}</span>)
                       </span>
