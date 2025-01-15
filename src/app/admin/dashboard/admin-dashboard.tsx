@@ -30,7 +30,7 @@ export function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu' | 'pages'>('tools');
+  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu' | 'pages' | 'scripts'>('tools');
   const [staticPages, setStaticPages] = useState<Array<{id: string, slug: string, title: string, content: string, last_updated: string}>>([]);
   const [selectedPage, setSelectedPage] = useState<{id: string, slug: string, title: string, content: string, last_updated: string} | null>(null);
   const [editorMode, setEditorMode] = useState<'visual' | 'text'>('visual');
@@ -678,6 +678,17 @@ export function AdminDashboard() {
               >
                 <FileText className="h-5 w-5" />
                 Static Pages
+              </button>
+              <button
+                onClick={() => router.push('/admin/dashboard/header-scripts')}
+                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
+                  activeTab === 'scripts' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'hover:bg-accent'
+                }`}
+              >
+                <FileCode className="h-5 w-5" />
+                Header Scripts
               </button>
             </nav>
           </div>
