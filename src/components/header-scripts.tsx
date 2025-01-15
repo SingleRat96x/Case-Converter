@@ -3,41 +3,60 @@
 import { useEffect, useState } from "react";
 import { supabase } from "@/lib/supabase";
 
-interface HeaderScript {
+interface HeaderElement {
   id: string;
-  script: string;
+  type: 'script' | 'meta';
+  script?: string;
+  meta_name?: string;
+  meta_content?: string;
   is_enabled: boolean;
+  position: number;
 }
 
 export function HeaderScripts() {
-  const [scripts, setScripts] = useState<HeaderScript[]>([]);
+  const [headerElements, setHeaderElements] = useState<HeaderElement[]>([]);
 
   useEffect(() => {
-    const fetchScripts = async () => {
+    const fetchHeaderElements = async () => {
       try {
         const { data, error } = await supabase
           .from("header_scripts")
-          .select("id, script, is_enabled")
-          .eq("is_enabled", true);
+          .select("*")
+          .eq("is_enabled", true)
+          .order("position", { ascending: true });
 
         if (error) throw error;
-        setScripts(data || []);
+        setHeaderElements(data || []);
       } catch (error) {
-        console.error("Error fetching header scripts:", error);
+        console.error("Error fetching header elements:", error);
       }
     };
 
-    fetchScripts();
+    fetchHeaderElements();
   }, []);
 
-  return (
-    <>
-      {scripts.map((script) => (
-        <div
-          key={script.id}
-          dangerouslySetInnerHTML={{ __html: script.script }}
+  const renderElement = (element: HeaderElement) => {
+    if (element.type === 'meta' && element.meta_name && element.meta_content) {
+      return (
+        <meta
+          key={element.id}
+          name={element.meta_name}
+          content={element.meta_content}
         />
-      ))}
-    </>
-  );
+      );
+    }
+
+    if (element.type === 'script' && element.script) {
+      return (
+        <div
+          key={element.id}
+          dangerouslySetInnerHTML={{ __html: element.script }}
+        />
+      );
+    }
+
+    return null;
+  };
+
+  return <>{headerElements.map(renderElement)}</>;
 } 

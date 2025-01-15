@@ -8,44 +8,51 @@ import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Switch } from "@/components/ui/switch";
 import { Card } from "@/components/ui/card";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { supabase } from "@/lib/supabase";
 import { Loader2 } from "lucide-react";
 
-interface HeaderScript {
+interface HeaderElement {
   id: string;
   label: string;
-  script: string;
+  type: 'script' | 'meta';
+  script?: string;
+  meta_name?: string;
+  meta_content?: string;
   is_enabled: boolean;
+  position: number;
 }
 
 export function HeaderScriptManager() {
-  const [scripts, setScripts] = useState<HeaderScript[]>([]);
+  const [elements, setElements] = useState<HeaderElement[]>([]);
   const [newLabel, setNewLabel] = useState("");
   const [newScript, setNewScript] = useState("");
+  const [newMetaName, setNewMetaName] = useState("");
+  const [newMetaContent, setNewMetaContent] = useState("");
   const [isLoading, setIsLoading] = useState(false);
   const [isSaving, setIsSaving] = useState(false);
+  const [activeTab, setActiveTab] = useState<'script' | 'meta'>('script');
   const { toast } = useToast();
 
-  // Fetch existing scripts
   useEffect(() => {
-    fetchScripts();
+    fetchElements();
   }, []);
 
-  const fetchScripts = async () => {
+  const fetchElements = async () => {
     setIsLoading(true);
     try {
       const { data, error } = await supabase
         .from("header_scripts")
         .select("*")
-        .order("created_at", { ascending: true });
+        .order("position", { ascending: true });
 
       if (error) throw error;
-      setScripts(data || []);
+      setElements(data || []);
     } catch (error) {
-      console.error("Error fetching scripts:", error);
+      console.error("Error fetching elements:", error);
       toast({
         title: "Error",
-        description: "Failed to load scripts. Please try again.",
+        description: "Failed to load header elements. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -54,60 +61,74 @@ export function HeaderScriptManager() {
   };
 
   const validateScript = (script: string): boolean => {
-    // Basic validation - check for potentially harmful content
     const dangerousPatterns = [
-      /<\s*script[^>]*src\s*=\s*["']?http:\/\//i, // Prevent non-HTTPS scripts
-      /document\.write/i, // Prevent document.write
-      /eval\s*\(/i, // Prevent eval
+      /<\s*script[^>]*src\s*=\s*["']?http:\/\//i,
+      /document\.write/i,
+      /eval\s*\(/i,
     ];
 
     return !dangerousPatterns.some(pattern => pattern.test(script));
   };
 
-  const handleAddScript = async () => {
-    if (!newLabel.trim() || !newScript.trim()) {
-      toast({
-        title: "Error",
-        description: "Please provide both a label and script content.",
-        variant: "destructive",
-      });
-      return;
-    }
+  const handleAdd = async () => {
+    if (activeTab === 'script') {
+      if (!newLabel.trim() || !newScript.trim()) {
+        toast({
+          title: "Error",
+          description: "Please provide both a label and script content.",
+          variant: "destructive",
+        });
+        return;
+      }
 
-    if (!validateScript(newScript)) {
-      toast({
-        title: "Error",
-        description: "The script contains potentially unsafe content.",
-        variant: "destructive",
-      });
-      return;
+      if (!validateScript(newScript)) {
+        toast({
+          title: "Error",
+          description: "The script contains potentially unsafe content.",
+          variant: "destructive",
+        });
+        return;
+      }
+    } else {
+      if (!newLabel.trim() || !newMetaName.trim() || !newMetaContent.trim()) {
+        toast({
+          title: "Error",
+          description: "Please provide a label, meta name, and content.",
+          variant: "destructive",
+        });
+        return;
+      }
     }
 
     setIsSaving(true);
     try {
-      const { error } = await supabase.from("header_scripts").insert([
-        {
-          label: newLabel,
-          script: newScript,
-          is_enabled: true,
-        },
-      ]);
+      const { error } = await supabase.from("header_scripts").insert([{
+        label: newLabel,
+        type: activeTab,
+        script: activeTab === 'script' ? newScript : null,
+        meta_name: activeTab === 'meta' ? newMetaName : null,
+        meta_content: activeTab === 'meta' ? newMetaContent : null,
+        is_enabled: true,
+        position: elements.length,
+      }]);
 
       if (error) throw error;
 
       toast({
         title: "Success",
-        description: "Script added successfully.",
+        description: `${activeTab === 'script' ? 'Script' : 'Meta tag'} added successfully.`,
       });
 
       setNewLabel("");
       setNewScript("");
-      fetchScripts();
+      setNewMetaName("");
+      setNewMetaContent("");
+      fetchElements();
     } catch (error) {
-      console.error("Error adding script:", error);
+      console.error("Error adding element:", error);
       toast({
         title: "Error",
-        description: "Failed to add script. Please try again.",
+        description: "Failed to add element. Please try again.",
         variant: "destructive",
       });
     } finally {
@@ -115,7 +136,7 @@ export function HeaderScriptManager() {
     }
   };
 
-  const handleToggleScript = async (id: string, currentState: boolean) => {
+  const handleToggle = async (id: string, currentState: boolean) => {
     try {
       const { error } = await supabase
         .from("header_scripts")
@@ -124,28 +145,28 @@ export function HeaderScriptManager() {
 
       if (error) throw error;
 
-      setScripts(scripts.map(script => 
-        script.id === id 
-          ? { ...script, is_enabled: !currentState }
-          : script
+      setElements(elements.map(element => 
+        element.id === id 
+          ? { ...element, is_enabled: !currentState }
+          : element
       ));
 
       toast({
         title: "Success",
-        description: `Script ${!currentState ? "enabled" : "disabled"} successfully.`,
+        description: `Element ${!currentState ? "enabled" : "disabled"} successfully.`,
       });
     } catch (error) {
-      console.error("Error toggling script:", error);
+      console.error("Error toggling element:", error);
       toast({
         title: "Error",
-        description: "Failed to update script status. Please try again.",
+        description: "Failed to update element status. Please try again.",
         variant: "destructive",
       });
     }
   };
 
-  const handleDeleteScript = async (id: string) => {
-    if (!confirm("Are you sure you want to delete this script?")) return;
+  const handleDelete = async (id: string) => {
+    if (!confirm("Are you sure you want to delete this element?")) return;
 
     try {
       const { error } = await supabase
@@ -155,16 +176,16 @@ export function HeaderScriptManager() {
 
       if (error) throw error;
 
-      setScripts(scripts.filter(script => script.id !== id));
+      setElements(elements.filter(element => element.id !== id));
       toast({
         title: "Success",
-        description: "Script deleted successfully.",
+        description: "Element deleted successfully.",
       });
     } catch (error) {
-      console.error("Error deleting script:", error);
+      console.error("Error deleting element:", error);
       toast({
         title: "Error",
-        description: "Failed to delete script. Please try again.",
+        description: "Failed to delete element. Please try again.",
         variant: "destructive",
       });
     }
@@ -181,84 +202,136 @@ export function HeaderScriptManager() {
   return (
     <div className="space-y-6">
       <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Add New Script</h2>
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="script-label">Script Label</Label>
-            <Input
-              id="script-label"
-              value={newLabel}
-              onChange={(e) => setNewLabel(e.target.value)}
-              placeholder="e.g., Google Analytics"
-              className="mt-1"
-            />
-          </div>
-          <div>
-            <Label htmlFor="script-content">Script Content</Label>
-            <Textarea
-              id="script-content"
-              value={newScript}
-              onChange={(e) => setNewScript(e.target.value)}
-              placeholder="Paste your script here..."
-              className="mt-1 font-mono"
-              rows={5}
-            />
-          </div>
-          {newScript && (
+        <Tabs value={activeTab} onValueChange={(value) => setActiveTab(value as 'script' | 'meta')}>
+          <TabsList className="mb-4">
+            <TabsTrigger value="script">Add Script</TabsTrigger>
+            <TabsTrigger value="meta">Add Meta Tag</TabsTrigger>
+          </TabsList>
+
+          <div className="space-y-4">
             <div>
-              <Label>Preview</Label>
-              <pre className="mt-1 p-4 bg-secondary rounded-md overflow-x-auto">
-                <code>{newScript}</code>
-              </pre>
+              <Label htmlFor="element-label">Label</Label>
+              <Input
+                id="element-label"
+                value={newLabel}
+                onChange={(e) => setNewLabel(e.target.value)}
+                placeholder="e.g., Google Analytics"
+                className="mt-1"
+              />
             </div>
-          )}
-          <Button
-            onClick={handleAddScript}
-            disabled={isSaving}
-            className="w-full"
-          >
-            {isSaving ? (
-              <>
-                <Loader2 className="mr-2 h-4 w-4 animate-spin" />
-                Saving...
-              </>
-            ) : (
-              "Add Script"
-            )}
-          </Button>
-        </div>
+
+            <TabsContent value="script">
+              <div>
+                <Label htmlFor="script-content">Script Content</Label>
+                <Textarea
+                  id="script-content"
+                  value={newScript}
+                  onChange={(e) => setNewScript(e.target.value)}
+                  placeholder="Paste your script here..."
+                  className="mt-1 font-mono"
+                  rows={5}
+                />
+              </div>
+              {newScript && (
+                <div className="mt-4">
+                  <Label>Preview</Label>
+                  <pre className="mt-1 p-4 bg-secondary rounded-md overflow-x-auto">
+                    <code>{newScript}</code>
+                  </pre>
+                </div>
+              )}
+            </TabsContent>
+
+            <TabsContent value="meta">
+              <div className="space-y-4">
+                <div>
+                  <Label htmlFor="meta-name">Meta Name</Label>
+                  <Input
+                    id="meta-name"
+                    value={newMetaName}
+                    onChange={(e) => setNewMetaName(e.target.value)}
+                    placeholder="e.g., google-site-verification"
+                    className="mt-1"
+                  />
+                </div>
+                <div>
+                  <Label htmlFor="meta-content">Meta Content</Label>
+                  <Input
+                    id="meta-content"
+                    value={newMetaContent}
+                    onChange={(e) => setNewMetaContent(e.target.value)}
+                    placeholder="Meta tag content value"
+                    className="mt-1"
+                  />
+                </div>
+                {newMetaName && newMetaContent && (
+                  <div>
+                    <Label>Preview</Label>
+                    <pre className="mt-1 p-4 bg-secondary rounded-md overflow-x-auto">
+                      <code>{`<meta name="${newMetaName}" content="${newMetaContent}" />`}</code>
+                    </pre>
+                  </div>
+                )}
+              </div>
+            </TabsContent>
+
+            <Button
+              onClick={handleAdd}
+              disabled={isSaving}
+              className="w-full mt-4"
+            >
+              {isSaving ? (
+                <>
+                  <Loader2 className="mr-2 h-4 w-4 animate-spin" />
+                  Saving...
+                </>
+              ) : (
+                `Add ${activeTab === 'script' ? 'Script' : 'Meta Tag'}`
+              )}
+            </Button>
+          </div>
+        </Tabs>
       </Card>
 
       <Card className="p-6">
-        <h2 className="text-2xl font-bold mb-4">Existing Scripts</h2>
+        <h2 className="text-2xl font-bold mb-4">Existing Elements</h2>
         <div className="space-y-4">
-          {scripts.length === 0 ? (
+          {elements.length === 0 ? (
             <p className="text-muted-foreground text-center py-4">
-              No scripts added yet.
+              No elements added yet.
             </p>
           ) : (
-            scripts.map((script) => (
-              <Card key={script.id} className="p-4">
+            elements.map((element) => (
+              <Card key={element.id} className="p-4">
                 <div className="flex items-center justify-between mb-2">
-                  <div className="font-medium">{script.label}</div>
+                  <div>
+                    <div className="font-medium">{element.label}</div>
+                    <div className="text-sm text-muted-foreground">
+                      Type: {element.type}
+                    </div>
+                  </div>
                   <div className="flex items-center space-x-2">
                     <Switch
-                      checked={script.is_enabled}
+                      checked={element.is_enabled}
                       onCheckedChange={() =>
-                        handleToggleScript(script.id, script.is_enabled)
+                        handleToggle(element.id, element.is_enabled)
                       }
                     />
                     <Button
                       variant="destructive"
                       size="sm"
-                      onClick={() => handleDeleteScript(script.id)}
+                      onClick={() => handleDelete(element.id)}
                     >
                       Delete
                     </Button>
                   </div>
                 </div>
                 <pre className="p-2 bg-secondary rounded-md overflow-x-auto">
-                  <code>{script.script}</code>
+                  <code>
+                    {element.type === 'meta' 
+                      ? `<meta name="${element.meta_name}" content="${element.meta_content}" />`
+                      : element.script}
+                  </code>
                 </pre>
               </Card>
             ))
