@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { CsvToJsonConverter } from './csv-to-json-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('csv-to-json');
-  
-  if (!tool) {
-    return {
-      title: 'CSV to JSON Converter',
-      description: 'Convert CSV (Comma-Separated Values) data to JSON format. Perfect for data transformation and API integration.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'csv-to-json',
+    tool?.title || 'CSV to JSON Converter',
+    tool?.short_description || 'Convert CSV data to JSON format'
+  );
 }
 
 export default async function CsvToJsonPage() {

@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { PhoneticSpellingConverter } from './phonetic-spelling-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('phonetic-spelling');
-  
-  if (!tool) {
-    return {
-      title: 'Phonetic Spelling Generator',
-      description: 'Convert your text into NATO phonetic alphabet spelling. Perfect for clear communication in military, aviation, or any situation requiring precise spelling.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'phonetic-spelling',
+    tool?.title || 'Phonetic Spelling',
+    tool?.short_description || 'Convert text to phonetic spelling'
+  );
 }
 
 export default async function PhoneticSpellingPage() {

@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { ItalicTextConverter } from './italic-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('italic-text');
-  
-  if (!tool) {
-    return {
-      title: 'Italic Text Converter',
-      description: 'Convert your text into italic characters. Perfect for adding emphasis or style to your text.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'italic-text',
+    tool?.title || 'Italic Text Generator',
+    tool?.short_description || 'Convert text to italic format for social media'
+  );
 }
 
 export default async function ItalicTextPage() {

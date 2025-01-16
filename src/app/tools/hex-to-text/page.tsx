@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { HexConverter } from './hex-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('hex-to-text');
-  
-  if (!tool) {
-    return {
-      title: 'Hex to Text Converter',
-      description: 'Convert hexadecimal values to text and text to hexadecimal. Perfect for working with binary data or debugging.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'hex-to-text',
+    tool?.title || 'Hex to Text Converter',
+    tool?.short_description || 'Convert hexadecimal to text and vice versa'
+  );
 }
 
 export default async function HexToTextPage() {
@@ -40,7 +35,7 @@ export default async function HexToTextPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <HexConverter />
+        <HexToTextConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

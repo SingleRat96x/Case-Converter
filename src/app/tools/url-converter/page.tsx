@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { UrlConverter } from './url-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('url-converter');
-  
-  if (!tool) {
-    return {
-      title: 'URL Encode and Decode',
-      description: 'Convert text to URL-safe format and decode URL-encoded strings. Essential for handling URLs and query parameters.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'url-converter',
+    tool?.title || 'URL Encoder/Decoder',
+    tool?.short_description || 'Encode and decode URLs'
+  );
 }
 
 export default async function UrlPage() {

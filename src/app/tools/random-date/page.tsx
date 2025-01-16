@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RandomDateConverter } from './random-date-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('random-date');
-  
-  if (!tool) {
-    return {
-      title: 'Random Date Generator',
-      description: 'Generate random dates between specified ranges. Perfect for testing, data generation, or any scenario requiring random dates.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'random-date',
+    tool?.title || 'Random Date Generator',
+    tool?.short_description || 'Generate random dates between two dates'
+  );
 }
 
 export default async function RandomDatePage() {

@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { CaesarCipher } from './caesar-cipher-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('caesar-cipher');
-  
-  if (!tool) {
-    return {
-      title: 'Caesar Cipher Tool',
-      description: 'Encode and decode text using the classic Caesar cipher encryption method. Perfect for learning about basic cryptography.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'caesar-cipher',
+    tool?.title || 'Caesar Cipher',
+    tool?.short_description || 'Encrypt and decrypt text using Caesar cipher'
+  );
 }
 
 export default async function CaesarCipherPage() {
@@ -40,7 +35,7 @@ export default async function CaesarCipherPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <CaesarCipher />
+        <CaesarCipherConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

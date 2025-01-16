@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
 import { PngToJpgConverter } from "./png-to-jpg-converter";
+import { getToolContent } from '@/lib/tools';
+import { generatePageMetadata } from '@/lib/metadata';
 
-export const metadata: Metadata = {
-  title: "PNG to JPG Converter - Free Online Tool",
-  description: "Convert your PNG images to JPG format. Our free online converter helps you convert PNG images to the widely supported JPG format with customizable quality settings.",
-};
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const tool = await getToolContent('png-to-jpg');
+  return generatePageMetadata(
+    'tool',
+    'png-to-jpg',
+    tool?.title || 'PNG to JPG Converter',
+    tool?.short_description || 'Convert PNG images to JPG format'
+  );
+}
 
 export default function PngToJpgPage() {
   return (

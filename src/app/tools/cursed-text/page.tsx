@@ -1,23 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { CursedTextConverter } from './cursed-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('cursed-text');
-  if (!tool) {
-    return {
-      title: 'Cursed Text Generator',
-      description: 'Convert your text into cursed letters'
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'cursed-text',
+    tool?.title || 'Cursed Text Generator',
+    tool?.short_description || 'Convert text to cursed style font'
+  );
 }
 
 export default async function CursedTextPage() {

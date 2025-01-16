@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
+import { getToolContent } from "@/lib/tools";
 import { WebpToJpgConverter } from "./webp-to-jpg-converter";
+import { generatePageMetadata } from "@/lib/metadata";
 
-export const metadata: Metadata = {
-  title: "WebP to JPG Converter - Free Online Tool",
-  description: "Convert your WebP images to JPG format. Our free online converter helps you transform WebP images into the widely supported JPG format with customizable quality settings.",
-};
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
+
+export async function generateMetadata(): Promise<Metadata> {
+  const tool = await getToolContent('webp-to-jpg');
+  return generatePageMetadata(
+    'tool',
+    'webp-to-jpg',
+    tool?.title || 'WebP to JPG Converter',
+    tool?.short_description || 'Convert WebP images to JPG format'
+  );
+}
 
 export default function WebpToJpgPage() {
   return (

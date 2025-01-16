@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { MorseCodeConverter } from './morse-code-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('morse-code');
-  
-  if (!tool) {
-    return {
-      title: 'Morse Code Translator',
-      description: 'Convert text to Morse code and decode Morse code back to text. Perfect for learning or working with Morse code.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'morse-code',
+    tool?.title || 'Morse Code Translator',
+    tool?.short_description || 'Convert text to and from Morse code'
+  );
 }
 
 export default async function MorseCodePage() {

@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { Utf8Converter } from './utf8-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('utf8-converter');
-  
-  if (!tool) {
-    return {
-      title: 'UTF-8 Encoder/Decoder',
-      description: 'Convert text between UTF-8 and various encodings. Perfect for handling international text and character encoding issues.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'utf8-converter',
+    tool?.title || 'UTF-8 Converter',
+    tool?.short_description || 'Convert text to and from UTF-8 encoding'
+  );
 }
 
 export default async function Utf8Page() {

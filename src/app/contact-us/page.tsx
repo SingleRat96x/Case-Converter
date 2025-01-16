@@ -1,16 +1,23 @@
 import { supabase } from '@/lib/supabase';
 import { Metadata } from 'next';
+import { generatePageMetadata } from '@/lib/metadata';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const { data: page } = await supabase
     .from('static_pages')
-    .select('title')
+    .select('title, short_description')
     .eq('slug', 'contact-us')
     .single();
 
-  return {
-    title: page?.title || 'Contact Us',
-  };
+  return generatePageMetadata(
+    'static',
+    'contact-us',
+    page?.title || 'Contact Us',
+    page?.short_description || 'Get in touch with us for any questions or feedback'
+  );
 }
 
 export default async function ContactUsPage() {

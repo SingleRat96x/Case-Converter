@@ -116,7 +116,7 @@ export function HeaderScriptManager() {
       const { error } = await supabase.from("header_scripts").insert([{
         label: newLabel,
         type: activeTab,
-        script: activeTab === 'script' ? newScript : null,
+        script: activeTab === 'script' ? newScript : '',
         meta_name: activeTab === 'meta' ? newMetaName : null,
         meta_content: activeTab === 'meta' ? newMetaContent : null,
         html_content: activeTab === 'html' ? newHtmlContent : null,

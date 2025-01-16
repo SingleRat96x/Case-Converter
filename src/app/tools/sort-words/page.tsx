@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { SortWordsConverter } from './sort-words-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('sort-words');
-  
-  if (!tool) {
-    return {
-      title: 'Sort Words Alphabetically',
-      description: 'Sort words or lines alphabetically in ascending or descending order. Perfect for organizing lists, references, or any text content.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'sort-words',
+    tool?.title || 'Sort Words Tool',
+    tool?.short_description || 'Sort words alphabetically or by length'
+  );
 }
 
 export default async function SortWordsPage() {

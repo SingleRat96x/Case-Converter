@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { TextReplaceConverter } from './text-replace-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('text-replace');
-  
-  if (!tool) {
-    return {
-      title: 'Text Replacement Tool',
-      description: 'Replace words or phrases in your text with custom replacements. Perfect for text editing and content updates.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'text-replace',
+    tool?.title || 'Text Replace Tool',
+    tool?.short_description || 'Find and replace text in your content'
+  );
 }
 
 export default async function TextReplacePage() {

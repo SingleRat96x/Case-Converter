@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { MirrorTextConverter } from './mirror-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('mirror-text');
-  
-  if (!tool) {
-    return {
-      title: 'Mirror Text Generator',
-      description: 'Convert your text into mirrored characters. Perfect for creating unique and fun text effects.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'mirror-text',
+    tool?.title || 'Mirror Text Generator',
+    tool?.short_description || 'Create mirrored text that reads backwards'
+  );
 }
 
 export default async function MirrorTextPage() {

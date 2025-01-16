@@ -1,14 +1,20 @@
 import type { Metadata } from "next";
 import { AsciiArtGenerator } from "./ascii-art-generator";
 import { getToolByName } from "@/lib/tools";
+import { getToolContent } from '@/lib/tools';
+import { generatePageMetadata } from '@/lib/metadata';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const tool = await getToolByName("ascii-art-generator");
-  
-  return {
-    title: tool.title,
-    description: tool.long_description,
-  };
+  const tool = await getToolContent('ascii-art-generator');
+  return generatePageMetadata(
+    'tool',
+    'ascii-art-generator',
+    tool?.title || 'ASCII Art Generator',
+    tool?.short_description || 'Convert text to ASCII art'
+  );
 }
 
 export default async function AsciiArtGeneratorPage() {

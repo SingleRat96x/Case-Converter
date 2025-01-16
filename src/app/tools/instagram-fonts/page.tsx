@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { InstagramFontsConverter } from './instagram-fonts-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('instagram-fonts');
-  
-  if (!tool) {
-    return {
-      title: 'Instagram Fonts Generator',
-      description: 'Convert your text into beautiful Instagram fonts. Choose from multiple font styles to make your Instagram posts stand out.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'instagram-fonts',
+    tool?.title || 'Instagram Fonts Generator',
+    tool?.short_description || 'Create stylish text for Instagram bio and captions'
+  );
 }
 
 export default async function InstagramFontsPage() {

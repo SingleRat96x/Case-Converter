@@ -1,23 +1,19 @@
 import type { Metadata } from 'next';
-import { TextCounter } from './text-counter';
 import { getToolContent } from '@/lib/tools';
+import { TextCounter } from './text-counter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const content = await getToolContent('text-counter');
-  if (!content) {
-    return {
-      title: 'Text Counter Tool',
-      description: 'Count characters, words, and lines in your text',
-    };
-  }
-  
-  return {
-    title: content.title,
-    description: content.short_description,
-  };
+  const tool = await getToolContent('text-counter');
+  return generatePageMetadata(
+    'tool',
+    'text-counter',
+    tool?.title || 'Text Counter',
+    tool?.short_description || 'Count characters, words, and lines in your text'
+  );
 }
 
 export default async function TextCounterPage() {

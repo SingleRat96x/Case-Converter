@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { PasswordGenerator } from './password-generator';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('password-generator');
-  
-  if (!tool) {
-    return {
-      title: 'Strong Password Generator',
-      description: 'Generate secure, random passwords with customizable options for length and character types. Perfect for creating strong, unique passwords for your accounts.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'password-generator',
+    tool?.title || 'Password Generator',
+    tool?.short_description || 'Generate secure random passwords'
+  );
 }
 
 export default async function PasswordGeneratorPage() {

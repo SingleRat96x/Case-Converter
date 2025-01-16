@@ -1,23 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { BoldTextConverter } from './bold-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('bold-text');
-  if (!tool) {
-    return {
-      title: 'Bold Text Generator',
-      description: 'Create bold text for social media'
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'bold-text',
+    tool?.title || 'Bold Text Generator',
+    tool?.short_description || 'Create bold text for social media'
+  );
 }
 
 export default async function BoldTextPage() {

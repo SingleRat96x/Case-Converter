@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RandomIpConverter } from './random-ip-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('random-ip');
-  
-  if (!tool) {
-    return {
-      title: 'Random IP Address Generator',
-      description: 'Generate random IPv4 and IPv6 addresses. Perfect for testing, network simulations, or any scenario requiring random IP addresses.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'random-ip',
+    tool?.title || 'Random IP Generator',
+    tool?.short_description || 'Generate random IP addresses'
+  );
 }
 
 export default async function RandomIpPage() {

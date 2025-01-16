@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { WordFrequencyConverter } from './word-frequency-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('word-frequency');
-  
-  if (!tool) {
-    return {
-      title: 'Word Frequency Counter',
-      description: 'Analyze word frequency in your text. Perfect for content analysis, SEO optimization, and writing improvement.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'word-frequency',
+    tool?.title || 'Word Frequency Counter',
+    tool?.short_description || 'Count frequency of words in your text'
+  );
 }
 
 export default async function WordFrequencyPage() {

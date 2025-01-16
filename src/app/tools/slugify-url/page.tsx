@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
-import { SlugifyConverter } from './slugify-converter';
+import { SlugifyConverter } from './slugify-url';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('slugify-url');
-  
-  if (!tool) {
-    return {
-      title: 'Slugify URL Generator',
-      description: 'Convert text into URL-friendly slugs with proper formatting and character handling. Perfect for creating clean URLs.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'slugify-url',
+    tool?.title || 'URL Slugify',
+    tool?.short_description || 'Convert text to URL-friendly slugs'
+  );
 }
 
 export default async function SlugifyPage() {
@@ -40,7 +35,7 @@ export default async function SlugifyPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <SlugifyConverter />
+        <SlugifyUrlConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

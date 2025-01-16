@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { UtmBuilder } from './utm-builder';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('utm-builder');
-  
-  if (!tool) {
-    return {
-      title: 'UTM Builder Generator',
-      description: 'Generate UTM parameters for tracking marketing campaigns. Create custom tracking URLs for Google Analytics and other analytics platforms.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'utm-builder',
+    tool?.title || 'UTM Builder',
+    tool?.short_description || 'Create UTM tracking URLs for marketing campaigns'
+  );
 }
 
 export default async function UtmPage() {

@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RandomLetterConverter } from './random-letter-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('random-letter');
-  
-  if (!tool) {
-    return {
-      title: 'Random Letter Generator',
-      description: 'Generate random letters with customizable options. Perfect for games, teaching, or any scenario requiring random letter generation.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'random-letter',
+    tool?.title || 'Random Letter Generator',
+    tool?.short_description || 'Generate random letters'
+  );
 }
 
 export default async function RandomLetterPage() {

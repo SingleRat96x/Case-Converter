@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { Md5Converter } from './md5-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('md5-hash');
-  
-  if (!tool) {
-    return {
-      title: 'MD5 Hash Generator',
-      description: 'Generate MD5 hash values from text input. Perfect for checksum verification or legacy systems using MD5.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'md5-hash',
+    tool?.title || 'MD5 Hash Generator',
+    tool?.short_description || 'Generate MD5 hash from text'
+  );
 }
 
 export default async function Md5HashPage() {
@@ -40,7 +35,7 @@ export default async function Md5HashPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <Md5Converter />
+        <Md5HashConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

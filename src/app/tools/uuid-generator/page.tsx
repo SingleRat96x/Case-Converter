@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
-import { UuidGenerator } from './uuid-generator';
+import { UuidGeneratorConverter } from './uuid-generator';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('uuid-generator');
-  
-  if (!tool) {
-    return {
-      title: 'UUID Generator',
-      description: 'Generate random UUIDs (Universally Unique Identifiers) in version 4 format. Perfect for database IDs, unique identifiers, or any scenario requiring UUIDs.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'uuid-generator',
+    tool?.title || 'UUID Generator',
+    tool?.short_description || 'Generate random UUIDs (v4)'
+  );
 }
 
 export default async function UuidGeneratorPage() {
@@ -40,7 +35,7 @@ export default async function UuidGeneratorPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <UuidGenerator />
+        <UuidGeneratorConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

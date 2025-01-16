@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { AlternatingCaseConverter } from './alternating-case-converter';
 import { getToolContent } from '@/lib/tools';
+import { generatePageMetadata } from '@/lib/metadata';
 
 // Force dynamic rendering and disable all caching
 export const dynamic = 'force-dynamic';
@@ -8,17 +9,12 @@ export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('alternating-case');
-  if (!tool) {
-    return {
-      title: 'aLtErNaTiNg cAsE Converter',
-      description: 'Convert your text to alternating case online.'
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'alternating-case',
+    tool?.title || 'Alternating Case Converter',
+    tool?.short_description || 'Convert text to aLtErNaTiNg case format'
+  );
 }
 
 export default async function AlternatingCasePage() {

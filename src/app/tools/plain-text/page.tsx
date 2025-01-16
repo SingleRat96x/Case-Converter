@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { PlainTextConverter } from './plain-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('plain-text');
-  
-  if (!tool) {
-    return {
-      title: 'Plain Text Converter',
-      description: 'Convert formatted text to plain text. Remove HTML tags, special characters, and formatting while preserving the content.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'plain-text',
+    tool?.title || 'Plain Text Converter',
+    tool?.short_description || 'Convert formatted text to plain text'
+  );
 }
 
 export default async function PlainTextPage() {

@@ -15,9 +15,6 @@ export const metadata: Metadata = {
   },
   description: "Free online tools to convert text between different cases. Transform your text to UPPERCASE, lowercase, Title Case, Sentence case, and more.",
   keywords: ["text case converter", "case changer", "text tools", "uppercase converter", "lowercase converter", "title case converter", "sentence case converter"],
-  verification: {
-    google: "5jTEQc8xGjzILyg6yHlqbWyi93KZleFawCJBiyhVhi0",
-  },
 };
 
 export default function RootLayout({
@@ -28,7 +25,6 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
-        <meta name="google-site-verification" content="5jTEQc8xGjzILyg6yHlqbWyi93KZleFawCJBiyhVhi0" />
         <HeaderScripts />
       </head>
       <body className={inter.className}>

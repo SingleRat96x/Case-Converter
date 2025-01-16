@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { SentenceCaseConverter } from './sentence-case-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const content = await getToolContent('sentence-case');
-  
-  if (!content) {
-    return {
-      title: 'Sentence Case Converter',
-      description: 'Convert your text to sentence case online',
-    };
-  }
-
-  return {
-    title: content.title,
-    description: content.short_description,
-  };
+  const tool = await getToolContent('sentence-case');
+  return generatePageMetadata(
+    'tool',
+    'sentence-case',
+    tool?.title || 'Sentence Case Converter',
+    tool?.short_description || 'Convert text to Sentence case format'
+  );
 }
 
 export default async function SentenceCasePage() {

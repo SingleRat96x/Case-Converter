@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RepeatTextConverter } from './repeat-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('repeat-text');
-  
-  if (!tool) {
-    return {
-      title: 'Repeat Text Generator',
-      description: 'Generate repeated text patterns easily. Perfect for testing, formatting, or creating text patterns.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'repeat-text',
+    tool?.title || 'Text Repeater',
+    tool?.short_description || 'Repeat text multiple times'
+  );
 }
 
 export default async function RepeatTextPage() {

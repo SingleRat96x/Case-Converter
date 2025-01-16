@@ -32,7 +32,7 @@ export const TOOL_CATEGORIES = {
 
 // Cache object to store tool content with improved typing
 const toolContentCache: { [key: string]: { content: ToolContent; timestamp: number } } = {};
-const CACHE_DURATION = 3600000; // 1 hour in milliseconds
+const CACHE_DURATION = 36000000; // 10 hours in milliseconds
 
 // Cache for all tools with improved typing
 let allToolsCache: { content: ToolContent[]; timestamp: number } = {

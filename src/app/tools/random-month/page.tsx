@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RandomMonthConverter } from './random-month-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('random-month');
-  
-  if (!tool) {
-    return {
-      title: 'Random Month Generator',
-      description: 'Generate random months with customizable formats. Perfect for scheduling, planning, or any scenario requiring random month selection.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'random-month',
+    tool?.title || 'Random Month Generator',
+    tool?.short_description || 'Generate random months of the year'
+  );
 }
 
 export default async function RandomMonthPage() {

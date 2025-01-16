@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { NatoPhoneticConverter } from './nato-phonetic-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('nato-phonetic');
-  
-  if (!tool) {
-    return {
-      title: 'NATO Phonetic Alphabet Translator',
-      description: 'Convert text to NATO phonetic alphabet and vice versa. Perfect for clear communication in aviation, military, or emergency services.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'nato-phonetic',
+    tool?.title || 'NATO Phonetic Alphabet Converter',
+    tool?.short_description || 'Convert text to NATO phonetic alphabet'
+  );
 }
 
 export default async function NatoPhoneticPage() {

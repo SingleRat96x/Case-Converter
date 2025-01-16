@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { UppercaseConverter } from './uppercase-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 // Force dynamic rendering and disable all caching
 export const dynamic = 'force-dynamic';
@@ -8,11 +9,12 @@ export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('uppercase');
-  
-  return {
-    title: tool?.title ?? 'UPPERCASE Converter',
-    description: tool?.short_description ?? 'Convert your text to UPPERCASE online',
-  };
+  return generatePageMetadata(
+    'tool',
+    'uppercase',
+    tool?.title || 'Uppercase Text Converter',
+    tool?.short_description || 'Convert text to UPPERCASE letters'
+  );
 }
 
 export default async function UppercasePage() {

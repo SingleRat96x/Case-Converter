@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RandomNumberConverter } from './random-number-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('random-number');
-  
-  if (!tool) {
-    return {
-      title: 'Random Number Generator',
-      description: 'Generate random numbers with customizable ranges and options. Perfect for games, simulations, or any scenario requiring random number generation.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'random-number',
+    tool?.title || 'Random Number Generator',
+    tool?.short_description || 'Generate random numbers between two values'
+  );
 }
 
 export default async function RandomNumberPage() {

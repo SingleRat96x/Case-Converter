@@ -1,23 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { DuplicateLineRemoverConverter } from './duplicate-line-remover-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('duplicate-line-remover');
-  if (!tool) {
-    return {
-      title: 'Duplicate Line Remover',
-      description: 'Remove duplicate lines from your text'
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'duplicate-line-remover',
+    tool?.title || 'Duplicate Line Remover',
+    tool?.short_description || 'Remove duplicate lines from your text'
+  );
 }
 
 export default async function DuplicateLineRemoverPage() {

@@ -2,6 +2,10 @@ import { getAllTools } from '@/lib/tools';
 import { ToolBlock } from '@/components/ToolBlock';
 import { TOOL_CATEGORIES } from '@/lib/tools';
 import type { Metadata } from 'next';
+import { generatePageMetadata } from '@/lib/metadata';
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata({
   params,
@@ -12,10 +16,12 @@ export async function generateMetadata({
     cat => cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === params.category
   );
 
-  return {
-    title: categoryName ? `${categoryName} Tools - Text Case Converter` : 'Category Not Found',
-    description: `Browse our collection of ${categoryName?.toLowerCase()} tools.`,
-  };
+  return generatePageMetadata(
+    'category',
+    params.category,
+    categoryName ? `${categoryName} Tools - Text Case Converter` : 'Category Not Found',
+    categoryName ? `Browse our collection of ${categoryName.toLowerCase()} tools.` : 'Category not found'
+  );
 }
 
 export default async function page({

@@ -1,23 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { DiscordFontConverter } from './discord-font-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('discord-font');
-  if (!tool) {
-    return {
-      title: 'Discord Font Generator',
-      description: 'Create stylish text for Discord messages'
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'discord-font',
+    tool?.title || 'Discord Font Generator',
+    tool?.short_description || 'Create stylish text for Discord messages'
+  );
 }
 
 export default async function DiscordFontPage() {

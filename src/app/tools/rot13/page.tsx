@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { Rot13Converter } from './rot13-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('rot13');
-  
-  if (!tool) {
-    return {
-      title: 'ROT13 Encoder/Decoder',
-      description: 'Encode and decode text using the ROT13 substitution cipher. Perfect for simple text obfuscation or puzzle creation.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'rot13',
+    tool?.title || 'ROT13 Encoder/Decoder',
+    tool?.short_description || 'Encode and decode text using ROT13 cipher'
+  );
 }
 
 export default async function Rot13Page() {

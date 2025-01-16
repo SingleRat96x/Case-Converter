@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
-import { OnlineNotepad } from './online-notepad-converter';
+import { OnlineNotepadConverter } from './online-notepad-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('online-notepad');
-  
-  if (!tool) {
-    return {
-      title: 'Online Notepad',
-      description: 'Simple, clean online notepad for quick notes and text editing. Auto-saves your content and works offline.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'online-notepad',
+    tool?.title || 'Online Notepad',
+    tool?.short_description || 'Free online notepad for quick text editing'
+  );
 }
 
 export default async function OnlineNotepadPage() {
@@ -40,7 +35,7 @@ export default async function OnlineNotepadPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <OnlineNotepad />
+        <OnlineNotepadConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

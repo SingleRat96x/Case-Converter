@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { PigLatinConverter } from './pig-latin-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('pig-latin');
-  
-  if (!tool) {
-    return {
-      title: 'Pig Latin Translator',
-      description: 'Convert your text into Pig Latin. A fun way to transform English text into its playful Pig Latin equivalent.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'pig-latin',
+    tool?.title || 'Pig Latin Translator',
+    tool?.short_description || 'Convert text to Pig Latin language'
+  );
 }
 
 export default async function PigLatinPage() {

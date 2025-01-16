@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { Base64Converter } from './base64-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('base64-encoder-decoder');
-  
-  if (!tool) {
-    return {
-      title: 'Base64 Encoder/Decoder',
-      description: 'Convert text to Base64 encoding and decode Base64 back to text. Perfect for encoding binary data into ASCII text format.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'base64-encoder-decoder',
+    tool?.title || 'Base64 Encoder/Decoder',
+    tool?.short_description || 'Convert text to and from Base64 encoding'
+  );
 }
 
 export default async function Base64Page() {

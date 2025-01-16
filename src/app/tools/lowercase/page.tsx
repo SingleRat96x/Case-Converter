@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { LowercaseConverter } from './lowercase-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
-export const revalidate = 3600;
 export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const content = await getToolContent('lowercase');
-  
-  return {
-    title: content?.title ?? 'Lowercase Converter Tool',
-    description: content?.short_description ?? 'Convert text to lowercase easily',
-  };
+  const tool = await getToolContent('lowercase');
+  return generatePageMetadata(
+    'tool',
+    'lowercase',
+    tool?.title || 'Lowercase Text Converter',
+    tool?.short_description || 'Convert text to lowercase letters'
+  );
 }
 
 export default async function LowercasePage() {

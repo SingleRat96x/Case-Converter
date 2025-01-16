@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RandomChoiceConverter } from './random-choice-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('random-choice');
-  
-  if (!tool) {
-    return {
-      title: 'Random Choice Generator',
-      description: 'Generate random choices from your list of options. Perfect for making decisions or selecting random items from a list.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'random-choice',
+    tool?.title || 'Random Choice Generator',
+    tool?.short_description || 'Pick a random item from your list'
+  );
 }
 
 export default async function RandomChoicePage() {

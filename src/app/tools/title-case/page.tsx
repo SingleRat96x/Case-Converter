@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { TitleCaseConverter } from './title-case-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const content = await getToolContent('title-case');
-  
-  if (!content) {
-    return {
-      title: 'Title Case Converter',
-      description: 'Convert text to title case format',
-    };
-  }
-
-  return {
-    title: content.title,
-    description: content.short_description,
-  };
+  const tool = await getToolContent('title-case');
+  return generatePageMetadata(
+    'tool',
+    'title-case',
+    tool?.title || 'Title Case Converter',
+    tool?.short_description || 'Convert text to Title Case format'
+  );
 }
 
 export default async function TitleCasePage() {

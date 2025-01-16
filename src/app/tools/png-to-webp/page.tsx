@@ -1,18 +1,23 @@
 import type { Metadata } from "next";
 import { PngToWebpConverter } from "./png-to-webp-converter";
-import { getToolByName } from "@/lib/tools";
+import { getToolContent } from "@/lib/tools";
+import { generatePageMetadata } from "@/lib/metadata";
+
+export const dynamic = 'force-dynamic';
+export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
-  const tool = await getToolByName("png-to-webp");
-  
-  return {
-    title: tool.title,
-    description: tool.long_description,
-  };
+  const tool = await getToolContent('png-to-webp');
+  return generatePageMetadata(
+    'tool',
+    'png-to-webp',
+    tool?.title || 'PNG to WebP Converter',
+    tool?.short_description || 'Convert PNG images to WebP format'
+  );
 }
 
 export default async function PngToWebpPage() {
-  const tool = await getToolByName("png-to-webp");
+  const tool = await getToolContent("png-to-webp");
 
   return (
     <div className="container mx-auto px-4 py-8">

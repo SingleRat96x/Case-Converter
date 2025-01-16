@@ -10,17 +10,56 @@ import LinkExtension from '@tiptap/extension-link';
 import ImageExtension from '@tiptap/extension-image';
 import TableExtension from '@tiptap/extension-table';
 import TableRowExtension from '@tiptap/extension-table-row';
-import TableCellExtension from '@tiptap/extension-table-cell';
 import TableHeaderExtension from '@tiptap/extension-table-header';
+import TableCellExtension from '@tiptap/extension-table-cell';
 import SubscriptExtension from '@tiptap/extension-subscript';
 import SuperscriptExtension from '@tiptap/extension-superscript';
-import { Search, LogOut, Bold, Italic, Strikethrough, List, ListOrdered, Heading1, Heading2, Heading3, Code, Quote, Undo, Redo, Minus, LayoutGrid, Settings, Eye, EyeOff, RefreshCw, ChevronLeft, Menu as MenuIcon, Users, FileText, Link, Image, AlignLeft, AlignCenter, AlignRight, AlignJustify, Underline, Table, FileCode, Superscript, Subscript } from 'lucide-react';
 import { supabase } from '@/lib/supabase';
 import { invalidateToolCache, invalidateAllCaches } from '@/lib/tools';
 import type { ToolContent } from '@/lib/tools';
 import { clearAuthToken, isAuthenticated } from '@/lib/auth';
 import { MenuManager } from './menu-manager';
 import { revalidateToolContent } from '@/lib/actions';
+import { PageContent, invalidatePageCache } from '@/lib/page-content';
+import { 
+  FileText, 
+  RefreshCw, 
+  LogOut, 
+  LayoutGrid, 
+  Eye, 
+  EyeOff, 
+  ChevronLeft, 
+  Search,
+  Bold,
+  Italic,
+  Strikethrough,
+  List,
+  ListOrdered,
+  Heading1,
+  Heading2,
+  Heading3,
+  Code,
+  Quote,
+  Undo,
+  Redo,
+  Minus,
+  Settings,
+  Menu as MenuIcon,
+  Users,
+  Link as LinkIcon,
+  Image as ImageIcon,
+  AlignLeft,
+  AlignCenter,
+  AlignRight,
+  AlignJustify,
+  Underline,
+  Table,
+  FileCode,
+  Superscript,
+  Subscript
+} from 'lucide-react';
+import { MetaDescription, getAllMetaDescriptions, upsertMetaDescription, getDefaultMetaDescription, PageType } from '@/lib/meta-descriptions';
+import { MetaDescriptionEditor } from '@/components/meta-description-editor';
 
 export function AdminDashboard() {
   const router = useRouter();
@@ -30,10 +69,13 @@ export function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu' | 'pages' | 'scripts'>('tools');
+  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu' | 'pages' | 'scripts' | 'page-content' | 'meta'>('tools');
   const [staticPages, setStaticPages] = useState<Array<{id: string, slug: string, title: string, content: string, last_updated: string}>>([]);
   const [selectedPage, setSelectedPage] = useState<{id: string, slug: string, title: string, content: string, last_updated: string} | null>(null);
   const [editorMode, setEditorMode] = useState<'visual' | 'text'>('visual');
+  const [pageContent, setPageContent] = useState<PageContent | null>(null);
+  const [metaDescriptions, setMetaDescriptions] = useState<MetaDescription[]>([]);
+  const [selectedMeta, setSelectedMeta] = useState<MetaDescription | null>(null);
 
   const editor = useEditor({
     extensions: [
@@ -73,6 +115,18 @@ export function AdminDashboard() {
     fetchStaticPages();
   }, [router]);
 
+  useEffect(() => {
+    if (activeTab === 'page-content') {
+      fetchPageContent();
+    }
+  }, [activeTab]);
+
+  useEffect(() => {
+    if (activeTab === 'meta') {
+      fetchMetaDescriptions();
+    }
+  }, [activeTab]);
+
   const fetchTools = async () => {
     try {
       setIsLoading(true);
@@ -104,6 +158,40 @@ export function AdminDashboard() {
       setStaticPages(data);
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred while fetching pages');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const fetchPageContent = async () => {
+    try {
+      setIsLoading(true);
+      const { data, error } = await supabase
+        .from('page_content')
+        .select('*')
+        .eq('id', 'index')
+        .single();
+
+      if (error) throw error;
+
+      setPageContent(data);
+      if (editor) {
+        editor.commands.setContent(data.long_description || '');
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching page content');
+    } finally {
+      setIsLoading(false);
+    }
+  };
+
+  const fetchMetaDescriptions = async () => {
+    try {
+      setIsLoading(true);
+      const data = await getAllMetaDescriptions();
+      setMetaDescriptions(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching meta descriptions');
     } finally {
       setIsLoading(false);
     }
@@ -228,6 +316,125 @@ export function AdminDashboard() {
       fetchStaticPages();
     } catch (err) {
       setError(err instanceof Error ? err.message : 'An error occurred while saving the page');
+    }
+  };
+
+  const handleSavePageContent = async () => {
+    if (!pageContent || !editor) return;
+
+    try {
+      const { error } = await supabase
+        .from('page_content')
+        .update({
+          title: pageContent.title,
+          short_description: pageContent.short_description,
+          long_description: editor.getHTML(),
+          updated_at: new Date().toISOString(),
+        })
+        .eq('id', 'index');
+
+      if (error) throw error;
+
+      // Invalidate the cache
+      invalidatePageCache('index');
+      
+      setError('Page content saved successfully! The live page will be updated shortly.');
+      
+      // Revalidate Next.js cache
+      await revalidateToolContent('*');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while saving page content');
+    }
+  };
+
+  const handleSaveMetaDescription = async (meta: Partial<MetaDescription>) => {
+    try {
+      const result = await upsertMetaDescription(meta as Omit<MetaDescription, 'id' | 'updated_at'>);
+      if (result) {
+        setError('Meta description saved successfully!');
+        fetchMetaDescriptions();
+        setSelectedMeta(null);
+      }
+    } catch (err) {
+      setError(err instanceof Error ? err.message : 'An error occurred while saving meta description');
+    }
+  };
+
+  const handleAddNewMeta = async () => {
+    // If we have tools but they don't have meta descriptions, show them first
+    const toolsWithoutMeta = tools.filter(tool => 
+      !metaDescriptions.some(meta => 
+        meta.page_type === 'tool' && meta.page_id === tool.id
+      )
+    );
+
+    if (toolsWithoutMeta.length > 0) {
+      const tool = toolsWithoutMeta[0];
+      const defaultMeta: MetaDescription = {
+        id: `tool-${tool.id}`,
+        page_type: 'tool',
+        page_id: tool.id,
+        meta_title: tool.title,
+        meta_description: tool.short_description,
+        meta_keywords: `${tool.id}, text converter, text tools`,
+        og_title: tool.title,
+        og_description: tool.short_description,
+        og_type: 'website',
+        twitter_card: 'summary_large_image',
+        twitter_title: tool.title,
+        twitter_description: tool.short_description,
+        canonical_url: `https://case-converter.vercel.app/tools/${tool.id}`,
+        updated_at: new Date().toISOString()
+      };
+      setSelectedMeta(defaultMeta);
+    } else {
+      // Create a new empty meta description
+      const newMeta: MetaDescription = {
+        id: '',
+        page_type: 'tool',
+        page_id: '',
+        meta_title: '',
+        meta_description: '',
+        meta_keywords: '',
+        og_title: '',
+        og_description: '',
+        og_type: 'website',
+        twitter_card: 'summary_large_image',
+        twitter_title: '',
+        twitter_description: '',
+        canonical_url: '',
+        updated_at: new Date().toISOString()
+      };
+      setSelectedMeta(newMeta);
+    }
+  };
+
+  const handleToolMetaClick = (tool: ToolContent) => {
+    const existingMeta = metaDescriptions.find(meta => 
+      meta.page_type === 'tool' && meta.page_id === tool.id
+    );
+
+    if (existingMeta) {
+      setSelectedMeta(existingMeta);
+    } else {
+      // Create a new meta description for this tool
+      const newMeta: MetaDescription = {
+        id: `tool-${tool.id}`,
+        page_type: 'tool',
+        page_id: tool.id,
+        meta_title: tool.title,
+        meta_description: tool.short_description,
+        meta_keywords: `${tool.id}, text converter, text tools`,
+        og_title: tool.title,
+        og_description: tool.short_description,
+        og_type: 'website',
+        twitter_card: 'summary_large_image',
+        twitter_title: tool.title,
+        twitter_description: tool.short_description,
+        canonical_url: `https://case-converter.vercel.app/tools/${tool.id}`,
+        updated_at: new Date().toISOString()
+      };
+      setSelectedMeta(newMeta);
     }
   };
 
@@ -419,7 +626,7 @@ export function AdminDashboard() {
                 className={`p-2 rounded transition-colors ${editor.isActive('link') ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Add Link"
               >
-                <Link className="h-5 w-5" />
+                <LinkIcon className="h-5 w-5" />
               </button>
               <button
                 onClick={() => {
@@ -431,7 +638,7 @@ export function AdminDashboard() {
                 className="p-2 rounded transition-colors hover:bg-accent"
                 title="Add Image"
               >
-                <Image className="h-5 w-5" />
+                <ImageIcon className="h-5 w-5" />
               </button>
               <button
                 onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}
@@ -690,6 +897,28 @@ export function AdminDashboard() {
                 <FileCode className="h-5 w-5" />
                 Header Scripts
               </button>
+              <button
+                onClick={() => setActiveTab('page-content')}
+                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
+                  activeTab === 'page-content' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'hover:bg-accent'
+                }`}
+              >
+                <FileText className="h-5 w-5" />
+                Page Content
+              </button>
+              <button
+                onClick={() => setActiveTab('meta')}
+                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
+                  activeTab === 'meta' 
+                    ? 'bg-primary text-primary-foreground' 
+                    : 'hover:bg-accent'
+                }`}
+              >
+                <FileText className="h-5 w-5" />
+                Meta Descriptions
+              </button>
             </nav>
           </div>
         </div>
@@ -702,7 +931,170 @@ export function AdminDashboard() {
             </div>
           )}
 
-          {activeTab === 'menu' ? (
+          {activeTab === 'meta' && (
+            <div className="space-y-6">
+              <div className="flex items-center justify-between">
+                <h2 className="text-2xl font-bold">Meta Descriptions</h2>
+                <button
+                  onClick={handleAddNewMeta}
+                  className="px-4 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                >
+                  Add New
+                </button>
+              </div>
+
+              {isLoading ? (
+                <div className="flex items-center justify-center h-64">
+                  <div className="animate-spin rounded-full h-8 w-8 border-b-2 border-primary"></div>
+                </div>
+              ) : (
+                <div className="space-y-8">
+                  {/* Static Pages Section */}
+                  {['index', 'static', 'category'].map((pageType) => {
+                    const groupedMeta = metaDescriptions.filter(meta => meta.page_type === pageType);
+                    if (groupedMeta.length === 0) return null;
+
+                    return (
+                      <div key={pageType} className="space-y-4">
+                        <h3 className="text-lg font-semibold capitalize">
+                          {pageType === 'index' ? 'Home Page' : 
+                           pageType === 'static' ? 'Static Pages' : 
+                           'Category Pages'}
+                        </h3>
+                        <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                          {groupedMeta.map((meta) => (
+                            <div
+                              key={meta.id}
+                              onClick={() => setSelectedMeta(meta)}
+                              className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors cursor-pointer"
+                            >
+                              <h4 className="font-medium mb-2">{meta.meta_title}</h4>
+                              <p className="text-sm text-muted-foreground line-clamp-2">{meta.meta_description}</p>
+                              <div className="mt-4 flex items-center text-xs text-muted-foreground">
+                                <span>Last updated: {new Date(meta.updated_at).toLocaleDateString()}</span>
+                              </div>
+                            </div>
+                          ))}
+                        </div>
+                      </div>
+                    );
+                  })}
+
+                  {/* Tools Section */}
+                  <div className="space-y-4">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-lg font-semibold">Tools</h3>
+                      <div className="relative w-64">
+                        <Search className="absolute left-2 top-1/2 -translate-y-1/2 h-4 w-4 text-muted-foreground" />
+                        <input
+                          type="text"
+                          placeholder="Search tools..."
+                          value={searchQuery}
+                          onChange={(e) => setSearchQuery(e.target.value)}
+                          className="w-full pl-8 pr-4 py-2 text-sm bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
+                        />
+                      </div>
+                    </div>
+                    <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                      {tools
+                        .filter(tool => 
+                          tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          tool.short_description.toLowerCase().includes(searchQuery.toLowerCase())
+                        )
+                        .map((tool) => {
+                          const meta = metaDescriptions.find(m => 
+                            m.page_type === 'tool' && m.page_id === tool.id
+                          );
+                          
+                          return (
+                            <div
+                              key={tool.id}
+                              onClick={() => handleToolMetaClick(tool)}
+                              className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors cursor-pointer"
+                            >
+                              <h4 className="font-medium mb-2">{tool.title}</h4>
+                              <p className="text-sm text-muted-foreground line-clamp-2">
+                                {meta?.meta_description || tool.short_description}
+                              </p>
+                              <div className="mt-4 flex items-center text-xs text-muted-foreground">
+                                <span>
+                                  {meta ? 
+                                    `Last updated: ${new Date(meta.updated_at).toLocaleDateString()}` : 
+                                    'No meta description yet'
+                                  }
+                                </span>
+                              </div>
+                            </div>
+                          );
+                        })}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {selectedMeta && (
+                <MetaDescriptionEditor
+                  meta={selectedMeta}
+                  onClose={() => setSelectedMeta(null)}
+                  onSave={handleSaveMetaDescription}
+                />
+              )}
+            </div>
+          )}
+
+          {activeTab === 'page-content' ? (
+            <div className="space-y-6">
+              <div className="bg-card rounded-lg border border-border overflow-hidden">
+                <div className="p-6 space-y-6">
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Title</label>
+                    <input
+                      type="text"
+                      value={pageContent?.title || ''}
+                      onChange={(e) => setPageContent(prev => prev ? { ...prev, title: e.target.value } : null)}
+                      className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
+                    />
+                  </div>
+                  
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Short Description</label>
+                    <input
+                      type="text"
+                      value={pageContent?.short_description || ''}
+                      onChange={(e) => setPageContent(prev => prev ? { ...prev, short_description: e.target.value } : null)}
+                      className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
+                    />
+                  </div>
+
+                  <div>
+                    <label className="block text-sm font-medium mb-2">Content</label>
+                    <div className="bg-background border border-input rounded-lg overflow-hidden">
+                      <EditorMenuBar />
+                      {editorMode === 'visual' ? (
+                        <EditorContent editor={editor} />
+                      ) : (
+                        <textarea
+                          value={editor?.getHTML() || ''}
+                          onChange={(e) => editor?.commands.setContent(e.target.value)}
+                          className="w-full min-h-[300px] p-4 bg-background text-foreground font-mono text-sm focus:outline-none"
+                          spellCheck={false}
+                        />
+                      )}
+                    </div>
+                  </div>
+
+                  <div className="flex justify-end pt-4">
+                    <button
+                      onClick={handleSavePageContent}
+                      className="px-6 py-2 bg-primary text-primary-foreground rounded-lg hover:bg-primary/90 transition-colors"
+                    >
+                      Save Changes
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ) : activeTab === 'menu' ? (
             <MenuManager />
           ) : activeTab === 'visibility' ? (
             <div className="space-y-6">

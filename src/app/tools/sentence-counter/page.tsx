@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { SentenceCounterConverter } from './sentence-counter-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('sentence-counter');
-  
-  if (!tool) {
-    return {
-      title: 'Online Sentence Counter',
-      description: 'Count sentences in your text with this free online tool. Perfect for analyzing writing length and structure.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'sentence-counter',
+    tool?.title || 'Sentence Counter',
+    tool?.short_description || 'Count the number of sentences in your text'
+  );
 }
 
 export default async function SentenceCounterPage() {

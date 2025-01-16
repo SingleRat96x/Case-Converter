@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RemoveLineBreaksConverter } from './remove-line-breaks-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('remove-line-breaks');
-  
-  if (!tool) {
-    return {
-      title: 'Remove Line Breaks',
-      description: 'Remove line breaks from your text. Convert multiple paragraphs into a single continuous text while preserving words and sentences.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'remove-line-breaks',
+    tool?.title || 'Remove Line Breaks',
+    tool?.short_description || 'Remove line breaks and join text lines'
+  );
 }
 
 export default async function RemoveLineBreaksPage() {

@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { JsonStringifyConverter } from './json-stringify-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('json-stringify');
-  
-  if (!tool) {
-    return {
-      title: 'JSON Stringify Text Generator',
-      description: 'Convert text into a JSON-stringified format with proper escaping. Perfect for preparing text for JSON data.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'json-stringify',
+    tool?.title || 'JSON Stringify',
+    tool?.short_description || 'Convert JSON to string and format JSON data'
+  );
 }
 
 export default async function JsonStringifyPage() {

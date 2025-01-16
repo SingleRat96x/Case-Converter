@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { BinaryConverter } from './binary-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('binary-code-translator');
-  
-  if (!tool) {
-    return {
-      title: 'Binary Code Translator',
-      description: 'Convert text to binary code and binary back to text. Perfect for learning binary encoding or working with binary data.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'binary-code-translator',
+    tool?.title || 'Binary Code Translator',
+    tool?.short_description || 'Convert text to and from binary code'
+  );
 }
 
 export default async function BinaryPage() {

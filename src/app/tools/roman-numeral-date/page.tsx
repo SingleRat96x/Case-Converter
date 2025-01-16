@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RomanNumeralDateConverter } from './roman-numeral-date-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('roman-numeral-date');
-  
-  if (!tool) {
-    return {
-      title: 'Roman Numeral Date Converter',
-      description: 'Convert dates to Roman numerals and vice versa. Perfect for historical documents, creative writing, or learning Roman numerals.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'roman-numeral-date',
+    tool?.title || 'Roman Numeral Date Converter',
+    tool?.short_description || 'Convert dates to Roman numerals'
+  );
 }
 
 export default async function RomanNumeralDatePage() {

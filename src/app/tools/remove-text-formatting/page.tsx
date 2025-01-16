@@ -1,24 +1,19 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { RemoveTextFormattingConverter } from './remove-text-formatting-converter';
+import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('remove-text-formatting');
-  
-  if (!tool) {
-    return {
-      title: 'Remove Text Formatting',
-      description: 'Remove all formatting from your text. Convert formatted text to plain text by removing HTML tags, special characters, and other formatting while preserving the content.',
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'remove-text-formatting',
+    tool?.title || 'Remove Text Formatting',
+    tool?.short_description || 'Remove all formatting from your text'
+  );
 }
 
 export default async function RemoveTextFormattingPage() {
