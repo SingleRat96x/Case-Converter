@@ -35,7 +35,7 @@ export default async function CaesarCipherPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <CaesarCipherConverter />
+        <CaesarCipher />
       </div>
 
       <div className="max-w-4xl mx-auto">

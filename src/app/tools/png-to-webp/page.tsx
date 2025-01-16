@@ -19,6 +19,10 @@ export async function generateMetadata(): Promise<Metadata> {
 export default async function PngToWebpPage() {
   const tool = await getToolContent("png-to-webp");
 
+  if (!tool) {
+    return null;
+  }
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-bold mb-4">{tool.title}</h1>

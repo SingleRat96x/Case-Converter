@@ -35,7 +35,7 @@ export default async function HexToTextPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <HexToTextConverter />
+        <HexConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

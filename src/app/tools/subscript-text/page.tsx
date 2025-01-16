@@ -16,4 +16,6 @@ export async function generateMetadata(): Promise<Metadata> {
   );
 }
 
+export default SubscriptTextConverter;
+
 // ... rest of the file ... 

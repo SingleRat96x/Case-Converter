@@ -35,7 +35,7 @@ export default async function Md5HashPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <Md5HashConverter />
+        <Md5Converter />
       </div>
 
       <div className="max-w-4xl mx-auto">

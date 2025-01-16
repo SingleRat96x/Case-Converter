@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
-import { UuidGeneratorConverter } from './uuid-generator';
+import { UuidGenerator } from './uuid-generator';
 import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
@@ -35,7 +35,7 @@ export default async function UuidGeneratorPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <UuidGeneratorConverter />
+        <UuidGenerator />
       </div>
 
       <div className="max-w-4xl mx-auto">

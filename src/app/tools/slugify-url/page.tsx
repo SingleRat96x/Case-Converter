@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
-import { SlugifyConverter } from './slugify-url';
+import { SlugifyConverter } from './slugify-converter';
 import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
@@ -35,7 +35,7 @@ export default async function SlugifyPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <SlugifyUrlConverter />
+        <SlugifyConverter />
       </div>
 
       <div className="max-w-4xl mx-auto">

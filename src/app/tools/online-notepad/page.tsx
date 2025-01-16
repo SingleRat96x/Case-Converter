@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
-import { OnlineNotepadConverter } from './online-notepad-converter';
+import { OnlineNotepad } from './online-notepad-converter';
 import { generatePageMetadata } from '@/lib/metadata';
 
 export const dynamic = 'force-dynamic';
@@ -35,7 +35,7 @@ export default async function OnlineNotepadPage() {
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
-        <OnlineNotepadConverter />
+        <OnlineNotepad />
       </div>
 
       <div className="max-w-4xl mx-auto">
