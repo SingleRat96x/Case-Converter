@@ -1,6 +1,6 @@
 "use client";
 
-import { useRouter } from "next/navigation";
+import { useRouter, usePathname } from "next/navigation";
 import { ReactNode, useEffect } from "react";
 import {
   LayoutGrid,
@@ -20,6 +20,7 @@ interface DashboardLayoutProps {
 
 export function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter();
+  const pathname = usePathname();
 
   useEffect(() => {
     // Check if user is authenticated
@@ -43,12 +44,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
     }
   };
 
-  const isActive = (path: string) => {
-    if (typeof window !== 'undefined') {
-      return window.location.pathname === path;
-    }
-    return false;
-  };
+  const isActive = (path: string) => pathname === path;
 
   // If not authenticated, don't render anything
   if (typeof window !== 'undefined' && !isAuthenticated()) {
