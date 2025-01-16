@@ -1,18 +1,17 @@
+import Cookies from 'js-cookie';
+
 export const setAuthToken = () => {
-  if (typeof window !== 'undefined') {
-    localStorage.setItem('isAdminAuthenticated', 'true');
-  }
+  Cookies.set('isAdminAuthenticated', 'true', {
+    expires: 1, // 1 day
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'strict'
+  });
 };
 
 export const clearAuthToken = () => {
-  if (typeof window !== 'undefined') {
-    localStorage.removeItem('isAdminAuthenticated');
-  }
+  Cookies.remove('isAdminAuthenticated');
 };
 
 export const isAuthenticated = () => {
-  if (typeof window !== 'undefined') {
-    return localStorage.getItem('isAdminAuthenticated') === 'true';
-  }
-  return false;
+  return Cookies.get('isAdminAuthenticated') === 'true';
 }; 
