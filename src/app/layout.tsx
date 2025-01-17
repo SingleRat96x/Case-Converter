@@ -5,6 +5,7 @@ import { ThemeProvider } from "./providers/theme-provider";
 import { MainLayout } from "./components/layout/MainLayout";
 import { HeaderScripts } from "@/components/header-scripts";
 import { Toaster } from "@/components/ui/toaster";
+import { useEffect } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -22,6 +23,28 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      !(function () {
+        if (!window.growMe) {
+          window.growMe = function (e: any) {
+            window.growMe._.push(e);
+          };
+          window.growMe._ = [];
+          const script = document.createElement("script");
+          script.type = "text/javascript";
+          script.src = "https://faves.grow.me/main.js";
+          script.defer = true;
+          script.setAttribute(
+            "data-grow-faves-site-id",
+            "U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE="
+          );
+          document.head.appendChild(script);
+        }
+      })();
+    }
+  }, []);
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
