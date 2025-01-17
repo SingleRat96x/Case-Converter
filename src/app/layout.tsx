@@ -5,7 +5,6 @@ import { ThemeProvider } from "./providers/theme-provider";
 import { MainLayout } from "./components/layout/MainLayout";
 import { HeaderScripts } from "@/components/header-scripts";
 import { Toaster } from "@/components/ui/toaster";
-import Script from "next/script";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -28,12 +27,12 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-        <Script
-          id="grow-me-script"
-          strategy="beforeInteractive"
+        <div
           dangerouslySetInnerHTML={{
             __html: `
-              !(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
+              <script data-grow-initializer>
+                !(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
+              </script>
             `
           }}
         />
