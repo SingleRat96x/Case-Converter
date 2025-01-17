@@ -332,7 +332,7 @@ export function Header() {
                 <div className="py-2">
                   <div className="flex items-center justify-between rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
                     <Link
-                      href="/about"
+                      href="/about-us"
                       className="flex-1 px-3 py-2 text-base font-medium text-gray-900 dark:text-white"
                       onClick={() => setIsMenuOpen(false)}
                     >
