@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <link rel="icon" type="image/png" href="/favicon-32x32.png" />
         <HeaderScripts />
       </head>
       <body className={inter.className}>
