@@ -62,7 +62,11 @@ export function HeaderScripts() {
         const metaEl = document.createElement('meta');
         metaEl.setAttribute('name', element.meta_name);
         metaEl.setAttribute('content', element.meta_content);
-        metaEl.setAttribute('data-header-meta', element.id);
+        
+        // Only add tracking attribute for non-verification meta tags
+        if (!element.meta_name.includes('verification')) {
+          metaEl.setAttribute('data-header-meta', element.id);
+        }
         document.head.appendChild(metaEl);
       }
       
@@ -73,10 +77,20 @@ export function HeaderScripts() {
           ['link', 'meta', 'title', 'style', 'script', 'noscript', 'base'].includes(el.tagName.toLowerCase())
         );
         validHeadTags.forEach(tag => {
-          // Add data attribute to identify our tags
-          tag.setAttribute('data-header-html', element.id);
-          // Only add if not already present
-          if (!document.querySelector(`[data-header-html="${element.id}"]`)) {
+          const isVerificationMeta = tag.tagName.toLowerCase() === 'meta' && 
+                                   tag.getAttribute('name')?.includes('verification');
+          
+          // Only add tracking attribute for non-verification tags
+          if (!isVerificationMeta) {
+            tag.setAttribute('data-header-html', element.id);
+          }
+          
+          // Only add if not already present with same content
+          const selector = isVerificationMeta ? 
+            `meta[name="${tag.getAttribute('name')}"]` : 
+            `[data-header-html="${element.id}"]`;
+            
+          if (!document.querySelector(selector)) {
             document.head.appendChild(tag);
           }
         });
@@ -85,7 +99,7 @@ export function HeaderScripts() {
 
     // Cleanup function
     return () => {
-      // Clean up all our injected elements
+      // Clean up all our injected elements except verification meta tags
       document.querySelectorAll('[data-header-script], [data-header-meta], [data-header-html]')
         .forEach(el => el.remove());
     };
