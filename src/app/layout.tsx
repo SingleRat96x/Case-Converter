@@ -25,6 +25,7 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
         <HeaderScripts />
       </head>
