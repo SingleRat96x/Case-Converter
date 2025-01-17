@@ -16,16 +16,34 @@ export async function generateMetadata(): Promise<Metadata> {
   );
 }
 
-export default function WebpToJpgPage() {
+export default async function WebpToJpgPage() {
+  const tool = await getToolContent('webp-to-jpg');
+
+  if (!tool) {
+    return null;
+  }
+
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-bold mb-4">WebP to JPG Converter</h1>
-      <p className="text-lg mb-8">
-        Transform your WebP images into the traditional JPG format. This converter is 
-        ideal when you need to use your WebP images with applications or services that 
-        do not support the WebP format, ensuring broader compatibility.
-      </p>
-      <WebpToJpgConverter />
-    </div>
+    <main className="max-w-7xl mx-auto px-8 py-8">
+      <div className="max-w-4xl mx-auto mb-12">
+        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-3">
+          {tool.title}
+        </h1>
+        <p className="text-gray-600 dark:text-gray-400">
+          {tool.short_description}
+        </p>
+      </div>
+
+      <div className="max-w-6xl mx-auto mb-12">
+        <WebpToJpgConverter />
+      </div>
+
+      <div className="max-w-4xl mx-auto">
+        <div 
+          className="prose dark:prose-invert" 
+          dangerouslySetInnerHTML={{ __html: tool.long_description }} 
+        />
+      </div>
+    </main>
   );
 } 
