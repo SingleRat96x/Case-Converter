@@ -30,6 +30,15 @@ export default function RootLayout({
         <div
           dangerouslySetInnerHTML={{
             __html: `
+              <!-- Google tag (gtag.js) -->
+              <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"></script>
+              <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){dataLayer.push(arguments);}
+                gtag('js', new Date());
+                gtag('config', 'G-1DT1KPX3XQ');
+              </script>
+
               <script data-grow-initializer>
                 !(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
               </script>
