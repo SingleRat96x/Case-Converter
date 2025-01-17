@@ -27,6 +27,10 @@ A modern, responsive web application for converting text between different cases
 - [Lucide React](https://lucide.dev/) - Beautiful icons
 - [next-themes](https://github.com/pacocoursey/next-themes) - Theme management
 
+## Integration References
+
+- [Journey by Mediavine (Grow.me) NextJS Integration Guide](https://fchiaramonte.com/blog/journey-mediavine-nextjs-integration) - Guide for implementing Grow.me in Next.js
+
 ## Getting Started
 
 1. Clone the repository:
