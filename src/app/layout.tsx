@@ -26,7 +26,6 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
-        <meta name="google-adsense-account" content="ca-pub-8899111851490905"></meta>
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
         <div
           dangerouslySetInnerHTML={{
@@ -39,6 +38,10 @@ export default function RootLayout({
                 gtag('js', new Date());
                 gtag('config', 'G-1DT1KPX3XQ');
               </script>
+
+              <!-- Google AdSense -->
+              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905"
+                crossorigin="anonymous"></script>
 
               <script data-grow-initializer>
                 !(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
