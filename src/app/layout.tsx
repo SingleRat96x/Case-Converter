@@ -26,6 +26,7 @@ export default function RootLayout({
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
+        <meta name="google-adsense-account" content="ca-pub-8899111851490905"></meta>
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
         <div
           dangerouslySetInnerHTML={{
