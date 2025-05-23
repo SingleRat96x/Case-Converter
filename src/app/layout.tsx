@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import Script from "next/script";
+import { headers } from "next/headers";
 import "./globals.css";
 import { ThemeProvider } from "./providers/theme-provider";
 import { MainLayout } from "./components/layout/MainLayout";
@@ -22,6 +23,10 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Retrieve the nonce from the middleware
+  const nonce = headers().get('X-Request-Nonce') || ''; 
+  // Fallback to empty string if header is not present, though it should be.
+
   // Define constants for third-party service IDs from environment variables
   const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-1DT1KPX3XQ'; // Fallback to existing ID
   const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-8899111851490905'; // Fallback to existing ID
@@ -39,6 +44,7 @@ export default function RootLayout({
             strategy="afterInteractive"
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
             crossOrigin="anonymous"
+            nonce={nonce}
           />
         )}
       </head>
@@ -55,11 +61,13 @@ export default function RootLayout({
               id="gtag-manager"
               strategy="afterInteractive"
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+              nonce={nonce}
             />
             <Script
               id="gtag-init"
               strategy="afterInteractive"
-              dangerouslySetInnerHTML={{ // NOTE: This inline script WILL BE BLOCKED by current CSP. We will fix this by hashing or nonce later.
+              nonce={nonce}
+              dangerouslySetInnerHTML={{
                 __html: `
                   window.dataLayer = window.dataLayer || [];
                   function gtag(){dataLayer.push(arguments);}
@@ -81,6 +89,7 @@ export default function RootLayout({
           strategy="lazyOnload" // Or "afterInteractive"
           src="https://faves.grow.me/main.js" 
           data-grow-faves-site-id="U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE="
+          nonce={nonce}
         />
 
         {/*
@@ -101,6 +110,7 @@ export default function RootLayout({
             id="new-third-party-script"
             strategy="lazyOnload" // Example strategy
             src="https://some-new-service.com/script.js"
+            nonce={nonce} // Add nonce here too
             // Add any other necessary attributes like data-config-id="YOUR_ID"
           />
         */}
