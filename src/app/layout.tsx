@@ -1,9 +1,9 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 import { ThemeProvider } from "./providers/theme-provider";
 import { MainLayout } from "./components/layout/MainLayout";
-import { HeaderScripts } from "@/components/header-scripts";
 import { Toaster } from "@/components/ui/toaster";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -22,40 +22,88 @@ export default function RootLayout({
 }: {
   children: React.ReactNode;
 }) {
+  // Define constants for third-party service IDs from environment variables
+  const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-1DT1KPX3XQ'; // Fallback to existing ID
+  const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-8899111851490905'; // Fallback to existing ID
+
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
         <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-        <div
-          dangerouslySetInnerHTML={{
-            __html: `
-              <!-- Google tag (gtag.js) -->
-              <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"></script>
-              <script>
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', 'G-1DT1KPX3XQ');
-              </script>
-
-              <!-- Google AdSense -->
-              <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905"
-                crossorigin="anonymous"></script>
-
-              <script data-grow-initializer>
-                !(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
-              </script>
-            `
-          }}
-        />
-        <HeaderScripts />
+        
+        {/* medshi find me Google AdSense Script */}
+        {ADSENSE_CLIENT_ID && (
+          <Script
+            id="adsense-script"
+            strategy="afterInteractive"
+            src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
+            crossOrigin="anonymous"
+          />
+        )}
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <MainLayout>{children}</MainLayout>
           <Toaster />
         </ThemeProvider>
+
+        {/* medshi find me Google Analytics (gtag.js) */}
+        {GA_TRACKING_ID && (
+          <>
+            <Script
+              id="gtag-manager"
+              strategy="afterInteractive"
+              src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
+            />
+            <Script
+              id="gtag-init"
+              strategy="afterInteractive"
+              dangerouslySetInnerHTML={{ // NOTE: This inline script WILL BE BLOCKED by current CSP. We will fix this by hashing or nonce later.
+                __html: `
+                  window.dataLayer = window.dataLayer || [];
+                  function gtag(){dataLayer.push(arguments);}
+                  gtag('js', new Date());
+                  gtag('config', '${GA_TRACKING_ID}', {
+                    page_path: window.location.pathname,
+                  });
+                `,
+              }}
+            />
+          </>
+        )}
+
+        {/* medshi find me Grow.me Script */}
+        {/* Replace 'YOUR_GROW_ME_SCRIPT_URL_HERE' with the actual URL from Grow.me */}
+        {/* If Grow.me only provides an inline script block, this needs to be moved to a local file in /public/js/grow.me-init.js and src changed, or the inline script needs to be hashed/nonced. */}
+        <Script
+          id="grow-me-script"
+          strategy="lazyOnload" // Or "afterInteractive"
+          src="https://faves.grow.me/main.js" 
+          data-grow-faves-site-id="U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE="
+        />
+
+        {/*
+          medshi find me Placeholder for Future Third-Party Script
+
+          To add a new script:
+          1. Get the script URL from the third-party provider.
+          2. Add any necessary IDs to your .env.local and process.env.
+          3. Use the Next.js <Script> component like the examples above.
+          4. Choose an appropriate 'strategy' (e.g., "afterInteractive", "lazyOnload", "beforeInteractive").
+          5. Ensure the script's source domain (e.g., some-new-service.com) is added to the
+             'script-src' directive in the CSP in src/middleware.ts.
+          6. If the script requires other resources (images, styles, connections, frames),
+             update the corresponding CSP directives (img-src, style-src, connect-src, frame-src).
+          7. Test thoroughly for CSP violations in the browser console.
+
+          <Script
+            id="new-third-party-script"
+            strategy="lazyOnload" // Example strategy
+            src="https://some-new-service.com/script.js"
+            // Add any other necessary attributes like data-config-id="YOUR_ID"
+          />
+        */}
       </body>
     </html>
   );
