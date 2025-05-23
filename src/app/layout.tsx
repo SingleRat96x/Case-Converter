@@ -27,6 +27,19 @@ export default function RootLayout({
   const nonce = headers().get('X-Request-Nonce') || ''; 
   // Fallback to empty string if header is not present, though it should be.
 
+  const headersList = headers(); // Get the full Headers object
+  const nonceFromHeader = headersList.get('X-Request-Nonce');
+  
+  console.log("--- In RootLayout (Server Side) ---");
+  console.log("Retrieved X-Request-Nonce:", nonceFromHeader);
+  console.log("Nonce variable value:", nonce); // This should be the same as nonceFromHeader or '' if null
+  
+  // Optional: Log all headers to see if X-Request-Nonce is present at all
+  console.log("All Request Headers in RootLayout:");
+  headersList.forEach((value, key) => {
+    console.log(`${key}: ${value}`);
+  });
+
   // Define constants for third-party service IDs from environment variables
   const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-1DT1KPX3XQ'; // Fallback to existing ID
   const ADSENSE_CLIENT_ID = process.env.NEXT_PUBLIC_ADSENSE_CLIENT_ID || 'ca-pub-8899111851490905'; // Fallback to existing ID
@@ -45,6 +58,7 @@ export default function RootLayout({
             src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${ADSENSE_CLIENT_ID}`}
             crossOrigin="anonymous"
             nonce={nonce}
+            suppressHydrationWarning
           />
         )}
       </head>
@@ -57,39 +71,35 @@ export default function RootLayout({
         {/* medshi find me Google Analytics (gtag.js) */}
         {GA_TRACKING_ID && (
           <>
+            {/* Loads the main gtag.js library */}
             <Script
               id="gtag-manager"
-              strategy="afterInteractive"
+              strategy="afterInteractive" // Ensures this loads and defines 'gtag' function
               src={`https://www.googletagmanager.com/gtag/js?id=${GA_TRACKING_ID}`}
               nonce={nonce}
+              suppressHydrationWarning
             />
+            
+            {/* Loads our external gtag config script */}
             <Script
-              id="gtag-init"
-              strategy="afterInteractive"
+              id="gtag-config-external"
+              src="/js/gtag-config.js"
+              strategy="afterInteractive" // Depends on gtag-manager having loaded
               nonce={nonce}
-              dangerouslySetInnerHTML={{
-                __html: `
-                  window.dataLayer = window.dataLayer || [];
-                  function gtag(){dataLayer.push(arguments);}
-                  gtag('js', new Date());
-                  gtag('config', '${GA_TRACKING_ID}', {
-                    page_path: window.location.pathname,
-                  });
-                `,
-              }}
+              suppressHydrationWarning
+              data-ga-id={GA_TRACKING_ID} // Pass the tracking ID
             />
           </>
         )}
 
         {/* medshi find me Grow.me Script */}
-        {/* Replace 'YOUR_GROW_ME_SCRIPT_URL_HERE' with the actual URL from Grow.me */}
-        {/* If Grow.me only provides an inline script block, this needs to be moved to a local file in /public/js/grow.me-init.js and src changed, or the inline script needs to be hashed/nonced. */}
         <Script
           id="grow-me-script"
-          strategy="lazyOnload" // Or "afterInteractive"
+          strategy="lazyOnload"
           src="https://faves.grow.me/main.js" 
           data-grow-faves-site-id="U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE="
           nonce={nonce}
+          suppressHydrationWarning
         />
 
         {/*

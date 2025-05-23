@@ -39,7 +39,8 @@ export function middleware(request: NextRequest) {
     "https://*.grow.me",
     "https://vercel.com",
     "https://*.vercel-insights.com",
-    `'nonce-${nonce}'` // Add the generated nonce
+    `'nonce-${nonce}'`, // Nonce for scripts we control
+    "'sha256-Ec/XLCqW9IkiT3yUDKK5ftmkQGcF3JzHW7lzlrWMZYQ='" // Hash for specific third-party injected inline script
   ].filter(Boolean) as string[];
 
   // Conditionally add 'unsafe-eval' for development
