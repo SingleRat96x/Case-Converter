@@ -2,17 +2,6 @@ import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
 
 export function middleware(request: NextRequest) {
-  // Generate a unique, cryptographically strong nonce using Web Crypto API (Edge Runtime compatible)
-  const randomBytes = new Uint8Array(16);
-  crypto.getRandomValues(randomBytes);
-  // Convert byte array to a base64 string
-  // btoa expects a string of characters, so we need to convert bytes to characters first
-  let binaryString = '';
-  randomBytes.forEach((byte) => {
-    binaryString += String.fromCharCode(byte);
-  });
-  const nonce = btoa(binaryString);
-  
   // Determine if it's development mode
   const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -29,7 +18,7 @@ export function middleware(request: NextRequest) {
     console.warn('NEXT_PUBLIC_SUPABASE_URL is not defined. CSP will be less specific for Supabase.');
   }
 
-  // Construct script-src policies with nonce-based approach
+  // Construct script-src policies with unsafe-inline approach for dangerouslySetInnerHTML
   let scriptSrcPolicies = [
     "'self'",
     supabaseHostname ? `https://${supabaseHostname}` : null,
@@ -39,9 +28,7 @@ export function middleware(request: NextRequest) {
     "https://*.grow.me",
     "https://vercel.com",
     "https://*.vercel-insights.com",
-    `'nonce-${nonce}'`, // Nonce for scripts we control
-    "'sha256-Ec/XLCqW9IkiT3yUDKK5ftmkQGcF3JzHW7lzlrWMZYQ='", // Hash for specific third-party injected inline script
-    "'sha256-x41wyMbDu6AdfADPEamp92rpZBhpXK7l04JfrTVCFKU='"  // New production hash
+    "'unsafe-inline'" // Allow inline scripts for dangerouslySetInnerHTML approach
   ].filter(Boolean) as string[];
 
   // Conditionally add 'unsafe-eval' for development
@@ -54,7 +41,7 @@ export function middleware(request: NextRequest) {
   // Construct the full CSP header value
   const cspDirectives = [
     `default-src 'self' ${supabaseHostname ? `https://${supabaseHostname} wss://${supabaseHostname}` : ''}`,
-    `script-src ${scriptSrcValue}`, // Use the constructed nonce-based script-src value
+    `script-src ${scriptSrcValue}`, // Use the constructed script-src value with unsafe-inline
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.grow.me", // Kept grow.me for styles just in case
     `img-src 'self' data: ${supabaseHostname ? `https://*.supabase.co https://${supabaseHostname}` : 'https://*.supabase.co'} https://pagead2.googlesyndication.com https://*.googleusercontent.com https://*.googletagmanager.com https://*.google-analytics.com https://*.g.doubleclick.net https://*.grow.me`,
     "font-src 'self' data: https://fonts.gstatic.com",
@@ -101,10 +88,6 @@ export function middleware(request: NextRequest) {
     'run-ad-auction=*'         // Try with *
   ].join(','); // Join with comma
 
-  // Pass the nonce to the application by setting a custom REQUEST header
-  const requestHeaders = new Headers(request.headers);
-  requestHeaders.set('X-Request-Nonce', nonce);
-
   // Admin Authentication Logic & Response Handling
   let response;
 
@@ -125,13 +108,9 @@ export function middleware(request: NextRequest) {
     }
   }
 
-  // If not an admin redirect, prepare the main response with modified request headers
+  // If not an admin redirect, prepare the main response
   if (!response) {
-    response = NextResponse.next({
-      request: {
-        headers: requestHeaders,
-      },
-    });
+    response = NextResponse.next();
   }
 
   response.headers.set('Content-Security-Policy', cspHeaderValue);
