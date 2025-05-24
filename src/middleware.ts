@@ -38,12 +38,27 @@ export function middleware(request: NextRequest) {
 
   const scriptSrcValue = scriptSrcPolicies.join(' ');
 
+  // Construct img-src policies
+  let imgSrcPolicies = [
+    "'self'",
+    "data:",
+    supabaseHostname ? `https://*.supabase.co` : null,
+    supabaseHostname ? `https://${supabaseHostname}` : null,
+    "https://pagead2.googlesyndication.com",
+    "https://*.googleusercontent.com",
+    "https://*.googletagmanager.com",
+    "https://*.google-analytics.com",
+    "https://*.g.doubleclick.net",
+    "https://*.grow.me",
+    "https://res.cloudinary.com" // Allow Cloudinary images for Grow.me
+  ].filter(Boolean) as string[];
+
   // Construct the full CSP header value
   const cspDirectives = [
     `default-src 'self' ${supabaseHostname ? `https://${supabaseHostname} wss://${supabaseHostname}` : ''}`,
     `script-src ${scriptSrcValue}`, // Use the constructed script-src value with unsafe-inline
     "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.grow.me", // Kept grow.me for styles just in case
-    `img-src 'self' data: ${supabaseHostname ? `https://*.supabase.co https://${supabaseHostname}` : 'https://*.supabase.co'} https://pagead2.googlesyndication.com https://*.googleusercontent.com https://*.googletagmanager.com https://*.google-analytics.com https://*.g.doubleclick.net https://*.grow.me`,
+    `img-src ${imgSrcPolicies.join(' ')}`,
     "font-src 'self' data: https://fonts.gstatic.com",
     `connect-src 'self' ${supabaseHostname ? `wss://${supabaseHostname} https://${supabaseHostname}` : ''} https://*.google-analytics.com https://*.analytics.google.com https://pagead2.googlesyndication.com https://*.googletagmanager.com https://stats.g.doubleclick.net https://*.grow.me https://vercel.com https://*.vercel-insights.com https://client-rapi-mediavine.recombee.com https://some.growplow.events`,
     "frame-src 'self' https://*.google.com https://*.doubleclick.net https://*.googlesyndication.com https://*.grow.me",
