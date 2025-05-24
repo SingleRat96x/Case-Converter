@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
-import { supabase } from '@/lib/supabase';
 import { setAuthToken } from '@/lib/auth';
 
 export function AdminLogin() {
@@ -18,41 +17,7 @@ export function AdminLogin() {
     setErrorMessage(null);
 
     try {
-      // First, try to sign in
-      const { data, error } = await supabase.auth.signInWithPassword({
-        email: email.trim(),
-        password: password.trim(),
-      });
-
-      if (error) {
-        console.error('Login error:', error);
-        if (error.message.includes('Invalid login credentials')) {
-          throw new Error('Invalid email or password. Please try again.');
-        }
-        throw error;
-      }
-
-      if (!data?.user) {
-        throw new Error('No user data returned');
-      }
-
-      // Check if user has admin role (you can customize this based on your needs)
-      const { data: profile, error: profileError } = await supabase
-        .from('profiles')
-        .select('role')
-        .eq('id', data.user.id)
-        .single();
-
-      if (profileError) {
-        console.error('Profile fetch error:', profileError);
-        throw new Error('Failed to verify admin status');
-      }
-
-      if (profile?.role !== 'admin') {
-        throw new Error('Unauthorized access');
-      }
-
-      setAuthToken();
+      await setAuthToken(email, password);
       router.push('/admin/dashboard');
     } catch (err) {
       console.error('Authentication error:', err);

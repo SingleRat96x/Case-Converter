@@ -1,5 +1,7 @@
 import { getToolContent } from '@/lib/tools';
 import type { Metadata } from 'next';
+import { JSDOM } from 'jsdom';
+import DOMPurifyFactory from 'dompurify';
 import { UppercaseConverter } from '../uppercase/uppercase-converter';
 import { LowercaseConverter } from '../lowercase/lowercase-converter';
 import { TitleCaseConverter } from '../title-case/title-case-converter';
@@ -38,6 +40,19 @@ export default async function ToolPage({ params }: Props) {
     );
   }
 
+  // Sanitize the HTML content to prevent XSS attacks
+  let sanitizedLongDescription = '';
+  if (tool && tool.long_description) {
+    // Create a JSDOM window. DOMPurify needs this to run in Node.js.
+    // Important: Pass an empty string to JSDOM constructor, not undefined.
+    const window = new JSDOM('').window; 
+    const DOMPurify = DOMPurifyFactory(window as any); // Type assertion for window
+
+    // Sanitize the HTML content
+    // You can configure DOMPurify further here if needed (e.g., ALLOWED_TAGS, ALLOWED_ATTR)
+    sanitizedLongDescription = DOMPurify.sanitize(tool.long_description);
+  }
+
   // Render the appropriate tool component based on the ID
   const renderToolComponent = () => {
     switch (params.toolId) {
@@ -72,10 +87,12 @@ export default async function ToolPage({ params }: Props) {
       {/* Always render the tool component if it exists */}
       {toolComponent}
 
-      {/* Always render the long description from database */}
-      <div className="max-w-[700px] mx-auto px-4 prose dark:prose-invert" 
-        dangerouslySetInnerHTML={{ __html: tool.long_description }} 
-      />
+      {/* Always render the sanitized long description from database */}
+      {sanitizedLongDescription && (
+        <div className="max-w-[700px] mx-auto px-4 prose dark:prose-invert" 
+          dangerouslySetInnerHTML={{ __html: sanitizedLongDescription }} 
+        />
+      )}
     </div>
   );
 } 

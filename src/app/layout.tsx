@@ -30,15 +30,15 @@ export default function RootLayout({
   const headersList = headers(); // Get the full Headers object
   const nonceFromHeader = headersList.get('X-Request-Nonce');
   
-  console.log("--- In RootLayout (Server Side) ---");
-  console.log("Retrieved X-Request-Nonce:", nonceFromHeader);
-  console.log("Nonce variable value:", nonce); // This should be the same as nonceFromHeader or '' if null
+  // console.log("--- In RootLayout (Server Side) ---");
+  // console.log("Retrieved X-Request-Nonce:", nonceFromHeader);
+  // console.log("Nonce variable value:", nonce); // This should be the same as nonceFromHeader or '' if null
   
   // Optional: Log all headers to see if X-Request-Nonce is present at all
-  console.log("All Request Headers in RootLayout:");
-  headersList.forEach((value, key) => {
-    console.log(`${key}: ${value}`);
-  });
+  // console.log("All Request Headers in RootLayout:");
+  //headersList.forEach((value, key) => {
+  //  console.log(`${key}: ${value}`);
+  //});
 
   // Define constants for third-party service IDs from environment variables
   const GA_TRACKING_ID = process.env.NEXT_PUBLIC_GA_ID || 'G-1DT1KPX3XQ'; // Fallback to existing ID

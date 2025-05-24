@@ -17,7 +17,7 @@ import SuperscriptExtension from '@tiptap/extension-superscript';
 import { supabase } from '@/lib/supabase';
 import { invalidateToolCache, invalidateAllCaches } from '@/lib/tools';
 import type { ToolContent } from '@/lib/tools';
-import { clearAuthToken, isAuthenticated } from '@/lib/auth';
+import { clearAuthToken } from '@/lib/auth';
 import { MenuManager } from './menu-manager';
 import { revalidateToolContent } from '@/lib/actions';
 import { PageContent, invalidatePageCache } from '@/lib/page-content';
@@ -105,14 +105,32 @@ export function AdminDashboard() {
     },
   });
 
+  // Check authentication status
+  const checkAuth = async () => {
+    try {
+      const response = await fetch('/api/auth/check');
+      const { isAuthenticated } = await response.json();
+      
+      if (!isAuthenticated) {
+        router.push('/admin');
+        return false;
+      }
+      return true;
+    } catch (error) {
+      console.error('Auth check failed:', error);
+      router.push('/admin');
+      return false;
+    }
+  };
+
   useEffect(() => {
     // Check if user is authenticated
-    if (!isAuthenticated()) {
-      router.push('/admin');
-      return;
-    }
-    fetchTools();
-    fetchStaticPages();
+    checkAuth().then((authenticated) => {
+      if (authenticated) {
+        fetchTools();
+        fetchStaticPages();
+      }
+    });
   }, [router]);
 
   useEffect(() => {
@@ -197,9 +215,15 @@ export function AdminDashboard() {
     }
   };
 
-  const handleLogout = () => {
-    clearAuthToken();
-    router.push('/admin');
+  const handleLogout = async () => {
+    try {
+      await clearAuthToken();
+      router.push('/admin');
+    } catch (error) {
+      console.error('Logout error:', error);
+      // Even if logout fails, redirect to login page
+      router.push('/admin');
+    }
   };
 
   const handleEditTool = (tool: ToolContent) => {
@@ -885,17 +909,6 @@ export function AdminDashboard() {
               >
                 <FileText className="h-5 w-5" />
                 Static Pages
-              </button>
-              <button
-                onClick={() => router.push('/admin/dashboard/header-scripts')}
-                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'scripts' 
-                    ? 'bg-primary text-primary-foreground' 
-                    : 'hover:bg-accent'
-                }`}
-              >
-                <FileCode className="h-5 w-5" />
-                Header Scripts
               </button>
               <button
                 onClick={() => setActiveTab('page-content')}

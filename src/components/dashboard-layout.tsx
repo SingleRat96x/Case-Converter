@@ -181,17 +181,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
                 <FileText className="h-5 w-5" />
                 Static Pages
               </button>
-              <button
-                onClick={() => router.push('/admin/dashboard/header-scripts')}
-                className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  isActive('/admin/dashboard/header-scripts')
-                    ? 'bg-primary text-primary-foreground'
-                    : 'hover:bg-accent'
-                }`}
-              >
-                <FileCode className="h-5 w-5" />
-                Header Scripts
-              </button>
             </nav>
           </div>
         </div>

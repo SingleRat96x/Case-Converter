@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import type { MetaDescription, PageType } from '@/lib/meta-descriptions';
 import { X, Image as ImageIcon } from 'lucide-react';
 import styles from './meta-description-editor.module.css';
@@ -12,18 +12,25 @@ interface MetaDescriptionEditorProps {
 }
 
 export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId }: MetaDescriptionEditorProps) {
-  const [formData, setFormData] = React.useState<Partial<MetaDescription>>(meta);
-  const [isSaving, setIsSaving] = React.useState(false);
+  const [formData, setFormData] = useState<Partial<MetaDescription>>(meta);
+  const [isSaving, setIsSaving] = useState(false);
+
+  // URL validation helper function
+  const isValidHttpUrl = (string: string | undefined | null): boolean => {
+    if (!string) return false;
+    try {
+      const url = new URL(string);
+      return url.protocol === "http:" || url.protocol === "https:";
+    } catch (_) {
+      return false;  
+    }
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSaving(true);
     try {
-      await onSave({
-        ...formData,
-        page_type: pageType || formData.page_type,
-        page_id: pageId || formData.page_id,
-      });
+      await onSave(formData);
       onClose();
     } catch (error) {
       console.error('Error saving meta description:', error);
@@ -38,9 +45,9 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
   };
 
   const getCharacterCountClass = (current: number, min: number, max: number) => {
-    if (current < min) return styles.warning;
-    if (current > max) return styles.error;
-    return '';
+    if (current < min) return 'text-orange-500';
+    if (current > max) return 'text-red-500';
+    return 'text-green-500';
   };
 
   return (
@@ -146,6 +153,9 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 className={styles.input}
                 placeholder="https://"
               />
+              {formData.og_image && !isValidHttpUrl(formData.og_image) && (
+                <p className="text-red-500 text-sm mt-1">Invalid or non-HTTP(S) OG image URL. Please use a valid URL starting with http:// or https://</p>
+              )}
             </div>
 
             <div className={styles.section}>
@@ -190,6 +200,9 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 className={styles.input}
                 placeholder="https://"
               />
+              {formData.twitter_image && !isValidHttpUrl(formData.twitter_image) && (
+                <p className="text-red-500 text-sm mt-1">Invalid or non-HTTP(S) Twitter image URL. Please use a valid URL starting with http:// or https://</p>
+              )}
             </div>
           </div>
 
@@ -217,7 +230,7 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
               <div className={`${styles.previewCard} ${styles.facebookPreview}`}>
                 <div className={styles.facebookCard}>
                   <div className={styles.facebookImage}>
-                    {formData.og_image ? (
+                    {formData.og_image && isValidHttpUrl(formData.og_image) ? (
                       <img src={formData.og_image} alt="" className="w-full h-full object-cover" />
                     ) : (
                       <ImageIcon className="w-8 h-8 text-muted-foreground" />
@@ -240,7 +253,7 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
               <div className={`${styles.previewCard} ${styles.twitterPreview}`}>
                 <div className={styles.twitterCard}>
                   <div className={styles.twitterImage}>
-                    {formData.twitter_image ? (
+                    {formData.twitter_image && isValidHttpUrl(formData.twitter_image) ? (
                       <img src={formData.twitter_image} alt="" className="w-full h-full object-cover" />
                     ) : (
                       <ImageIcon className="w-8 h-8 text-muted-foreground" />

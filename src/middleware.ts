@@ -68,6 +68,39 @@ export function middleware(request: NextRequest) {
   ];
   const cspHeaderValue = cspDirectives.join('; ');
 
+  // Define additional security headers
+  const permissionsPolicyValue = [
+    "accelerometer=()",
+    "autoplay=()", // Consider (self) if you need autoplay for your own videos
+    "camera=()",
+    "display-capture=()",
+    "fullscreen=(self)",
+    "geolocation=()", // Enable with (self "https://some-trusted-map-service.com") if needed
+    "gyroscope=()",
+    "keyboard-map=()",
+    "magnetometer=()",
+    "microphone=()",
+    "midi=()",
+    "payment=()",
+    "picture-in-picture=()",
+    "publickey-credentials-get=(self)", // For WebAuthn if you use it
+    "screen-wake-lock=()",
+    "sync-xhr=()",
+    "usb=()",
+    "web-share=()",
+    "xr-spatial-tracking=()",
+    "clipboard-read=()",
+    "clipboard-write=(self)",
+    // Advertising related features - try with broader allowance for now
+    // Note: '*' for ad features can be a security risk if not understood.
+    // This is for debugging the "unrecognized feature" vs. "origin trial" errors.
+    // Ideally, these would be restricted to specific ad provider domains if they actually function.
+    'attribution-reporting=*', // Try with *
+    'browsing-topics=*',       // Try with *
+    'join-ad-interest-group=*',// Try with *
+    'run-ad-auction=*'         // Try with *
+  ].join(','); // Join with comma
+
   // Pass the nonce to the application by setting a custom REQUEST header
   const requestHeaders = new Headers(request.headers);
   requestHeaders.set('X-Request-Nonce', nonce);
@@ -85,6 +118,9 @@ export function middleware(request: NextRequest) {
       const redirectUrl = new URL('/admin', request.url);
       response = NextResponse.redirect(redirectUrl);
       response.headers.set('Content-Security-Policy', cspHeaderValue);
+      response.headers.set('X-Content-Type-Options', 'nosniff');
+      response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+      response.headers.set('Permissions-Policy', permissionsPolicyValue);
       return response;
     }
   }
@@ -99,6 +135,9 @@ export function middleware(request: NextRequest) {
   }
 
   response.headers.set('Content-Security-Policy', cspHeaderValue);
+  response.headers.set('X-Content-Type-Options', 'nosniff');
+  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  response.headers.set('Permissions-Policy', permissionsPolicyValue);
   return response;
 }
 
