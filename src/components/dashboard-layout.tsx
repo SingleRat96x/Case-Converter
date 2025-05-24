@@ -11,7 +11,7 @@ import {
   RefreshCw,
   LogOut,
 } from "lucide-react";
-import { clearAuthToken, isAuthenticated } from "@/lib/auth";
+import { clearAuthToken } from "@/lib/auth";
 import { invalidateAllCaches } from "@/lib/tools";
 
 interface DashboardLayoutProps {
@@ -22,17 +22,15 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   const router = useRouter();
   const pathname = usePathname();
 
-  useEffect(() => {
-    // Check if user is authenticated
-    if (!isAuthenticated()) {
-      router.push('/admin');
-      return;
-    }
-  }, [router]);
-
   const handleLogout = async () => {
-    clearAuthToken();
-    router.push('/admin');
+    try {
+      await clearAuthToken();
+      router.push('/admin');
+    } catch (error) {
+      console.error('Logout error:', error);
+      // Even if logout fails, redirect to admin page
+      router.push('/admin');
+    }
   };
 
   const handleClearCache = async () => {
@@ -45,11 +43,6 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
   };
 
   const isActive = (path: string) => pathname === path;
-
-  // If not authenticated, don't render anything
-  if (typeof window !== 'undefined' && !isAuthenticated()) {
-    return null;
-  }
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-gray-900">
