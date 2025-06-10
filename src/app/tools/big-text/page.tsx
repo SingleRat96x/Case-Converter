@@ -1,6 +1,7 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { BigTextConverter } from './big-text-converter';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -38,6 +39,7 @@ export default async function BigTextPage() {
           <p className="text-gray-600 dark:text-gray-400">
             {tool.short_description}
           </p>
+          <AdScript />
         </div>
 
         {/* Tool section with wider width */}

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { BoldTextConverter } from './bold-text-converter';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -34,6 +35,7 @@ export default async function BoldTextPage() {
           <p className="text-gray-600 dark:text-gray-400">
             {tool.short_description}
           </p>
+          <AdScript />
         </div>
 
         {/* Tool section with wider width */}

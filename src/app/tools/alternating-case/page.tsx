@@ -33,6 +33,24 @@ export default async function AlternatingCasePage() {
           <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
             {tool.short_description || 'Convert your text to alternating case online.'}
           </p>
+          <div
+            dangerouslySetInnerHTML={{
+              __html: `
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905"
+                     crossorigin="anonymous"></script>
+                <!-- Text Case -->
+                <ins class="adsbygoogle"
+                     style="display:block"
+                     data-ad-client="ca-pub-8899111851490905"
+                     data-ad-slot="1588643719"
+                     data-ad-format="auto"
+                     data-full-width-responsive="true"></ins>
+                <script>
+                     (adsbygoogle = window.adsbygoogle || []).push({});
+                </script>
+              `,
+            }}
+          />
         </div>
       </div>
 

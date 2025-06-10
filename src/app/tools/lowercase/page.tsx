@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { LowercaseConverter } from './lowercase-converter';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -29,6 +30,7 @@ export default async function LowercasePage() {
           <p className="text-gray-600 dark:text-gray-400">
             {content?.short_description ?? 'Convert your text to lowercase easily'}
           </p>
+          <AdScript />
         </div>
 
         <div className="max-w-6xl mx-auto mb-12">

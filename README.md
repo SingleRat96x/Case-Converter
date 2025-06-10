@@ -1,3 +1,6 @@
+Why don't scientists trust atoms?
+Because they make up everything!
+
 # Case Converter Tool
 
 A modern, responsive web application for converting text between different cases. Built with Next.js, TypeScript, and TailwindCSS.
