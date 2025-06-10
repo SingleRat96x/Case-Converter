@@ -116,7 +116,7 @@ export function middleware(request: NextRequest) {
     if (!isAuthenticated) {
       const redirectUrl = new URL('/admin', request.url);
       response = NextResponse.redirect(redirectUrl);
-      response.headers.set('Content-Security-Policy', cspHeaderValue);
+      // response.headers.set('Content-Security-Policy', cspHeaderValue);
       response.headers.set('X-Content-Type-Options', 'nosniff');
       response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
       response.headers.set('Permissions-Policy', permissionsPolicyValue);
@@ -129,7 +129,7 @@ export function middleware(request: NextRequest) {
     response = NextResponse.next();
   }
 
-  response.headers.set('Content-Security-Policy', cspHeaderValue);
+  // response.headers.set('Content-Security-Policy', cspHeaderValue);
   response.headers.set('X-Content-Type-Options', 'nosniff');
   response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
   response.headers.set('Permissions-Policy', permissionsPolicyValue);
