@@ -106,10 +106,19 @@ export function useTextStats() {
       };
     }
 
-    const words = text.trim().split(/\s+/).filter(word => word.length > 0);
-    const uniqueWords = new Set(words.map(word => word.toLowerCase().replace(/[^\w]/g, '')));
-    const sentences = text.split(/[.!?]+/).filter(sentence => sentence.trim().length > 0);
-    const paragraphs = text.split(/\n\s*\n/).filter(paragraph => paragraph.trim().length > 0);
+    const words = text
+      .trim()
+      .split(/\s+/)
+      .filter(word => word.length > 0);
+    const uniqueWords = new Set(
+      words.map(word => word.toLowerCase().replace(/[^\w]/g, ''))
+    );
+    const sentences = text
+      .split(/[.!?]+/)
+      .filter(sentence => sentence.trim().length > 0);
+    const paragraphs = text
+      .split(/\n\s*\n/)
+      .filter(paragraph => paragraph.trim().length > 0);
     const lines = text.split('\n');
     const avgWordsPerMinute = 200;
 
@@ -149,7 +158,9 @@ export function TextAnalytics({
       <div className={`stats-inline ${className}`}>
         {visibleConfigs.map((config, index) => {
           const value = stats[config.key] ?? 0;
-          const displayValue = config.format ? config.format(value) : value.toString();
+          const displayValue = config.format
+            ? config.format(value)
+            : value.toString();
 
           return (
             <React.Fragment key={config.key}>
@@ -171,13 +182,12 @@ export function TextAnalytics({
     <div className={`stats-grid ${className}`}>
       {visibleConfigs.map(config => {
         const value = stats[config.key] ?? 0;
-        const displayValue = config.format ? config.format(value) : value.toString();
+        const displayValue = config.format
+          ? config.format(value)
+          : value.toString();
 
         return (
-          <div
-            key={config.key}
-            className={`stats-card stats-${config.color}`}
-          >
+          <div key={config.key} className={`stats-card stats-${config.color}`}>
             <div className="stats-card-content">
               <div className="stats-value">{displayValue}</div>
               <div className="stats-label">{config.label}</div>
@@ -191,9 +201,47 @@ export function TextAnalytics({
 
 // Utility function to generate basic stats from text
 export function generateTextStats(text: string): TextStats {
-  const { calculateStats } = useTextStats();
-  return calculateStats(text);
+  // Direct implementation without using the hook
+  if (!text) {
+    return {
+      characters: 0,
+      charactersNoSpaces: 0,
+      words: 0,
+      sentences: 0,
+      paragraphs: 0,
+      lines: 0,
+      uniqueWords: 0,
+      readingTime: 0,
+    };
+  }
+
+  const words = text
+    .trim()
+    .split(/\s+/)
+    .filter(word => word.length > 0);
+  const uniqueWords = new Set(
+    words.map(word => word.toLowerCase().replace(/[^\w]/g, ''))
+  );
+  const sentences = text
+    .split(/[.!?]+/)
+    .filter(sentence => sentence.trim().length > 0);
+  const paragraphs = text
+    .split(/\n\s*\n/)
+    .filter(paragraph => paragraph.trim().length > 0);
+  const lines = text.split('\n');
+  const avgWordsPerMinute = 200;
+
+  return {
+    characters: text.length,
+    charactersNoSpaces: text.replace(/\s/g, '').length,
+    words: words.length,
+    sentences: sentences.length,
+    paragraphs: paragraphs.length,
+    lines: lines.length,
+    uniqueWords: uniqueWords.size,
+    readingTime: Math.ceil(words.length / avgWordsPerMinute),
+  };
 }
 
 // Export for backward compatibility
-export { TextAnalytics as default }; 
+export { TextAnalytics as default };

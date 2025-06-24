@@ -17,16 +17,14 @@ const buttonVariants = cva(
           'border-2 border-primary/30 bg-background/80 text-foreground shadow-md hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:border-primary hover:shadow-lg hover:scale-105 backdrop-blur-sm',
         secondary:
           'bg-gradient-to-r from-secondary to-muted text-secondary-foreground shadow-md hover:shadow-lg hover:from-accent/20 hover:to-muted/80 hover:scale-105',
-        ghost: 
+        ghost:
           'text-foreground hover:bg-gradient-to-r hover:from-accent/20 hover:to-primary/10 hover:shadow-md hover:scale-105',
-        link: 
-          'text-primary underline-offset-4 hover:underline hover:text-info transition-colors',
+        link: 'text-primary underline-offset-4 hover:underline hover:text-info transition-colors',
         success:
           'bg-gradient-to-r from-success to-emerald-500 text-success-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
         warning:
           'bg-gradient-to-r from-warning to-orange-500 text-warning-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
-        info:
-          'bg-gradient-to-r from-info to-blue-500 text-info-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+        info: 'bg-gradient-to-r from-info to-blue-500 text-info-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
       },
       size: {
         default: 'h-10 px-6 py-2.5',

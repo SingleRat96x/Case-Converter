@@ -13,12 +13,15 @@ export default function AdSpace({ position, className = '' }: AdSpaceProps) {
       // Load AdSense script if not already loaded
       if (typeof window !== 'undefined') {
         // Check if script is already loaded
-        const existingScript = document.querySelector('script[src*="pagead2.googlesyndication.com"]');
-        
+        const existingScript = document.querySelector(
+          'script[src*="pagead2.googlesyndication.com"]'
+        );
+
         if (!existingScript) {
           const script = document.createElement('script');
           script.async = true;
-          script.src = 'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905';
+          script.src =
+            'https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905';
           script.crossOrigin = 'anonymous';
           document.head.appendChild(script);
         }

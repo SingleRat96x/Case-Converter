@@ -11,7 +11,11 @@ import {
   SingleColumnLayout,
   ActionSection,
 } from '@/lib/shared/ToolLayout';
-import { TextAnalytics, useTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
+import {
+  TextAnalytics,
+  useTextStats,
+  type TextStats,
+} from '@/app/components/shared/TextAnalytics';
 import AdSpace from '../components/AdSpace';
 
 export default function TextCounter() {
@@ -65,10 +69,7 @@ Reading Time: ${stats.readingTime} minute${stats.readingTime !== 1 ? 's' : ''}`;
             </CardTitle>
           </CardHeader>
           <CardContent className="pt-0">
-            <TextAnalytics 
-              stats={stats} 
-              mode="grid"
-            />
+            <TextAnalytics stats={stats} mode="grid" />
           </CardContent>
         </Card>
       </SingleColumnLayout>

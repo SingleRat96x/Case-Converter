@@ -40,8 +40,6 @@ export default function RootLayout({
           content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE"
         />
         <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-
-
       </head>
       <body className={inter.className}>
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>

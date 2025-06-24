@@ -2,9 +2,17 @@
 
 import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
-import { TextAnalytics, useTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
+import {
+  TextAnalytics,
+  useTextStats,
+  type TextStats,
+} from '@/app/components/shared/TextAnalytics';
 import { TextInput } from '@/app/components/shared/ToolInputs';
-import { ToolLayout, ActionSection, SingleColumnLayout } from '@/lib/shared/ToolLayout';
+import {
+  ToolLayout,
+  ActionSection,
+  SingleColumnLayout,
+} from '@/lib/shared/ToolLayout';
 
 const mirrorTextMap: { [key: string]: string } = {
   a: 'ɒ',
@@ -151,8 +159,8 @@ export default function MirrorTextConverter() {
       <div className="grid gap-6 md:grid-cols-2">
         <TextInput
           title="Input Text"
-            value={inputText}
-            onChange={handleInputChange}
+          value={inputText}
+          onChange={handleInputChange}
           placeholder="Type or paste your text here..."
           variant="gradient"
           minHeight="md"
@@ -160,11 +168,11 @@ export default function MirrorTextConverter() {
 
         <TextInput
           title="Mirror Text Result"
-            value={convertToMirrorText(inputText)}
+          value={convertToMirrorText(inputText)}
           readOnly={true}
           variant="glass"
           minHeight="md"
-          />
+        />
       </div>
 
       <ActionSection>
@@ -192,8 +200,8 @@ export default function MirrorTextConverter() {
       </ActionSection>
 
       {/* Stats */}
-      <TextAnalytics 
-        stats={stats} 
+      <TextAnalytics
+        stats={stats}
         mode="inline"
         showStats={['characters', 'words', 'sentences', 'lines']}
       />

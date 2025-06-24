@@ -2,7 +2,11 @@
 
 import React, { useState } from 'react';
 import { Download, Copy, RefreshCw } from 'lucide-react';
-import { TextAnalytics, useTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
+import {
+  TextAnalytics,
+  useTextStats,
+  type TextStats,
+} from '@/app/components/shared/TextAnalytics';
 
 export function CaseChangerTool() {
   const [inputText, setInputText] = useState('');
@@ -133,8 +137,8 @@ export function CaseChangerTool() {
         </button>
       </div>
 
-      <TextAnalytics 
-        stats={stats} 
+      <TextAnalytics
+        stats={stats}
         mode="inline"
         showStats={['characters', 'words', 'sentences', 'lines']}
       />

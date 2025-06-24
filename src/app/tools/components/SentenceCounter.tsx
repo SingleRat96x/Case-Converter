@@ -2,7 +2,11 @@
 
 import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
-import { TextAnalytics, useTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
+import {
+  TextAnalytics,
+  useTextStats,
+  type TextStats,
+} from '@/app/components/shared/TextAnalytics';
 
 export default function SentenceCounter() {
   const [inputText, setInputText] = useState('');
@@ -175,10 +179,16 @@ ${inputText}`;
       </div>
 
       {/* Stats */}
-      <TextAnalytics 
-        stats={stats} 
+      <TextAnalytics
+        stats={stats}
         mode="inline"
-        showStats={['characters', 'words', 'sentences', 'lines', 'averageWordsPerSentence']}
+        showStats={[
+          'characters',
+          'words',
+          'sentences',
+          'lines',
+          'averageWordsPerSentence',
+        ]}
       />
     </div>
   );

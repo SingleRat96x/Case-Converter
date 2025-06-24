@@ -212,23 +212,33 @@ export default function WebpToPngConverter() {
             <div className="text-sm text-muted-foreground space-y-2">
               <div className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                <span>WEBP is a modern image format with superior compression</span>
+                <span>
+                  WEBP is a modern image format with superior compression
+                </span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                <span>PNG provides lossless compression and transparency support</span>
+                <span>
+                  PNG provides lossless compression and transparency support
+                </span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                <span>Converting to PNG ensures wider browser compatibility</span>
+                <span>
+                  Converting to PNG ensures wider browser compatibility
+                </span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                <span>PNG files are larger but maintain perfect image quality</span>
+                <span>
+                  PNG files are larger but maintain perfect image quality
+                </span>
               </div>
               <div className="flex items-start gap-2">
                 <span className="text-primary">•</span>
-                <span>Ideal for images that need transparency or highest quality</span>
+                <span>
+                  Ideal for images that need transparency or highest quality
+                </span>
               </div>
             </div>
           </CardContent>

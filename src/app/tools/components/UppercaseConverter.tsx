@@ -1,13 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import {
-  ToolLayout,
-  InputOutputGrid,
-} from '@/lib/shared/ToolLayout';
+import { ToolLayout, InputOutputGrid } from '@/lib/shared/ToolLayout';
 import { TextInput } from '@/app/components/shared/ToolInputs';
 import { ConverterActions } from '@/app/components/shared/ToolActions';
-import { TextAnalytics, useTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
+import {
+  TextAnalytics,
+  useTextStats,
+  type TextStats,
+} from '@/app/components/shared/TextAnalytics';
 import AdSpace from '../components/AdSpace';
 
 export default function UppercaseConverter() {
@@ -89,11 +90,7 @@ export default function UppercaseConverter() {
 
       {/* Text Analytics */}
       {inputText && (
-        <TextAnalytics 
-          stats={stats}
-          mode="inline"
-          className="mt-6"
-        />
+        <TextAnalytics stats={stats} mode="inline" className="mt-6" />
       )}
 
       {/* Universal Converter Actions */}

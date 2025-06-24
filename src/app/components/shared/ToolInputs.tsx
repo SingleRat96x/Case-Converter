@@ -43,7 +43,7 @@ export function TextInput({
 
   const variantClasses = {
     default: 'tool-input-default',
-    gradient: 'tool-input-gradient', 
+    gradient: 'tool-input-gradient',
     glass: 'tool-input-glass',
   };
 
@@ -160,13 +160,14 @@ export function FileUpload({
                   Drop files here or click to upload
                 </p>
                 <p className="text-sm text-muted-foreground mt-2">
-                  Supported formats: {acceptedTypes.replace('*', 'All')} • Max size: {maxSize}MB
+                  Supported formats: {acceptedTypes.replace('*', 'All')} • Max
+                  size: {maxSize}MB
                 </p>
               </div>
-              <Button 
+              <Button
                 type="button"
                 className="tool-button-primary"
-                onClick={(e) => {
+                onClick={e => {
                   e.stopPropagation();
                   fileInputRef.current?.click();
                 }}
@@ -239,8 +240,10 @@ export function SettingsPanel({
   };
 
   return (
-    <Card className={`tool-card-vibrant ${variantClasses[variant]} ${className}`}>
-      <CardHeader 
+    <Card
+      className={`tool-card-vibrant ${variantClasses[variant]} ${className}`}
+    >
+      <CardHeader
         className={`pb-4 ${collapsible ? 'cursor-pointer' : ''}`}
         onClick={collapsible ? () => setIsCollapsed(!isCollapsed) : undefined}
       >
@@ -255,9 +258,7 @@ export function SettingsPanel({
         </CardTitle>
       </CardHeader>
       {(!collapsible || !isCollapsed) && (
-        <CardContent className="pt-0 space-y-4">
-          {children}
-        </CardContent>
+        <CardContent className="pt-0 space-y-4">{children}</CardContent>
       )}
     </Card>
   );
@@ -294,24 +295,25 @@ export function ModeToggle({
           onClick={() => onChange(false)}
           className={`
             px-4 py-2 rounded-md font-medium transition-all duration-300
-            ${!value 
-              ? 'bg-primary text-primary-foreground shadow-lg' 
-              : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+            ${
+              !value
+                ? 'bg-primary text-primary-foreground shadow-lg'
+                : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
             }
           `}
         >
           {leftLabel}
         </button>
-        
+
         <div className="relative">
           {value ? (
-            <ToggleRight 
-              className="h-8 w-8 text-primary cursor-pointer hover:scale-110 transition-transform" 
+            <ToggleRight
+              className="h-8 w-8 text-primary cursor-pointer hover:scale-110 transition-transform"
               onClick={() => onChange(!value)}
             />
           ) : (
-            <ToggleLeft 
-              className="h-8 w-8 text-muted-foreground cursor-pointer hover:scale-110 transition-transform" 
+            <ToggleLeft
+              className="h-8 w-8 text-muted-foreground cursor-pointer hover:scale-110 transition-transform"
               onClick={() => onChange(!value)}
             />
           )}
@@ -321,9 +323,10 @@ export function ModeToggle({
           onClick={() => onChange(true)}
           className={`
             px-4 py-2 rounded-md font-medium transition-all duration-300
-            ${value 
-              ? 'bg-primary text-primary-foreground shadow-lg' 
-              : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
+            ${
+              value
+                ? 'bg-primary text-primary-foreground shadow-lg'
+                : 'text-muted-foreground hover:text-foreground hover:bg-muted/50'
             }
           `}
         >
@@ -359,9 +362,7 @@ export function InputGroup({
       <h3 className="text-sm font-medium text-foreground mb-3 gradient-text">
         {title}
       </h3>
-      <div className={layoutClasses[layout]}>
-        {children}
-      </div>
+      <div className={layoutClasses[layout]}>{children}</div>
     </div>
   );
-} 
+}

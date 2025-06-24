@@ -1,14 +1,31 @@
 'use client';
 
 import { ReactNode } from 'react';
-import { Download, Copy, RefreshCw, RotateCcw, Play, Pause, Settings2, FileDown, Clipboard, Trash2 } from 'lucide-react';
+import {
+  Download,
+  Copy,
+  RefreshCw,
+  RotateCcw,
+  Play,
+  Pause,
+  Settings2,
+  FileDown,
+  Clipboard,
+  Trash2,
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
 
 // Universal Tool Button Component
 interface ToolButtonProps {
   children: ReactNode;
   onClick: () => void;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'outline';
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'outline';
   size?: 'sm' | 'md' | 'lg';
   disabled?: boolean;
   loading?: boolean;
@@ -56,7 +73,11 @@ export function ToolButton({
       {loading ? (
         <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-current opacity-70" />
       ) : (
-        icon && <span className="transition-transform duration-300 group-hover:scale-110">{icon}</span>
+        icon && (
+          <span className="transition-transform duration-300 group-hover:scale-110">
+            {icon}
+          </span>
+        )
       )}
       {children}
     </Button>
@@ -69,17 +90,23 @@ interface ActionButtonProps {
   disabled?: boolean;
   loading?: boolean;
   className?: string;
-  variant?: 'primary' | 'secondary' | 'success' | 'warning' | 'danger' | 'outline';
+  variant?:
+    | 'primary'
+    | 'secondary'
+    | 'success'
+    | 'warning'
+    | 'danger'
+    | 'outline';
   size?: 'sm' | 'md' | 'lg';
 }
 
-export function DownloadButton({ 
-  onClick, 
-  disabled = false, 
-  loading = false, 
-  className = '', 
+export function DownloadButton({
+  onClick,
+  disabled = false,
+  loading = false,
+  className = '',
   variant = 'secondary',
-  size = 'md'
+  size = 'md',
 }: ActionButtonProps) {
   return (
     <ToolButton
@@ -96,13 +123,13 @@ export function DownloadButton({
   );
 }
 
-export function CopyButton({ 
-  onClick, 
-  disabled = false, 
-  loading = false, 
-  className = '', 
+export function CopyButton({
+  onClick,
+  disabled = false,
+  loading = false,
+  className = '',
   variant = 'success',
-  size = 'md'
+  size = 'md',
 }: ActionButtonProps) {
   return (
     <ToolButton
@@ -119,13 +146,13 @@ export function CopyButton({
   );
 }
 
-export function ClearButton({ 
-  onClick, 
-  disabled = false, 
-  loading = false, 
-  className = '', 
+export function ClearButton({
+  onClick,
+  disabled = false,
+  loading = false,
+  className = '',
   variant = 'outline',
-  size = 'md'
+  size = 'md',
 }: ActionButtonProps) {
   return (
     <ToolButton
@@ -142,13 +169,13 @@ export function ClearButton({
   );
 }
 
-export function SwapButton({ 
-  onClick, 
-  disabled = false, 
-  loading = false, 
-  className = '', 
+export function SwapButton({
+  onClick,
+  disabled = false,
+  loading = false,
+  className = '',
   variant = 'outline',
-  size = 'md'
+  size = 'md',
 }: ActionButtonProps) {
   return (
     <ToolButton
@@ -237,7 +264,7 @@ export function ActionButtonGroup({
           {downloadLabel}
         </ToolButton>
       )}
-      
+
       {showCopy && onCopy && (
         <ToolButton
           onClick={onCopy}
@@ -250,7 +277,7 @@ export function ActionButtonGroup({
           {copyLabel}
         </ToolButton>
       )}
-      
+
       {showSwap && onSwap && (
         <ToolButton
           onClick={onSwap}
@@ -263,7 +290,7 @@ export function ActionButtonGroup({
           {swapLabel}
         </ToolButton>
       )}
-      
+
       {showClear && onClear && (
         <ToolButton
           onClick={onClear}
@@ -281,12 +308,12 @@ export function ActionButtonGroup({
 }
 
 // Specialized Action Groups for Different Tool Types
-export function TextProcessorActions({ 
-  onDownload, 
-  onCopy, 
+export function TextProcessorActions({
+  onDownload,
+  onCopy,
   onClear,
   hasContent = false,
-  className = ''
+  className = '',
 }: {
   onDownload: () => void;
   onCopy: () => void;
@@ -306,13 +333,13 @@ export function TextProcessorActions({
   );
 }
 
-export function ConverterActions({ 
-  onDownload, 
-  onCopy, 
-  onClear, 
+export function ConverterActions({
+  onDownload,
+  onCopy,
+  onClear,
   onSwap,
   hasContent = false,
-  className = ''
+  className = '',
 }: {
   onDownload: () => void;
   onCopy: () => void;
@@ -335,14 +362,14 @@ export function ConverterActions({
   );
 }
 
-export function GeneratorActions({ 
-  onDownload, 
-  onCopy, 
+export function GeneratorActions({
+  onDownload,
+  onCopy,
   onClear,
   onGenerate,
   hasContent = false,
   generating = false,
-  className = ''
+  className = '',
 }: {
   onDownload: () => void;
   onCopy: () => void;
@@ -365,7 +392,7 @@ export function GeneratorActions({
           {generating ? 'Generating...' : 'Generate'}
         </ToolButton>
       </div>
-      
+
       {hasContent && (
         <ActionButtonGroup
           onDownload={onDownload}
@@ -378,14 +405,14 @@ export function GeneratorActions({
   );
 }
 
-export function ImageProcessorActions({ 
-  onDownload, 
+export function ImageProcessorActions({
+  onDownload,
   onClear,
   onProcess,
   hasImage = false,
   hasResult = false,
   processing = false,
-  className = ''
+  className = '',
 }: {
   onDownload: () => void;
   onClear: () => void;
@@ -411,7 +438,7 @@ export function ImageProcessorActions({
           </ToolButton>
         </div>
       )}
-      
+
       {hasResult && (
         <ActionButtonGroup
           onDownload={onDownload}

@@ -7,13 +7,13 @@ export function Footer() {
     {
       title: 'Case Conversion',
       tools: [
-    { href: '/tools/sentence-case', label: 'Sentence Case' },
-    { href: '/tools/title-case', label: 'Title Case' },
-    { href: '/tools/uppercase', label: 'UPPERCASE' },
-    { href: '/tools/lowercase', label: 'lowercase' },
-    { href: '/tools/alternating-case', label: 'aLtErNaTiNg cAsE' },
-    { href: '/tools/text-counter', label: 'Text Counter' },
-      ]
+        { href: '/tools/sentence-case', label: 'Sentence Case' },
+        { href: '/tools/title-case', label: 'Title Case' },
+        { href: '/tools/uppercase', label: 'UPPERCASE' },
+        { href: '/tools/lowercase', label: 'lowercase' },
+        { href: '/tools/alternating-case', label: 'aLtErNaTiNg cAsE' },
+        { href: '/tools/text-counter', label: 'Text Counter' },
+      ],
     },
     {
       title: 'Text Formatting',
@@ -26,7 +26,7 @@ export function Footer() {
         { href: '/tools/cursed-text', label: 'Cursed Text' },
         { href: '/tools/invisible-text', label: 'Invisible Text' },
         { href: '/tools/plain-text', label: 'Plain Text' },
-      ]
+      ],
     },
     {
       title: 'Social Fonts',
@@ -34,7 +34,7 @@ export function Footer() {
         { href: '/tools/discord-font', label: 'Discord Font' },
         { href: '/tools/facebook-font', label: 'Facebook Font' },
         { href: '/tools/instagram-fonts', label: 'Instagram Fonts' },
-      ]
+      ],
     },
     {
       title: 'Text Utilities',
@@ -44,8 +44,8 @@ export function Footer() {
         { href: '/tools/remove-text-formatting', label: 'Remove Formatting' },
         { href: '/tools/text-replacement', label: 'Text Replacement' },
         { href: '/tools/repeat-text', label: 'Repeat Text' },
-    { href: '/tools/sort-words', label: 'Sort Words' },
-      ]
+        { href: '/tools/sort-words', label: 'Sort Words' },
+      ],
     },
     {
       title: 'Generators',
@@ -56,7 +56,7 @@ export function Footer() {
         { href: '/tools/random-number', label: 'Random Number' },
         { href: '/tools/random-letter', label: 'Random Letter' },
         { href: '/tools/random-date', label: 'Random Date' },
-      ]
+      ],
     },
     {
       title: 'Code & Data',
@@ -67,40 +67,38 @@ export function Footer() {
         { href: '/tools/rot13', label: 'ROT13' },
         { href: '/tools/morse-code', label: 'Morse Code' },
         { href: '/tools/utf8-converter', label: 'UTF-8 Converter' },
-      ]
-    }
+      ],
+    },
   ];
 
   return (
     <footer className="bg-background border-t border-border">
       {/* Main Footer Content */}
       <div className="container mx-auto px-6 py-16">
-
-
-                 {/* Tools Grid */}
-         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
+        {/* Tools Grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
           {footerSections.map((section, index) => (
             <div key={index} className="space-y-6">
               <h3 className="text-lg font-semibold text-foreground relative">
                 {section.title}
                 <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full"></div>
-            </h3>
+              </h3>
               <ul className="space-y-3">
                 {section.tools.map(tool => (
-                <li key={tool.href}>
-                  <Link
-                    href={tool.href}
+                  <li key={tool.href}>
+                    <Link
+                      href={tool.href}
                       className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
-                  >
+                    >
                       <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
-                    {tool.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
+                      {tool.label}
+                    </Link>
+                  </li>
+                ))}
+              </ul>
             </div>
           ))}
-          </div>
+        </div>
 
         {/* Secondary Links */}
         <div className="border-t border-border pt-12 mb-12">
@@ -112,14 +110,14 @@ export function Footer() {
               </h4>
               <ul className="space-y-3">
                 <li>
-                      <Link
+                  <Link
                     href="/about-us"
                     className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
-                      >
+                  >
                     <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
                     About Us
-                      </Link>
-                    </li>
+                  </Link>
+                </li>
                 <li>
                   <Link
                     href="/contact-us"
@@ -129,8 +127,8 @@ export function Footer() {
                     Contact Us
                   </Link>
                 </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-foreground relative">
@@ -156,8 +154,8 @@ export function Footer() {
                     Terms of Service
                   </Link>
                 </li>
-            </ul>
-          </div>
+              </ul>
+            </div>
 
             <div className="space-y-6">
               <h4 className="text-lg font-semibold text-foreground relative">
@@ -237,10 +235,13 @@ export function Footer() {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {new Date().getFullYear()} Text Case Converter. All rights reserved.
-          </p>
+              © {new Date().getFullYear()} Text Case Converter. All rights
+              reserved.
+            </p>
             <div className="flex items-center gap-6">
-              <span className="text-sm text-muted-foreground">Made with ❤️ for developers</span>
+              <span className="text-sm text-muted-foreground">
+                Made with ❤️ for developers
+              </span>
             </div>
           </div>
         </div>

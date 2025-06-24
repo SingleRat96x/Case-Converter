@@ -34,9 +34,7 @@ export function ToolLayout({
   className = '',
 }: ToolLayoutProps) {
   return (
-    <div
-      className={`w-full space-y-8 ${className}`}
-    >
+    <div className={`w-full space-y-8 ${className}`}>
       {title && (
         <div className="text-center space-y-3">
           <h1 className="text-3xl font-bold text-foreground">{title}</h1>
@@ -83,16 +81,18 @@ export function TextAreaSection({
 }
 
 export function ActionSection({ children }: ActionSectionProps) {
-  return <div className="flex flex-wrap gap-4 justify-center items-center">{children}</div>;
+  return (
+    <div className="flex flex-wrap gap-4 justify-center items-center">
+      {children}
+    </div>
+  );
 }
 
 export function StatsSection({ children }: StatsSectionProps) {
   return (
     <Card className="w-full tool-card-vibrant">
       <CardContent className="pt-6 pb-6">
-        <div className="stats-grid">
-          {children}
-        </div>
+        <div className="stats-grid">{children}</div>
       </CardContent>
     </Card>
   );
@@ -114,7 +114,9 @@ export function TwoColumnLayout({ children }: { children: ReactNode }) {
 // Input/Output Grid Layout for text processors
 export function InputOutputGrid({ children }: { children: ReactNode }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">{children}</div>
+    <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 w-full">
+      {children}
+    </div>
   );
 }
 
@@ -129,71 +131,59 @@ export function ConfigOutputLayout({ children }: { children: ReactNode }) {
 
 // Image Processing Layout for image tools
 export function ImageProcessingLayout({ children }: { children: ReactNode }) {
-  return (
-    <div className="space-y-6 w-full">
-      {children}
-    </div>
-  );
+  return <div className="space-y-6 w-full">{children}</div>;
 }
 
 // Three Column Layout for complex tools
 export function ThreeColumnLayout({ children }: { children: ReactNode }) {
   return (
-    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">{children}</div>
+    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 w-full">
+      {children}
+    </div>
   );
 }
 
 // Centered Column Layout for generators
-export function CenteredColumnLayout({ 
-  children, 
-  maxWidth = 'max-w-2xl' 
-}: { 
+export function CenteredColumnLayout({
+  children,
+  maxWidth = 'max-w-2xl',
+}: {
   children: ReactNode;
   maxWidth?: string;
 }) {
   return (
-    <div className={`mx-auto w-full ${maxWidth} space-y-6`}>
-      {children}
-    </div>
+    <div className={`mx-auto w-full ${maxWidth} space-y-6`}>{children}</div>
   );
 }
 
 // Full Width Layout for tools that need maximum space
 export function FullWidthLayout({ children }: { children: ReactNode }) {
-  return (
-    <div className="w-full space-y-6">
-      {children}
-    </div>
-  );
+  return <div className="w-full space-y-6">{children}</div>;
 }
 
 // Split Layout with Sidebar for tools with extensive settings
-export function SplitLayout({ 
-  sidebar, 
-  main 
-}: { 
-  sidebar: ReactNode; 
+export function SplitLayout({
+  sidebar,
+  main,
+}: {
+  sidebar: ReactNode;
   main: ReactNode;
 }) {
   return (
     <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 w-full">
-      <div className="lg:col-span-1">
-        {sidebar}
-      </div>
-      <div className="lg:col-span-3">
-        {main}
-      </div>
+      <div className="lg:col-span-1">{sidebar}</div>
+      <div className="lg:col-span-3">{main}</div>
     </div>
   );
 }
 
 // Tab-based Layout for tools with multiple modes
-export function TabLayout({ 
-  tabs, 
-  activeTab, 
-  onTabChange, 
-  children 
-}: { 
+export function TabLayout({
+  tabs,
+  activeTab,
+  onTabChange,
+  children,
+}: {
   tabs: { id: string; label: string; icon?: ReactNode }[];
   activeTab: string;
   onTabChange: (tabId: string) => void;
@@ -203,15 +193,16 @@ export function TabLayout({
     <div className="w-full space-y-6">
       <div className="border-b border-border">
         <nav className="flex space-x-8">
-          {tabs.map((tab) => (
+          {tabs.map(tab => (
             <button
               key={tab.id}
               onClick={() => onTabChange(tab.id)}
               className={`
                 py-2 px-1 border-b-2 font-medium text-sm whitespace-nowrap
-                ${activeTab === tab.id
-                  ? 'border-primary text-primary'
-                  : 'border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground'
+                ${
+                  activeTab === tab.id
+                    ? 'border-primary text-primary'
+                    : 'border-transparent text-muted-foreground hover:text-foreground hover:border-muted-foreground'
                 }
               `}
             >
@@ -223,18 +214,16 @@ export function TabLayout({
           ))}
         </nav>
       </div>
-      <div className="tab-content">
-        {children}
-      </div>
+      <div className="tab-content">{children}</div>
     </div>
   );
 }
 
 // Responsive Grid Layout for tools with multiple outputs
-export function ResponsiveGridLayout({ 
-  children, 
-  columns = 2 
-}: { 
+export function ResponsiveGridLayout({
+  children,
+  columns = 2,
+}: {
   children: ReactNode;
   columns?: 1 | 2 | 3 | 4;
 }) {

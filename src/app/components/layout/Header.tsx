@@ -1,6 +1,14 @@
 'use client';
 
-import { Menu, ChevronRight, X, Home, ChevronDown, Mail, Info } from 'lucide-react';
+import {
+  Menu,
+  ChevronRight,
+  X,
+  Home,
+  ChevronDown,
+  Mail,
+  Info,
+} from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { TOOL_CATEGORIES } from '@/lib/tools';
@@ -45,7 +53,8 @@ export function Header() {
   // Better mobile menu body scroll lock
   useEffect(() => {
     if (isMenuOpen) {
-      const scrollBarWidth = window.innerWidth - document.documentElement.clientWidth;
+      const scrollBarWidth =
+        window.innerWidth - document.documentElement.clientWidth;
       document.body.style.overflow = 'hidden';
       document.body.style.paddingRight = `${scrollBarWidth}px`;
     } else {
@@ -79,24 +88,24 @@ export function Header() {
   ];
 
   const toolsByCategory = tools.reduce(
-      (acc, tool) => {
-        const category = tool.category || 'uncategorized';
+    (acc, tool) => {
+      const category = tool.category || 'uncategorized';
       if (!acc[category]) acc[category] = [];
       acc[category].push({
-          id: tool.id,
-          name: tool.name,
+        id: tool.id,
+        name: tool.name,
         category,
-          title: tool.title,
-          display_name: tool.display_name,
-          text_transform: tool.text_transform,
-          custom_style: tool.custom_style,
-          short_description: tool.short_description,
-          long_description: tool.long_description,
-          updated_at: tool.updated_at,
-          show_in_index: tool.show_in_index,
+        title: tool.title,
+        display_name: tool.display_name,
+        text_transform: tool.text_transform,
+        custom_style: tool.custom_style,
+        short_description: tool.short_description,
+        long_description: tool.long_description,
+        updated_at: tool.updated_at,
+        show_in_index: tool.show_in_index,
       });
-        return acc;
-      },
+      return acc;
+    },
     { 'About Us': aboutUsTools } as Record<string, MenuItem[]>
   );
 
@@ -110,12 +119,16 @@ export function Header() {
       case 'capitalize':
         return text
           .split(' ')
-          .map(word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase())
+          .map(
+            word => word.charAt(0).toUpperCase() + word.slice(1).toLowerCase()
+          )
           .join(' ');
       case 'alternating':
         return text
           .split('')
-          .map((char, i) => (i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()))
+          .map((char, i) =>
+            i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
+          )
           .join('');
       default:
         return text;
@@ -166,9 +179,12 @@ export function Header() {
       <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80 dark:supports-[backdrop-filter]:bg-gray-900/80 shadow-sm">
         <div className="container flex h-16 items-center justify-between mx-auto px-4">
           <div className="flex items-center space-x-4">
-            <Link className="flex items-center hover:scale-105 transition-transform duration-200" href="/">
+            <Link
+              className="flex items-center hover:scale-105 transition-transform duration-200"
+              href="/"
+            >
               <span className="font-bold text-sm 2xs:text-base xs:text-lg sm:text-lg md:text-base lg:text-lg whitespace-nowrap text-foreground hover:text-primary transition-colors duration-200">
-                  Text Case Converter
+                Text Case Converter
               </span>
             </Link>
           </div>
@@ -237,7 +253,10 @@ export function Header() {
                               toolsByCategory[category],
                               getColumnCount(toolsByCategory[category])
                             ).map((columnTools, columnIndex) => (
-                              <div key={columnIndex} className="flex flex-col space-y-1">
+                              <div
+                                key={columnIndex}
+                                className="flex flex-col space-y-1"
+                              >
                                 {columnTools.map(tool => (
                                   <Link
                                     key={tool.id}
@@ -296,86 +315,92 @@ export function Header() {
                   <X className="h-5 w-5" />
                 </button>
               </div>
-              
+
               <div className="flex flex-col h-full min-h-0">
                 <nav className="flex-1 overflow-y-auto px-4 py-4 space-y-2 min-h-0">
-                {Object.values(TOOL_CATEGORIES).map(category => (
+                  {Object.values(TOOL_CATEGORIES).map(category => (
                     <div key={category}>
                       <div className="flex items-center justify-between p-3 rounded-lg bg-gray-50 dark:bg-gray-800 hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors duration-200">
-                      <Link
-                        href={
-                          category === 'Convert Case'
-                            ? '/'
-                            : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
-                        }
+                        <Link
+                          href={
+                            category === 'Convert Case'
+                              ? '/'
+                              : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`
+                          }
                           className="flex-1 text-base font-medium text-gray-900 dark:text-gray-100"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        {category}
-                      </Link>
-                      {toolsByCategory[category]?.length > 0 && (
-                        <button
-                          onClick={e => toggleCategory(category, e)}
-                            className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200"
+                          onClick={() => setIsMenuOpen(false)}
                         >
-                          <motion.div
-                            animate={{
-                                rotate: expandedCategories.includes(category) ? 90 : 0,
-                            }}
-                            transition={{ duration: 0.2 }}
+                          {category}
+                        </Link>
+                        {toolsByCategory[category]?.length > 0 && (
+                          <button
+                            onClick={e => toggleCategory(category, e)}
+                            className="p-2 text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-600 transition-all duration-200"
                           >
+                            <motion.div
+                              animate={{
+                                rotate: expandedCategories.includes(category)
+                                  ? 90
+                                  : 0,
+                              }}
+                              transition={{ duration: 0.2 }}
+                            >
                               <ChevronRight className="h-4 w-4" />
-                          </motion.div>
-                        </button>
-                      )}
-                    </div>
-                    <AnimatePresence>
-                      {expandedCategories.includes(category) &&
-                        toolsByCategory[category]?.length > 0 && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: 'auto', opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2 }}
-                            className="overflow-hidden"
-                          >
-                              <div className="mt-2 ml-4 space-y-1">
-                              {toolsByCategory[category].map(tool => (
-                                <Link
-                                  key={tool.id}
-                                  href={`/tools/${tool.id}`}
-                                    className={`block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200 ${tool.custom_style || ''}`}
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {getDisplayText(tool)}
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
+                            </motion.div>
+                          </button>
                         )}
-                    </AnimatePresence>
-                  </div>
-                ))}
+                      </div>
+                      <AnimatePresence>
+                        {expandedCategories.includes(category) &&
+                          toolsByCategory[category]?.length > 0 && (
+                            <motion.div
+                              initial={{ height: 0, opacity: 0 }}
+                              animate={{ height: 'auto', opacity: 1 }}
+                              exit={{ height: 0, opacity: 0 }}
+                              transition={{ duration: 0.2 }}
+                              className="overflow-hidden"
+                            >
+                              <div className="mt-2 ml-4 space-y-1">
+                                {toolsByCategory[category].map(tool => (
+                                  <Link
+                                    key={tool.id}
+                                    href={`/tools/${tool.id}`}
+                                    className={`block px-4 py-2 text-sm text-gray-600 dark:text-gray-300 hover:text-blue-600 dark:hover:text-blue-400 hover:bg-gray-100 dark:hover:bg-gray-700 rounded-lg transition-all duration-200 ${tool.custom_style || ''}`}
+                                    onClick={() => setIsMenuOpen(false)}
+                                  >
+                                    {getDisplayText(tool)}
+                                  </Link>
+                                ))}
+                              </div>
+                            </motion.div>
+                          )}
+                      </AnimatePresence>
+                    </div>
+                  ))}
                 </nav>
 
                 <div className="border-t border-gray-200 dark:border-gray-700 p-4 bg-gray-50 dark:bg-gray-800 space-y-2">
-                    <Link
-                      href="/about-us"
+                  <Link
+                    href="/about-us"
                     className="flex items-center space-x-3 px-4 py-3 rounded-lg bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200 shadow-sm"
-                      onClick={() => setIsMenuOpen(false)}
-                    >
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     <Info className="w-5 h-5 text-blue-600 dark:text-blue-400" />
-                    <span className="font-medium text-gray-900 dark:text-gray-100">About Us</span>
-                    </Link>
-                  
-                      <Link
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      About Us
+                    </span>
+                  </Link>
+
+                  <Link
                     href="/contact-us"
                     className="flex items-center space-x-3 px-4 py-3 rounded-lg bg-white dark:bg-gray-700 hover:bg-gray-100 dark:hover:bg-gray-600 transition-colors duration-200 shadow-sm"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
+                    onClick={() => setIsMenuOpen(false)}
+                  >
                     <Mail className="w-5 h-5 text-green-600 dark:text-green-400" />
-                    <span className="font-medium text-gray-900 dark:text-gray-100">Contact Us</span>
-                      </Link>
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      Contact Us
+                    </span>
+                  </Link>
                 </div>
               </div>
             </motion.div>
