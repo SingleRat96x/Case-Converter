@@ -28,7 +28,8 @@ export default function Md5HashConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
       hashLength: result.startsWith('Error:') ? 0 : result.length,
     });
@@ -56,7 +57,9 @@ export default function Md5HashConverter() {
     try {
       return generateMd5Hash(text, uppercase);
     } catch (error) {
-      return error instanceof Error ? `Error: ${error.message}` : 'Error: Failed to generate hash';
+      return error instanceof Error
+        ? `Error: ${error.message}`
+        : 'Error: Failed to generate hash';
     }
   };
 
@@ -90,15 +93,18 @@ export default function Md5HashConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Security Warning */}
       <div className="bg-yellow-50 dark:bg-yellow-900/20 border border-yellow-200 dark:border-yellow-800 p-4 rounded-lg">
         <div className="flex items-start gap-3">
           <AlertTriangle className="h-5 w-5 text-yellow-600 dark:text-yellow-400 mt-0.5 flex-shrink-0" />
           <div>
-            <h3 className="text-sm font-medium text-yellow-800 dark:text-yellow-300">Security Notice</h3>
+            <h3 className="text-sm font-medium text-yellow-800 dark:text-yellow-300">
+              Security Notice
+            </h3>
             <p className="text-xs text-yellow-700 dark:text-yellow-400 mt-1">
-              MD5 is not cryptographically secure and should not be used for passwords or sensitive data. Use for checksums only.
+              MD5 is not cryptographically secure and should not be used for
+              passwords or sensitive data. Use for checksums only.
             </p>
           </div>
         </div>
@@ -116,17 +122,20 @@ export default function Md5HashConverter() {
             value={inputText}
             onChange={handleInputChange}
           />
-          
+
           {/* Settings */}
           <div className="flex items-center gap-2 pt-2">
             <input
               type="checkbox"
               id="uppercase"
               checked={uppercase}
-              onChange={(e) => handleUppercaseChange(e.target.checked)}
+              onChange={e => handleUppercaseChange(e.target.checked)}
               className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
             />
-            <label htmlFor="uppercase" className="text-sm text-gray-600 dark:text-gray-400">
+            <label
+              htmlFor="uppercase"
+              className="text-sm text-gray-600 dark:text-gray-400"
+            >
               Uppercase hash
             </label>
           </div>
@@ -147,20 +156,31 @@ export default function Md5HashConverter() {
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Input Text:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">hello</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Input Text:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                hello
+              </div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">MD5 Hash:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">5d41402abc4b2a76b9719d911017c592</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                MD5 Hash:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                5d41402abc4b2a76b9719d911017c592
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            MD5 produces a 128-bit (32 character) hash value, commonly used for checksums and data integrity verification.
+            MD5 produces a 128-bit (32 character) hash value, commonly used for
+            checksums and data integrity verification.
           </div>
         </div>
       </div>
@@ -202,4 +222,4 @@ export default function Md5HashConverter() {
       </div>
     </div>
   );
-} 
+}

@@ -26,7 +26,8 @@ export default function Utf8Converter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
       utf8Size: result.startsWith('Error:') ? 0 : result.length,
     });
@@ -74,7 +75,8 @@ export default function Utf8Converter() {
 
   const handleDownload = () => {
     const result = processText(inputText);
-    const filename = mode === 'encode' ? 'utf8-encoded.txt' : 'utf8-decoded.txt';
+    const filename =
+      mode === 'encode' ? 'utf8-encoded.txt' : 'utf8-decoded.txt';
     const blob = new Blob([result], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -96,14 +98,18 @@ export default function Utf8Converter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Mode Toggle */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Mode</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              Mode
+            </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              {mode === 'encode' ? 'Encode text to UTF-8' : 'Decode UTF-8 encoded text'}
+              {mode === 'encode'
+                ? 'Encode text to UTF-8'
+                : 'Decode UTF-8 encoded text'}
             </p>
           </div>
           <button
@@ -125,8 +131,8 @@ export default function Utf8Converter() {
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100 font-mono"
             placeholder={
-              mode === 'encode' 
-                ? 'Enter text to encode...' 
+              mode === 'encode'
+                ? 'Enter text to encode...'
                 : 'Enter UTF-8 encoded text to decode...'
             }
             value={inputText}
@@ -149,20 +155,31 @@ export default function Utf8Converter() {
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Input Text:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello World! 🌍</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Input Text:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello World! 🌍
+              </div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">UTF-8 Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello%20World!%20%F0%9F%8C%8D</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                UTF-8 Output:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello%20World!%20%F0%9F%8C%8D
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            UTF-8 encoding handles Unicode characters including emojis and special symbols safely.
+            UTF-8 encoding handles Unicode characters including emojis and
+            special symbols safely.
           </div>
         </div>
       </div>
@@ -204,4 +221,4 @@ export default function Utf8Converter() {
       </div>
     </div>
   );
-} 
+}

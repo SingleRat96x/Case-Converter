@@ -4,12 +4,42 @@ import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
 
 const PHONETIC_SPELLING: Record<string, string> = {
-  'A': 'ay', 'B': 'bee', 'C': 'see', 'D': 'dee', 'E': 'ee', 'F': 'eff',
-  'G': 'gee', 'H': 'aitch', 'I': 'eye', 'J': 'jay', 'K': 'kay', 'L': 'ell',
-  'M': 'em', 'N': 'en', 'O': 'oh', 'P': 'pee', 'Q': 'cue', 'R': 'arr',
-  'S': 'ess', 'T': 'tee', 'U': 'you', 'V': 'vee', 'W': 'double-you', 'X': 'ex',
-  'Y': 'why', 'Z': 'zee', '0': 'zero', '1': 'one', '2': 'two', '3': 'three',
-  '4': 'four', '5': 'five', '6': 'six', '7': 'seven', '8': 'eight', '9': 'nine'
+  A: 'ay',
+  B: 'bee',
+  C: 'see',
+  D: 'dee',
+  E: 'ee',
+  F: 'eff',
+  G: 'gee',
+  H: 'aitch',
+  I: 'eye',
+  J: 'jay',
+  K: 'kay',
+  L: 'ell',
+  M: 'em',
+  N: 'en',
+  O: 'oh',
+  P: 'pee',
+  Q: 'cue',
+  R: 'arr',
+  S: 'ess',
+  T: 'tee',
+  U: 'you',
+  V: 'vee',
+  W: 'double-you',
+  X: 'ex',
+  Y: 'why',
+  Z: 'zee',
+  '0': 'zero',
+  '1': 'one',
+  '2': 'two',
+  '3': 'three',
+  '4': 'four',
+  '5': 'five',
+  '6': 'six',
+  '7': 'seven',
+  '8': 'eight',
+  '9': 'nine',
 };
 
 export default function PhoneticSpellingConverter() {
@@ -69,22 +99,26 @@ export default function PhoneticSpellingConverter() {
   const stats = getStats();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Text Input</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Text Input
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Enter text to convert to phonetic spelling..."
             value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            onChange={e => setInputText(e.target.value)}
           />
         </div>
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Phonetic Spelling</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Phonetic Spelling
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
@@ -96,21 +130,30 @@ export default function PhoneticSpellingConverter() {
 
       {/* Reference */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Phonetic Spelling Reference</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Phonetic Spelling Reference
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 grid grid-cols-3 sm:grid-cols-4 lg:grid-cols-6 gap-1">
-          {Object.entries(PHONETIC_SPELLING).slice(0, 26).map(([char, phonetic]) => (
-            <div key={char} className="font-mono">
-              {char}: {phonetic}
-            </div>
-          ))}
+          {Object.entries(PHONETIC_SPELLING)
+            .slice(0, 26)
+            .map(([char, phonetic]) => (
+              <div key={char} className="font-mono">
+                {char}: {phonetic}
+              </div>
+            ))}
         </div>
       </div>
 
       {/* Usage Info */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">How It Works</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          How It Works
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-          <div>• Letters are converted to their phonetic pronunciation (A → ay, B → bee)</div>
+          <div>
+            • Letters are converted to their phonetic pronunciation (A → ay, B →
+            bee)
+          </div>
           <div>• Numbers are spelled out (1 → one, 2 → two)</div>
           <div>• Spaces become "space"</div>
           <div>• Special characters are shown in quotes</div>
@@ -147,7 +190,9 @@ export default function PhoneticSpellingConverter() {
 
       {/* Stats */}
       <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
-        <span>Characters: {stats.inputChars} → {stats.outputChars}</span>
+        <span>
+          Characters: {stats.inputChars} → {stats.outputChars}
+        </span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
         <span>Letters: {stats.letters}</span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
@@ -157,4 +202,4 @@ export default function PhoneticSpellingConverter() {
       </div>
     </div>
   );
-} 
+}

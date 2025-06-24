@@ -10,12 +10,14 @@ interface ToolBlockProps {
   example?: string;
 }
 
-export function ToolBlock({ title, description, href, example }: ToolBlockProps) {
+export function ToolBlock({
+  title,
+  description,
+  href,
+  example,
+}: ToolBlockProps) {
   return (
-    <Link
-      href={href}
-      className="tool-card block"
-    >
+    <Link href={href} className="tool-card block">
       <div className="space-y-2">
         <div className="flex items-center justify-between">
           <h3 className="text-lg font-semibold">{title}</h3>
@@ -30,4 +32,4 @@ export function ToolBlock({ title, description, href, example }: ToolBlockProps)
       </div>
     </Link>
   );
-} 
+}

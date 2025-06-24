@@ -1,7 +1,14 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Download, RefreshCw, ArrowLeftRight, Upload, Settings } from 'lucide-react';
+import {
+  Copy,
+  Download,
+  RefreshCw,
+  ArrowLeftRight,
+  Upload,
+  Settings,
+} from 'lucide-react';
 
 type ConversionMode = 'csvToJson' | 'jsonToCsv';
 
@@ -13,14 +20,17 @@ export default function CsvToJsonConverter() {
 
   const parseCsvToJson = (csv: string, delimiter: string): string => {
     try {
-      const lines = csv.trim().split('\n')
+      const lines = csv
+        .trim()
+        .split('\n')
         .map(line => line.trim())
         .filter(line => line.length > 0);
-      
+
       if (lines.length === 0) throw new Error('Empty input');
 
       // Parse headers
-      const headers = lines[0].split(delimiter)
+      const headers = lines[0]
+        .split(delimiter)
         .map(header => header.trim().replace(/^"|"$/g, ''))
         .filter(header => header.length > 0);
 
@@ -40,13 +50,15 @@ export default function CsvToJsonConverter() {
         headers.forEach((header, index) => {
           row[header] = values[index] !== undefined ? values[index] : '';
         });
-        
+
         return row;
       });
 
       return JSON.stringify(jsonData, null, 2);
     } catch (error) {
-      throw new Error('Invalid CSV format. Please check your input and delimiter.');
+      throw new Error(
+        'Invalid CSV format. Please check your input and delimiter.'
+      );
     }
   };
 
@@ -61,9 +73,9 @@ export default function CsvToJsonConverter() {
       }
 
       // Get all unique headers from all objects
-      const headers = Array.from(new Set(
-        data.flatMap(obj => Object.keys(obj))
-      ));
+      const headers = Array.from(
+        new Set(data.flatMap(obj => Object.keys(obj)))
+      );
 
       // Create CSV header row
       const csvRows = [headers.join(delimiter)];
@@ -92,14 +104,15 @@ export default function CsvToJsonConverter() {
 
   const getResult = (): string => {
     if (!input.trim()) return '';
-    
+
     try {
       setError(null);
-      return mode === 'csvToJson' 
+      return mode === 'csvToJson'
         ? parseCsvToJson(input, delimiter)
         : parseJsonToCsv(input, delimiter);
     } catch (error) {
-      const errorMsg = error instanceof Error ? error.message : 'Conversion failed';
+      const errorMsg =
+        error instanceof Error ? error.message : 'Conversion failed';
       setError(errorMsg);
       return `Error: ${errorMsg}`;
     }
@@ -110,7 +123,7 @@ export default function CsvToJsonConverter() {
     if (!file) return;
 
     const reader = new FileReader();
-    reader.onload = (e) => {
+    reader.onload = e => {
       const content = e.target?.result as string;
       setInput(content);
       setError(null);
@@ -126,14 +139,14 @@ export default function CsvToJsonConverter() {
     if (result && !result.startsWith('Error:')) {
       setInput(result);
     }
-    setMode(prev => prev === 'csvToJson' ? 'jsonToCsv' : 'csvToJson');
+    setMode(prev => (prev === 'csvToJson' ? 'jsonToCsv' : 'csvToJson'));
     setError(null);
   };
 
   const handleDownload = () => {
     const result = getResult();
     if (result.startsWith('Error:')) return;
-    
+
     const extension = mode === 'csvToJson' ? 'json' : 'csv';
     const blob = new Blob([result], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
@@ -161,7 +174,7 @@ export default function CsvToJsonConverter() {
   const result = getResult();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Mode Toggle */}
       <div className="flex items-center justify-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <button
@@ -198,12 +211,14 @@ export default function CsvToJsonConverter() {
         <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
           <div className="flex items-center gap-2 mb-3">
             <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">CSV Settings</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              CSV Settings
+            </h3>
           </div>
           <div className="flex gap-2">
             <select
               value={delimiter}
-              onChange={(e) => setDelimiter(e.target.value)}
+              onChange={e => setDelimiter(e.target.value)}
               className="px-3 py-2 border rounded-md text-sm bg-background"
             >
               <option value=",">Comma (,)</option>
@@ -233,12 +248,13 @@ export default function CsvToJsonConverter() {
           </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100 font-mono text-sm"
-            placeholder={mode === 'csvToJson' 
-              ? 'name,age,city\nJohn,30,New York\nJane,25,Los Angeles' 
-              : '[{"name":"John","age":30,"city":"New York"}]'
+            placeholder={
+              mode === 'csvToJson'
+                ? 'name,age,city\nJohn,30,New York\nJane,25,Los Angeles'
+                : '[{"name":"John","age":30,"city":"New York"}]'
             }
             value={input}
-            onChange={(e) => setInput(e.target.value)}
+            onChange={e => setInput(e.target.value)}
           />
         </div>
 
@@ -249,7 +265,9 @@ export default function CsvToJsonConverter() {
           </label>
           <textarea
             className={`w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y font-mono text-sm ${
-              error ? 'text-red-600 dark:text-red-400' : 'text-gray-900 dark:text-gray-100'
+              error
+                ? 'text-red-600 dark:text-red-400'
+                : 'text-gray-900 dark:text-gray-100'
             }`}
             readOnly
             value={result}
@@ -265,7 +283,9 @@ export default function CsvToJsonConverter() {
         </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400">
           {mode === 'csvToJson' ? (
-            <pre className="whitespace-pre-wrap">name,age,city{'\n'}John,30,New York{'\n'}Jane,25,Los Angeles</pre>
+            <pre className="whitespace-pre-wrap">
+              name,age,city{'\n'}John,30,New York{'\n'}Jane,25,Los Angeles
+            </pre>
           ) : (
             <pre className="whitespace-pre-wrap">
               {`[
@@ -305,4 +325,4 @@ export default function CsvToJsonConverter() {
       </div>
     </div>
   );
-} 
+}

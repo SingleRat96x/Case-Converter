@@ -22,13 +22,33 @@ const defaultParams: UtmParams = {
 };
 
 const commonSources = [
-  'google', 'facebook', 'twitter', 'linkedin', 'instagram', 'youtube',
-  'email', 'newsletter', 'blog', 'referral', 'direct', 'other'
+  'google',
+  'facebook',
+  'twitter',
+  'linkedin',
+  'instagram',
+  'youtube',
+  'email',
+  'newsletter',
+  'blog',
+  'referral',
+  'direct',
+  'other',
 ];
 
 const commonMediums = [
-  'cpc', 'cpm', 'social', 'email', 'display', 'banner', 'affiliate',
-  'referral', 'organic', 'video', 'audio', 'other'
+  'cpc',
+  'cpm',
+  'social',
+  'email',
+  'display',
+  'banner',
+  'affiliate',
+  'referral',
+  'organic',
+  'video',
+  'audio',
+  'other',
 ];
 
 export default function UtmBuilderConverter() {
@@ -45,7 +65,7 @@ export default function UtmBuilderConverter() {
   };
 
   const handleParamChange = (key: keyof UtmParams, value: string) => {
-    setParams((prev) => ({ ...prev, [key]: value }));
+    setParams(prev => ({ ...prev, [key]: value }));
     setError('');
   };
 
@@ -80,8 +100,13 @@ export default function UtmBuilderConverter() {
     return {
       originalLength: params.url.length,
       finalLength: generatedUrl.startsWith('Error:') ? 0 : generatedUrl.length,
-      paramCount: [params.source, params.medium, params.campaign, params.term, params.content]
-        .filter(p => p?.trim()).length,
+      paramCount: [
+        params.source,
+        params.medium,
+        params.campaign,
+        params.term,
+        params.content,
+      ].filter(p => p?.trim()).length,
     };
   };
 
@@ -100,7 +125,7 @@ export default function UtmBuilderConverter() {
   const handleDownload = () => {
     const result = generateUrl();
     if (result.startsWith('Error:')) return;
-    
+
     const content = `UTM Campaign URL
 Generated on: ${new Date().toLocaleString()}
 
@@ -129,7 +154,7 @@ UTM URL: ${result}`;
   const stats = getStats();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* URL Input */}
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
@@ -140,7 +165,7 @@ UTM URL: ${result}`;
           className="w-full p-4 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           placeholder="https://example.com"
           value={params.url}
-          onChange={(e) => handleParamChange('url', e.target.value)}
+          onChange={e => handleParamChange('url', e.target.value)}
         />
       </div>
 
@@ -152,11 +177,11 @@ UTM URL: ${result}`;
           </label>
           <select
             value={params.source}
-            onChange={(e) => handleParamChange('source', e.target.value)}
+            onChange={e => handleParamChange('source', e.target.value)}
             className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           >
             <option value="">Select source...</option>
-            {commonSources.map((source) => (
+            {commonSources.map(source => (
               <option key={source} value={source}>
                 {source.charAt(0).toUpperCase() + source.slice(1)}
               </option>
@@ -170,11 +195,11 @@ UTM URL: ${result}`;
           </label>
           <select
             value={params.medium}
-            onChange={(e) => handleParamChange('medium', e.target.value)}
+            onChange={e => handleParamChange('medium', e.target.value)}
             className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           >
             <option value="">Select medium...</option>
-            {commonMediums.map((medium) => (
+            {commonMediums.map(medium => (
               <option key={medium} value={medium}>
                 {medium.toUpperCase()}
               </option>
@@ -191,7 +216,7 @@ UTM URL: ${result}`;
             className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="spring_sale_2024"
             value={params.campaign}
-            onChange={(e) => handleParamChange('campaign', e.target.value)}
+            onChange={e => handleParamChange('campaign', e.target.value)}
           />
         </div>
 
@@ -204,7 +229,7 @@ UTM URL: ${result}`;
             className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="running+shoes"
             value={params.term}
-            onChange={(e) => handleParamChange('term', e.target.value)}
+            onChange={e => handleParamChange('term', e.target.value)}
           />
         </div>
       </div>
@@ -218,7 +243,7 @@ UTM URL: ${result}`;
           className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           placeholder="logolink or textlink"
           value={params.content}
-          onChange={(e) => handleParamChange('content', e.target.value)}
+          onChange={e => handleParamChange('content', e.target.value)}
         />
       </div>
 
@@ -230,7 +255,9 @@ UTM URL: ${result}`;
         <div className="relative">
           <textarea
             className={`w-full min-h-[120px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y font-mono text-sm ${
-              generatedUrl.startsWith('Error:') ? 'text-red-600 dark:text-red-400' : 'text-gray-900 dark:text-gray-100'
+              generatedUrl.startsWith('Error:')
+                ? 'text-red-600 dark:text-red-400'
+                : 'text-gray-900 dark:text-gray-100'
             }`}
             readOnly
             value={generatedUrl || 'Enter URL and campaign details above...'}
@@ -252,13 +279,30 @@ UTM URL: ${result}`;
 
       {/* UTM Guide */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">UTM Parameter Guide</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          UTM Parameter Guide
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-          <div><strong>Source:</strong> Identifies which site sent the traffic (google, facebook, newsletter)</div>
-          <div><strong>Medium:</strong> Identifies the marketing medium (cpc, banner, email)</div>
-          <div><strong>Campaign:</strong> Identifies a specific product promotion or strategic campaign</div>
-          <div><strong>Term:</strong> Identifies search terms (for paid search campaigns)</div>
-          <div><strong>Content:</strong> Identifies what specifically was clicked to bring the user</div>
+          <div>
+            <strong>Source:</strong> Identifies which site sent the traffic
+            (google, facebook, newsletter)
+          </div>
+          <div>
+            <strong>Medium:</strong> Identifies the marketing medium (cpc,
+            banner, email)
+          </div>
+          <div>
+            <strong>Campaign:</strong> Identifies a specific product promotion
+            or strategic campaign
+          </div>
+          <div>
+            <strong>Term:</strong> Identifies search terms (for paid search
+            campaigns)
+          </div>
+          <div>
+            <strong>Content:</strong> Identifies what specifically was clicked
+            to bring the user
+          </div>
         </div>
       </div>
 
@@ -299,4 +343,4 @@ UTM URL: ${result}`;
       </div>
     </div>
   );
-} 
+}

@@ -2,14 +2,7 @@
 
 import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  averageWordsPerSentence: number;
-}
+import { TextAnalytics, useTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
 
 export default function SentenceCounter() {
   const [inputText, setInputText] = useState('');
@@ -56,7 +49,7 @@ Total Characters: ${stats.characters}
 Total Words: ${stats.words}
 Total Sentences: ${stats.sentences}
 Total Lines: ${stats.lines}
-Average Words per Sentence: ${stats.averageWordsPerSentence.toFixed(1)}
+Average Words per Sentence: ${stats.averageWordsPerSentence?.toFixed(1) || '0.0'}
 
 Input Text:
 -----------
@@ -85,11 +78,13 @@ ${inputText}`;
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -100,33 +95,55 @@ ${inputText}`;
 
         {/* Analysis Results */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Analysis Results</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Analysis Results
+          </label>
           <div className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-3">
                 <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Sentences</p>
-                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">{stats.sentences}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Sentences
+                  </p>
+                  <p className="text-2xl font-bold text-blue-600 dark:text-blue-400">
+                    {stats.sentences}
+                  </p>
                 </div>
                 <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Words</p>
-                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">{stats.words}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Words
+                  </p>
+                  <p className="text-2xl font-bold text-green-600 dark:text-green-400">
+                    {stats.words}
+                  </p>
                 </div>
               </div>
               <div className="space-y-3">
                 <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Characters</p>
-                  <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.characters}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Characters
+                  </p>
+                  <p className="text-2xl font-bold text-purple-600 dark:text-purple-400">
+                    {stats.characters}
+                  </p>
                 </div>
                 <div className="text-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
-                  <p className="text-sm text-gray-600 dark:text-gray-400">Lines</p>
-                  <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">{stats.lines}</p>
+                  <p className="text-sm text-gray-600 dark:text-gray-400">
+                    Lines
+                  </p>
+                  <p className="text-2xl font-bold text-orange-600 dark:text-orange-400">
+                    {stats.lines}
+                  </p>
                 </div>
               </div>
             </div>
             <div className="mt-4 text-center p-3 bg-white dark:bg-gray-800 rounded-lg border">
-              <p className="text-sm text-gray-600 dark:text-gray-400">Average Words per Sentence</p>
-              <p className="text-xl font-bold text-red-600 dark:text-red-400">{stats.averageWordsPerSentence.toFixed(1)}</p>
+              <p className="text-sm text-gray-600 dark:text-gray-400">
+                Average Words per Sentence
+              </p>
+              <p className="text-xl font-bold text-red-600 dark:text-red-400">
+                {stats.averageWordsPerSentence?.toFixed(1) || '0.0'}
+              </p>
             </div>
           </div>
         </div>
@@ -158,15 +175,11 @@ ${inputText}`;
       </div>
 
       {/* Stats */}
-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
-        <span>Characters: {stats.characters}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Words: {stats.words}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Sentences: {stats.sentences}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Lines: {stats.lines}</span>
-      </div>
+      <TextAnalytics 
+        stats={stats} 
+        mode="inline"
+        showStats={['characters', 'words', 'sentences', 'lines', 'averageWordsPerSentence']}
+      />
     </div>
   );
-} 
+}

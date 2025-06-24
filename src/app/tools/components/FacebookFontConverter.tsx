@@ -4,101 +4,136 @@ import { useState } from 'react';
 import { Copy, RefreshCw } from 'lucide-react';
 
 const fontStyles = {
-  'bold': {
+  bold: {
     name: 'Bold',
-    transform: (text: string) => text.replace(/[a-zA-Z0-9]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D400); // Bold A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D41A); // Bold a-z
-      if (code >= 48 && code <= 57) return String.fromCharCode(code - 48 + 0x1D7CE); // Bold 0-9
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z0-9]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d400); // Bold A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d41a); // Bold a-z
+        if (code >= 48 && code <= 57)
+          return String.fromCharCode(code - 48 + 0x1d7ce); // Bold 0-9
+        return char;
+      }),
   },
-  'italic': {
+  italic: {
     name: 'Italic',
-    transform: (text: string) => text.replace(/[a-zA-Z]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D434); // Italic A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D44E); // Italic a-z
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d434); // Italic A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d44e); // Italic a-z
+        return char;
+      }),
   },
   'bold-italic': {
     name: 'Bold Italic',
-    transform: (text: string) => text.replace(/[a-zA-Z]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D468); // Bold Italic A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D482); // Bold Italic a-z
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d468); // Bold Italic A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d482); // Bold Italic a-z
+        return char;
+      }),
   },
-  'script': {
+  script: {
     name: 'Script',
-    transform: (text: string) => text.replace(/[a-zA-Z]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D49C); // Script A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D4B6); // Script a-z
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d49c); // Script A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d4b6); // Script a-z
+        return char;
+      }),
   },
   'bold-script': {
     name: 'Bold Script',
-    transform: (text: string) => text.replace(/[a-zA-Z]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D4D0); // Bold Script A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D4EA); // Bold Script a-z
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d4d0); // Bold Script A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d4ea); // Bold Script a-z
+        return char;
+      }),
   },
-  'fraktur': {
+  fraktur: {
     name: 'Gothic',
-    transform: (text: string) => text.replace(/[a-zA-Z]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D504); // Fraktur A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D51E); // Fraktur a-z
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d504); // Fraktur A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d51e); // Fraktur a-z
+        return char;
+      }),
   },
   'double-struck': {
     name: 'Double Struck',
-    transform: (text: string) => text.replace(/[a-zA-Z0-9]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D538); // Double Struck A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D552); // Double Struck a-z
-      if (code >= 48 && code <= 57) return String.fromCharCode(code - 48 + 0x1D7D8); // Double Struck 0-9
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z0-9]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d538); // Double Struck A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d552); // Double Struck a-z
+        if (code >= 48 && code <= 57)
+          return String.fromCharCode(code - 48 + 0x1d7d8); // Double Struck 0-9
+        return char;
+      }),
   },
   'sans-serif': {
     name: 'Sans Serif',
-    transform: (text: string) => text.replace(/[a-zA-Z0-9]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D5A0); // Sans Serif A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D5BA); // Sans Serif a-z
-      if (code >= 48 && code <= 57) return String.fromCharCode(code - 48 + 0x1D7E2); // Sans Serif 0-9
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z0-9]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d5a0); // Sans Serif A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d5ba); // Sans Serif a-z
+        if (code >= 48 && code <= 57)
+          return String.fromCharCode(code - 48 + 0x1d7e2); // Sans Serif 0-9
+        return char;
+      }),
   },
   'sans-serif-bold': {
     name: 'Sans Serif Bold',
-    transform: (text: string) => text.replace(/[a-zA-Z0-9]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D5D4); // Sans Serif Bold A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D5EE); // Sans Serif Bold a-z
-      if (code >= 48 && code <= 57) return String.fromCharCode(code - 48 + 0x1D7EC); // Sans Serif Bold 0-9
-      return char;
-    })
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z0-9]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d5d4); // Sans Serif Bold A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d5ee); // Sans Serif Bold a-z
+        if (code >= 48 && code <= 57)
+          return String.fromCharCode(code - 48 + 0x1d7ec); // Sans Serif Bold 0-9
+        return char;
+      }),
   },
-  'monospace': {
+  monospace: {
     name: 'Monospace',
-    transform: (text: string) => text.replace(/[a-zA-Z0-9]/g, (char) => {
-      const code = char.charCodeAt(0);
-      if (code >= 65 && code <= 90) return String.fromCharCode(code - 65 + 0x1D670); // Monospace A-Z
-      if (code >= 97 && code <= 122) return String.fromCharCode(code - 97 + 0x1D68A); // Monospace a-z
-      if (code >= 48 && code <= 57) return String.fromCharCode(code - 48 + 0x1D7F6); // Monospace 0-9
-      return char;
-    })
-  }
+    transform: (text: string) =>
+      text.replace(/[a-zA-Z0-9]/g, char => {
+        const code = char.charCodeAt(0);
+        if (code >= 65 && code <= 90)
+          return String.fromCharCode(code - 65 + 0x1d670); // Monospace A-Z
+        if (code >= 97 && code <= 122)
+          return String.fromCharCode(code - 97 + 0x1d68a); // Monospace a-z
+        if (code >= 48 && code <= 57)
+          return String.fromCharCode(code - 48 + 0x1d7f6); // Monospace 0-9
+        return char;
+      }),
+  },
 };
 
 export default function FacebookFontConverter() {
@@ -113,7 +148,7 @@ export default function FacebookFontConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Input */}
       <div className="space-y-2">
         <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
@@ -123,7 +158,7 @@ export default function FacebookFontConverter() {
           className="w-full min-h-[100px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           placeholder="Type your text here..."
           value={input}
-          onChange={(e) => setInput(e.target.value)}
+          onChange={e => setInput(e.target.value)}
         />
       </div>
 
@@ -137,7 +172,10 @@ export default function FacebookFontConverter() {
             {Object.entries(fontStyles).map(([key, style]) => {
               const transformedText = style.transform(input);
               return (
-                <div key={key} className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
+                <div
+                  key={key}
+                  className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900"
+                >
                   <div className="flex items-center justify-between mb-2">
                     <h4 className="text-sm font-medium text-gray-700 dark:text-gray-300">
                       {style.name}
@@ -162,14 +200,17 @@ export default function FacebookFontConverter() {
 
       {/* Instructions */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">How to Use</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          How to Use
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>1. Type your text in the input field above</div>
           <div>2. Choose a style from the generated options</div>
           <div>3. Click "Copy" to copy the styled text</div>
           <div>4. Paste it into your Facebook post or comment</div>
           <div className="text-amber-600 dark:text-amber-400 mt-2">
-            <strong>Note:</strong> These fonts work on Facebook, Instagram, Twitter, and most social media platforms.
+            <strong>Note:</strong> These fonts work on Facebook, Instagram,
+            Twitter, and most social media platforms.
           </div>
         </div>
       </div>
@@ -177,14 +218,22 @@ export default function FacebookFontConverter() {
       {/* Example */}
       {!input && (
         <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Example</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+            Example
+          </h3>
           <div className="text-xs text-gray-600 dark:text-gray-400 space-y-2">
             <div>Input: "Hello Facebook!"</div>
             <div>
-              <strong>Bold:</strong> <span className="font-display text-lg">{fontStyles.bold.transform("Hello Facebook!")}</span>
+              <strong>Bold:</strong>{' '}
+              <span className="font-display text-lg">
+                {fontStyles.bold.transform('Hello Facebook!')}
+              </span>
             </div>
             <div>
-              <strong>Script:</strong> <span className="font-display text-lg">{fontStyles.script.transform("Hello Facebook!")}</span>
+              <strong>Script:</strong>{' '}
+              <span className="font-display text-lg">
+                {fontStyles.script.transform('Hello Facebook!')}
+              </span>
             </div>
           </div>
         </div>
@@ -202,4 +251,4 @@ export default function FacebookFontConverter() {
       </div>
     </div>
   );
-} 
+}

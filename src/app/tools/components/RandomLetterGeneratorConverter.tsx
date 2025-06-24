@@ -13,9 +13,9 @@ export default function RandomLetterGeneratorConverter() {
     let letters = '';
     if (includeUppercase) letters += 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     if (includeLowercase) letters += 'abcdefghijklmnopqrstuvwxyz';
-    
+
     if (letters === '') return 'A';
-    
+
     return letters[Math.floor(Math.random() * letters.length)];
   };
 
@@ -51,35 +51,45 @@ export default function RandomLetterGeneratorConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center gap-2 mb-4">
           <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Random Letter Generator</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Random Letter Generator
+          </h3>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Number of Letters</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Number of Letters
+              </label>
               <input
                 type="number"
                 min="1"
                 max="1000"
                 value={count}
-                onChange={(e) => setCount(Math.min(1000, Math.max(1, parseInt(e.target.value) || 1)))}
+                onChange={e =>
+                  setCount(
+                    Math.min(1000, Math.max(1, parseInt(e.target.value) || 1))
+                  )
+                }
                 className="w-full px-3 py-2 border rounded text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700"
               />
             </div>
-            
+
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Letter Types</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Letter Types
+              </label>
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-xs">
                   <input
                     type="checkbox"
                     checked={includeUppercase}
-                    onChange={(e) => setIncludeUppercase(e.target.checked)}
+                    onChange={e => setIncludeUppercase(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   Uppercase (A-Z)
@@ -88,7 +98,7 @@ export default function RandomLetterGeneratorConverter() {
                   <input
                     type="checkbox"
                     checked={includeLowercase}
-                    onChange={(e) => setIncludeLowercase(e.target.checked)}
+                    onChange={e => setIncludeLowercase(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   Lowercase (a-z)
@@ -96,7 +106,7 @@ export default function RandomLetterGeneratorConverter() {
               </div>
             </div>
           </div>
-          
+
           <div className="flex items-end">
             <button
               onClick={handleGenerate}
@@ -111,17 +121,27 @@ export default function RandomLetterGeneratorConverter() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Generator Info</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Generator Info
+          </label>
           <div className="min-h-[300px] p-4 rounded-lg border bg-background text-gray-900 dark:text-gray-100">
             <div className="space-y-4">
               <div>
                 <h4 className="text-sm font-medium mb-2">Settings</h4>
                 <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
                   <div>Count: {count} letters</div>
-                  <div>Types: {[includeUppercase && 'Uppercase', includeLowercase && 'Lowercase'].filter(Boolean).join(', ')}</div>
+                  <div>
+                    Types:{' '}
+                    {[
+                      includeUppercase && 'Uppercase',
+                      includeLowercase && 'Lowercase',
+                    ]
+                      .filter(Boolean)
+                      .join(', ')}
+                  </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="text-sm font-medium mb-2">Use Cases</h4>
                 <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
@@ -175,4 +195,4 @@ export default function RandomLetterGeneratorConverter() {
       </div>
     </div>
   );
-} 
+}

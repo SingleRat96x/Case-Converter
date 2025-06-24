@@ -12,10 +12,11 @@ export default function RandomDateGeneratorConverter() {
   const generateRandomDate = (): string => {
     const start = new Date(startDate);
     const end = new Date(endDate);
-    
-    const randomTime = start.getTime() + Math.random() * (end.getTime() - start.getTime());
+
+    const randomTime =
+      start.getTime() + Math.random() * (end.getTime() - start.getTime());
     const randomDate = new Date(randomTime);
-    
+
     return randomDate.toISOString().split('T')[0];
   };
 
@@ -51,43 +52,53 @@ export default function RandomDateGeneratorConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Start Date</label>
+                <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                  Start Date
+                </label>
                 <input
                   type="date"
                   value={startDate}
-                  onChange={(e) => setStartDate(e.target.value)}
+                  onChange={e => setStartDate(e.target.value)}
                   className="w-full px-3 py-2 border rounded text-sm"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-900 dark:text-gray-50">End Date</label>
+                <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                  End Date
+                </label>
                 <input
                   type="date"
                   value={endDate}
-                  onChange={(e) => setEndDate(e.target.value)}
+                  onChange={e => setEndDate(e.target.value)}
                   className="w-full px-3 py-2 border rounded text-sm"
                 />
               </div>
             </div>
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Count</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Count
+              </label>
               <input
                 type="number"
                 min="1"
                 max="100"
                 value={count}
-                onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
+                onChange={e =>
+                  setCount(
+                    Math.min(100, Math.max(1, parseInt(e.target.value) || 1))
+                  )
+                }
                 className="w-full px-3 py-2 border rounded text-sm"
               />
             </div>
           </div>
-          
+
           <div className="flex items-end">
             <button
               onClick={handleGenerate}
@@ -102,10 +113,14 @@ export default function RandomDateGeneratorConverter() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Date Range Info</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Date Range Info
+          </label>
           <div className="min-h-[300px] p-4 rounded-lg border bg-background">
             <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-              <div>Range: {startDate} to {endDate}</div>
+              <div>
+                Range: {startDate} to {endDate}
+              </div>
               <div>Count: {count} dates</div>
               <div>Format: YYYY-MM-DD</div>
             </div>
@@ -152,4 +167,4 @@ export default function RandomDateGeneratorConverter() {
       </div>
     </div>
   );
-} 
+}

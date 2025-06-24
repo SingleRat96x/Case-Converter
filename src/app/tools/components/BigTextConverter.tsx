@@ -5,34 +5,34 @@ import { Copy, Download, RefreshCw, Settings } from 'lucide-react';
 
 const BIG_TEXT_FONTS = {
   block: {
-    'A': ['  ██  ', ' ████ ', '██  ██', '██████', '██  ██', '██  ██', '      '],
-    'B': ['██████', '██  ██', '██████', '██████', '██  ██', '██████', '      '],
-    'C': [' █████', '██    ', '██    ', '██    ', '██    ', ' █████', '      '],
-    'D': ['██████', '██  ██', '██  ██', '██  ██', '██  ██', '██████', '      '],
-    'E': ['██████', '██    ', '█████ ', '█████ ', '██    ', '██████', '      '],
-    'F': ['██████', '██    ', '█████ ', '█████ ', '██    ', '██    ', '      '],
-    'G': [' █████', '██    ', '██ ███', '██  ██', '██  ██', ' █████', '      '],
-    'H': ['██  ██', '██  ██', '██████', '██████', '██  ██', '██  ██', '      '],
-    'I': ['██████', '  ██  ', '  ██  ', '  ██  ', '  ██  ', '██████', '      '],
-    'J': ['██████', '    ██', '    ██', '    ██', '██  ██', ' █████', '      '],
-    'K': ['██  ██', '██ ██ ', '████  ', '████  ', '██ ██ ', '██  ██', '      '],
-    'L': ['██    ', '██    ', '██    ', '██    ', '██    ', '██████', '      '],
-    'M': ['██  ██', '██████', '██████', '██  ██', '██  ██', '██  ██', '      '],
-    'N': ['██  ██', '███ ██', '██████', '██ ███', '██  ██', '██  ██', '      '],
-    'O': [' █████', '██  ██', '██  ██', '██  ██', '██  ██', ' █████', '      '],
-    'P': ['██████', '██  ██', '██████', '██    ', '██    ', '██    ', '      '],
-    'Q': [' █████', '██  ██', '██  ██', '██ ███', '██  ██', ' ██████', '     █'],
-    'R': ['██████', '██  ██', '██████', '██ ██ ', '██  ██', '██  ██', '      '],
-    'S': [' █████', '██    ', ' ████ ', '    ██', '    ██', '█████ ', '      '],
-    'T': ['██████', '  ██  ', '  ██  ', '  ██  ', '  ██  ', '  ██  ', '      '],
-    'U': ['██  ██', '██  ██', '██  ██', '██  ██', '██  ██', ' █████', '      '],
-    'V': ['██  ██', '██  ██', '██  ██', '██  ██', ' ████ ', '  ██  ', '      '],
-    'W': ['██  ██', '██  ██', '██  ██', '██████', '██████', '██  ██', '      '],
-    'X': ['██  ██', ' ████ ', '  ██  ', '  ██  ', ' ████ ', '██  ██', '      '],
-    'Y': ['██  ██', '██  ██', ' ████ ', '  ██  ', '  ██  ', '  ██  ', '      '],
-    'Z': ['██████', '    ██', '   ██ ', '  ██  ', ' ██   ', '██████', '      '],
-    ' ': ['      ', '      ', '      ', '      ', '      ', '      ', '      ']
-  }
+    A: ['  ██  ', ' ████ ', '██  ██', '██████', '██  ██', '██  ██', '      '],
+    B: ['██████', '██  ██', '██████', '██████', '██  ██', '██████', '      '],
+    C: [' █████', '██    ', '██    ', '██    ', '██    ', ' █████', '      '],
+    D: ['██████', '██  ██', '██  ██', '██  ██', '██  ██', '██████', '      '],
+    E: ['██████', '██    ', '█████ ', '█████ ', '██    ', '██████', '      '],
+    F: ['██████', '██    ', '█████ ', '█████ ', '██    ', '██    ', '      '],
+    G: [' █████', '██    ', '██ ███', '██  ██', '██  ██', ' █████', '      '],
+    H: ['██  ██', '██  ██', '██████', '██████', '██  ██', '██  ██', '      '],
+    I: ['██████', '  ██  ', '  ██  ', '  ██  ', '  ██  ', '██████', '      '],
+    J: ['██████', '    ██', '    ██', '    ██', '██  ██', ' █████', '      '],
+    K: ['██  ██', '██ ██ ', '████  ', '████  ', '██ ██ ', '██  ██', '      '],
+    L: ['██    ', '██    ', '██    ', '██    ', '██    ', '██████', '      '],
+    M: ['██  ██', '██████', '██████', '██  ██', '██  ██', '██  ██', '      '],
+    N: ['██  ██', '███ ██', '██████', '██ ███', '██  ██', '██  ██', '      '],
+    O: [' █████', '██  ██', '██  ██', '██  ██', '██  ██', ' █████', '      '],
+    P: ['██████', '██  ██', '██████', '██    ', '██    ', '██    ', '      '],
+    Q: [' █████', '██  ██', '██  ██', '██ ███', '██  ██', ' ██████', '     █'],
+    R: ['██████', '██  ██', '██████', '██ ██ ', '██  ██', '██  ██', '      '],
+    S: [' █████', '██    ', ' ████ ', '    ██', '    ██', '█████ ', '      '],
+    T: ['██████', '  ██  ', '  ██  ', '  ██  ', '  ██  ', '  ██  ', '      '],
+    U: ['██  ██', '██  ██', '██  ██', '██  ██', '██  ██', ' █████', '      '],
+    V: ['██  ██', '██  ██', '██  ██', '██  ██', ' ████ ', '  ██  ', '      '],
+    W: ['██  ██', '██  ██', '██  ██', '██████', '██████', '██  ██', '      '],
+    X: ['██  ██', ' ████ ', '  ██  ', '  ██  ', ' ████ ', '██  ██', '      '],
+    Y: ['██  ██', '██  ██', ' ████ ', '  ██  ', '  ██  ', '  ██  ', '      '],
+    Z: ['██████', '    ██', '   ██ ', '  ██  ', ' ██   ', '██████', '      '],
+    ' ': ['      ', '      ', '      ', '      ', '      ', '      ', '      '],
+  },
 };
 
 export default function BigTextConverter() {
@@ -41,17 +41,21 @@ export default function BigTextConverter() {
 
   const convertToBigText = (text: string): string => {
     if (!text.trim()) return '';
-    
+
     const chars = text.toUpperCase().split('');
-    const lines = Array(7).fill('').map(() => '');
-    
+    const lines = Array(7)
+      .fill('')
+      .map(() => '');
+
     chars.forEach(char => {
-      const charPattern = BIG_TEXT_FONTS[font][char as keyof typeof BIG_TEXT_FONTS.block] || BIG_TEXT_FONTS[font][' '];
+      const charPattern =
+        BIG_TEXT_FONTS[font][char as keyof typeof BIG_TEXT_FONTS.block] ||
+        BIG_TEXT_FONTS[font][' '];
       charPattern.forEach((line, index) => {
         lines[index] += line;
       });
     });
-    
+
     return lines.join('\n').trimEnd();
   };
 
@@ -61,7 +65,9 @@ export default function BigTextConverter() {
       inputChars: inputText.length,
       outputChars: result.length,
       lines: result ? result.split('\n').length : 0,
-      width: result ? Math.max(...result.split('\n').map(line => line.length)) : 0,
+      width: result
+        ? Math.max(...result.split('\n').map(line => line.length))
+        : 0,
     };
   };
 
@@ -89,14 +95,16 @@ export default function BigTextConverter() {
   const stats = getStats();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center gap-2 mb-4">
           <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Font Style</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Font Style
+          </h3>
         </div>
-        
+
         <div className="flex gap-2">
           <button
             onClick={() => setFont('block')}
@@ -114,18 +122,22 @@ export default function BigTextConverter() {
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Text Input</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Text Input
+          </label>
           <textarea
             className="w-full min-h-[200px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Enter text to convert to big ASCII art..."
             value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            onChange={e => setInputText(e.target.value)}
           />
         </div>
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Big Text Output</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Big Text Output
+          </label>
           <div className="w-full min-h-[200px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 font-mono text-xs leading-tight text-gray-900 dark:text-gray-100 overflow-x-auto whitespace-pre">
             {convertToBigText(inputText) || 'Big text will appear here...'}
           </div>
@@ -143,7 +155,9 @@ export default function BigTextConverter() {
 
       {/* Info */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Big Text Info</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Big Text Info
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>• Converts regular text into large ASCII art letters</div>
           <div>• Great for banners, headers, and eye-catching text</div>
@@ -185,8 +199,10 @@ export default function BigTextConverter() {
         <span className="text-gray-400 dark:text-gray-600">|</span>
         <span>Output: {stats.outputChars} chars</span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Size: {stats.width} × {stats.lines}</span>
+        <span>
+          Size: {stats.width} × {stats.lines}
+        </span>
       </div>
     </div>
   );
-} 
+}

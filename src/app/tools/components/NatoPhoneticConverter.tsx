@@ -4,15 +4,47 @@ import { useState } from 'react';
 import { Copy, Download, RefreshCw, RotateCcw } from 'lucide-react';
 
 const NATO_PHONETIC: Record<string, string> = {
-  'A': 'Alpha', 'B': 'Bravo', 'C': 'Charlie', 'D': 'Delta', 'E': 'Echo', 'F': 'Foxtrot',
-  'G': 'Golf', 'H': 'Hotel', 'I': 'India', 'J': 'Juliet', 'K': 'Kilo', 'L': 'Lima',
-  'M': 'Mike', 'N': 'November', 'O': 'Oscar', 'P': 'Papa', 'Q': 'Quebec', 'R': 'Romeo',
-  'S': 'Sierra', 'T': 'Tango', 'U': 'Uniform', 'V': 'Victor', 'W': 'Whiskey', 'X': 'X-ray',
-  'Y': 'Yankee', 'Z': 'Zulu', '0': 'Zero', '1': 'One', '2': 'Two', '3': 'Three',
-  '4': 'Four', '5': 'Five', '6': 'Six', '7': 'Seven', '8': 'Eight', '9': 'Nine'
+  A: 'Alpha',
+  B: 'Bravo',
+  C: 'Charlie',
+  D: 'Delta',
+  E: 'Echo',
+  F: 'Foxtrot',
+  G: 'Golf',
+  H: 'Hotel',
+  I: 'India',
+  J: 'Juliet',
+  K: 'Kilo',
+  L: 'Lima',
+  M: 'Mike',
+  N: 'November',
+  O: 'Oscar',
+  P: 'Papa',
+  Q: 'Quebec',
+  R: 'Romeo',
+  S: 'Sierra',
+  T: 'Tango',
+  U: 'Uniform',
+  V: 'Victor',
+  W: 'Whiskey',
+  X: 'X-ray',
+  Y: 'Yankee',
+  Z: 'Zulu',
+  '0': 'Zero',
+  '1': 'One',
+  '2': 'Two',
+  '3': 'Three',
+  '4': 'Four',
+  '5': 'Five',
+  '6': 'Six',
+  '7': 'Seven',
+  '8': 'Eight',
+  '9': 'Nine',
 };
 
-const REVERSE_NATO: Record<string, string> = Object.entries(NATO_PHONETIC).reduce(
+const REVERSE_NATO: Record<string, string> = Object.entries(
+  NATO_PHONETIC
+).reduce(
   (acc, [char, phonetic]) => ({ ...acc, [phonetic.toLowerCase()]: char }),
   {}
 );
@@ -39,7 +71,7 @@ export default function NatoPhoneticConverter() {
 
   const getResult = (): string => {
     if (!inputText.trim()) return '';
-    
+
     try {
       return mode === 'encode' ? textToNato(inputText) : natoToText(inputText);
     } catch {
@@ -76,7 +108,7 @@ export default function NatoPhoneticConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Mode Toggle */}
       <div className="flex items-center justify-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <button
@@ -116,9 +148,13 @@ export default function NatoPhoneticConverter() {
           </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder={mode === 'encode' ? 'Enter text to convert to NATO phonetic...' : 'Enter NATO phonetic words (Alpha Bravo Charlie...)'}
+            placeholder={
+              mode === 'encode'
+                ? 'Enter text to convert to NATO phonetic...'
+                : 'Enter NATO phonetic words (Alpha Bravo Charlie...)'
+            }
             value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            onChange={e => setInputText(e.target.value)}
           />
         </div>
 
@@ -138,13 +174,17 @@ export default function NatoPhoneticConverter() {
 
       {/* Reference */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">NATO Phonetic Alphabet</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          NATO Phonetic Alphabet
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-1">
-          {Object.entries(NATO_PHONETIC).slice(0, 26).map(([char, phonetic]) => (
-            <div key={char} className="font-mono">
-              {char}: {phonetic}
-            </div>
-          ))}
+          {Object.entries(NATO_PHONETIC)
+            .slice(0, 26)
+            .map(([char, phonetic]) => (
+              <div key={char} className="font-mono">
+                {char}: {phonetic}
+              </div>
+            ))}
         </div>
       </div>
 
@@ -176,4 +216,4 @@ export default function NatoPhoneticConverter() {
       </div>
     </div>
   );
-} 
+}

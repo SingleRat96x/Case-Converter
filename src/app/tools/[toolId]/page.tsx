@@ -11,13 +11,14 @@ export const dynamic = 'force-dynamic';
 export const revalidate = 0;
 
 interface Props {
-  params: {
+  params: Promise<{
     toolId: string;
-  };
+  }>;
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const tool = await getToolContent(params.toolId);
+  const { toolId } = await params;
+  const tool = await getToolContent(toolId);
   if (!tool) return { title: 'Tool Not Found' };
 
   return {
@@ -29,7 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 // Loading component for tool components
 function ToolLoading() {
   return (
-    <div className="max-w-[900px] mx-auto space-y-6">
+    <div className="space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
           <div className="h-5 bg-gray-200 dark:bg-gray-700 rounded animate-pulse"></div>
@@ -50,8 +51,9 @@ function ToolLoading() {
 }
 
 export default async function ToolPage({ params }: Props) {
-  const tool = await getToolContent(params.toolId);
-  
+  const { toolId } = await params;
+  const tool = await getToolContent(toolId);
+
   if (!tool) {
     return (
       <div className="container px-4 py-8">
@@ -61,7 +63,7 @@ export default async function ToolPage({ params }: Props) {
   }
 
   // Check if tool is registered in our dynamic system
-  if (!isToolRegistered(params.toolId)) {
+  if (!isToolRegistered(toolId)) {
     return (
       <div className="container px-4 py-8">
         <h1 className="text-4xl font-bold">Tool Component Not Available</h1>
@@ -77,7 +79,7 @@ export default async function ToolPage({ params }: Props) {
   if (tool && tool.long_description) {
     // Create a JSDOM window. DOMPurify needs this to run in Node.js.
     // Important: Pass an empty string to JSDOM constructor, not undefined.
-    const window = new JSDOM('').window; 
+    const window = new JSDOM('').window;
     const DOMPurify = DOMPurifyFactory(window as any); // Type assertion for window
 
     // Sanitize the HTML content
@@ -86,40 +88,46 @@ export default async function ToolPage({ params }: Props) {
   }
 
   // Get the dynamic tool component
-  const ToolComponent = getToolComponent(params.toolId);
+  const ToolComponent = getToolComponent(toolId);
 
   return (
     <div className="container px-4 py-8 space-y-8">
       {/* Header section */}
       <div className="text-center space-y-4">
-        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">{tool.title}</h1>
-        <p className="text-lg sm:text-xl text-muted-foreground max-w-[700px] mx-auto px-4">
+        <h1 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          {tool.title}
+        </h1>
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-4xl mx-auto">
           {tool.short_description}
         </p>
       </div>
 
-      {/* Top Ad Space */}
-      <AdSpace position="top" className="max-w-[900px] mx-auto" />
+      {/* Content container with consistent max-width */}
+      <div className="max-w-7xl mx-auto space-y-8">
+        {/* Top Ad Space */}
+        <AdSpace position="top" />
 
-      {/* Tool Component with Suspense */}
-      {ToolComponent && (
-        <Suspense fallback={<ToolLoading />}>
-          <ToolComponent />
-        </Suspense>
-      )}
+        {/* Tool Component with Suspense */}
+        {ToolComponent && (
+          <Suspense fallback={<ToolLoading />}>
+            <ToolComponent />
+          </Suspense>
+        )}
 
-      {/* Middle Ad Space */}
-      <AdSpace position="middle" className="max-w-[900px] mx-auto" />
+        {/* Middle Ad Space */}
+        <AdSpace position="middle" />
 
-      {/* Tool Description */}
-      {sanitizedLongDescription && (
-        <div className="max-w-[700px] mx-auto px-4 prose dark:prose-invert" 
-          dangerouslySetInnerHTML={{ __html: sanitizedLongDescription }} 
-        />
-      )}
+        {/* Tool Description */}
+        {sanitizedLongDescription && (
+          <div
+            className="prose dark:prose-invert max-w-none"
+            dangerouslySetInnerHTML={{ __html: sanitizedLongDescription }}
+          />
+        )}
 
-      {/* Bottom Ad Space */}
-      <AdSpace position="bottom" className="max-w-[900px] mx-auto" />
+        {/* Bottom Ad Space */}
+        <AdSpace position="bottom" />
+      </div>
     </div>
   );
-} 
+}

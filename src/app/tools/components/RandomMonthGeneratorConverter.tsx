@@ -9,9 +9,48 @@ export default function RandomMonthGeneratorConverter() {
   const [generatedMonths, setGeneratedMonths] = useState<string[]>([]);
 
   const months = {
-    full: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
-    short: ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'],
-    number: ['01', '02', '03', '04', '05', '06', '07', '08', '09', '10', '11', '12']
+    full: [
+      'January',
+      'February',
+      'March',
+      'April',
+      'May',
+      'June',
+      'July',
+      'August',
+      'September',
+      'October',
+      'November',
+      'December',
+    ],
+    short: [
+      'Jan',
+      'Feb',
+      'Mar',
+      'Apr',
+      'May',
+      'Jun',
+      'Jul',
+      'Aug',
+      'Sep',
+      'Oct',
+      'Nov',
+      'Dec',
+    ],
+    number: [
+      '01',
+      '02',
+      '03',
+      '04',
+      '05',
+      '06',
+      '07',
+      '08',
+      '09',
+      '10',
+      '11',
+      '12',
+    ],
   };
 
   const generateRandomMonth = (): string => {
@@ -20,7 +59,9 @@ export default function RandomMonthGeneratorConverter() {
   };
 
   const handleGenerate = () => {
-    const monthsList = Array.from({ length: count }, () => generateRandomMonth());
+    const monthsList = Array.from({ length: count }, () =>
+      generateRandomMonth()
+    );
     setGeneratedMonths(monthsList);
   };
 
@@ -51,27 +92,35 @@ export default function RandomMonthGeneratorConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Count</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Count
+              </label>
               <input
                 type="number"
                 min="1"
                 max="100"
                 value={count}
-                onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
+                onChange={e =>
+                  setCount(
+                    Math.min(100, Math.max(1, parseInt(e.target.value) || 1))
+                  )
+                }
                 className="w-full px-3 py-2 border rounded text-sm"
               />
             </div>
-            
+
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Format</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Format
+              </label>
               <select
                 value={format}
-                onChange={(e) => setFormat(e.target.value)}
+                onChange={e => setFormat(e.target.value)}
                 className="w-full px-3 py-2 border rounded text-sm"
               >
                 <option value="full">Full Name (January)</option>
@@ -80,7 +129,7 @@ export default function RandomMonthGeneratorConverter() {
               </select>
             </div>
           </div>
-          
+
           <div className="flex items-end">
             <button
               onClick={handleGenerate}
@@ -95,11 +144,20 @@ export default function RandomMonthGeneratorConverter() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Month Format Info</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Month Format Info
+          </label>
           <div className="min-h-[300px] p-4 rounded-lg border bg-background">
             <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
               <div>Count: {count} months</div>
-              <div>Format: {format === 'full' ? 'Full Name' : format === 'short' ? 'Short Name' : 'Number'}</div>
+              <div>
+                Format:{' '}
+                {format === 'full'
+                  ? 'Full Name'
+                  : format === 'short'
+                    ? 'Short Name'
+                    : 'Number'}
+              </div>
               <div>Example: {generateRandomMonth()}</div>
             </div>
           </div>
@@ -145,4 +203,4 @@ export default function RandomMonthGeneratorConverter() {
       </div>
     </div>
   );
-} 
+}

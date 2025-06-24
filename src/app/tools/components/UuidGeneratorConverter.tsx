@@ -19,11 +19,11 @@ export default function UuidGeneratorConverter() {
     generated: 0,
     total: 0,
     version: 'v4',
-    format: 'Standard'
+    format: 'Standard',
   });
 
   const generateUUID = (): string => {
-    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, (c) => {
+    let uuid = 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, c => {
       const r = (Math.random() * 16) | 0;
       const v = c === 'x' ? r : (r & 0x3) | 0x8;
       return v.toString(16);
@@ -43,7 +43,7 @@ export default function UuidGeneratorConverter() {
   const handleGenerate = () => {
     const newUuids = Array.from({ length: count }, () => generateUUID());
     setGeneratedUuids(newUuids);
-    
+
     updateStats(newUuids);
   };
 
@@ -52,7 +52,13 @@ export default function UuidGeneratorConverter() {
       generated: uuids.length,
       total: generatedUuids.length + uuids.length,
       version: 'v4',
-      format: includeHyphens ? (uppercase ? 'UPPERCASE' : 'lowercase') : (uppercase ? 'HEX-UPPER' : 'hex-lower')
+      format: includeHyphens
+        ? uppercase
+          ? 'UPPERCASE'
+          : 'lowercase'
+        : uppercase
+          ? 'HEX-UPPER'
+          : 'hex-lower',
     });
   };
 
@@ -84,19 +90,21 @@ export default function UuidGeneratorConverter() {
       generated: 0,
       total: 0,
       version: 'v4',
-      format: 'Standard'
+      format: 'Standard',
     });
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Generator Settings */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center gap-2 mb-4">
           <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">UUID Generator Settings</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            UUID Generator Settings
+          </h3>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
@@ -107,11 +115,15 @@ export default function UuidGeneratorConverter() {
               min="1"
               max="100"
               value={count}
-              onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
+              onChange={e =>
+                setCount(
+                  Math.min(100, Math.max(1, parseInt(e.target.value) || 1))
+                )
+              }
               className="w-full px-3 py-2 border rounded text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700"
             />
           </div>
-          
+
           <div className="space-y-2">
             <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
               Format Options
@@ -121,7 +133,7 @@ export default function UuidGeneratorConverter() {
                 <input
                   type="checkbox"
                   checked={uppercase}
-                  onChange={(e) => setUppercase(e.target.checked)}
+                  onChange={e => setUppercase(e.target.checked)}
                   className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 Uppercase
@@ -130,14 +142,14 @@ export default function UuidGeneratorConverter() {
                 <input
                   type="checkbox"
                   checked={includeHyphens}
-                  onChange={(e) => setIncludeHyphens(e.target.checked)}
+                  onChange={e => setIncludeHyphens(e.target.checked)}
                   className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 Include hyphens
               </label>
             </div>
           </div>
-          
+
           <div className="flex items-end">
             <button
               onClick={handleGenerate}
@@ -163,17 +175,22 @@ export default function UuidGeneratorConverter() {
                 <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
                   <div>Version: UUID v4 (Random)</div>
                   <div>Length: {includeHyphens ? '36' : '32'} characters</div>
-                  <div>Format: {includeHyphens ? 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx' : 'xxxxxxxx4xxxyxxxxxxxxxxx'}</div>
+                  <div>
+                    Format:{' '}
+                    {includeHyphens
+                      ? 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'
+                      : 'xxxxxxxx4xxxyxxxxxxxxxxx'}
+                  </div>
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="text-sm font-medium mb-2">Example Output</h4>
                 <div className="font-mono text-xs bg-gray-100 dark:bg-gray-800 p-2 rounded">
                   {generateUUID()}
                 </div>
               </div>
-              
+
               <div>
                 <h4 className="text-sm font-medium mb-2">Use Cases</h4>
                 <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
@@ -190,7 +207,8 @@ export default function UuidGeneratorConverter() {
         {/* Generated Output */}
         <div className="space-y-2">
           <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
-            Generated UUID{generatedUuids.length > 1 ? 's' : ''} ({generatedUuids.length})
+            Generated UUID{generatedUuids.length > 1 ? 's' : ''} (
+            {generatedUuids.length})
           </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100 font-mono text-sm"
@@ -240,4 +258,4 @@ export default function UuidGeneratorConverter() {
       </div>
     </div>
   );
-} 
+}

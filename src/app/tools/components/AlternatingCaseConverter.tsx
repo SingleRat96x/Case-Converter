@@ -23,17 +23,23 @@ export default function AlternatingCaseConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
 
   const convertToAlternatingCase = (text: string) => {
-    return text.split('').map((char, i) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
+    return text
+      .split('')
+      .map((char, i) => (i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()))
+      .join('');
   };
 
   const handleDownload = () => {
-    const blob = new Blob([convertToAlternatingCase(inputText)], { type: 'text/plain' });
+    const blob = new Blob([convertToAlternatingCase(inputText)], {
+      type: 'text/plain',
+    });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -58,11 +64,13 @@ export default function AlternatingCaseConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-6">
+    <div className="w-full space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -73,7 +81,9 @@ export default function AlternatingCaseConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">aLtErNaTiNg cAsE Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            aLtErNaTiNg cAsE Result
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
@@ -90,4 +100,4 @@ export default function AlternatingCaseConverter() {
       />
     </div>
   );
-} 
+}

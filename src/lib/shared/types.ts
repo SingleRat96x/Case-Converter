@@ -3,4 +3,4 @@ export interface TextStats {
   words: number;
   sentences: number;
   lines: number;
-} 
+}

@@ -5,7 +5,12 @@ export interface ToolContent {
   name: string;
   title: string;
   display_name?: string;
-  text_transform?: 'none' | 'uppercase' | 'lowercase' | 'capitalize' | 'alternating';
+  text_transform?:
+    | 'none'
+    | 'uppercase'
+    | 'lowercase'
+    | 'capitalize'
+    | 'alternating';
   custom_style?: string;
   category?: string;
   short_description: string;
@@ -27,20 +32,24 @@ export const TOOL_CATEGORIES = {
   CODE_DATA: 'Code & Data Translation',
   IMAGE_TOOLS: 'Image Tools',
   RANDOM_GENERATORS: 'Random Generators',
-  MISC_TOOLS: 'Misc. Tools'
+  MISC_TOOLS: 'Misc. Tools',
 } as const;
 
 // Cache object to store tool content with improved typing
-const toolContentCache: { [key: string]: { content: ToolContent; timestamp: number } } = {};
+const toolContentCache: {
+  [key: string]: { content: ToolContent; timestamp: number };
+} = {};
 const CACHE_DURATION = 36000000; // 10 hours in milliseconds
 
 // Cache for all tools with improved typing
 let allToolsCache: { content: ToolContent[]; timestamp: number } = {
   content: [],
-  timestamp: 0
+  timestamp: 0,
 };
 
-export async function getAllTools(timestamp?: string | number): Promise<ToolContent[]> {
+export async function getAllTools(
+  timestamp?: string | number
+): Promise<ToolContent[]> {
   try {
     // If timestamp is provided or cache is invalidated, bypass cache completely
     if (timestamp || allToolsCache.timestamp < 0) {
@@ -48,8 +57,8 @@ export async function getAllTools(timestamp?: string | number): Promise<ToolCont
       const { data, error } = await supabase
         .from('tools')
         .select('*')
-        .order('order', { ascending: true })  // Order by the menu order
-        .order('name');  // Then by name as secondary sort
+        .order('order', { ascending: true }) // Order by the menu order
+        .order('name'); // Then by name as secondary sort
 
       if (error) {
         console.error('Supabase error fetching tools:', error);
@@ -60,7 +69,7 @@ export async function getAllTools(timestamp?: string | number): Promise<ToolCont
       if (data) {
         allToolsCache = {
           content: data,
-          timestamp: Date.now()
+          timestamp: Date.now(),
         };
       }
 
@@ -69,8 +78,10 @@ export async function getAllTools(timestamp?: string | number): Promise<ToolCont
 
     // Check if we have a valid cached version
     const now = Date.now();
-    if (allToolsCache.content.length > 0 && 
-        (now - allToolsCache.timestamp) < CACHE_DURATION) {
+    if (
+      allToolsCache.content.length > 0 &&
+      now - allToolsCache.timestamp < CACHE_DURATION
+    ) {
       console.log('Returning cached tools list');
       return allToolsCache.content;
     }
@@ -91,7 +102,7 @@ export async function getAllTools(timestamp?: string | number): Promise<ToolCont
     if (data) {
       allToolsCache = {
         content: data,
-        timestamp: now
+        timestamp: now,
       };
     }
 
@@ -102,15 +113,19 @@ export async function getAllTools(timestamp?: string | number): Promise<ToolCont
   }
 }
 
-export async function getToolContent(toolId: string): Promise<ToolContent | null> {
+export async function getToolContent(
+  toolId: string
+): Promise<ToolContent | null> {
   try {
     // Check if we have a valid cached version
     const cachedTool = toolContentCache[toolId];
     const now = Date.now();
-    
-    if (cachedTool && 
-        cachedTool.timestamp > 0 && // Check if cache hasn't been invalidated
-        (now - cachedTool.timestamp) < CACHE_DURATION) {
+
+    if (
+      cachedTool &&
+      cachedTool.timestamp > 0 && // Check if cache hasn't been invalidated
+      now - cachedTool.timestamp < CACHE_DURATION
+    ) {
       console.log('Returning cached tool content for:', toolId);
       return cachedTool.content;
     }
@@ -126,16 +141,16 @@ export async function getToolContent(toolId: string): Promise<ToolContent | null
       console.error('Supabase error fetching tool:', error);
       throw error;
     }
-    
+
     if (data) {
       // Update cache with fresh data
       toolContentCache[toolId] = {
         content: data,
-        timestamp: now
+        timestamp: now,
       };
       console.log('Updated tool cache with fresh data for:', toolId);
     }
-    
+
     return data;
   } catch (error) {
     console.error('Error fetching tool content:', error);
@@ -151,7 +166,7 @@ export function invalidateToolCache(toolId: string) {
   // Reset the all tools cache completely
   allToolsCache = {
     content: [],
-    timestamp: -1 // Set to -1 to force a refresh
+    timestamp: -1, // Set to -1 to force a refresh
   };
   console.log('Cache invalidated for tool:', toolId);
 }
@@ -166,7 +181,7 @@ export function invalidateAllCaches() {
   // Reset the all tools cache
   allToolsCache = {
     content: [],
-    timestamp: -1 // Set to -1 to force a refresh
+    timestamp: -1, // Set to -1 to force a refresh
   };
   console.log('All caches have been invalidated');
 }
@@ -194,4 +209,4 @@ export async function getToolByName(name: string): Promise<ToolContent> {
     console.error('Error in getToolByName:', error);
     throw error;
   }
-} 
+}

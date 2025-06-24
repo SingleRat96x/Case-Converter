@@ -11,7 +11,13 @@ interface MetaDescriptionEditorProps {
   pageId?: string;
 }
 
-export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId }: MetaDescriptionEditorProps) {
+export function MetaDescriptionEditor({
+  meta,
+  onClose,
+  onSave,
+  pageType,
+  pageId,
+}: MetaDescriptionEditorProps) {
   const [formData, setFormData] = useState<Partial<MetaDescription>>(meta);
   const [isSaving, setIsSaving] = useState(false);
 
@@ -20,9 +26,9 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
     if (!string) return false;
     try {
       const url = new URL(string);
-      return url.protocol === "http:" || url.protocol === "https:";
+      return url.protocol === 'http:' || url.protocol === 'https:';
     } catch (_) {
-      return false;  
+      return false;
     }
   };
 
@@ -39,12 +45,20 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
     }
   };
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
   };
 
-  const getCharacterCountClass = (current: number, min: number, max: number) => {
+  const getCharacterCountClass = (
+    current: number,
+    min: number,
+    max: number
+  ) => {
     if (current < min) return 'text-orange-500';
     if (current > max) return 'text-red-500';
     return 'text-green-500';
@@ -57,11 +71,13 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
           {/* Column 1: Basic SEO */}
           <div className={styles.column}>
             <div className={styles.columnHeader}>Basic SEO Settings</div>
-            
+
             <div className={styles.section}>
               <label className={styles.label}>
                 Meta Title
-                <span className="text-xs text-muted-foreground ml-1">(50-60 characters)</span>
+                <span className="text-xs text-muted-foreground ml-1">
+                  (50-60 characters)
+                </span>
               </label>
               <input
                 type="text"
@@ -72,13 +88,17 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 maxLength={60}
                 required
               />
-              <div className={`${styles.characterCount} ${getCharacterCountClass((formData.meta_title || '').length, 50, 60)}`}>
+              <div
+                className={`${styles.characterCount} ${getCharacterCountClass((formData.meta_title || '').length, 50, 60)}`}
+              >
                 {(formData.meta_title || '').length}/60 characters
               </div>
 
               <label className={`${styles.label} mt-4`}>
                 Meta Description
-                <span className="text-xs text-muted-foreground ml-1">(150-160 characters)</span>
+                <span className="text-xs text-muted-foreground ml-1">
+                  (150-160 characters)
+                </span>
               </label>
               <textarea
                 name="meta_description"
@@ -89,13 +109,17 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 maxLength={160}
                 required
               />
-              <div className={`${styles.characterCount} ${getCharacterCountClass((formData.meta_description || '').length, 150, 160)}`}>
+              <div
+                className={`${styles.characterCount} ${getCharacterCountClass((formData.meta_description || '').length, 150, 160)}`}
+              >
                 {(formData.meta_description || '').length}/160 characters
               </div>
 
               <label className={`${styles.label} mt-4`}>
                 Meta Keywords
-                <span className="text-xs text-muted-foreground ml-1">(comma-separated)</span>
+                <span className="text-xs text-muted-foreground ml-1">
+                  (comma-separated)
+                </span>
               </label>
               <input
                 type="text"
@@ -123,9 +147,11 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
           {/* Column 2: Social Media */}
           <div className={styles.column}>
             <div className={styles.columnHeader}>Social Media Settings</div>
-            
+
             <div className={styles.section}>
-              <h3 className="text-sm font-semibold mb-4">Open Graph (Facebook)</h3>
+              <h3 className="text-sm font-semibold mb-4">
+                Open Graph (Facebook)
+              </h3>
               <label className={styles.label}>OG Title</label>
               <input
                 type="text"
@@ -154,7 +180,10 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 placeholder="https://"
               />
               {formData.og_image && !isValidHttpUrl(formData.og_image) && (
-                <p className="text-red-500 text-sm mt-1">Invalid or non-HTTP(S) OG image URL. Please use a valid URL starting with http:// or https://</p>
+                <p className="text-red-500 text-sm mt-1">
+                  Invalid or non-HTTP(S) OG image URL. Please use a valid URL
+                  starting with http:// or https://
+                </p>
               )}
             </div>
 
@@ -182,7 +211,9 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 className={styles.input}
               />
 
-              <label className={`${styles.label} mt-4`}>Twitter Description</label>
+              <label className={`${styles.label} mt-4`}>
+                Twitter Description
+              </label>
               <textarea
                 name="twitter_description"
                 value={formData.twitter_description || ''}
@@ -191,7 +222,9 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 rows={2}
               />
 
-              <label className={`${styles.label} mt-4`}>Twitter Image URL</label>
+              <label className={`${styles.label} mt-4`}>
+                Twitter Image URL
+              </label>
               <input
                 type="url"
                 name="twitter_image"
@@ -200,48 +233,66 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                 className={styles.input}
                 placeholder="https://"
               />
-              {formData.twitter_image && !isValidHttpUrl(formData.twitter_image) && (
-                <p className="text-red-500 text-sm mt-1">Invalid or non-HTTP(S) Twitter image URL. Please use a valid URL starting with http:// or https://</p>
-              )}
+              {formData.twitter_image &&
+                !isValidHttpUrl(formData.twitter_image) && (
+                  <p className="text-red-500 text-sm mt-1">
+                    Invalid or non-HTTP(S) Twitter image URL. Please use a valid
+                    URL starting with http:// or https://
+                  </p>
+                )}
             </div>
           </div>
 
           {/* Column 3: Live Preview */}
           <div className={styles.column}>
             <div className={styles.columnHeader}>Live Preview</div>
-            
+
             <div className={styles.section}>
-              <h3 className="text-sm font-semibold mb-4">Google Search Result</h3>
+              <h3 className="text-sm font-semibold mb-4">
+                Google Search Result
+              </h3>
               <div className={`${styles.previewCard} ${styles.googlePreview}`}>
                 <div className={styles.googleTitle}>
                   {formData.meta_title || 'Your Page Title'}
                 </div>
                 <div className={styles.googleUrl}>
-                  {formData.canonical_url || 'https://case-converter.vercel.app'}
+                  {formData.canonical_url ||
+                    'https://case-converter.vercel.app'}
                 </div>
                 <div className={styles.googleDescription}>
-                  {formData.meta_description || 'Your page description will appear here. Make sure to write a compelling description that accurately describes your page content.'}
+                  {formData.meta_description ||
+                    'Your page description will appear here. Make sure to write a compelling description that accurately describes your page content.'}
                 </div>
               </div>
             </div>
 
             <div className={styles.section}>
               <h3 className="text-sm font-semibold mb-4">Facebook Share</h3>
-              <div className={`${styles.previewCard} ${styles.facebookPreview}`}>
+              <div
+                className={`${styles.previewCard} ${styles.facebookPreview}`}
+              >
                 <div className={styles.facebookCard}>
                   <div className={styles.facebookImage}>
                     {formData.og_image && isValidHttpUrl(formData.og_image) ? (
-                      <img src={formData.og_image} alt="" className="w-full h-full object-cover" />
+                      <img
+                        src={formData.og_image}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
                     ) : (
                       <ImageIcon className="w-8 h-8 text-muted-foreground" />
                     )}
                   </div>
                   <div className={styles.facebookContent}>
                     <div className={styles.facebookTitle}>
-                      {formData.og_title || formData.meta_title || 'Your Page Title'}
+                      {formData.og_title ||
+                        formData.meta_title ||
+                        'Your Page Title'}
                     </div>
                     <div className={styles.facebookDescription}>
-                      {formData.og_description || formData.meta_description || 'Your page description will appear here.'}
+                      {formData.og_description ||
+                        formData.meta_description ||
+                        'Your page description will appear here.'}
                     </div>
                   </div>
                 </div>
@@ -253,18 +304,27 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
               <div className={`${styles.previewCard} ${styles.twitterPreview}`}>
                 <div className={styles.twitterCard}>
                   <div className={styles.twitterImage}>
-                    {formData.twitter_image && isValidHttpUrl(formData.twitter_image) ? (
-                      <img src={formData.twitter_image} alt="" className="w-full h-full object-cover" />
+                    {formData.twitter_image &&
+                    isValidHttpUrl(formData.twitter_image) ? (
+                      <img
+                        src={formData.twitter_image}
+                        alt=""
+                        className="w-full h-full object-cover"
+                      />
                     ) : (
                       <ImageIcon className="w-8 h-8 text-muted-foreground" />
                     )}
                   </div>
                   <div className={styles.twitterContent}>
                     <div className={styles.twitterTitle}>
-                      {formData.twitter_title || formData.meta_title || 'Your Page Title'}
+                      {formData.twitter_title ||
+                        formData.meta_title ||
+                        'Your Page Title'}
                     </div>
                     <div className={styles.twitterDescription}>
-                      {formData.twitter_description || formData.meta_description || 'Your page description will appear here.'}
+                      {formData.twitter_description ||
+                        formData.meta_description ||
+                        'Your page description will appear here.'}
                     </div>
                   </div>
                 </div>
@@ -294,4 +354,4 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
       </form>
     </div>
   );
-} 
+}

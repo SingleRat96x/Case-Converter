@@ -17,11 +17,56 @@ interface TextStats {
 }
 
 const commonWords = new Set([
-  'the', 'be', 'to', 'of', 'and', 'a', 'in', 'that', 'have', 'i',
-  'it', 'for', 'not', 'on', 'with', 'he', 'as', 'you', 'do', 'at',
-  'this', 'but', 'his', 'by', 'from', 'they', 'we', 'say', 'her', 'she',
-  'or', 'an', 'will', 'my', 'one', 'all', 'would', 'there', 'their', 'what',
-  'so', 'up', 'out', 'if', 'about', 'who', 'get', 'which', 'go', 'me'
+  'the',
+  'be',
+  'to',
+  'of',
+  'and',
+  'a',
+  'in',
+  'that',
+  'have',
+  'i',
+  'it',
+  'for',
+  'not',
+  'on',
+  'with',
+  'he',
+  'as',
+  'you',
+  'do',
+  'at',
+  'this',
+  'but',
+  'his',
+  'by',
+  'from',
+  'they',
+  'we',
+  'say',
+  'her',
+  'she',
+  'or',
+  'an',
+  'will',
+  'my',
+  'one',
+  'all',
+  'would',
+  'there',
+  'their',
+  'what',
+  'so',
+  'up',
+  'out',
+  'if',
+  'about',
+  'who',
+  'get',
+  'which',
+  'go',
+  'me',
 ]);
 
 export default function WordFrequencyConverter() {
@@ -43,7 +88,8 @@ export default function WordFrequencyConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
@@ -86,7 +132,7 @@ export default function WordFrequencyConverter() {
       .map(([word, count]) => ({
         word,
         count,
-        percentage: (count / totalWords) * 100
+        percentage: (count / totalWords) * 100,
       }));
 
     // Sort the array
@@ -95,7 +141,8 @@ export default function WordFrequencyConverter() {
         return b.count - a.count;
       } else if (sortBy === 'word') {
         return a.word.localeCompare(b.word);
-      } else { // percentage
+      } else {
+        // percentage
         return b.percentage - a.percentage;
       }
     });
@@ -123,9 +170,12 @@ Word Frequencies:
 ================
 ${'Word'.padEnd(20)} ${'Count'.padEnd(8)} Percentage
 ${'----'.padEnd(20)} ${'-----'.padEnd(8)} ----------
-${frequencies.map(({ word, count, percentage }) => 
-  `${word.padEnd(20)} ${count.toString().padEnd(8)} ${percentage.toFixed(2)}%`
-).join('\n')}
+${frequencies
+  .map(
+    ({ word, count, percentage }) =>
+      `${word.padEnd(20)} ${count.toString().padEnd(8)} ${percentage.toFixed(2)}%`
+  )
+  .join('\n')}
 
 Input Text:
 -----------
@@ -156,14 +206,19 @@ ${inputText}`;
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="grid gap-4 md:grid-cols-3 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Sort by</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Sort by
+          </label>
           <select
             value={sortBy}
-            onChange={(e) => { setSortBy(e.target.value); analyzeText(); }}
+            onChange={e => {
+              setSortBy(e.target.value);
+              analyzeText();
+            }}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           >
             <option value="frequency">Frequency</option>
@@ -172,22 +227,32 @@ ${inputText}`;
           </select>
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Min Length</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Min Length
+          </label>
           <input
             type="number"
             min={1}
             value={minLength}
-            onChange={(e) => { setMinLength(parseInt(e.target.value) || 1); analyzeText(); }}
+            onChange={e => {
+              setMinLength(parseInt(e.target.value) || 1);
+              analyzeText();
+            }}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           />
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Min Count</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Min Count
+          </label>
           <input
             type="number"
             min={1}
             value={minCount}
-            onChange={(e) => { setMinCount(parseInt(e.target.value) || 1); analyzeText(); }}
+            onChange={e => {
+              setMinCount(parseInt(e.target.value) || 1);
+              analyzeText();
+            }}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           />
         </div>
@@ -196,27 +261,45 @@ ${inputText}`;
             type="checkbox"
             id="case-sensitive"
             checked={caseSensitive}
-            onChange={(e) => { setCaseSensitive(e.target.checked); analyzeText(); }}
+            onChange={e => {
+              setCaseSensitive(e.target.checked);
+              analyzeText();
+            }}
             className="rounded"
           />
-          <label htmlFor="case-sensitive" className="text-sm text-gray-900 dark:text-gray-50">Case sensitive</label>
+          <label
+            htmlFor="case-sensitive"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Case sensitive
+          </label>
         </div>
         <div className="flex items-center space-x-2">
           <input
             type="checkbox"
             id="exclude-common"
             checked={excludeCommon}
-            onChange={(e) => { setExcludeCommon(e.target.checked); analyzeText(); }}
+            onChange={e => {
+              setExcludeCommon(e.target.checked);
+              analyzeText();
+            }}
             className="rounded"
           />
-          <label htmlFor="exclude-common" className="text-sm text-gray-900 dark:text-gray-50">Exclude common words</label>
+          <label
+            htmlFor="exclude-common"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Exclude common words
+          </label>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -227,7 +310,9 @@ ${inputText}`;
 
         {/* Analysis Results */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Word Frequency Analysis</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Word Frequency Analysis
+          </label>
           <div className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-gray-100 overflow-y-auto">
             {frequencies.length > 0 ? (
               <div className="space-y-2">
@@ -237,7 +322,10 @@ ${inputText}`;
                   <div className="text-center">%</div>
                 </div>
                 {frequencies.map(({ word, count, percentage }) => (
-                  <div key={word} className="grid grid-cols-3 text-sm py-1 border-b">
+                  <div
+                    key={word}
+                    className="grid grid-cols-3 text-sm py-1 border-b"
+                  >
                     <div className="font-mono">{word}</div>
                     <div className="text-center">{count}</div>
                     <div className="text-center">{percentage.toFixed(2)}%</div>
@@ -290,4 +378,4 @@ ${inputText}`;
       </div>
     </div>
   );
-} 
+}

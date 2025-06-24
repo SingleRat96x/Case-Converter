@@ -6,15 +6,35 @@ import { Copy, Download, RefreshCw, Calendar, RotateCcw } from 'lucide-react';
 type ConversionMode = 'toRoman' | 'fromRoman';
 
 const ROMAN_NUMERALS: { [key: number]: string } = {
-  1000: 'M', 900: 'CM', 500: 'D', 400: 'CD',
-  100: 'C', 90: 'XC', 50: 'L', 40: 'XL',
-  10: 'X', 9: 'IX', 5: 'V', 4: 'IV', 1: 'I'
+  1000: 'M',
+  900: 'CM',
+  500: 'D',
+  400: 'CD',
+  100: 'C',
+  90: 'XC',
+  50: 'L',
+  40: 'XL',
+  10: 'X',
+  9: 'IX',
+  5: 'V',
+  4: 'IV',
+  1: 'I',
 };
 
 const ROMAN_VALUES: { [key: string]: number } = {
-  'M': 1000, 'CM': 900, 'D': 500, 'CD': 400,
-  'C': 100, 'XC': 90, 'L': 50, 'XL': 40,
-  'X': 10, 'IX': 9, 'V': 5, 'IV': 4, 'I': 1
+  M: 1000,
+  CM: 900,
+  D: 500,
+  CD: 400,
+  C: 100,
+  XC: 90,
+  L: 50,
+  XL: 40,
+  X: 10,
+  IX: 9,
+  V: 5,
+  IV: 4,
+  I: 1,
 };
 
 export default function RomanNumeralDateConverter() {
@@ -23,9 +43,11 @@ export default function RomanNumeralDateConverter() {
 
   const numberToRoman = (num: number): string => {
     if (num <= 0 || num > 3999) return '';
-    
+
     let result = '';
-    for (const value of Object.keys(ROMAN_NUMERALS).map(Number).sort((a, b) => b - a)) {
+    for (const value of Object.keys(ROMAN_NUMERALS)
+      .map(Number)
+      .sort((a, b) => b - a)) {
       while (num >= value) {
         result += ROMAN_NUMERALS[value];
         num -= value;
@@ -36,10 +58,10 @@ export default function RomanNumeralDateConverter() {
 
   const romanToNumber = (roman: string): number => {
     if (!roman) return 0;
-    
+
     let result = 0;
     let i = 0;
-    
+
     while (i < roman.length) {
       if (i + 1 < roman.length && ROMAN_VALUES[roman.slice(i, i + 2)]) {
         result += ROMAN_VALUES[roman.slice(i, i + 2)];
@@ -51,7 +73,7 @@ export default function RomanNumeralDateConverter() {
         return 0; // Invalid character
       }
     }
-    
+
     return result;
   };
 
@@ -59,18 +81,19 @@ export default function RomanNumeralDateConverter() {
     try {
       const date = new Date(dateStr);
       if (isNaN(date.getTime())) return 'Error: Invalid date format';
-      
+
       const day = date.getDate();
       const month = date.getMonth() + 1;
       const year = date.getFullYear();
-      
-      if (year > 3999) return 'Error: Year too large for Roman numerals (max 3999)';
+
+      if (year > 3999)
+        return 'Error: Year too large for Roman numerals (max 3999)';
       if (year <= 0) return 'Error: Year must be positive';
-      
+
       const dayRoman = numberToRoman(day);
       const monthRoman = numberToRoman(month);
       const yearRoman = numberToRoman(year);
-      
+
       return `${dayRoman} / ${monthRoman} / ${yearRoman}`;
     } catch {
       return 'Error: Invalid date format';
@@ -81,25 +104,25 @@ export default function RomanNumeralDateConverter() {
     try {
       const parts = romanStr.split('/').map(part => part.trim().toUpperCase());
       if (parts.length !== 3) return 'Error: Use format DD / MM / YYYY';
-      
+
       const day = romanToNumber(parts[0]);
       const month = romanToNumber(parts[1]);
       const year = romanToNumber(parts[2]);
-      
+
       if (day === 0 || month === 0 || year === 0) {
         return 'Error: Invalid Roman numerals';
       }
-      
+
       if (day > 31 || month > 12) {
         return 'Error: Invalid date values';
       }
-      
+
       // Create date and format
       const date = new Date(year, month - 1, day);
       if (date.getDate() !== day || date.getMonth() !== month - 1) {
         return 'Error: Invalid date';
       }
-      
+
       return date.toISOString().split('T')[0]; // YYYY-MM-DD format
     } catch {
       return 'Error: Invalid Roman numeral format';
@@ -108,10 +131,8 @@ export default function RomanNumeralDateConverter() {
 
   const getResult = (): string => {
     if (!inputDate.trim()) return '';
-    
-    return mode === 'toRoman' 
-      ? dateToRoman(inputDate)
-      : romanToDate(inputDate);
+
+    return mode === 'toRoman' ? dateToRoman(inputDate) : romanToDate(inputDate);
   };
 
   const toggleMode = () => {
@@ -124,7 +145,7 @@ export default function RomanNumeralDateConverter() {
 
   const getTodayExample = () => {
     const today = new Date();
-    return mode === 'toRoman' 
+    return mode === 'toRoman'
       ? today.toISOString().split('T')[0]
       : dateToRoman(today.toISOString().split('T')[0]);
   };
@@ -137,7 +158,7 @@ export default function RomanNumeralDateConverter() {
   const handleDownload = () => {
     const result = getResult();
     if (result.startsWith('Error:')) return;
-    
+
     const content = `Roman Numeral Date Conversion
 Generated on: ${new Date().toLocaleString()}
 
@@ -170,7 +191,7 @@ Mode: ${mode === 'toRoman' ? 'Date to Roman' : 'Roman to Date'}`;
   const result = getResult();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Mode Toggle */}
       <div className="flex items-center justify-center gap-2 p-2 bg-gray-100 dark:bg-gray-800 rounded-lg">
         <button
@@ -223,14 +244,14 @@ Mode: ${mode === 'toRoman' ? 'Date to Roman' : 'Roman to Date'}`;
               type="date"
               className="w-full p-4 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
               value={inputDate}
-              onChange={(e) => setInputDate(e.target.value)}
+              onChange={e => setInputDate(e.target.value)}
             />
           ) : (
             <textarea
               className="w-full min-h-[100px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100 font-mono"
               placeholder="Enter Roman numerals (e.g., XV / III / MMXXIV)"
               value={inputDate}
-              onChange={(e) => setInputDate(e.target.value)}
+              onChange={e => setInputDate(e.target.value)}
             />
           )}
         </div>
@@ -242,7 +263,9 @@ Mode: ${mode === 'toRoman' ? 'Date to Roman' : 'Roman to Date'}`;
           </label>
           <textarea
             className={`w-full min-h-[100px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y font-mono text-lg ${
-              result.startsWith('Error:') ? 'text-red-600 dark:text-red-400' : 'text-gray-900 dark:text-gray-100'
+              result.startsWith('Error:')
+                ? 'text-red-600 dark:text-red-400'
+                : 'text-gray-900 dark:text-gray-100'
             }`}
             readOnly
             value={result || 'Converted result will appear here...'}
@@ -253,19 +276,25 @@ Mode: ${mode === 'toRoman' ? 'Date to Roman' : 'Roman to Date'}`;
 
       {/* Roman Numeral Guide */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Roman Numeral Reference</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Roman Numeral Reference
+        </h3>
         <div className="grid grid-cols-2 sm:grid-cols-4 lg:grid-cols-8 gap-2 text-xs text-gray-600 dark:text-gray-400">
-          {Object.entries(ROMAN_NUMERALS).slice(0, 13).map(([num, roman]) => (
-            <div key={num} className="font-mono">
-              {num}: {roman}
-            </div>
-          ))}
+          {Object.entries(ROMAN_NUMERALS)
+            .slice(0, 13)
+            .map(([num, roman]) => (
+              <div key={num} className="font-mono">
+                {num}: {roman}
+              </div>
+            ))}
         </div>
       </div>
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           {mode === 'toRoman' ? (
             <>
@@ -311,4 +340,4 @@ Mode: ${mode === 'toRoman' ? 'Date to Roman' : 'Roman to Date'}`;
       </div>
     </div>
   );
-} 
+}

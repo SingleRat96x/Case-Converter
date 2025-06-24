@@ -3,247 +3,229 @@
 import Link from 'next/link';
 
 export function Footer() {
-  const textModificationTools = [
-    { href: "/tools/big-text", label: "Big Text" },
-    { href: "/tools/bold-text", label: "Bold Text" },
-    { href: "/tools/bubble-text", label: "Bubble Text" },
-    { href: "/tools/cursed-text", label: "Cursed Text" },
-    { href: "/tools/discord-font", label: "Discord Font" },
-    { href: "/tools/duplicate-line-remover", label: "Remove Duplicates" },
-    { href: "/tools/facebook-font", label: "Facebook Font" },
-    { href: "/tools/instagram-fonts", label: "Instagram Fonts" },
-    { href: "/tools/invisible-text", label: "Invisible Text" },
-    { href: "/tools/italic-text", label: "Italic Text" },
-    { href: "/tools/mirror-text", label: "Mirror Text" },
-    { href: "/tools/phonetic-spelling", label: "Phonetic Spelling" },
-    { href: "/tools/pig-latin", label: "Pig Latin" },
-    { href: "/tools/plain-text", label: "Plain Text" },
-    { href: "/tools/remove-line-breaks", label: "Remove Line Breaks" },
-    { href: "/tools/remove-text-formatting", label: "Remove Formatting" },
+  const footerSections = [
+    {
+      title: 'Case Conversion',
+      tools: [
+    { href: '/tools/sentence-case', label: 'Sentence Case' },
+    { href: '/tools/title-case', label: 'Title Case' },
+    { href: '/tools/uppercase', label: 'UPPERCASE' },
+    { href: '/tools/lowercase', label: 'lowercase' },
+    { href: '/tools/alternating-case', label: 'aLtErNaTiNg cAsE' },
+    { href: '/tools/text-counter', label: 'Text Counter' },
+      ]
+    },
+    {
+      title: 'Text Formatting',
+      tools: [
+        { href: '/tools/big-text', label: 'Big Text' },
+        { href: '/tools/bold-text', label: 'Bold Text' },
+        { href: '/tools/italic-text', label: 'Italic Text' },
+        { href: '/tools/bubble-text', label: 'Bubble Text' },
+        { href: '/tools/mirror-text', label: 'Mirror Text' },
+        { href: '/tools/cursed-text', label: 'Cursed Text' },
+        { href: '/tools/invisible-text', label: 'Invisible Text' },
+        { href: '/tools/plain-text', label: 'Plain Text' },
+      ]
+    },
+    {
+      title: 'Social Fonts',
+      tools: [
+        { href: '/tools/discord-font', label: 'Discord Font' },
+        { href: '/tools/facebook-font', label: 'Facebook Font' },
+        { href: '/tools/instagram-fonts', label: 'Instagram Fonts' },
+      ]
+    },
+    {
+      title: 'Text Utilities',
+      tools: [
+        { href: '/tools/duplicate-line-remover', label: 'Remove Duplicates' },
+        { href: '/tools/remove-line-breaks', label: 'Remove Line Breaks' },
+        { href: '/tools/remove-text-formatting', label: 'Remove Formatting' },
+        { href: '/tools/text-replacement', label: 'Text Replacement' },
+        { href: '/tools/repeat-text', label: 'Repeat Text' },
+    { href: '/tools/sort-words', label: 'Sort Words' },
+      ]
+    },
+    {
+      title: 'Generators',
+      tools: [
+        { href: '/tools/password-generator', label: 'Password Generator' },
+        { href: '/tools/uuid-generator', label: 'UUID Generator' },
+        { href: '/tools/random-choice', label: 'Random Choice' },
+        { href: '/tools/random-number', label: 'Random Number' },
+        { href: '/tools/random-letter', label: 'Random Letter' },
+        { href: '/tools/random-date', label: 'Random Date' },
+      ]
+    },
+    {
+      title: 'Code & Data',
+      tools: [
+        { href: '/tools/json-stringify', label: 'JSON Stringify' },
+        { href: '/tools/url-encode-decode', label: 'URL Encode/Decode' },
+        { href: '/tools/md5-hash', label: 'MD5 Hash' },
+        { href: '/tools/rot13', label: 'ROT13' },
+        { href: '/tools/morse-code', label: 'Morse Code' },
+        { href: '/tools/utf8-converter', label: 'UTF-8 Converter' },
+      ]
+    }
   ];
-
-  const randomGeneratorTools = [
-    { href: "/tools/random-choice", label: "Random Choice" },
-    { href: "/tools/random-date", label: "Random Date" },
-    { href: "/tools/random-ip", label: "Random IP" },
-    { href: "/tools/random-letter", label: "Random Letter" },
-    { href: "/tools/random-month", label: "Random Month" },
-    { href: "/tools/random-number", label: "Random Number" },
-    { href: "/tools/password-generator", label: "Password Generator" },
-    { href: "/tools/uuid-generator", label: "UUID Generator" },
-  ];
-
-  const codeTranslationTools = [
-    { href: "/tools/json-stringify", label: "JSON Stringify" },
-    { href: "/tools/md5-hash", label: "MD5 Hash" },
-    { href: "/tools/morse-code", label: "Morse Code" },
-    { href: "/tools/number-sorter", label: "Number Sorter" },
-    { href: "/tools/rot13", label: "ROT13" },
-    { href: "/tools/slugify-url", label: "Slugify URL" },
-    { href: "/tools/utf8-converter", label: "UTF-8 Converter" },
-    { href: "/tools/url-encode-decode", label: "URL Encode/Decode" },
-    { href: "/tools/utm-builder", label: "UTM Builder" },
-  ];
-
-  const basicTools = [
-    { href: "/tools/sentence-case", label: "Sentence Case" },
-    { href: "/tools/title-case", label: "Title Case" },
-    { href: "/tools/uppercase", label: "UPPERCASE" },
-    { href: "/tools/lowercase", label: "lowercase" },
-    { href: "/tools/alternating-case", label: "aLtErNaTiNg cAsE" },
-    { href: "/tools/text-counter", label: "Text Counter" },
-  ];
-
-  const miscTools = [
-    { href: "/tools/nato-phonetic", label: "NATO Phonetic Alphabet" },
-    { href: "/tools/online-notepad", label: "Online Notepad" },
-    { href: "/tools/online-sentence-counter", label: "Sentence Counter" },
-    { href: "/tools/repeat-text", label: "Repeat Text Generator" },
-    { href: "/tools/roman-numeral-date", label: "Roman Numeral Date" },
-    { href: "/tools/sort-words", label: "Sort Words" },
-    { href: "/tools/text-replacement", label: "Text Replacement" },
-    { href: "/tools/word-frequency", label: "Word Frequency Counter" },
-  ];
-
-  const imageTools = [
-    { href: "/tools/ascii-art-generator", label: "ASCII Art Generator" },
-    { href: "/tools/image-to-text", label: "Image to Text" },
-    { href: "/tools/image-cropper", label: "Image Cropper" },
-    { href: "/tools/image-resizer", label: "Image Resizer" },
-    { href: "/tools/jpg-to-png", label: "JPG to PNG" },
-    { href: "/tools/jpg-to-webp", label: "JPG to WebP" },
-    { href: "/tools/png-to-webp", label: "PNG to WebP" },
-    { href: "/tools/webp-to-png", label: "WebP to PNG" }
-  ];
-
-  // Split tools into chunks of 8
-  const chunkSize = 8;
-  const textModificationColumns = Array.from({ length: Math.ceil(textModificationTools.length / chunkSize) }, (_, i) =>
-    textModificationTools.slice(i * chunkSize, (i + 1) * chunkSize)
-  );
 
   return (
-    <footer className="border-t bg-gray-50/50 dark:bg-gray-950/50">
-      <div className="container py-12 px-4">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-7">
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Basic Tools
+    <footer className="bg-background border-t border-border">
+      {/* Main Footer Content */}
+      <div className="container mx-auto px-6 py-16">
+
+
+                 {/* Tools Grid */}
+         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-8 mb-12">
+          {footerSections.map((section, index) => (
+            <div key={index} className="space-y-6">
+              <h3 className="text-lg font-semibold text-foreground relative">
+                {section.title}
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full"></div>
             </h3>
-            <ul className="space-y-2.5">
-              {basicTools.map((tool) => (
+              <ul className="space-y-3">
+                {section.tools.map(tool => (
                 <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href={tool.href}
+                      className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
                   >
+                      <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
                     {tool.label}
                   </Link>
                 </li>
               ))}
             </ul>
+            </div>
+          ))}
           </div>
 
-          <div className="col-span-2 space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800 text-center">
-              Text Modification
-            </h3>
-            <div className="grid grid-cols-2 gap-8">
-              {textModificationColumns.map((column, columnIndex) => (
-                <ul key={columnIndex} className="space-y-2.5">
-                  {column.map((tool) => (
-                    <li key={tool.href}>
-                      <Link 
-                        href={tool.href} 
-                        className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+        {/* Secondary Links */}
+        <div className="border-t border-border pt-12 mb-12">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-foreground relative">
+                Company
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full"></div>
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                      <Link
+                    href="/about-us"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
                       >
-                        {tool.label}
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    About Us
                       </Link>
                     </li>
-                  ))}
-                </ul>
-              ))}
-            </div>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Random Generators
-            </h3>
-            <ul className="space-y-2.5">
-              {randomGeneratorTools.map((tool) => (
-                <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    {tool.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Code & Data Tools
-            </h3>
-            <ul className="space-y-2.5">
-              {codeTranslationTools.map((tool) => (
-                <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    {tool.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Image Tools
-            </h3>
-            <ul className="space-y-2.5">
-              {imageTools.map((tool) => (
-                <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    {tool.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-
-          <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
-              Misc. Tools
-            </h3>
-            <ul className="space-y-2.5">
-              {miscTools.map((tool) => (
-                <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    {tool.label}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </div>
-        </div>
-
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                Company
-              </h3>
-              <ul className="space-y-2.5">
                 <li>
-                  <Link 
-                    href="/about-us" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href="/contact-us"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
                   >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/contact-us" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
                     Contact Us
                   </Link>
                 </li>
-              </ul>
-            </div>
+            </ul>
+          </div>
 
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-foreground relative">
                 Legal
-              </h3>
-              <ul className="space-y-2.5">
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full"></div>
+              </h4>
+              <ul className="space-y-3">
                 <li>
-                  <Link 
-                    href="/privacy-policy" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href="/privacy-policy"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
                   >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
                     Privacy Policy
                   </Link>
                 </li>
                 <li>
-                  <Link 
-                    href="/terms-of-service" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href="/terms-of-service"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
                   >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
                     Terms of Service
+                  </Link>
+                </li>
+            </ul>
+          </div>
+
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-foreground relative">
+                Image Tools
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full"></div>
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/tools/ascii-art-generator"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    ASCII Art Generator
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/image-to-text"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    Image to Text
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/image-resizer"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    Image Resizer
+                  </Link>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-6">
+              <h4 className="text-lg font-semibold text-foreground relative">
+                Miscellaneous
+                <div className="absolute -bottom-2 left-0 w-8 h-0.5 bg-primary rounded-full"></div>
+              </h4>
+              <ul className="space-y-3">
+                <li>
+                  <Link
+                    href="/tools/nato-phonetic"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    NATO Phonetic
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/online-notepad"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    Online Notepad
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/tools/word-frequency"
+                    className="group text-sm text-muted-foreground hover:text-foreground transition-all duration-200 flex items-center gap-2"
+                  >
+                    <span className="w-1 h-1 rounded-full bg-muted-foreground group-hover:bg-primary transition-colors duration-200"></span>
+                    Word Frequency
                   </Link>
                 </li>
               </ul>
@@ -251,12 +233,18 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <p className="text-sm text-gray-500 dark:text-gray-400 text-center">
-            © {new Date().getFullYear()} Text Case Converter. All rights reserved.
+        {/* Bottom Bar */}
+        <div className="border-t border-border pt-8">
+          <div className="flex flex-col md:flex-row justify-between items-center gap-4">
+            <p className="text-sm text-muted-foreground">
+              © {new Date().getFullYear()} Text Case Converter. All rights reserved.
           </p>
+            <div className="flex items-center gap-6">
+              <span className="text-sm text-muted-foreground">Made with ❤️ for developers</span>
+            </div>
+          </div>
         </div>
       </div>
     </footer>
   );
-} 
+}

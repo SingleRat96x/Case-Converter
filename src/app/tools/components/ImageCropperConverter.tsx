@@ -1,7 +1,14 @@
 'use client';
 
 import React, { useState, useRef, useCallback } from 'react';
-import { Download, RefreshCw, Upload, FileImage, Scissors, Square } from 'lucide-react';
+import {
+  Download,
+  RefreshCw,
+  Upload,
+  FileImage,
+  Scissors,
+  Square,
+} from 'lucide-react';
 
 interface CropArea {
   x: number;
@@ -15,7 +22,12 @@ export default function ImageCropperConverter() {
   const [previewUrl, setPreviewUrl] = useState<string>('');
   const [isProcessing, setIsProcessing] = useState(false);
   const [croppedUrl, setCroppedUrl] = useState<string>('');
-  const [cropArea, setCropArea] = useState<CropArea>({ x: 0, y: 0, width: 200, height: 200 });
+  const [cropArea, setCropArea] = useState<CropArea>({
+    x: 0,
+    y: 0,
+    width: 200,
+    height: 200,
+  });
   const [isDragging, setIsDragging] = useState(false);
   const [isResizing, setIsResizing] = useState(false);
   const [dragStart, setDragStart] = useState({ x: 0, y: 0 });
@@ -43,7 +55,7 @@ export default function ImageCropperConverter() {
     const preview = URL.createObjectURL(file);
     setPreviewUrl(preview);
     setCroppedUrl('');
-    
+
     // Reset crop area when new image is loaded
     setCropArea({ x: 50, y: 50, width: 200, height: 200 });
   };
@@ -52,14 +64,14 @@ export default function ImageCropperConverter() {
     if (imageRef.current) {
       const { naturalWidth, naturalHeight, width, height } = imageRef.current;
       setImageSize({ width, height });
-      
+
       // Set initial crop area to center of image
       const initialSize = Math.min(width, height) * 0.5;
       setCropArea({
         x: (width - initialSize) / 2,
         y: (height - initialSize) / 2,
         width: initialSize,
-        height: initialSize
+        height: initialSize,
       });
     }
   };
@@ -69,11 +81,11 @@ export default function ImageCropperConverter() {
     const rect = cropperRef.current?.getBoundingClientRect();
     if (!rect) return;
 
-    setDragStart({ 
-      x: e.clientX - rect.left, 
-      y: e.clientY - rect.top 
+    setDragStart({
+      x: e.clientX - rect.left,
+      y: e.clientY - rect.top,
     });
-    
+
     if (action === 'drag') {
       setIsDragging(true);
     } else {
@@ -81,40 +93,51 @@ export default function ImageCropperConverter() {
     }
   };
 
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    if (!isDragging && !isResizing) return;
-    if (!cropperRef.current || !imageRef.current) return;
+  const handleMouseMove = useCallback(
+    (e: MouseEvent) => {
+      if (!isDragging && !isResizing) return;
+      if (!cropperRef.current || !imageRef.current) return;
 
-    const rect = cropperRef.current.getBoundingClientRect();
-    const currentX = e.clientX - rect.left;
-    const currentY = e.clientY - rect.top;
+      const rect = cropperRef.current.getBoundingClientRect();
+      const currentX = e.clientX - rect.left;
+      const currentY = e.clientY - rect.top;
 
-    setCropArea(prev => {
-      let newArea = { ...prev };
+      setCropArea(prev => {
+        let newArea = { ...prev };
 
-      if (isDragging) {
-        const deltaX = currentX - dragStart.x;
-        const deltaY = currentY - dragStart.y;
-        
-        newArea.x = Math.max(0, Math.min(imageSize.width - prev.width, prev.x + deltaX));
-        newArea.y = Math.max(0, Math.min(imageSize.height - prev.height, prev.y + deltaY));
-        
-        setDragStart({ x: currentX, y: currentY });
-      } else if (isResizing) {
-        const newWidth = Math.max(50, currentX - prev.x);
-        const newHeight = aspectRatio ? newWidth / aspectRatio : Math.max(50, currentY - prev.y);
-        
-        newArea.width = Math.min(imageSize.width - prev.x, newWidth);
-        newArea.height = Math.min(imageSize.height - prev.y, newHeight);
-        
-        if (aspectRatio) {
-          newArea.height = newArea.width / aspectRatio;
+        if (isDragging) {
+          const deltaX = currentX - dragStart.x;
+          const deltaY = currentY - dragStart.y;
+
+          newArea.x = Math.max(
+            0,
+            Math.min(imageSize.width - prev.width, prev.x + deltaX)
+          );
+          newArea.y = Math.max(
+            0,
+            Math.min(imageSize.height - prev.height, prev.y + deltaY)
+          );
+
+          setDragStart({ x: currentX, y: currentY });
+        } else if (isResizing) {
+          const newWidth = Math.max(50, currentX - prev.x);
+          const newHeight = aspectRatio
+            ? newWidth / aspectRatio
+            : Math.max(50, currentY - prev.y);
+
+          newArea.width = Math.min(imageSize.width - prev.x, newWidth);
+          newArea.height = Math.min(imageSize.height - prev.y, newHeight);
+
+          if (aspectRatio) {
+            newArea.height = newArea.width / aspectRatio;
+          }
         }
-      }
 
-      return newArea;
-    });
-  }, [isDragging, isResizing, dragStart, imageSize, aspectRatio]);
+        return newArea;
+      });
+    },
+    [isDragging, isResizing, dragStart, imageSize, aspectRatio]
+  );
 
   const handleMouseUp = useCallback(() => {
     setIsDragging(false);
@@ -126,7 +149,7 @@ export default function ImageCropperConverter() {
     if (isDragging || isResizing) {
       document.addEventListener('mousemove', handleMouseMove);
       document.addEventListener('mouseup', handleMouseUp);
-      
+
       return () => {
         document.removeEventListener('mousemove', handleMouseMove);
         document.removeEventListener('mouseup', handleMouseUp);
@@ -141,7 +164,7 @@ export default function ImageCropperConverter() {
     try {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      
+
       if (!ctx) {
         throw new Error('Could not get canvas context');
       }
@@ -165,7 +188,7 @@ export default function ImageCropperConverter() {
         canvas.height
       );
 
-      canvas.toBlob((blob) => {
+      canvas.toBlob(blob => {
         if (blob) {
           const url = URL.createObjectURL(blob);
           setCroppedUrl(url);
@@ -181,7 +204,7 @@ export default function ImageCropperConverter() {
 
   const handleDownload = () => {
     if (!croppedUrl || !selectedFile) return;
-    
+
     const link = document.createElement('a');
     link.href = croppedUrl;
     link.download = `cropped-${selectedFile.name}`;
@@ -204,26 +227,26 @@ export default function ImageCropperConverter() {
     if (ratio) {
       setCropArea(prev => ({
         ...prev,
-        height: prev.width / ratio
+        height: prev.width / ratio,
       }));
     }
   };
 
   const getFileInfo = () => {
     if (!selectedFile) return null;
-    
+
     const sizeInMB = (selectedFile.size / (1024 * 1024)).toFixed(2);
     return {
       name: selectedFile.name,
       size: sizeInMB,
-      type: selectedFile.type.split('/')[1].toUpperCase()
+      type: selectedFile.type.split('/')[1].toUpperCase(),
     };
   };
 
   const fileInfo = getFileInfo();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Upload Area */}
       {!selectedFile && (
         <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
@@ -264,7 +287,9 @@ export default function ImageCropperConverter() {
         <div className="space-y-4">
           {/* Aspect Ratio Controls */}
           <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-3">Crop Settings</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-3">
+              Crop Settings
+            </h3>
             <div className="grid grid-cols-2 md:grid-cols-4 gap-2 mb-3">
               <button
                 onClick={() => setAspectRatioPreset(null)}
@@ -279,14 +304,14 @@ export default function ImageCropperConverter() {
                 Square
               </button>
               <button
-                onClick={() => setAspectRatioPreset(16/9)}
-                className={`px-3 py-2 text-xs rounded ${aspectRatio === 16/9 ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+                onClick={() => setAspectRatioPreset(16 / 9)}
+                className={`px-3 py-2 text-xs rounded ${aspectRatio === 16 / 9 ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
               >
                 16:9
               </button>
               <button
-                onClick={() => setAspectRatioPreset(4/3)}
-                className={`px-3 py-2 text-xs rounded ${aspectRatio === 4/3 ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
+                onClick={() => setAspectRatioPreset(4 / 3)}
+                className={`px-3 py-2 text-xs rounded ${aspectRatio === 4 / 3 ? 'bg-blue-600 text-white' : 'bg-gray-200 dark:bg-gray-700 text-gray-700 dark:text-gray-300'}`}
               >
                 4:3
               </button>
@@ -306,7 +331,10 @@ export default function ImageCropperConverter() {
               <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
                 Original Image
               </label>
-              <div ref={cropperRef} className="relative border rounded-lg bg-gray-50 dark:bg-gray-900 overflow-hidden">
+              <div
+                ref={cropperRef}
+                className="relative border rounded-lg bg-gray-50 dark:bg-gray-900 overflow-hidden"
+              >
                 <img
                   ref={imageRef}
                   src={previewUrl}
@@ -314,13 +342,13 @@ export default function ImageCropperConverter() {
                   className="max-w-full h-auto"
                   onLoad={handleImageLoad}
                 />
-                
+
                 {/* Crop Overlay */}
                 {imageSize.width > 0 && (
                   <>
                     {/* Dark overlay */}
                     <div className="absolute inset-0 bg-black bg-opacity-50 pointer-events-none" />
-                    
+
                     {/* Crop area */}
                     <div
                       className="absolute border-2 border-white bg-transparent cursor-move"
@@ -329,14 +357,14 @@ export default function ImageCropperConverter() {
                         top: cropArea.y,
                         width: cropArea.width,
                         height: cropArea.height,
-                        boxShadow: '0 0 0 9999px rgba(0,0,0,0.5)'
+                        boxShadow: '0 0 0 9999px rgba(0,0,0,0.5)',
                       }}
-                      onMouseDown={(e) => handleMouseDown(e, 'drag')}
+                      onMouseDown={e => handleMouseDown(e, 'drag')}
                     >
                       {/* Resize handle */}
                       <div
                         className="absolute bottom-0 right-0 w-4 h-4 bg-white border border-gray-300 cursor-se-resize"
-                        onMouseDown={(e) => {
+                        onMouseDown={e => {
                           e.stopPropagation();
                           handleMouseDown(e, 'resize');
                         }}
@@ -357,8 +385,8 @@ export default function ImageCropperConverter() {
                   Cropped Image
                 </label>
                 <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img 
-                    src={croppedUrl} 
+                  <img
+                    src={croppedUrl}
                     alt="Cropped"
                     className="max-w-full h-auto rounded mx-auto"
                   />
@@ -417,7 +445,9 @@ export default function ImageCropperConverter() {
 
       {/* Information */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Image Cropper Features</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Image Cropper Features
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>• Drag the crop area to reposition it on the image</div>
           <div>• Drag the corner handle to resize the crop area</div>
@@ -428,4 +458,4 @@ export default function ImageCropperConverter() {
       </div>
     </div>
   );
-} 
+}

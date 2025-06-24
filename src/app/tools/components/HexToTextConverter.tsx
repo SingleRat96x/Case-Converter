@@ -23,14 +23,18 @@ export default function HexToTextConverter() {
   });
 
   const updateStats = (text: string, result: string) => {
-    const hexByteCount = mode === 'encode' 
-      ? text.length 
-      : (result.startsWith('Error:') ? 0 : result.length);
+    const hexByteCount =
+      mode === 'encode'
+        ? text.length
+        : result.startsWith('Error:')
+          ? 0
+          : result.length;
 
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
       hexBytes: hexByteCount,
     });
@@ -67,7 +71,9 @@ export default function HexToTextConverter() {
         .map(byte => String.fromCharCode(parseInt(byte, 16)))
         .join('');
     } catch (error) {
-      throw new Error('Invalid hex format. Please enter valid hexadecimal values.');
+      throw new Error(
+        'Invalid hex format. Please enter valid hexadecimal values.'
+      );
     }
   };
 
@@ -81,7 +87,9 @@ export default function HexToTextConverter() {
         return hexToText(text);
       }
     } catch (error) {
-      return error instanceof Error ? `Error: ${error.message}` : 'Error: Failed to convert';
+      return error instanceof Error
+        ? `Error: ${error.message}`
+        : 'Error: Failed to convert';
     }
   };
 
@@ -116,14 +124,18 @@ export default function HexToTextConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Mode Toggle */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Mode</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              Mode
+            </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              {mode === 'encode' ? 'Convert text to hexadecimal' : 'Convert hexadecimal to text'}
+              {mode === 'encode'
+                ? 'Convert text to hexadecimal'
+                : 'Convert hexadecimal to text'}
             </p>
           </div>
           <button
@@ -169,20 +181,31 @@ export default function HexToTextConverter() {
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Input Text:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Input Text:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello
+              </div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Hex Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">48 65 6c 6c 6f</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Hex Output:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                48 65 6c 6c 6f
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            Each character is converted to its hexadecimal ASCII value. Supports both uppercase and lowercase hex.
+            Each character is converted to its hexadecimal ASCII value. Supports
+            both uppercase and lowercase hex.
           </div>
         </div>
       </div>
@@ -224,4 +247,4 @@ export default function HexToTextConverter() {
       </div>
     </div>
   );
-} 
+}

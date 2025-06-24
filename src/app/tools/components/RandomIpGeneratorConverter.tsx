@@ -12,14 +12,18 @@ export default function RandomIpGeneratorConverter() {
   const generateRandomIPv4 = (allowPrivate: boolean = true): string => {
     if (allowPrivate) {
       // Generate any IPv4 address
-      return Array.from({ length: 4 }, () => Math.floor(Math.random() * 256)).join('.');
+      return Array.from({ length: 4 }, () =>
+        Math.floor(Math.random() * 256)
+      ).join('.');
     } else {
       // Generate public IPv4 address (avoid private ranges)
       let octets: number[] = [];
       do {
-        octets = Array.from({ length: 4 }, () => Math.floor(Math.random() * 256));
+        octets = Array.from({ length: 4 }, () =>
+          Math.floor(Math.random() * 256)
+        );
       } while (
-        (octets[0] === 10) || // 10.0.0.0/8
+        octets[0] === 10 || // 10.0.0.0/8
         (octets[0] === 172 && octets[1] >= 16 && octets[1] <= 31) || // 172.16.0.0/12
         (octets[0] === 192 && octets[1] === 168) // 192.168.0.0/16
       );
@@ -29,12 +33,16 @@ export default function RandomIpGeneratorConverter() {
 
   const generateRandomIPv6 = (): string => {
     return Array.from({ length: 8 }, () => {
-      return Math.floor(Math.random() * 65536).toString(16).padStart(4, '0');
+      return Math.floor(Math.random() * 65536)
+        .toString(16)
+        .padStart(4, '0');
     }).join(':');
   };
 
   const generateRandomIP = (): string => {
-    return ipType === 'ipv4' ? generateRandomIPv4(includePrivate) : generateRandomIPv6();
+    return ipType === 'ipv4'
+      ? generateRandomIPv4(includePrivate)
+      : generateRandomIPv6();
   };
 
   const handleGenerate = () => {
@@ -69,41 +77,51 @@ export default function RandomIpGeneratorConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Count</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Count
+              </label>
               <input
                 type="number"
                 min="1"
                 max="100"
                 value={count}
-                onChange={(e) => setCount(Math.min(100, Math.max(1, parseInt(e.target.value) || 1)))}
+                onChange={e =>
+                  setCount(
+                    Math.min(100, Math.max(1, parseInt(e.target.value) || 1))
+                  )
+                }
                 className="w-full px-3 py-2 border rounded text-sm"
               />
             </div>
-            
+
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">IP Type</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                IP Type
+              </label>
               <select
                 value={ipType}
-                onChange={(e) => setIpType(e.target.value)}
+                onChange={e => setIpType(e.target.value)}
                 className="w-full px-3 py-2 border rounded text-sm"
               >
                 <option value="ipv4">IPv4 (192.168.1.1)</option>
-                <option value="ipv6">IPv6 (2001:0db8:85a3:0000:0000:8a2e:0370:7334)</option>
+                <option value="ipv6">
+                  IPv6 (2001:0db8:85a3:0000:0000:8a2e:0370:7334)
+                </option>
               </select>
             </div>
-            
+
             {ipType === 'ipv4' && (
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-sm">
                   <input
                     type="checkbox"
                     checked={includePrivate}
-                    onChange={(e) => setIncludePrivate(e.target.checked)}
+                    onChange={e => setIncludePrivate(e.target.checked)}
                     className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                   />
                   Include Private IPs
@@ -111,7 +129,7 @@ export default function RandomIpGeneratorConverter() {
               </div>
             )}
           </div>
-          
+
           <div className="flex items-end">
             <button
               onClick={handleGenerate}
@@ -126,13 +144,20 @@ export default function RandomIpGeneratorConverter() {
 
       <div className="grid gap-6 md:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">IP Address Info</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            IP Address Info
+          </label>
           <div className="min-h-[300px] p-4 rounded-lg border bg-background">
             <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
               <div>Count: {count} addresses</div>
               <div>Type: {ipType.toUpperCase()}</div>
               {ipType === 'ipv4' && (
-                <div>Range: {includePrivate ? 'All IPs (public + private)' : 'Public IPs only'}</div>
+                <div>
+                  Range:{' '}
+                  {includePrivate
+                    ? 'All IPs (public + private)'
+                    : 'Public IPs only'}
+                </div>
               )}
               <div>Example: {generateRandomIP()}</div>
             </div>
@@ -179,4 +204,4 @@ export default function RandomIpGeneratorConverter() {
       </div>
     </div>
   );
-} 
+}

@@ -11,13 +11,38 @@ interface TextStats {
 }
 
 const subscriptMap: { [key: string]: string } = {
-  '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄',
-  '5': '₅', '6': '₆', '7': '₇', '8': '₈', '9': '₉',
-  '+': '₊', '-': '₋', '=': '₌', '(': '₍', ')': '₎',
-  'a': 'ₐ', 'e': 'ₑ', 'h': 'ₕ', 'i': 'ᵢ', 'j': 'ⱼ',
-  'k': 'ₖ', 'l': 'ₗ', 'm': 'ₘ', 'n': 'ₙ', 'o': 'ₒ',
-  'p': 'ₚ', 'r': 'ᵣ', 's': 'ₛ', 't': 'ₜ', 'u': 'ᵤ',
-  'v': 'ᵥ', 'x': 'ₓ'
+  '0': '₀',
+  '1': '₁',
+  '2': '₂',
+  '3': '₃',
+  '4': '₄',
+  '5': '₅',
+  '6': '₆',
+  '7': '₇',
+  '8': '₈',
+  '9': '₉',
+  '+': '₊',
+  '-': '₋',
+  '=': '₌',
+  '(': '₍',
+  ')': '₎',
+  a: 'ₐ',
+  e: 'ₑ',
+  h: 'ₕ',
+  i: 'ᵢ',
+  j: 'ⱼ',
+  k: 'ₖ',
+  l: 'ₗ',
+  m: 'ₘ',
+  n: 'ₙ',
+  o: 'ₒ',
+  p: 'ₚ',
+  r: 'ᵣ',
+  s: 'ₛ',
+  t: 'ₜ',
+  u: 'ᵤ',
+  v: 'ᵥ',
+  x: 'ₓ',
 };
 
 export default function SubscriptTextConverter() {
@@ -33,7 +58,8 @@ export default function SubscriptTextConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
@@ -45,11 +71,17 @@ export default function SubscriptTextConverter() {
   };
 
   const convertToSubscript = (text: string) => {
-    return text.toLowerCase().split('').map(char => subscriptMap[char] || char).join('');
+    return text
+      .toLowerCase()
+      .split('')
+      .map(char => subscriptMap[char] || char)
+      .join('');
   };
 
   const handleDownload = () => {
-    const blob = new Blob([convertToSubscript(inputText)], { type: 'text/plain' });
+    const blob = new Blob([convertToSubscript(inputText)], {
+      type: 'text/plain',
+    });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -70,11 +102,13 @@ export default function SubscriptTextConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -85,7 +119,9 @@ export default function SubscriptTextConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Subscript Text Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Subscript Text Result
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
@@ -131,4 +167,4 @@ export default function SubscriptTextConverter() {
       </div>
     </div>
   );
-} 
+}

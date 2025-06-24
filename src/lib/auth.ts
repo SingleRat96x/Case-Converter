@@ -31,4 +31,4 @@ export const clearAuthToken = async () => {
 };
 
 // Note: isAuthenticated is no longer available client-side since we're using httpOnly cookies
-// Client-side authentication checks should be handled through server components or API calls 
+// Client-side authentication checks should be handled through server components or API calls

@@ -7,7 +7,7 @@ export async function revalidateToolContent(toolId: string) {
     // Force revalidate the home page
     revalidatePath('/', 'page');
     revalidatePath('/', 'layout');
-    
+
     // Force revalidate the tools page
     revalidatePath('/tools', 'page');
     revalidatePath('/tools', 'layout');
@@ -17,20 +17,16 @@ export async function revalidateToolContent(toolId: string) {
       revalidatePath(`/tools/${toolId}`, 'page');
       revalidatePath(`/tools/${toolId}`, 'layout');
     }
-    
+
     // Revalidate all related tags
     revalidateTag('tools');
     if (toolId !== '*') {
       revalidateTag(`tool-${toolId}`);
     }
-    
+
     console.log('Revalidation complete for:', {
       toolId,
-      paths: [
-        '/',
-        '/tools',
-        ...(toolId !== '*' ? [`/tools/${toolId}`] : [])
-      ]
+      paths: ['/', '/tools', ...(toolId !== '*' ? [`/tools/${toolId}`] : [])],
     });
 
     return { success: true };
@@ -38,4 +34,4 @@ export async function revalidateToolContent(toolId: string) {
     console.error('Error during revalidation:', error);
     throw error;
   }
-} 
+}

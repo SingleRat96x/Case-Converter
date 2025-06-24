@@ -25,7 +25,8 @@ export default function SlugifyUrlConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
@@ -82,22 +83,28 @@ export default function SlugifyUrlConverter() {
 
   const getSeparatorDisplay = () => {
     switch (separator) {
-      case '-': return 'Hyphen (-)';
-      case '_': return 'Underscore (_)';
-      case '.': return 'Dot (.)';
-      default: return separator;
+      case '-':
+        return 'Hyphen (-)';
+      case '_':
+        return 'Underscore (_)';
+      case '.':
+        return 'Dot (.)';
+      default:
+        return separator;
     }
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="grid gap-4 md:grid-cols-3 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Separator</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Separator
+          </label>
           <select
             value={separator}
-            onChange={(e) => setSeparator(e.target.value)}
+            onChange={e => setSeparator(e.target.value)}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           >
             <option value="-">Hyphen (-)</option>
@@ -110,17 +117,24 @@ export default function SlugifyUrlConverter() {
             type="checkbox"
             id="lowercase"
             checked={lowerCase}
-            onChange={(e) => setLowerCase(e.target.checked)}
+            onChange={e => setLowerCase(e.target.checked)}
             className="rounded"
           />
-          <label htmlFor="lowercase" className="text-sm text-gray-900 dark:text-gray-50">Convert to lowercase</label>
+          <label
+            htmlFor="lowercase"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Convert to lowercase
+          </label>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Enter text to convert to URL slug..."
@@ -131,7 +145,9 @@ export default function SlugifyUrlConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">URL Slug Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            URL Slug Result
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100 font-mono"
             readOnly
@@ -142,16 +158,22 @@ export default function SlugifyUrlConverter() {
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
             <div>
               <span className="text-gray-600 dark:text-gray-400">Input:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello World! This is a test.</div>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello World! This is a test.
+              </div>
             </div>
             <div>
               <span className="text-gray-600 dark:text-gray-400">Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">hello-world-this-is-a-test</div>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                hello-world-this-is-a-test
+              </div>
             </div>
           </div>
         </div>
@@ -194,4 +216,4 @@ export default function SlugifyUrlConverter() {
       </div>
     </div>
   );
-} 
+}

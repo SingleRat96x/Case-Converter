@@ -1,40 +1,59 @@
 import * as React from 'react';
+import { Slot } from '@radix-ui/react-slot';
+import { cva, type VariantProps } from 'class-variance-authority';
+
 import { cn } from '@/lib/utils';
 
+const buttonVariants = cva(
+  'inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-xl text-sm font-semibold transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-primary focus-visible:ring-offset-2 focus-visible:ring-offset-background disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0',
+  {
+    variants: {
+      variant: {
+        default:
+          'bg-gradient-to-r from-primary to-info text-primary-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+        destructive:
+          'bg-gradient-to-r from-destructive to-red-500 text-destructive-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+        outline:
+          'border-2 border-primary/30 bg-background/80 text-foreground shadow-md hover:bg-gradient-to-r hover:from-primary/10 hover:to-accent/10 hover:border-primary hover:shadow-lg hover:scale-105 backdrop-blur-sm',
+        secondary:
+          'bg-gradient-to-r from-secondary to-muted text-secondary-foreground shadow-md hover:shadow-lg hover:from-accent/20 hover:to-muted/80 hover:scale-105',
+        ghost: 
+          'text-foreground hover:bg-gradient-to-r hover:from-accent/20 hover:to-primary/10 hover:shadow-md hover:scale-105',
+        link: 
+          'text-primary underline-offset-4 hover:underline hover:text-info transition-colors',
+        success:
+          'bg-gradient-to-r from-success to-emerald-500 text-success-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+        warning:
+          'bg-gradient-to-r from-warning to-orange-500 text-warning-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+        info:
+          'bg-gradient-to-r from-info to-blue-500 text-info-foreground shadow-lg hover:shadow-xl hover:scale-105 active:scale-95',
+      },
+      size: {
+        default: 'h-10 px-6 py-2.5',
+        sm: 'h-8 rounded-lg px-4 text-xs',
+        lg: 'h-12 rounded-xl px-8 text-base',
+        icon: 'h-10 w-10',
+      },
+    },
+    defaultVariants: {
+      variant: 'default',
+      size: 'default',
+    },
+  }
+);
+
 export interface ButtonProps
-  extends React.ButtonHTMLAttributes<HTMLButtonElement> {
-  variant?: 'default' | 'destructive' | 'outline' | 'secondary' | 'ghost' | 'link';
-  size?: 'default' | 'sm' | 'lg' | 'icon';
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>,
+    VariantProps<typeof buttonVariants> {
+  asChild?: boolean;
 }
 
 const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
-  ({ className, variant = 'default', size = 'default', ...props }, ref) => {
+  ({ className, variant, size, asChild = false, ...props }, ref) => {
+    const Comp = asChild ? Slot : 'button';
     return (
-      <button
-        className={cn(
-          'inline-flex items-center justify-center whitespace-nowrap rounded-md text-sm font-medium ring-offset-white transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-gray-950 focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 dark:ring-offset-gray-950 dark:focus-visible:ring-gray-300',
-          {
-            'bg-gray-900 text-gray-50 hover:bg-gray-900/90 dark:bg-gray-50 dark:text-gray-900 dark:hover:bg-gray-50/90':
-              variant === 'default',
-            'bg-red-500 text-gray-50 hover:bg-red-500/90 dark:bg-red-900 dark:text-gray-50 dark:hover:bg-red-900/90':
-              variant === 'destructive',
-            'border border-gray-200 bg-white hover:bg-gray-100 hover:text-gray-900 dark:border-gray-800 dark:bg-gray-950 dark:hover:bg-gray-800 dark:hover:text-gray-50':
-              variant === 'outline',
-            'bg-gray-100 text-gray-900 hover:bg-gray-100/80 dark:bg-gray-800 dark:text-gray-50 dark:hover:bg-gray-800/80':
-              variant === 'secondary',
-            'hover:bg-gray-100 hover:text-gray-900 dark:hover:bg-gray-800 dark:hover:text-gray-50':
-              variant === 'ghost',
-            'text-gray-900 underline-offset-4 hover:underline dark:text-gray-50':
-              variant === 'link',
-          },
-          {
-            'h-10 px-4 py-2': size === 'default',
-            'h-9 rounded-md px-3': size === 'sm',
-            'h-11 rounded-md px-8': size === 'lg',
-            'h-10 w-10': size === 'icon',
-          },
-          className
-        )}
+      <Comp
+        className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}
       />
@@ -43,4 +62,4 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
 );
 Button.displayName = 'Button';
 
-export { Button }; 
+export { Button, buttonVariants };

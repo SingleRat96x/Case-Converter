@@ -24,12 +24,14 @@ export default function CaesarCipherConverter() {
   });
 
   const updateStats = (text: string, result: string) => {
-    const processedCount = result.length - result.replace(/[a-zA-Z]/g, '').length;
-    
+    const processedCount =
+      result.length - result.replace(/[a-zA-Z]/g, '').length;
+
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
       processedChars: processedCount,
     });
@@ -42,8 +44,12 @@ export default function CaesarCipherConverter() {
     updateStats(newText, result);
   };
 
-  const caesarCipher = (text: string, shift: number, decode: boolean): string => {
-    shift = decode ? (26 - (shift % 26)) : (shift % 26);
+  const caesarCipher = (
+    text: string,
+    shift: number,
+    decode: boolean
+  ): string => {
+    shift = decode ? 26 - (shift % 26) : shift % 26;
 
     return text
       .split('')
@@ -71,7 +77,8 @@ export default function CaesarCipherConverter() {
 
   const handleDownload = () => {
     const result = processText(inputText);
-    const filename = mode === 'encode' ? 'caesar-encoded.txt' : 'caesar-decoded.txt';
+    const filename =
+      mode === 'encode' ? 'caesar-encoded.txt' : 'caesar-decoded.txt';
     const blob = new Blob([result], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -93,13 +100,17 @@ export default function CaesarCipherConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Mode</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              Mode
+            </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              {mode === 'encode' ? 'Encode text with Caesar cipher' : 'Decode Caesar cipher text'}
+              {mode === 'encode'
+                ? 'Encode text with Caesar cipher'
+                : 'Decode Caesar cipher text'}
             </p>
           </div>
           <button
@@ -110,7 +121,7 @@ export default function CaesarCipherConverter() {
             {mode === 'encode' ? 'Switch to Decode' : 'Switch to Encode'}
           </button>
         </div>
-        
+
         <div className="flex items-center gap-4">
           <div className="flex items-center gap-2">
             <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
@@ -124,10 +135,16 @@ export default function CaesarCipherConverter() {
               min="0"
               max="25"
               value={shift}
-              onChange={(e) => setShift(Math.max(0, Math.min(25, parseInt(e.target.value) || 0)))}
+              onChange={e =>
+                setShift(
+                  Math.max(0, Math.min(25, parseInt(e.target.value) || 0))
+                )
+              }
               className="w-16 px-2 py-1 border rounded text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700"
             />
-            <span className="text-xs text-gray-600 dark:text-gray-400">(0-25)</span>
+            <span className="text-xs text-gray-600 dark:text-gray-400">
+              (0-25)
+            </span>
           </div>
         </div>
       </div>
@@ -139,7 +156,11 @@ export default function CaesarCipherConverter() {
           </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder={mode === 'encode' ? 'Enter text to encode...' : 'Enter text to decode...'}
+            placeholder={
+              mode === 'encode'
+                ? 'Enter text to encode...'
+                : 'Enter text to decode...'
+            }
             value={inputText}
             onChange={handleInputChange}
           />
@@ -158,20 +179,31 @@ export default function CaesarCipherConverter() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Input Text (shift 3):</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello World!</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Input Text (shift 3):
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello World!
+              </div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Caesar Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Khoor Zruog!</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Caesar Output:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Khoor Zruog!
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            Caesar cipher shifts each letter by a fixed number of positions in the alphabet. Only letters are affected.
+            Caesar cipher shifts each letter by a fixed number of positions in
+            the alphabet. Only letters are affected.
           </div>
         </div>
       </div>
@@ -211,4 +243,4 @@ export default function CaesarCipherConverter() {
       </div>
     </div>
   );
-} 
+}

@@ -1,7 +1,17 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { Copy, Download, RefreshCw, Upload, Image as ImageIcon, FileImage } from 'lucide-react';
+import { FileImage, Image as ImageIcon } from 'lucide-react';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { Badge } from '@/components/ui/badge';
+import {
+  ToolLayout,
+  ImageProcessingLayout,
+  TwoColumnLayout,
+} from '@/lib/shared/ToolLayout';
+import { FileUpload } from '@/app/components/shared/ToolInputs';
+import { ImageProcessorActions } from '@/app/components/shared/ToolActions';
+import AdSpace from '../components/AdSpace';
 
 export default function WebpToPngConverter() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -10,10 +20,7 @@ export default function WebpToPngConverter() {
   const [convertedUrl, setConvertedUrl] = useState<string>('');
   const fileInputRef = useRef<HTMLInputElement>(null);
 
-  const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const file = event.target.files?.[0];
-    if (!file) return;
-
+  const handleFileUpload = (file: File) => {
     if (!file.type.includes('webp')) {
       alert('Please select a WEBP image file.');
       return;
@@ -37,21 +44,21 @@ export default function WebpToPngConverter() {
     try {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      
+
       if (!ctx) {
         throw new Error('Could not get canvas context');
       }
-      
+
       const img = new window.Image();
       img.src = URL.createObjectURL(selectedFile);
-      
+
       await new Promise<void>((resolve, reject) => {
         img.onload = () => {
           canvas.width = img.width;
           canvas.height = img.height;
           ctx.drawImage(img, 0, 0);
-          
-          canvas.toBlob((blob) => {
+
+          canvas.toBlob(blob => {
             if (blob) {
               const url = URL.createObjectURL(blob);
               setConvertedUrl(url);
@@ -73,7 +80,7 @@ export default function WebpToPngConverter() {
 
   const handleDownload = () => {
     if (!convertedUrl || !selectedFile) return;
-    
+
     const link = document.createElement('a');
     link.href = convertedUrl;
     link.download = selectedFile.name.replace(/\.webp$/i, '.png');
@@ -93,158 +100,151 @@ export default function WebpToPngConverter() {
 
   const getFileInfo = () => {
     if (!selectedFile) return null;
-    
+
     const sizeInMB = (selectedFile.size / (1024 * 1024)).toFixed(2);
     return {
       name: selectedFile.name,
       size: sizeInMB,
-      type: 'WEBP'
+      type: 'WEBP',
     };
   };
 
   const fileInfo = getFileInfo();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
-      {/* Upload Area */}
-      {!selectedFile && (
-        <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
-          <div className="space-y-4">
-            <div className="flex justify-center">
-              <FileImage className="h-12 w-12 text-gray-400" />
-            </div>
-            <div>
-              <label className="cursor-pointer">
-                <span className="text-lg font-medium text-gray-900 dark:text-gray-50">
-                  Upload a WEBP image to convert to PNG
-                </span>
-                <input
-                  ref={fileInputRef}
-                  type="file"
-                  accept=".webp,image/webp"
-                  onChange={handleFileUpload}
-                  className="hidden"
-                />
-              </label>
-              <p className="text-sm text-gray-500 dark:text-gray-400 mt-2">
-                WEBP files only • Max size: 10MB
-              </p>
-            </div>
-            <button
-              onClick={() => fileInputRef.current?.click()}
-              className="px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white rounded-lg font-medium transition-colors inline-flex items-center gap-2"
-            >
-              <Upload className="h-4 w-4" />
-              Choose WEBP File
-            </button>
-          </div>
-        </div>
-      )}
+    <ToolLayout>
+      <ImageProcessingLayout>
+        {/* Universal File Upload Component */}
+        <FileUpload
+          title="Upload WEBP Image"
+          onFileSelect={handleFileUpload}
+          acceptedTypes=".webp,image/webp"
+          maxSize={10}
+          preview={previewUrl}
+          previewAlt="WEBP Preview"
+          variant="professional"
+          icon={<FileImage className="h-12 w-12 text-muted-foreground" />}
+        />
 
-      {/* Image Preview and Conversion */}
-      {selectedFile && (
-        <div className="space-y-4">
-          {/* File Info */}
-          <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">File Information</h3>
-            <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-              <div>Name: {fileInfo?.name}</div>
-              <div>Size: {fileInfo?.size} MB</div>
-              <div>Type: {fileInfo?.type}</div>
-            </div>
-          </div>
-
-          {/* Preview */}
-          <div className="grid gap-6 md:grid-cols-2">
-            <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
-                Original WEBP Image
-              </label>
-              <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img 
-                  src={previewUrl} 
-                  alt="Original WEBP"
-                  className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
-                />
-              </div>
-            </div>
-
-            {/* Converted Preview */}
-            {convertedUrl && (
-              <div className="space-y-2">
-                <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
-                  Converted PNG Image
-                </label>
-                <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img 
-                    src={convertedUrl} 
-                    alt="Converted PNG"
-                    className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
-                  />
-                  <div className="text-xs text-green-600 dark:text-green-400 mt-2 text-center">
-                    ✓ Converted to PNG successfully
-                  </div>
+        {/* File Information Card */}
+        {selectedFile && fileInfo && (
+          <Card className="tool-card-vibrant">
+            <CardHeader className="pb-4">
+              <CardTitle className="text-lg font-semibold text-foreground flex items-center gap-2">
+                <ImageIcon className="h-5 w-5" />
+                File Information
+              </CardTitle>
+            </CardHeader>
+            <CardContent className="pt-0">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
+                <div className="space-y-1">
+                  <div className="text-muted-foreground">Filename</div>
+                  <div className="font-medium break-all">{fileInfo.name}</div>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-muted-foreground">File Size</div>
+                  <Badge variant="secondary">{fileInfo.size} MB</Badge>
+                </div>
+                <div className="space-y-1">
+                  <div className="text-muted-foreground">Format</div>
+                  <Badge variant="outline">{fileInfo.type}</Badge>
                 </div>
               </div>
-            )}
-          </div>
+            </CardContent>
+          </Card>
+        )}
 
-          {/* Convert Button */}
-          {!convertedUrl && (
-            <div className="flex justify-center">
-              <button
-                onClick={convertToPng}
-                disabled={isConverting}
-                className="px-6 py-3 bg-green-600 hover:bg-green-700 disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors inline-flex items-center gap-2"
-              >
-                {isConverting ? (
-                  <>
-                    <div className="animate-spin rounded-full h-4 w-4 border-b-2 border-white"></div>
-                    Converting...
-                  </>
-                ) : (
-                  <>
-                    <FileImage className="h-4 w-4" />
-                    Convert to PNG
-                  </>
-                )}
-              </button>
-            </div>
-          )}
+        {/* Ad Space */}
+        <AdSpace position="middle" />
 
-          {/* Action Buttons */}
-          <div className="flex flex-wrap gap-2">
+        {/* Image Preview Grid */}
+        {selectedFile && (
+          <TwoColumnLayout>
+            <Card className="tool-card-vibrant">
+              <CardHeader className="pb-4">
+                <CardTitle className="text-lg font-semibold text-foreground">
+                  Original WEBP Image
+                </CardTitle>
+              </CardHeader>
+              <CardContent className="pt-0">
+                <div className="border rounded-lg p-4 bg-muted/30 hover:bg-muted/50 transition-colors">
+                  <img
+                    src={previewUrl}
+                    alt="Original WEBP"
+                    className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
+                  />
+                </div>
+              </CardContent>
+            </Card>
+
             {convertedUrl && (
-              <button
-                onClick={handleDownload}
-                className="px-4 py-2 bg-blue-600 hover:bg-blue-700 text-white rounded-md text-sm font-medium transition-colors inline-flex items-center gap-2"
-              >
-                <Download className="h-4 w-4" />
-                Download PNG
-              </button>
+              <Card className="tool-card-vibrant">
+                <CardHeader className="pb-4">
+                  <CardTitle className="text-lg font-semibold text-foreground">
+                    Converted PNG Image
+                  </CardTitle>
+                </CardHeader>
+                <CardContent className="pt-0">
+                  <div className="border rounded-lg p-4 bg-muted/30 hover:bg-muted/50 transition-colors">
+                    <img
+                      src={convertedUrl}
+                      alt="Converted PNG"
+                      className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
+                    />
+                    <div className="text-xs text-emerald-600 dark:text-emerald-400 mt-2 text-center flex items-center justify-center gap-1">
+                      ✓ Successfully converted to PNG format
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
             )}
-            <button
-              onClick={handleClear}
-              className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-            >
-              <RefreshCw className="h-4 w-4" />
-              Clear
-            </button>
-          </div>
-        </div>
-      )}
+          </TwoColumnLayout>
+        )}
 
-      {/* Format Information */}
-      <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">About WEBP to PNG Conversion</h3>
-        <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-          <div>• WEBP is a modern image format with superior compression</div>
-          <div>• PNG provides lossless compression and transparency support</div>
-          <div>• Converting to PNG ensures wider browser compatibility</div>
-          <div>• PNG files are larger but maintain perfect image quality</div>
-          <div>• Ideal for images that need transparency or highest quality</div>
-        </div>
-      </div>
-    </div>
+        {/* Format Information */}
+        <Card className="tool-card-vibrant bg-primary/5 border-primary/20">
+          <CardHeader className="pb-4">
+            <CardTitle className="text-lg font-semibold text-foreground">
+              About WEBP to PNG Conversion
+            </CardTitle>
+          </CardHeader>
+          <CardContent className="pt-0">
+            <div className="text-sm text-muted-foreground space-y-2">
+              <div className="flex items-start gap-2">
+                <span className="text-primary">•</span>
+                <span>WEBP is a modern image format with superior compression</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary">•</span>
+                <span>PNG provides lossless compression and transparency support</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary">•</span>
+                <span>Converting to PNG ensures wider browser compatibility</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary">•</span>
+                <span>PNG files are larger but maintain perfect image quality</span>
+              </div>
+              <div className="flex items-start gap-2">
+                <span className="text-primary">•</span>
+                <span>Ideal for images that need transparency or highest quality</span>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
+
+        {/* Universal Image Processor Actions */}
+        <ImageProcessorActions
+          onDownload={handleDownload}
+          onClear={handleClear}
+          onProcess={convertToPng}
+          hasImage={!!selectedFile}
+          hasResult={!!convertedUrl}
+          processing={isConverting}
+          className="mt-8"
+        />
+      </ImageProcessingLayout>
+    </ToolLayout>
   );
-} 
+}

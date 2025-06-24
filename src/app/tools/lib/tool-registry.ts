@@ -6,23 +6,26 @@ export interface ToolComponentProps {
 }
 
 // Type for the dynamic component loader
-type ComponentLoader = () => Promise<{ default: ComponentType<ToolComponentProps> }>;
+type ComponentLoader = () => Promise<{
+  default: ComponentType<ToolComponentProps>;
+}>;
 
 // Registry of tool components with dynamic imports
 export const toolRegistry: Record<string, ComponentLoader> = {
   // Step 1 tools (Case converters & basic text tools)
-  'uppercase': () => import('../components/UppercaseConverter'),
-  'lowercase': () => import('../components/LowercaseConverter'),
+  uppercase: () => import('../components/UppercaseConverter'),
+  lowercase: () => import('../components/LowercaseConverter'),
   'title-case': () => import('../components/TitleCaseConverter'),
   'sentence-case': () => import('../components/SentenceCaseConverter'),
   'alternating-case': () => import('../components/AlternatingCaseConverter'),
   'text-counter': () => import('../components/TextCounter'),
   'bold-text': () => import('../components/BoldTextConverter'),
   'italic-text': () => import('../components/ItalicTextConverter'),
-  
+
   // Step 2 tools (Text formatting tools)
   'plain-text': () => import('../components/PlainTextConverter'),
-  'remove-text-formatting': () => import('../components/RemoveTextFormattingConverter'),
+  'remove-text-formatting': () =>
+    import('../components/RemoveTextFormattingConverter'),
   'remove-line-breaks': () => import('../components/RemoveLineBreaksConverter'),
   'repeat-text': () => import('../components/RepeatTextConverter'),
   'mirror-text': () => import('../components/MirrorTextConverter'),
@@ -33,7 +36,8 @@ export const toolRegistry: Record<string, ComponentLoader> = {
   // Step 3 tools (Text Analysis Tools)
   'sentence-counter': () => import('../components/SentenceCounter'),
   'word-frequency': () => import('../components/WordFrequencyConverter'),
-  'duplicate-line-remover': () => import('../components/DuplicateLineRemoverConverter'),
+  'duplicate-line-remover': () =>
+    import('../components/DuplicateLineRemoverConverter'),
   'sort-words': () => import('../components/SortWordsConverter'),
   'text-replace': () => import('../components/TextReplaceConverter'),
   'slugify-url': () => import('../components/SlugifyUrlConverter'),
@@ -41,18 +45,21 @@ export const toolRegistry: Record<string, ComponentLoader> = {
   'json-stringify': () => import('../components/JsonStringifyConverter'),
 
   // Step 4 tools (Encoding/Decoding Tools)
-  'base64-encoder-decoder': () => import('../components/Base64EncoderDecoderConverter'),
-  'binary-code-translator': () => import('../components/BinaryCodeTranslatorConverter'),
+  'base64-encoder-decoder': () =>
+    import('../components/Base64EncoderDecoderConverter'),
+  'binary-code-translator': () =>
+    import('../components/BinaryCodeTranslatorConverter'),
   'hex-to-text': () => import('../components/HexToTextConverter'),
   'utf8-converter': () => import('../components/Utf8Converter'),
   'url-converter': () => import('../components/UrlConverter'),
   'md5-hash': () => import('../components/Md5HashConverter'),
   'caesar-cipher': () => import('../components/CaesarCipherConverter'),
-  'rot13': () => import('../components/Rot13Converter'),
+  rot13: () => import('../components/Rot13Converter'),
 
   // Step 5 tools (Generator Tools)
   'uuid-generator': () => import('../components/UuidGeneratorConverter'),
-  'password-generator': () => import('../components/PasswordGeneratorConverter'),
+  'password-generator': () =>
+    import('../components/PasswordGeneratorConverter'),
   'random-number': () => import('../components/RandomNumberGeneratorConverter'),
   'random-choice': () => import('../components/RandomChoiceConverter'),
   'random-letter': () => import('../components/RandomLetterGeneratorConverter'),
@@ -67,7 +74,8 @@ export const toolRegistry: Record<string, ComponentLoader> = {
   'phonetic-spelling': () => import('../components/PhoneticSpellingConverter'),
   'cursed-text': () => import('../components/CursedTextConverter'),
   'big-text': () => import('../components/BigTextConverter'),
-  'ascii-art-generator': () => import('../components/AsciiArtGeneratorConverter'),
+  'ascii-art-generator': () =>
+    import('../components/AsciiArtGeneratorConverter'),
   'instagram-fonts': () => import('../components/InstagramFontsConverter'),
 
   // Step 7 tools (File Processing Tools)
@@ -93,11 +101,11 @@ export const toolRegistry: Record<string, ComponentLoader> = {
 // Function to get a lazy-loaded component
 export function getToolComponent(toolId: string) {
   const componentLoader = toolRegistry[toolId];
-  
+
   if (!componentLoader) {
     return null;
   }
-  
+
   return lazy(componentLoader);
 }
 
@@ -109,4 +117,4 @@ export function isToolRegistered(toolId: string): boolean {
 // Get all registered tool IDs
 export function getRegisteredToolIds(): string[] {
   return Object.keys(toolRegistry);
-} 
+}

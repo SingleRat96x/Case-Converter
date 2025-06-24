@@ -39,33 +39,37 @@ export default function PngToJpgConverter() {
     try {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      
+
       if (!ctx) {
         throw new Error('Could not get canvas context');
       }
-      
+
       const img = new window.Image();
       img.src = URL.createObjectURL(selectedFile);
-      
+
       await new Promise<void>((resolve, reject) => {
         img.onload = () => {
           canvas.width = img.width;
           canvas.height = img.height;
-          
+
           // Fill with chosen background color (JPG doesn't support transparency)
           ctx.fillStyle = backgroundColor;
           ctx.fillRect(0, 0, canvas.width, canvas.height);
           ctx.drawImage(img, 0, 0);
-          
-          canvas.toBlob((blob) => {
-            if (blob) {
-              const url = URL.createObjectURL(blob);
-              setConvertedUrl(url);
-              resolve();
-            } else {
-              reject(new Error('Failed to create blob'));
-            }
-          }, 'image/jpeg', quality / 100);
+
+          canvas.toBlob(
+            blob => {
+              if (blob) {
+                const url = URL.createObjectURL(blob);
+                setConvertedUrl(url);
+                resolve();
+              } else {
+                reject(new Error('Failed to create blob'));
+              }
+            },
+            'image/jpeg',
+            quality / 100
+          );
         };
         img.onerror = () => reject(new Error('Failed to load image'));
       });
@@ -79,7 +83,7 @@ export default function PngToJpgConverter() {
 
   const handleDownload = () => {
     if (!convertedUrl || !selectedFile) return;
-    
+
     const link = document.createElement('a');
     link.href = convertedUrl;
     link.download = selectedFile.name.replace(/\.png$/i, '.jpg');
@@ -99,19 +103,19 @@ export default function PngToJpgConverter() {
 
   const getFileInfo = () => {
     if (!selectedFile) return null;
-    
+
     const sizeInMB = (selectedFile.size / (1024 * 1024)).toFixed(2);
     return {
       name: selectedFile.name,
       size: sizeInMB,
-      type: 'PNG'
+      type: 'PNG',
     };
   };
 
   const fileInfo = getFileInfo();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Upload Area */}
       {!selectedFile && (
         <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
@@ -152,7 +156,9 @@ export default function PngToJpgConverter() {
         <div className="space-y-4">
           {/* Conversion Settings */}
           <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-3">Conversion Settings</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-3">
+              Conversion Settings
+            </h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
                 <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
@@ -163,7 +169,7 @@ export default function PngToJpgConverter() {
                   min="10"
                   max="100"
                   value={quality}
-                  onChange={(e) => setQuality(parseInt(e.target.value))}
+                  onChange={e => setQuality(parseInt(e.target.value))}
                   className="w-full mt-1"
                 />
               </div>
@@ -175,13 +181,13 @@ export default function PngToJpgConverter() {
                   <input
                     type="color"
                     value={backgroundColor}
-                    onChange={(e) => setBackgroundColor(e.target.value)}
+                    onChange={e => setBackgroundColor(e.target.value)}
                     className="w-12 h-8 rounded border"
                   />
                   <input
                     type="text"
                     value={backgroundColor}
-                    onChange={(e) => setBackgroundColor(e.target.value)}
+                    onChange={e => setBackgroundColor(e.target.value)}
                     className="flex-1 px-2 py-1 border rounded text-xs bg-background"
                     placeholder="#ffffff"
                   />
@@ -207,8 +213,8 @@ export default function PngToJpgConverter() {
                 Original PNG Image
               </label>
               <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img 
-                  src={previewUrl} 
+                <img
+                  src={previewUrl}
                   alt="Original PNG"
                   className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                 />
@@ -222,8 +228,8 @@ export default function PngToJpgConverter() {
                   Converted JPG Image
                 </label>
                 <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img 
-                    src={convertedUrl} 
+                  <img
+                    src={convertedUrl}
                     alt="Converted JPG"
                     className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                   />
@@ -282,15 +288,19 @@ export default function PngToJpgConverter() {
 
       {/* Format Information */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">About PNG to JPG Conversion</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          About PNG to JPG Conversion
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>• PNG supports transparency while JPG does not</div>
           <div>• Choose a background color to replace transparent areas</div>
           <div>• JPG files are typically smaller than PNG for photos</div>
-          <div>• Adjustable quality setting controls file size vs image quality</div>
+          <div>
+            • Adjustable quality setting controls file size vs image quality
+          </div>
           <div>• Best for photos where transparency is not needed</div>
         </div>
       </div>
     </div>
   );
-} 
+}

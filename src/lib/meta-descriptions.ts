@@ -28,7 +28,9 @@ export interface MetaDescription {
 }
 
 // Cache object to store meta descriptions
-const metaCache: { [key: string]: { content: MetaDescription; timestamp: number } } = {};
+const metaCache: {
+  [key: string]: { content: MetaDescription; timestamp: number };
+} = {};
 const CACHE_DURATION = 36000000; // 10 hours in milliseconds
 
 // Helper function to generate cache key
@@ -37,15 +39,20 @@ function getCacheKey(pageType: PageType, pageId: string): string {
 }
 
 // Get meta description for a specific page
-export async function getMetaDescription(pageType: PageType, pageId: string): Promise<MetaDescription | null> {
+export async function getMetaDescription(
+  pageType: PageType,
+  pageId: string
+): Promise<MetaDescription | null> {
   try {
     const cacheKey = getCacheKey(pageType, pageId);
     const cachedContent = metaCache[cacheKey];
     const now = Date.now();
-    
-    if (cachedContent && 
-        cachedContent.timestamp > 0 && 
-        (now - cachedContent.timestamp) < CACHE_DURATION) {
+
+    if (
+      cachedContent &&
+      cachedContent.timestamp > 0 &&
+      now - cachedContent.timestamp < CACHE_DURATION
+    ) {
       return cachedContent.content;
     }
 
@@ -59,14 +66,14 @@ export async function getMetaDescription(pageType: PageType, pageId: string): Pr
     if (error) {
       throw error;
     }
-    
+
     if (data) {
       metaCache[cacheKey] = {
         content: data,
-        timestamp: now
+        timestamp: now,
       };
     }
-    
+
     return data;
   } catch (error) {
     console.error('Error fetching meta description:', error);
@@ -95,10 +102,13 @@ export async function getAllMetaDescriptions(): Promise<MetaDescription[]> {
 }
 
 // Create or update meta description
-export async function upsertMetaDescription(meta: Omit<MetaDescription, 'id' | 'updated_at'>): Promise<MetaDescription | null> {
+export async function upsertMetaDescription(
+  meta: Omit<MetaDescription, 'id' | 'updated_at'>
+): Promise<MetaDescription | null> {
   try {
-    const id = meta.page_id === 'index' ? 'index' : `${meta.page_type}-${meta.page_id}`;
-    
+    const id =
+      meta.page_id === 'index' ? 'index' : `${meta.page_type}-${meta.page_id}`;
+
     const { data, error } = await supabase
       .from('meta_descriptions')
       .upsert({
@@ -116,7 +126,7 @@ export async function upsertMetaDescription(meta: Omit<MetaDescription, 'id' | '
 
     // Invalidate cache
     invalidateMetaCache(meta.page_type, meta.page_id);
-    
+
     return data;
   } catch (error) {
     console.error('Error upserting meta description:', error);
@@ -125,7 +135,10 @@ export async function upsertMetaDescription(meta: Omit<MetaDescription, 'id' | '
 }
 
 // Delete meta description
-export async function deleteMetaDescription(pageType: PageType, pageId: string): Promise<boolean> {
+export async function deleteMetaDescription(
+  pageType: PageType,
+  pageId: string
+): Promise<boolean> {
   try {
     const { error } = await supabase
       .from('meta_descriptions')
@@ -139,7 +152,7 @@ export async function deleteMetaDescription(pageType: PageType, pageId: string):
 
     // Invalidate cache
     invalidateMetaCache(pageType, pageId);
-    
+
     return true;
   } catch (error) {
     console.error('Error deleting meta description:', error);
@@ -161,10 +174,14 @@ export function invalidateAllMetaCaches(): void {
 }
 
 // Get default meta description for a page type
-export function getDefaultMetaDescription(pageType: PageType, title: string): Partial<MetaDescription> {
-  const baseDescription = 'Free online tool for text transformation and analysis.';
+export function getDefaultMetaDescription(
+  pageType: PageType,
+  title: string
+): Partial<MetaDescription> {
+  const baseDescription =
+    'Free online tool for text transformation and analysis.';
   const domain = 'https://case-converter.vercel.app';
-  
+
   return {
     meta_title: `${title} - Text Case Converter`,
     meta_description: baseDescription,
@@ -175,6 +192,6 @@ export function getDefaultMetaDescription(pageType: PageType, title: string): Pa
     twitter_card: 'summary_large_image',
     twitter_title: title,
     twitter_description: baseDescription,
-    canonical_url: `${domain}${pageType === 'tool' ? `/tools/${title.toLowerCase()}` : ''}`
+    canonical_url: `${domain}${pageType === 'tool' ? `/tools/${title.toLowerCase()}` : ''}`,
   };
-} 
+}

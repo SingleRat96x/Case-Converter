@@ -108,7 +108,7 @@ export default function NumberSorterConverter() {
       }
 
       // Sort the numbers
-      numbers.sort((a, b) => isDescending ? b - a : a - b);
+      numbers.sort((a, b) => (isDescending ? b - a : a - b));
 
       // Join the numbers back together
       return numbers.join(delimiter);
@@ -140,23 +140,30 @@ export default function NumberSorterConverter() {
 
   const getDelimiterDisplay = () => {
     switch (delimiter) {
-      case '\n': return 'New line';
-      case ',': return 'Comma';
-      case ' ': return 'Space';
-      case ';': return 'Semicolon';
-      default: return delimiter;
+      case '\n':
+        return 'New line';
+      case ',':
+        return 'Comma';
+      case ' ':
+        return 'Space';
+      case ';':
+        return 'Semicolon';
+      default:
+        return delimiter;
     }
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="grid gap-4 md:grid-cols-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Delimiter</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Delimiter
+          </label>
           <select
             value={delimiter}
-            onChange={(e) => setDelimiter(e.target.value)}
+            onChange={e => setDelimiter(e.target.value)}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           >
             <option value="\n">New line</option>
@@ -170,27 +177,39 @@ export default function NumberSorterConverter() {
             type="checkbox"
             id="descending"
             checked={isDescending}
-            onChange={(e) => setIsDescending(e.target.checked)}
+            onChange={e => setIsDescending(e.target.checked)}
             className="rounded"
           />
-          <label htmlFor="descending" className="text-sm text-gray-900 dark:text-gray-50">Sort descending</label>
+          <label
+            htmlFor="descending"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Sort descending
+          </label>
         </div>
         <div className="flex items-center space-x-2">
           <input
             type="checkbox"
             id="remove-duplicates"
             checked={removeDuplicates}
-            onChange={(e) => setRemoveDuplicates(e.target.checked)}
+            onChange={e => setRemoveDuplicates(e.target.checked)}
             className="rounded"
           />
-          <label htmlFor="remove-duplicates" className="text-sm text-gray-900 dark:text-gray-50">Remove duplicates</label>
+          <label
+            htmlFor="remove-duplicates"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Remove duplicates
+          </label>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Numbers</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Numbers
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100 font-mono"
             placeholder="Enter numbers (one per line or separated by commas)..."
@@ -201,7 +220,9 @@ export default function NumberSorterConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Sorted Numbers</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Sorted Numbers
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100 font-mono"
             readOnly
@@ -213,14 +234,18 @@ export default function NumberSorterConverter() {
       {/* Statistics */}
       {stats.count > 0 && (
         <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Number Statistics</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+            Number Statistics
+          </h3>
           <div className="grid grid-cols-2 md:grid-cols-6 gap-4 text-sm">
             <div>
               <span className="text-gray-600 dark:text-gray-400">Count:</span>
               <div className="font-semibold">{stats.count}</div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Duplicates:</span>
+              <span className="text-gray-600 dark:text-gray-400">
+                Duplicates:
+              </span>
               <div className="font-semibold">{stats.duplicates}</div>
             </div>
             <div>
@@ -278,4 +303,4 @@ export default function NumberSorterConverter() {
       </div>
     </div>
   );
-} 
+}

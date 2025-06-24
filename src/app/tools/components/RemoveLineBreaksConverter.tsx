@@ -23,7 +23,8 @@ export default function RemoveLineBreaksConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
@@ -37,18 +38,20 @@ export default function RemoveLineBreaksConverter() {
   const removeLineBreaks = (text: string) => {
     // Replace multiple consecutive line breaks with a single space
     let result = text.replace(/\n+/g, ' ');
-    
+
     // Replace multiple consecutive spaces with a single space
     result = result.replace(/\s+/g, ' ');
-    
+
     // Trim leading and trailing whitespace
     result = result.trim();
-    
+
     return result;
   };
 
   const handleDownload = () => {
-    const blob = new Blob([removeLineBreaks(inputText)], { type: 'text/plain' });
+    const blob = new Blob([removeLineBreaks(inputText)], {
+      type: 'text/plain',
+    });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
     a.href = url;
@@ -69,11 +72,13 @@ export default function RemoveLineBreaksConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -84,7 +89,9 @@ export default function RemoveLineBreaksConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Text Without Line Breaks</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Text Without Line Breaks
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
@@ -130,4 +137,4 @@ export default function RemoveLineBreaksConverter() {
       </div>
     </div>
   );
-} 
+}

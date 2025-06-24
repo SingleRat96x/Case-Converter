@@ -1,7 +1,15 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { Copy, Download, RefreshCw, Upload, Image, Settings, Maximize2 } from 'lucide-react';
+import {
+  Copy,
+  Download,
+  RefreshCw,
+  Upload,
+  Image,
+  Settings,
+  Maximize2,
+} from 'lucide-react';
 
 interface ImageDimensions {
   width: number;
@@ -11,8 +19,13 @@ interface ImageDimensions {
 export default function ImageResizerConverter() {
   const [selectedImage, setSelectedImage] = useState<string | null>(null);
   const [fileName, setFileName] = useState('');
-  const [originalDimensions, setOriginalDimensions] = useState<ImageDimensions>({ width: 0, height: 0 });
-  const [targetDimensions, setTargetDimensions] = useState<ImageDimensions>({ width: 0, height: 0 });
+  const [originalDimensions, setOriginalDimensions] = useState<ImageDimensions>(
+    { width: 0, height: 0 }
+  );
+  const [targetDimensions, setTargetDimensions] = useState<ImageDimensions>({
+    width: 0,
+    height: 0,
+  });
   const [maintainAspectRatio, setMaintainAspectRatio] = useState(true);
   const [quality, setQuality] = useState(90);
   const [outputFormat, setOutputFormat] = useState('jpeg');
@@ -29,7 +42,7 @@ export default function ImageResizerConverter() {
     { name: 'LinkedIn Post', width: 1200, height: 627 },
     { name: 'YouTube Thumbnail', width: 1280, height: 720 },
     { name: 'Profile Picture', width: 400, height: 400 },
-    { name: 'Banner', width: 1920, height: 1080 }
+    { name: 'Banner', width: 1920, height: 1080 },
   ];
 
   const handleFileUpload = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -48,8 +61,8 @@ export default function ImageResizerConverter() {
 
     setFileName(file.name);
     const reader = new FileReader();
-    
-    reader.onload = (e) => {
+
+    reader.onload = e => {
       const img = new window.Image();
       img.onload = () => {
         setOriginalDimensions({ width: img.width, height: img.height });
@@ -58,29 +71,36 @@ export default function ImageResizerConverter() {
       };
       img.src = e.target?.result as string;
     };
-    
+
     reader.readAsDataURL(file);
   };
 
-  const handleDimensionChange = (dimension: 'width' | 'height', value: number) => {
-    if (maintainAspectRatio && originalDimensions.width > 0 && originalDimensions.height > 0) {
+  const handleDimensionChange = (
+    dimension: 'width' | 'height',
+    value: number
+  ) => {
+    if (
+      maintainAspectRatio &&
+      originalDimensions.width > 0 &&
+      originalDimensions.height > 0
+    ) {
       const aspectRatio = originalDimensions.width / originalDimensions.height;
-      
+
       if (dimension === 'width') {
         setTargetDimensions({
           width: value,
-          height: Math.round(value / aspectRatio)
+          height: Math.round(value / aspectRatio),
         });
       } else {
         setTargetDimensions({
           width: Math.round(value * aspectRatio),
-          height: value
+          height: value,
         });
       }
     } else {
       setTargetDimensions(prev => ({
         ...prev,
-        [dimension]: value
+        [dimension]: value,
       }));
     }
   };
@@ -93,30 +113,40 @@ export default function ImageResizerConverter() {
     if (!selectedImage || !canvasRef.current) return;
 
     setIsProcessing(true);
-    
+
     try {
       const img = new window.Image();
       img.onload = () => {
         const canvas = canvasRef.current!;
         const ctx = canvas.getContext('2d')!;
-        
+
         canvas.width = targetDimensions.width;
         canvas.height = targetDimensions.height;
-        
+
         // Clear canvas
         ctx.clearRect(0, 0, canvas.width, canvas.height);
-        
+
         // Draw resized image
-        ctx.drawImage(img, 0, 0, targetDimensions.width, targetDimensions.height);
-        
+        ctx.drawImage(
+          img,
+          0,
+          0,
+          targetDimensions.width,
+          targetDimensions.height
+        );
+
         // Convert to desired format
-        const outputMimeType = outputFormat === 'png' ? 'image/png' : 'image/jpeg';
-        const processedDataUrl = canvas.toDataURL(outputMimeType, quality / 100);
-        
+        const outputMimeType =
+          outputFormat === 'png' ? 'image/png' : 'image/jpeg';
+        const processedDataUrl = canvas.toDataURL(
+          outputMimeType,
+          quality / 100
+        );
+
         setProcessedImage(processedDataUrl);
         setIsProcessing(false);
       };
-      
+
       img.src = selectedImage;
     } catch (error) {
       console.error('Image processing failed:', error);
@@ -126,7 +156,7 @@ export default function ImageResizerConverter() {
 
   const handleDownload = () => {
     if (!processedImage) return;
-    
+
     const link = document.createElement('a');
     link.download = `resized-${fileName.replace(/\.[^/.]+$/, '')}.${outputFormat}`;
     link.href = processedImage;
@@ -148,21 +178,22 @@ export default function ImageResizerConverter() {
 
   const getFileSizeEstimate = () => {
     if (!targetDimensions.width || !targetDimensions.height) return '';
-    
+
     // Rough estimate based on dimensions and quality
     const pixels = targetDimensions.width * targetDimensions.height;
     const bytesPerPixel = outputFormat === 'png' ? 4 : (quality / 100) * 3;
     const estimatedBytes = pixels * bytesPerPixel;
-    
+
     if (estimatedBytes < 1024) return `~${estimatedBytes.toFixed(0)} B`;
-    if (estimatedBytes < 1024 * 1024) return `~${(estimatedBytes / 1024).toFixed(1)} KB`;
+    if (estimatedBytes < 1024 * 1024)
+      return `~${(estimatedBytes / 1024).toFixed(1)} KB`;
     return `~${(estimatedBytes / (1024 * 1024)).toFixed(1)} MB`;
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <canvas ref={canvasRef} className="hidden" />
-      
+
       {/* Upload Area */}
       {!selectedImage && (
         <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
@@ -208,8 +239,8 @@ export default function ImageResizerConverter() {
                 Original Image
               </label>
               <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img 
-                  src={selectedImage} 
+                <img
+                  src={selectedImage}
                   alt="Original"
                   className="max-w-full h-auto rounded max-h-64 object-contain mx-auto"
                 />
@@ -226,13 +257,14 @@ export default function ImageResizerConverter() {
                   Resized Image
                 </label>
                 <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img 
-                    src={processedImage} 
+                  <img
+                    src={processedImage}
                     alt="Resized"
                     className="max-w-full h-auto rounded max-h-64 object-contain mx-auto"
                   />
                   <div className="text-xs text-gray-500 dark:text-gray-400 mt-2 text-center">
-                    {targetDimensions.width} × {targetDimensions.height} px • {getFileSizeEstimate()}
+                    {targetDimensions.width} × {targetDimensions.height} px •{' '}
+                    {getFileSizeEstimate()}
                   </div>
                 </div>
               </div>
@@ -243,30 +275,46 @@ export default function ImageResizerConverter() {
           <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg space-y-4">
             <div className="flex items-center gap-2">
               <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Resize Settings</h3>
+              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Resize Settings
+              </h3>
             </div>
 
             {/* Dimensions */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">Width (px)</label>
+                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                  Width (px)
+                </label>
                 <input
                   type="number"
                   min="1"
                   max="5000"
                   value={targetDimensions.width}
-                  onChange={(e) => handleDimensionChange('width', parseInt(e.target.value) || 0)}
+                  onChange={e =>
+                    handleDimensionChange(
+                      'width',
+                      parseInt(e.target.value) || 0
+                    )
+                  }
                   className="w-full px-3 py-2 border rounded-md text-sm bg-background"
                 />
               </div>
               <div className="space-y-2">
-                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">Height (px)</label>
+                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                  Height (px)
+                </label>
                 <input
                   type="number"
                   min="1"
                   max="5000"
                   value={targetDimensions.height}
-                  onChange={(e) => handleDimensionChange('height', parseInt(e.target.value) || 0)}
+                  onChange={e =>
+                    handleDimensionChange(
+                      'height',
+                      parseInt(e.target.value) || 0
+                    )
+                  }
                   className="w-full px-3 py-2 border rounded-md text-sm bg-background"
                 />
               </div>
@@ -277,7 +325,7 @@ export default function ImageResizerConverter() {
               <input
                 type="checkbox"
                 checked={maintainAspectRatio}
-                onChange={(e) => setMaintainAspectRatio(e.target.checked)}
+                onChange={e => setMaintainAspectRatio(e.target.checked)}
                 className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
               />
               Maintain aspect ratio
@@ -285,9 +333,11 @@ export default function ImageResizerConverter() {
 
             {/* Preset Sizes */}
             <div className="space-y-2">
-              <label className="text-xs font-medium text-gray-700 dark:text-gray-300">Quick Presets</label>
+              <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                Quick Presets
+              </label>
               <div className="flex flex-wrap gap-2">
-                {presetSizes.map((preset) => (
+                {presetSizes.map(preset => (
                   <button
                     key={preset.name}
                     onClick={() => applyPresetSize(preset)}
@@ -302,10 +352,12 @@ export default function ImageResizerConverter() {
             {/* Format and Quality */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div className="space-y-2">
-                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">Output Format</label>
+                <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
+                  Output Format
+                </label>
                 <select
                   value={outputFormat}
-                  onChange={(e) => setOutputFormat(e.target.value)}
+                  onChange={e => setOutputFormat(e.target.value)}
                   className="w-full px-3 py-2 border rounded-md text-sm bg-background"
                 >
                   <option value="jpeg">JPEG</option>
@@ -321,7 +373,7 @@ export default function ImageResizerConverter() {
                   min="10"
                   max="100"
                   value={quality}
-                  onChange={(e) => setQuality(parseInt(e.target.value))}
+                  onChange={e => setQuality(parseInt(e.target.value))}
                   className="w-full"
                   disabled={outputFormat === 'png'}
                 />
@@ -333,7 +385,11 @@ export default function ImageResizerConverter() {
           <div className="flex justify-center">
             <button
               onClick={processImage}
-              disabled={isProcessing || !targetDimensions.width || !targetDimensions.height}
+              disabled={
+                isProcessing ||
+                !targetDimensions.width ||
+                !targetDimensions.height
+              }
               className="px-6 py-3 bg-blue-600 hover:bg-blue-700 disabled:bg-gray-400 text-white rounded-lg font-medium transition-colors inline-flex items-center gap-2"
             >
               {isProcessing ? (
@@ -374,9 +430,13 @@ export default function ImageResizerConverter() {
 
       {/* Features */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Features</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Features
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-          <div>• Resize images to custom dimensions or social media presets</div>
+          <div>
+            • Resize images to custom dimensions or social media presets
+          </div>
           <div>• Maintain aspect ratio or stretch to exact dimensions</div>
           <div>• Convert between JPEG and PNG formats</div>
           <div>• Adjust quality for file size optimization</div>
@@ -385,4 +445,4 @@ export default function ImageResizerConverter() {
       </div>
     </div>
   );
-} 
+}

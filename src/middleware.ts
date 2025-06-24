@@ -15,21 +15,23 @@ export function middleware(request: NextRequest) {
       console.error('Invalid NEXT_PUBLIC_SUPABASE_URL for CSP', e);
     }
   } else {
-    console.warn('NEXT_PUBLIC_SUPABASE_URL is not defined. CSP will be less specific for Supabase.');
+    console.warn(
+      'NEXT_PUBLIC_SUPABASE_URL is not defined. CSP will be less specific for Supabase.'
+    );
   }
 
   // Construct script-src policies with unsafe-inline approach for dangerouslySetInnerHTML
   let scriptSrcPolicies = [
     "'self'",
     supabaseHostname ? `https://${supabaseHostname}` : null,
-    "https://*.googletagmanager.com",
-    "https://*.google-analytics.com",
-    "https://pagead2.googlesyndication.com",
-    "https://*.grow.me",
-    "https://vercel.com",
-    "https://*.vercel-insights.com",
-    "https://fundingchoicesmessages.google.com",
-    "'unsafe-inline'" // Allow inline scripts for dangerouslySetInnerHTML approach
+    'https://*.googletagmanager.com',
+    'https://*.google-analytics.com',
+    'https://pagead2.googlesyndication.com',
+    'https://*.grow.me',
+    'https://vercel.com',
+    'https://*.vercel-insights.com',
+    'https://fundingchoicesmessages.google.com',
+    "'unsafe-inline'", // Allow inline scripts for dangerouslySetInnerHTML approach
   ].filter(Boolean) as string[];
 
   // Conditionally add 'unsafe-eval' for development
@@ -42,16 +44,16 @@ export function middleware(request: NextRequest) {
   // Construct img-src policies
   let imgSrcPolicies = [
     "'self'",
-    "data:",
+    'data:',
     supabaseHostname ? `https://*.supabase.co` : null,
     supabaseHostname ? `https://${supabaseHostname}` : null,
-    "https://pagead2.googlesyndication.com",
-    "https://*.googleusercontent.com",
-    "https://*.googletagmanager.com",
-    "https://*.google-analytics.com",
-    "https://*.g.doubleclick.net",
-    "https://*.grow.me",
-    "https://res.cloudinary.com" // Allow Cloudinary images for Grow.me
+    'https://pagead2.googlesyndication.com',
+    'https://*.googleusercontent.com',
+    'https://*.googletagmanager.com',
+    'https://*.google-analytics.com',
+    'https://*.g.doubleclick.net',
+    'https://*.grow.me',
+    'https://res.cloudinary.com', // Allow Cloudinary images for Grow.me
   ].filter(Boolean) as string[];
 
   // Construct the full CSP header value
@@ -67,41 +69,41 @@ export function middleware(request: NextRequest) {
     "base-uri 'self'",
     "form-action 'self'",
     "frame-ancestors 'self'",
-    "upgrade-insecure-requests"
+    'upgrade-insecure-requests',
   ];
   const cspHeaderValue = cspDirectives.join('; ');
 
   // Define additional security headers
   const permissionsPolicyValue = [
-    "accelerometer=()",
-    "autoplay=()", // Consider (self) if you need autoplay for your own videos
-    "camera=()",
-    "display-capture=()",
-    "fullscreen=(self)",
-    "geolocation=()", // Enable with (self "https://some-trusted-map-service.com") if needed
-    "gyroscope=()",
-    "keyboard-map=()",
-    "magnetometer=()",
-    "microphone=()",
-    "midi=()",
-    "payment=()",
-    "picture-in-picture=()",
-    "publickey-credentials-get=(self)", // For WebAuthn if you use it
-    "screen-wake-lock=()",
-    "sync-xhr=()",
-    "usb=()",
-    "web-share=()",
-    "xr-spatial-tracking=()",
-    "clipboard-read=()",
-    "clipboard-write=(self)",
+    'accelerometer=()',
+    'autoplay=()', // Consider (self) if you need autoplay for your own videos
+    'camera=()',
+    'display-capture=()',
+    'fullscreen=(self)',
+    'geolocation=()', // Enable with (self "https://some-trusted-map-service.com") if needed
+    'gyroscope=()',
+    'keyboard-map=()',
+    'magnetometer=()',
+    'microphone=()',
+    'midi=()',
+    'payment=()',
+    'picture-in-picture=()',
+    'publickey-credentials-get=(self)', // For WebAuthn if you use it
+    'screen-wake-lock=()',
+    'sync-xhr=()',
+    'usb=()',
+    'web-share=()',
+    'xr-spatial-tracking=()',
+    'clipboard-read=()',
+    'clipboard-write=(self)',
     // Advertising related features - try with broader allowance for now
     // Note: '*' for ad features can be a security risk if not understood.
     // This is for debugging the "unrecognized feature" vs. "origin trial" errors.
     // Ideally, these would be restricted to specific ad provider domains if they actually function.
     'attribution-reporting=*', // Try with *
-    'browsing-topics=*',       // Try with *
-    'join-ad-interest-group=*',// Try with *
-    'run-ad-auction=*'         // Try with *
+    'browsing-topics=*', // Try with *
+    'join-ad-interest-group=*', // Try with *
+    'run-ad-auction=*', // Try with *
   ].join(','); // Join with comma
 
   // Admin Authentication Logic & Response Handling
@@ -110,7 +112,8 @@ export function middleware(request: NextRequest) {
   // Check if the request is for an admin route
   if (request.nextUrl.pathname.startsWith('/admin/dashboard')) {
     // Get the auth token from cookies
-    const isAuthenticated = request.cookies.get('isAdminAuthenticated')?.value === 'true';
+    const isAuthenticated =
+      request.cookies.get('isAdminAuthenticated')?.value === 'true';
 
     // If not authenticated, redirect to login page
     if (!isAuthenticated) {
@@ -118,7 +121,10 @@ export function middleware(request: NextRequest) {
       response = NextResponse.redirect(redirectUrl);
       // response.headers.set('Content-Security-Policy', cspHeaderValue);
       response.headers.set('X-Content-Type-Options', 'nosniff');
-      response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+      response.headers.set(
+        'Referrer-Policy',
+        'strict-origin-when-cross-origin'
+      );
       response.headers.set('Permissions-Policy', permissionsPolicyValue);
       return response;
     }

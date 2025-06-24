@@ -8,7 +8,7 @@ export default function Rot13Converter() {
 
   const rot13 = (text: string): string => {
     try {
-      return text.replace(/[a-zA-Z]/g, (char) => {
+      return text.replace(/[a-zA-Z]/g, char => {
         const code = char.charCodeAt(0);
         const isUpperCase = code >= 65 && code <= 90;
         const base = isUpperCase ? 65 : 97;
@@ -47,12 +47,15 @@ export default function Rot13Converter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div>
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">ROT13 Cipher</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            ROT13 Cipher
+          </h3>
           <p className="text-xs text-gray-600 dark:text-gray-400">
-            ROT13 is its own inverse - encoding and decoding use the same operation
+            ROT13 is its own inverse - encoding and decoding use the same
+            operation
           </p>
         </div>
       </div>
@@ -66,7 +69,7 @@ export default function Rot13Converter() {
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Enter text to encode/decode using ROT13..."
             value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            onChange={e => setInputText(e.target.value)}
           />
         </div>
 
@@ -83,20 +86,31 @@ export default function Rot13Converter() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Input Text:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello World!</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Input Text:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello World!
+              </div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">ROT13 Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Uryyb Jbeyq!</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                ROT13 Output:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Uryyb Jbeyq!
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            ROT13 shifts each letter 13 positions in the alphabet. Apply ROT13 twice to get back the original text.
+            ROT13 shifts each letter 13 positions in the alphabet. Apply ROT13
+            twice to get back the original text.
           </div>
         </div>
       </div>
@@ -128,10 +142,15 @@ export default function Rot13Converter() {
       <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
         <span>Characters: {inputText.length}</span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Words: {inputText.trim() === '' ? 0 : inputText.trim().split(/\s+/).length}</span>
+        <span>
+          Words:{' '}
+          {inputText.trim() === '' ? 0 : inputText.trim().split(/\s+/).length}
+        </span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Lines: {inputText.trim() === '' ? 0 : inputText.split('\n').length}</span>
+        <span>
+          Lines: {inputText.trim() === '' ? 0 : inputText.split('\n').length}
+        </span>
       </div>
     </div>
   );
-} 
+}

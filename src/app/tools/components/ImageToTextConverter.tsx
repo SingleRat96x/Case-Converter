@@ -1,7 +1,15 @@
 'use client';
 
 import { useState, useRef } from 'react';
-import { Copy, Download, RefreshCw, Upload, Image, FileText, AlertCircle } from 'lucide-react';
+import {
+  Copy,
+  Download,
+  RefreshCw,
+  Upload,
+  Image,
+  FileText,
+  AlertCircle,
+} from 'lucide-react';
 
 export default function ImageToTextConverter() {
   const [extractedText, setExtractedText] = useState('');
@@ -12,24 +20,27 @@ export default function ImageToTextConverter() {
 
   // Mock OCR function - in a real app, you would use a service like Tesseract.js or Google Vision API
   const simulateOCR = (file: File): Promise<string> => {
-    return new Promise((resolve) => {
+    return new Promise(resolve => {
       // Simulate processing time
       setTimeout(() => {
         // Mock extracted text based on file name or random samples
         const sampleTexts = [
-          "This is sample extracted text from your image. In a real implementation, this would be processed using OCR technology like Tesseract.js or Google Vision API.",
-          "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-          "Sample document text:\n\nTitle: Important Document\n\nThis document contains important information that has been extracted from the uploaded image using OCR technology.",
-          "Receipt Example:\n\nStore Name: Sample Store\nDate: 2024-01-15\nTotal: $25.99\n\nThank you for your purchase!"
+          'This is sample extracted text from your image. In a real implementation, this would be processed using OCR technology like Tesseract.js or Google Vision API.',
+          'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
+          'Sample document text:\n\nTitle: Important Document\n\nThis document contains important information that has been extracted from the uploaded image using OCR technology.',
+          'Receipt Example:\n\nStore Name: Sample Store\nDate: 2024-01-15\nTotal: $25.99\n\nThank you for your purchase!',
         ];
-        
-        const randomText = sampleTexts[Math.floor(Math.random() * sampleTexts.length)];
+
+        const randomText =
+          sampleTexts[Math.floor(Math.random() * sampleTexts.length)];
         resolve(randomText);
       }, 2000); // 2 second delay to simulate processing
     });
   };
 
-  const handleFileUpload = async (event: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = async (
+    event: React.ChangeEvent<HTMLInputElement>
+  ) => {
     const file = event.target.files?.[0];
     if (!file) return;
 
@@ -52,7 +63,7 @@ export default function ImageToTextConverter() {
     try {
       // Create preview
       const reader = new FileReader();
-      reader.onload = (e) => {
+      reader.onload = e => {
         setSelectedImage(e.target?.result as string);
       };
       reader.readAsDataURL(file);
@@ -62,7 +73,9 @@ export default function ImageToTextConverter() {
       setExtractedText(text);
     } catch (error) {
       console.error('OCR processing failed:', error);
-      setExtractedText('Error: Failed to extract text from image. Please try again.');
+      setExtractedText(
+        'Error: Failed to extract text from image. Please try again.'
+      );
     } finally {
       setIsProcessing(false);
     }
@@ -76,7 +89,7 @@ export default function ImageToTextConverter() {
 
   const handleDownload = () => {
     if (!extractedText) return;
-    
+
     const content = `Extracted Text from Image
 Generated on: ${new Date().toLocaleString()}
 Original file: ${fileName}
@@ -105,18 +118,18 @@ ${extractedText}`;
 
   const getStats = () => {
     if (!extractedText) return null;
-    
+
     const words = extractedText.trim().split(/\s+/).length;
     const lines = extractedText.split('\n').length;
     const characters = extractedText.length;
-    
+
     return { words, lines, characters };
   };
 
   const stats = getStats();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Upload Area */}
       <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
         <div className="space-y-4">
@@ -177,8 +190,8 @@ ${extractedText}`;
                 Uploaded Image
               </label>
               <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img 
-                  src={selectedImage} 
+                <img
+                  src={selectedImage}
                   alt="Uploaded"
                   className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                 />
@@ -200,7 +213,7 @@ ${extractedText}`;
               <textarea
                 className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
                 value={extractedText}
-                onChange={(e) => setExtractedText(e.target.value)}
+                onChange={e => setExtractedText(e.target.value)}
                 placeholder="Extracted text will appear here..."
               />
             </div>
@@ -213,9 +226,14 @@ ${extractedText}`;
         <div className="flex items-start gap-3">
           <AlertCircle className="h-5 w-5 text-yellow-600 dark:text-yellow-400 mt-0.5" />
           <div>
-            <h3 className="text-sm font-medium text-yellow-800 dark:text-yellow-200">Demo Mode</h3>
+            <h3 className="text-sm font-medium text-yellow-800 dark:text-yellow-200">
+              Demo Mode
+            </h3>
             <p className="text-xs text-yellow-700 dark:text-yellow-300 mt-1">
-              This is a demo version that generates sample text. In a real implementation, this would use OCR libraries like Tesseract.js or cloud services like Google Vision API to extract actual text from images.
+              This is a demo version that generates sample text. In a real
+              implementation, this would use OCR libraries like Tesseract.js or
+              cloud services like Google Vision API to extract actual text from
+              images.
             </p>
           </div>
         </div>
@@ -261,7 +279,9 @@ ${extractedText}`;
 
       {/* Features List */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Supported Use Cases</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Supported Use Cases
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>• Extract text from screenshots and documents</div>
           <div>• Convert handwritten notes to digital text</div>
@@ -272,4 +292,4 @@ ${extractedText}`;
       </div>
     </div>
   );
-} 
+}

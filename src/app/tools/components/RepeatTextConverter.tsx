@@ -25,7 +25,8 @@ export default function RepeatTextConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
@@ -84,25 +85,29 @@ export default function RepeatTextConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Controls */}
       <div className="grid gap-4 md:grid-cols-2">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Number of repetitions</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Number of repetitions
+          </label>
           <input
             type="number"
             min={1}
             max={1000}
             value={count}
-            onChange={(e) => setCount(parseInt(e.target.value) || 1)}
+            onChange={e => setCount(parseInt(e.target.value) || 1)}
             className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           />
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Separator</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Separator
+          </label>
           <select
             value={separator}
-            onChange={(e) => setSeparator(e.target.value)}
+            onChange={e => setSeparator(e.target.value)}
             className="w-full p-3 rounded-lg border bg-background focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
           >
             <option value="newline">New Line</option>
@@ -116,7 +121,9 @@ export default function RepeatTextConverter() {
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -127,7 +134,9 @@ export default function RepeatTextConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Repeated Text Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Repeated Text Result
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
@@ -173,4 +182,4 @@ export default function RepeatTextConverter() {
       </div>
     </div>
   );
-} 
+}

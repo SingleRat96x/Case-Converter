@@ -37,21 +37,21 @@ export default function JpgToPngConverter() {
     try {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      
+
       if (!ctx) {
         throw new Error('Could not get canvas context');
       }
-      
+
       const img = new window.Image();
       img.src = URL.createObjectURL(selectedFile);
-      
+
       await new Promise<void>((resolve, reject) => {
         img.onload = () => {
           canvas.width = img.width;
           canvas.height = img.height;
           ctx.drawImage(img, 0, 0);
-          
-          canvas.toBlob((blob) => {
+
+          canvas.toBlob(blob => {
             if (blob) {
               const url = URL.createObjectURL(blob);
               setConvertedUrl(url);
@@ -73,7 +73,7 @@ export default function JpgToPngConverter() {
 
   const handleDownload = () => {
     if (!convertedUrl || !selectedFile) return;
-    
+
     const link = document.createElement('a');
     link.href = convertedUrl;
     link.download = selectedFile.name.replace(/\.(jpg|jpeg)$/i, '.png');
@@ -93,19 +93,19 @@ export default function JpgToPngConverter() {
 
   const getFileInfo = () => {
     if (!selectedFile) return null;
-    
+
     const sizeInMB = (selectedFile.size / (1024 * 1024)).toFixed(2);
     return {
       name: selectedFile.name,
       size: sizeInMB,
-      type: 'JPG/JPEG'
+      type: 'JPG/JPEG',
     };
   };
 
   const fileInfo = getFileInfo();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Upload Area */}
       {!selectedFile && (
         <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
@@ -146,7 +146,9 @@ export default function JpgToPngConverter() {
         <div className="space-y-4">
           {/* File Info */}
           <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">File Information</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+              File Information
+            </h3>
             <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
               <div>Name: {fileInfo?.name}</div>
               <div>Size: {fileInfo?.size} MB</div>
@@ -161,8 +163,8 @@ export default function JpgToPngConverter() {
                 Original JPG Image
               </label>
               <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img 
-                  src={previewUrl} 
+                <img
+                  src={previewUrl}
                   alt="Original JPG"
                   className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                 />
@@ -176,8 +178,8 @@ export default function JpgToPngConverter() {
                   Converted PNG Image
                 </label>
                 <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img 
-                    src={convertedUrl} 
+                  <img
+                    src={convertedUrl}
                     alt="Converted PNG"
                     className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                   />
@@ -236,15 +238,23 @@ export default function JpgToPngConverter() {
 
       {/* Format Information */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">About JPG to PNG Conversion</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          About JPG to PNG Conversion
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>• PNG provides lossless compression while JPG is lossy</div>
           <div>• PNG supports transparency, making it ideal for graphics</div>
-          <div>• File sizes will be larger but with perfect quality preservation</div>
-          <div>• Best for images with text, sharp edges, or simple graphics</div>
-          <div>• Maintains original image quality without compression artifacts</div>
+          <div>
+            • File sizes will be larger but with perfect quality preservation
+          </div>
+          <div>
+            • Best for images with text, sharp edges, or simple graphics
+          </div>
+          <div>
+            • Maintains original image quality without compression artifacts
+          </div>
         </div>
       </div>
     </div>
   );
-} 
+}

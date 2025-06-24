@@ -18,7 +18,8 @@ export async function generateMetadata(): Promise<Metadata> {
     'static',
     'contact-us',
     page?.title || 'Contact Us',
-    page?.short_description || 'Get in touch with us for any questions or feedback'
+    page?.short_description ||
+      'Get in touch with us for any questions or feedback'
   );
 }
 
@@ -33,7 +34,7 @@ export default async function ContactUsPage() {
   let sanitizedContent = '';
   if (page && page.content) {
     // Create a JSDOM window. DOMPurify needs this to run in Node.js.
-    const window = new JSDOM('').window; 
+    const window = new JSDOM('').window;
     const DOMPurify = DOMPurifyFactory(window as any);
     sanitizedContent = DOMPurify.sanitize(page.content);
   }
@@ -47,4 +48,4 @@ export default async function ContactUsPage() {
       </article>
     </main>
   );
-} 
+}

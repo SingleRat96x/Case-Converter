@@ -1,8 +1,20 @@
 'use client';
 
 import { useState, useEffect } from 'react';
-import { Copy, Download, RefreshCw, Save, Search, Replace, FileText, 
-         Type, SortAsc, RotateCcw, Trash2, Settings } from 'lucide-react';
+import {
+  Copy,
+  Download,
+  RefreshCw,
+  Save,
+  Search,
+  Replace,
+  FileText,
+  Type,
+  SortAsc,
+  RotateCcw,
+  Trash2,
+  Settings,
+} from 'lucide-react';
 
 export default function OnlineNotepadConverter() {
   const [content, setContent] = useState('');
@@ -22,7 +34,7 @@ export default function OnlineNotepadConverter() {
   // Auto-save content
   useEffect(() => {
     if (!autoSave) return;
-    
+
     const saveContent = () => {
       if (content) {
         localStorage.setItem('online-notepad-content', content);
@@ -37,8 +49,10 @@ export default function OnlineNotepadConverter() {
   const getStats = () => {
     const lines = content.split('\n');
     const words = content.trim() ? content.trim().split(/\s+/).length : 0;
-    const paragraphs = content.trim() ? content.split(/\n\s*\n/).filter(p => p.trim()).length : 0;
-    
+    const paragraphs = content.trim()
+      ? content.split(/\n\s*\n/).filter(p => p.trim()).length
+      : 0;
+
     return {
       characters: content.length,
       charactersNoSpaces: content.replace(/\s/g, '').length,
@@ -58,11 +72,13 @@ export default function OnlineNotepadConverter() {
         setContent(content.toLowerCase());
         break;
       case 'capitalize':
-        setContent(content.replace(/\b\w/g, (char) => char.toUpperCase()));
+        setContent(content.replace(/\b\w/g, char => char.toUpperCase()));
         break;
       case 'sentence':
         setContent(
-          content.toLowerCase().replace(/(^\w|\.\s+\w)/g, (char) => char.toUpperCase())
+          content
+            .toLowerCase()
+            .replace(/(^\w|\.\s+\w)/g, char => char.toUpperCase())
         );
         break;
       case 'reverse':
@@ -72,7 +88,12 @@ export default function OnlineNotepadConverter() {
         setContent(content.replace(/\s+/g, ''));
         break;
       case 'trimLines':
-        setContent(content.split('\n').map(line => line.trim()).join('\n'));
+        setContent(
+          content
+            .split('\n')
+            .map(line => line.trim())
+            .join('\n')
+        );
         break;
       case 'removeDuplicateLines':
         const lines = content.split('\n');
@@ -84,7 +105,9 @@ export default function OnlineNotepadConverter() {
         setContent(sortedLines.join('\n'));
         break;
       case 'shuffleLines':
-        const shuffledLines = content.split('\n').sort(() => Math.random() - 0.5);
+        const shuffledLines = content
+          .split('\n')
+          .sort(() => Math.random() - 0.5);
         setContent(shuffledLines.join('\n'));
         break;
     }
@@ -92,7 +115,10 @@ export default function OnlineNotepadConverter() {
 
   const handleFindReplace = () => {
     if (!findText) return;
-    const regex = new RegExp(findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'g');
+    const regex = new RegExp(
+      findText.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'),
+      'g'
+    );
     setContent(content.replace(regex, replaceText));
   };
 
@@ -128,12 +154,14 @@ export default function OnlineNotepadConverter() {
   const stats = getStats();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Header */}
       <div className="flex items-center justify-between">
         <div className="flex items-center gap-2">
           <FileText className="h-5 w-5 text-blue-600" />
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Online Notepad</h2>
+          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-50">
+            Online Notepad
+          </h2>
           {lastSaved && (
             <span className="text-xs text-gray-500 dark:text-gray-400">
               Saved at {lastSaved.toLocaleTimeString()}
@@ -145,7 +173,7 @@ export default function OnlineNotepadConverter() {
             <input
               type="checkbox"
               checked={autoSave}
-              onChange={(e) => setAutoSave(e.target.checked)}
+              onChange={e => setAutoSave(e.target.checked)}
               className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
             />
             Auto-save
@@ -159,7 +187,7 @@ export default function OnlineNotepadConverter() {
           className="w-full min-h-[400px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100 font-mono"
           placeholder="Start typing your notes here..."
           value={content}
-          onChange={(e) => setContent(e.target.value)}
+          onChange={e => setContent(e.target.value)}
         />
       </div>
 
@@ -170,7 +198,9 @@ export default function OnlineNotepadConverter() {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <Type className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Text Tools</h3>
+              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Text Tools
+              </h3>
             </div>
             <div className="flex flex-wrap gap-2">
               <button
@@ -218,21 +248,23 @@ export default function OnlineNotepadConverter() {
           <div className="space-y-3">
             <div className="flex items-center gap-2">
               <Search className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Find & Replace</h3>
+              <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Find & Replace
+              </h3>
             </div>
             <div className="space-y-2">
               <input
                 type="text"
                 placeholder="Find text..."
                 value={findText}
-                onChange={(e) => setFindText(e.target.value)}
+                onChange={e => setFindText(e.target.value)}
                 className="w-full px-3 py-2 border rounded-md text-sm bg-background"
               />
               <input
                 type="text"
                 placeholder="Replace with..."
                 value={replaceText}
-                onChange={(e) => setReplaceText(e.target.value)}
+                onChange={e => setReplaceText(e.target.value)}
                 className="w-full px-3 py-2 border rounded-md text-sm bg-background"
               />
               <button
@@ -294,4 +326,4 @@ export default function OnlineNotepadConverter() {
       </div>
     </div>
   );
-} 
+}

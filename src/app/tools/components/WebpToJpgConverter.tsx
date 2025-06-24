@@ -38,33 +38,37 @@ export default function WebpToJpgConverter() {
     try {
       const canvas = document.createElement('canvas');
       const ctx = canvas.getContext('2d');
-      
+
       if (!ctx) {
         throw new Error('Could not get canvas context');
       }
-      
+
       const img = new window.Image();
       img.src = URL.createObjectURL(selectedFile);
-      
+
       await new Promise<void>((resolve, reject) => {
         img.onload = () => {
           canvas.width = img.width;
           canvas.height = img.height;
-          
+
           // Fill with white background for JPG (no transparency)
           ctx.fillStyle = 'white';
           ctx.fillRect(0, 0, canvas.width, canvas.height);
           ctx.drawImage(img, 0, 0);
-          
-          canvas.toBlob((blob) => {
-            if (blob) {
-              const url = URL.createObjectURL(blob);
-              setConvertedUrl(url);
-              resolve();
-            } else {
-              reject(new Error('Failed to create blob'));
-            }
-          }, 'image/jpeg', quality / 100);
+
+          canvas.toBlob(
+            blob => {
+              if (blob) {
+                const url = URL.createObjectURL(blob);
+                setConvertedUrl(url);
+                resolve();
+              } else {
+                reject(new Error('Failed to create blob'));
+              }
+            },
+            'image/jpeg',
+            quality / 100
+          );
         };
         img.onerror = () => reject(new Error('Failed to load image'));
       });
@@ -78,7 +82,7 @@ export default function WebpToJpgConverter() {
 
   const handleDownload = () => {
     if (!convertedUrl || !selectedFile) return;
-    
+
     const link = document.createElement('a');
     link.href = convertedUrl;
     link.download = selectedFile.name.replace(/\.webp$/i, '.jpg');
@@ -98,19 +102,19 @@ export default function WebpToJpgConverter() {
 
   const getFileInfo = () => {
     if (!selectedFile) return null;
-    
+
     const sizeInMB = (selectedFile.size / (1024 * 1024)).toFixed(2);
     return {
       name: selectedFile.name,
       size: sizeInMB,
-      type: 'WEBP'
+      type: 'WEBP',
     };
   };
 
   const fileInfo = getFileInfo();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Upload Area */}
       {!selectedFile && (
         <div className="border-2 border-dashed border-gray-300 dark:border-gray-600 rounded-lg p-8 text-center">
@@ -151,7 +155,9 @@ export default function WebpToJpgConverter() {
         <div className="space-y-4">
           {/* Quality Settings */}
           <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-3">Conversion Settings</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-3">
+              Conversion Settings
+            </h3>
             <div className="space-y-3">
               <div>
                 <label className="text-xs font-medium text-gray-700 dark:text-gray-300">
@@ -162,7 +168,7 @@ export default function WebpToJpgConverter() {
                   min="10"
                   max="100"
                   value={quality}
-                  onChange={(e) => setQuality(parseInt(e.target.value))}
+                  onChange={e => setQuality(parseInt(e.target.value))}
                   className="w-full mt-1"
                 />
                 <div className="text-xs text-gray-500 dark:text-gray-400 mt-1">
@@ -186,8 +192,8 @@ export default function WebpToJpgConverter() {
                 Original WEBP Image
               </label>
               <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                <img 
-                  src={previewUrl} 
+                <img
+                  src={previewUrl}
                   alt="Original WEBP"
                   className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                 />
@@ -201,8 +207,8 @@ export default function WebpToJpgConverter() {
                   Converted JPG Image
                 </label>
                 <div className="border rounded-lg p-4 bg-gray-50 dark:bg-gray-900">
-                  <img 
-                    src={convertedUrl} 
+                  <img
+                    src={convertedUrl}
                     alt="Converted JPG"
                     className="max-w-full h-auto rounded max-h-80 object-contain mx-auto"
                   />
@@ -261,15 +267,24 @@ export default function WebpToJpgConverter() {
 
       {/* Format Information */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">About WEBP to JPG Conversion</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          About WEBP to JPG Conversion
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-          <div>• WEBP offers better compression than JPG with similar quality</div>
+          <div>
+            • WEBP offers better compression than JPG with similar quality
+          </div>
           <div>• JPG is widely supported across all platforms and browsers</div>
-          <div>• JPG doesn't support transparency (converted to white background)</div>
-          <div>• Adjustable quality allows you to balance file size and image quality</div>
+          <div>
+            • JPG doesn't support transparency (converted to white background)
+          </div>
+          <div>
+            • Adjustable quality allows you to balance file size and image
+            quality
+          </div>
           <div>• Best for photos and images without transparency needs</div>
         </div>
       </div>
     </div>
   );
-} 
+}

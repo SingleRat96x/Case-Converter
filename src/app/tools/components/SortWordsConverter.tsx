@@ -27,7 +27,8 @@ export default function SortWordsConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
   };
@@ -60,13 +61,15 @@ export default function SortWordsConverter() {
     items.sort((a, b) => {
       let compareA = a;
       let compareB = b;
-      
+
       if (!caseSensitive) {
         compareA = a.toLowerCase();
         compareB = b.toLowerCase();
       }
-      
-      return sortOrder === 'asc' ? compareA.localeCompare(compareB) : compareB.localeCompare(compareA);
+
+      return sortOrder === 'asc'
+        ? compareA.localeCompare(compareB)
+        : compareB.localeCompare(compareA);
     });
 
     // Join items back together
@@ -96,14 +99,16 @@ export default function SortWordsConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="grid gap-4 md:grid-cols-4 bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Sort by</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Sort by
+          </label>
           <select
             value={sortMode}
-            onChange={(e) => setSortMode(e.target.value)}
+            onChange={e => setSortMode(e.target.value)}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           >
             <option value="words">Words</option>
@@ -111,10 +116,12 @@ export default function SortWordsConverter() {
           </select>
         </div>
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Sort order</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Sort order
+          </label>
           <select
             value={sortOrder}
-            onChange={(e) => setSortOrder(e.target.value)}
+            onChange={e => setSortOrder(e.target.value)}
             className="w-full p-2 rounded border bg-background text-gray-900 dark:text-gray-100"
           >
             <option value="asc">Ascending (A to Z)</option>
@@ -126,27 +133,39 @@ export default function SortWordsConverter() {
             type="checkbox"
             id="case-sensitive"
             checked={caseSensitive}
-            onChange={(e) => setCaseSensitive(e.target.checked)}
+            onChange={e => setCaseSensitive(e.target.checked)}
             className="rounded"
           />
-          <label htmlFor="case-sensitive" className="text-sm text-gray-900 dark:text-gray-50">Case sensitive</label>
+          <label
+            htmlFor="case-sensitive"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Case sensitive
+          </label>
         </div>
         <div className="flex items-center space-x-2">
           <input
             type="checkbox"
             id="remove-duplicates"
             checked={removeDuplicates}
-            onChange={(e) => setRemoveDuplicates(e.target.checked)}
+            onChange={e => setRemoveDuplicates(e.target.checked)}
             className="rounded"
           />
-          <label htmlFor="remove-duplicates" className="text-sm text-gray-900 dark:text-gray-50">Remove duplicates</label>
+          <label
+            htmlFor="remove-duplicates"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Remove duplicates
+          </label>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
@@ -157,7 +176,9 @@ export default function SortWordsConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Sorted Text Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Sorted Text Result
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
@@ -203,4 +224,4 @@ export default function SortWordsConverter() {
       </div>
     </div>
   );
-} 
+}

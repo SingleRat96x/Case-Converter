@@ -29,7 +29,8 @@ export default function JsonStringifyConverter() {
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
       escapedCharacters: escapedCount,
     });
@@ -47,7 +48,7 @@ export default function JsonStringifyConverter() {
     try {
       // First, escape the text using JSON.stringify
       const escaped = JSON.stringify(text);
-      
+
       // If quotes are not needed, remove the surrounding quotes
       return includeQuotes ? escaped : escaped.slice(1, -1);
     } catch (error) {
@@ -77,7 +78,7 @@ export default function JsonStringifyConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center space-x-2">
@@ -85,17 +86,24 @@ export default function JsonStringifyConverter() {
             type="checkbox"
             id="include-quotes"
             checked={includeQuotes}
-            onChange={(e) => setIncludeQuotes(e.target.checked)}
+            onChange={e => setIncludeQuotes(e.target.checked)}
             className="rounded"
           />
-          <label htmlFor="include-quotes" className="text-sm text-gray-900 dark:text-gray-50">Include surrounding quotes</label>
+          <label
+            htmlFor="include-quotes"
+            className="text-sm text-gray-900 dark:text-gray-50"
+          >
+            Include surrounding quotes
+          </label>
         </div>
       </div>
 
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Input Text
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100 font-mono"
             placeholder="Enter text to convert to JSON string format..."
@@ -106,7 +114,9 @@ export default function JsonStringifyConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">JSON Stringified Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            JSON Stringified Result
+          </label>
           <textarea
             className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100 font-mono"
             readOnly
@@ -117,22 +127,27 @@ export default function JsonStringifyConverter() {
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Character Escaping Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Character Escaping Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
               <span className="text-gray-600 dark:text-gray-400">Input:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hello "World"
-Tab	here
-Backslash \ test</div>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hello "World" Tab here Backslash \ test
+              </div>
             </div>
             <div>
               <span className="text-gray-600 dark:text-gray-400">Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">"Hello \"World\"\nTab\there\nBackslash \\ test"</div>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                "Hello \"World\"\nTab\there\nBackslash \\ test"
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            Common escapes: \" (quote), \\ (backslash), \n (newline), \t (tab), \r (carriage return)
+            Common escapes: \" (quote), \\ (backslash), \n (newline), \t (tab),
+            \r (carriage return)
           </div>
         </div>
       </div>
@@ -140,10 +155,16 @@ Backslash \ test</div>
       {/* Escape Character Count */}
       {stats.escapedCharacters > 0 && (
         <div className="bg-yellow-50 dark:bg-yellow-900/20 p-4 rounded-lg">
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Escape Information</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+            Escape Information
+          </h3>
           <div className="text-sm">
-            <span className="text-gray-600 dark:text-gray-400">Escaped characters found:</span>
-            <span className="font-semibold ml-2">{stats.escapedCharacters}</span>
+            <span className="text-gray-600 dark:text-gray-400">
+              Escaped characters found:
+            </span>
+            <span className="font-semibold ml-2">
+              {stats.escapedCharacters}
+            </span>
           </div>
         </div>
       )}
@@ -185,4 +206,4 @@ Backslash \ test</div>
       </div>
     </div>
   );
-} 
+}

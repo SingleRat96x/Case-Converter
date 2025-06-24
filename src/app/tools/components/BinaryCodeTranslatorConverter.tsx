@@ -23,14 +23,14 @@ export default function BinaryCodeTranslatorConverter() {
   });
 
   const updateStats = (text: string, result: string) => {
-    const byteCount = mode === 'encode' 
-      ? text.length 
-      : (result.length > 0 ? result.length : 0);
+    const byteCount =
+      mode === 'encode' ? text.length : result.length > 0 ? result.length : 0;
 
     setStats({
       characters: text.length,
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      sentences:
+        text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
       binaryBytes: byteCount,
     });
@@ -59,9 +59,7 @@ export default function BinaryCodeTranslatorConverter() {
 
     // Convert binary to text
     const bytes = cleanBinary.match(/.{8}/g) || [];
-    return bytes
-      .map(byte => String.fromCharCode(parseInt(byte, 2)))
-      .join('');
+    return bytes.map(byte => String.fromCharCode(parseInt(byte, 2))).join('');
   };
 
   const processText = (text: string): string => {
@@ -89,7 +87,8 @@ export default function BinaryCodeTranslatorConverter() {
 
   const handleDownload = () => {
     const result = processText(inputText);
-    const filename = mode === 'encode' ? 'binary-encoded.txt' : 'binary-decoded.txt';
+    const filename =
+      mode === 'encode' ? 'binary-encoded.txt' : 'binary-decoded.txt';
     const blob = new Blob([result], { type: 'text/plain' });
     const url = URL.createObjectURL(blob);
     const a = document.createElement('a');
@@ -111,14 +110,18 @@ export default function BinaryCodeTranslatorConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Mode Toggle */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center justify-between">
           <div>
-            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Mode</h3>
+            <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              Mode
+            </h3>
             <p className="text-xs text-gray-600 dark:text-gray-400">
-              {mode === 'encode' ? 'Convert text to binary code' : 'Convert binary code to text'}
+              {mode === 'encode'
+                ? 'Convert text to binary code'
+                : 'Convert binary code to text'}
             </p>
           </div>
           <button
@@ -164,20 +167,31 @@ export default function BinaryCodeTranslatorConverter() {
 
       {/* Examples */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">Examples</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          Examples
+        </h3>
         <div className="space-y-2 text-sm">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Input Text:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">Hi</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Input Text:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                Hi
+              </div>
             </div>
             <div>
-              <span className="text-gray-600 dark:text-gray-400">Binary Output:</span>
-              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">01001000 01101001</div>
+              <span className="text-gray-600 dark:text-gray-400">
+                Binary Output:
+              </span>
+              <div className="font-mono bg-white dark:bg-gray-800 p-2 rounded border text-xs">
+                01001000 01101001
+              </div>
             </div>
           </div>
           <div className="text-xs text-gray-600 dark:text-gray-400 mt-2">
-            Each character is converted to 8-bit binary representation (1 byte per character).
+            Each character is converted to 8-bit binary representation (1 byte
+            per character).
           </div>
         </div>
       </div>
@@ -219,4 +233,4 @@ export default function BinaryCodeTranslatorConverter() {
       </div>
     </div>
   );
-} 
+}

@@ -5,17 +5,17 @@ import { Copy, Download, RefreshCw, Settings } from 'lucide-react';
 
 const ASCII_FONTS = {
   small: {
-    'A': [' _ ', '(_)', '/_\\'],
-    'B': ['┌─┐', '├─┤', '└─┘'],
-    'C': ['┌─┐', '│  ', '└─┘'],
-    ' ': ['   ', '   ', '   ']
+    A: [' _ ', '(_)', '/_\\'],
+    B: ['┌─┐', '├─┤', '└─┘'],
+    C: ['┌─┐', '│  ', '└─┘'],
+    ' ': ['   ', '   ', '   '],
   },
   standard: {
-    'A': ['  █████  ', ' ██   ██ ', '███████ '],
-    'B': ['██████  ', '██   ██ ', '██████  '],
-    'C': ['███████ ', '██      ', '███████ '],
-    ' ': ['        ', '        ', '        ']
-  }
+    A: ['  █████  ', ' ██   ██ ', '███████ '],
+    B: ['██████  ', '██   ██ ', '██████  '],
+    C: ['███████ ', '██      ', '███████ '],
+    ' ': ['        ', '        ', '        '],
+  },
 };
 
 export default function AsciiArtGeneratorConverter() {
@@ -25,26 +25,29 @@ export default function AsciiArtGeneratorConverter() {
 
   const generateAsciiArt = (text: string): string => {
     if (!text.trim()) return '';
-    
+
     const chars = text.toUpperCase().split('');
     const fontData = ASCII_FONTS[font];
     const height = Object.values(fontData)[0].length;
-    const lines = Array(height).fill('').map(() => '');
-    
+    const lines = Array(height)
+      .fill('')
+      .map(() => '');
+
     chars.forEach(char => {
-      const charPattern = fontData[char as keyof typeof fontData] || fontData[' '];
+      const charPattern =
+        fontData[char as keyof typeof fontData] || fontData[' '];
       charPattern.forEach((line, index) => {
         lines[index] += line;
       });
     });
-    
+
     let result = lines.join('\n').trimEnd();
-    
+
     // Apply style modifications
     if (style === 'outline') {
       result = result.replace(/█/g, '▓').replace(/▓/g, '░');
     }
-    
+
     return result;
   };
 
@@ -54,7 +57,9 @@ export default function AsciiArtGeneratorConverter() {
       inputChars: inputText.length,
       outputChars: result.length,
       lines: result ? result.split('\n').length : 0,
-      width: result ? Math.max(...result.split('\n').map(line => line.length)) : 0,
+      width: result
+        ? Math.max(...result.split('\n').map(line => line.length))
+        : 0,
     };
   };
 
@@ -82,17 +87,21 @@ export default function AsciiArtGeneratorConverter() {
   const stats = getStats();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       {/* Settings */}
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center gap-2 mb-4">
           <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">ASCII Art Settings</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            ASCII Art Settings
+          </h3>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Font Size</label>
+            <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              Font Size
+            </label>
             <div className="flex gap-2">
               <button
                 onClick={() => setFont('small')}
@@ -116,9 +125,11 @@ export default function AsciiArtGeneratorConverter() {
               </button>
             </div>
           </div>
-          
+
           <div className="space-y-2">
-            <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Style</label>
+            <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+              Style
+            </label>
             <div className="flex gap-2">
               <button
                 onClick={() => setStyle('filled')}
@@ -148,18 +159,22 @@ export default function AsciiArtGeneratorConverter() {
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Text Input</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Text Input
+          </label>
           <textarea
             className="w-full min-h-[200px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Enter text to convert to ASCII art..."
             value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            onChange={e => setInputText(e.target.value)}
           />
         </div>
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">ASCII Art Output</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            ASCII Art Output
+          </label>
           <div className="w-full min-h-[200px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 font-mono text-xs leading-tight text-gray-900 dark:text-gray-100 overflow-x-auto whitespace-pre">
             {generateAsciiArt(inputText) || 'ASCII art will appear here...'}
           </div>
@@ -177,9 +192,13 @@ export default function AsciiArtGeneratorConverter() {
 
       {/* Info */}
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">ASCII Art Generator</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          ASCII Art Generator
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
-          <div>• Creates ASCII art from text using various fonts and styles</div>
+          <div>
+            • Creates ASCII art from text using various fonts and styles
+          </div>
           <div>• Perfect for terminal banners, signatures, and text art</div>
           <div>• Supports multiple font sizes and fill styles</div>
           <div>• Works best with short text (1-10 characters)</div>
@@ -219,10 +238,12 @@ export default function AsciiArtGeneratorConverter() {
         <span className="text-gray-400 dark:text-gray-600">|</span>
         <span>Output: {stats.outputChars} chars</span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Size: {stats.width} × {stats.lines}</span>
+        <span>
+          Size: {stats.width} × {stats.lines}
+        </span>
         <span className="text-gray-400 dark:text-gray-600">|</span>
         <span>Font: {font}</span>
       </div>
     </div>
   );
-} 
+}

@@ -18,14 +18,16 @@ export default function RandomChoiceConverter() {
 
   const handleGenerate = () => {
     const choices = getChoicesFromInput();
-    
+
     if (choices.length === 0) {
       setGeneratedChoices(['Error: Please enter some choices (one per line)']);
       return;
     }
 
     if (!allowDuplicates && choiceCount > choices.length) {
-      setGeneratedChoices([`Error: Cannot select ${choiceCount} unique items from ${choices.length} choices`]);
+      setGeneratedChoices([
+        `Error: Cannot select ${choiceCount} unique items from ${choices.length} choices`,
+      ]);
       return;
     }
 
@@ -34,11 +36,11 @@ export default function RandomChoiceConverter() {
 
     for (let i = 0; i < choiceCount; i++) {
       if (availableChoices.length === 0 && !allowDuplicates) break;
-      
+
       const randomIndex = Math.floor(Math.random() * availableChoices.length);
       const selectedChoice = availableChoices[randomIndex];
       selectedChoices.push(selectedChoice);
-      
+
       if (!allowDuplicates) {
         availableChoices.splice(randomIndex, 1);
       }
@@ -76,40 +78,48 @@ export default function RandomChoiceConverter() {
   const availableChoices = getChoicesFromInput();
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="w-full space-y-4">
       <div className="bg-gray-50 dark:bg-gray-900 p-4 rounded-lg">
         <div className="flex items-center gap-2 mb-4">
           <Settings className="h-4 w-4 text-gray-600 dark:text-gray-400" />
-          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">Random Choice Generator Settings</h3>
+          <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50">
+            Random Choice Generator Settings
+          </h3>
         </div>
-        
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <div className="space-y-4">
             <div className="space-y-2">
-              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Number of Choices</label>
+              <label className="text-sm font-medium text-gray-900 dark:text-gray-50">
+                Number of Choices
+              </label>
               <input
                 type="number"
                 min="1"
                 max="50"
                 value={choiceCount}
-                onChange={(e) => setChoiceCount(Math.min(50, Math.max(1, parseInt(e.target.value) || 1)))}
+                onChange={e =>
+                  setChoiceCount(
+                    Math.min(50, Math.max(1, parseInt(e.target.value) || 1))
+                  )
+                }
                 className="w-full px-3 py-2 border rounded text-sm text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-800 border-gray-300 dark:border-gray-700"
               />
             </div>
-            
+
             <div className="space-y-2">
               <label className="flex items-center gap-2 text-sm">
                 <input
                   type="checkbox"
                   checked={allowDuplicates}
-                  onChange={(e) => setAllowDuplicates(e.target.checked)}
+                  onChange={e => setAllowDuplicates(e.target.checked)}
                   className="rounded border-gray-300 text-blue-600 focus:ring-blue-500"
                 />
                 Allow Duplicate Selections
               </label>
             </div>
           </div>
-          
+
           <div className="flex items-end">
             <button
               onClick={handleGenerate}
@@ -131,7 +141,7 @@ export default function RandomChoiceConverter() {
             className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder={`Option 1\nOption 2\nOption 3\nOption 4\nOption 5`}
             value={inputText}
-            onChange={(e) => setInputText(e.target.value)}
+            onChange={e => setInputText(e.target.value)}
           />
           <div className="text-xs text-gray-600 dark:text-gray-400">
             Available choices: {availableChoices.length}
@@ -157,7 +167,9 @@ export default function RandomChoiceConverter() {
       </div>
 
       <div className="bg-blue-50 dark:bg-blue-900/20 p-4 rounded-lg">
-        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">How to Use</h3>
+        <h3 className="text-sm font-medium text-gray-900 dark:text-gray-50 mb-2">
+          How to Use
+        </h3>
         <div className="text-xs text-gray-600 dark:text-gray-400 space-y-1">
           <div>1. Enter your options in the left text area, one per line</div>
           <div>2. Set the number of choices you want to select</div>
@@ -193,4 +205,4 @@ export default function RandomChoiceConverter() {
       </div>
     </div>
   );
-} 
+}
