@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { SentenceCaseConverter } from './sentence-case-converter';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -30,12 +31,15 @@ export default async function SentenceCasePage() {
           <p className="text-gray-600 dark:text-gray-400">
             {content?.short_description || 'Convert your text to sentence case online'}
           </p>
+          <AdScript />
         </div>
 
         {/* Tool section with wider width */}
         <div className="max-w-6xl mx-auto mb-12">
           <SentenceCaseConverter />
         </div>
+
+        <AdScript />
 
         {/* Description section with more left padding */}
         <div className="max-w-4xl mx-auto">

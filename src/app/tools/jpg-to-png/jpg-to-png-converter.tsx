@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
+import AdScript from '@/components/ads/AdScript';
 
 export function JpgToPngConverter() {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
@@ -82,6 +83,9 @@ export function JpgToPngConverter() {
             disabled={isConverting}
           />
         </div>
+        
+        <AdScript />
+        
         <Button
           onClick={convertToPng}
           disabled={!selectedFile || isConverting}

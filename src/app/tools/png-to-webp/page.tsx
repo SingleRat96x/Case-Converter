@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { PngToWebpConverter } from "./png-to-webp-converter";
 import { getToolContent } from "@/lib/tools";
 import { generatePageMetadata } from "@/lib/metadata";
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -32,11 +33,14 @@ export default async function PngToWebpPage() {
         <p className="text-gray-600 dark:text-gray-400">
           {tool.short_description}
         </p>
+        <AdScript />
       </div>
 
       <div className="max-w-6xl mx-auto mb-12">
         <PngToWebpConverter />
       </div>
+
+      <AdScript />
 
       <div className="max-w-4xl mx-auto">
         <div 

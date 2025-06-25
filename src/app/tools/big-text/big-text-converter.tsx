@@ -1,14 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Download, RefreshCw } from 'lucide-react';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-}
+import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
+import { TextStats } from '@/lib/shared/types';
+import AdScript from '@/components/ads/AdScript';
 
 const bigTextMap: { [key: string]: string } = {
   'a': '𝗔', 'b': '𝗕', 'c': '𝗖', 'd': '𝗗', 'e': '𝗘', 'f': '𝗙', 'g': '𝗚', 'h': '𝗛', 'i': '𝗜',
@@ -29,6 +24,12 @@ export function BigTextConverter() {
     lines: 0,
   });
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const newText = e.target.value;
+    setInputText(newText);
+    updateStats(newText);
+  };
+
   const updateStats = (text: string) => {
     setStats({
       characters: text.length,
@@ -36,12 +37,6 @@ export function BigTextConverter() {
       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newText = e.target.value;
-    setInputText(newText);
-    updateStats(newText);
   };
 
   const convertToBigText = (text: string) => {
@@ -60,8 +55,12 @@ export function BigTextConverter() {
     URL.revokeObjectURL(url);
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(convertToBigText(inputText));
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(convertToBigText(inputText));
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
   };
 
   const handleClear = () => {
@@ -70,13 +69,13 @@ export function BigTextConverter() {
   };
 
   return (
-    <div className="w-full max-w-[900px] mx-auto px-4 space-y-6">
-      <div className="grid gap-6 lg:grid-cols-2">
+    <div className="max-w-[900px] mx-auto space-y-6">
+      <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
-          <label className="block text-sm font-medium">Input Text</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
           <textarea
-            className="w-full min-h-[200px] sm:min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-ring"
+            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
             placeholder="Type or paste your text here..."
             value={inputText}
             onChange={handleInputChange}
@@ -85,53 +84,23 @@ export function BigTextConverter() {
 
         {/* Output */}
         <div className="space-y-2">
-          <label className="block text-sm font-medium">Big Text Result</label>
+          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Big Text Result</label>
           <textarea
-            className="w-full min-h-[200px] sm:min-h-[300px] p-4 rounded-lg border bg-card resize-y"
+            className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
             readOnly
             value={convertToBigText(inputText)}
           />
         </div>
       </div>
 
-      {/* Action Buttons */}
-      <div className="flex flex-wrap items-center gap-3">
-        <button
-          onClick={handleDownload}
-          className="flex-1 sm:flex-none px-4 py-2 bg-card hover:bg-accent rounded-lg transition-colors inline-flex items-center justify-center gap-2 text-sm font-medium min-w-[120px]"
-        >
-          <Download className="h-4 w-4" />
-          <span className="hidden sm:inline">Download Text</span>
-          <span className="sm:hidden">Download</span>
-        </button>
-        <button
-          onClick={handleCopy}
-          className="flex-1 sm:flex-none px-4 py-2 bg-card hover:bg-accent rounded-lg transition-colors inline-flex items-center justify-center gap-2 text-sm font-medium min-w-[120px]"
-        >
-          <Copy className="h-4 w-4" />
-          <span className="hidden sm:inline">Copy to Clipboard</span>
-          <span className="sm:hidden">Copy</span>
-        </button>
-        <button
-          onClick={handleClear}
-          className="flex-1 sm:flex-none px-4 py-2 bg-card hover:bg-accent rounded-lg transition-colors inline-flex items-center justify-center gap-2 text-sm font-medium min-w-[120px]"
-        >
-          <RefreshCw className="h-4 w-4" />
-          <span className="hidden sm:inline">Clear Text</span>
-          <span className="sm:hidden">Clear</span>
-        </button>
-      </div>
+      <AdScript />
 
-      {/* Stats */}
-      <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground border-t border-border pt-4">
-        <span className="whitespace-nowrap">Characters: {stats.characters}</span>
-        <span className="hidden sm:inline text-border">|</span>
-        <span className="whitespace-nowrap">Words: {stats.words}</span>
-        <span className="hidden sm:inline text-border">|</span>
-        <span className="whitespace-nowrap">Sentences: {stats.sentences}</span>
-        <span className="hidden sm:inline text-border">|</span>
-        <span className="whitespace-nowrap">Lines: {stats.lines}</span>
-      </div>
+      <CaseConverterButtons
+        onDownload={handleDownload}
+        onCopy={handleCopy}
+        onClear={handleClear}
+        stats={stats}
+      />
     </div>
   );
 } 

@@ -3,6 +3,7 @@
 import { useState } from 'react';
 import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
 import { TextStats } from '@/lib/shared/types';
+import AdScript from '@/components/ads/AdScript';
 
 export function LowercaseConverter() {
   const [inputText, setInputText] = useState('');
@@ -81,6 +82,8 @@ export function LowercaseConverter() {
           />
         </div>
       </div>
+
+      <AdScript />
 
       <CaseConverterButtons
         onDownload={handleDownload}

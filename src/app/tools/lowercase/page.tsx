@@ -37,6 +37,8 @@ export default async function LowercasePage() {
           <LowercaseConverter />
         </div>
 
+        <AdScript />
+
         <div className="max-w-4xl mx-auto">
           <div 
             className="prose dark:prose-invert"

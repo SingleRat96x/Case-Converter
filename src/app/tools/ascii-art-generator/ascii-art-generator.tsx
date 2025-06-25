@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
 import { Slider } from "@/components/ui/slider";
 import { Switch } from "@/components/ui/switch";
 import { useTheme } from "next-themes";
+import AdScript from '@/components/ads/AdScript';
 
 const CHARACTER_SETS = {
   Standard: "@%#*+=-:. ",
@@ -183,6 +184,8 @@ export function AsciiArtGenerator() {
         </Button>
       </Card>
 
+      <AdScript />
+
       <canvas ref={canvasRef} className="hidden" />
 
       {asciiArt && (
@@ -196,9 +199,9 @@ export function AsciiArtGenerator() {
               <div key={i}>{line}</div>
             ))}
           </pre>
-          <div className="flex gap-2">
-            <Button onClick={copyToClipboard}>Copy to Clipboard</Button>
-            <Button onClick={downloadAsTxt}>Download as TXT</Button>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <Button onClick={copyToClipboard} className="w-full sm:w-auto min-w-[140px]">Copy to Clipboard</Button>
+            <Button onClick={downloadAsTxt} className="w-full sm:w-auto min-w-[140px]">Download as TXT</Button>
           </div>
         </Card>
       )}

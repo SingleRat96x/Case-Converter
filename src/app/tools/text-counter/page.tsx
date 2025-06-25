@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { TextCounter } from './text-counter';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -29,11 +30,14 @@ export default async function TextCounterPage() {
           <p className="text-gray-600 dark:text-gray-400">
             {content?.short_description ?? 'Count characters, words, and lines in your text'}
           </p>
+          <AdScript />
         </div>
 
         <div className="max-w-6xl mx-auto mb-12">
           <TextCounter />
         </div>
+
+        <AdScript />
 
         <div className="max-w-4xl mx-auto">
           {content?.long_description && (

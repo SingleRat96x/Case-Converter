@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { UppercaseConverter } from './uppercase-converter';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 // Force dynamic rendering and disable all caching
 export const dynamic = 'force-dynamic';
@@ -35,12 +36,15 @@ export default async function UppercasePage() {
           <p className="text-gray-600 dark:text-gray-400">
             {tool.short_description}
           </p>
+          <AdScript />
         </div>
 
         {/* Tool section with wider width */}
         <div className="max-w-6xl mx-auto mb-12">
           <UppercaseConverter />
         </div>
+
+        <AdScript />
 
         {/* Description section with more left padding */}
         <div className="max-w-4xl mx-auto">

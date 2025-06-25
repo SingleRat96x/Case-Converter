@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { AlternatingCaseConverter } from './alternating-case-converter';
 import { getToolContent } from '@/lib/tools';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 // Force dynamic rendering and disable all caching
 export const dynamic = 'force-dynamic';
@@ -59,6 +60,8 @@ export default async function AlternatingCasePage() {
         <div className="bg-card rounded-lg shadow-lg p-6">
           <AlternatingCaseConverter />
         </div>
+
+        <AdScript />
 
         {/* Description section */}
         {tool.long_description && (

@@ -47,6 +47,8 @@ export default async function BigTextPage() {
           <BigTextConverter />
         </div>
 
+        <AdScript />
+
         {/* Description section with more left padding */}
         <div className="max-w-4xl mx-auto">
           <div 

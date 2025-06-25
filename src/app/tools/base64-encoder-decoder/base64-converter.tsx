@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
+import AdScript from '@/components/ads/AdScript';
 
 export function Base64Converter() {
   const [input, setInput] = useState('');
@@ -86,6 +87,8 @@ export function Base64Converter() {
             </Button>
           </div>
 
+          <AdScript />
+
           <div>
             <Label htmlFor="output">Result</Label>
             <Textarea
@@ -96,14 +99,16 @@ export function Base64Converter() {
             />
           </div>
 
-          <Button
-            onClick={handleCopy}
-            variant="outline"
-            className="w-full"
-            disabled={!output}
-          >
-            Copy Result
-          </Button>
+          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+            <Button
+              onClick={handleCopy}
+              variant="outline"
+              className="w-full sm:w-auto min-w-[140px]"
+              disabled={!output}
+            >
+              Copy Result
+            </Button>
+          </div>
         </div>
       </Tabs>
     </Card>

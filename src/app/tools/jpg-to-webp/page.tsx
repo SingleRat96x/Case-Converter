@@ -40,6 +40,8 @@ export default async function JpgToWebpPage() {
         <JpgToWebpConverter />
       </div>
 
+      <AdScript />
+
       <div className="max-w-4xl mx-auto">
         <div 
           className="prose dark:prose-invert" 

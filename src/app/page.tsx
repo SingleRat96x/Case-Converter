@@ -6,6 +6,7 @@ import { ToolBlock } from '@/components/ToolBlock';
 import { getAllTools } from '@/lib/tools';
 import { getPageContent } from '@/lib/page-content';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;
@@ -76,7 +77,11 @@ export default async function Home({
         </p>
       </div>
 
+      <AdScript />
+
       <CaseChangerTool />
+
+      <AdScript />
 
       <div className="max-w-[700px] mx-auto space-y-6 text-muted-foreground">
         <div 
@@ -84,6 +89,8 @@ export default async function Home({
           dangerouslySetInnerHTML={{ __html: sanitizedLongDescription || fallbackContent }} 
         />
       </div>
+
+      <AdScript />
 
       <section className="pt-8 border-t">
         <h2 className="text-2xl font-semibold text-center mb-8">More Text Tools</h2>

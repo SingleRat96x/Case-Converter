@@ -1,14 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Download, RefreshCw } from 'lucide-react';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-}
+import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
+import { TextStats } from '@/lib/shared/types';
+import AdScript from '@/components/ads/AdScript';
 
 const facebookFontMap: { [key: string]: string } = {
   'a': '𝓪', 'b': '𝓫', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝓯', 'g': '𝓰', 'h': '𝓱', 'i': '𝓲',
@@ -29,6 +24,12 @@ export function FacebookFontConverter() {
     lines: 0,
   });
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const newText = e.target.value;
+    setInputText(newText);
+    updateStats(newText);
+  };
+
   const updateStats = (text: string) => {
     setStats({
       characters: text.length,
@@ -36,12 +37,6 @@ export function FacebookFontConverter() {
       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
     });
-  };
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newText = e.target.value;
-    setInputText(newText);
-    updateStats(newText);
   };
 
   const convertToFacebookFont = (text: string) => {
@@ -60,8 +55,12 @@ export function FacebookFontConverter() {
     URL.revokeObjectURL(url);
   };
 
-  const handleCopy = () => {
-    navigator.clipboard.writeText(convertToFacebookFont(inputText));
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(convertToFacebookFont(inputText));
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
   };
 
   const handleClear = () => {
@@ -70,7 +69,7 @@ export function FacebookFontConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
+    <div className="max-w-[900px] mx-auto space-y-6">
       <div className="grid gap-6 md:grid-cols-2">
         {/* Input */}
         <div className="space-y-2">
@@ -94,41 +93,14 @@ export function FacebookFontConverter() {
         </div>
       </div>
 
-      {/* Action Buttons */}
-      <div className="flex flex-wrap gap-2">
-        <button
-          onClick={handleDownload}
-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-        >
-          <Download className="h-4 w-4" />
-          Download Text
-        </button>
-        <button
-          onClick={handleCopy}
-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-        >
-          <Copy className="h-4 w-4" />
-          Copy to Clipboard
-        </button>
-        <button
-          onClick={handleClear}
-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-        >
-          <RefreshCw className="h-4 w-4" />
-          Clear
-        </button>
-      </div>
+      <AdScript />
 
-      {/* Stats */}
-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
-        <span>Character Count: {stats.characters}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Word Count: {stats.words}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Sentence Count: {stats.sentences}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Line Count: {stats.lines}</span>
-      </div>
+      <CaseConverterButtons
+        onDownload={handleDownload}
+        onCopy={handleCopy}
+        onClear={handleClear}
+        stats={stats}
+      />
     </div>
   );
 } 
