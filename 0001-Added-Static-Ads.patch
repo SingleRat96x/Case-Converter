@@ -1,0 +1,3371 @@
+From 66096edc3838447357c383c095e864174e17074a Mon Sep 17 00:00:00 2001
+From: unknown <medshi400@gmail.com>
+Date: Wed, 25 Jun 2025 12:09:49 +0100
+Subject: [PATCH] Added Static Ads
+
+---
+ package-lock.json                             |  8 ++
+ package.json                                  |  1 +
+ src/app/not-found.tsx                         | 25 ++++++
+ src/app/page.tsx                              |  7 ++
+ .../alternating-case-converter.tsx            |  3 +
+ src/app/tools/alternating-case/page.tsx       |  3 +
+ .../ascii-art-generator.tsx                   |  9 +-
+ src/app/tools/ascii-art-generator/page.tsx    |  2 +
+ .../base64-converter.tsx                      | 21 +++--
+ src/app/tools/base64-encoder-decoder/page.tsx |  2 +
+ src/app/tools/big-text/big-text-converter.tsx | 87 ++++++-------------
+ src/app/tools/big-text/page.tsx               |  2 +
+ .../binary-converter.tsx                      | 21 +++--
+ src/app/tools/binary-code-translator/page.tsx |  2 +
+ .../tools/bold-text/bold-text-converter.tsx   | 74 +++++-----------
+ src/app/tools/bold-text/page.tsx              |  2 +
+ .../bubble-text/bubble-text-converter.tsx     | 74 +++++-----------
+ src/app/tools/bubble-text/page.tsx            |  2 +
+ src/app/tools/caesar-cipher/page.tsx          |  2 +
+ src/app/tools/csv-to-json/page.tsx            |  2 +
+ .../cursed-text/cursed-text-converter.tsx     | 74 +++++-----------
+ src/app/tools/cursed-text/page.tsx            |  2 +
+ src/app/tools/discord-font/page.tsx           |  2 +
+ src/app/tools/duplicate-line-remover/page.tsx |  4 +
+ .../facebook-font/facebook-font-converter.tsx | 74 +++++-----------
+ src/app/tools/facebook-font/page.tsx          |  2 +
+ src/app/tools/hex-to-text/hex-converter.tsx   | 21 +++--
+ src/app/tools/hex-to-text/page.tsx            |  2 +
+ src/app/tools/image-cropper/page.tsx          |  2 +
+ src/app/tools/image-resizer/page.tsx          |  2 +
+ src/app/tools/image-to-text/page.tsx          |  2 +
+ src/app/tools/instagram-fonts/page.tsx        |  2 +
+ .../invisible-text-converter.tsx              | 74 +++++-----------
+ src/app/tools/invisible-text/page.tsx         |  2 +
+ .../italic-text/italic-text-converter.tsx     | 74 +++++-----------
+ src/app/tools/italic-text/page.tsx            |  2 +
+ .../tools/jpg-to-png/jpg-to-png-converter.tsx |  4 +
+ src/app/tools/jpg-to-png/page.tsx             |  4 +
+ src/app/tools/jpg-to-webp/page.tsx            |  2 +
+ src/app/tools/json-stringify/page.tsx         |  2 +
+ .../tools/lowercase/lowercase-converter.tsx   |  3 +
+ src/app/tools/lowercase/page.tsx              |  2 +
+ src/app/tools/md5-hash/page.tsx               |  2 +
+ .../mirror-text/mirror-text-converter.tsx     | 45 +++-------
+ src/app/tools/mirror-text/page.tsx            |  4 +
+ src/app/tools/morse-code/page.tsx             |  2 +
+ src/app/tools/nato-phonetic/page.tsx          |  2 +
+ src/app/tools/number-sorter/page.tsx          |  2 +
+ src/app/tools/online-notepad/page.tsx         |  4 +
+ src/app/tools/password-generator/page.tsx     |  4 +
+ src/app/tools/phonetic-spelling/page.tsx      |  4 +
+ src/app/tools/pig-latin/page.tsx              |  4 +
+ src/app/tools/plain-text/page.tsx             |  4 +
+ .../tools/plain-text/plain-text-converter.tsx | 46 +++-------
+ src/app/tools/png-to-jpg/page.tsx             |  4 +
+ src/app/tools/png-to-webp/page.tsx            |  4 +
+ src/app/tools/random-choice/page.tsx          |  4 +
+ src/app/tools/random-date/page.tsx            |  4 +
+ src/app/tools/random-ip/page.tsx              |  4 +
+ src/app/tools/random-letter/page.tsx          |  4 +
+ src/app/tools/random-month/page.tsx           |  4 +
+ src/app/tools/random-number/page.tsx          |  4 +
+ src/app/tools/remove-line-breaks/page.tsx     |  4 +
+ .../remove-line-breaks-converter.tsx          | 46 +++-------
+ src/app/tools/remove-text-formatting/page.tsx |  4 +
+ .../remove-text-formatting-converter.tsx      | 46 +++-------
+ src/app/tools/repeat-text/page.tsx            |  4 +
+ src/app/tools/roman-numeral-date/page.tsx     |  4 +
+ src/app/tools/rot13/page.tsx                  |  4 +
+ src/app/tools/sentence-case/page.tsx          |  4 +
+ .../sentence-case/sentence-case-converter.tsx | 46 +++-------
+ src/app/tools/sentence-counter/page.tsx       |  4 +
+ src/app/tools/slugify-url/page.tsx            |  4 +
+ src/app/tools/sort-words/page.tsx             |  4 +
+ src/app/tools/subscript-text/page.tsx         | 36 +++++++-
+ src/app/tools/text-counter/page.tsx           |  4 +
+ src/app/tools/text-replace/page.tsx           |  4 +
+ src/app/tools/title-case/page.tsx             |  4 +
+ .../tools/title-case/title-case-converter.tsx |  8 +-
+ src/app/tools/uppercase/page.tsx              |  4 +
+ .../tools/uppercase/uppercase-converter.tsx   |  8 +-
+ src/app/tools/url-converter/page.tsx          |  4 +
+ src/app/tools/utf8-converter/page.tsx         |  4 +
+ src/app/tools/utm-builder/page.tsx            |  4 +
+ src/app/tools/uuid-generator/page.tsx         |  4 +
+ src/app/tools/webp-to-jpg/page.tsx            |  4 +
+ src/app/tools/webp-to-png/page.tsx            |  4 +
+ src/app/tools/word-frequency/page.tsx         |  4 +
+ src/components/tools/CaseChangerTool.tsx      | 56 +++---------
+ src/lib/shared/CaseConverterButtons.tsx       |  8 +-
+ 90 files changed, 582 insertions(+), 614 deletions(-)
+ create mode 100644 src/app/not-found.tsx
+
+diff --git a/package-lock.json b/package-lock.json
+index 5f8250d..d0a9d0a 100644
+--- a/package-lock.json
++++ b/package-lock.json
+@@ -57,6 +57,7 @@
+       },
+       "devDependencies": {
+         "@eslint/eslintrc": "^2.1.4",
++        "@stagewise/toolbar": "^0.4.9",
+         "@tailwindcss/typography": "^0.5.16",
+         "@types/crypto-js": "^4.2.2",
+         "@types/dompurify": "^3.0.5",
+@@ -1408,6 +1409,13 @@
+       "dev": true,
+       "license": "MIT"
+     },
++    "node_modules/@stagewise/toolbar": {
++      "version": "0.4.9",
++      "resolved": "https://registry.npmjs.org/@stagewise/toolbar/-/toolbar-0.4.9.tgz",
++      "integrity": "sha512-fBggX+4nLwRDHnevWk32BjpMpc6vjF2k9mdamsPqAUnbsKbJnkTCjm0o8DOKcjRO9M/PGwcED4Ct0AWHQvkR/Q==",
++      "dev": true,
++      "license": "AGPL-3.0-only"
++    },
+     "node_modules/@supabase/auth-helpers-nextjs": {
+       "version": "0.10.0",
+       "resolved": "https://registry.npmjs.org/@supabase/auth-helpers-nextjs/-/auth-helpers-nextjs-0.10.0.tgz",
+diff --git a/package.json b/package.json
+index ab6cf98..22bab1a 100644
+--- a/package.json
++++ b/package.json
+@@ -58,6 +58,7 @@
+   },
+   "devDependencies": {
+     "@eslint/eslintrc": "^2.1.4",
++    "@stagewise/toolbar": "^0.4.9",
+     "@tailwindcss/typography": "^0.5.16",
+     "@types/crypto-js": "^4.2.2",
+     "@types/dompurify": "^3.0.5",
+diff --git a/src/app/not-found.tsx b/src/app/not-found.tsx
+new file mode 100644
+index 0000000..cd6b486
+--- /dev/null
++++ b/src/app/not-found.tsx
+@@ -0,0 +1,25 @@
++import Link from 'next/link';
++import { Button } from '@/components/ui/button';
++
++export default function NotFound() {
++  return (
++    <div className="flex min-h-[calc(100vh-10rem)] flex-col items-center justify-center space-y-6 text-center">
++      <div className="space-y-2">
++        <h1 className="text-6xl font-extrabold tracking-tighter text-gray-900 dark:text-gray-50 sm:text-7xl md:text-8xl">
++          404
++        </h1>
++        <p className="text-xl font-medium text-gray-500 dark:text-gray-400">
++          Oops! Page Not Found.
++        </p>
++      </div>
++      <p className="max-w-md text-gray-500 dark:text-gray-400">
++        It seems like the page you are looking for doesn't exist or has been moved. Let's get you back on track.
++      </p>
++      <Link href="/">
++        <Button>
++          Go back to Homepage
++        </Button>
++      </Link>
++    </div>
++  );
++} 
+\ No newline at end of file
+diff --git a/src/app/page.tsx b/src/app/page.tsx
+index afc5bcc..d098d44 100644
+--- a/src/app/page.tsx
++++ b/src/app/page.tsx
+@@ -6,6 +6,7 @@ import { ToolBlock } from '@/components/ToolBlock';
+ import { getAllTools } from '@/lib/tools';
+ import { getPageContent } from '@/lib/page-content';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -76,8 +77,12 @@ export default async function Home({
+         </p>
+       </div>
+ 
++      <AdScript />
++
+       <CaseChangerTool />
+ 
++      <AdScript />
++
+       <div className="max-w-[700px] mx-auto space-y-6 text-muted-foreground">
+         <div 
+           className="prose dark:prose-invert" 
+@@ -85,6 +90,8 @@ export default async function Home({
+         />
+       </div>
+ 
++      <AdScript />
++
+       <section className="pt-8 border-t">
+         <h2 className="text-2xl font-semibold text-center mb-8">More Text Tools</h2>
+         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+diff --git a/src/app/tools/alternating-case/alternating-case-converter.tsx b/src/app/tools/alternating-case/alternating-case-converter.tsx
+index 4583926..2d0fcbc 100644
+--- a/src/app/tools/alternating-case/alternating-case-converter.tsx
++++ b/src/app/tools/alternating-case/alternating-case-converter.tsx
+@@ -3,6 +3,7 @@
+ import { useState } from 'react';
+ import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
+ import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function AlternatingCaseConverter() {
+   const [inputText, setInputText] = useState('');
+@@ -82,6 +83,8 @@ export function AlternatingCaseConverter() {
+         </div>
+       </div>
+ 
++      <AdScript />
++
+       <CaseConverterButtons
+         onDownload={handleDownload}
+         onCopy={handleCopy}
+diff --git a/src/app/tools/alternating-case/page.tsx b/src/app/tools/alternating-case/page.tsx
+index 0dfa1d0..99e06f7 100644
+--- a/src/app/tools/alternating-case/page.tsx
++++ b/src/app/tools/alternating-case/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { AlternatingCaseConverter } from './alternating-case-converter';
+ import { getToolContent } from '@/lib/tools';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ // Force dynamic rendering and disable all caching
+ export const dynamic = 'force-dynamic';
+@@ -60,6 +61,8 @@ export default async function AlternatingCasePage() {
+           <AlternatingCaseConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section */}
+         {tool.long_description && (
+           <div 
+diff --git a/src/app/tools/ascii-art-generator/ascii-art-generator.tsx b/src/app/tools/ascii-art-generator/ascii-art-generator.tsx
+index e59467b..396418c 100644
+--- a/src/app/tools/ascii-art-generator/ascii-art-generator.tsx
++++ b/src/app/tools/ascii-art-generator/ascii-art-generator.tsx
+@@ -9,6 +9,7 @@ import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@
+ import { Slider } from "@/components/ui/slider";
+ import { Switch } from "@/components/ui/switch";
+ import { useTheme } from "next-themes";
++import AdScript from '@/components/ads/AdScript';
+ 
+ const CHARACTER_SETS = {
+   Standard: "@%#*+=-:. ",
+@@ -183,6 +184,8 @@ export function AsciiArtGenerator() {
+         </Button>
+       </Card>
+ 
++      <AdScript />
++
+       <canvas ref={canvasRef} className="hidden" />
+ 
+       {asciiArt && (
+@@ -196,9 +199,9 @@ export function AsciiArtGenerator() {
+               <div key={i}>{line}</div>
+             ))}
+           </pre>
+-          <div className="flex gap-2">
+-            <Button onClick={copyToClipboard}>Copy to Clipboard</Button>
+-            <Button onClick={downloadAsTxt}>Download as TXT</Button>
++          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
++            <Button onClick={copyToClipboard} className="w-full sm:w-auto min-w-[140px]">Copy to Clipboard</Button>
++            <Button onClick={downloadAsTxt} className="w-full sm:w-auto min-w-[140px]">Download as TXT</Button>
+           </div>
+         </Card>
+       )}
+diff --git a/src/app/tools/ascii-art-generator/page.tsx b/src/app/tools/ascii-art-generator/page.tsx
+index e7bc031..ef21e89 100644
+--- a/src/app/tools/ascii-art-generator/page.tsx
++++ b/src/app/tools/ascii-art-generator/page.tsx
+@@ -40,6 +40,8 @@ export default async function AsciiArtGeneratorPage() {
+         <AsciiArtGenerator />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/base64-encoder-decoder/base64-converter.tsx b/src/app/tools/base64-encoder-decoder/base64-converter.tsx
+index db6b0c5..0bc4d96 100644
+--- a/src/app/tools/base64-encoder-decoder/base64-converter.tsx
++++ b/src/app/tools/base64-encoder-decoder/base64-converter.tsx
+@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
+ import { Card } from '@/components/ui/card';
+ import { Label } from '@/components/ui/label';
+ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function Base64Converter() {
+   const [input, setInput] = useState('');
+@@ -86,6 +87,8 @@ export function Base64Converter() {
+             </Button>
+           </div>
+ 
++          <AdScript />
++
+           <div>
+             <Label htmlFor="output">Result</Label>
+             <Textarea
+@@ -96,14 +99,16 @@ export function Base64Converter() {
+             />
+           </div>
+ 
+-          <Button
+-            onClick={handleCopy}
+-            variant="outline"
+-            className="w-full"
+-            disabled={!output}
+-          >
+-            Copy Result
+-          </Button>
++          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
++            <Button
++              onClick={handleCopy}
++              variant="outline"
++              className="w-full sm:w-auto min-w-[140px]"
++              disabled={!output}
++            >
++              Copy Result
++            </Button>
++          </div>
+         </div>
+       </Tabs>
+     </Card>
+diff --git a/src/app/tools/base64-encoder-decoder/page.tsx b/src/app/tools/base64-encoder-decoder/page.tsx
+index 1d9d886..fb1cce1 100644
+--- a/src/app/tools/base64-encoder-decoder/page.tsx
++++ b/src/app/tools/base64-encoder-decoder/page.tsx
+@@ -40,6 +40,8 @@ export default async function Base64Page() {
+         <Base64Converter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/big-text/big-text-converter.tsx b/src/app/tools/big-text/big-text-converter.tsx
+index 306554b..2a25f69 100644
+--- a/src/app/tools/big-text/big-text-converter.tsx
++++ b/src/app/tools/big-text/big-text-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ const bigTextMap: { [key: string]: string } = {
+   'a': '𝗔', 'b': '𝗕', 'c': '𝗖', 'd': '𝗗', 'e': '𝗘', 'f': '𝗙', 'g': '𝗚', 'h': '𝗛', 'i': '𝗜',
+@@ -29,6 +24,12 @@ export function BigTextConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -38,12 +39,6 @@ export function BigTextConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToBigText = (text: string) => {
+     return text.split('').map(char => bigTextMap[char] || char).join('');
+   };
+@@ -60,8 +55,12 @@ export function BigTextConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToBigText(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToBigText(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -70,13 +69,13 @@ export function BigTextConverter() {
+   };
+ 
+   return (
+-    <div className="w-full max-w-[900px] mx-auto px-4 space-y-6">
+-      <div className="grid gap-6 lg:grid-cols-2">
++    <div className="max-w-[900px] mx-auto space-y-6">
++      <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+-          <label className="block text-sm font-medium">Input Text</label>
++          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
+           <textarea
+-            className="w-full min-h-[200px] sm:min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-ring"
++            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
+             placeholder="Type or paste your text here..."
+             value={inputText}
+             onChange={handleInputChange}
+@@ -85,53 +84,23 @@ export function BigTextConverter() {
+ 
+         {/* Output */}
+         <div className="space-y-2">
+-          <label className="block text-sm font-medium">Big Text Result</label>
++          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Big Text Result</label>
+           <textarea
+-            className="w-full min-h-[200px] sm:min-h-[300px] p-4 rounded-lg border bg-card resize-y"
++            className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
+             readOnly
+             value={convertToBigText(inputText)}
+           />
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap items-center gap-3">
+-        <button
+-          onClick={handleDownload}
+-          className="flex-1 sm:flex-none px-4 py-2 bg-card hover:bg-accent rounded-lg transition-colors inline-flex items-center justify-center gap-2 text-sm font-medium min-w-[120px]"
+-        >
+-          <Download className="h-4 w-4" />
+-          <span className="hidden sm:inline">Download Text</span>
+-          <span className="sm:hidden">Download</span>
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="flex-1 sm:flex-none px-4 py-2 bg-card hover:bg-accent rounded-lg transition-colors inline-flex items-center justify-center gap-2 text-sm font-medium min-w-[120px]"
+-        >
+-          <Copy className="h-4 w-4" />
+-          <span className="hidden sm:inline">Copy to Clipboard</span>
+-          <span className="sm:hidden">Copy</span>
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="flex-1 sm:flex-none px-4 py-2 bg-card hover:bg-accent rounded-lg transition-colors inline-flex items-center justify-center gap-2 text-sm font-medium min-w-[120px]"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          <span className="hidden sm:inline">Clear Text</span>
+-          <span className="sm:hidden">Clear</span>
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex flex-wrap items-center gap-3 text-sm text-muted-foreground border-t border-border pt-4">
+-        <span className="whitespace-nowrap">Characters: {stats.characters}</span>
+-        <span className="hidden sm:inline text-border">|</span>
+-        <span className="whitespace-nowrap">Words: {stats.words}</span>
+-        <span className="hidden sm:inline text-border">|</span>
+-        <span className="whitespace-nowrap">Sentences: {stats.sentences}</span>
+-        <span className="hidden sm:inline text-border">|</span>
+-        <span className="whitespace-nowrap">Lines: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/big-text/page.tsx b/src/app/tools/big-text/page.tsx
+index 121f59c..61ad26b 100644
+--- a/src/app/tools/big-text/page.tsx
++++ b/src/app/tools/big-text/page.tsx
+@@ -47,6 +47,8 @@ export default async function BigTextPage() {
+           <BigTextConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/binary-code-translator/binary-converter.tsx b/src/app/tools/binary-code-translator/binary-converter.tsx
+index 523f66b..0cf463a 100644
+--- a/src/app/tools/binary-code-translator/binary-converter.tsx
++++ b/src/app/tools/binary-code-translator/binary-converter.tsx
+@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
+ import { Card } from '@/components/ui/card';
+ import { Label } from '@/components/ui/label';
+ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function BinaryConverter() {
+   const [input, setInput] = useState('');
+@@ -107,6 +108,8 @@ export function BinaryConverter() {
+             </Button>
+           </div>
+ 
++          <AdScript />
++
+           <div>
+             <Label htmlFor="output">Result</Label>
+             <Textarea
+@@ -117,14 +120,16 @@ export function BinaryConverter() {
+             />
+           </div>
+ 
+-          <Button
+-            onClick={handleCopy}
+-            variant="outline"
+-            className="w-full"
+-            disabled={!output}
+-          >
+-            Copy Result
+-          </Button>
++          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
++            <Button
++              onClick={handleCopy}
++              variant="outline"
++              className="w-full sm:w-auto min-w-[140px]"
++              disabled={!output}
++            >
++              Copy Result
++            </Button>
++          </div>
+         </div>
+       </Tabs>
+     </Card>
+diff --git a/src/app/tools/binary-code-translator/page.tsx b/src/app/tools/binary-code-translator/page.tsx
+index 4df5d28..88fcea2 100644
+--- a/src/app/tools/binary-code-translator/page.tsx
++++ b/src/app/tools/binary-code-translator/page.tsx
+@@ -40,6 +40,8 @@ export default async function BinaryPage() {
+         <BinaryConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/bold-text/bold-text-converter.tsx b/src/app/tools/bold-text/bold-text-converter.tsx
+index e8395a9..262a345 100644
+--- a/src/app/tools/bold-text/bold-text-converter.tsx
++++ b/src/app/tools/bold-text/bold-text-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ const boldTextMap: { [key: string]: string } = {
+   'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢',
+@@ -29,6 +24,12 @@ export function BoldTextConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -38,12 +39,6 @@ export function BoldTextConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToBoldText = (text: string) => {
+     return text.split('').map(char => boldTextMap[char] || char).join('');
+   };
+@@ -60,8 +55,12 @@ export function BoldTextConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToBoldText(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToBoldText(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -70,7 +69,7 @@ export function BoldTextConverter() {
+   };
+ 
+   return (
+-    <div className="max-w-[900px] mx-auto space-y-4">
++    <div className="max-w-[900px] mx-auto space-y-6">
+       <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+@@ -94,41 +93,14 @@ export function BoldTextConverter() {
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/bold-text/page.tsx b/src/app/tools/bold-text/page.tsx
+index 16768b6..a654623 100644
+--- a/src/app/tools/bold-text/page.tsx
++++ b/src/app/tools/bold-text/page.tsx
+@@ -43,6 +43,8 @@ export default async function BoldTextPage() {
+           <BoldTextConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/bubble-text/bubble-text-converter.tsx b/src/app/tools/bubble-text/bubble-text-converter.tsx
+index e37ba87..6804c18 100644
+--- a/src/app/tools/bubble-text/bubble-text-converter.tsx
++++ b/src/app/tools/bubble-text/bubble-text-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ const bubbleTextMap: { [key: string]: string } = {
+   'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ', 'i': 'ⓘ',
+@@ -29,6 +24,12 @@ export function BubbleTextConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -38,12 +39,6 @@ export function BubbleTextConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToBubbleText = (text: string) => {
+     return text.split('').map(char => bubbleTextMap[char] || char).join('');
+   };
+@@ -60,8 +55,12 @@ export function BubbleTextConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToBubbleText(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToBubbleText(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -70,7 +69,7 @@ export function BubbleTextConverter() {
+   };
+ 
+   return (
+-    <div className="max-w-[900px] mx-auto space-y-4">
++    <div className="max-w-[900px] mx-auto space-y-6">
+       <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+@@ -94,41 +93,14 @@ export function BubbleTextConverter() {
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/bubble-text/page.tsx b/src/app/tools/bubble-text/page.tsx
+index dbf7bd2..c5e6cd3 100644
+--- a/src/app/tools/bubble-text/page.tsx
++++ b/src/app/tools/bubble-text/page.tsx
+@@ -43,6 +43,8 @@ export default async function BubbleTextPage() {
+           <BubbleTextConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/caesar-cipher/page.tsx b/src/app/tools/caesar-cipher/page.tsx
+index 2dc3b2d..3f4a8da 100644
+--- a/src/app/tools/caesar-cipher/page.tsx
++++ b/src/app/tools/caesar-cipher/page.tsx
+@@ -40,6 +40,8 @@ export default async function CaesarCipherPage() {
+         <CaesarCipher />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/csv-to-json/page.tsx b/src/app/tools/csv-to-json/page.tsx
+index c5d162a..532ecaa 100644
+--- a/src/app/tools/csv-to-json/page.tsx
++++ b/src/app/tools/csv-to-json/page.tsx
+@@ -40,6 +40,8 @@ export default async function CsvToJsonPage() {
+         <CsvToJsonConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/cursed-text/cursed-text-converter.tsx b/src/app/tools/cursed-text/cursed-text-converter.tsx
+index e0148b7..43ad468 100644
+--- a/src/app/tools/cursed-text/cursed-text-converter.tsx
++++ b/src/app/tools/cursed-text/cursed-text-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ const cursedTextMap: { [key: string]: string } = {
+   'a': 'ą', 'b': 'ҍ', 'c': 'ç', 'd': 'ժ', 'e': 'ҽ', 'f': 'ƒ', 'g': 'ց', 'h': 'հ', 'i': 'ì',
+@@ -29,6 +24,12 @@ export function CursedTextConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -38,12 +39,6 @@ export function CursedTextConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToCursedText = (text: string) => {
+     return text.split('').map(char => cursedTextMap[char] || char).join('');
+   };
+@@ -60,8 +55,12 @@ export function CursedTextConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToCursedText(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToCursedText(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -70,7 +69,7 @@ export function CursedTextConverter() {
+   };
+ 
+   return (
+-    <div className="max-w-[900px] mx-auto space-y-4">
++    <div className="max-w-[900px] mx-auto space-y-6">
+       <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+@@ -94,41 +93,14 @@ export function CursedTextConverter() {
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/cursed-text/page.tsx b/src/app/tools/cursed-text/page.tsx
+index 482d538..45490b9 100644
+--- a/src/app/tools/cursed-text/page.tsx
++++ b/src/app/tools/cursed-text/page.tsx
+@@ -43,6 +43,8 @@ export default async function CursedTextPage() {
+           <CursedTextConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/discord-font/page.tsx b/src/app/tools/discord-font/page.tsx
+index 516ed6e..3236166 100644
+--- a/src/app/tools/discord-font/page.tsx
++++ b/src/app/tools/discord-font/page.tsx
+@@ -43,6 +43,8 @@ export default async function DiscordFontPage() {
+           <DiscordFontConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/duplicate-line-remover/page.tsx b/src/app/tools/duplicate-line-remover/page.tsx
+index 21523ca..4ad8425 100644
+--- a/src/app/tools/duplicate-line-remover/page.tsx
++++ b/src/app/tools/duplicate-line-remover/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { DuplicateLineRemoverConverter } from './duplicate-line-remover-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -34,6 +35,7 @@ export default async function DuplicateLineRemoverPage() {
+           <p className="text-gray-600 dark:text-gray-400">
+             {tool.short_description}
+           </p>
++          <AdScript />
+         </div>
+ 
+         {/* Tool section with wider width */}
+@@ -41,6 +43,8 @@ export default async function DuplicateLineRemoverPage() {
+           <DuplicateLineRemoverConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/facebook-font/facebook-font-converter.tsx b/src/app/tools/facebook-font/facebook-font-converter.tsx
+index 6d06b06..d480288 100644
+--- a/src/app/tools/facebook-font/facebook-font-converter.tsx
++++ b/src/app/tools/facebook-font/facebook-font-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ const facebookFontMap: { [key: string]: string } = {
+   'a': '𝓪', 'b': '𝓫', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝓯', 'g': '𝓰', 'h': '𝓱', 'i': '𝓲',
+@@ -29,6 +24,12 @@ export function FacebookFontConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -38,12 +39,6 @@ export function FacebookFontConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToFacebookFont = (text: string) => {
+     return text.split('').map(char => facebookFontMap[char] || char).join('');
+   };
+@@ -60,8 +55,12 @@ export function FacebookFontConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToFacebookFont(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToFacebookFont(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -70,7 +69,7 @@ export function FacebookFontConverter() {
+   };
+ 
+   return (
+-    <div className="max-w-[900px] mx-auto space-y-4">
++    <div className="max-w-[900px] mx-auto space-y-6">
+       <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+@@ -94,41 +93,14 @@ export function FacebookFontConverter() {
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/facebook-font/page.tsx b/src/app/tools/facebook-font/page.tsx
+index e075b6f..31c2a70 100644
+--- a/src/app/tools/facebook-font/page.tsx
++++ b/src/app/tools/facebook-font/page.tsx
+@@ -43,6 +43,8 @@ export default async function FacebookFontPage() {
+           <FacebookFontConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/hex-to-text/hex-converter.tsx b/src/app/tools/hex-to-text/hex-converter.tsx
+index 2329c24..526aaa0 100644
+--- a/src/app/tools/hex-to-text/hex-converter.tsx
++++ b/src/app/tools/hex-to-text/hex-converter.tsx
+@@ -6,6 +6,7 @@ import { Textarea } from '@/components/ui/textarea';
+ import { Card } from '@/components/ui/card';
+ import { Label } from '@/components/ui/label';
+ import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function HexConverter() {
+   const [input, setInput] = useState('');
+@@ -101,6 +102,8 @@ export function HexConverter() {
+             </Button>
+           </div>
+ 
++          <AdScript />
++
+           <div>
+             <Label htmlFor="output">Result</Label>
+             <Textarea
+@@ -111,14 +114,16 @@ export function HexConverter() {
+             />
+           </div>
+ 
+-          <Button
+-            onClick={handleCopy}
+-            variant="outline"
+-            className="w-full"
+-            disabled={!output}
+-          >
+-            Copy Result
+-          </Button>
++          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
++            <Button
++              onClick={handleCopy}
++              variant="outline"
++              className="w-full sm:w-auto min-w-[140px]"
++              disabled={!output}
++            >
++              Copy Result
++            </Button>
++          </div>
+         </div>
+       </Tabs>
+     </Card>
+diff --git a/src/app/tools/hex-to-text/page.tsx b/src/app/tools/hex-to-text/page.tsx
+index 573340e..622a0a1 100644
+--- a/src/app/tools/hex-to-text/page.tsx
++++ b/src/app/tools/hex-to-text/page.tsx
+@@ -40,6 +40,8 @@ export default async function HexToTextPage() {
+         <HexConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/image-cropper/page.tsx b/src/app/tools/image-cropper/page.tsx
+index 6673a5e..4e3ea9f 100644
+--- a/src/app/tools/image-cropper/page.tsx
++++ b/src/app/tools/image-cropper/page.tsx
+@@ -40,6 +40,8 @@ export default async function ImageCropperPage() {
+         <ImageCropper />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/image-resizer/page.tsx b/src/app/tools/image-resizer/page.tsx
+index 1591924..09ff2db 100644
+--- a/src/app/tools/image-resizer/page.tsx
++++ b/src/app/tools/image-resizer/page.tsx
+@@ -40,6 +40,8 @@ export default async function ImageResizerPage() {
+         <ImageResizer />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/image-to-text/page.tsx b/src/app/tools/image-to-text/page.tsx
+index 5083fef..b768238 100644
+--- a/src/app/tools/image-to-text/page.tsx
++++ b/src/app/tools/image-to-text/page.tsx
+@@ -40,6 +40,8 @@ export default async function ImageToTextPage() {
+         <ImageToTextConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/instagram-fonts/page.tsx b/src/app/tools/instagram-fonts/page.tsx
+index f7510f4..19d90d4 100644
+--- a/src/app/tools/instagram-fonts/page.tsx
++++ b/src/app/tools/instagram-fonts/page.tsx
+@@ -40,6 +40,8 @@ export default async function InstagramFontsPage() {
+         <InstagramFontsConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/invisible-text/invisible-text-converter.tsx b/src/app/tools/invisible-text/invisible-text-converter.tsx
+index d6d3938..fd3822d 100644
+--- a/src/app/tools/invisible-text/invisible-text-converter.tsx
++++ b/src/app/tools/invisible-text/invisible-text-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function InvisibleTextConverter() {
+   const [inputText, setInputText] = useState('');
+@@ -19,6 +14,12 @@ export function InvisibleTextConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -28,12 +29,6 @@ export function InvisibleTextConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToInvisibleText = (text: string) => {
+     // Convert each character to zero-width space (U+200B)
+     return text.split('').map(() => '\u200B').join('');
+@@ -51,8 +46,12 @@ export function InvisibleTextConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToInvisibleText(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToInvisibleText(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -61,7 +60,7 @@ export function InvisibleTextConverter() {
+   };
+ 
+   return (
+-    <div className="max-w-[900px] mx-auto space-y-4">
++    <div className="max-w-[900px] mx-auto space-y-6">
+       <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+@@ -85,41 +84,14 @@ export function InvisibleTextConverter() {
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/invisible-text/page.tsx b/src/app/tools/invisible-text/page.tsx
+index f60438c..bb6cd73 100644
+--- a/src/app/tools/invisible-text/page.tsx
++++ b/src/app/tools/invisible-text/page.tsx
+@@ -40,6 +40,8 @@ export default async function InvisibleTextPage() {
+         <InvisibleTextConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/italic-text/italic-text-converter.tsx b/src/app/tools/italic-text/italic-text-converter.tsx
+index d40efbc..de880ee 100644
+--- a/src/app/tools/italic-text/italic-text-converter.tsx
++++ b/src/app/tools/italic-text/italic-text-converter.tsx
+@@ -1,14 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
+-
+-interface TextStats {
+-  characters: number;
+-  words: number;
+-  sentences: number;
+-  lines: number;
+-}
++import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
++import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ const italicTextMap: { [key: string]: string } = {
+   'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧', 'g': '𝘨', 'h': '𝘩', 'i': '𝘪',
+@@ -28,6 +23,12 @@ export function ItalicTextConverter() {
+     lines: 0,
+   });
+ 
++  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
++    const newText = e.target.value;
++    setInputText(newText);
++    updateStats(newText);
++  };
++
+   const updateStats = (text: string) => {
+     setStats({
+       characters: text.length,
+@@ -37,12 +38,6 @@ export function ItalicTextConverter() {
+     });
+   };
+ 
+-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+-    const newText = e.target.value;
+-    setInputText(newText);
+-    updateStats(newText);
+-  };
+-
+   const convertToItalicText = (text: string) => {
+     return text.split('').map(char => italicTextMap[char] || char).join('');
+   };
+@@ -59,8 +54,12 @@ export function ItalicTextConverter() {
+     URL.revokeObjectURL(url);
+   };
+ 
+-  const handleCopy = () => {
+-    navigator.clipboard.writeText(convertToItalicText(inputText));
++  const handleCopy = async () => {
++    try {
++      await navigator.clipboard.writeText(convertToItalicText(inputText));
++    } catch (err) {
++      console.error('Failed to copy text:', err);
++    }
+   };
+ 
+   const handleClear = () => {
+@@ -69,7 +68,7 @@ export function ItalicTextConverter() {
+   };
+ 
+   return (
+-    <div className="max-w-[900px] mx-auto space-y-4">
++    <div className="max-w-[900px] mx-auto space-y-6">
+       <div className="grid gap-6 md:grid-cols-2">
+         {/* Input */}
+         <div className="space-y-2">
+@@ -93,41 +92,14 @@ export function ItalicTextConverter() {
+         </div>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/italic-text/page.tsx b/src/app/tools/italic-text/page.tsx
+index 24ba7cf..7218430 100644
+--- a/src/app/tools/italic-text/page.tsx
++++ b/src/app/tools/italic-text/page.tsx
+@@ -40,6 +40,8 @@ export default async function ItalicTextPage() {
+         <ItalicTextConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/jpg-to-png/jpg-to-png-converter.tsx b/src/app/tools/jpg-to-png/jpg-to-png-converter.tsx
+index 998c263..45310e5 100644
+--- a/src/app/tools/jpg-to-png/jpg-to-png-converter.tsx
++++ b/src/app/tools/jpg-to-png/jpg-to-png-converter.tsx
+@@ -5,6 +5,7 @@ import { Button } from "@/components/ui/button";
+ import { Card } from "@/components/ui/card";
+ import { Input } from "@/components/ui/input";
+ import { Label } from "@/components/ui/label";
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function JpgToPngConverter() {
+   const [selectedFile, setSelectedFile] = useState<File | null>(null);
+@@ -82,6 +83,9 @@ export function JpgToPngConverter() {
+             disabled={isConverting}
+           />
+         </div>
++        
++        <AdScript />
++        
+         <Button
+           onClick={convertToPng}
+           disabled={!selectedFile || isConverting}
+diff --git a/src/app/tools/jpg-to-png/page.tsx b/src/app/tools/jpg-to-png/page.tsx
+index 2ec0820..05ceff5 100644
+--- a/src/app/tools/jpg-to-png/page.tsx
++++ b/src/app/tools/jpg-to-png/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from "next";
+ import { JpgToPngConverter } from "./jpg-to-png-converter";
+ import { getToolContent } from "@/lib/tools";
+ import { generatePageMetadata } from "@/lib/metadata";
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function JpgToPngPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <JpgToPngConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/jpg-to-webp/page.tsx b/src/app/tools/jpg-to-webp/page.tsx
+index 045c3d2..42385d8 100644
+--- a/src/app/tools/jpg-to-webp/page.tsx
++++ b/src/app/tools/jpg-to-webp/page.tsx
+@@ -40,6 +40,8 @@ export default async function JpgToWebpPage() {
+         <JpgToWebpConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/json-stringify/page.tsx b/src/app/tools/json-stringify/page.tsx
+index 0bf37b2..ee29e5c 100644
+--- a/src/app/tools/json-stringify/page.tsx
++++ b/src/app/tools/json-stringify/page.tsx
+@@ -40,6 +40,8 @@ export default async function JsonStringifyPage() {
+         <JsonStringifyConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/lowercase/lowercase-converter.tsx b/src/app/tools/lowercase/lowercase-converter.tsx
+index 099889b..1c7db02 100644
+--- a/src/app/tools/lowercase/lowercase-converter.tsx
++++ b/src/app/tools/lowercase/lowercase-converter.tsx
+@@ -3,6 +3,7 @@
+ import { useState } from 'react';
+ import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
+ import { TextStats } from '@/lib/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function LowercaseConverter() {
+   const [inputText, setInputText] = useState('');
+@@ -82,6 +83,8 @@ export function LowercaseConverter() {
+         </div>
+       </div>
+ 
++      <AdScript />
++
+       <CaseConverterButtons
+         onDownload={handleDownload}
+         onCopy={handleCopy}
+diff --git a/src/app/tools/lowercase/page.tsx b/src/app/tools/lowercase/page.tsx
+index 9cc0245..8af86d0 100644
+--- a/src/app/tools/lowercase/page.tsx
++++ b/src/app/tools/lowercase/page.tsx
+@@ -37,6 +37,8 @@ export default async function LowercasePage() {
+           <LowercaseConverter />
+         </div>
+ 
++        <AdScript />
++
+         <div className="max-w-4xl mx-auto">
+           <div 
+             className="prose dark:prose-invert"
+diff --git a/src/app/tools/md5-hash/page.tsx b/src/app/tools/md5-hash/page.tsx
+index 7842a78..8b995c3 100644
+--- a/src/app/tools/md5-hash/page.tsx
++++ b/src/app/tools/md5-hash/page.tsx
+@@ -40,6 +40,8 @@ export default async function Md5HashPage() {
+         <Md5Converter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/mirror-text/mirror-text-converter.tsx b/src/app/tools/mirror-text/mirror-text-converter.tsx
+index 47f6ee9..283fc7e 100644
+--- a/src/app/tools/mirror-text/mirror-text-converter.tsx
++++ b/src/app/tools/mirror-text/mirror-text-converter.tsx
+@@ -2,12 +2,15 @@
+ 
+ import { useState } from 'react';
+ import { Copy, Download, RefreshCw } from 'lucide-react';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import AdScript from '@/components/ads/AdScript';
+ 
+ interface TextStats {
+   characters: number;
+   words: number;
+   sentences: number;
+   lines: number;
++  paragraphs: number;
+ }
+ 
+ const mirrorTextMap: { [key: string]: string } = {
+@@ -31,6 +34,7 @@ export function MirrorTextConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const updateStats = (text: string) => {
+@@ -39,6 +43,7 @@ export function MirrorTextConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -100,40 +105,14 @@ export function MirrorTextConverter() {
+       </div>
+ 
+       {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <AdScript />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/mirror-text/page.tsx b/src/app/tools/mirror-text/page.tsx
+index b2e667b..f0d8803 100644
+--- a/src/app/tools/mirror-text/page.tsx
++++ b/src/app/tools/mirror-text/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { MirrorTextConverter } from './mirror-text-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function MirrorTextPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <MirrorTextConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/morse-code/page.tsx b/src/app/tools/morse-code/page.tsx
+index 811e949..2d3f0a7 100644
+--- a/src/app/tools/morse-code/page.tsx
++++ b/src/app/tools/morse-code/page.tsx
+@@ -40,6 +40,8 @@ export default async function MorseCodePage() {
+         <MorseCodeConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/nato-phonetic/page.tsx b/src/app/tools/nato-phonetic/page.tsx
+index e607eef..019b17a 100644
+--- a/src/app/tools/nato-phonetic/page.tsx
++++ b/src/app/tools/nato-phonetic/page.tsx
+@@ -40,6 +40,8 @@ export default async function NatoPhoneticPage() {
+         <NatoPhoneticConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/number-sorter/page.tsx b/src/app/tools/number-sorter/page.tsx
+index 0a70434..75982ba 100644
+--- a/src/app/tools/number-sorter/page.tsx
++++ b/src/app/tools/number-sorter/page.tsx
+@@ -45,6 +45,8 @@ export default async function NumberSorterPage() {
+         <NumberSorter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/online-notepad/page.tsx b/src/app/tools/online-notepad/page.tsx
+index 489cdf1..394dead 100644
+--- a/src/app/tools/online-notepad/page.tsx
++++ b/src/app/tools/online-notepad/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { OnlineNotepad } from './online-notepad-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function OnlineNotepadPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <OnlineNotepad />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/password-generator/page.tsx b/src/app/tools/password-generator/page.tsx
+index 33cb51d..628ff6e 100644
+--- a/src/app/tools/password-generator/page.tsx
++++ b/src/app/tools/password-generator/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { PasswordGenerator } from './password-generator';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function PasswordGeneratorPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <PasswordGenerator />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/phonetic-spelling/page.tsx b/src/app/tools/phonetic-spelling/page.tsx
+index f10dcba..691bf0a 100644
+--- a/src/app/tools/phonetic-spelling/page.tsx
++++ b/src/app/tools/phonetic-spelling/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { PhoneticSpellingConverter } from './phonetic-spelling-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function PhoneticSpellingPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <PhoneticSpellingConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/pig-latin/page.tsx b/src/app/tools/pig-latin/page.tsx
+index ca6d2ef..81a3b0c 100644
+--- a/src/app/tools/pig-latin/page.tsx
++++ b/src/app/tools/pig-latin/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { PigLatinConverter } from './pig-latin-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function PigLatinPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <PigLatinConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/plain-text/page.tsx b/src/app/tools/plain-text/page.tsx
+index 57657b6..ffb592d 100644
+--- a/src/app/tools/plain-text/page.tsx
++++ b/src/app/tools/plain-text/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { PlainTextConverter } from './plain-text-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function PlainTextPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <PlainTextConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/plain-text/plain-text-converter.tsx b/src/app/tools/plain-text/plain-text-converter.tsx
+index ca2955c..e0e976b 100644
+--- a/src/app/tools/plain-text/plain-text-converter.tsx
++++ b/src/app/tools/plain-text/plain-text-converter.tsx
+@@ -1,13 +1,15 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import AdScript from '@/components/ads/AdScript';
+ 
+ interface TextStats {
+   characters: number;
+   words: number;
+   sentences: number;
+   lines: number;
++  paragraphs: number;
+ }
+ 
+ export function PlainTextConverter() {
+@@ -17,6 +19,7 @@ export function PlainTextConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const updateStats = (text: string) => {
+@@ -25,6 +28,7 @@ export function PlainTextConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -115,40 +119,14 @@ export function PlainTextConverter() {
+       </div>
+ 
+       {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <AdScript />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/png-to-jpg/page.tsx b/src/app/tools/png-to-jpg/page.tsx
+index 45cc6ad..2c32f3b 100644
+--- a/src/app/tools/png-to-jpg/page.tsx
++++ b/src/app/tools/png-to-jpg/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from "next";
+ import { PngToJpgConverter } from "./png-to-jpg-converter";
+ import { getToolContent } from '@/lib/tools';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function PngToJpgPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <PngToJpgConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/png-to-webp/page.tsx b/src/app/tools/png-to-webp/page.tsx
+index 6cef8fc..bf16d66 100644
+--- a/src/app/tools/png-to-webp/page.tsx
++++ b/src/app/tools/png-to-webp/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from "next";
+ import { PngToWebpConverter } from "./png-to-webp-converter";
+ import { getToolContent } from "@/lib/tools";
+ import { generatePageMetadata } from "@/lib/metadata";
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function PngToWebpPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <PngToWebpConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/random-choice/page.tsx b/src/app/tools/random-choice/page.tsx
+index d157162..3acf80d 100644
+--- a/src/app/tools/random-choice/page.tsx
++++ b/src/app/tools/random-choice/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RandomChoiceConverter } from './random-choice-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RandomChoicePage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RandomChoiceConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/random-date/page.tsx b/src/app/tools/random-date/page.tsx
+index b653745..975df57 100644
+--- a/src/app/tools/random-date/page.tsx
++++ b/src/app/tools/random-date/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RandomDateConverter } from './random-date-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RandomDatePage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RandomDateConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/random-ip/page.tsx b/src/app/tools/random-ip/page.tsx
+index ea726d4..2dd095d 100644
+--- a/src/app/tools/random-ip/page.tsx
++++ b/src/app/tools/random-ip/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RandomIpConverter } from './random-ip-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RandomIpPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RandomIpConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/random-letter/page.tsx b/src/app/tools/random-letter/page.tsx
+index 04d1d17..e10a4dc 100644
+--- a/src/app/tools/random-letter/page.tsx
++++ b/src/app/tools/random-letter/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RandomLetterConverter } from './random-letter-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RandomLetterPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RandomLetterConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/random-month/page.tsx b/src/app/tools/random-month/page.tsx
+index 00ae317..4b28c20 100644
+--- a/src/app/tools/random-month/page.tsx
++++ b/src/app/tools/random-month/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RandomMonthConverter } from './random-month-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RandomMonthPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RandomMonthConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/random-number/page.tsx b/src/app/tools/random-number/page.tsx
+index e23d5e5..1a826c2 100644
+--- a/src/app/tools/random-number/page.tsx
++++ b/src/app/tools/random-number/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RandomNumberConverter } from './random-number-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RandomNumberPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RandomNumberConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/remove-line-breaks/page.tsx b/src/app/tools/remove-line-breaks/page.tsx
+index f81e7c7..44c406f 100644
+--- a/src/app/tools/remove-line-breaks/page.tsx
++++ b/src/app/tools/remove-line-breaks/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RemoveLineBreaksConverter } from './remove-line-breaks-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RemoveLineBreaksPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RemoveLineBreaksConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/remove-line-breaks/remove-line-breaks-converter.tsx b/src/app/tools/remove-line-breaks/remove-line-breaks-converter.tsx
+index 6450423..117a4b8 100644
+--- a/src/app/tools/remove-line-breaks/remove-line-breaks-converter.tsx
++++ b/src/app/tools/remove-line-breaks/remove-line-breaks-converter.tsx
+@@ -1,13 +1,15 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import AdScript from '@/components/ads/AdScript';
+ 
+ interface TextStats {
+   characters: number;
+   words: number;
+   sentences: number;
+   lines: number;
++  paragraphs: number;
+ }
+ 
+ export function RemoveLineBreaksConverter() {
+@@ -17,6 +19,7 @@ export function RemoveLineBreaksConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const updateStats = (text: string) => {
+@@ -25,6 +28,7 @@ export function RemoveLineBreaksConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -94,40 +98,14 @@ export function RemoveLineBreaksConverter() {
+       </div>
+ 
+       {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <AdScript />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/remove-text-formatting/page.tsx b/src/app/tools/remove-text-formatting/page.tsx
+index 00be118..6131a2e 100644
+--- a/src/app/tools/remove-text-formatting/page.tsx
++++ b/src/app/tools/remove-text-formatting/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RemoveTextFormattingConverter } from './remove-text-formatting-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RemoveTextFormattingPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RemoveTextFormattingConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/remove-text-formatting/remove-text-formatting-converter.tsx b/src/app/tools/remove-text-formatting/remove-text-formatting-converter.tsx
+index 0861b94..511f4b1 100644
+--- a/src/app/tools/remove-text-formatting/remove-text-formatting-converter.tsx
++++ b/src/app/tools/remove-text-formatting/remove-text-formatting-converter.tsx
+@@ -1,13 +1,15 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Copy, Download, RefreshCw } from 'lucide-react';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import AdScript from '@/components/ads/AdScript';
+ 
+ interface TextStats {
+   characters: number;
+   words: number;
+   sentences: number;
+   lines: number;
++  paragraphs: number;
+ }
+ 
+ export function RemoveTextFormattingConverter() {
+@@ -17,6 +19,7 @@ export function RemoveTextFormattingConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const updateStats = (text: string) => {
+@@ -25,6 +28,7 @@ export function RemoveTextFormattingConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -118,40 +122,14 @@ export function RemoveTextFormattingConverter() {
+       </div>
+ 
+       {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <AdScript />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/app/tools/repeat-text/page.tsx b/src/app/tools/repeat-text/page.tsx
+index 38436b2..fd91314 100644
+--- a/src/app/tools/repeat-text/page.tsx
++++ b/src/app/tools/repeat-text/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RepeatTextConverter } from './repeat-text-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RepeatTextPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RepeatTextConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/roman-numeral-date/page.tsx b/src/app/tools/roman-numeral-date/page.tsx
+index 13e7495..d9ebc1f 100644
+--- a/src/app/tools/roman-numeral-date/page.tsx
++++ b/src/app/tools/roman-numeral-date/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { RomanNumeralDateConverter } from './roman-numeral-date-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function RomanNumeralDatePage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <RomanNumeralDateConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/rot13/page.tsx b/src/app/tools/rot13/page.tsx
+index 4508614..aa30eb7 100644
+--- a/src/app/tools/rot13/page.tsx
++++ b/src/app/tools/rot13/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { Rot13Converter } from './rot13-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function Rot13Page() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <Rot13Converter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/sentence-case/page.tsx b/src/app/tools/sentence-case/page.tsx
+index f9dbc8b..5807ab4 100644
+--- a/src/app/tools/sentence-case/page.tsx
++++ b/src/app/tools/sentence-case/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { SentenceCaseConverter } from './sentence-case-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -30,6 +31,7 @@ export default async function SentenceCasePage() {
+           <p className="text-gray-600 dark:text-gray-400">
+             {content?.short_description || 'Convert your text to sentence case online'}
+           </p>
++          <AdScript />
+         </div>
+ 
+         {/* Tool section with wider width */}
+@@ -37,6 +39,8 @@ export default async function SentenceCasePage() {
+           <SentenceCaseConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div className="prose dark:prose-invert">
+diff --git a/src/app/tools/sentence-case/sentence-case-converter.tsx b/src/app/tools/sentence-case/sentence-case-converter.tsx
+index 4350824..9dc5664 100644
+--- a/src/app/tools/sentence-case/sentence-case-converter.tsx
++++ b/src/app/tools/sentence-case/sentence-case-converter.tsx
+@@ -1,13 +1,15 @@
+ 'use client';
+ 
+ import React, { useState } from 'react';
+-import { Download, Copy, RefreshCw } from 'lucide-react';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import AdScript from '@/components/ads/AdScript';
+ 
+ interface TextStats {
+   characters: number;
+   words: number;
+   sentences: number;
+   lines: number;
++  paragraphs: number;
+ }
+ 
+ export function SentenceCaseConverter() {
+@@ -17,6 +19,7 @@ export function SentenceCaseConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const updateStats = (text: string) => {
+@@ -25,6 +28,7 @@ export function SentenceCaseConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -85,40 +89,14 @@ export function SentenceCaseConverter() {
+       </div>
+ 
+       {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-2">
+-        <button
+-          onClick={handleDownload}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+ 
+-      {/* Stats */}
+-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+-        <span>Character Count: {stats.characters}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Word Count: {stats.words}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Sentence Count: {stats.sentences}</span>
+-        <span className="text-gray-400 dark:text-gray-600">|</span>
+-        <span>Line Count: {stats.lines}</span>
+-      </div>
++      <AdScript />
+     </div>
+   );
+ }
+\ No newline at end of file
+diff --git a/src/app/tools/sentence-counter/page.tsx b/src/app/tools/sentence-counter/page.tsx
+index 9f127aa..1417aa0 100644
+--- a/src/app/tools/sentence-counter/page.tsx
++++ b/src/app/tools/sentence-counter/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { SentenceCounterConverter } from './sentence-counter-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function SentenceCounterPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <SentenceCounterConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/slugify-url/page.tsx b/src/app/tools/slugify-url/page.tsx
+index 388a5ea..30192b1 100644
+--- a/src/app/tools/slugify-url/page.tsx
++++ b/src/app/tools/slugify-url/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { SlugifyConverter } from './slugify-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function SlugifyPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <SlugifyConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/sort-words/page.tsx b/src/app/tools/sort-words/page.tsx
+index 5f0f8d2..46919f2 100644
+--- a/src/app/tools/sort-words/page.tsx
++++ b/src/app/tools/sort-words/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { SortWordsConverter } from './sort-words-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function SortWordsPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <SortWordsConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/subscript-text/page.tsx b/src/app/tools/subscript-text/page.tsx
+index f390c10..03db0bb 100644
+--- a/src/app/tools/subscript-text/page.tsx
++++ b/src/app/tools/subscript-text/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { SubscriptTextConverter } from './subscript-text-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -16,6 +17,39 @@ export async function generateMetadata(): Promise<Metadata> {
+   );
+ }
+ 
+-export default SubscriptTextConverter;
++export default async function SubscriptTextPage() {
++  const tool = await getToolContent('subscript-text');
++
++  if (!tool) {
++    return null;
++  }
++
++  return (
++    <main className="max-w-7xl mx-auto px-8 py-8">
++      <div className="max-w-4xl mx-auto mb-12">
++        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-3">
++          {tool.title}
++        </h1>
++        <p className="text-gray-600 dark:text-gray-400">
++          {tool.short_description}
++        </p>
++        <AdScript />
++      </div>
++
++      <div className="max-w-6xl mx-auto mb-12">
++        <SubscriptTextConverter />
++      </div>
++
++      <AdScript />
++
++      <div className="max-w-4xl mx-auto">
++        <div
++          className="prose dark:prose-invert"
++          dangerouslySetInnerHTML={{ __html: tool.long_description }}
++        />
++      </div>
++    </main>
++  );
++}
+ 
+ // ... rest of the file ... 
+\ No newline at end of file
+diff --git a/src/app/tools/text-counter/page.tsx b/src/app/tools/text-counter/page.tsx
+index 4062ba4..ed6963b 100644
+--- a/src/app/tools/text-counter/page.tsx
++++ b/src/app/tools/text-counter/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { TextCounter } from './text-counter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -29,12 +30,15 @@ export default async function TextCounterPage() {
+           <p className="text-gray-600 dark:text-gray-400">
+             {content?.short_description ?? 'Count characters, words, and lines in your text'}
+           </p>
++          <AdScript />
+         </div>
+ 
+         <div className="max-w-6xl mx-auto mb-12">
+           <TextCounter />
+         </div>
+ 
++        <AdScript />
++
+         <div className="max-w-4xl mx-auto">
+           {content?.long_description && (
+             <div 
+diff --git a/src/app/tools/text-replace/page.tsx b/src/app/tools/text-replace/page.tsx
+index ac935f1..5a53979 100644
+--- a/src/app/tools/text-replace/page.tsx
++++ b/src/app/tools/text-replace/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { TextReplaceConverter } from './text-replace-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function TextReplacePage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <TextReplaceConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/title-case/page.tsx b/src/app/tools/title-case/page.tsx
+index 246cb89..d5018bf 100644
+--- a/src/app/tools/title-case/page.tsx
++++ b/src/app/tools/title-case/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { TitleCaseConverter } from './title-case-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -30,6 +31,7 @@ export default async function TitleCasePage() {
+           <p className="text-gray-600 dark:text-gray-400">
+             {content?.short_description ?? 'Convert text to title case format'}
+           </p>
++          <AdScript />
+         </div>
+ 
+         {/* Tool section with wider width */}
+@@ -37,6 +39,8 @@ export default async function TitleCasePage() {
+           <TitleCaseConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           {content?.long_description && (
+diff --git a/src/app/tools/title-case/title-case-converter.tsx b/src/app/tools/title-case/title-case-converter.tsx
+index 73981b0..c2fb5b6 100644
+--- a/src/app/tools/title-case/title-case-converter.tsx
++++ b/src/app/tools/title-case/title-case-converter.tsx
+@@ -1,8 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
+-import { TextStats } from '@/lib/shared/types';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import { TextStats } from '@/components/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function TitleCaseConverter() {
+   const [inputText, setInputText] = useState('');
+@@ -11,6 +12,7 @@ export function TitleCaseConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+@@ -25,6 +27,7 @@ export function TitleCaseConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -88,6 +91,7 @@ export function TitleCaseConverter() {
+         onClear={handleClear}
+         stats={stats}
+       />
++      <AdScript />
+     </div>
+   );
+ }
+\ No newline at end of file
+diff --git a/src/app/tools/uppercase/page.tsx b/src/app/tools/uppercase/page.tsx
+index 7eb166f..e890645 100644
+--- a/src/app/tools/uppercase/page.tsx
++++ b/src/app/tools/uppercase/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { UppercaseConverter } from './uppercase-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ // Force dynamic rendering and disable all caching
+ export const dynamic = 'force-dynamic';
+@@ -35,6 +36,7 @@ export default async function UppercasePage() {
+           <p className="text-gray-600 dark:text-gray-400">
+             {tool.short_description}
+           </p>
++          <AdScript />
+         </div>
+ 
+         {/* Tool section with wider width */}
+@@ -42,6 +44,8 @@ export default async function UppercasePage() {
+           <UppercaseConverter />
+         </div>
+ 
++        <AdScript />
++
+         {/* Description section with more left padding */}
+         <div className="max-w-4xl mx-auto">
+           <div 
+diff --git a/src/app/tools/uppercase/uppercase-converter.tsx b/src/app/tools/uppercase/uppercase-converter.tsx
+index 0d13240..7e9ae2e 100644
+--- a/src/app/tools/uppercase/uppercase-converter.tsx
++++ b/src/app/tools/uppercase/uppercase-converter.tsx
+@@ -1,8 +1,9 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
+-import { TextStats } from '@/lib/shared/types';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import { TextStats } from '@/components/shared/types';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export function UppercaseConverter() {
+   const [inputText, setInputText] = useState('');
+@@ -11,6 +12,7 @@ export function UppercaseConverter() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+@@ -25,6 +27,7 @@ export function UppercaseConverter() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -88,6 +91,7 @@ export function UppercaseConverter() {
+         onClear={handleClear}
+         stats={stats}
+       />
++      <AdScript />
+     </div>
+   );
+ }
+\ No newline at end of file
+diff --git a/src/app/tools/url-converter/page.tsx b/src/app/tools/url-converter/page.tsx
+index 45d4150..afe3f13 100644
+--- a/src/app/tools/url-converter/page.tsx
++++ b/src/app/tools/url-converter/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { UrlConverter } from './url-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function UrlPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <UrlConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/utf8-converter/page.tsx b/src/app/tools/utf8-converter/page.tsx
+index 851bfe4..faccc40 100644
+--- a/src/app/tools/utf8-converter/page.tsx
++++ b/src/app/tools/utf8-converter/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { Utf8Converter } from './utf8-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function Utf8Page() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <Utf8Converter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/utm-builder/page.tsx b/src/app/tools/utm-builder/page.tsx
+index ddf5350..cdae713 100644
+--- a/src/app/tools/utm-builder/page.tsx
++++ b/src/app/tools/utm-builder/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { UtmBuilder } from './utm-builder';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function UtmPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <UtmBuilder />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/uuid-generator/page.tsx b/src/app/tools/uuid-generator/page.tsx
+index 4759658..15cdeae 100644
+--- a/src/app/tools/uuid-generator/page.tsx
++++ b/src/app/tools/uuid-generator/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { UuidGenerator } from './uuid-generator';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function UuidGeneratorPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <UuidGenerator />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/webp-to-jpg/page.tsx b/src/app/tools/webp-to-jpg/page.tsx
+index d87ae54..7015c04 100644
+--- a/src/app/tools/webp-to-jpg/page.tsx
++++ b/src/app/tools/webp-to-jpg/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from "next";
+ import { getToolContent } from "@/lib/tools";
+ import { WebpToJpgConverter } from "./webp-to-jpg-converter";
+ import { generatePageMetadata } from "@/lib/metadata";
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function WebpToJpgPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <WebpToJpgConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/webp-to-png/page.tsx b/src/app/tools/webp-to-png/page.tsx
+index 4f5218e..c18e7f0 100644
+--- a/src/app/tools/webp-to-png/page.tsx
++++ b/src/app/tools/webp-to-png/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from "next";
+ import { WebpToPngConverter } from "./webp-to-png-converter";
+ import { getToolContent } from "@/lib/tools";
+ import { generatePageMetadata } from "@/lib/metadata";
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function WebpToPngPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <WebpToPngConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/app/tools/word-frequency/page.tsx b/src/app/tools/word-frequency/page.tsx
+index bf44086..563d0e8 100644
+--- a/src/app/tools/word-frequency/page.tsx
++++ b/src/app/tools/word-frequency/page.tsx
+@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
+ import { getToolContent } from '@/lib/tools';
+ import { WordFrequencyConverter } from './word-frequency-converter';
+ import { generatePageMetadata } from '@/lib/metadata';
++import AdScript from '@/components/ads/AdScript';
+ 
+ export const dynamic = 'force-dynamic';
+ export const revalidate = 0;
+@@ -32,12 +33,15 @@ export default async function WordFrequencyPage() {
+         <p className="text-gray-600 dark:text-gray-400">
+           {tool.short_description}
+         </p>
++        <AdScript />
+       </div>
+ 
+       <div className="max-w-6xl mx-auto mb-12">
+         <WordFrequencyConverter />
+       </div>
+ 
++      <AdScript />
++
+       <div className="max-w-4xl mx-auto">
+         <div 
+           className="prose dark:prose-invert" 
+diff --git a/src/components/tools/CaseChangerTool.tsx b/src/components/tools/CaseChangerTool.tsx
+index 4451b18..37bd6c7 100644
+--- a/src/components/tools/CaseChangerTool.tsx
++++ b/src/components/tools/CaseChangerTool.tsx
+@@ -1,13 +1,15 @@
+ 'use client';
+ 
+ import { useState } from 'react';
+-import { Download, Copy, RefreshCw } from 'lucide-react';
++import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
++import AdScript from '@/components/ads/AdScript';
+ 
+ interface TextStats {
+   characters: number;
+   words: number;
+   sentences: number;
+   lines: number;
++  paragraphs: number;
+ }
+ 
+ export function CaseChangerTool() {
+@@ -17,6 +19,7 @@ export function CaseChangerTool() {
+     words: 0,
+     sentences: 0,
+     lines: 0,
++    paragraphs: 0,
+   });
+ 
+   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+@@ -31,6 +34,7 @@ export function CaseChangerTool() {
+       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+       lines: text.trim() === '' ? 0 : text.split('\n').length,
++      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
+     });
+   };
+ 
+@@ -124,50 +128,14 @@ export function CaseChangerTool() {
+         </button>
+       </div>
+ 
+-      {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-3">
+-        <button
+-          onClick={handleDownload}
+-          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
+-        >
+-          <Download className="h-4 w-4" />
+-          Download Text
+-        </button>
+-        <button
+-          onClick={handleCopy}
+-          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
+-        >
+-          <Copy className="h-4 w-4" />
+-          Copy to Clipboard
+-        </button>
+-        <button
+-          onClick={handleClear}
+-          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
+-        >
+-          <RefreshCw className="h-4 w-4" />
+-          Clear
+-        </button>
+-      </div>
++      <AdScript />
+ 
+-      {/* Stats Cards */}
+-      <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-gray-200 dark:border-gray-800">
+-        <div className="p-4 rounded-lg bg-gradient-to-br from-indigo-50 to-blue-50 dark:from-gray-800 dark:to-gray-900 shadow-sm">
+-          <div className="text-2xl font-bold text-indigo-600 dark:text-indigo-400">{stats.characters}</div>
+-          <div className="text-sm text-gray-600 dark:text-gray-400">Characters</div>
+-        </div>
+-        <div className="p-4 rounded-lg bg-gradient-to-br from-purple-50 to-pink-50 dark:from-gray-800 dark:to-gray-900 shadow-sm">
+-          <div className="text-2xl font-bold text-purple-600 dark:text-purple-400">{stats.words}</div>
+-          <div className="text-sm text-gray-600 dark:text-gray-400">Words</div>
+-        </div>
+-        <div className="p-4 rounded-lg bg-gradient-to-br from-pink-50 to-rose-50 dark:from-gray-800 dark:to-gray-900 shadow-sm">
+-          <div className="text-2xl font-bold text-pink-600 dark:text-pink-400">{stats.sentences}</div>
+-          <div className="text-sm text-gray-600 dark:text-gray-400">Sentences</div>
+-        </div>
+-        <div className="p-4 rounded-lg bg-gradient-to-br from-teal-50 to-emerald-50 dark:from-gray-800 dark:to-gray-900 shadow-sm">
+-          <div className="text-2xl font-bold text-teal-600 dark:text-teal-400">{stats.lines}</div>
+-          <div className="text-sm text-gray-600 dark:text-gray-400">Lines</div>
+-        </div>
+-      </div>
++      <CaseConverterButtons
++        onDownload={handleDownload}
++        onCopy={handleCopy}
++        onClear={handleClear}
++        stats={stats}
++      />
+     </div>
+   );
+ } 
+\ No newline at end of file
+diff --git a/src/lib/shared/CaseConverterButtons.tsx b/src/lib/shared/CaseConverterButtons.tsx
+index 78bcee5..ee0edc4 100644
+--- a/src/lib/shared/CaseConverterButtons.tsx
++++ b/src/lib/shared/CaseConverterButtons.tsx
+@@ -14,24 +14,24 @@ export function CaseConverterButtons({ onDownload, onCopy, onClear, stats }: Cas
+   return (
+     <div className="space-y-6">
+       {/* Action Buttons */}
+-      <div className="flex flex-wrap gap-3">
++      <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
+         <button
+           onClick={onDownload}
+-          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
++          className="flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 w-full sm:w-auto min-w-[140px]"
+         >
+           <Download className="h-4 w-4" />
+           Download Text
+         </button>
+         <button
+           onClick={onCopy}
+-          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
++          className="flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 w-full sm:w-auto min-w-[140px]"
+         >
+           <Copy className="h-4 w-4" />
+           Copy to Clipboard
+         </button>
+         <button
+           onClick={onClear}
+-          className="flex items-center gap-2 px-4 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
++          className="flex items-center justify-center gap-2 px-6 py-2.5 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 text-gray-900 dark:text-gray-100 rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 w-full sm:w-auto min-w-[140px]"
+         >
+           <RefreshCw className="h-4 w-4" />
+           Clear
+-- 
+2.49.0.windows.1
+

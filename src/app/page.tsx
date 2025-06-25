@@ -6,6 +6,7 @@ import { ToolBlock } from '@/components/ToolBlock';
 import { getAllTools } from '@/lib/tools';
 import { getPageContent } from '@/lib/page-content';
 import { generatePageMetadata } from '@/lib/metadata';
+import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
 export const revalidate = 0;

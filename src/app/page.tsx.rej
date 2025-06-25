@@ -1,0 +1,23 @@
+diff a/src/app/page.tsx b/src/app/page.tsx	(rejected hunks)
+@@ -76,8 +77,12 @@ export default async function Home({
+         </p>
+       </div>
+ 
++      <AdScript />
++
+       <CaseChangerTool />
+ 
++      <AdScript />
++
+       <div className="max-w-[700px] mx-auto space-y-6 text-muted-foreground">
+         <div 
+           className="prose dark:prose-invert" 
+@@ -85,6 +90,8 @@ export default async function Home({
+         />
+       </div>
+ 
++      <AdScript />
++
+       <section className="pt-8 border-t">
+         <h2 className="text-2xl font-semibold text-center mb-8">More Text Tools</h2>
+         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">

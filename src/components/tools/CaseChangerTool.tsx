@@ -1,13 +1,15 @@
 'use client';
 
 import { useState } from 'react';
-import { Download, Copy, RefreshCw } from 'lucide-react';
+import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import AdScript from '@/components/ads/AdScript';
 
 interface TextStats {
   characters: number;
   words: number;
   sentences: number;
   lines: number;
+  paragraphs: number;
 }
 
 export function CaseChangerTool() {
@@ -17,6 +19,7 @@ export function CaseChangerTool() {
     words: 0,
     sentences: 0,
     lines: 0,
+    paragraphs: 0,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {

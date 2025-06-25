@@ -1,0 +1,9 @@
+diff a/package.json b/package.json	(rejected hunks)
+@@ -58,6 +58,7 @@
+   },
+   "devDependencies": {
+     "@eslint/eslintrc": "^2.1.4",
++    "@stagewise/toolbar": "^0.4.9",
+     "@tailwindcss/typography": "^0.5.16",
+     "@types/crypto-js": "^4.2.2",
+     "@types/dompurify": "^3.0.5",
