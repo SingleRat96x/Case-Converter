@@ -2,26 +2,39 @@
 
 import React, { useState } from 'react';
 import { Download, Copy, RefreshCw } from 'lucide-react';
-import {
-  TextAnalytics,
-  useTextStats,
-  type TextStats,
-} from '@/app/components/shared/TextAnalytics';
+
+interface TextStats {
+  characters: number;
+  words: number;
+  sentences: number;
+  lines: number;
+}
 
 export function CaseChangerTool() {
   const [inputText, setInputText] = useState('');
-  const [stats, setStats] = useState<TextStats>({});
-  const { calculateStats } = useTextStats();
+  const [stats, setStats] = useState<TextStats>({
+    characters: 0,
+    words: 0,
+    sentences: 0,
+    lines: 0,
+  });
+
+  const updateStats = (text: string) => {
+    setStats({
+      characters: text.length,
+      words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
+      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
+      lines: text.trim() === '' ? 0 : text.split('\n').length,
+    });
+  };
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value;
     setInputText(newText);
-    setStats(calculateStats(newText));
+    updateStats(newText);
   };
 
-  const transformText = (
-    type: 'upper' | 'lower' | 'title' | 'sentence' | 'alternate'
-  ) => {
+  const transformText = (type: 'upper' | 'lower' | 'title' | 'sentence' | 'alternate') => {
     let result = inputText;
     switch (type) {
       case 'upper':
@@ -34,17 +47,10 @@ export function CaseChangerTool() {
         result = inputText.toLowerCase().replace(/\b\w/g, c => c.toUpperCase());
         break;
       case 'sentence':
-        result = inputText
-          .toLowerCase()
-          .replace(/(^\w|\.\s+\w)/g, c => c.toUpperCase());
+        result = inputText.toLowerCase().replace(/(^\w|\.\s+\w)/g, c => c.toUpperCase());
         break;
       case 'alternate':
-        result = inputText
-          .split('')
-          .map((char, i) =>
-            i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()
-          )
-          .join('');
+        result = inputText.split('').map((char, i) => i % 2 === 0 ? char.toLowerCase() : char.toUpperCase()).join('');
         break;
     }
     setInputText(result);
@@ -68,11 +74,11 @@ export function CaseChangerTool() {
 
   const handleClear = () => {
     setInputText('');
-    setStats({});
+    updateStats('');
   };
 
   return (
-    <div className="w-full space-y-4">
+    <div className="max-w-[900px] mx-auto space-y-4">
       <textarea
         className="w-full min-h-[200px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20"
         placeholder="Type or paste your text here..."
@@ -137,11 +143,15 @@ export function CaseChangerTool() {
         </button>
       </div>
 
-      <TextAnalytics
-        stats={stats}
-        mode="inline"
-        showStats={['characters', 'words', 'sentences', 'lines']}
-      />
+      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
+        <span>Character Count: {stats.characters}</span>
+        <span className="text-gray-400 dark:text-gray-600">|</span>
+        <span>Word Count: {stats.words}</span>
+        <span className="text-gray-400 dark:text-gray-600">|</span>
+        <span>Sentence Count: {stats.sentences}</span>
+        <span className="text-gray-400 dark:text-gray-600">|</span>
+        <span>Line Count: {stats.lines}</span>
+      </div>
     </div>
   );
-}
+} 

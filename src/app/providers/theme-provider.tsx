@@ -9,13 +9,10 @@ export function ThemeProvider({ children, ...props }: ThemeProviderProps) {
       attribute="class"
       defaultTheme="system"
       enableSystem
-      disableTransitionOnChange={true}
-      enableColorScheme={true}
-      storageKey="case-converter-theme"
-      themes={['light', 'dark', 'system']}
+      disableTransitionOnChange
       {...props}
     >
       {children}
     </NextThemeProvider>
   );
-}
+} 

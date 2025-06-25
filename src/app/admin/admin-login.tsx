@@ -21,9 +21,7 @@ export function AdminLogin() {
       router.push('/admin/dashboard');
     } catch (err) {
       console.error('Authentication error:', err);
-      setErrorMessage(
-        err instanceof Error ? err.message : 'Authentication failed'
-      );
+      setErrorMessage(err instanceof Error ? err.message : 'Authentication failed');
     } finally {
       setIsLoading(false);
     }
@@ -41,16 +39,10 @@ export function AdminLogin() {
           </p>
         </div>
 
-        <form
-          className="mt-8 space-y-6 bg-[#1e293b] p-8 rounded-lg shadow-xl"
-          onSubmit={handleSubmit}
-        >
+        <form className="mt-8 space-y-6 bg-[#1e293b] p-8 rounded-lg shadow-xl" onSubmit={handleSubmit}>
           <div className="space-y-4">
             <div>
-              <label
-                htmlFor="email"
-                className="block text-sm font-medium text-gray-200"
-              >
+              <label htmlFor="email" className="block text-sm font-medium text-gray-200">
                 Email
               </label>
               <div className="mt-1">
@@ -63,16 +55,13 @@ export function AdminLogin() {
                   className="block w-full rounded-md border border-gray-600 bg-[#0f172a] px-3 py-2 text-white placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                   placeholder="Enter your email"
                   value={email}
-                  onChange={e => setEmail(e.target.value)}
+                  onChange={(e) => setEmail(e.target.value)}
                 />
               </div>
             </div>
 
             <div>
-              <label
-                htmlFor="password"
-                className="block text-sm font-medium text-gray-200"
-              >
+              <label htmlFor="password" className="block text-sm font-medium text-gray-200">
                 Password
               </label>
               <div className="mt-1 relative">
@@ -85,7 +74,7 @@ export function AdminLogin() {
                   className="block w-full rounded-md border border-gray-600 bg-[#0f172a] px-3 py-2 text-white placeholder-gray-400 shadow-sm focus:border-primary focus:outline-none focus:ring-1 focus:ring-primary sm:text-sm"
                   placeholder="Enter your password"
                   value={password}
-                  onChange={e => setPassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
             </div>
@@ -110,4 +99,4 @@ export function AdminLogin() {
       </div>
     </div>
   );
-}
+} 

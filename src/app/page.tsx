@@ -17,26 +17,24 @@ export async function generateMetadata(): Promise<Metadata> {
     'index',
     'index',
     pageContent?.title || 'Text Case Converter',
-    pageContent?.short_description ||
-      'Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case.'
+    pageContent?.short_description || 'Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case.'
   );
 }
 
 export default async function Home({
-  searchParams,
+  searchParams
 }: {
-  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+  searchParams: { [key: string]: string | string[] | undefined }
 }) {
-  const resolvedSearchParams = await searchParams;
-  const timestamp = resolvedSearchParams.t || Date.now();
+  const timestamp = searchParams.t || Date.now();
   const tools = await getAllTools(timestamp as string | number);
   const pageContent = await getPageContent('index');
-
+  
   // Sanitize the HTML content to prevent XSS attacks
   let sanitizedLongDescription = '';
   if (pageContent && pageContent.long_description) {
     // Create a JSDOM window. DOMPurify needs this to run in Node.js.
-    const window = new JSDOM('').window;
+    const window = new JSDOM('').window; 
     const DOMPurify = DOMPurifyFactory(window as any);
     sanitizedLongDescription = DOMPurify.sanitize(pageContent.long_description);
   }
@@ -71,32 +69,31 @@ export default async function Home({
   `;
 
   return (
-    <div className="w-full px-4 md:px-6 lg:px-8 py-8 space-y-8">
+    <div className="container py-8 space-y-8">
       <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">
-          {pageContent?.title || 'Text Case Converter'}
-        </h1>
+        <h1 className="text-4xl font-bold tracking-tight">{pageContent?.title || 'Text Case Converter'}</h1>
         <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
-          {pageContent?.short_description ||
-            'Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case. Plus, get instant character, word, sentence, and line counts.'}
+          {pageContent?.short_description || 'Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case. Plus, get instant character, word, sentence, and line counts.'}
         </p>
       </div>
 
+      <AdScript />
+
       <CaseChangerTool />
 
-      <div className="w-full space-y-6 text-muted-foreground">
-        <div
-          className="prose dark:prose-invert max-w-none"
-          dangerouslySetInnerHTML={{
-            __html: sanitizedLongDescription || fallbackContent,
-          }}
+      <AdScript />
+
+      <div className="max-w-[700px] mx-auto space-y-6 text-muted-foreground">
+        <div 
+          className="prose dark:prose-invert" 
+          dangerouslySetInnerHTML={{ __html: sanitizedLongDescription || fallbackContent }} 
         />
       </div>
 
+      <AdScript />
+
       <section className="pt-8 border-t">
-        <h2 className="text-2xl font-semibold text-center mb-8">
-          More Text Tools
-        </h2>
+        <h2 className="text-2xl font-semibold text-center mb-8">More Text Tools</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {tools
             .filter(tool => tool.show_in_index)

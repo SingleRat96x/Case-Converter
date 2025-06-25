@@ -10,12 +10,7 @@ interface ToolBlockProps {
   example?: string;
 }
 
-export function ToolBlock({
-  title,
-  description,
-  href,
-  example,
-}: ToolBlockProps) {
+export function ToolBlock({ title, description, href, example }: ToolBlockProps) {
   return (
     <Link
       href={href}
@@ -23,14 +18,10 @@ export function ToolBlock({
     >
       <div className="space-y-2">
         <div className="flex items-center justify-between gap-4">
-          <h3 className="text-base sm:text-lg font-semibold line-clamp-2">
-            {title}
-          </h3>
+          <h3 className="text-base sm:text-lg font-semibold line-clamp-2">{title}</h3>
           <ArrowRight className="h-4 w-4 shrink-0 text-muted-foreground" />
         </div>
-        <p className="text-sm text-muted-foreground line-clamp-2">
-          {description}
-        </p>
+        <p className="text-sm text-muted-foreground line-clamp-2">{description}</p>
         {example && (
           <div className="mt-4 p-3 rounded bg-muted/50 text-sm overflow-x-auto whitespace-pre-wrap">
             <code>{example}</code>
@@ -39,4 +30,4 @@ export function ToolBlock({
       </div>
     </Link>
   );
-}
+} 

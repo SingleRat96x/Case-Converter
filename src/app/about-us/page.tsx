@@ -33,7 +33,7 @@ export default async function AboutUsPage() {
   let sanitizedContent = '';
   if (page && page.content) {
     // Create a JSDOM window. DOMPurify needs this to run in Node.js.
-    const window = new JSDOM('').window;
+    const window = new JSDOM('').window; 
     const DOMPurify = DOMPurifyFactory(window as any);
     sanitizedContent = DOMPurify.sanitize(page.content);
   }
@@ -47,4 +47,4 @@ export default async function AboutUsPage() {
       </article>
     </main>
   );
-}
+} 

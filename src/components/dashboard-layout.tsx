@@ -1,7 +1,7 @@
-'use client';
+"use client";
 
-import { useRouter, usePathname } from 'next/navigation';
-import { ReactNode, useEffect } from 'react';
+import { useRouter, usePathname } from "next/navigation";
+import { ReactNode, useEffect } from "react";
 import {
   LayoutGrid,
   Settings,
@@ -10,9 +10,9 @@ import {
   FileCode,
   RefreshCw,
   LogOut,
-} from 'lucide-react';
-import { clearAuthToken } from '@/lib/auth';
-import { invalidateAllCaches } from '@/lib/tools';
+} from "lucide-react";
+import { clearAuthToken } from "@/lib/auth";
+import { invalidateAllCaches } from "@/lib/tools";
 
 interface DashboardLayoutProps {
   children: ReactNode;
@@ -109,9 +109,7 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         <div className="hidden lg:block w-64 border-r border-border bg-card min-h-screen p-4">
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between mb-8">
-              <h1 className="text-xl font-bold text-foreground">
-                Admin Dashboard
-              </h1>
+              <h1 className="text-xl font-bold text-foreground">Admin Dashboard</h1>
               <div className="flex gap-2">
                 <button
                   onClick={handleClearCache}
@@ -181,8 +179,10 @@ export function DashboardLayout({ children }: DashboardLayoutProps) {
         </div>
 
         {/* Main Content */}
-        <div className="flex-1 p-4 lg:p-8">{children}</div>
+        <div className="flex-1 p-4 lg:p-8">
+          {children}
+        </div>
       </div>
     </div>
   );
-}
+} 

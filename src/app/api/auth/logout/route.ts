@@ -16,13 +16,13 @@ export async function POST(request: NextRequest) {
 
     // Create response and clear the httpOnly cookie
     const response = NextResponse.json({ success: true });
-
+    
     response.cookies.set('isAdminAuthenticated', '', {
       httpOnly: true,
       secure: process.env.NODE_ENV === 'production',
       sameSite: 'strict',
       path: '/',
-      maxAge: 0, // Expire immediately
+      maxAge: 0 // Expire immediately
     });
 
     return response;
@@ -30,4 +30,4 @@ export async function POST(request: NextRequest) {
     console.error('Logout error:', error);
     return NextResponse.json({ error: 'Logout failed' }, { status: 500 });
   }
-}
+} 

@@ -7,8 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tools = await getAllTools();
 
   // Base URL from environment variable or default
-  const baseUrl =
-    process.env.NEXT_PUBLIC_BASE_URL || 'https://case-converter.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://case-converter.vercel.app';
 
   // Static pages
   const staticPages = [
@@ -41,7 +40,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       lastModified: new Date(),
       changeFrequency: 'monthly' as const,
       priority: 0.8,
-    },
+    }
   ];
 
   // Category pages - using the actual categories from your codebase
@@ -51,7 +50,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     'Code & Data Translation',
     'Image Tools',
     'Random Generators',
-    'Misc. Tools',
+    'Misc. Tools'
   ];
 
   const categoryPages = categories.map(category => ({
@@ -71,4 +70,4 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Combine all pages
   return [...staticPages, ...categoryPages, ...toolPages];
-}
+} 

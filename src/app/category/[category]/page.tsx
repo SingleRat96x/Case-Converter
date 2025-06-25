@@ -10,34 +10,28 @@ export const revalidate = 0;
 export async function generateMetadata({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: { category: string };
 }): Promise<Metadata> {
-  const { category } = await params;
   const categoryName = Object.values(TOOL_CATEGORIES).find(
-    cat => cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === category
+    cat => cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === params.category
   );
 
   return generatePageMetadata(
     'category',
-    category,
-    categoryName
-      ? `${categoryName} Tools - Text Case Converter`
-      : 'Category Not Found',
-    categoryName
-      ? `Browse our collection of ${categoryName.toLowerCase()} tools.`
-      : 'Category not found'
+    params.category,
+    categoryName ? `${categoryName} Tools - Text Case Converter` : 'Category Not Found',
+    categoryName ? `Browse our collection of ${categoryName.toLowerCase()} tools.` : 'Category not found'
   );
 }
 
 export default async function page({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: { category: string };
 }) {
-  const { category } = await params;
   const tools = await getAllTools();
   const categoryName = Object.values(TOOL_CATEGORIES).find(
-    cat => cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === category
+    cat => cat.toLowerCase().replace(/[^a-z0-9]+/g, '-') === params.category
   );
 
   if (!categoryName) {
@@ -53,9 +47,7 @@ export default async function page({
   return (
     <div className="container py-8">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold tracking-tight mb-4">
-          {categoryName}
-        </h1>
+        <h1 className="text-4xl font-bold tracking-tight mb-4">{categoryName}</h1>
         <p className="text-xl text-muted-foreground">
           Browse our collection of {categoryName.toLowerCase()} tools
         </p>
@@ -73,4 +65,4 @@ export default async function page({
       </div>
     </div>
   );
-}
+} 

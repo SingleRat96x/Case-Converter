@@ -1,14 +1,9 @@
 import type { Metadata } from 'next';
 import { getMetaDescription, type PageType } from './meta-descriptions';
 
-export async function generatePageMetadata(
-  pageType: PageType,
-  pageId: string,
-  fallbackTitle: string,
-  fallbackDescription: string
-): Promise<Metadata> {
+export async function generatePageMetadata(pageType: PageType, pageId: string, fallbackTitle: string, fallbackDescription: string): Promise<Metadata> {
   const meta = await getMetaDescription(pageType, pageId);
-
+  
   if (!meta) {
     return {
       title: fallbackTitle,
@@ -35,4 +30,4 @@ export async function generatePageMetadata(
       canonical: meta.canonical_url,
     },
   };
-}
+} 

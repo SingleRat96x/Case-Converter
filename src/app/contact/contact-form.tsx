@@ -22,7 +22,7 @@ export function ContactForm() {
     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
     const { name, value } = e.target;
-    setFormState(prev => ({
+    setFormState((prev) => ({
       ...prev,
       [name]: value,
     }));
@@ -90,4 +90,4 @@ export function ContactForm() {
       )}
     </>
   );
-}
+} 

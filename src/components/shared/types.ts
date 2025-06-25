@@ -4,4 +4,4 @@ export interface TextStats {
   sentences: number;
   paragraphs: number;
   lines: number;
-}
+} 

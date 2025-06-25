@@ -21,14 +21,14 @@ import { clearAuthToken } from '@/lib/auth';
 import { MenuManager } from './menu-manager';
 import { revalidateToolContent } from '@/lib/actions';
 import { PageContent, invalidatePageCache } from '@/lib/page-content';
-import {
-  FileText,
-  RefreshCw,
-  LogOut,
-  LayoutGrid,
-  Eye,
-  EyeOff,
-  ChevronLeft,
+import { 
+  FileText, 
+  RefreshCw, 
+  LogOut, 
+  LayoutGrid, 
+  Eye, 
+  EyeOff, 
+  ChevronLeft, 
   Search,
   Bold,
   Italic,
@@ -56,15 +56,9 @@ import {
   Table,
   FileCode,
   Superscript,
-  Subscript,
+  Subscript
 } from 'lucide-react';
-import {
-  MetaDescription,
-  getAllMetaDescriptions,
-  upsertMetaDescription,
-  getDefaultMetaDescription,
-  PageType,
-} from '@/lib/meta-descriptions';
+import { MetaDescription, getAllMetaDescriptions, upsertMetaDescription, getDefaultMetaDescription, PageType } from '@/lib/meta-descriptions';
 import { MetaDescriptionEditor } from '@/components/meta-description-editor';
 
 export function AdminDashboard() {
@@ -75,39 +69,13 @@ export function AdminDashboard() {
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const [searchQuery, setSearchQuery] = useState('');
-  const [activeTab, setActiveTab] = useState<
-    | 'tools'
-    | 'visibility'
-    | 'menu'
-    | 'pages'
-    | 'scripts'
-    | 'page-content'
-    | 'meta'
-  >('tools');
-  const [staticPages, setStaticPages] = useState<
-    Array<{
-      id: string;
-      slug: string;
-      title: string;
-      content: string;
-      last_updated: string;
-    }>
-  >([]);
-  const [selectedPage, setSelectedPage] = useState<{
-    id: string;
-    slug: string;
-    title: string;
-    content: string;
-    last_updated: string;
-  } | null>(null);
+  const [activeTab, setActiveTab] = useState<'tools' | 'visibility' | 'menu' | 'pages' | 'scripts' | 'page-content' | 'meta'>('tools');
+  const [staticPages, setStaticPages] = useState<Array<{id: string, slug: string, title: string, content: string, last_updated: string}>>([]);
+  const [selectedPage, setSelectedPage] = useState<{id: string, slug: string, title: string, content: string, last_updated: string} | null>(null);
   const [editorMode, setEditorMode] = useState<'visual' | 'text'>('visual');
   const [pageContent, setPageContent] = useState<PageContent | null>(null);
-  const [metaDescriptions, setMetaDescriptions] = useState<MetaDescription[]>(
-    []
-  );
-  const [selectedMeta, setSelectedMeta] = useState<MetaDescription | null>(
-    null
-  );
+  const [metaDescriptions, setMetaDescriptions] = useState<MetaDescription[]>([]);
+  const [selectedMeta, setSelectedMeta] = useState<MetaDescription | null>(null);
 
   const editor = useEditor({
     extensions: [
@@ -132,8 +100,7 @@ export function AdminDashboard() {
     content: selectedTool?.long_description || selectedPage?.content || '',
     editorProps: {
       attributes: {
-        class:
-          'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[300px] p-4 prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300',
+        class: 'prose prose-sm sm:prose lg:prose-lg xl:prose-2xl mx-auto focus:outline-none min-h-[300px] p-4 prose-headings:text-gray-900 dark:prose-headings:text-white prose-p:text-gray-700 dark:prose-p:text-gray-300',
       },
     },
   });
@@ -143,7 +110,7 @@ export function AdminDashboard() {
     try {
       const response = await fetch('/api/auth/check');
       const { isAuthenticated } = await response.json();
-
+      
       if (!isAuthenticated) {
         router.push('/admin');
         return false;
@@ -158,7 +125,7 @@ export function AdminDashboard() {
 
   useEffect(() => {
     // Check if user is authenticated
-    checkAuth().then(authenticated => {
+    checkAuth().then((authenticated) => {
       if (authenticated) {
         fetchTools();
         fetchStaticPages();
@@ -190,11 +157,7 @@ export function AdminDashboard() {
 
       setTools(data);
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while fetching tools'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching tools');
     } finally {
       setIsLoading(false);
     }
@@ -212,11 +175,7 @@ export function AdminDashboard() {
 
       setStaticPages(data);
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while fetching pages'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching pages');
     } finally {
       setIsLoading(false);
     }
@@ -238,11 +197,7 @@ export function AdminDashboard() {
         editor.commands.setContent(data.long_description || '');
       }
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while fetching page content'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching page content');
     } finally {
       setIsLoading(false);
     }
@@ -254,11 +209,7 @@ export function AdminDashboard() {
       const data = await getAllMetaDescriptions();
       setMetaDescriptions(data);
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while fetching meta descriptions'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while fetching meta descriptions');
     } finally {
       setIsLoading(false);
     }
@@ -303,27 +254,18 @@ export function AdminDashboard() {
       // Invalidate the cache for this tool
       invalidateToolCache(selectedTool.id);
 
-      setError(
-        'Changes saved successfully! The live page will be updated shortly.'
-      );
+      setError('Changes saved successfully! The live page will be updated shortly.');
       fetchTools(); // Refresh the tools list
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while saving changes'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while saving changes');
     }
   };
 
-  const handleVisibilityToggle = async (
-    toolId: string,
-    currentValue: boolean
-  ) => {
+  const handleVisibilityToggle = async (toolId: string, currentValue: boolean) => {
     try {
       // First update the local state optimistically
-      setTools(prevTools =>
-        prevTools.map(tool =>
+      setTools(prevTools => 
+        prevTools.map(tool => 
           tool.id === toolId ? { ...tool, show_in_index: !currentValue } : tool
         )
       );
@@ -341,27 +283,21 @@ export function AdminDashboard() {
 
       // First invalidate the specific tool cache
       await invalidateToolCache(toolId);
-
+      
       // Then invalidate all caches to ensure the index page is updated
       await invalidateAllCaches();
-
+      
       // Revalidate Next.js cache
       await revalidateToolContent(toolId);
-
+      
       // Finally refresh the tools list to ensure we have the latest data
       await fetchTools();
-
-      setError(
-        'Visibility updated successfully! Please wait a moment for the changes to take effect.'
-      );
+      
+      setError('Visibility updated successfully! Please wait a moment for the changes to take effect.');
     } catch (err) {
       // Revert the optimistic update on error
       await fetchTools();
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while updating visibility'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while updating visibility');
     }
   };
 
@@ -370,23 +306,17 @@ export function AdminDashboard() {
       setIsLoading(true);
       // Make sure to await the cache invalidation
       await invalidateAllCaches();
-
+      
       // Revalidate Next.js cache for all pages
       await revalidateToolContent('*');
 
       // Redirect to home page with timestamp to force fresh data
       window.open(`/?t=${Date.now()}`, '_blank');
-
+      
       await fetchTools(); // Refresh the tools list
-      setError(
-        'Cache cleared successfully! The changes will be reflected in the new tab.'
-      );
+      setError('Cache cleared successfully! The changes will be reflected in the new tab.');
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while clearing the cache'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while clearing the cache');
     } finally {
       setIsLoading(false);
     }
@@ -409,11 +339,7 @@ export function AdminDashboard() {
       setError('Page saved successfully!');
       fetchStaticPages();
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while saving the page'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while saving the page');
     }
   };
 
@@ -435,48 +361,35 @@ export function AdminDashboard() {
 
       // Invalidate the cache
       invalidatePageCache('index');
-
-      setError(
-        'Page content saved successfully! The live page will be updated shortly.'
-      );
-
+      
+      setError('Page content saved successfully! The live page will be updated shortly.');
+      
       // Revalidate Next.js cache
       await revalidateToolContent('*');
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while saving page content'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while saving page content');
     }
   };
 
   const handleSaveMetaDescription = async (meta: Partial<MetaDescription>) => {
     try {
-      const result = await upsertMetaDescription(
-        meta as Omit<MetaDescription, 'id' | 'updated_at'>
-      );
+      const result = await upsertMetaDescription(meta as Omit<MetaDescription, 'id' | 'updated_at'>);
       if (result) {
         setError('Meta description saved successfully!');
         fetchMetaDescriptions();
         setSelectedMeta(null);
       }
     } catch (err) {
-      setError(
-        err instanceof Error
-          ? err.message
-          : 'An error occurred while saving meta description'
-      );
+      setError(err instanceof Error ? err.message : 'An error occurred while saving meta description');
     }
   };
 
   const handleAddNewMeta = async () => {
     // If we have tools but they don't have meta descriptions, show them first
-    const toolsWithoutMeta = tools.filter(
-      tool =>
-        !metaDescriptions.some(
-          meta => meta.page_type === 'tool' && meta.page_id === tool.id
-        )
+    const toolsWithoutMeta = tools.filter(tool => 
+      !metaDescriptions.some(meta => 
+        meta.page_type === 'tool' && meta.page_id === tool.id
+      )
     );
 
     if (toolsWithoutMeta.length > 0) {
@@ -495,7 +408,7 @@ export function AdminDashboard() {
         twitter_title: tool.title,
         twitter_description: tool.short_description,
         canonical_url: `https://case-converter.vercel.app/tools/${tool.id}`,
-        updated_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
       };
       setSelectedMeta(defaultMeta);
     } else {
@@ -514,15 +427,15 @@ export function AdminDashboard() {
         twitter_title: '',
         twitter_description: '',
         canonical_url: '',
-        updated_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
       };
       setSelectedMeta(newMeta);
     }
   };
 
   const handleToolMetaClick = (tool: ToolContent) => {
-    const existingMeta = metaDescriptions.find(
-      meta => meta.page_type === 'tool' && meta.page_id === tool.id
+    const existingMeta = metaDescriptions.find(meta => 
+      meta.page_type === 'tool' && meta.page_id === tool.id
     );
 
     if (existingMeta) {
@@ -543,16 +456,15 @@ export function AdminDashboard() {
         twitter_title: tool.title,
         twitter_description: tool.short_description,
         canonical_url: `https://case-converter.vercel.app/tools/${tool.id}`,
-        updated_at: new Date().toISOString(),
+        updated_at: new Date().toISOString()
       };
       setSelectedMeta(newMeta);
     }
   };
 
-  const filteredTools = tools.filter(
-    tool =>
-      tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
-      tool.short_description.toLowerCase().includes(searchQuery.toLowerCase())
+  const filteredTools = tools.filter(tool => 
+    tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+    tool.short_description.toLowerCase().includes(searchQuery.toLowerCase())
   );
 
   const EditorMenuBar = () => {
@@ -565,9 +477,7 @@ export function AdminDashboard() {
             <button
               onClick={() => setEditorMode('visual')}
               className={`px-3 py-1 rounded-md transition-colors ${
-                editorMode === 'visual'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'hover:bg-accent'
+                editorMode === 'visual' ? 'bg-primary text-primary-foreground' : 'hover:bg-accent'
               }`}
             >
               Visual
@@ -575,16 +485,14 @@ export function AdminDashboard() {
             <button
               onClick={() => setEditorMode('text')}
               className={`px-3 py-1 rounded-md transition-colors ${
-                editorMode === 'text'
-                  ? 'bg-primary text-primary-foreground'
-                  : 'hover:bg-accent'
+                editorMode === 'text' ? 'bg-primary text-primary-foreground' : 'hover:bg-accent'
               }`}
             >
               HTML
             </button>
           </div>
         </div>
-
+        
         {editorMode === 'visual' && (
           <>
             <div className="flex flex-wrap gap-1">
@@ -636,27 +544,21 @@ export function AdminDashboard() {
 
             <div className="flex flex-wrap gap-1">
               <button
-                onClick={() =>
-                  editor.chain().focus().toggleHeading({ level: 1 }).run()
-                }
+                onClick={() => editor.chain().focus().toggleHeading({ level: 1 }).run()}
                 className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 1 }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Heading 1"
               >
                 <Heading1 className="h-5 w-5" />
               </button>
               <button
-                onClick={() =>
-                  editor.chain().focus().toggleHeading({ level: 2 }).run()
-                }
+                onClick={() => editor.chain().focus().toggleHeading({ level: 2 }).run()}
                 className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 2 }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Heading 2"
               >
                 <Heading2 className="h-5 w-5" />
               </button>
               <button
-                onClick={() =>
-                  editor.chain().focus().toggleHeading({ level: 3 }).run()
-                }
+                onClick={() => editor.chain().focus().toggleHeading({ level: 3 }).run()}
                 className={`p-2 rounded transition-colors ${editor.isActive('heading', { level: 3 }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Heading 3"
               >
@@ -668,36 +570,28 @@ export function AdminDashboard() {
 
             <div className="flex flex-wrap gap-1">
               <button
-                onClick={() =>
-                  editor.chain().focus().setTextAlign('left').run()
-                }
+                onClick={() => editor.chain().focus().setTextAlign('left').run()}
                 className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'left' }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Align Left"
               >
                 <AlignLeft className="h-5 w-5" />
               </button>
               <button
-                onClick={() =>
-                  editor.chain().focus().setTextAlign('center').run()
-                }
+                onClick={() => editor.chain().focus().setTextAlign('center').run()}
                 className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'center' }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Align Center"
               >
                 <AlignCenter className="h-5 w-5" />
               </button>
               <button
-                onClick={() =>
-                  editor.chain().focus().setTextAlign('right').run()
-                }
+                onClick={() => editor.chain().focus().setTextAlign('right').run()}
                 className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'right' }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Align Right"
               >
                 <AlignRight className="h-5 w-5" />
               </button>
               <button
-                onClick={() =>
-                  editor.chain().focus().setTextAlign('justify').run()
-                }
+                onClick={() => editor.chain().focus().setTextAlign('justify').run()}
                 className={`p-2 rounded transition-colors ${editor.isActive({ textAlign: 'justify' }) ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Justify"
               >
@@ -771,13 +665,7 @@ export function AdminDashboard() {
                 <ImageIcon className="h-5 w-5" />
               </button>
               <button
-                onClick={() =>
-                  editor
-                    .chain()
-                    .focus()
-                    .insertTable({ rows: 3, cols: 3, withHeaderRow: true })
-                    .run()
-                }
+                onClick={() => editor.chain().focus().insertTable({ rows: 3, cols: 3, withHeaderRow: true }).run()}
                 className={`p-2 rounded transition-colors ${editor.isActive('table') ? 'bg-accent' : 'hover:bg-accent'}`}
                 title="Insert Table"
               >
@@ -811,17 +699,14 @@ export function AdminDashboard() {
 
   // Add this function to group tools by category
   const groupToolsByCategory = (tools: ToolContent[]) => {
-    return tools.reduce(
-      (acc, tool) => {
-        const category = tool.category || 'Uncategorized';
-        if (!acc[category]) {
-          acc[category] = [];
-        }
-        acc[category].push(tool);
-        return acc;
-      },
-      {} as Record<string, ToolContent[]>
-    );
+    return tools.reduce((acc, tool) => {
+      const category = tool.category || 'Uncategorized';
+      if (!acc[category]) {
+        acc[category] = [];
+      }
+      acc[category].push(tool);
+      return acc;
+    }, {} as Record<string, ToolContent[]>);
   };
 
   // Add this to render tools by category
@@ -833,15 +718,13 @@ export function AdminDashboard() {
           {category}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {tools.map(tool => (
+          {tools.map((tool) => (
             <div
               key={tool.id}
               className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md transition-shadow"
             >
               <div className="flex justify-between items-start mb-2">
-                <h4 className="font-medium text-gray-900 dark:text-white">
-                  {tool.title}
-                </h4>
+                <h4 className="font-medium text-gray-900 dark:text-white">{tool.title}</h4>
                 <button
                   onClick={() => handleEditTool(tool)}
                   className="text-blue-600 dark:text-blue-400 hover:text-blue-700 dark:hover:text-blue-300"
@@ -849,9 +732,7 @@ export function AdminDashboard() {
                   Edit
                 </button>
               </div>
-              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">
-                {tool.short_description}
-              </p>
+              <p className="text-sm text-gray-600 dark:text-gray-300 mb-2">{tool.short_description}</p>
               <div className="text-xs text-gray-500 dark:text-gray-400">
                 Last updated: {new Date(tool.updated_at).toLocaleDateString()}
               </div>
@@ -871,35 +752,25 @@ export function AdminDashboard() {
           {category}
         </h3>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {tools.map(tool => (
+          {tools.map((tool) => (
             <div
               key={tool.id}
               className="p-4 rounded-lg border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 hover:shadow-md transition-shadow"
             >
               <div className="flex justify-between items-center">
                 <div>
-                  <h4 className="font-medium text-gray-900 dark:text-white">
-                    {tool.title}
-                  </h4>
-                  <p className="text-sm text-gray-600 dark:text-gray-300">
-                    {tool.short_description}
-                  </p>
+                  <h4 className="font-medium text-gray-900 dark:text-white">{tool.title}</h4>
+                  <p className="text-sm text-gray-600 dark:text-gray-300">{tool.short_description}</p>
                 </div>
                 <button
-                  onClick={() =>
-                    handleVisibilityToggle(tool.id, tool.show_in_index)
-                  }
+                  onClick={() => handleVisibilityToggle(tool.id, tool.show_in_index)}
                   className={`p-2 rounded-full transition-colors ${
                     tool.show_in_index
                       ? 'bg-green-100 dark:bg-green-900/30 text-green-600 dark:text-green-400'
                       : 'bg-red-100 dark:bg-red-900/30 text-red-600 dark:text-red-400'
                   }`}
                 >
-                  {tool.show_in_index ? (
-                    <Eye className="h-5 w-5" />
-                  ) : (
-                    <EyeOff className="h-5 w-5" />
-                  )}
+                  {tool.show_in_index ? <Eye className="h-5 w-5" /> : <EyeOff className="h-5 w-5" />}
                 </button>
               </div>
             </div>
@@ -936,8 +807,8 @@ export function AdminDashboard() {
           <button
             onClick={() => setActiveTab('tools')}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-              activeTab === 'tools'
-                ? 'bg-primary text-primary-foreground'
+              activeTab === 'tools' 
+                ? 'bg-primary text-primary-foreground' 
                 : 'hover:bg-accent'
             }`}
           >
@@ -947,8 +818,8 @@ export function AdminDashboard() {
           <button
             onClick={() => setActiveTab('visibility')}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-              activeTab === 'visibility'
-                ? 'bg-primary text-primary-foreground'
+              activeTab === 'visibility' 
+                ? 'bg-primary text-primary-foreground' 
                 : 'hover:bg-accent'
             }`}
           >
@@ -958,8 +829,8 @@ export function AdminDashboard() {
           <button
             onClick={() => setActiveTab('menu')}
             className={`flex-1 flex items-center justify-center gap-2 px-4 py-2 rounded-lg transition-colors ${
-              activeTab === 'menu'
-                ? 'bg-primary text-primary-foreground'
+              activeTab === 'menu' 
+                ? 'bg-primary text-primary-foreground' 
                 : 'hover:bg-accent'
             }`}
           >
@@ -974,9 +845,7 @@ export function AdminDashboard() {
         <div className="hidden lg:block w-64 border-r border-border bg-card min-h-screen p-4">
           <div className="flex flex-col h-full">
             <div className="flex items-center justify-between mb-8">
-              <h1 className="text-xl font-bold text-foreground">
-                Admin Dashboard
-              </h1>
+              <h1 className="text-xl font-bold text-foreground">Admin Dashboard</h1>
               <div className="flex gap-2">
                 <button
                   onClick={handleClearCache}
@@ -1000,8 +869,8 @@ export function AdminDashboard() {
               <button
                 onClick={() => setActiveTab('tools')}
                 className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'tools'
-                    ? 'bg-primary text-primary-foreground'
+                  activeTab === 'tools' 
+                    ? 'bg-primary text-primary-foreground' 
                     : 'hover:bg-accent'
                 }`}
               >
@@ -1011,8 +880,8 @@ export function AdminDashboard() {
               <button
                 onClick={() => setActiveTab('visibility')}
                 className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'visibility'
-                    ? 'bg-primary text-primary-foreground'
+                  activeTab === 'visibility' 
+                    ? 'bg-primary text-primary-foreground' 
                     : 'hover:bg-accent'
                 }`}
               >
@@ -1022,8 +891,8 @@ export function AdminDashboard() {
               <button
                 onClick={() => setActiveTab('menu')}
                 className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'menu'
-                    ? 'bg-primary text-primary-foreground'
+                  activeTab === 'menu' 
+                    ? 'bg-primary text-primary-foreground' 
                     : 'hover:bg-accent'
                 }`}
               >
@@ -1033,8 +902,8 @@ export function AdminDashboard() {
               <button
                 onClick={() => setActiveTab('pages')}
                 className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'pages'
-                    ? 'bg-primary text-primary-foreground'
+                  activeTab === 'pages' 
+                    ? 'bg-primary text-primary-foreground' 
                     : 'hover:bg-accent'
                 }`}
               >
@@ -1044,8 +913,8 @@ export function AdminDashboard() {
               <button
                 onClick={() => setActiveTab('page-content')}
                 className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'page-content'
-                    ? 'bg-primary text-primary-foreground'
+                  activeTab === 'page-content' 
+                    ? 'bg-primary text-primary-foreground' 
                     : 'hover:bg-accent'
                 }`}
               >
@@ -1055,8 +924,8 @@ export function AdminDashboard() {
               <button
                 onClick={() => setActiveTab('meta')}
                 className={`w-full flex items-center gap-2 px-4 py-3 rounded-lg transition-colors ${
-                  activeTab === 'meta'
-                    ? 'bg-primary text-primary-foreground'
+                  activeTab === 'meta' 
+                    ? 'bg-primary text-primary-foreground' 
                     : 'hover:bg-accent'
                 }`}
               >
@@ -1070,9 +939,7 @@ export function AdminDashboard() {
         {/* Main Content */}
         <div className="flex-1 p-4 lg:p-8">
           {error && (
-            <div
-              className={`p-4 rounded-lg mb-6 ${error.includes('success') ? 'bg-green-500/10 text-green-500' : 'bg-destructive/10 text-destructive'}`}
-            >
+            <div className={`p-4 rounded-lg mb-6 ${error.includes('success') ? 'bg-green-500/10 text-green-500' : 'bg-destructive/10 text-destructive'}`}>
               {error}
             </div>
           )}
@@ -1096,41 +963,28 @@ export function AdminDashboard() {
               ) : (
                 <div className="space-y-8">
                   {/* Static Pages Section */}
-                  {['index', 'static', 'category'].map(pageType => {
-                    const groupedMeta = metaDescriptions.filter(
-                      meta => meta.page_type === pageType
-                    );
+                  {['index', 'static', 'category'].map((pageType) => {
+                    const groupedMeta = metaDescriptions.filter(meta => meta.page_type === pageType);
                     if (groupedMeta.length === 0) return null;
 
                     return (
                       <div key={pageType} className="space-y-4">
                         <h3 className="text-lg font-semibold capitalize">
-                          {pageType === 'index'
-                            ? 'Home Page'
-                            : pageType === 'static'
-                              ? 'Static Pages'
-                              : 'Category Pages'}
+                          {pageType === 'index' ? 'Home Page' : 
+                           pageType === 'static' ? 'Static Pages' : 
+                           'Category Pages'}
                         </h3>
                         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                          {groupedMeta.map(meta => (
+                          {groupedMeta.map((meta) => (
                             <div
                               key={meta.id}
                               onClick={() => setSelectedMeta(meta)}
                               className="p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors cursor-pointer"
                             >
-                              <h4 className="font-medium mb-2">
-                                {meta.meta_title}
-                              </h4>
-                              <p className="text-sm text-muted-foreground line-clamp-2">
-                                {meta.meta_description}
-                              </p>
+                              <h4 className="font-medium mb-2">{meta.meta_title}</h4>
+                              <p className="text-sm text-muted-foreground line-clamp-2">{meta.meta_description}</p>
                               <div className="mt-4 flex items-center text-xs text-muted-foreground">
-                                <span>
-                                  Last updated:{' '}
-                                  {new Date(
-                                    meta.updated_at
-                                  ).toLocaleDateString()}
-                                </span>
+                                <span>Last updated: {new Date(meta.updated_at).toLocaleDateString()}</span>
                               </div>
                             </div>
                           ))}
@@ -1149,27 +1003,22 @@ export function AdminDashboard() {
                           type="text"
                           placeholder="Search tools..."
                           value={searchQuery}
-                          onChange={e => setSearchQuery(e.target.value)}
+                          onChange={(e) => setSearchQuery(e.target.value)}
                           className="w-full pl-8 pr-4 py-2 text-sm bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                         />
                       </div>
                     </div>
                     <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                       {tools
-                        .filter(
-                          tool =>
-                            tool.title
-                              .toLowerCase()
-                              .includes(searchQuery.toLowerCase()) ||
-                            tool.short_description
-                              .toLowerCase()
-                              .includes(searchQuery.toLowerCase())
+                        .filter(tool => 
+                          tool.title.toLowerCase().includes(searchQuery.toLowerCase()) ||
+                          tool.short_description.toLowerCase().includes(searchQuery.toLowerCase())
                         )
-                        .map(tool => {
-                          const meta = metaDescriptions.find(
-                            m => m.page_type === 'tool' && m.page_id === tool.id
+                        .map((tool) => {
+                          const meta = metaDescriptions.find(m => 
+                            m.page_type === 'tool' && m.page_id === tool.id
                           );
-
+                          
                           return (
                             <div
                               key={tool.id}
@@ -1178,14 +1027,14 @@ export function AdminDashboard() {
                             >
                               <h4 className="font-medium mb-2">{tool.title}</h4>
                               <p className="text-sm text-muted-foreground line-clamp-2">
-                                {meta?.meta_description ||
-                                  tool.short_description}
+                                {meta?.meta_description || tool.short_description}
                               </p>
                               <div className="mt-4 flex items-center text-xs text-muted-foreground">
                                 <span>
-                                  {meta
-                                    ? `Last updated: ${new Date(meta.updated_at).toLocaleDateString()}`
-                                    : 'No meta description yet'}
+                                  {meta ? 
+                                    `Last updated: ${new Date(meta.updated_at).toLocaleDateString()}` : 
+                                    'No meta description yet'
+                                  }
                                 </span>
                               </div>
                             </div>
@@ -1211,43 +1060,27 @@ export function AdminDashboard() {
               <div className="bg-card rounded-lg border border-border overflow-hidden">
                 <div className="p-6 space-y-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Title
-                    </label>
+                    <label className="block text-sm font-medium mb-2">Title</label>
                     <input
                       type="text"
                       value={pageContent?.title || ''}
-                      onChange={e =>
-                        setPageContent(prev =>
-                          prev ? { ...prev, title: e.target.value } : null
-                        )
-                      }
+                      onChange={(e) => setPageContent(prev => prev ? { ...prev, title: e.target.value } : null)}
                       className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                     />
                   </div>
-
+                  
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Short Description
-                    </label>
+                    <label className="block text-sm font-medium mb-2">Short Description</label>
                     <input
                       type="text"
                       value={pageContent?.short_description || ''}
-                      onChange={e =>
-                        setPageContent(prev =>
-                          prev
-                            ? { ...prev, short_description: e.target.value }
-                            : null
-                        )
-                      }
+                      onChange={(e) => setPageContent(prev => prev ? { ...prev, short_description: e.target.value } : null)}
                       className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Content
-                    </label>
+                    <label className="block text-sm font-medium mb-2">Content</label>
                     <div className="bg-background border border-input rounded-lg overflow-hidden">
                       <EditorMenuBar />
                       {editorMode === 'visual' ? (
@@ -1255,9 +1088,7 @@ export function AdminDashboard() {
                       ) : (
                         <textarea
                           value={editor?.getHTML() || ''}
-                          onChange={e =>
-                            editor?.commands.setContent(e.target.value)
-                          }
+                          onChange={(e) => editor?.commands.setContent(e.target.value)}
                           className="w-full min-h-[300px] p-4 bg-background text-foreground font-mono text-sm focus:outline-none"
                           spellCheck={false}
                         />
@@ -1280,31 +1111,23 @@ export function AdminDashboard() {
             <MenuManager />
           ) : activeTab === 'visibility' ? (
             <div className="space-y-6">
-              <h2 className="text-2xl font-bold mb-6">
-                Tool Visibility Settings
-              </h2>
+              <h2 className="text-2xl font-bold mb-6">Tool Visibility Settings</h2>
               <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                {tools.map(tool => (
+                {tools.map((tool) => (
                   <div
                     key={tool.id}
                     className="flex items-center justify-between p-4 bg-card rounded-lg border border-border hover:border-primary/50 transition-colors"
                   >
                     <span className="font-medium">{tool.title}</span>
                     <button
-                      onClick={() =>
-                        handleVisibilityToggle(tool.id, tool.show_in_index)
-                      }
+                      onClick={() => handleVisibilityToggle(tool.id, tool.show_in_index)}
                       className={`p-2 rounded-lg transition-colors ${
                         tool.show_in_index
                           ? 'bg-green-500/10 text-green-500 hover:bg-green-500/20'
                           : 'bg-muted text-muted-foreground hover:bg-accent'
                       }`}
                     >
-                      {tool.show_in_index ? (
-                        <Eye className="h-5 w-5" />
-                      ) : (
-                        <EyeOff className="h-5 w-5" />
-                      )}
+                      {tool.show_in_index ? <Eye className="h-5 w-5" /> : <EyeOff className="h-5 w-5" />}
                     </button>
                   </div>
                 ))}
@@ -1330,25 +1153,17 @@ export function AdminDashboard() {
                   <div className="bg-card rounded-lg border border-border overflow-hidden">
                     <div className="p-6 space-y-6">
                       <div>
-                        <label className="block text-sm font-medium mb-2">
-                          Title
-                        </label>
+                        <label className="block text-sm font-medium mb-2">Title</label>
                         <input
                           type="text"
                           value={selectedPage.title}
-                          onChange={e =>
-                            setSelectedPage(prev =>
-                              prev ? { ...prev, title: e.target.value } : null
-                            )
-                          }
+                          onChange={(e) => setSelectedPage(prev => prev ? { ...prev, title: e.target.value } : null)}
                           className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                         />
                       </div>
 
                       <div>
-                        <label className="block text-sm font-medium mb-2">
-                          Content
-                        </label>
+                        <label className="block text-sm font-medium mb-2">Content</label>
                         <div className="bg-background border border-input rounded-lg overflow-hidden">
                           <EditorMenuBar />
                           {editorMode === 'visual' ? (
@@ -1356,9 +1171,7 @@ export function AdminDashboard() {
                           ) : (
                             <textarea
                               value={editor?.getHTML() || ''}
-                              onChange={e =>
-                                editor?.commands.setContent(e.target.value)
-                              }
+                              onChange={(e) => editor?.commands.setContent(e.target.value)}
                               className="w-full min-h-[300px] p-4 bg-background text-foreground font-mono text-sm focus:outline-none"
                               spellCheck={false}
                             />
@@ -1379,7 +1192,7 @@ export function AdminDashboard() {
                 </>
               ) : (
                 <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                  {staticPages.map(page => (
+                  {staticPages.map((page) => (
                     <button
                       key={page.id}
                       onClick={() => {
@@ -1394,8 +1207,7 @@ export function AdminDashboard() {
                         {page.title}
                       </h3>
                       <div className="text-xs text-muted-foreground">
-                        Last updated:{' '}
-                        {new Date(page.last_updated).toLocaleDateString()}
+                        Last updated: {new Date(page.last_updated).toLocaleDateString()}
                       </div>
                     </button>
                   ))}
@@ -1418,43 +1230,27 @@ export function AdminDashboard() {
               <div className="bg-card rounded-lg border border-border overflow-hidden">
                 <div className="p-6 space-y-6">
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Title
-                    </label>
+                    <label className="block text-sm font-medium mb-2">Title</label>
                     <input
                       type="text"
                       value={selectedTool?.title || ''}
-                      onChange={e =>
-                        setSelectedTool(prev =>
-                          prev ? { ...prev, title: e.target.value } : null
-                        )
-                      }
+                      onChange={(e) => setSelectedTool(prev => prev ? { ...prev, title: e.target.value } : null)}
                       className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                     />
                   </div>
-
+                  
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Short Description
-                    </label>
+                    <label className="block text-sm font-medium mb-2">Short Description</label>
                     <input
                       type="text"
                       value={selectedTool?.short_description || ''}
-                      onChange={e =>
-                        setSelectedTool(prev =>
-                          prev
-                            ? { ...prev, short_description: e.target.value }
-                            : null
-                        )
-                      }
+                      onChange={(e) => setSelectedTool(prev => prev ? { ...prev, short_description: e.target.value } : null)}
                       className="w-full px-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                     />
                   </div>
 
                   <div>
-                    <label className="block text-sm font-medium mb-2">
-                      Long Description
-                    </label>
+                    <label className="block text-sm font-medium mb-2">Long Description</label>
                     <div className="bg-background border border-input rounded-lg overflow-hidden">
                       <EditorMenuBar />
                       {editorMode === 'visual' ? (
@@ -1462,9 +1258,7 @@ export function AdminDashboard() {
                       ) : (
                         <textarea
                           value={editor?.getHTML() || ''}
-                          onChange={e =>
-                            editor?.commands.setContent(e.target.value)
-                          }
+                          onChange={(e) => editor?.commands.setContent(e.target.value)}
                           className="w-full min-h-[300px] p-4 bg-background text-foreground font-mono text-sm focus:outline-none"
                           spellCheck={false}
                         />
@@ -1491,44 +1285,38 @@ export function AdminDashboard() {
                   type="text"
                   placeholder="Search tools..."
                   value={searchQuery}
-                  onChange={e => setSearchQuery(e.target.value)}
+                  onChange={(e) => setSearchQuery(e.target.value)}
                   className="w-full pl-10 pr-4 py-2 bg-background border border-input rounded-lg focus:outline-none focus:ring-2 focus:ring-ring"
                 />
               </div>
 
               <div className="space-y-8">
-                {Object.entries(groupToolsByCategory(filteredTools)).map(
-                  ([category, tools]) => (
-                    <div
-                      key={category}
-                      className="bg-card rounded-lg border border-border p-6"
-                    >
-                      <h2 className="text-xl font-semibold mb-4 text-foreground border-b border-border pb-2">
-                        {category}
-                      </h2>
-                      <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
-                        {tools.map(tool => (
-                          <button
-                            key={tool.id}
-                            onClick={() => handleEditTool(tool)}
-                            className="text-left p-4 bg-background rounded-lg border border-input hover:border-primary/50 transition-colors group"
-                          >
-                            <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
-                              {tool.title}
-                            </h3>
-                            <p className="text-sm text-muted-foreground">
-                              {tool.short_description}
-                            </p>
-                            <div className="mt-2 text-xs text-muted-foreground">
-                              Last updated:{' '}
-                              {new Date(tool.updated_at).toLocaleDateString()}
-                            </div>
-                          </button>
-                        ))}
-                      </div>
+                {Object.entries(groupToolsByCategory(filteredTools)).map(([category, tools]) => (
+                  <div key={category} className="bg-card rounded-lg border border-border p-6">
+                    <h2 className="text-xl font-semibold mb-4 text-foreground border-b border-border pb-2">
+                      {category}
+                    </h2>
+                    <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
+                      {tools.map((tool) => (
+                        <button
+                          key={tool.id}
+                          onClick={() => handleEditTool(tool)}
+                          className="text-left p-4 bg-background rounded-lg border border-input hover:border-primary/50 transition-colors group"
+                        >
+                          <h3 className="font-semibold mb-2 group-hover:text-primary transition-colors">
+                            {tool.title}
+                          </h3>
+                          <p className="text-sm text-muted-foreground">
+                            {tool.short_description}
+                          </p>
+                          <div className="mt-2 text-xs text-muted-foreground">
+                            Last updated: {new Date(tool.updated_at).toLocaleDateString()}
+                          </div>
+                        </button>
+                      ))}
                     </div>
-                  )
-                )}
+                  </div>
+                ))}
               </div>
             </>
           )}

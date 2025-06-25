@@ -18,8 +18,7 @@ export async function generateMetadata(): Promise<Metadata> {
     'static',
     'privacy-policy',
     page?.title || 'Privacy Policy',
-    page?.short_description ||
-      'Our privacy policy and data protection practices'
+    page?.short_description || 'Our privacy policy and data protection practices'
   );
 }
 
@@ -34,7 +33,7 @@ export default async function PrivacyPolicyPage() {
   let sanitizedContent = '';
   if (page && page.content) {
     // Create a JSDOM window. DOMPurify needs this to run in Node.js.
-    const window = new JSDOM('').window;
+    const window = new JSDOM('').window; 
     const DOMPurify = DOMPurifyFactory(window as any);
     sanitizedContent = DOMPurify.sanitize(page.content);
   }
@@ -48,4 +47,4 @@ export default async function PrivacyPolicyPage() {
       </article>
     </main>
   );
-}
+} 
