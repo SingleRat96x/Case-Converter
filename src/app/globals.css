@@ -489,3 +489,6 @@ a[role="button"]:hover::after {
 /* Ad slot helpers (no new sections; stabilize height for existing slots) */
 .ad-slot-stable { min-height: 120px; }
 @media (min-width: 1024px) { .ad-slot-stable { min-height: 250px; } }
+
+/* Ensure AdSense container displays correctly without inline styles */
+.adsbygoogle { display: block; width: 100%; }

@@ -16,12 +16,13 @@ const AdScript = () => {
 
   return (
     // Render only the ad unit container
-    <ins className="adsbygoogle"
-         style={{ display: 'block' }}
-         data-ad-client="ca-pub-8899111851490905"
-         data-ad-slot="1588643719"
-         data-ad-format="auto"
-         data-full-width-responsive="true">
+    <ins
+      className="adsbygoogle ad-slot-stable"
+      data-ad-client="ca-pub-8899111851490905"
+      data-ad-slot="1588643719"
+      data-ad-format="auto"
+      data-full-width-responsive="true"
+    >
     </ins>
   );
 };

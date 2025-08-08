@@ -44,8 +44,7 @@ export default function AdSpace({ position, className = '' }: AdSpaceProps) {
     return (
       <div className="w-full text-center my-4">
         <ins
-          className="adsbygoogle"
-          style={{ display: 'block' }}
+          className="adsbygoogle ad-slot-stable"
           data-ad-client="ca-pub-8899111851490905"
           data-ad-slot="9893563624"
           data-ad-format="auto"
