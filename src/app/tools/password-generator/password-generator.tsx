@@ -5,7 +5,7 @@ import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { calculateTextStatistics } from '@/lib/text-utils';
+import { generateTextStats } from '@/app/components/shared/TextAnalytics';
 
 export function PasswordGenerator() {
   const [length, setLength] = useState(16);
@@ -159,7 +159,7 @@ export function PasswordGenerator() {
             onDownload={handleDownload}
             onCopy={handleCopy}
             onClear={handleClear}
-            stats={calculateTextStatistics(result)}
+            stats={generateTextStats(result)}
           />
         </Card>
       </div>

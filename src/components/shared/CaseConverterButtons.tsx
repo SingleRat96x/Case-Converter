@@ -1,9 +1,8 @@
 'use client';
 
 import { Download, Copy, RefreshCw } from 'lucide-react';
-import { TextStats } from './types';
 import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
-import { TextAnalytics } from '@/app/components/shared/TextAnalytics';
+import { TextAnalytics, type TextStats } from '@/app/components/shared/TextAnalytics';
 
 interface CaseConverterButtonsProps {
   onDownload: () => void;

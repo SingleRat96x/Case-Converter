@@ -5,7 +5,7 @@ import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { calculateTextStatistics } from '@/lib/text-utils';
+import { generateTextStats } from '@/app/components/shared/TextAnalytics';
 
 export function RandomDateConverter() {
   const [startDate, setStartDate] = useState('1970-01-01');
@@ -104,7 +104,7 @@ export function RandomDateConverter() {
             onDownload={handleDownload}
             onCopy={handleCopy}
             onClear={handleClear}
-            stats={calculateTextStatistics(result)}
+            stats={generateTextStats(result)}
           />
         </Card>
       </div>
