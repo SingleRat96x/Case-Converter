@@ -28,6 +28,8 @@ export function Header() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [tools, setTools] = useState<ToolContent[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const drawerRef = useRef<HTMLDivElement | null>(null);
+  const closeButtonRef = useRef<HTMLButtonElement | null>(null);
 
   useEffect(() => {
     const fetchTools = async () => {
@@ -61,6 +63,45 @@ export function Header() {
   useEffect(() => {
     if (!isMenuOpen) {
       setExpandedCategories([]);
+    }
+  }, [isMenuOpen]);
+
+  useEffect(() => {
+    if (isMenuOpen) {
+      // Focus the close button when the drawer opens
+      closeButtonRef.current?.focus();
+
+      const handleKeyDown = (e: KeyboardEvent) => {
+        if (e.key === 'Escape') {
+          setIsMenuOpen(false);
+        }
+        if (e.key === 'Tab') {
+          // Simple focus trap inside the drawer
+          const container = drawerRef.current;
+          if (!container) return;
+          const focusable = container.querySelectorAll<HTMLElement>(
+            'a[href], button:not([disabled]), textarea, input, select, [tabindex]:not([tabindex="-1"])'
+          );
+          if (focusable.length === 0) return;
+          const first = focusable[0];
+          const last = focusable[focusable.length - 1];
+          const active = document.activeElement as HTMLElement | null;
+          if (e.shiftKey) {
+            if (active === first || !container.contains(active)) {
+              e.preventDefault();
+              last.focus();
+            }
+          } else {
+            if (active === last) {
+              e.preventDefault();
+              first.focus();
+            }
+          }
+        }
+      };
+
+      document.addEventListener('keydown', handleKeyDown);
+      return () => document.removeEventListener('keydown', handleKeyDown);
     }
   }, [isMenuOpen]);
 
@@ -240,7 +281,9 @@ export function Header() {
             <button
               className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary theme-transition md:hidden"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label="Toggle menu"
+              aria-label="Open menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
             >
               <Menu className="h-6 w-6" />
             </button>
@@ -256,33 +299,49 @@ export function Header() {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             transition={{ duration: 0.2 }}
-            className="fixed inset-0 z-50 md:hidden bg-black/60"
+            className="fixed inset-0 z-50 md:hidden bg-black/60 backdrop-blur-sm"
             onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
           >
             <motion.div 
+              ref={drawerRef}
+              id="mobile-menu"
+              role="dialog"
+              aria-modal="true"
+              aria-labelledby="mobile-menu-title"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ type: "spring", damping: 25, stiffness: 300 }}
-              className="fixed inset-y-0 right-0 w-full max-w-xs bg-white dark:bg-gray-900 shadow-2xl theme-transition"
+              transition={{ type: "spring", damping: 24, stiffness: 280 }}
+              drag="x"
+              dragConstraints={{ left: -120, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -80 || info.velocity.x < -800) {
+                  setIsMenuOpen(false);
+                }
+              }}
+              className="fixed inset-y-0 right-0 w-full max-w-sm bg-white dark:bg-gray-900 shadow-2xl drop-shadow-2xl theme-transition rounded-l-2xl border-l border-gray-200/60 dark:border-gray-800/60 will-change-transform"
               onClick={(e) => e.stopPropagation()}
             >
-              <div className="flex items-center justify-between p-4 border-b border-gray-200 dark:border-gray-800">
-                <h2 className="text-xl font-semibold text-gray-900 dark:text-white">Menu</h2>
+              <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-gray-200/70 dark:border-gray-800/70 bg-white/90 dark:bg-gray-900/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-gray-900/70 rounded-tl-2xl">
+                <h2 id="mobile-menu-title" className="text-lg font-semibold text-gray-900 dark:text-white">Menu</h2>
                 <button
+                  ref={closeButtonRef}
                   onClick={() => setIsMenuOpen(false)}
-                  className="p-2 rounded-md text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white focus:outline-none focus:ring-2 focus:ring-primary"
+                  className="p-2 rounded-md text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800/70 focus:outline-none focus:ring-2 focus:ring-primary"
+                  aria-label="Close menu"
                 >
                   <X className="h-6 w-6" />
                 </button>
               </div>
-              <nav className="px-2 py-4 space-y-1">
+              <nav className="px-2 py-3 space-y-1 pb-[max(1rem,env(safe-area-inset-bottom))]">
                 {Object.values(TOOL_CATEGORIES).map((category) => (
-                  <div key={category} className="py-2">
-                    <div className="flex items-center justify-between rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                  <div key={category} className="py-1.5">
+                    <div className="flex items-center justify-between rounded-xl hover:bg-gray-100/70 dark:hover:bg-gray-800/70">
                       <Link
                         href={category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                        className="flex-1 px-3 py-2 text-base font-medium text-gray-900 dark:text-white"
+                        className="flex-1 px-3 py-3 text-[15px] font-medium text-gray-900 dark:text-white"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {category}
@@ -290,7 +349,10 @@ export function Header() {
                       {toolsByCategory[category]?.length > 0 && (
                         <button
                           onClick={(e) => toggleCategory(category, e)}
-                          className="p-2 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white rounded-md"
+                          className="p-2.5 mr-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                          aria-label={`Toggle ${category} submenu`}
+                          aria-expanded={expandedCategories.includes(category)}
+                          aria-controls={`submenu-${category}`}
                         >
                           <motion.div
                             animate={{ rotate: expandedCategories.includes(category) ? 90 : 0 }}
@@ -304,18 +366,19 @@ export function Header() {
                     <AnimatePresence>
                       {expandedCategories.includes(category) && toolsByCategory[category]?.length > 0 && (
                         <motion.div
+                          id={`submenu-${category}`}
                           initial={{ height: 0, opacity: 0 }}
                           animate={{ height: "auto", opacity: 1 }}
                           exit={{ height: 0, opacity: 0 }}
-                          transition={{ duration: 0.2 }}
+                          transition={{ duration: 0.22 }}
                           className="overflow-hidden"
                         >
-                          <div className="mt-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
+                          <div className="mt-2 ml-4 pl-3 border-l border-gray-200 dark:border-gray-700 space-y-0.5">
                             {toolsByCategory[category].map((tool) => (
                               <Link
                                 key={tool.id}
                                 href={`/tools/${tool.id}`}
-                                className={`block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ${tool.custom_style || ''}`}
+                                className={`block px-3 py-2.5 text-[15px] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 hover:text-white dark:hover:text-white transition-all duration-200 ${tool.custom_style || ''}`}
                                 onClick={() => setIsMenuOpen(false)}
                               >
                                 {getDisplayText(tool)}
@@ -329,22 +392,22 @@ export function Header() {
                 ))}
 
                 {/* Mobile About Us Menu */}
-                <div className="py-2">
-                  <div className="flex items-center justify-between rounded-md hover:bg-gray-100 dark:hover:bg-gray-800">
+                <div className="py-1.5">
+                  <div className="flex items-center justify-between rounded-xl hover:bg-gray-100/70 dark:hover:bg-gray-800/70">
                     <Link
                       href="/about-us"
-                      className="flex-1 px-3 py-2 text-base font-medium text-gray-900 dark:text-white"
+                      className="flex-1 px-3 py-3 text-[15px] font-medium text-gray-900 dark:text-white"
                       onClick={() => setIsMenuOpen(false)}
                     >
                       About Us
                     </Link>
                   </div>
-                  <div className="mt-2 ml-4 pl-4 border-l border-gray-200 dark:border-gray-700">
+                  <div className="mt-2 ml-4 pl-3 border-l border-gray-200 dark:border-gray-700 space-y-0.5">
                     {toolsByCategory['About Us'].map((tool) => (
                       <Link
                         key={tool.id}
                         href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
-                        className="block px-3 py-2 text-sm text-gray-700 dark:text-gray-300 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200"
+                        className="block px-3 py-2.5 text-[15px] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 hover:text-white dark:hover:text-white transition-all duration-200"
                         onClick={() => setIsMenuOpen(false)}
                       >
                         {getDisplayText(tool)}
