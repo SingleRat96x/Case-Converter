@@ -69,29 +69,51 @@ export default async function Home({
   `;
 
   return (
-    <div className="container py-8 space-y-8">
+    <div className="container py-10 space-y-12">
+      {/* Hero */}
       <div className="text-center space-y-4">
-        <h1 className="text-4xl font-bold tracking-tight">{pageContent?.title || 'Text Case Converter'}</h1>
-        <p className="text-xl text-muted-foreground max-w-[700px] mx-auto">
+        <h1 className="text-4xl sm:text-5xl font-bold tracking-tight">
+          {pageContent?.title || 'Text Case Converter'}
+        </h1>
+        <p className="text-lg sm:text-xl text-muted-foreground max-w-[720px] mx-auto">
           {pageContent?.short_description || 'Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case. Plus, get instant character, word, sentence, and line counts.'}
         </p>
       </div>
 
-      <AdScript />
+      {/* Ad #1: Below hero with reserved height to reduce CLS */}
+      <div className="mx-auto max-w-[1000px] min-h-[280px] md:min-h-[250px]">
+        <AdScript />
+      </div>
 
-      <CaseChangerTool />
+      {/* Tool + Right Rail (desktop) */}
+      <div className="lg:grid lg:grid-cols-3 lg:gap-8 items-start">
+        <div className="lg:col-span-2 space-y-6">
+          <CaseChangerTool />
+        </div>
+        <div className="lg:col-span-1">
+          <div className="sticky top-24">
+            {/* Ad #2: Right rail on desktop, flows below tool on mobile */}
+            <div className="min-h-[280px] md:min-h-[250px]">
+              <AdScript />
+            </div>
+          </div>
+        </div>
+      </div>
 
-      <AdScript />
-
-      <div className="max-w-[700px] mx-auto space-y-6 text-muted-foreground">
+      {/* Long description (CMS or fallback) */}
+      <div className="max-w-[720px] mx-auto space-y-6 text-muted-foreground">
         <div 
           className="prose dark:prose-invert" 
           dangerouslySetInnerHTML={{ __html: sanitizedLongDescription || fallbackContent }} 
         />
       </div>
 
-      <AdScript />
+      {/* Ad #3: Mid-content ad with reserved height */}
+      <div className="mx-auto max-w-[1000px] min-h-[280px] md:min-h-[250px]">
+        <AdScript />
+      </div>
 
+      {/* More Text Tools */}
       <section className="pt-8 border-t">
         <h2 className="text-2xl font-semibold text-center mb-8">More Text Tools</h2>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
