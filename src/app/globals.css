@@ -337,3 +337,155 @@ a[role="button"]:hover::after {
 .tool-card:hover p {
   @apply text-foreground/90;
 }
+
+/* Enhanced Tool Inputs and Shared Buttons */
+/* Text Input Base */
+.textarea-reset {
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+}
+
+.tool-input-enhanced {
+  @apply w-full text-base leading-relaxed rounded-lg;
+  border: 1px solid var(--border);
+  background: var(--card);
+  color: var(--foreground);
+  caret-color: var(--primary);
+  transition: border-color 200ms ease, box-shadow 200ms ease, background-color 200ms ease, color 200ms ease;
+  box-shadow: inset 0 1px 0 rgba(0,0,0,0.02);
+}
+
+.tool-input-enhanced::placeholder {
+  color: oklch(from var(--muted-foreground) l c h / 0.7);
+  transition: color 200ms ease, opacity 200ms ease;
+}
+
+.tool-input-enhanced:focus {
+  outline: none;
+  border-color: color-mix(in oklch, var(--ring) 70%, var(--border));
+  box-shadow: 0 0 0 4px color-mix(in oklch, var(--ring) 12%, transparent), inset 0 1px 0 rgba(0,0,0,0.04);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .tool-input-enhanced { transition: none; }
+  .tool-input-enhanced::placeholder { transition: none; }
+}
+
+/* Input Variants */
+.tool-input-default { /* inherits base */ }
+
+.tool-input-gradient {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--card) 92%, transparent), color-mix(in oklch, var(--muted) 8%, transparent));
+  border-color: color-mix(in oklch, var(--border) 80%, var(--muted));
+}
+
+.tool-input-glass {
+  background: color-mix(in oklch, var(--card) 72%, transparent);
+  -webkit-backdrop-filter: saturate(1.2) blur(6px);
+  backdrop-filter: saturate(1.2) blur(6px);
+  border-color: color-mix(in oklch, var(--border) 65%, transparent);
+}
+
+/* Focus decoration wrapper for Cards containing inputs */
+.tool-card-vibrant {
+  @apply rounded-xl;
+  background: var(--card);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  transition: border-color 200ms ease, background-color 200ms ease, box-shadow 200ms ease;
+}
+
+.tool-card-vibrant:focus-within {
+  border-color: color-mix(in oklch, var(--ring) 55%, var(--border));
+  box-shadow: 0 0 0 6px color-mix(in oklch, var(--ring) 10%, transparent), var(--shadow);
+}
+
+/* File Upload variants */
+.tool-upload-default { background: var(--card); }
+.tool-upload-gradient {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--card) 90%, transparent), color-mix(in oklch, var(--muted) 10%, transparent));
+}
+.tool-upload-professional {
+  background: color-mix(in oklch, var(--card) 85%, transparent);
+  border: 1px dashed color-mix(in oklch, var(--border) 80%, var(--muted));
+}
+
+/* Settings panel variants */
+.tool-settings-default { /* plain */ }
+.tool-settings-glass {
+  -webkit-backdrop-filter: saturate(1.1) blur(4px);
+  backdrop-filter: saturate(1.1) blur(4px);
+}
+.tool-settings-gradient {
+  background: linear-gradient(180deg, color-mix(in oklch, var(--card) 92%, transparent), color-mix(in oklch, var(--muted) 8%, transparent));
+}
+
+/* Mode toggle variants */
+.tool-mode-toggle { transition: background-color 200ms ease, color 200ms ease; }
+.tool-toggle-default { /* use defaults */ }
+.tool-toggle-gradient { background: color-mix(in oklch, var(--muted) 22%, transparent); }
+.tool-toggle-professional { background: color-mix(in oklch, var(--muted) 14%, transparent); }
+
+/* Shared Button Variants for ToolActions */
+.tool-button-base {
+  border-radius: var(--radius-lg);
+  font-weight: 600;
+}
+
+.tool-button-primary {
+  @apply tool-button-base;
+  color: var(--primary-foreground);
+  background: var(--primary);
+  box-shadow: 0 1px 0 rgba(0,0,0,0.04), 0 8px 18px -6px color-mix(in oklch, var(--primary) 30%, transparent);
+}
+.tool-button-primary:hover { filter: brightness(1.05); }
+.tool-button-primary:active { transform: translateY(0.5px); }
+.tool-button-primary:focus-visible { outline: none; box-shadow: 0 0 0 4px color-mix(in oklch, var(--ring) 18%, transparent); }
+
+.tool-button-secondary {
+  @apply tool-button-base;
+  color: var(--foreground);
+  background: color-mix(in oklch, var(--secondary) 96%, transparent);
+  border: 1px solid var(--border);
+}
+.tool-button-secondary:hover { background: color-mix(in oklch, var(--secondary) 100%, transparent); }
+.tool-button-secondary:focus-visible { outline: none; box-shadow: 0 0 0 4px color-mix(in oklch, var(--ring) 12%, transparent); }
+
+.tool-button-success {
+  @apply tool-button-base;
+  color: var(--accent-foreground);
+  background: var(--accent);
+  box-shadow: 0 8px 16px -8px color-mix(in oklch, var(--accent) 35%, transparent);
+}
+.tool-button-success:hover { filter: brightness(1.04); }
+.tool-button-success:focus-visible { outline: none; box-shadow: 0 0 0 4px color-mix(in oklch, var(--accent) 20%, transparent); }
+
+.tool-button-warning {
+  @apply tool-button-base;
+  color: oklch(0.2 0 0);
+  background: oklch(0.9 0.08 85);
+  border: 1px solid color-mix(in oklch, oklch(0.9 0.08 85) 60%, var(--border));
+}
+
+.tool-button-danger {
+  @apply tool-button-base;
+  color: var(--destructive-foreground);
+  background: var(--destructive);
+  box-shadow: 0 8px 16px -8px color-mix(in oklch, var(--destructive) 35%, transparent);
+}
+
+.tool-button-outline {
+  @apply tool-button-base;
+  color: var(--foreground);
+  background: transparent;
+  border: 1px solid var(--border);
+}
+.tool-button-outline:hover { background: color-mix(in oklch, var(--muted) 16%, transparent); }
+
+/* Sizes for ToolButtons (matched in component) */
+.h-9.tool-button-primary, .h-9.tool-button-secondary, .h-9.tool-button-success, .h-9.tool-button-outline { border-radius: var(--radius-md); }
+
+/* Ad slot helpers (no new sections; stabilize height for existing slots) */
+.ad-slot-stable { min-height: 120px; }
+@media (min-width: 1024px) { .ad-slot-stable { min-height: 250px; } }
