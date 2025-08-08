@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
+import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
 
 export function SlugifyConverter() {
   const [input, setInput] = useState('');
@@ -119,14 +120,12 @@ export function SlugifyConverter() {
           />
         </div>
 
-        <Button
-          onClick={handleCopy}
-          variant="outline"
-          className="w-full"
-          disabled={!output}
-        >
-          Copy Slug
-        </Button>
+        <ActionButtonGroup
+          onCopy={handleCopy}
+          onClear={handleClear}
+          showDownload={false}
+          className="justify-center"
+        />
       </div>
     </Card>
   );
