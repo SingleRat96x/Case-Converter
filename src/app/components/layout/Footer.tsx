@@ -41,7 +41,8 @@ export function Footer() {
     { href: "/tools/rot13", label: "ROT13" },
     { href: "/tools/slugify-url", label: "Slugify URL" },
     { href: "/tools/utf8-converter", label: "UTF-8 Converter" },
-    { href: "/tools/url-encode-decode", label: "URL Encode/Decode" },
+    // fixed: url-encode-decode -> url-converter (existing route)
+    { href: "/tools/url-converter", label: "URL Converter" },
     { href: "/tools/utm-builder", label: "UTM Builder" },
   ];
 
@@ -57,11 +58,13 @@ export function Footer() {
   const miscTools = [
     { href: "/tools/nato-phonetic", label: "NATO Phonetic Alphabet" },
     { href: "/tools/online-notepad", label: "Online Notepad" },
-    { href: "/tools/online-sentence-counter", label: "Sentence Counter" },
+    // fixed: online-sentence-counter -> sentence-counter (existing route)
+    { href: "/tools/sentence-counter", label: "Sentence Counter" },
     { href: "/tools/repeat-text", label: "Repeat Text Generator" },
     { href: "/tools/roman-numeral-date", label: "Roman Numeral Date" },
     { href: "/tools/sort-words", label: "Sort Words" },
-    { href: "/tools/text-replacement", label: "Text Replacement" },
+    // fixed: text-replacement -> text-replace (existing route)
+    { href: "/tools/text-replace", label: "Text Replacement" },
     { href: "/tools/word-frequency", label: "Word Frequency Counter" },
   ];
 
@@ -76,26 +79,34 @@ export function Footer() {
     { href: "/tools/webp-to-png", label: "WebP to PNG" }
   ];
 
-  // Split tools into chunks of 8
-  const chunkSize = 8;
-  const textModificationColumns = Array.from({ length: Math.ceil(textModificationTools.length / chunkSize) }, (_, i) =>
-    textModificationTools.slice(i * chunkSize, (i + 1) * chunkSize)
-  );
-
   return (
     <footer className="border-t bg-gray-50/50 dark:bg-gray-950/50">
       <div className="container py-12 px-4">
-        <div className="grid gap-12 sm:grid-cols-2 lg:grid-cols-7">
+        {/* Top: Brand + brief description for AdSense-friendly spacing */}
+        <div className="flex flex-col items-center text-center gap-3 pb-10">
+          <Link href="/" className="inline-flex items-center gap-2">
+            <span className="text-xl font-semibold tracking-tight text-gray-900 dark:text-gray-100">
+              Text Case Converter
+            </span>
+          </Link>
+          <p className="max-w-2xl text-sm text-gray-600 dark:text-gray-400">
+            Fast, privacy-friendly tools for transforming text, images, and data.
+          </p>
+        </div>
+
+        {/* Main tools grid */}
+        <div className="grid gap-10 sm:grid-cols-2 lg:grid-cols-6">
+          {/* Basic */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
               Basic Tools
             </h3>
             <ul className="space-y-2.5">
               {basicTools.map((tool) => (
                 <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href={tool.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                   >
                     {tool.label}
                   </Link>
@@ -104,38 +115,36 @@ export function Footer() {
             </ul>
           </div>
 
-          <div className="col-span-2 space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800 text-center">
+          {/* Text Modification - flowed into two columns on larger screens */}
+          <div className="space-y-4 sm:col-span-1 lg:col-span-2">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
               Text Modification
             </h3>
-            <div className="grid grid-cols-2 gap-8">
-              {textModificationColumns.map((column, columnIndex) => (
-                <ul key={columnIndex} className="space-y-2.5">
-                  {column.map((tool) => (
-                    <li key={tool.href}>
-                      <Link 
-                        href={tool.href} 
-                        className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                      >
-                        {tool.label}
-                      </Link>
-                    </li>
-                  ))}
-                </ul>
+            <ul className="space-y-2.5 lg:columns-2 [column-fill:_balance]">
+              {textModificationTools.map((tool) => (
+                <li key={tool.href} className="break-inside-avoid">
+                  <Link
+                    href={tool.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                  >
+                    {tool.label}
+                  </Link>
+                </li>
               ))}
-            </div>
+            </ul>
           </div>
 
+          {/* Random Generators */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
               Random Generators
             </h3>
             <ul className="space-y-2.5">
               {randomGeneratorTools.map((tool) => (
                 <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href={tool.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                   >
                     {tool.label}
                   </Link>
@@ -144,16 +153,17 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Code & Data Tools */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
               Code & Data Tools
             </h3>
             <ul className="space-y-2.5">
               {codeTranslationTools.map((tool) => (
                 <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href={tool.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                   >
                     {tool.label}
                   </Link>
@@ -162,16 +172,17 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Image Tools */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
               Image Tools
             </h3>
             <ul className="space-y-2.5">
               {imageTools.map((tool) => (
                 <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href={tool.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                   >
                     {tool.label}
                   </Link>
@@ -180,16 +191,17 @@ export function Footer() {
             </ul>
           </div>
 
+          {/* Misc Tools */}
           <div className="space-y-4">
-            <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100 pb-2 border-b border-gray-200 dark:border-gray-800">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
               Misc. Tools
             </h3>
             <ul className="space-y-2.5">
               {miscTools.map((tool) => (
                 <li key={tool.href}>
-                  <Link 
-                    href={tool.href} 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
+                  <Link
+                    href={tool.href}
+                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
                   >
                     {tool.label}
                   </Link>
@@ -199,55 +211,54 @@ export function Footer() {
           </div>
         </div>
 
-        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800">
-          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-2">
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                Company
-              </h3>
-              <ul className="space-y-2.5">
-                <li>
-                  <Link 
-                    href="/about-us" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    About Us
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/contact-us" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    Contact Us
-                  </Link>
-                </li>
-              </ul>
-            </div>
+        {/* Company / Legal */}
+        <div className="mt-12 pt-8 border-t border-gray-200 dark:border-gray-800 grid gap-8 sm:grid-cols-2">
+          <div className="space-y-4">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+              Company
+            </h3>
+            <ul className="space-y-2.5">
+              <li>
+                <Link
+                  href="/about-us"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                >
+                  About Us
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/contact-us"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                >
+                  Contact Us
+                </Link>
+              </li>
+            </ul>
+          </div>
 
-            <div className="space-y-4">
-              <h3 className="text-lg font-semibold text-gray-900 dark:text-gray-100">
-                Legal
-              </h3>
-              <ul className="space-y-2.5">
-                <li>
-                  <Link 
-                    href="/privacy-policy" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link 
-                    href="/terms-of-service" 
-                    className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary hover:translate-x-1 transition-all duration-200 inline-flex items-center gap-1"
-                  >
-                    Terms of Service
-                  </Link>
-                </li>
-              </ul>
-            </div>
+          <div className="space-y-4">
+            <h3 className="text-base font-semibold text-gray-900 dark:text-gray-100">
+              Legal
+            </h3>
+            <ul className="space-y-2.5">
+              <li>
+                <Link
+                  href="/privacy-policy"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                >
+                  Privacy Policy
+                </Link>
+              </li>
+              <li>
+                <Link
+                  href="/terms-of-service"
+                  className="text-sm text-gray-600 dark:text-gray-400 hover:text-primary transition-colors"
+                >
+                  Terms of Service
+                </Link>
+              </li>
+            </ul>
           </div>
         </div>
 
