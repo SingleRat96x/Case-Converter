@@ -2,13 +2,15 @@
 
 import { useState } from 'react';
 import { Button } from '@/components/ui/button';
-import { Textarea } from '@/components/ui/textarea';
 import { Card } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
+import { TextInput } from '@/app/components/shared/ToolInputs';
+import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
+import { TextAnalytics, generateTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
 
 export function Rot13Converter() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
+  const [stats, setStats] = useState<TextStats>(generateTextStats(''));
 
   const rot13 = (text: string): string => {
     try {
@@ -36,9 +38,16 @@ export function Rot13Converter() {
     }
   };
 
+  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
+    const value = e.target.value;
+    setInput(value);
+    setStats(generateTextStats(value));
+  };
+
   const handleClear = () => {
     setInput('');
     setOutput('');
+    setStats(generateTextStats(''));
   };
 
   const handleCopy = async () => {
@@ -50,49 +59,40 @@ export function Rot13Converter() {
   };
 
   return (
-    <Card className="p-6">
+    <Card className="p-6 space-y-4">
       <div className="space-y-4">
-        <div>
-          <Label htmlFor="input">Text to Convert</Label>
-          <Textarea
-            id="input"
-            placeholder="Enter text to encode/decode using ROT13..."
-            value={input}
-            onChange={(e) => setInput(e.target.value)}
-            className="min-h-[100px]"
-          />
-          <p className="text-sm text-gray-500 dark:text-gray-400 mt-1">
-            ROT13 is its own inverse - encoding and decoding use the same operation.
-          </p>
-        </div>
+        <TextInput
+          title="Text to Convert"
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Enter text to encode/decode using ROT13..."
+          minHeight="md"
+          fontFamily="mono"
+        />
 
         <div className="flex gap-2">
           <Button onClick={handleConvert} className="flex-1">
             Convert ROT13
           </Button>
-          <Button onClick={handleClear} variant="outline">
-            Clear
-          </Button>
         </div>
 
-        <div>
-          <Label htmlFor="output">Result</Label>
-          <Textarea
-            id="output"
-            value={output}
-            readOnly
-            className="min-h-[100px]"
-          />
-        </div>
+        <TextInput
+          title="Result"
+          value={output}
+          readOnly
+          minHeight="md"
+          fontFamily="mono"
+        />
 
-        <Button
-          onClick={handleCopy}
-          variant="outline"
-          className="w-full"
-          disabled={!output}
-        >
-          Copy Result
-        </Button>
+        <ActionButtonGroup
+          onCopy={handleCopy}
+          onClear={handleClear}
+          copyDisabled={!output}
+          showDownload={false}
+          className="justify-center"
+        />
+
+        <TextAnalytics stats={stats} mode="grid" />
       </div>
     </Card>
   );
