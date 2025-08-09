@@ -244,11 +244,22 @@ export function ActionButtonGroup({
   showClear = true,
   showSwap = false,
 }: ActionButtonGroupProps) {
+  const visibleCount = [
+    showDownload && !!onDownload,
+    showCopy && !!onCopy,
+    showClear && !!onClear,
+    showSwap && !!onSwap,
+  ].filter(Boolean).length;
+
+  const gridCols = visibleCount >= 4 ? 'grid-cols-4' : visibleCount === 3 ? 'grid-cols-3' : visibleCount === 2 ? 'grid-cols-2' : 'grid-cols-1';
+
   const layoutClasses = {
-    horizontal: 'flex flex-wrap gap-3 justify-center',
-    vertical: 'flex flex-col gap-3',
-    grid: 'grid grid-cols-2 md:grid-cols-4 gap-3',
-  };
+    horizontal: `w-full flex flex-wrap gap-3 ${visibleCount > 1 ? 'children:flex-1' : ''}`,
+    vertical: 'w-full flex flex-col gap-3',
+    grid: `w-full grid ${gridCols} gap-3`,
+  } as const;
+
+  const buttonClass = 'w-full';
 
   return (
     <div className={`${layoutClasses[layout]} ${className}`}>
@@ -260,6 +271,7 @@ export function ActionButtonGroup({
           variant="secondary"
           size={size}
           icon={<Download className="h-4 w-4" />}
+          className={buttonClass}
         >
           {downloadLabel}
         </ToolButton>
@@ -273,6 +285,7 @@ export function ActionButtonGroup({
           variant="success"
           size={size}
           icon={<Copy className="h-4 w-4" />}
+          className={buttonClass}
         >
           {copyLabel}
         </ToolButton>
@@ -286,6 +299,7 @@ export function ActionButtonGroup({
           variant="outline"
           size={size}
           icon={<RotateCcw className="h-4 w-4" />}
+          className={buttonClass}
         >
           {swapLabel}
         </ToolButton>
@@ -299,6 +313,7 @@ export function ActionButtonGroup({
           variant="outline"
           size={size}
           icon={<RefreshCw className="h-4 w-4" />}
+          className={buttonClass}
         >
           {clearLabel}
         </ToolButton>

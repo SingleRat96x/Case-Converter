@@ -139,7 +139,7 @@
   /* Container constraints */
   .container {
     @apply px-4 mx-auto w-full;
-    max-width: min(100%, 1400px);
+    max-width: min(100%, 1600px);
   }
 
   /* Prevent text overflow */
@@ -157,6 +157,14 @@
     from { transform: translateX(-100%); }
     to { transform: translateX(0); }
   }
+}
+
+/* Widen common page wrappers without touching content structure */
+@layer utilities {
+  .max-w-7xl { max-width: min(100%, 1440px) !important; }
+  .max-w-6xl { max-width: min(100%, 1320px) !important; }
+  .max-w-4xl { max-width: min(100%, 1100px) !important; }
+  .max-w-\[900px\] { max-width: min(100%, 1150px) !important; }
 }
 
 /* Catppuccin theme mapping for Tailwind tokens */
@@ -228,6 +236,8 @@
     -webkit-text-fill-color: transparent;
     color: transparent;
   }
+  /* Make direct children flex:1 (used for equal button distribution) */
+  .children\:flex-1 > * { flex: 1 1 0%; }
 }
 
 @layer utilities {

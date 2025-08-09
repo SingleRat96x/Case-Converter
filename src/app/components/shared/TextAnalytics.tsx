@@ -179,7 +179,7 @@ export function TextAnalytics({
   }
 
   return (
-    <div className={`stats-grid ${className}`}>
+    <div className={`stats-grid w-full ${className}`}>
       {visibleConfigs.map(config => {
         const value = stats[config.key] ?? 0;
         const displayValue = config.format
