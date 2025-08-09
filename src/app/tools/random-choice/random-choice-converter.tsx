@@ -6,7 +6,7 @@ import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Textarea } from '@/components/ui/textarea';
 import { Button } from '@/components/ui/button';
-import { calculateTextStatistics } from '@/lib/text-utils';
+import { generateTextStats } from '@/app/components/shared/TextAnalytics';
 
 export function RandomChoiceConverter() {
   const [input, setInput] = useState('');
@@ -84,7 +84,7 @@ export function RandomChoiceConverter() {
             onDownload={handleDownload}
             onCopy={handleCopy}
             onClear={handleClear}
-            stats={calculateTextStatistics(result)}
+            stats={generateTextStats(result)}
           />
         </Card>
       </div>

@@ -5,7 +5,7 @@ import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { calculateTextStatistics } from '@/lib/text-utils';
+import { generateTextStats } from '@/app/components/shared/TextAnalytics';
 
 export function RandomMonthConverter() {
   const [format, setFormat] = useState<'full' | 'short' | 'number'>('full');
@@ -115,7 +115,7 @@ export function RandomMonthConverter() {
             onDownload={handleDownload}
             onCopy={handleCopy}
             onClear={handleClear}
-            stats={calculateTextStatistics(result)}
+            stats={generateTextStats(result)}
           />
         </Card>
       </div>

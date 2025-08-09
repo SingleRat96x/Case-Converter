@@ -7,6 +7,7 @@ import { Textarea } from '@/components/ui/textarea';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
 
 export function SortWordsConverter() {
   const [text, setText] = useState('');
@@ -139,15 +140,18 @@ export function SortWordsConverter() {
           <div className="grid gap-4">
             <div className="flex justify-between items-center">
               <h3 className="text-lg font-semibold">Result</h3>
-              <Button variant="outline" onClick={handleCopy}>
-                Copy to Clipboard
-              </Button>
             </div>
             <Textarea
               value={result}
               readOnly
               rows={8}
               className="resize-none"
+            />
+            <ActionButtonGroup
+              onCopy={handleCopy}
+              onClear={handleClear}
+              showDownload={false}
+              className="justify-center"
             />
           </div>
         </Card>

@@ -8,7 +8,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { calculateTextStatistics } from '@/lib/text-utils';
+import { generateTextStats } from '@/app/components/shared/TextAnalytics';
 import {
   ArrowUpDown,
   Copy,
@@ -31,7 +31,7 @@ import {
 
 export function OnlineNotepad() {
   const [content, setContent] = useState('');
-  const [stats, setStats] = useState(calculateTextStatistics(''));
+  const [stats, setStats] = useState(generateTextStats(''));
   const [lastSaved, setLastSaved] = useState<Date | null>(null);
   const [findText, setFindText] = useState('');
   const [replaceText, setReplaceText] = useState('');
@@ -42,7 +42,7 @@ export function OnlineNotepad() {
     const savedContent = localStorage.getItem('online-notepad-content');
     if (savedContent) {
       setContent(savedContent);
-      setStats(calculateTextStatistics(savedContent));
+      setStats(generateTextStats(savedContent));
     }
   }, []);
 
@@ -51,7 +51,7 @@ export function OnlineNotepad() {
     const saveContent = () => {
       localStorage.setItem('online-notepad-content', content);
       setLastSaved(new Date());
-      setStats(calculateTextStatistics(content));
+      setStats(generateTextStats(content));
     };
 
     const timeoutId = setTimeout(saveContent, 1000);
@@ -118,7 +118,7 @@ export function OnlineNotepad() {
       setContent('');
       localStorage.removeItem('online-notepad-content');
       setLastSaved(null);
-      setStats(calculateTextStatistics(''));
+      setStats(generateTextStats(''));
       setSelectedCase('none');
     }
   };
@@ -267,7 +267,7 @@ export function OnlineNotepad() {
               </div>
               <div className="flex items-center gap-2">
                 <Type className="h-4 w-4 text-gray-500" />
-                <span>Characters (no spaces): {stats.characters - (content.match(/\s/g)?.length || 0)}</span>
+                <span>Characters (no spaces): {(stats.characters ?? 0) - (content.match(/\s/g)?.length || 0)}</span>
               </div>
               <div className="flex items-center gap-2">
                 <FileText className="h-4 w-4 text-gray-500" />

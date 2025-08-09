@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
-import { TextStats } from '@/lib/shared/types';
+import type { TextStats } from '@/app/components/shared/TextAnalytics';
 import AdScript from '@/components/ads/AdScript';
 
 const cursedTextMap: { [key: string]: string } = {

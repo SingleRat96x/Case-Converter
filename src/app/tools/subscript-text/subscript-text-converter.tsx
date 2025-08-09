@@ -1,11 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
-import { Card } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
-import { calculateTextStatistics } from '@/lib/text-utils';
+import AdScript from '@/components/ads/AdScript';
+import { TextInput } from '@/app/components/shared/ToolInputs';
+import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
+import { TextAnalytics, generateTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
 
 const subscriptMap: { [key: string]: string } = {
   '0': '₀', '1': '₁', '2': '₂', '3': '₃', '4': '₄',
@@ -20,20 +19,21 @@ const subscriptMap: { [key: string]: string } = {
 export function SubscriptTextConverter() {
   const [input, setInput] = useState('');
   const [output, setOutput] = useState('');
+  const [stats, setStats] = useState<TextStats>(generateTextStats(''));
 
-  const convertToSubscript = (text: string) => {
-    return text.toLowerCase().split('').map(char => subscriptMap[char] || char).join('');
-  };
+  const convertToSubscript = (text: string) => text.toLowerCase().split('').map(char => subscriptMap[char] || char).join('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newInput = e.target.value;
     setInput(newInput);
     setOutput(convertToSubscript(newInput));
+    setStats(generateTextStats(newInput));
   };
 
   const handleClear = () => {
     setInput('');
     setOutput('');
+    setStats(generateTextStats(''));
   };
 
   const handleCopy = async () => {
@@ -58,40 +58,44 @@ export function SubscriptTextConverter() {
 
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <Card className="p-6">
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="input">Input Text</Label>
-            <Textarea
-              id="input"
-              placeholder="Enter text to convert to subscript..."
-              value={input}
-              onChange={handleInputChange}
-              className="min-h-[200px] font-mono"
-            />
-          </div>
-        </div>
-      </Card>
+      <div>
+        <TextInput
+          title="Input Text"
+          value={input}
+          onChange={handleInputChange}
+          placeholder="Enter text to convert to subscript..."
+          minHeight="lg"
+          fontFamily="mono"
+          variant="default"
+        />
+      </div>
 
-      <Card className="p-6">
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="output">Subscript Text</Label>
-            <div
-              id="output"
-              className="min-h-[200px] p-4 rounded-md bg-muted font-mono break-all whitespace-pre-wrap"
-            >
-              {output}
-            </div>
-          </div>
-          <CaseConverterButtons
-            onDownload={handleDownload}
-            onCopy={handleCopy}
-            onClear={handleClear}
-            stats={calculateTextStatistics(output)}
+      <div>
+        <TextInput
+          title="Subscript Text"
+          value={output}
+          readOnly
+          minHeight="lg"
+          fontFamily="mono"
+          variant="glass"
+        />
+        <ActionButtonGroup
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+          className="mt-4"
+        />
+        <div className="max-w-4xl mx-auto mt-4">
+          <TextAnalytics
+            stats={stats}
+            mode="grid"
+            showStats={['characters', 'words', 'sentences', 'lines']}
           />
         </div>
-      </Card>
+      </div>
+      <div className="md:col-span-2">
+        <AdScript />
+      </div>
     </div>
   );
 } 
