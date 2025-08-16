@@ -210,10 +210,10 @@ export function Header() {
             <Link className="flex items-center" href="/">
               <Home className="h-6 w-6 text-primary md:hidden" />
               <span className="font-bold text-sm 2xs:text-base xs:text-lg sm:text-lg md:text-base lg:text-lg whitespace-nowrap">
-                <span className="relative z-10 text-gray-900 dark:text-white transition-all duration-300 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
+                <span className="relative z-10 text-gray-900 dark:text-white transition-all duration-300 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-500 to-amber-500 dark:from-orange-400 dark:via-red-400 dark:to-amber-400">
                   Text Case Converter
                 </span>
-                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-100/50 via-purple-100/50 to-pink-100/50 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-pink-900/30 opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></span>
+                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-100/50 via-red-100/50 to-amber-100/50 dark:from-orange-900/30 dark:via-red-900/30 dark:to-amber-900/30 opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></span>
               </span>
             </Link>
           </div>
@@ -258,7 +258,7 @@ export function Header() {
                           <Link
                             key={tool.id}
                             href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
-                            className="block px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap"
+                            className="block px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-600 dark:hover:from-orange-400 dark:hover:to-red-500 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap"
                           >
                             {tool.name}
                           </Link>
@@ -270,7 +270,7 @@ export function Header() {
                               <Link
                                 key={tool.id}
                                 href={`/tools/${tool.id}`}
-                                className={`px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap ${tool.custom_style || ''}`}
+                                className={`px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-600 dark:hover:from-orange-400 dark:hover:to-red-500 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap ${tool.custom_style || ''}`}
                               >
                                 {getDisplayText(tool)}
                               </Link>
@@ -289,8 +289,8 @@ export function Header() {
             <div className="hidden md:block">
               <ThemeToggle />
             </div>
-            <button
-              className="relative p-2.5 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-blue-500/50 theme-transition md:hidden group"
+                          <button
+                className="relative p-2.5 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500/50 theme-transition md:hidden group"
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label={isMenuOpen ? "Close menu" : "Open menu"}
               aria-expanded={isMenuOpen}
@@ -348,7 +348,7 @@ export function Header() {
                     className="flex items-center space-x-2.5"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
+                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
                       <span className="text-white font-bold text-sm">TC</span>
                     </div>
                     <span className="font-semibold text-base text-gray-900 dark:text-white">Text Case Converter</span>
