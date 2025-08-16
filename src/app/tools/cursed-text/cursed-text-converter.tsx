@@ -1,109 +1,59 @@
 'use client';
 
-import { useState } from 'react';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
-import { TextStats } from '@/components/shared/types';
-import AdScript from '@/components/ads/AdScript';
+import { TextToolLayout } from '@/components/tools/TextToolLayout';
+import { TextTransformation } from '@/components/tools/TextTransformation';
+import { Zap } from 'lucide-react';
 
-const cursedTextMap: { [key: string]: string } = {
-  'a': 'ą', 'b': 'ҍ', 'c': 'ç', 'd': 'ժ', 'e': 'ҽ', 'f': 'ƒ', 'g': 'ց', 'h': 'հ', 'i': 'ì',
-  'j': 'ʝ', 'k': 'ҟ', 'l': 'Ӏ', 'm': 'ʍ', 'n': 'ղ', 'o': 'օ', 'p': 'ք', 'q': 'զ', 'r': 'ɾ',
-  's': 'ʂ', 't': 'է', 'u': 'մ', 'v': 'ѵ', 'w': 'ա', 'x': '×', 'y': 'վ', 'z': 'Հ',
-  'A': 'Ⱥ', 'B': 'β', 'C': 'Ç', 'D': 'Ꭰ', 'E': 'Ɛ', 'F': 'Ƒ', 'G': 'Ɠ', 'H': 'Ħ', 'I': 'Ī',
-  'J': 'Ĵ', 'K': 'Ҡ', 'L': 'Ł', 'M': 'Μ', 'N': 'Ν', 'O': 'Ø', 'P': 'Ρ', 'Q': 'Ԛ', 'R': 'Ɍ',
-  'S': 'Ϛ', 'T': 'Ͳ', 'U': 'Ʊ', 'V': 'Ѵ', 'W': 'Ш', 'X': 'Χ', 'Y': 'Ƴ', 'Z': 'Ż',
-  '0': '0', '1': '1', '2': '2', '3': '3', '4': '4', '5': '5', '6': '6', '7': '7', '8': '8', '9': '9'
+const cursedCharacters = [
+  '\u0300', '\u0301', '\u0302', '\u0303', '\u0304', '\u0305', '\u0306', '\u0307',
+  '\u0308', '\u0309', '\u030A', '\u030B', '\u030C', '\u030D', '\u030E', '\u030F',
+  '\u0310', '\u0311', '\u0312', '\u0313', '\u0314', '\u0315', '\u0316', '\u0317',
+  '\u0318', '\u0319', '\u031A', '\u031B', '\u031C', '\u031D', '\u031E', '\u031F',
+  '\u0320', '\u0321', '\u0322', '\u0323', '\u0324', '\u0325', '\u0326', '\u0327',
+  '\u0328', '\u0329', '\u032A', '\u032B', '\u032C', '\u032D', '\u032E', '\u032F',
+  '\u0330', '\u0331', '\u0332', '\u0333', '\u0334', '\u0335', '\u0336', '\u0337',
+  '\u0338', '\u0339', '\u033A', '\u033B', '\u033C', '\u033D', '\u033E', '\u033F',
+  '\u0340', '\u0341', '\u0342', '\u0343', '\u0344', '\u0345', '\u0346', '\u0347',
+  '\u0348', '\u0349', '\u034A', '\u034B', '\u034C', '\u034D', '\u034E', '\u034F',
+  '\u0350', '\u0351', '\u0352', '\u0353', '\u0354', '\u0355', '\u0356', '\u0357',
+  '\u0358', '\u0359', '\u035A', '\u035B', '\u035C', '\u035D', '\u035E', '\u035F',
+  '\u0360', '\u0361', '\u0362', '\u0363', '\u0364', '\u0365', '\u0366', '\u0367',
+  '\u0368', '\u0369', '\u036A', '\u036B', '\u036C', '\u036D', '\u036E', '\u036F'
+];
+
+const convertToCursedText = (text: string, intensity: number = 10) => {
+  return text.split('').map(char => {
+    if (char === ' ' || char === '\n') return char;
+    
+    let cursedChar = char;
+    const numCursed = Math.min(intensity, 20);
+    
+    for (let i = 0; i < numCursed; i++) {
+      const randomIndex = Math.floor(Math.random() * cursedCharacters.length);
+      cursedChar += cursedCharacters[randomIndex];
+    }
+    
+    return cursedChar;
+  }).join('');
 };
 
 export function CursedTextConverter() {
-  const [inputText, setInputText] = useState('');
-  const [stats, setStats] = useState<TextStats>({
-    characters: 0,
-    words: 0,
-    sentences: 0,
-    lines: 0,
-    paragraphs: 0,
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newText = e.target.value;
-    setInputText(newText);
-    updateStats(newText);
-  };
-
-  const updateStats = (text: string) => {
-    setStats({
-      characters: text.length,
-      words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
-      lines: text.trim() === '' ? 0 : text.split('\n').length,
-      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== ''). length || 1,
-    });
-  };
-
-  const convertToCursedText = (text: string) => {
-    return text.split('').map(char => cursedTextMap[char] || char).join('');
-  };
-
-  const handleDownload = () => {
-    const blob = new Blob([convertToCursedText(inputText)], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'cursed-text.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(convertToCursedText(inputText));
-    } catch (err) {
-      console.error('Failed to copy text:', err);
-    }
-  };
-
-  const handleClear = () => {
-    setInputText('');
-    updateStats('');
-  };
-
   return (
-    <div className="max-w-[900px] mx-auto space-y-6">
-      <div className="grid gap-6 md:grid-cols-2">
-        {/* Input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder="Type or paste your text here..."
-            value={inputText}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        {/* Output */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Cursed Text Result</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
-            readOnly
-            value={convertToCursedText(inputText)}
-          />
-        </div>
-      </div>
-
-      <AdScript />
-
-      <CaseConverterButtons
-        onDownload={handleDownload}
-        onCopy={handleCopy}
-        onClear={handleClear}
-        stats={stats}
-        inputText={inputText}
+    <TextToolLayout
+      title="Cursed Text Generator"
+      description="Create glitchy, cursed text with Unicode combining characters"
+    >
+      <TextTransformation
+        transformer={(text) => convertToCursedText(text, 10)}
+        toolConfig={{
+          name: 'Cursed Text',
+          icon: Zap,
+          placeholder: 'Type or paste your text here...',
+          downloadFileName: 'cursed-text.txt'
+        }}
+        layout="dual"
+        textareaSize="xl"
       />
-    </div>
+    </TextToolLayout>
   );
 } 

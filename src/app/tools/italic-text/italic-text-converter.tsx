@@ -1,9 +1,8 @@
 'use client';
 
-import { useState } from 'react';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
-import { TextStats } from '@/components/shared/types';
-import AdScript from '@/components/ads/AdScript';
+import { TextToolLayout } from '@/components/tools/TextToolLayout';
+import { TextTransformation } from '@/components/tools/TextTransformation';
+import { Italic } from 'lucide-react';
 
 const italicTextMap: { [key: string]: string } = {
   'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧', 'g': '𝘨', 'h': '𝘩', 'i': '𝘪',
@@ -14,95 +13,27 @@ const italicTextMap: { [key: string]: string } = {
   'S': '𝘚', 'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟', 'Y': '𝘠', 'Z': '𝘡'
 };
 
+const convertToItalicText = (text: string) => {
+  return text.split('').map(char => italicTextMap[char] || char).join('');
+};
+
 export function ItalicTextConverter() {
-  const [inputText, setInputText] = useState('');
-  const [stats, setStats] = useState<TextStats>({
-    characters: 0,
-    words: 0,
-    sentences: 0,
-    lines: 0,
-    paragraphs: 0,
-  });
-
-  const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
-    const newText = e.target.value;
-    setInputText(newText);
-    updateStats(newText);
-  };
-
-  const updateStats = (text: string) => {
-    setStats({
-      characters: text.length,
-      words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
-      lines: text.trim() === '' ? 0 : text.split('\n').length,
-      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== ''). length || 1,
-    });
-  };
-
-  const convertToItalicText = (text: string) => {
-    return text.split('').map(char => italicTextMap[char] || char).join('');
-  };
-
-  const handleDownload = () => {
-    const blob = new Blob([convertToItalicText(inputText)], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'italic-text.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const handleCopy = async () => {
-    try {
-      await navigator.clipboard.writeText(convertToItalicText(inputText));
-    } catch (err) {
-      console.error('Failed to copy text:', err);
-    }
-  };
-
-  const handleClear = () => {
-    setInputText('');
-    updateStats('');
-  };
-
   return (
-    <div className="max-w-[900px] mx-auto space-y-6">
-      <div className="grid gap-6 md:grid-cols-2">
-        {/* Input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder="Type or paste your text here..."
-            value={inputText}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        {/* Output */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Italic Text Result</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
-            readOnly
-            value={convertToItalicText(inputText)}
-          />
-        </div>
-      </div>
-
-      <AdScript />
-
-      <CaseConverterButtons
-        onDownload={handleDownload}
-        onCopy={handleCopy}
-        onClear={handleClear}
-        stats={stats}
-        inputText={inputText}
+    <TextToolLayout
+      title="Italic Text Converter"
+      description="Convert your text to italic Unicode characters that work anywhere"
+    >
+      <TextTransformation
+        transformer={convertToItalicText}
+        toolConfig={{
+          name: 'Italic Text',
+          icon: Italic,
+          placeholder: 'Type or paste your text here...',
+          downloadFileName: 'italic-text.txt'
+        }}
+        layout="dual"
+        textareaSize="xl"
       />
-    </div>
+    </TextToolLayout>
   );
 } 
