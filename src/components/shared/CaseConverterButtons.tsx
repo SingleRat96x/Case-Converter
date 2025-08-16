@@ -46,13 +46,14 @@ export function CaseConverterButtons({
   return (
     <div className={cn(themeClasses.section.spacing.lg)}>
       {/* Action Buttons */}
-      <div className="flex flex-wrap items-center justify-center gap-3">
+      <div className="grid grid-cols-3 gap-3 w-full max-w-2xl mx-auto">
         <button
           onClick={onDownload}
           className={cn(
             themeClasses.button.base,
             themeClasses.button.sizes[buttonSize],
-            themeClasses.button.variants.primary
+            themeClasses.button.variants.primary,
+            'w-full'
           )}
           disabled={!inputText}
           aria-label="Download text as file"
@@ -65,7 +66,8 @@ export function CaseConverterButtons({
           className={cn(
             themeClasses.button.base,
             themeClasses.button.sizes[buttonSize],
-            themeClasses.button.variants.secondary
+            themeClasses.button.variants.secondary,
+            'w-full'
           )}
           disabled={!inputText}
           aria-label="Copy text to clipboard"
@@ -78,7 +80,8 @@ export function CaseConverterButtons({
           className={cn(
             themeClasses.button.base,
             themeClasses.button.sizes[buttonSize],
-            themeClasses.button.variants.ghost
+            themeClasses.button.variants.ghost,
+            'w-full'
           )}
           disabled={!inputText}
           aria-label="Clear all text"

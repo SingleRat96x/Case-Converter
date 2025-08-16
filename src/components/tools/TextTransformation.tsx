@@ -175,7 +175,8 @@ export function TextTransformation({
           className={cn(
             themeClasses.button.base,
             themeClasses.button.sizes.md,
-            themeClasses.button.variants.primary
+            themeClasses.button.variants.primary,
+            'min-w-[200px]'
           )}
           aria-label={`Transform text to ${toolConfig.name}`}
         >

@@ -1,40 +1,22 @@
 'use client';
 
 import { useState } from 'react';
-import { Copy, Download, RefreshCw } from 'lucide-react';
+import { Copy, Download, RotateCw } from 'lucide-react';
 import { TextStats } from '@/components/shared/types';
+import { TextToolLayout } from '@/components/tools/TextToolLayout';
+import { UnifiedStats } from '@/components/shared/UnifiedStats';
+import AdScript from '@/components/ads/AdScript';
+import { themeClasses, cn } from '@/lib/theme-config';
 
-
-const instagramFontMaps = {
-  serif: {
-    'a': '𝔞', 'b': '𝔟', 'c': '𝔠', 'd': '𝔡', 'e': '𝔢', 'f': '𝔣', 'g': '𝔤', 'h': '𝔥', 'i': '𝔦',
-    'j': '𝔧', 'k': '𝔨', 'l': '𝔩', 'm': '𝔪', 'n': '𝔫', 'o': '𝔬', 'p': '𝔭', 'q': '𝔮', 'r': '𝔯',
-    's': '𝔰', 't': '𝔱', 'u': '𝔲', 'v': '𝔳', 'w': '𝔴', 'x': '𝔵', 'y': '𝔶', 'z': '𝔷',
-    'A': '𝔄', 'B': '𝔅', 'C': 'ℭ', 'D': '𝔇', 'E': '𝔈', 'F': '𝔉', 'G': '𝔊', 'H': 'ℌ', 'I': 'ℑ',
-    'J': '𝔍', 'K': '𝔎', 'L': '𝔏', 'M': '𝔐', 'N': '𝔑', 'O': '𝔒', 'P': '𝔓', 'Q': '𝔔', 'R': 'ℜ',
-    'S': '𝔖', 'T': '𝔗', 'U': '𝔘', 'V': '𝔙', 'W': '𝔚', 'X': '𝔛', 'Y': '𝔜', 'Z': 'ℨ'
-  },
-  script: {
-    'a': '𝒶', 'b': '𝒷', 'c': '𝒸', 'd': '𝒹', 'e': '𝑒', 'f': '𝒻', 'g': '𝑔', 'h': '𝒽', 'i': '𝒾',
-    'j': '𝒿', 'k': '𝓀', 'l': '𝓁', 'm': '𝓂', 'n': '𝓃', 'o': '𝑜', 'p': '𝓅', 'q': '𝓆', 'r': '𝓇',
-    's': '𝓈', 't': '𝓉', 'u': '𝓊', 'v': '𝓋', 'w': '𝓌', 'x': '𝓍', 'y': '𝓎', 'z': '𝓏',
-    'A': '𝒜', 'B': 'ℬ', 'C': '𝒞', 'D': '𝒟', 'E': 'ℰ', 'F': 'ℱ', 'G': '𝒢', 'H': 'ℋ', 'I': 'ℐ',
-    'J': '𝒥', 'K': '𝒦', 'L': 'ℒ', 'M': 'ℳ', 'N': '𝒩', 'O': '𝒪', 'P': '𝒫', 'Q': '𝒬', 'R': 'ℛ',
-    'S': '𝒮', 'T': '𝒯', 'U': '𝒰', 'V': '𝒱', 'W': '𝒲', 'X': '𝒳', 'Y': '𝒴', 'Z': '𝒵'
-  },
-  bold: {
-    'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢',
-    'j': '𝐣', 'k': '𝐤', 'l': '𝐥', 'm': '𝐦', 'n': '𝐧', 'o': '𝐨', 'p': '𝐩', 'q': '𝐪', 'r': '𝐫',
-    's': '𝐬', 't': '𝐭', 'u': '𝐮', 'v': '𝐯', 'w': '𝐰', 'x': '𝐱', 'y': '𝐲', 'z': '𝐳',
-    'A': '𝐀', 'B': '𝐁', 'C': '𝐂', 'D': '𝐃', 'E': '𝐄', 'F': '𝐅', 'G': '𝐆', 'H': '𝐇', 'I': '𝐈',
-    'J': '𝐉', 'K': '𝐊', 'L': '𝐋', 'M': '𝐌', 'N': '𝐍', 'O': '𝐎', 'P': '𝐏', 'Q': '𝐐', 'R': '𝐑',
-    'S': '𝐒', 'T': '𝐓', 'U': '𝐔', 'V': '𝐕', 'W': '𝐖', 'X': '𝐗', 'Y': '𝐘', 'Z': '𝐙'
-  }
-};
+const fontStyles: Array<{ name: string; map: { [key: string]: string } }> = [
+  { name: 'Bold', map: {'a': '𝗮', 'b': '𝗯', 'c': '𝗰', 'd': '𝗱', 'e': '𝗲', 'f': '𝗳', 'g': '𝗴', 'h': '𝗵', 'i': '𝗶', 'j': '𝗷', 'k': '𝗸', 'l': '𝗹', 'm': '𝗺', 'n': '𝗻', 'o': '𝗼', 'p': '𝗽', 'q': '𝗾', 'r': '𝗿', 's': '𝘀', 't': '𝘁', 'u': '𝘂', 'v': '𝘃', 'w': '𝘄', 'x': '𝘅', 'y': '𝘆', 'z': '𝘇', 'A': '𝗔', 'B': '𝗕', 'C': '𝗖', 'D': '𝗗', 'E': '𝗘', 'F': '𝗙', 'G': '𝗚', 'H': '𝗛', 'I': '𝗜', 'J': '𝗝', 'K': '𝗞', 'L': '𝗟', 'M': '𝗠', 'N': '𝗡', 'O': '𝗢', 'P': '𝗣', 'Q': '𝗤', 'R': '𝗥', 'S': '𝗦', 'T': '𝗧', 'U': '𝗨', 'V': '𝗩', 'W': '𝗪', 'X': '𝗫', 'Y': '𝗬', 'Z': '𝗭', '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'} },
+  { name: 'Italic', map: {'a': '𝘢', 'b': '𝘣', 'c': '𝘤', 'd': '𝘥', 'e': '𝘦', 'f': '𝘧', 'g': '𝘨', 'h': '𝘩', 'i': '𝘪', 'j': '𝘫', 'k': '𝘬', 'l': '𝘭', 'm': '𝘮', 'n': '𝘯', 'o': '𝘰', 'p': '𝘱', 'q': '𝘲', 'r': '𝘳', 's': '𝘴', 't': '𝘵', 'u': '𝘶', 'v': '𝘷', 'w': '𝘸', 'x': '𝘹', 'y': '𝘺', 'z': '𝘻', 'A': '𝘈', 'B': '𝘉', 'C': '𝘊', 'D': '𝘋', 'E': '𝘌', 'F': '𝘍', 'G': '𝘎', 'H': '𝘏', 'I': '𝘐', 'J': '𝘑', 'K': '𝘒', 'L': '𝘓', 'M': '𝘔', 'N': '𝘕', 'O': '𝘖', 'P': '𝘗', 'Q': '𝘘', 'R': '𝘙', 'S': '𝘚', 'T': '𝘛', 'U': '𝘜', 'V': '𝘝', 'W': '𝘞', 'X': '𝘟', 'Y': '𝘠', 'Z': '𝘡', '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'} },
+  { name: 'Cursive', map: {'a': '𝓪', 'b': '𝓫', 'c': '𝓬', 'd': '𝓭', 'e': '𝓮', 'f': '𝓯', 'g': '𝓰', 'h': '𝓱', 'i': '𝓲', 'j': '𝓳', 'k': '𝓴', 'l': '𝓵', 'm': '𝓶', 'n': '𝓷', 'o': '𝓸', 'p': '𝓹', 'q': '𝓺', 'r': '𝓻', 's': '𝓼', 't': '𝓽', 'u': '𝓾', 'v': '𝓿', 'w': '𝔀', 'x': '𝔁', 'y': '𝔂', 'z': '𝔃', 'A': '𝓐', 'B': '𝓑', 'C': '𝓒', 'D': '𝓓', 'E': '𝓔', 'F': '𝓕', 'G': '𝓖', 'H': '𝓗', 'I': '𝓘', 'J': '𝓙', 'K': '𝓚', 'L': '𝓛', 'M': '𝓜', 'N': '𝓝', 'O': '𝓞', 'P': '𝓟', 'Q': '𝓠', 'R': '𝓡', 'S': '𝓢', 'T': '𝓣', 'U': '𝓤', 'V': '𝓥', 'W': '𝓦', 'X': '𝓧', 'Y': '𝓨', 'Z': '𝓩', '0': '𝟬', '1': '𝟭', '2': '𝟮', '3': '𝟯', '4': '𝟰', '5': '𝟱', '6': '𝟲', '7': '𝟳', '8': '𝟴', '9': '𝟵'} },
+  { name: 'Bubble', map: {'a': 'ⓐ', 'b': 'ⓑ', 'c': 'ⓒ', 'd': 'ⓓ', 'e': 'ⓔ', 'f': 'ⓕ', 'g': 'ⓖ', 'h': 'ⓗ', 'i': 'ⓘ', 'j': 'ⓙ', 'k': 'ⓚ', 'l': 'ⓛ', 'm': 'ⓜ', 'n': 'ⓝ', 'o': 'ⓞ', 'p': 'ⓟ', 'q': 'ⓠ', 'r': 'ⓡ', 's': 'ⓢ', 't': 'ⓣ', 'u': 'ⓤ', 'v': 'ⓥ', 'w': 'ⓦ', 'x': 'ⓧ', 'y': 'ⓨ', 'z': 'ⓩ', 'A': 'Ⓐ', 'B': 'Ⓑ', 'C': 'Ⓒ', 'D': 'Ⓓ', 'E': 'Ⓔ', 'F': 'Ⓕ', 'G': 'Ⓖ', 'H': 'Ⓗ', 'I': 'Ⓘ', 'J': 'Ⓙ', 'K': 'Ⓚ', 'L': 'Ⓛ', 'M': 'Ⓜ', 'N': 'Ⓝ', 'O': 'Ⓞ', 'P': 'Ⓟ', 'Q': 'Ⓠ', 'R': 'Ⓡ', 'S': 'Ⓢ', 'T': 'Ⓣ', 'U': 'Ⓤ', 'V': 'Ⓥ', 'W': 'Ⓦ', 'X': 'Ⓧ', 'Y': 'Ⓨ', 'Z': 'Ⓩ', '0': '⓪', '1': '①', '2': '②', '3': '③', '4': '④', '5': '⑤', '6': '⑥', '7': '⑦', '8': '⑧', '9': '⑨'} },
+];
 
 export function InstagramFontsConverter() {
   const [inputText, setInputText] = useState('');
-  const [selectedFont, setSelectedFont] = useState<keyof typeof instagramFontMaps>('script');
   const [stats, setStats] = useState<TextStats>({
     characters: 0,
     words: 0,
@@ -42,6 +24,7 @@ export function InstagramFontsConverter() {
     lines: 0,
     paragraphs: 0,
   });
+  const [copiedIndex, setCopiedIndex] = useState<number | null>(null);
 
   const updateStats = (text: string) => {
     setStats({
@@ -57,27 +40,21 @@ export function InstagramFontsConverter() {
     const newText = e.target.value;
     setInputText(newText);
     updateStats(newText);
+    setCopiedIndex(null);
   };
 
-  const convertToInstagramFont = (text: string) => {
-    const currentFontMap = instagramFontMaps[selectedFont] as Record<string, string>;
-    return text.split('').map(char => currentFontMap[char.toLowerCase()] || char).join('');
+  const convertToFont = (text: string, fontMap: { [key: string]: string }) => {
+    return text.split('').map(char => fontMap[char] || char).join('');
   };
 
-  const handleDownload = () => {
-    const blob = new Blob([convertToInstagramFont(inputText)], { type: 'text/plain' });
-    const url = URL.createObjectURL(blob);
-    const a = document.createElement('a');
-    a.href = url;
-    a.download = 'instagram-font.txt';
-    document.body.appendChild(a);
-    a.click();
-    document.body.removeChild(a);
-    URL.revokeObjectURL(url);
-  };
-
-  const handleCopy = () => {
-    navigator.clipboard.writeText(convertToInstagramFont(inputText));
+  const handleCopy = async (text: string, index: number) => {
+    try {
+      await navigator.clipboard.writeText(text);
+      setCopiedIndex(index);
+      setTimeout(() => setCopiedIndex(null), 2000);
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
   };
 
   const handleClear = () => {
@@ -86,99 +63,78 @@ export function InstagramFontsConverter() {
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-4">
-      {/* Font Style Selector */}
-      <div className="flex gap-2">
-        <button
-          onClick={() => setSelectedFont('script')}
-          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-            selectedFont === 'script'
-              ? 'bg-primary text-white'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700'
-          }`}
-        >
-          Script
-        </button>
-        <button
-          onClick={() => setSelectedFont('serif')}
-          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-            selectedFont === 'serif'
-              ? 'bg-primary text-white'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700'
-          }`}
-        >
-          Serif
-        </button>
-        <button
-          onClick={() => setSelectedFont('bold')}
-          className={`px-4 py-2 rounded-md text-sm font-medium transition-colors ${
-            selectedFont === 'bold'
-              ? 'bg-primary text-white'
-              : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-700'
-          }`}
-        >
-          Bold
-        </button>
+    <TextToolLayout
+      title="Instagram Fonts Generator"
+      description="Create stylish text for Instagram posts, bios, and comments"
+    >
+      <div className={themeClasses.section.spacing.sm}>
+        <label className={themeClasses.label}>Input Text</label>
+        <textarea
+          className={cn(
+            themeClasses.textarea.base,
+            themeClasses.textarea.focus,
+            themeClasses.textarea.sizes.md
+          )}
+          placeholder="Type or paste your text here..."
+          value={inputText}
+          onChange={handleInputChange}
+        />
       </div>
 
-      <div className="grid gap-6 md:grid-cols-2">
-        {/* Input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder="Type or paste your text here..."
-            value={inputText}
-            onChange={handleInputChange}
-          />
+      {inputText && (
+        <div className={cn(themeClasses.section.spacing.md, 'mt-6')}>
+          <h3 className={themeClasses.heading.h3}>Font Styles</h3>
+          <div className={themeClasses.section.spacing.md}>
+            {fontStyles.map((style, index) => {
+              const convertedText = convertToFont(inputText, style.map);
+              return (
+                <div key={index} className={cn('p-4 rounded-lg bg-muted/50 border border-border')}>
+                  <div className="flex items-center justify-between mb-2">
+                    <span className={cn(themeClasses.label, 'text-base')}>{style.name}</span>
+                    <button
+                      onClick={() => handleCopy(convertedText, index)}
+                      className={cn(
+                        themeClasses.button.base,
+                        themeClasses.button.sizes.sm,
+                        themeClasses.button.variants.secondary
+                      )}
+                    >
+                      <Copy className="h-3 w-3" />
+                      <span>{copiedIndex === index ? 'Copied!' : 'Copy'}</span>
+                    </button>
+                  </div>
+                  <div className="p-3 bg-background rounded border border-border text-foreground break-all">
+                    {convertedText}
+                  </div>
+                </div>
+              );
+            })}
+          </div>
         </div>
+      )}
 
-        {/* Output */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Instagram Font Result</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
-            readOnly
-            value={convertToInstagramFont(inputText)}
-          />
-        </div>
-      </div>
-
-      {/* Action Buttons */}
-      <div className="flex flex-wrap gap-2">
-        <button
-          onClick={handleDownload}
-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-        >
-          <Download className="h-4 w-4" />
-          Download Text
-        </button>
-        <button
-          onClick={handleCopy}
-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-        >
-          <Copy className="h-4 w-4" />
-          Copy to Clipboard
-        </button>
+      <div className="flex justify-center">
         <button
           onClick={handleClear}
-          className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
+          disabled={!inputText}
+          className={cn(
+            themeClasses.button.base,
+            themeClasses.button.sizes.md,
+            themeClasses.button.variants.ghost,
+            'min-w-[150px]'
+          )}
         >
-          <RefreshCw className="h-4 w-4" />
-          Clear
+          <RotateCw className="h-4 w-4" />
+          <span>Clear</span>
         </button>
       </div>
 
-      {/* Stats */}
-      <div className="flex items-center gap-3 text-sm text-gray-600 dark:text-gray-400 border-t border-gray-200 dark:border-gray-800 pt-4">
-        <span>Character Count: {stats.characters}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Word Count: {stats.words}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Sentence Count: {stats.sentences}</span>
-        <span className="text-gray-400 dark:text-gray-600">|</span>
-        <span>Line Count: {stats.lines}</span>
-      </div>
-    </div>
+      <UnifiedStats
+        stats={stats}
+        variant="inline"
+      />
+
+      <AdScript />
+    </TextToolLayout>
   );
 } 
