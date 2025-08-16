@@ -1,8 +1,8 @@
 'use client';
 
 import { useState } from 'react';
-import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
-import { TextStats } from '@/lib/shared/types';
+import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import { TextStats } from '@/components/shared/types';
 import AdScript from '@/components/ads/AdScript';
 
 const italicTextMap: { [key: string]: string } = {
@@ -21,6 +21,7 @@ export function ItalicTextConverter() {
     words: 0,
     sentences: 0,
     lines: 0,
+    paragraphs: 0,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -35,6 +36,7 @@ export function ItalicTextConverter() {
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
+      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== ''). length || 1,
     });
   };
 
