@@ -9,8 +9,8 @@ import {
   ImageProcessingLayout,
   TwoColumnLayout,
 } from '@/lib/shared/ToolLayout';
-import { FileUpload } from '@/app/components/shared/ToolInputs';
-import { ImageProcessorActions } from '@/app/components/shared/ToolActions';
+import { FileUpload } from '@/app/[locale]/components/shared/ToolInputs';
+import { ImageProcessorActions } from '@/app/[locale]/components/shared/ToolActions';
 import AdSpace from '../components/AdSpace';
 
 export default function WebpToPngConverter() {

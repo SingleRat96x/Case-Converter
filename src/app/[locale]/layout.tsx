@@ -5,7 +5,7 @@ import { ThemeProvider } from "../providers/theme-provider";
 import { MainLayout } from "./components/layout/MainLayout";
 import { Toaster } from "@/components/ui/toaster";
 import { notFound } from 'next/navigation';
-import { getMessages, unstable_setRequestLocale } from 'next-intl/server';
+import { getMessages } from 'next-intl/server';
 import { NextIntlClientProvider } from 'next-intl';
 import { locales, localeInfo } from '@/i18n/routing';
 
@@ -51,9 +51,6 @@ export default async function LocaleLayout({
   children: React.ReactNode;
   params: {locale: string};
 }) {
-  // Enable static rendering
-  unstable_setRequestLocale(locale);
-  
   // Validate the locale
   if (!locales.includes(locale as any)) {
     notFound();

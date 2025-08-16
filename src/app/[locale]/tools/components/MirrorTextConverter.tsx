@@ -6,8 +6,8 @@ import {
   TextAnalytics,
   useTextStats,
   type TextStats,
-} from '@/app/components/shared/TextAnalytics';
-import { TextInput } from '@/app/components/shared/ToolInputs';
+} from '@/app/[locale]/components/shared/TextAnalytics';
+import { TextInput } from '@/app/[locale]/components/shared/ToolInputs';
 import {
   ToolLayout,
   ActionSection,

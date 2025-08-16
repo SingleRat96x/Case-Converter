@@ -6,7 +6,7 @@ import {
   TextAnalytics,
   useTextStats,
   type TextStats,
-} from '@/app/components/shared/TextAnalytics';
+} from '@/app/[locale]/components/shared/TextAnalytics';
 
 export default function SentenceCounter() {
   const [inputText, setInputText] = useState('');

@@ -1,16 +1,16 @@
 'use client';
 
 import { useLocale } from 'next-intl';
-import { useRouter, usePathname } from '@/i18n/routing';
+import { usePathname, useRouter } from 'next/navigation';
 import { locales, localeInfo } from '@/i18n/routing';
 import { Globe } from 'lucide-react';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
-import { Button } from '@/components/ui/button';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 export function LanguageSwitcher() {
   const locale = useLocale();
@@ -18,42 +18,54 @@ export function LanguageSwitcher() {
   const pathname = usePathname();
 
   const handleLocaleChange = (newLocale: string) => {
-    router.replace(pathname, { locale: newLocale });
+    // Get the path without the locale prefix
+    const segments = pathname.split('/');
+    const currentLocaleInPath = segments[1];
+    
+    // Check if the current path has a locale prefix
+    let newPath;
+    if (locales.includes(currentLocaleInPath as any)) {
+      // Replace the locale in the path
+      segments[1] = newLocale;
+      newPath = segments.join('/');
+    } else {
+      // Add the new locale to the path
+      newPath = `/${newLocale}${pathname}`;
+    }
+    
+    // For default locale (en), we don't need the prefix
+    if (newLocale === 'en' && newPath.startsWith('/en')) {
+      newPath = newPath.slice(3) || '/';
+    }
+    
+    router.push(newPath);
+    router.refresh();
   };
 
   return (
-    <DropdownMenu>
-      <DropdownMenuTrigger asChild>
-        <Button
-          variant="ghost"
-          size="icon"
-          className="h-9 w-9"
-          aria-label="Change language"
-        >
-          <Globe className="h-4 w-4" />
-        </Button>
-      </DropdownMenuTrigger>
-      <DropdownMenuContent align="end" className="w-40">
-        {locales.map((loc) => {
-          const info = localeInfo[loc];
-          const isActive = locale === loc;
-          
-          return (
-            <DropdownMenuItem
-              key={loc}
-              onClick={() => handleLocaleChange(loc)}
-              className={`cursor-pointer ${isActive ? 'bg-accent' : ''}`}
-            >
-              <span className={`text-sm ${isActive ? 'font-semibold' : ''}`}>
-                {info.name}
-              </span>
-              {info.dir === 'rtl' && (
-                <span className="ms-auto text-xs text-muted-foreground">RTL</span>
-              )}
-            </DropdownMenuItem>
-          );
-        })}
-      </DropdownMenuContent>
-    </DropdownMenu>
+    <div className="flex items-center">
+      <Globe className="h-4 w-4 mr-2 text-gray-600 dark:text-gray-400" />
+      <Select value={locale} onValueChange={handleLocaleChange}>
+        <SelectTrigger className="w-[140px] h-9 text-sm">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          {locales.map((loc) => {
+            const info = localeInfo[loc];
+            
+            return (
+              <SelectItem key={loc} value={loc}>
+                <span className="flex items-center justify-between w-full">
+                  <span>{info.name}</span>
+                  {info.dir === 'rtl' && (
+                    <span className="ms-2 text-xs text-muted-foreground">(RTL)</span>
+                  )}
+                </span>
+              </SelectItem>
+            );
+          })}
+        </SelectContent>
+      </Select>
+    </div>
   );
 }
