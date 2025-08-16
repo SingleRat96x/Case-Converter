@@ -11,14 +11,7 @@ import {
   Shuffle 
 } from 'lucide-react';
 import { CaseType, caseConversions, getCaseLabel, getDownloadFilename } from '@/utils/caseConversions';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  paragraphs: number;
-}
+import { TextStats } from '@/components/shared/types';
 
 interface UnifiedCaseConverterProps {
   caseType: CaseType;

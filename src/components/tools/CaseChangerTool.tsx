@@ -10,14 +10,7 @@ import {
   Heading, 
   Shuffle 
 } from 'lucide-react';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  paragraphs: number;
-}
+import { TextStats } from '@/components/shared/types';
 
 type CaseType = 'upper' | 'lower' | 'title' | 'sentence' | 'alternate';
 

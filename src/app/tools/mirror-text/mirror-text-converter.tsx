@@ -3,15 +3,8 @@
 import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
 import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import { TextStats } from '@/components/shared/types';
 import AdScript from '@/components/ads/AdScript';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  paragraphs: number;
-}
 
 const mirrorTextMap: { [key: string]: string } = {
   'a': 'ɒ', 'b': 'd', 'c': 'ɔ', 'd': 'b', 'e': 'ɘ', 'f': 'Ꮈ', 'g': 'ǫ', 'h': 'ʜ', 'i': 'i',

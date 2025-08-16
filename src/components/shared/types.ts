@@ -4,4 +4,5 @@ export interface TextStats {
   sentences: number;
   paragraphs: number;
   lines: number;
+  [key: string]: number; // Allow additional numeric properties
 } 

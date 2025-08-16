@@ -2,15 +2,9 @@
 
 import { useState } from 'react';
 import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import { TextStats } from '@/components/shared/types';
 import AdScript from '@/components/ads/AdScript';
 
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  paragraphs: number;
-}
 
 export function RemoveLineBreaksConverter() {
   const [inputText, setInputText] = useState('');

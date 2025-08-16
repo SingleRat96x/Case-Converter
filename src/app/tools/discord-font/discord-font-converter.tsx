@@ -2,13 +2,8 @@
 
 import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
+import { TextStats } from '@/components/shared/types';
 
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-}
 
 const discordFontMap: { [key: string]: string } = {
   'a': '𝖺', 'b': '𝖻', 'c': '𝖼', 'd': '𝖽', 'e': '𝖾', 'f': '𝖿', 'g': '𝗀', 'h': '𝗁', 'i': '𝗂',
@@ -27,6 +22,7 @@ export function DiscordFontConverter() {
     words: 0,
     sentences: 0,
     lines: 0,
+    paragraphs: 0,
   });
 
   const updateStats = (text: string) => {
@@ -35,6 +31,7 @@ export function DiscordFontConverter() {
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
+      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
     });
   };
 
