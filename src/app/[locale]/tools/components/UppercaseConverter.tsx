@@ -2,13 +2,13 @@
 
 import { useState } from 'react';
 import { ToolLayout, InputOutputGrid } from '@/lib/shared/ToolLayout';
-import { TextInput } from '@/app/components/shared/ToolInputs';
-import { ConverterActions } from '@/app/components/shared/ToolActions';
+import { TextInput } from '@/app/[locale]/components/shared/ToolInputs';
+import { ConverterActions } from '@/app/[locale]/components/shared/ToolActions';
 import {
   TextAnalytics,
   useTextStats,
   type TextStats,
-} from '@/app/components/shared/TextAnalytics';
+} from '@/app/[locale]/components/shared/TextAnalytics';
 import AdSpace from '../components/AdSpace';
 
 export default function UppercaseConverter() {

@@ -120,6 +120,73 @@
   }
 }
 
+/* RTL Support */
+[dir="rtl"] {
+  --font-family: var(--font-arabic), system-ui, -apple-system, sans-serif;
+}
+
+/* RTL-specific utility classes */
+@layer utilities {
+  /* Directional margins */
+  .ms-auto {
+    margin-inline-start: auto;
+  }
+  .me-auto {
+    margin-inline-end: auto;
+  }
+  
+  /* Directional paddings */
+  .ps-2 {
+    padding-inline-start: 0.5rem;
+  }
+  .pe-2 {
+    padding-inline-end: 0.5rem;
+  }
+  .ps-4 {
+    padding-inline-start: 1rem;
+  }
+  .pe-4 {
+    padding-inline-end: 1rem;
+  }
+  
+  /* Directional text alignment */
+  .text-start {
+    text-align: start;
+  }
+  .text-end {
+    text-align: end;
+  }
+  
+  /* Directional borders */
+  .border-s {
+    border-inline-start-width: 1px;
+  }
+  .border-e {
+    border-inline-end-width: 1px;
+  }
+  
+  /* Fix for RTL icons and buttons */
+  [dir="rtl"] .lucide {
+    transform: scaleX(1);
+  }
+  
+  [dir="rtl"] .lucide-chevron-right {
+    transform: scaleX(-1);
+  }
+  
+  [dir="rtl"] .lucide-chevron-left {
+    transform: scaleX(-1);
+  }
+  
+  [dir="rtl"] .lucide-arrow-right {
+    transform: scaleX(-1);
+  }
+  
+  [dir="rtl"] .lucide-arrow-left {
+    transform: scaleX(-1);
+  }
+}
+
 /* Custom styles for better dark mode support */
 .dark .prose {
   --tw-prose-body: theme('colors.gray[300]');

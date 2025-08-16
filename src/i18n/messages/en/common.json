@@ -1,0 +1,76 @@
+{
+  "navigation": {
+    "home": "Home",
+    "tools": "Tools",
+    "about": "About Us",
+    "contact": "Contact Us",
+    "privacyPolicy": "Privacy Policy",
+    "termsOfService": "Terms of Service",
+    "categories": {
+      "convertCase": "Convert Case",
+      "textModification": "Text Modification/Formatting",
+      "codeData": "Code & Data Translation",
+      "imageTools": "Image Tools",
+      "randomGenerators": "Random Generators",
+      "miscTools": "Misc. Tools"
+    }
+  },
+  "common": {
+    "appName": "Text Case Converter",
+    "appDescription": "Free online tools to convert text between different cases",
+    "loading": "Loading...",
+    "error": "Error",
+    "success": "Success",
+    "cancel": "Cancel",
+    "save": "Save",
+    "delete": "Delete",
+    "edit": "Edit",
+    "close": "Close",
+    "search": "Search",
+    "filter": "Filter",
+    "sortBy": "Sort by",
+    "toggleTheme": "Toggle theme",
+    "toggleLanguage": "Change language",
+    "copyright": "© {year} Text Case Converter. All rights reserved."
+  },
+  "caseConverter": {
+    "title": "Text Case Converter",
+    "description": "Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case. Plus, get instant character, word, sentence, and line counts.",
+    "placeholder": "Type or paste your text here...",
+    "buttons": {
+      "uppercase": "UPPERCASE",
+      "lowercase": "lowercase",
+      "titleCase": "Title Case",
+      "sentenceCase": "Sentence case",
+      "alternatingCase": "aLtErNaTiNg cAsE"
+    },
+    "actions": {
+      "download": "Download",
+      "copy": "Copy",
+      "clear": "Clear"
+    },
+    "stats": {
+      "characters": "Characters",
+      "words": "Words",
+      "sentences": "Sentences",
+      "lines": "Lines",
+      "paragraphs": "Paragraphs"
+    }
+  },
+  "footer": {
+    "categories": {
+      "basicTools": "Basic Tools",
+      "textModification": "Text Modification",
+      "randomGenerators": "Random Generators",
+      "codeDataTools": "Code & Data Tools",
+      "imageTools": "Image Tools",
+      "miscTools": "Misc. Tools",
+      "company": "Company",
+      "legal": "Legal"
+    },
+    "description": "Fast, privacy-friendly tools for transforming text, images, and data."
+  },
+  "tools": {
+    "moreTools": "More Text Tools"
+  }
+}

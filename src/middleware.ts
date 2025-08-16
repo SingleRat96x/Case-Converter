@@ -1,7 +1,41 @@
 import { NextResponse } from 'next/server';
 import type { NextRequest } from 'next/server';
+import createIntlMiddleware from 'next-intl/middleware';
+import { routing } from './i18n/routing';
+
+// Create the internationalization middleware
+const intlMiddleware = createIntlMiddleware(routing);
 
 export function middleware(request: NextRequest) {
+  // Check if the request is for an admin route first
+  if (request.nextUrl.pathname.includes('/admin/dashboard')) {
+    // Get the auth token from cookies
+    const isAuthenticated = request.cookies.get('isAdminAuthenticated')?.value === 'true';
+
+    // If not authenticated, redirect to login page
+    if (!isAuthenticated) {
+      const redirectUrl = new URL('/admin', request.url);
+      const response = NextResponse.redirect(redirectUrl);
+      
+      // Add security headers
+      response.headers.set('X-Content-Type-Options', 'nosniff');
+      response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+      
+      return response;
+    }
+  }
+  
+  // Handle internationalization
+  const intlResponse = intlMiddleware(request);
+  
+  // If intlMiddleware returns a redirect, return it immediately with security headers
+  if (intlResponse.status >= 300 && intlResponse.status < 400) {
+    intlResponse.headers.set('X-Content-Type-Options', 'nosniff');
+    intlResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+    return intlResponse;
+  }
+  
+  // Continue with existing CSP logic
   // Determine if it's development mode
   const isDevelopment = process.env.NODE_ENV === 'development';
 
@@ -95,45 +129,19 @@ export function middleware(request: NextRequest) {
     "clipboard-read=()",
     "clipboard-write=(self)",
     // Advertising related features - try with broader allowance for now
-    // Note: '*' for ad features can be a security risk if not understood.
-    // This is for debugging the "unrecognized feature" vs. "origin trial" errors.
-    // Ideally, these would be restricted to specific ad provider domains if they actually function.
     'attribution-reporting=*', // Try with *
     'browsing-topics=*',       // Try with *
     'join-ad-interest-group=*',// Try with *
     'run-ad-auction=*'         // Try with *
   ].join(','); // Join with comma
 
-  // Admin Authentication Logic & Response Handling
-  let response;
-
-  // Check if the request is for an admin route
-  if (request.nextUrl.pathname.startsWith('/admin/dashboard')) {
-    // Get the auth token from cookies
-    const isAuthenticated = request.cookies.get('isAdminAuthenticated')?.value === 'true';
-
-    // If not authenticated, redirect to login page
-    if (!isAuthenticated) {
-      const redirectUrl = new URL('/admin', request.url);
-      response = NextResponse.redirect(redirectUrl);
-      // response.headers.set('Content-Security-Policy', cspHeaderValue);
-      response.headers.set('X-Content-Type-Options', 'nosniff');
-      response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-      response.headers.set('Permissions-Policy', permissionsPolicyValue);
-      return response;
-    }
-  }
-
-  // If not an admin redirect, prepare the main response
-  if (!response) {
-    response = NextResponse.next();
-  }
-
-  // response.headers.set('Content-Security-Policy', cspHeaderValue);
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', permissionsPolicyValue);
-  return response;
+  // Set security headers on the intl response
+  // intlResponse.headers.set('Content-Security-Policy', cspHeaderValue);
+  intlResponse.headers.set('X-Content-Type-Options', 'nosniff');
+  intlResponse.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
+  intlResponse.headers.set('Permissions-Policy', permissionsPolicyValue);
+  
+  return intlResponse;
 }
 
 export const config = {

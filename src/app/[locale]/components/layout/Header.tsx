@@ -8,6 +8,7 @@ import type { ToolContent } from '@/lib/tools';
 import { supabase } from '@/lib/supabase';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
+import { LanguageSwitcher } from '@/components/ui/language-switcher';
 
 interface MenuItem {
   id: string;
@@ -277,6 +278,7 @@ export function Header() {
           </nav>
 
           <div className="flex items-center space-x-2">
+            <LanguageSwitcher />
             <ThemeToggle />
             <button
               className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary theme-transition md:hidden"
