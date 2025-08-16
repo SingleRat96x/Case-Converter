@@ -1,0 +1,76 @@
+{
+  "navigation": {
+    "home": "الرئيسية",
+    "tools": "الأدوات",
+    "about": "من نحن",
+    "contact": "اتصل بنا",
+    "privacyPolicy": "سياسة الخصوصية",
+    "termsOfService": "شروط الخدمة",
+    "categories": {
+      "convertCase": "تحويل الحالة",
+      "textModification": "تعديل/تنسيق النص",
+      "codeData": "ترجمة الكود والبيانات",
+      "imageTools": "أدوات الصور",
+      "randomGenerators": "مولدات عشوائية",
+      "miscTools": "أدوات متنوعة"
+    }
+  },
+  "common": {
+    "appName": "محول حالة النص",
+    "appDescription": "أدوات مجانية عبر الإنترنت لتحويل النص بين حالات مختلفة",
+    "loading": "جاري التحميل...",
+    "error": "خطأ",
+    "success": "نجح",
+    "cancel": "إلغاء",
+    "save": "حفظ",
+    "delete": "حذف",
+    "edit": "تعديل",
+    "close": "إغلاق",
+    "search": "بحث",
+    "filter": "تصفية",
+    "sortBy": "ترتيب حسب",
+    "toggleTheme": "تبديل السمة",
+    "toggleLanguage": "تغيير اللغة",
+    "copyright": "© {year} محول حالة النص. جميع الحقوق محفوظة."
+  },
+  "caseConverter": {
+    "title": "محول حالة النص",
+    "description": "حوّل نصك إلى أي حالة: أحرف كبيرة، أحرف صغيرة، حالة العنوان، حالة الجملة، أو حالة متناوبة. بالإضافة إلى عد فوري للأحرف والكلمات والجمل والأسطر.",
+    "placeholder": "اكتب أو الصق نصك هنا...",
+    "buttons": {
+      "uppercase": "أحرف كبيرة",
+      "lowercase": "أحرف صغيرة",
+      "titleCase": "حالة العنوان",
+      "sentenceCase": "حالة الجملة",
+      "alternatingCase": "حالة متناوبة"
+    },
+    "actions": {
+      "download": "تحميل",
+      "copy": "نسخ",
+      "clear": "مسح"
+    },
+    "stats": {
+      "characters": "الأحرف",
+      "words": "الكلمات",
+      "sentences": "الجمل",
+      "lines": "الأسطر",
+      "paragraphs": "الفقرات"
+    }
+  },
+  "footer": {
+    "categories": {
+      "basicTools": "الأدوات الأساسية",
+      "textModification": "تعديل النص",
+      "randomGenerators": "المولدات العشوائية",
+      "codeDataTools": "أدوات الكود والبيانات",
+      "imageTools": "أدوات الصور",
+      "miscTools": "أدوات متنوعة",
+      "company": "الشركة",
+      "legal": "قانوني"
+    },
+    "description": "أدوات سريعة وآمنة لتحويل النصوص والصور والبيانات."
+  },
+  "tools": {
+    "moreTools": "المزيد من أدوات النص"
+  }
+}
