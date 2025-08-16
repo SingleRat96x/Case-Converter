@@ -228,7 +228,7 @@ export function Header() {
               <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
                 <Type className="h-5 w-5" strokeWidth={2.5} />
               </div>
-              <span className="hidden sm:block font-semibold text-lg text-foreground transition-colors duration-200">
+              <span className="font-semibold text-base sm:text-lg text-foreground transition-colors duration-200">
                 Text Case Converter
               </span>
             </Link>
