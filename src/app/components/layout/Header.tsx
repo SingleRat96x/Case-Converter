@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, ChevronRight, X, Home, ChevronDown, Info, Mail, Sun, Moon } from 'lucide-react';
+import { Menu, ChevronRight, X, Home, ChevronDown, Info, Mail, Sun, Moon, House, CircleHelp } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { TOOL_CATEGORIES } from '@/lib/tools';
@@ -425,32 +425,39 @@ export function Header() {
                 {/* Footer Section */}
                 <div className="mt-auto border-t border-gray-200/50 dark:border-gray-700/50">
                   {/* Secondary Navigation */}
-                  <div className="px-4 py-4 space-y-3">
-                    <Link
-                      href="/"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-150"
-                    >
-                      Home
-                    </Link>
-                    <Link
-                      href="/about-us"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-150"
-                    >
-                      About
-                    </Link>
-                    <Link
-                      href="/contact-us"
-                      onClick={() => setIsMenuOpen(false)}
-                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-150"
-                    >
-                      Contact
-                    </Link>
+                  <div className="px-4 py-4">
+                    <div className="flex items-center justify-center">
+                      <div className="flex items-center space-x-1">
+                        <Link
+                          href="/"
+                          onClick={() => setIsMenuOpen(false)}
+                          className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-lg transition-all duration-150 min-w-[40px]"
+                        >
+                          <House className="h-4 w-4 mr-2" strokeWidth={1.5} />
+                          <span>Home</span>
+                        </Link>
+                        <Link
+                          href="/about-us"
+                          onClick={() => setIsMenuOpen(false)}
+                          className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-lg transition-all duration-150 min-w-[40px]"
+                        >
+                          <CircleHelp className="h-4 w-4 mr-2" strokeWidth={1.5} />
+                          <span>About</span>
+                        </Link>
+                        <Link
+                          href="/contact-us"
+                          onClick={() => setIsMenuOpen(false)}
+                          className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-lg transition-all duration-150 min-w-[40px]"
+                        >
+                          <Mail className="h-4 w-4 mr-2" strokeWidth={1.5} />
+                          <span>Contact</span>
+                        </Link>
+                      </div>
+                    </div>
                   </div>
 
                   {/* Theme Switcher */}
-                  <div className="px-4 py-4 border-t border-gray-200/50 dark:border-gray-700/50">
+                  <div className="px-4 pb-4 pt-2">
                     <div className="flex items-center justify-center">
                       <div className="inline-flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
                         <button
@@ -458,22 +465,22 @@ export function Header() {
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                             theme === 'light' 
                               ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
-                              : 'text-gray-500 hover:text-gray-700'
+                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
                           }`}
                           aria-label="Light mode"
                         >
-                          <Sun className="h-4 w-4" />
+                          <Sun className="h-4 w-4" strokeWidth={1.5} />
                         </button>
                         <button
                           onClick={() => setTheme('system')}
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                             theme === 'system' 
                               ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
-                              : 'text-gray-500 hover:text-gray-700'
+                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
                           }`}
                           aria-label="System theme"
                         >
-                          <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                          <svg className="h-4 w-4" strokeWidth={1.5} viewBox="0 0 20 20" fill="currentColor">
                             <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
                           </svg>
                         </button>
@@ -482,19 +489,19 @@ export function Header() {
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                             theme === 'dark' 
                               ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
-                              : 'text-gray-500 hover:text-gray-700'
+                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
                           }`}
                           aria-label="Dark mode"
                         >
-                          <Moon className="h-4 w-4" />
+                          <Moon className="h-4 w-4" strokeWidth={1.5} />
                         </button>
                       </div>
                     </div>
                   </div>
 
                   {/* Copyright */}
-                  <div className="px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
-                    <p className="text-center text-xs text-gray-500 dark:text-gray-500">
+                  <div className="px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-2">
+                    <p className="text-center text-xs text-gray-400 dark:text-gray-500">
                       © 2024 Text Case Converter
                     </p>
                   </div>
