@@ -87,10 +87,10 @@ export default async function Home({
 
       {/* Tool + Right Rail (desktop) */}
       <div className="lg:grid lg:grid-cols-3 lg:gap-8 items-start">
-        <div className="lg:col-span-2 space-y-6">
+        <div className="lg:col-span-2">
           <CaseChangerTool />
         </div>
-        <div className="lg:col-span-1 mt-6 lg:mt-0">
+        <div className="lg:col-span-1 mt-8 lg:mt-0">
           <div className="sticky top-24">
             {/* Ad #2: Right rail on desktop, flows below tool on mobile */}
             <div className="min-h-[280px] md:min-h-[250px]">
