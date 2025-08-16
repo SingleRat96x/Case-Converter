@@ -102,6 +102,7 @@ export function BoldTextConverter() {
         onCopy={handleCopy}
         onClear={handleClear}
         stats={stats}
+        inputText={inputText}
       />
     </div>
   );

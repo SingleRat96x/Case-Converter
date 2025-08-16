@@ -110,6 +110,7 @@ export function MirrorTextConverter() {
         onCopy={handleCopy}
         onClear={handleClear}
         stats={stats}
+        inputText={inputText}
       />
 
       <AdScript />

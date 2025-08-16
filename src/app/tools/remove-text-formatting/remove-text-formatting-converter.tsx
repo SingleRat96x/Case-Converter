@@ -127,6 +127,7 @@ export function RemoveTextFormattingConverter() {
         onCopy={handleCopy}
         onClear={handleClear}
         stats={stats}
+        inputText={inputText}
       />
 
       <AdScript />

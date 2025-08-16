@@ -101,6 +101,7 @@ export function ItalicTextConverter() {
         onCopy={handleCopy}
         onClear={handleClear}
         stats={stats}
+        inputText={inputText}
       />
     </div>
   );
