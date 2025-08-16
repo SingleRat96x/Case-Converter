@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, ChevronRight, X, Home, ChevronDown, Info, Mail, Sun, Moon, House, CircleHelp } from 'lucide-react';
+import { Menu, ChevronRight, X, Home, ChevronDown, Info, Mail, Sun, Moon, House, CircleHelp, Type } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { TOOL_CATEGORIES } from '@/lib/tools';
@@ -29,6 +29,7 @@ export function Header() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [tools, setTools] = useState<ToolContent[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
+  const [isScrolled, setIsScrolled] = useState(false);
   const drawerRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
   const { theme, setTheme } = useTheme();
@@ -39,6 +40,17 @@ export function Header() {
       if (data) setTools(data);
     };
     fetchTools();
+  }, []);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
+    };
+    
+    window.addEventListener('scroll', handleScroll);
+    handleScroll();
+    
+    return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
   useEffect(() => {
@@ -204,107 +216,137 @@ export function Header() {
 
   return (
     <>
-      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60 theme-transition">
-        <div className="container flex h-16 items-center justify-between mx-auto px-4">
-          <div className="flex items-center space-x-4">
-            <Link className="flex items-center" href="/">
-              <Home className="h-6 w-6 text-primary md:hidden" />
-              <span className="font-bold text-sm 2xs:text-base xs:text-lg sm:text-lg md:text-base lg:text-lg whitespace-nowrap">
-                <span className="relative z-10 text-gray-900 dark:text-white transition-all duration-300 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-orange-600 via-red-500 to-amber-500 dark:from-orange-400 dark:via-red-400 dark:to-amber-400">
-                  Text Case Converter
-                </span>
-                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-orange-100/50 via-red-100/50 to-amber-100/50 dark:from-orange-900/30 dark:via-red-900/30 dark:to-amber-900/30 opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></span>
+      <header className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
+        <div className="container mx-auto px-4">
+          <div className="flex h-16 items-center justify-between">
+            {/* Brand */}
+            <Link 
+              href="/"
+              className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg px-2 -ml-2"
+              aria-label="Text Case Converter Home"
+            >
+              <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
+                <Type className="h-5 w-5" strokeWidth={2.5} />
+              </div>
+              <span className="hidden sm:block font-semibold text-lg text-foreground transition-colors duration-200">
+                Text Case Converter
               </span>
             </Link>
-          </div>
-          
-          <nav className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5 2xl:space-x-6 flex-1 justify-center px-1 sm:px-2 lg:px-4">
-            {/* Tool Categories including About Us */}
-            {allCategories.map((category) => (
-              <div
-                key={category}
-                className="relative group whitespace-nowrap"
-                onMouseEnter={() => handleMenuEnter(category)}
-                onMouseLeave={handleMenuLeave}
-              >
-                <Link
-                  href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                  className="flex items-center py-2 text-xs md:text-[13px] lg:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary rounded-md transition-all duration-200 ease-in-out relative group/item"
-                >
-                  <span className="relative z-10">
-                    {category}
-                    {toolsByCategory[category]?.length > 0 && (
-                      <ChevronDown className="inline-block h-3 w-3 md:h-3.5 md:w-3.5 lg:h-4 lg:w-4 ml-1 opacity-50 group-hover/item:opacity-100 transition-all duration-200 ease-in-out transform group-hover/item:translate-y-0.5" />
-                    )}
-                  </span>
-                  <span className="absolute inset-0 bg-gray-100 dark:bg-gray-800 rounded-md opacity-0 group-hover/item:opacity-10 transition-all duration-200 ease-in-out transform scale-90 group-hover/item:scale-100"></span>
-                </Link>
-                {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
-                  <div 
-                    className={`absolute top-full mt-1 py-2 bg-white/95 dark:bg-gray-900/95 rounded-md shadow-xl border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-2xl backdrop-saturate-150 ${category === 'About Us' ? 'right-0 min-w-[180px]' : 'left-1/2 -translate-x-1/2'}`}
-                    onMouseEnter={() => handleMenuEnter(category)}
-                    onMouseLeave={handleMenuLeave}
-                    style={category !== 'About Us' ? { 
-                      maxWidth: 'min(880px, 90vw)',
-                      width: `${Math.min(getColumnCount(toolsByCategory[category]) * 220, 880)}px`
-                    } : undefined}
-                  >
-                    <div className={`${category !== 'About Us' ? 'grid gap-x-2 px-2' : 'px-2'}`}
-                         style={category !== 'About Us' ? { 
-                           gridTemplateColumns: `repeat(${getColumnCount(toolsByCategory[category])}, minmax(0, 1fr))`
-                         } : undefined}>
-                      {category === 'About Us' ? (
-                        toolsByCategory[category].map((tool) => (
-                          <Link
-                            key={tool.id}
-                            href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
-                            className="block px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-600 dark:hover:from-orange-400 dark:hover:to-red-500 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap"
-                          >
-                            {tool.name}
-                          </Link>
-                        ))
-                      ) : (
-                        splitIntoColumns(toolsByCategory[category], getColumnCount(toolsByCategory[category])).map((columnTools, columnIndex) => (
-                          <div key={columnIndex} className="flex flex-col">
-                            {columnTools.map((tool) => (
-                              <Link
-                                key={tool.id}
-                                href={`/tools/${tool.id}`}
-                                className={`px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-orange-500 hover:to-red-600 dark:hover:from-orange-400 dark:hover:to-red-500 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap ${tool.custom_style || ''}`}
-                              >
-                                {getDisplayText(tool)}
-                              </Link>
-                            ))}
-                          </div>
-                        ))
-                      )}
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </nav>
 
-          <div className="flex items-center space-x-2">
-            <div className="hidden md:block">
-              <ThemeToggle />
-            </div>
-                          <button
-                className="relative p-2.5 rounded-xl bg-gray-100/80 dark:bg-gray-800/80 text-gray-700 dark:text-gray-200 hover:bg-gray-200 dark:hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-orange-500/50 theme-transition md:hidden group"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMenuOpen}
-              aria-controls="mobile-menu"
-            >
-              <div className="relative w-5 h-5">
-                <span className={`absolute top-0.5 left-0 w-5 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'rotate-45 translate-y-1.5' : ''}`}></span>
-                <span className={`absolute top-2 left-0 w-5 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? 'opacity-0' : ''}`}></span>
-                <span className={`absolute bottom-0.5 left-0 w-5 h-0.5 bg-current transition-all duration-300 ${isMenuOpen ? '-rotate-45 -translate-y-1.5' : ''}`}></span>
+            {/* Desktop Navigation */}
+            <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+              {/* Tool Categories including About Us */}
+              {allCategories.map((category) => (
+                <div
+                  key={category}
+                  className="relative group"
+                  onMouseEnter={() => handleMenuEnter(category)}
+                  onMouseLeave={handleMenuLeave}
+                >
+                  <Link
+                    href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                    className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                  >
+                    <span>{category}</span>
+                    {toolsByCategory[category]?.length > 0 && (
+                      <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-70 transition-transform duration-200 group-hover:opacity-100" />
+                    )}
+                  </Link>
+                  
+                  {/* Dropdown Menu */}
+                  {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
+                    <div 
+                      className={`absolute top-full mt-2 py-2 bg-popover rounded-lg shadow-lg border border-border backdrop-blur-sm ${category === 'About Us' ? 'right-0 min-w-[180px]' : 'left-1/2 -translate-x-1/2'}`}
+                      onMouseEnter={() => handleMenuEnter(category)}
+                      onMouseLeave={handleMenuLeave}
+                      style={category !== 'About Us' ? { 
+                        maxWidth: 'min(880px, 90vw)',
+                        width: `${Math.min(getColumnCount(toolsByCategory[category]) * 220, 880)}px`
+                      } : undefined}
+                    >
+                      <div className={`${category !== 'About Us' ? 'grid gap-x-2 px-2' : 'px-2'}`}
+                           style={category !== 'About Us' ? { 
+                             gridTemplateColumns: `repeat(${getColumnCount(toolsByCategory[category])}, minmax(0, 1fr))`
+                           } : undefined}>
+                        {category === 'About Us' ? (
+                          toolsByCategory[category].map((tool) => (
+                            <Link
+                              key={tool.id}
+                              href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
+                              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-all duration-200 whitespace-nowrap"
+                            >
+                              {tool.name}
+                            </Link>
+                          ))
+                        ) : (
+                          splitIntoColumns(toolsByCategory[category], getColumnCount(toolsByCategory[category])).map((columnTools, columnIndex) => (
+                            <div key={columnIndex} className="flex flex-col">
+                              {columnTools.map((tool) => (
+                                <Link
+                                  key={tool.id}
+                                  href={`/tools/${tool.id}`}
+                                  className={`px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-all duration-200 whitespace-nowrap ${tool.custom_style || ''}`}
+                                >
+                                  {getDisplayText(tool)}
+                                </Link>
+                              ))}
+                            </div>
+                          ))
+                        )}
+                      </div>
+                    </div>
+                  )}
+                </div>
+              ))}
+            </nav>
+
+            {/* Right Side Actions */}
+            <div className="flex items-center space-x-2">
+              <div className="hidden md:block">
+                <ThemeToggle />
               </div>
-            </button>
+              
+              {/* Mobile Menu Button */}
+              <button
+                className="relative p-2.5 rounded-lg bg-accent hover:bg-accent/80 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-200 md:hidden"
+                onClick={() => setIsMenuOpen(!isMenuOpen)}
+                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+                aria-expanded={isMenuOpen}
+                aria-controls="mobile-menu"
+              >
+                <div className="relative w-5 h-5">
+                  <motion.span 
+                    animate={{
+                      rotate: isMenuOpen ? 45 : 0,
+                      y: isMenuOpen ? 6 : 0
+                    }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-0 left-0 w-5 h-0.5 bg-current origin-center"
+                  />
+                  <motion.span 
+                    animate={{
+                      opacity: isMenuOpen ? 0 : 1,
+                      x: isMenuOpen ? -20 : 0
+                    }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute top-2 left-0 w-5 h-0.5 bg-current"
+                  />
+                  <motion.span 
+                    animate={{
+                      rotate: isMenuOpen ? -45 : 0,
+                      y: isMenuOpen ? -6 : 0
+                    }}
+                    transition={{ duration: 0.2 }}
+                    className="absolute bottom-0 left-0 w-5 h-0.5 bg-current origin-center"
+                  />
+                </div>
+              </button>
+            </div>
           </div>
         </div>
       </header>
+      
+      {/* Spacer for fixed header */}
       <div className="h-16"></div>
 
       <AnimatePresence>
@@ -337,26 +379,26 @@ export function Header() {
                 stiffness: 260,
                 mass: 0.8
               }}
-              className="fixed inset-y-0 right-0 z-[70] w-full bg-white dark:bg-gray-900 shadow-2xl overflow-hidden md:hidden"
+              className="fixed inset-y-0 right-0 z-[70] w-full bg-background shadow-2xl overflow-hidden md:hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="sticky top-0 z-20 bg-white dark:bg-gray-900 border-b border-gray-200/50 dark:border-gray-700/50">
+              <div className="sticky top-0 z-20 bg-background border-b border-border">
                 <div className="flex items-center justify-between px-4 py-4">
                   <Link
                     href="/"
-                    className="flex items-center space-x-2.5"
+                    className="flex items-center space-x-3 group"
                     onClick={() => setIsMenuOpen(false)}
                   >
-                    <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-orange-500 to-red-600 flex items-center justify-center">
-                      <span className="text-white font-bold text-sm">TC</span>
+                    <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
+                      <Type className="h-5 w-5" strokeWidth={2.5} />
                     </div>
-                    <span className="font-semibold text-base text-gray-900 dark:text-white">Text Case Converter</span>
+                    <span className="font-semibold text-base text-foreground">Text Case Converter</span>
                   </Link>
                   <button
                     ref={closeButtonRef}
                     onClick={() => setIsMenuOpen(false)}
-                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 flex items-center justify-center"
+                    className="w-10 h-10 rounded-lg bg-accent hover:bg-accent/80 text-foreground transition-all duration-200 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                     aria-label="Close menu"
                   >
                     <X className="h-5 w-5" />
@@ -380,7 +422,7 @@ export function Header() {
                             setIsMenuOpen(false);
                           }
                         }}
-                        className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-150"
+                                                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-foreground hover:bg-accent transition-colors duration-150"
                       >
                         <span className="text-left">{category}</span>
                         {toolsByCategory[category]?.length > 0 && (
@@ -401,14 +443,14 @@ export function Header() {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2, ease: "easeInOut" }}
-                            className="overflow-hidden bg-gray-50/50 dark:bg-gray-800/30"
+                            className="overflow-hidden bg-accent/30"
                           >
                             <div className="py-1">
                               {toolsByCategory[category].map((tool) => (
                                 <Link
                                   key={tool.id}
                                   href={`/tools/${tool.id}`}
-                                  className={`block px-6 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white transition-colors duration-150 ${tool.custom_style || ''}`}
+                                  className={`block px-6 py-2.5 text-sm text-muted-foreground hover:bg-accent hover:text-foreground transition-colors duration-150 ${tool.custom_style || ''}`}
                                   onClick={() => setIsMenuOpen(false)}
                                 >
                                   {getDisplayText(tool)}
@@ -423,7 +465,7 @@ export function Header() {
                 </nav>
 
                 {/* Footer Section */}
-                <div className="mt-auto border-t border-gray-200/50 dark:border-gray-700/50">
+                <div className="mt-auto border-t border-border">
                   {/* Secondary Navigation */}
                   <div className="px-4 py-4">
                     <div className="flex items-center justify-center">
@@ -431,7 +473,7 @@ export function Header() {
                         <Link
                           href="/"
                           onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-lg transition-all duration-150 min-w-[40px]"
+                          className="flex items-center px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-150 min-w-[40px]"
                         >
                           <House className="h-4 w-4 mr-2" strokeWidth={1.5} />
                           <span>Home</span>
@@ -439,7 +481,7 @@ export function Header() {
                         <Link
                           href="/about-us"
                           onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-lg transition-all duration-150 min-w-[40px]"
+                          className="flex items-center px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-150 min-w-[40px]"
                         >
                           <CircleHelp className="h-4 w-4 mr-2" strokeWidth={1.5} />
                           <span>About</span>
@@ -447,7 +489,7 @@ export function Header() {
                         <Link
                           href="/contact-us"
                           onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-800/30 rounded-lg transition-all duration-150 min-w-[40px]"
+                          className="flex items-center px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-150 min-w-[40px]"
                         >
                           <Mail className="h-4 w-4 mr-2" strokeWidth={1.5} />
                           <span>Contact</span>
@@ -459,13 +501,13 @@ export function Header() {
                   {/* Theme Switcher */}
                   <div className="px-4 pb-4 pt-2">
                     <div className="flex items-center justify-center">
-                      <div className="inline-flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+                      <div className="inline-flex items-center bg-accent rounded-full p-1">
                         <button
                           onClick={() => setTheme('light')}
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                             theme === 'light' 
-                              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
-                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                              ? 'bg-background text-foreground shadow-sm' 
+                              : 'text-muted-foreground hover:text-foreground'
                           }`}
                           aria-label="Light mode"
                         >
@@ -475,8 +517,8 @@ export function Header() {
                           onClick={() => setTheme('system')}
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                             theme === 'system' 
-                              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
-                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                              ? 'bg-background text-foreground shadow-sm' 
+                              : 'text-muted-foreground hover:text-foreground'
                           }`}
                           aria-label="System theme"
                         >
@@ -488,8 +530,8 @@ export function Header() {
                           onClick={() => setTheme('dark')}
                           className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
                             theme === 'dark' 
-                              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
-                              : 'text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-300'
+                              ? 'bg-background text-foreground shadow-sm' 
+                              : 'text-muted-foreground hover:text-foreground'
                           }`}
                           aria-label="Dark mode"
                         >
@@ -501,7 +543,7 @@ export function Header() {
 
                   {/* Copyright */}
                   <div className="px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-2">
-                    <p className="text-center text-xs text-gray-400 dark:text-gray-500">
+                    <p className="text-center text-xs text-muted-foreground/60">
                       © 2024 Text Case Converter
                     </p>
                   </div>
