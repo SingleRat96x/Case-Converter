@@ -102,6 +102,109 @@
     animation-name: slide-in-from-left;
   }
 
+  /* Enhanced mobile menu styles */
+  @media (max-width: 768px) {
+    /* Prevent body scroll when menu is open */
+    body.menu-open {
+      overflow: hidden;
+      position: fixed;
+      width: 100%;
+    }
+
+    /* Custom scrollbar for mobile menu */
+    #mobile-menu > div:last-child {
+      scrollbar-width: thin;
+      scrollbar-color: rgba(156, 163, 175, 0.3) transparent;
+    }
+
+    #mobile-menu > div:last-child::-webkit-scrollbar {
+      width: 4px;
+    }
+
+    #mobile-menu > div:last-child::-webkit-scrollbar-track {
+      background: transparent;
+    }
+
+    #mobile-menu > div:last-child::-webkit-scrollbar-thumb {
+      background-color: rgba(156, 163, 175, 0.3);
+      border-radius: 2px;
+    }
+
+    #mobile-menu > div:last-child::-webkit-scrollbar-thumb:hover {
+      background-color: rgba(156, 163, 175, 0.5);
+    }
+
+    /* Smooth overscroll behavior */
+    #mobile-menu > div:last-child {
+      -webkit-overflow-scrolling: touch;
+      overscroll-behavior: contain;
+    }
+
+    /* Touch feedback for mobile menu items */
+    #mobile-menu a,
+    #mobile-menu button {
+      -webkit-tap-highlight-color: transparent;
+      touch-action: manipulation;
+    }
+
+    /* Active states for better touch feedback */
+    #mobile-menu a:active,
+    #mobile-menu button:active {
+      transform: scale(0.98);
+    }
+
+    /* Improved focus states for accessibility */
+    #mobile-menu a:focus-visible,
+    #mobile-menu button:focus-visible {
+      outline: 2px solid theme('colors.primary');
+      outline-offset: 2px;
+    }
+
+    /* Smooth height transitions for submenus */
+    #mobile-menu [data-submenu] {
+      transition: height 0.3s ease-in-out;
+    }
+
+    /* Prevent text selection during swipe */
+    #mobile-menu {
+      user-select: none;
+      -webkit-user-select: none;
+    }
+
+    /* Safe area padding for devices with notches */
+    #mobile-menu {
+      padding-bottom: env(safe-area-inset-bottom);
+    }
+
+    /* Hamburger menu animation */
+    .hamburger-line {
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    /* Menu item hover states with increased touch targets */
+    #mobile-menu a,
+    #mobile-menu button {
+      position: relative;
+      min-height: 44px; /* iOS recommended touch target */
+    }
+
+    /* Subtle shadow for depth */
+    #mobile-menu {
+      box-shadow: -4px 0 24px rgba(0, 0, 0, 0.15);
+    }
+
+    .dark #mobile-menu {
+      box-shadow: -4px 0 24px rgba(0, 0, 0, 0.5);
+    }
+
+    /* Improve performance with GPU acceleration */
+    #mobile-menu,
+    .backdrop {
+      will-change: transform, opacity;
+      transform: translateZ(0);
+    }
+  }
+
   @keyframes slide-in-from-left {
     from { transform: translateX(-100%); }
     to { transform: translateX(0); }
