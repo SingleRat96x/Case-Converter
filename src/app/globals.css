@@ -148,8 +148,8 @@
     }
 
     /* Active states for better touch feedback */
-    #mobile-menu a:active,
-    #mobile-menu button:active {
+    #mobile-menu nav a:active,
+    #mobile-menu nav button:active {
       transform: scale(0.98);
     }
 

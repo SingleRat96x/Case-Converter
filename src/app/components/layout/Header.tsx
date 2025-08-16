@@ -337,26 +337,26 @@ export function Header() {
                 stiffness: 260,
                 mass: 0.8
               }}
-              className="fixed inset-y-0 right-0 z-[70] w-[90%] bg-white dark:bg-gray-900 shadow-2xl overflow-hidden md:hidden"
+              className="fixed inset-y-0 right-0 z-[70] w-full bg-white dark:bg-gray-900 shadow-2xl overflow-hidden md:hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
-              <div className="sticky top-0 z-20 bg-white dark:bg-gray-900">
-                <div className="flex items-center justify-between px-4 py-4 border-b border-gray-200/50 dark:border-gray-800/50">
+              <div className="sticky top-0 z-20 bg-white dark:bg-gray-900 border-b border-gray-200/50 dark:border-gray-700/50">
+                <div className="flex items-center justify-between px-4 py-4">
                   <Link
                     href="/"
-                    className="flex items-center space-x-2"
+                    className="flex items-center space-x-2.5"
                     onClick={() => setIsMenuOpen(false)}
                   >
                     <div className="w-8 h-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                       <span className="text-white font-bold text-sm">TC</span>
                     </div>
-                    <span className="font-semibold text-gray-900 dark:text-white">Text Case Converter</span>
+                    <span className="font-semibold text-base text-gray-900 dark:text-white">Text Case Converter</span>
                   </Link>
                   <button
                     ref={closeButtonRef}
                     onClick={() => setIsMenuOpen(false)}
-                    className="p-2 rounded-lg bg-gray-100/80 dark:bg-gray-800/80 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
+                    className="w-10 h-10 rounded-full bg-gray-100 dark:bg-gray-800 text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200 flex items-center justify-center"
                     aria-label="Close menu"
                   >
                     <X className="h-5 w-5" />
@@ -364,38 +364,35 @@ export function Header() {
                 </div>
               </div>
 
-              {/* Scrollable Navigation */}
-              <div className="h-[calc(100%-64px)] overflow-y-auto overflow-x-hidden overscroll-contain flex flex-col">
-                <nav className="flex-1 px-4 py-4 space-y-1">
-                  {/* Tool Categories */}
+              {/* Scrollable Content */}
+              <div className="h-[calc(100%-73px)] overflow-y-auto overflow-x-hidden overscroll-contain flex flex-col">
+                {/* Main Navigation */}
+                <nav className="flex-1 pt-2 pb-4">
                   {Object.values(TOOL_CATEGORIES).map((category) => (
                     <div key={category} className="relative">
-                      <div className="flex items-center">
-                        <Link
-                          href={category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                          className="flex-1 flex items-center px-4 py-3 text-base font-medium text-gray-900 dark:text-white rounded-l-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200"
-                          onClick={() => setIsMenuOpen(false)}
-                        >
-                          {category}
-                        </Link>
+                      <button
+                        onClick={(e) => {
+                          if (toolsByCategory[category]?.length > 0) {
+                            toggleCategory(category, e);
+                          } else {
+                            // Navigate to category page if no subtools
+                            window.location.href = category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
+                            setIsMenuOpen(false);
+                          }
+                        }}
+                        className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-gray-900 dark:text-white hover:bg-gray-50 dark:hover:bg-gray-800/50 transition-colors duration-150"
+                      >
+                        <span className="text-left">{category}</span>
                         {toolsByCategory[category]?.length > 0 && (
-                          <button
-                            onClick={(e) => toggleCategory(category, e)}
-                            className={`px-3 py-3 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-gray-200 rounded-r-xl hover:bg-gray-100 dark:hover:bg-gray-800 transition-all duration-200 ${
-                              expandedCategories.includes(category) ? 'bg-gray-100 dark:bg-gray-800' : ''
-                            }`}
-                            aria-label={`Toggle ${category} submenu`}
-                            aria-expanded={expandedCategories.includes(category)}
+                          <motion.div
+                            animate={{ rotate: expandedCategories.includes(category) ? 90 : 0 }}
+                            transition={{ duration: 0.2 }}
+                            className="text-gray-400"
                           >
-                            <motion.div
-                              animate={{ rotate: expandedCategories.includes(category) ? 90 : 0 }}
-                              transition={{ duration: 0.2 }}
-                            >
-                              <ChevronRight className="h-5 w-5" />
-                            </motion.div>
-                          </button>
+                            <ChevronRight className="h-4 w-4" />
+                          </motion.div>
                         )}
-                      </div>
+                      </button>
                       
                       <AnimatePresence>
                         {expandedCategories.includes(category) && toolsByCategory[category]?.length > 0 && (
@@ -404,14 +401,14 @@ export function Header() {
                             animate={{ height: "auto", opacity: 1 }}
                             exit={{ height: 0, opacity: 0 }}
                             transition={{ duration: 0.2, ease: "easeInOut" }}
-                            className="overflow-hidden"
+                            className="overflow-hidden bg-gray-50/50 dark:bg-gray-800/30"
                           >
-                            <div className="ml-4 mt-1 space-y-0.5 pb-2">
+                            <div className="py-1">
                               {toolsByCategory[category].map((tool) => (
                                 <Link
                                   key={tool.id}
                                   href={`/tools/${tool.id}`}
-                                  className={`block px-4 py-2.5 text-sm text-gray-600 dark:text-gray-400 rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800 hover:text-gray-900 dark:hover:text-white transition-all duration-200 ${tool.custom_style || ''}`}
+                                  className={`block px-6 py-2.5 text-sm text-gray-600 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-800/50 hover:text-gray-900 dark:hover:text-white transition-colors duration-150 ${tool.custom_style || ''}`}
                                   onClick={() => setIsMenuOpen(false)}
                                 >
                                   {getDisplayText(tool)}
@@ -425,85 +422,81 @@ export function Header() {
                   ))}
                 </nav>
 
-                {/* Bottom Section */}
-                <div className="px-4 pb-[max(1rem,env(safe-area-inset-bottom))] space-y-4">
-                  {/* Theme Toggle */}
-                  <div className="flex items-center justify-center py-2">
-                    <div className="flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
-                      <button
-                        onClick={() => setTheme('light')}
-                        className={`p-2 rounded-full transition-all duration-200 ${
-                          theme === 'light' 
-                            ? 'bg-white dark:bg-gray-700 shadow-sm text-yellow-500' 
-                            : 'text-gray-400 hover:text-gray-600'
-                        }`}
-                        aria-label="Light mode"
-                      >
-                        <Sun className="h-5 w-5" />
-                      </button>
-                      <button
-                        onClick={() => setTheme('system')}
-                        className={`p-2 rounded-full transition-all duration-200 mx-1 ${
-                          theme === 'system' 
-                            ? 'bg-white dark:bg-gray-700 shadow-sm text-blue-500' 
-                            : 'text-gray-400 hover:text-gray-600'
-                        }`}
-                        aria-label="System theme"
-                      >
-                        <svg className="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
-                          <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
-                        </svg>
-                      </button>
-                      <button
-                        onClick={() => setTheme('dark')}
-                        className={`p-2 rounded-full transition-all duration-200 ${
-                          theme === 'dark' 
-                            ? 'bg-white dark:bg-gray-700 shadow-sm text-purple-500' 
-                            : 'text-gray-400 hover:text-gray-600'
-                        }`}
-                        aria-label="Dark mode"
-                      >
-                        <Moon className="h-5 w-5" />
-                      </button>
-                    </div>
-                  </div>
-
-                  {/* Icon Navigation */}
-                  <div className="grid grid-cols-3 gap-3">
+                {/* Footer Section */}
+                <div className="mt-auto border-t border-gray-200/50 dark:border-gray-700/50">
+                  {/* Secondary Navigation */}
+                  <div className="px-4 py-4 space-y-3">
                     <Link
                       href="/"
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
-                      aria-label="Home"
+                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-150"
                     >
-                      <Home className="h-6 w-6 text-gray-700 dark:text-gray-300 mb-1" />
-                      <span className="text-xs text-gray-600 dark:text-gray-400">Home</span>
+                      Home
                     </Link>
                     <Link
                       href="/about-us"
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
-                      aria-label="About"
+                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-150"
                     >
-                      <Info className="h-6 w-6 text-gray-700 dark:text-gray-300 mb-1" />
-                      <span className="text-xs text-gray-600 dark:text-gray-400">About</span>
+                      About
                     </Link>
                     <Link
                       href="/contact-us"
                       onClick={() => setIsMenuOpen(false)}
-                      className="flex flex-col items-center justify-center p-4 rounded-xl bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 transition-all duration-200"
-                      aria-label="Contact"
+                      className="block text-sm text-gray-600 dark:text-gray-400 hover:text-gray-900 dark:hover:text-white transition-colors duration-150"
                     >
-                      <Mail className="h-6 w-6 text-gray-700 dark:text-gray-300 mb-1" />
-                      <span className="text-xs text-gray-600 dark:text-gray-400">Contact</span>
+                      Contact
                     </Link>
                   </div>
 
-                  {/* Footer Info */}
-                  <div className="text-center">
-                    <div className="text-xs text-gray-500 dark:text-gray-400">
-                      <p>© 2024 Text Case Converter</p>
+                  {/* Theme Switcher */}
+                  <div className="px-4 py-4 border-t border-gray-200/50 dark:border-gray-700/50">
+                    <div className="flex items-center justify-center">
+                      <div className="inline-flex items-center bg-gray-100 dark:bg-gray-800 rounded-full p-1">
+                        <button
+                          onClick={() => setTheme('light')}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                            theme === 'light' 
+                              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
+                              : 'text-gray-500 hover:text-gray-700'
+                          }`}
+                          aria-label="Light mode"
+                        >
+                          <Sun className="h-4 w-4" />
+                        </button>
+                        <button
+                          onClick={() => setTheme('system')}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                            theme === 'system' 
+                              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
+                              : 'text-gray-500 hover:text-gray-700'
+                          }`}
+                          aria-label="System theme"
+                        >
+                          <svg className="h-4 w-4" viewBox="0 0 20 20" fill="currentColor">
+                            <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
+                          </svg>
+                        </button>
+                        <button
+                          onClick={() => setTheme('dark')}
+                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
+                            theme === 'dark' 
+                              ? 'bg-white dark:bg-gray-700 text-gray-900 dark:text-white shadow-sm' 
+                              : 'text-gray-500 hover:text-gray-700'
+                          }`}
+                          aria-label="Dark mode"
+                        >
+                          <Moon className="h-4 w-4" />
+                        </button>
+                      </div>
                     </div>
+                  </div>
+
+                  {/* Copyright */}
+                  <div className="px-4 py-4 pb-[max(1rem,env(safe-area-inset-bottom))]">
+                    <p className="text-center text-xs text-gray-500 dark:text-gray-500">
+                      © 2024 Text Case Converter
+                    </p>
                   </div>
                 </div>
               </div>
