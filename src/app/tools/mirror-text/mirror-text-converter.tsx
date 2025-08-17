@@ -24,21 +24,16 @@ const convertToMirrorText = (text: string) => {
 
 export function MirrorTextConverter() {
   return (
-    <TextToolLayout
-      title="Mirror Text Generator"
-      description="Create mirrored/reversed text effects"
-    >
-      <TextTransformation
-        transformer={convertToMirrorText}
-        toolConfig={{
-          name: 'Mirror Text',
-          icon: FlipHorizontal,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'mirror-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToMirrorText}
+      toolConfig={{
+        name: 'Mirror Text',
+        icon: FlipHorizontal,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'mirror-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

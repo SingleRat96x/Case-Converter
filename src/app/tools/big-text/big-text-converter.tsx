@@ -20,21 +20,16 @@ const convertToBigText = (text: string) => {
 
 export function BigTextConverter() {
   return (
-    <TextToolLayout
-      title="Big Text Converter"
-      description="Transform your text into large Unicode characters"
-    >
-      <TextTransformation
-        transformer={convertToBigText}
-        toolConfig={{
-          name: 'Big Text',
-          icon: Type,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'big-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToBigText}
+      toolConfig={{
+        name: 'Big Text',
+        icon: Type,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'big-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

@@ -20,21 +20,16 @@ const convertToFacebookFont = (text: string) => {
 
 export function FacebookFontConverter() {
   return (
-    <TextToolLayout
-      title="Facebook Font Generator"
-      description="Create stylish text for Facebook posts and comments"
-    >
-      <TextTransformation
-        transformer={convertToFacebookFont}
-        toolConfig={{
-          name: 'Facebook Font',
-          icon: Type,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'facebook-font.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToFacebookFont}
+      toolConfig={{
+        name: 'Facebook Font',
+        icon: Type,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'facebook-font.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

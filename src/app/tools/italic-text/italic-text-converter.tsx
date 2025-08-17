@@ -19,21 +19,16 @@ const convertToItalicText = (text: string) => {
 
 export function ItalicTextConverter() {
   return (
-    <TextToolLayout
-      title="Italic Text Converter"
-      description="Convert your text to italic Unicode characters that work anywhere"
-    >
-      <TextTransformation
-        transformer={convertToItalicText}
-        toolConfig={{
-          name: 'Italic Text',
-          icon: Italic,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'italic-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToItalicText}
+      toolConfig={{
+        name: 'Italic Text',
+        icon: Italic,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'italic-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

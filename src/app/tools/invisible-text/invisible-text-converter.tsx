@@ -21,21 +21,16 @@ const convertToInvisibleText = (text: string) => {
 
 export function InvisibleTextConverter() {
   return (
-    <TextToolLayout
-      title="Invisible Text Generator"
-      description="Create invisible characters and hidden text"
-    >
-      <TextTransformation
-        transformer={convertToInvisibleText}
-        toolConfig={{
-          name: 'Invisible Text',
-          icon: EyeOff,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'invisible-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToInvisibleText}
+      toolConfig={{
+        name: 'Invisible Text',
+        icon: EyeOff,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'invisible-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

@@ -20,21 +20,16 @@ const convertToBubbleText = (text: string) => {
 
 export function BubbleTextConverter() {
   return (
-    <TextToolLayout
-      title="Bubble Text Generator"
-      description="Convert your text to bubble-style Unicode characters"
-    >
-      <TextTransformation
-        transformer={convertToBubbleText}
-        toolConfig={{
-          name: 'Bubble Text',
-          icon: Circle,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'bubble-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToBubbleText}
+      toolConfig={{
+        name: 'Bubble Text',
+        icon: Circle,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'bubble-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

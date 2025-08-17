@@ -77,10 +77,7 @@ export function DiscordFontConverter() {
   };
 
   return (
-    <TextToolLayout
-      title="Discord Font Generator"
-      description="Create stylish text for Discord messages and usernames"
-    >
+    <div className={cn(themeClasses.container.lg, themeClasses.section.spacing.lg)}>
       <div className={cn(themeClasses.grid.base, themeClasses.grid.gaps.md, 'md:grid-cols-2')}>
         {/* Input */}
         <div className={themeClasses.section.spacing.sm}>
@@ -159,6 +156,6 @@ export function DiscordFontConverter() {
       />
 
       <AdScript />
-    </TextToolLayout>
+    </div>
   );
 } 

@@ -18,21 +18,16 @@ const convertToPlainText = (text: string) => {
 
 export function PlainTextConverter() {
   return (
-    <TextToolLayout
-      title="Plain Text Converter"
-      description="Strip formatting and convert to plain text"
-    >
-      <TextTransformation
-        transformer={convertToPlainText}
-        toolConfig={{
-          name: 'Plain Text',
-          icon: FileText,
-          placeholder: 'Type or paste your formatted text here...',
-          downloadFileName: 'plain-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToPlainText}
+      toolConfig={{
+        name: 'Plain Text',
+        icon: FileText,
+        placeholder: 'Type or paste your formatted text here...',
+        downloadFileName: 'plain-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

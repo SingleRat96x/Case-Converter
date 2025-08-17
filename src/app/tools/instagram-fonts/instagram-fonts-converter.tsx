@@ -63,10 +63,7 @@ export function InstagramFontsConverter() {
   };
 
   return (
-    <TextToolLayout
-      title="Instagram Fonts Generator"
-      description="Create stylish text for Instagram posts, bios, and comments"
-    >
+    <div className={cn(themeClasses.container.lg, themeClasses.section.spacing.lg)}>
       <div className={themeClasses.section.spacing.sm}>
         <label className={themeClasses.label}>Input Text</label>
         <textarea
@@ -135,6 +132,6 @@ export function InstagramFontsConverter() {
       />
 
       <AdScript />
-    </TextToolLayout>
+    </div>
   );
 } 

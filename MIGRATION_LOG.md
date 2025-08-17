@@ -122,8 +122,56 @@ The following tools still need migration:
 - Minimum 44px button height for touch targets
 - Proper heading hierarchy (single H1 per page)
 
+## 🚨 CRITICAL FIX: Duplicate Titles Resolved
+
+### **Issue Identified:**
+Multiple tools had duplicate H1 titles and descriptions:
+- **Page Level**: Supabase database content (`{tool.title}`, `{tool.short_description}`)
+- **Component Level**: Hardcoded TextToolLayout props (`title="..."`, `description="..."`)
+
+### **SEO & Accessibility Impact:**
+- ❌ Multiple H1 tags per page (SEO penalty)
+- ❌ Confusing heading structure (accessibility violation)
+- ❌ Redundant content (poor UX)
+
+### **✅ SOLUTION IMPLEMENTED: Option 1**
+**Removed all hardcoded titles from TextToolLayout usages** - pages now use **ONLY** Supabase data.
+
+#### **Fixed Tools (12 Total):**
+
+**Confirmed Duplicates Fixed:**
+1. **Italic Text Converter** - Removed hardcoded "Italic Text Converter" title
+2. **Big Text Converter** - Removed hardcoded "Big Text Converter" title  
+3. **Bubble Text Generator** - Removed hardcoded "Bubble Text Generator" title
+4. **Remove Line Breaks** - Removed hardcoded "Remove Line Breaks" title
+
+**High-Probability Duplicates Fixed:**
+5. **Remove Text Formatting** - Removed hardcoded title
+6. **Invisible Text Generator** - Removed hardcoded title
+7. **Instagram Fonts Generator** - Removed hardcoded title + custom layout fix
+8. **Mirror Text Generator** - Removed hardcoded title
+9. **Plain Text Converter** - Removed hardcoded title
+10. **Cursed Text Generator** - Removed hardcoded title
+11. **Discord Font Generator** - Removed hardcoded title + custom layout fix
+12. **Facebook Font Generator** - Removed hardcoded title
+
+#### **Implementation Details:**
+- **TextTransformation Tools**: Removed TextToolLayout wrapper entirely
+- **Custom Layout Tools**: Replaced TextToolLayout with theme-based container (`themeClasses.container.lg`)
+- **All Pages**: Now display single H1 from `{tool.title}` (Supabase)
+- **All Descriptions**: Now display single description from `{tool.short_description}` (Supabase)
+
+#### **Verification Results:**
+- ✅ **Zero remaining TextToolLayout usages** with hardcoded titles
+- ✅ **All pages use Supabase data exclusively**
+- ✅ **TypeScript compilation successful**
+- ✅ **Single H1 per page** (proper SEO structure)
+- ✅ **Content managed via CMS** (single source of truth)
+
+---
+
 ## Next Steps
-1. Migrate remaining tools using CaseConverterButtons
-2. Validate responsive behavior on mobile devices
+1. Monitor search engine re-indexing after duplicate H1 fix
+2. Validate responsive behavior on mobile devices  
 3. Run accessibility audit with Lighthouse/axe
 4. Create automated tests for ActionButtons component
