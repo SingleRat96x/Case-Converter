@@ -1,19 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
 import AdScript from '@/components/ads/AdScript';
+import { 
+  Type, 
+  ArrowDownAZ, 
+  AlignLeft, 
+  Heading, 
+  Shuffle 
+} from 'lucide-react';
+import { TextStats } from '@/components/shared/types';
 
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  paragraphs: number;
-}
+type CaseType = 'upper' | 'lower' | 'title' | 'sentence' | 'alternate';
+
+const caseButtons = [
+  { type: 'upper' as CaseType, label: 'UPPERCASE', icon: Type },
+  { type: 'lower' as CaseType, label: 'lowercase', icon: ArrowDownAZ },
+  { type: 'sentence' as CaseType, label: 'Sentence case', icon: AlignLeft },
+  { type: 'title' as CaseType, label: 'Title Case', icon: Heading },
+  { type: 'alternate' as CaseType, label: 'aLtErNaTiNg cAsE', icon: Shuffle }
+];
 
 export function CaseChangerTool() {
   const [inputText, setInputText] = useState('');
+  const [lastUsedCase, setLastUsedCase] = useState<CaseType | null>(null);
   const [stats, setStats] = useState<TextStats>({
     characters: 0,
     words: 0,
@@ -21,6 +32,15 @@ export function CaseChangerTool() {
     lines: 0,
     paragraphs: 0,
   });
+  const textareaRef = useRef<HTMLTextAreaElement>(null);
+
+  // Load last used case from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem('lastUsedCase');
+    if (saved) {
+      setLastUsedCase(saved as CaseType);
+    }
+  }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value;
@@ -38,7 +58,7 @@ export function CaseChangerTool() {
     });
   };
 
-  const transformText = (type: 'upper' | 'lower' | 'title' | 'sentence' | 'alternate') => {
+  const transformText = (type: CaseType) => {
     let result = inputText;
     switch (type) {
       case 'upper':
@@ -58,6 +78,16 @@ export function CaseChangerTool() {
         break;
     }
     setInputText(result);
+    setLastUsedCase(type);
+    localStorage.setItem('lastUsedCase', type);
+  };
+
+  // Handle Enter key to trigger last used conversion
+  const handleKeyDown = (e: React.KeyboardEvent<HTMLTextAreaElement>) => {
+    if (e.key === 'Enter' && e.ctrlKey && lastUsedCase) {
+      e.preventDefault();
+      transformText(lastUsedCase);
+    }
   };
 
   const handleDownload = () => {
@@ -83,49 +113,52 @@ export function CaseChangerTool() {
   const handleClear = () => {
     setInputText('');
     updateStats('');
+    textareaRef.current?.focus();
   };
 
   return (
-    <div className="max-w-[900px] mx-auto space-y-6">
-      <textarea
-        className="w-full min-h-[200px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-        placeholder="Type or paste your text here..."
-        value={inputText}
-        onChange={handleInputChange}
-      />
+    <div className="space-y-6">
+      {/* Textarea with enhanced focus states */}
+      <div className="relative">
+        <textarea
+          ref={textareaRef}
+          className="w-full min-h-[200px] p-4 rounded-lg border-2 border-border bg-background text-foreground resize-y transition-all duration-200 placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 focus:shadow-sm"
+          placeholder="Type or paste your text here..."
+          value={inputText}
+          onChange={handleInputChange}
+          onKeyDown={handleKeyDown}
+          aria-label="Text input for case conversion"
+        />
+        {lastUsedCase && (
+          <div className="absolute bottom-2 right-2 text-xs text-muted-foreground bg-background/80 px-2 py-1 rounded">
+            <kbd className="px-1.5 py-0.5 text-xs font-mono bg-muted rounded">Ctrl</kbd>+<kbd className="px-1.5 py-0.5 text-xs font-mono bg-muted rounded">Enter</kbd> to repeat
+          </div>
+        )}
+      </div>
 
-      {/* Case Conversion Buttons */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3">
-        <button
-          onClick={() => transformText('upper')}
-          className="px-4 py-3 bg-indigo-500 hover:bg-indigo-600 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
-        >
-          UPPERCASE
-        </button>
-        <button
-          onClick={() => transformText('lower')}
-          className="px-4 py-3 bg-blue-500 hover:bg-blue-600 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
-        >
-          lowercase
-        </button>
-        <button
-          onClick={() => transformText('sentence')}
-          className="px-4 py-3 bg-purple-500 hover:bg-purple-600 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
-        >
-          Sentence case
-        </button>
-        <button
-          onClick={() => transformText('title')}
-          className="px-4 py-3 bg-pink-500 hover:bg-pink-600 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95"
-        >
-          Title Case
-        </button>
-        <button
-          onClick={() => transformText('alternate')}
-          className="px-4 py-3 bg-teal-500 hover:bg-teal-600 text-white rounded-lg text-sm font-medium transition-all duration-200 shadow-sm hover:shadow-md active:scale-95 col-span-2 sm:col-span-3 md:col-span-1"
-        >
-          aLtErNaTiNg cAsE
-        </button>
+      {/* Case Conversion Buttons with Icons */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+        {caseButtons.map(({ type, label, icon: Icon }) => (
+          <button
+            key={type}
+            onClick={() => transformText(type)}
+            className={`
+              flex items-center justify-center gap-2 px-4 py-3 min-h-[44px]
+              rounded-lg text-sm font-medium transition-all duration-200
+              focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background
+              active:scale-[0.98]
+              ${lastUsedCase === type 
+                ? 'bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm' 
+                : 'bg-secondary hover:bg-secondary/80 text-secondary-foreground'
+              }
+              ${type === 'alternate' ? 'col-span-2 sm:col-span-3 lg:col-span-1' : ''}
+            `}
+            aria-label={`Convert text to ${label}`}
+          >
+            <Icon className="h-4 w-4" strokeWidth={2} />
+            <span>{label}</span>
+          </button>
+        ))}
       </div>
 
       <AdScript />
@@ -135,6 +168,7 @@ export function CaseChangerTool() {
         onCopy={handleCopy}
         onClear={handleClear}
         stats={stats}
+        inputText={inputText}
       />
     </div>
   );

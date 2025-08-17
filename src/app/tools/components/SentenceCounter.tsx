@@ -15,6 +15,7 @@ export default function SentenceCounter() {
     words: 0,
     sentences: 0,
     lines: 0,
+    paragraphs: 0,
     averageWordsPerSentence: 0,
   });
 
