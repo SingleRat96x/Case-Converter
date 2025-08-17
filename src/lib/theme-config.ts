@@ -56,6 +56,12 @@ export const themeClasses = {
       md: 'space-y-6',
       lg: 'space-y-8',
       xl: 'space-y-12',
+    },
+    gaps: {
+      sm: 'mt-4',
+      md: 'mt-6',
+      lg: 'mt-8',
+      xl: 'mt-12',
     }
   },
   

@@ -140,14 +140,14 @@ export function TextTransformation({
 
         <AdScript />
 
-        {/* Action Buttons */}
-        <div className={themeClasses.section.spacing.md}>
-          <ActionButtons
-            onDownload={handleDownload}
-            onCopy={handleCopy}
-            onClear={handleClear}
-          />
-        </div>
+              {/* Action Buttons */}
+      <div className={cn(themeClasses.section.spacing.md, themeClasses.section.gaps.lg)}>
+        <ActionButtons
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+        />
+      </div>
 
         {/* Stats Display */}
         <UnifiedStats
@@ -196,7 +196,7 @@ export function TextTransformation({
       <AdScript />
 
       {/* Action Buttons */}
-      <div className={themeClasses.section.spacing.md}>
+      <div className={cn(themeClasses.section.spacing.md, themeClasses.section.gaps.lg)}>
         <ActionButtons
           onDownload={handleDownload}
           onCopy={handleCopy}

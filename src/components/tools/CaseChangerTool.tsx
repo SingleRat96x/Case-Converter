@@ -167,7 +167,7 @@ export function CaseChangerTool() {
       <AdScript />
 
       {/* Action Buttons */}
-      <div className={themeClasses.section.spacing.md}>
+      <div className={cn(themeClasses.section.spacing.md, themeClasses.section.gaps.lg)}>
         <ActionButtons
           onDownload={handleDownload}
           onCopy={handleCopy}
