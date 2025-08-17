@@ -148,15 +148,13 @@ export function CaseChangerTool() {
           <button
             key={type}
             onClick={() => transformText(type)}
-            disabled={!inputText}
             className={cn(
               themeClasses.button.base,
               themeClasses.button.sizes.md,
               lastUsedCase === type 
                 ? themeClasses.button.variants.primary
                 : themeClasses.button.variants.secondary,
-              type === 'alternate' ? 'col-span-2 sm:col-span-3 lg:col-span-1' : '',
-              !inputText && 'opacity-50 cursor-not-allowed'
+              type === 'alternate' ? 'col-span-2 sm:col-span-3 lg:col-span-1' : ''
             )}
             aria-label={`Convert text to ${label}`}
           >
@@ -174,7 +172,6 @@ export function CaseChangerTool() {
           onDownload={handleDownload}
           onCopy={handleCopy}
           onClear={handleClear}
-          disabled={!inputText}
         />
       </div>
 

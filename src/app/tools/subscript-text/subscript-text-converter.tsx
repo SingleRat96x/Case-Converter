@@ -100,7 +100,6 @@ export function SubscriptTextConverter() {
           onDownload={handleDownload}
           onCopy={handleCopy}
           onClear={handleClear}
-          disabled={!output}
         />
       </div>
 

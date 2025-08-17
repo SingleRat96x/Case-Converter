@@ -113,7 +113,6 @@ export function TextCounter() {
           onDownload={handleDownload}
           onCopy={handleCopy}
           onClear={handleClear}
-          disabled={!inputText}
         />
       </div>
 

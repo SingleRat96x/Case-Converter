@@ -146,7 +146,6 @@ export function TextTransformation({
             onDownload={handleDownload}
             onCopy={handleCopy}
             onClear={handleClear}
-            disabled={!transformedText}
           />
         </div>
 
@@ -181,13 +180,11 @@ export function TextTransformation({
       <div className={themeClasses.section.spacing.sm}>
         <button
           onClick={handleTransform}
-          disabled={!inputText}
           className={cn(
             themeClasses.button.base,
             themeClasses.button.sizes.lg,
             themeClasses.button.variants.primary,
-            'w-full max-w-md mx-auto',
-            !inputText && 'opacity-50 cursor-not-allowed'
+            'w-full max-w-md mx-auto'
           )}
           aria-label={`Transform text to ${toolConfig.name}`}
         >
@@ -204,7 +201,6 @@ export function TextTransformation({
           onDownload={handleDownload}
           onCopy={handleCopy}
           onClear={handleClear}
-          disabled={!inputText}
         />
       </div>
 

@@ -116,13 +116,11 @@ export function UnifiedCaseConverter({ caseType }: UnifiedCaseConverterProps) {
       <div className={themeClasses.section.spacing.sm}>
         <button
           onClick={handleConvert}
-          disabled={!inputText}
           className={cn(
             themeClasses.button.base,
             themeClasses.button.sizes.lg,
             themeClasses.button.variants.primary,
-            'w-full max-w-md mx-auto',
-            !inputText && 'opacity-50 cursor-not-allowed'
+            'w-full max-w-md mx-auto'
           )}
           aria-label={`Convert text to ${label}`}
         >
@@ -139,7 +137,6 @@ export function UnifiedCaseConverter({ caseType }: UnifiedCaseConverterProps) {
           onDownload={handleDownload}
           onCopy={handleCopy}
           onClear={handleClear}
-          disabled={!inputText}
         />
       </div>
 
