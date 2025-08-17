@@ -1,7 +1,9 @@
 'use client';
 
 import React, { useState } from 'react';
-import { Copy, RefreshCw } from 'lucide-react';
+import { ActionButtons } from '@/components/shared/ActionButtons';
+import { UnifiedStats } from '@/components/shared/UnifiedStats';
+import { themeClasses, cn } from '@/lib/theme-config';
 
 interface TextStats {
   characters: number;
@@ -50,18 +52,24 @@ export function TextCounter() {
     updateStats(newText);
   };
 
-  const handleCopy = () => {
-    const statsText = `Text Statistics:
-Characters: ${stats.characters}
-Characters (no spaces): ${stats.charactersNoSpaces}
-Words: ${stats.words}
-Unique Words: ${stats.uniqueWords}
-Sentences: ${stats.sentences}
-Paragraphs: ${stats.paragraphs}
-Lines: ${stats.lines}
-Reading Time: ${stats.readingTime} minute${stats.readingTime !== 1 ? 's' : ''}`;
+  const handleDownload = () => {
+    const blob = new Blob([inputText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'text-analysis.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
 
-    navigator.clipboard.writeText(statsText);
+  const handleCopy = async () => {
+    try {
+      await navigator.clipboard.writeText(inputText);
+    } catch (err) {
+      console.error('Failed to copy text:', err);
+    }
   };
 
   const handleClear = () => {
@@ -69,77 +77,52 @@ Reading Time: ${stats.readingTime} minute${stats.readingTime !== 1 ? 's' : ''}`;
     updateStats('');
   };
 
+  // Convert stats to match UnifiedStats interface
+  const unifiedStats = {
+    characters: stats.characters,
+    charactersNoSpaces: stats.charactersNoSpaces,
+    words: stats.words,
+    uniqueWords: stats.uniqueWords,
+    sentences: stats.sentences,
+    paragraphs: stats.paragraphs,
+    lines: stats.lines,
+    readingTime: stats.readingTime,
+  };
+
   return (
-    <div className="max-w-[900px] mx-auto space-y-8">
-      <div className="space-y-4">
-        {/* Input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder="Type or paste your text here..."
-            value={inputText}
-            onChange={handleInputChange}
-          />
-        </div>
-
-        {/* Stats */}
-        <div className="space-y-4">
-          <h2 className="text-lg font-semibold text-gray-900 dark:text-gray-50">Text Statistics</h2>
-          <div className="grid gap-4 sm:grid-cols-2 md:grid-cols-4">
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.characters}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Characters</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.charactersNoSpaces}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Characters (no spaces)</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.words}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Words</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.uniqueWords}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Unique Words</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.sentences}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Sentences</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.paragraphs}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Paragraphs</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.lines}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Lines</div>
-            </div>
-            <div className="p-4 rounded-lg bg-gray-50 dark:bg-gray-900">
-              <div className="text-2xl font-bold text-gray-900 dark:text-gray-50">{stats.readingTime}</div>
-              <div className="text-sm text-gray-600 dark:text-gray-400">Reading Time (minutes)</div>
-            </div>
-          </div>
-        </div>
-
-        {/* Action Buttons */}
-        <div className="flex flex-wrap gap-2">
-          <button
-            onClick={handleCopy}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-          >
-            <Copy className="h-4 w-4" />
-            Copy Statistics
-          </button>
-          <button
-            onClick={handleClear}
-            className="px-4 py-2 bg-gray-100 dark:bg-gray-800 hover:bg-gray-200 dark:hover:bg-gray-700 rounded-md text-sm font-medium transition-colors text-gray-900 dark:text-gray-100 inline-flex items-center gap-2"
-          >
-            <RefreshCw className="h-4 w-4" />
-            Clear
-          </button>
-        </div>
+    <div className={cn(themeClasses.container.lg, themeClasses.section.spacing.lg)}>
+      {/* Input Section */}
+      <div className={themeClasses.section.spacing.sm}>
+        <label className={themeClasses.label}>Input Text</label>
+        <textarea
+          className={cn(
+            themeClasses.textarea.base,
+            themeClasses.textarea.focus,
+            themeClasses.textarea.sizes.xl
+          )}
+          placeholder="Type or paste your text here..."
+          value={inputText}
+          onChange={handleInputChange}
+          aria-label="Text input for analysis"
+        />
       </div>
+
+      {/* Action Buttons */}
+      <div className={themeClasses.section.spacing.md}>
+        <ActionButtons
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+          disabled={!inputText}
+        />
+      </div>
+
+      {/* Stats Display */}
+      <UnifiedStats
+        stats={unifiedStats}
+        variant="cards"
+        showFields={['characters', 'charactersNoSpaces', 'words', 'uniqueWords', 'sentences', 'paragraphs', 'lines', 'readingTime']}
+      />
     </div>
   );
 }

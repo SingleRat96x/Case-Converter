@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import { ActionButtons } from '@/components/shared/ActionButtons';
+import { UnifiedStats } from '@/components/shared/UnifiedStats';
+import { themeClasses, cn } from '@/lib/theme-config';
 import AdScript from '@/components/ads/AdScript';
 import { 
   Type, 
@@ -93,12 +95,16 @@ export function UnifiedCaseConverter({ caseType }: UnifiedCaseConverterProps) {
   const label = getCaseLabel(caseType);
 
   return (
-    <div className="space-y-6">
-      {/* Textarea with enhanced focus states */}
-      <div className="relative">
+    <div className={cn(themeClasses.container.lg, themeClasses.section.spacing.lg)}>
+      {/* Input Section */}
+      <div className={themeClasses.section.spacing.sm}>
         <textarea
           ref={textareaRef}
-          className="w-full min-h-[200px] p-4 rounded-lg border-2 border-border bg-background text-foreground resize-y transition-all duration-200 placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 focus:shadow-sm"
+          className={cn(
+            themeClasses.textarea.base,
+            themeClasses.textarea.focus,
+            themeClasses.textarea.sizes.lg
+          )}
           placeholder="Type or paste your text here..."
           value={inputText}
           onChange={handleInputChange}
@@ -106,26 +112,41 @@ export function UnifiedCaseConverter({ caseType }: UnifiedCaseConverterProps) {
         />
       </div>
 
-      {/* Single Conversion Button */}
-      <div className="flex justify-center">
+      {/* Primary Conversion CTA */}
+      <div className={themeClasses.section.spacing.sm}>
         <button
           onClick={handleConvert}
-          className="flex items-center justify-center gap-2 px-6 py-3 min-h-[44px] bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm rounded-lg text-sm font-medium transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background active:scale-[0.98]"
+          disabled={!inputText}
+          className={cn(
+            themeClasses.button.base,
+            themeClasses.button.sizes.lg,
+            themeClasses.button.variants.primary,
+            'w-full max-w-md mx-auto',
+            !inputText && 'opacity-50 cursor-not-allowed'
+          )}
           aria-label={`Convert text to ${label}`}
         >
-          <Icon className="h-4 w-4" strokeWidth={2} />
+          <Icon className="h-5 w-5" strokeWidth={2} aria-hidden="true" />
           <span>Convert to {label}</span>
         </button>
       </div>
 
       <AdScript />
 
-      <CaseConverterButtons
-        onDownload={handleDownload}
-        onCopy={handleCopy}
-        onClear={handleClear}
+      {/* Action Buttons */}
+      <div className={themeClasses.section.spacing.md}>
+        <ActionButtons
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+          disabled={!inputText}
+        />
+      </div>
+
+      {/* Stats Display */}
+      <UnifiedStats
         stats={stats}
-        inputText={inputText}
+        variant="cards"
       />
     </div>
   );

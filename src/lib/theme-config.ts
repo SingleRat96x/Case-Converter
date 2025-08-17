@@ -15,8 +15,8 @@ export const themeClasses = {
   
   // Inputs
   textarea: {
-    base: 'w-full p-4 rounded-lg border-2 border-border bg-background text-foreground resize-y transition-all duration-200 placeholder:text-muted-foreground',
-    focus: 'focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 focus:shadow-sm',
+    base: 'w-full p-4 rounded-lg border border-border bg-background text-foreground resize-y transition-all duration-200 placeholder:text-muted-foreground',
+    focus: 'focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 focus:shadow-md',
     sizes: {
       sm: 'min-h-[150px]',
       md: 'min-h-[200px]',
@@ -80,16 +80,16 @@ export const themeClasses = {
     card: {
       base: 'p-4 rounded-lg transition-all duration-200',
       variants: {
-        default: 'bg-muted/30 border border-border/50',
+        default: 'bg-muted/20 border border-border/30',
         elevated: 'bg-card shadow-sm border border-border',
-        accent: 'bg-accent/10 border border-accent/20',
+        accent: 'bg-accent/5 border border-accent/10',
       }
     },
     inline: {
       base: 'flex flex-wrap items-center gap-3 text-sm',
       divider: 'text-muted-foreground/40',
       label: 'text-muted-foreground',
-      value: 'font-medium text-foreground',
+      value: 'font-medium text-accent',
     }
   },
   

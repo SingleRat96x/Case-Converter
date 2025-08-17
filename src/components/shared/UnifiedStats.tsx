@@ -14,12 +14,13 @@ const defaultFields = ['characters', 'words', 'sentences', 'lines'];
 
 const fieldLabels: Record<string, string> = {
   characters: 'Characters',
+  charactersNoSpaces: 'Characters (no spaces)',
   words: 'Words',
   sentences: 'Sentences',
   lines: 'Lines',
   paragraphs: 'Paragraphs',
   uniqueWords: 'Unique Words',
-  readingTime: 'Reading Time',
+  readingTime: 'Reading Time (minutes)',
   duplicateLines: 'Duplicates Removed',
 };
 

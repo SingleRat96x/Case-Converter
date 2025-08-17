@@ -1,10 +1,9 @@
 'use client';
 
 import { useState } from 'react';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
-import { Card } from '@/components/ui/card';
-import { Label } from '@/components/ui/label';
-import { Textarea } from '@/components/ui/textarea';
+import { ActionButtons } from '@/components/shared/ActionButtons';
+import { UnifiedStats } from '@/components/shared/UnifiedStats';
+import { themeClasses, cn } from '@/lib/theme-config';
 import { calculateTextStatistics } from '@/lib/text-utils';
 
 const subscriptMap: { [key: string]: string } = {
@@ -56,42 +55,60 @@ export function SubscriptTextConverter() {
     URL.revokeObjectURL(url);
   };
 
-  return (
-    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-      <Card className="p-6">
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="input">Input Text</Label>
-            <Textarea
-              id="input"
-              placeholder="Enter text to convert to subscript..."
-              value={input}
-              onChange={handleInputChange}
-              className="min-h-[200px] font-mono"
-            />
-          </div>
-        </div>
-      </Card>
+  const stats = calculateTextStatistics(output);
 
-      <Card className="p-6">
-        <div className="space-y-4">
-          <div>
-            <Label htmlFor="output">Subscript Text</Label>
-            <div
-              id="output"
-              className="min-h-[200px] p-4 rounded-md bg-muted font-mono break-all whitespace-pre-wrap"
-            >
-              {output}
-            </div>
-          </div>
-          <CaseConverterButtons
-            onDownload={handleDownload}
-            onCopy={handleCopy}
-            onClear={handleClear}
-            stats={calculateTextStatistics(output)}
+  return (
+    <div className={cn(themeClasses.container.lg, themeClasses.section.spacing.lg)}>
+      {/* Dual Layout */}
+      <div className={cn(themeClasses.grid.base, themeClasses.grid.cols[2], themeClasses.grid.gaps.md)}>
+        {/* Input */}
+        <div className={themeClasses.section.spacing.sm}>
+          <label className={themeClasses.label}>Input Text</label>
+          <textarea
+            className={cn(
+              themeClasses.textarea.base,
+              themeClasses.textarea.focus,
+              themeClasses.textarea.sizes.lg,
+              'font-mono'
+            )}
+            placeholder="Enter text to convert to subscript..."
+            value={input}
+            onChange={handleInputChange}
+            aria-label="Text input for subscript conversion"
           />
         </div>
-      </Card>
+
+        {/* Output */}
+        <div className={themeClasses.section.spacing.sm}>
+          <label className={themeClasses.label}>Subscript Text</label>
+          <div
+            className={cn(
+              themeClasses.textarea.base,
+              themeClasses.textarea.sizes.lg,
+              'bg-muted cursor-default font-mono break-all whitespace-pre-wrap'
+            )}
+            aria-label="Subscript text output"
+          >
+            {output}
+          </div>
+        </div>
+      </div>
+
+      {/* Action Buttons */}
+      <div className={themeClasses.section.spacing.md}>
+        <ActionButtons
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+          disabled={!output}
+        />
+      </div>
+
+      {/* Stats Display */}
+      <UnifiedStats
+        stats={stats}
+        variant="cards"
+      />
     </div>
   );
 } 

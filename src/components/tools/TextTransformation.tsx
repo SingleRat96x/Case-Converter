@@ -3,8 +3,9 @@
 import React, { useState, useRef, useEffect } from 'react';
 import { LucideIcon } from 'lucide-react';
 import { themeClasses, cn } from '@/lib/theme-config';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import { ActionButtons } from '@/components/shared/ActionButtons';
 import { TextStats } from '@/components/shared/types';
+import { UnifiedStats } from '@/components/shared/UnifiedStats';
 import AdScript from '@/components/ads/AdScript';
 
 interface TextTransformationProps {
@@ -139,12 +140,20 @@ export function TextTransformation({
 
         <AdScript />
 
-        <CaseConverterButtons
-          onDownload={handleDownload}
-          onCopy={handleCopy}
-          onClear={handleClear}
+        {/* Action Buttons */}
+        <div className={themeClasses.section.spacing.md}>
+          <ActionButtons
+            onDownload={handleDownload}
+            onCopy={handleCopy}
+            onClear={handleClear}
+            disabled={!transformedText}
+          />
+        </div>
+
+        {/* Stats Display */}
+        <UnifiedStats
           stats={stats}
-          inputText={inputText}
+          variant="cards"
         />
       </>
     );
@@ -168,31 +177,41 @@ export function TextTransformation({
         />
       </div>
 
-      {/* Transform Button */}
-      <div className="flex justify-center">
+      {/* Primary Conversion CTA */}
+      <div className={themeClasses.section.spacing.sm}>
         <button
           onClick={handleTransform}
+          disabled={!inputText}
           className={cn(
             themeClasses.button.base,
-            themeClasses.button.sizes.md,
+            themeClasses.button.sizes.lg,
             themeClasses.button.variants.primary,
-            'min-w-[200px]'
+            'w-full max-w-md mx-auto',
+            !inputText && 'opacity-50 cursor-not-allowed'
           )}
           aria-label={`Transform text to ${toolConfig.name}`}
         >
-          {Icon && <Icon className="h-4 w-4" strokeWidth={2} />}
+          {Icon && <Icon className="h-5 w-5" strokeWidth={2} aria-hidden="true" />}
           <span>Convert to {toolConfig.name}</span>
         </button>
       </div>
 
       <AdScript />
 
-      <CaseConverterButtons
-        onDownload={handleDownload}
-        onCopy={handleCopy}
-        onClear={handleClear}
+      {/* Action Buttons */}
+      <div className={themeClasses.section.spacing.md}>
+        <ActionButtons
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+          disabled={!inputText}
+        />
+      </div>
+
+      {/* Stats Display */}
+      <UnifiedStats
         stats={stats}
-        inputText={inputText}
+        variant="cards"
       />
     </>
   );

@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { TextCounter } from './text-counter';
 import { generatePageMetadata } from '@/lib/metadata';
+import { themeClasses, cn } from '@/lib/theme-config';
 import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
@@ -22,24 +23,24 @@ export default async function TextCounterPage() {
   
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-8 py-8">
-        <div className="max-w-4xl mx-auto mb-12">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4">
+      <div className={cn(themeClasses.container.xl, 'px-8 py-8')}>
+        <div className={cn(themeClasses.container.md, 'mb-12')}>
+          <h1 className={cn(themeClasses.heading.h1, 'mb-4')}>
             {content?.title ?? 'Text Counter'}
           </h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className={themeClasses.description}>
             {content?.short_description ?? 'Count characters, words, and lines in your text'}
           </p>
           <AdScript />
         </div>
 
-        <div className="max-w-6xl mx-auto mb-12">
+        <div className={cn(themeClasses.container.lg, 'mb-12')}>
           <TextCounter />
         </div>
 
         <AdScript />
 
-        <div className="max-w-4xl mx-auto">
+        <div className={themeClasses.container.md}>
           {content?.long_description && (
             <div 
               className="prose dark:prose-invert"
