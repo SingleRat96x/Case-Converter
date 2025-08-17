@@ -1,7 +1,9 @@
 'use client';
 
 import { useState, useEffect, useRef } from 'react';
-import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
+import { ActionButtons } from '@/components/shared/ActionButtons';
+import { UnifiedStats } from '@/components/shared/UnifiedStats';
+import { themeClasses, cn } from '@/lib/theme-config';
 import AdScript from '@/components/ads/AdScript';
 import { 
   Type, 
@@ -117,12 +119,16 @@ export function CaseChangerTool() {
   };
 
   return (
-    <div className="space-y-6">
-      {/* Textarea with enhanced focus states */}
-      <div className="relative">
+    <div className={cn(themeClasses.container.lg, themeClasses.section.spacing.lg)}>
+      {/* Input Section */}
+      <div className={cn(themeClasses.section.spacing.sm, 'relative')}>
         <textarea
           ref={textareaRef}
-          className="w-full min-h-[200px] p-4 rounded-lg border-2 border-border bg-background text-foreground resize-y transition-all duration-200 placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-2 focus:ring-accent/20 focus:shadow-sm"
+          className={cn(
+            themeClasses.textarea.base,
+            themeClasses.textarea.focus,
+            themeClasses.textarea.sizes.lg
+          )}
           placeholder="Type or paste your text here..."
           value={inputText}
           onChange={handleInputChange}
@@ -136,26 +142,25 @@ export function CaseChangerTool() {
         )}
       </div>
 
-      {/* Case Conversion Buttons with Icons */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      {/* Case Conversion Buttons - Primary CTAs */}
+      <div className={cn(themeClasses.section.spacing.sm, 'grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3')}>
         {caseButtons.map(({ type, label, icon: Icon }) => (
           <button
             key={type}
             onClick={() => transformText(type)}
-            className={`
-              flex items-center justify-center gap-2 px-4 py-3 min-h-[44px]
-              rounded-lg text-sm font-medium transition-all duration-200
-              focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background
-              active:scale-[0.98]
-              ${lastUsedCase === type 
-                ? 'bg-primary hover:bg-primary/90 text-primary-foreground shadow-sm' 
-                : 'bg-secondary hover:bg-secondary/80 text-secondary-foreground'
-              }
-              ${type === 'alternate' ? 'col-span-2 sm:col-span-3 lg:col-span-1' : ''}
-            `}
+            disabled={!inputText}
+            className={cn(
+              themeClasses.button.base,
+              themeClasses.button.sizes.md,
+              lastUsedCase === type 
+                ? themeClasses.button.variants.primary
+                : themeClasses.button.variants.secondary,
+              type === 'alternate' ? 'col-span-2 sm:col-span-3 lg:col-span-1' : '',
+              !inputText && 'opacity-50 cursor-not-allowed'
+            )}
             aria-label={`Convert text to ${label}`}
           >
-            <Icon className="h-4 w-4" strokeWidth={2} />
+            <Icon className="h-4 w-4" strokeWidth={2} aria-hidden="true" />
             <span>{label}</span>
           </button>
         ))}
@@ -163,12 +168,20 @@ export function CaseChangerTool() {
 
       <AdScript />
 
-      <CaseConverterButtons
-        onDownload={handleDownload}
-        onCopy={handleCopy}
-        onClear={handleClear}
+      {/* Action Buttons */}
+      <div className={themeClasses.section.spacing.md}>
+        <ActionButtons
+          onDownload={handleDownload}
+          onCopy={handleCopy}
+          onClear={handleClear}
+          disabled={!inputText}
+        />
+      </div>
+
+      {/* Stats Display */}
+      <UnifiedStats
         stats={stats}
-        inputText={inputText}
+        variant="cards"
       />
     </div>
   );

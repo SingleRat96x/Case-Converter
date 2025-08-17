@@ -49,9 +49,22 @@ This document tracks the migration of text tools to the new modular ActionButton
 - **Issues**: None
 - **Notes**: Converted from card-based to theme-based layout
 
+#### 5. Index Page (Homepage)
+- **Files**: 
+  - `/src/app/page.tsx` - Updated layout to use theme tokens
+  - `/src/components/tools/CaseChangerTool.tsx` - Complete rewrite using ActionButtons
+- **Changes**:
+  - Replaced `CaseConverterButtons` with `ActionButtons` in main case converter
+  - Updated page layout to use theme tokens throughout
+  - Enhanced case conversion buttons with proper hierarchy
+  - Applied consistent spacing and typography
+  - Added proper disabled states for buttons
+- **Issues**: None
+- **Notes**: This is the main homepage tool that users see first
+
 ### 🔄 In Progress
 
-#### 5. Other TextTransformation-based Tools
+#### 6. Other TextTransformation-based Tools
 - All tools using `TextTransformation` component automatically inherit the new ActionButtons
 - Need to verify individual tool pages for duplicate titles
 
