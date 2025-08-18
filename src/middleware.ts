@@ -93,15 +93,9 @@ export function middleware(request: NextRequest) {
     "web-share=()",
     "xr-spatial-tracking=()",
     "clipboard-read=()",
-    "clipboard-write=(self)",
-    // Advertising related features - try with broader allowance for now
-    // Note: '*' for ad features can be a security risk if not understood.
-    // This is for debugging the "unrecognized feature" vs. "origin trial" errors.
-    // Ideally, these would be restricted to specific ad provider domains if they actually function.
-    'attribution-reporting=*', // Try with *
-    'browsing-topics=*',       // Try with *
-    'join-ad-interest-group=*',// Try with *
-    'run-ad-auction=*'         // Try with *
+    "clipboard-write=(self)"
+    // Privacy Sandbox features removed - not currently needed for basic AdSense
+    // These experimental features require Origin Trial tokens to work properly
   ].join(','); // Join with comma
 
   // Admin Authentication Logic & Response Handling
