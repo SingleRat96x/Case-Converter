@@ -217,8 +217,8 @@ export function Header() {
   return (
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
+        <div className="max-w-7xl mx-auto px-4 lg:px-6 xl:px-8">
+          <div className="flex h-16 items-center justify-between gap-4">
             {/* Brand */}
             <Link 
               href="/"
@@ -228,13 +228,13 @@ export function Header() {
               <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
                 <Type className="h-5 w-5" strokeWidth={2.5} />
               </div>
-              <span className="font-semibold text-base sm:text-lg text-foreground transition-colors duration-200">
+              <span className="font-semibold text-base lg:text-lg text-foreground transition-colors duration-200 hidden sm:block">
                 Text Case Converter
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
+            <nav className="hidden md:flex items-center justify-center lg:justify-start gap-1 lg:gap-2 xl:gap-3" role="navigation" aria-label="Main navigation">
               {/* Tool Categories including About Us */}
               {allCategories.map((category) => (
                 <div
@@ -245,11 +245,11 @@ export function Header() {
                 >
                   <Link
                     href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                    className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="flex items-center px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-sm xl:text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
                   >
-                    <span>{category}</span>
+                    <span className="whitespace-nowrap truncate">{category}</span>
                     {toolsByCategory[category]?.length > 0 && (
-                      <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-70 transition-transform duration-200 group-hover:opacity-100" />
+                      <ChevronDown className="ml-1 lg:ml-1.5 h-3 lg:h-3.5 w-3 lg:w-3.5 opacity-70 transition-transform duration-200 group-hover:opacity-100" />
                     )}
                   </Link>
                   
@@ -301,7 +301,7 @@ export function Header() {
             </nav>
 
             {/* Right Side Actions */}
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center gap-1 lg:gap-2">
               <div className="hidden md:block">
                 <ThemeToggle />
               </div>
