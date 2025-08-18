@@ -37,7 +37,6 @@ next-env.d.ts
 
 # Supabase
 /supabase
-/docs
 
 # IDE
 .vscode/
