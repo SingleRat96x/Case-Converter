@@ -218,38 +218,38 @@ export function Header() {
     <>
       <header className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
         <div className="max-w-7xl mx-auto px-4 lg:px-6 xl:px-8">
-          <div className="flex h-16 items-center justify-between gap-4">
+          <div className="flex h-16 items-center justify-between flex-nowrap">
             {/* Brand */}
             <Link 
               href="/"
-              className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg px-2 -ml-2"
+              className="flex items-center gap-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg px-2 -ml-2 flex-shrink-0"
               aria-label="Text Case Converter Home"
             >
               <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
                 <Type className="h-5 w-5" strokeWidth={2.5} />
               </div>
-              <span className="font-semibold text-base lg:text-lg text-foreground transition-colors duration-200 hidden sm:block">
+              <span className="font-semibold text-base lg:text-lg text-foreground transition-colors duration-200 whitespace-nowrap hidden lg:block">
                 Text Case Converter
               </span>
             </Link>
 
             {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center justify-center lg:justify-start gap-1 lg:gap-2 xl:gap-3" role="navigation" aria-label="Main navigation">
+            <nav className="hidden lg:flex items-center flex-nowrap min-w-0 gap-0.5 xl:gap-1" role="navigation" aria-label="Main navigation">
               {/* Tool Categories including About Us */}
               {allCategories.map((category) => (
                 <div
                   key={category}
-                  className="relative group"
+                  className="relative group flex-shrink-1"
                   onMouseEnter={() => handleMenuEnter(category)}
                   onMouseLeave={handleMenuLeave}
                 >
                   <Link
                     href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                    className="flex items-center px-2 lg:px-3 xl:px-4 py-2 text-sm lg:text-sm xl:text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
+                    className="flex items-center px-1.5 xl:px-3 py-2 text-sm xl:text-base font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background whitespace-nowrap"
                   >
-                    <span className="whitespace-nowrap truncate">{category}</span>
+                    <span className="whitespace-nowrap">{category}</span>
                     {toolsByCategory[category]?.length > 0 && (
-                      <ChevronDown className="ml-1 lg:ml-1.5 h-3 lg:h-3.5 w-3 lg:w-3.5 opacity-70 transition-transform duration-200 group-hover:opacity-100" />
+                      <ChevronDown className="ml-1 h-3 xl:h-3.5 w-3 xl:w-3.5 opacity-70 transition-transform duration-200 group-hover:opacity-100 flex-shrink-0" />
                     )}
                   </Link>
                   
@@ -301,14 +301,14 @@ export function Header() {
             </nav>
 
             {/* Right Side Actions */}
-            <div className="flex items-center gap-1 lg:gap-2">
-              <div className="hidden md:block">
+            <div className="flex items-center gap-1 lg:gap-2 flex-shrink-0">
+              <div className="hidden lg:block">
                 <ThemeToggle />
               </div>
               
               {/* Mobile Menu Button */}
               <button
-                className="relative p-2.5 rounded-lg bg-accent hover:bg-accent/80 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-200 md:hidden"
+                className="relative p-2.5 rounded-lg bg-accent hover:bg-accent/80 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-200 lg:hidden"
                 onClick={() => setIsMenuOpen(!isMenuOpen)}
                 aria-label={isMenuOpen ? "Close menu" : "Open menu"}
                 aria-expanded={isMenuOpen}
@@ -358,7 +358,7 @@ export function Header() {
               animate={{ opacity: 1 }}
               exit={{ opacity: 0 }}
               transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-[60] md:hidden bg-black/50 backdrop-blur-sm"
+              className="fixed inset-0 z-[60] lg:hidden bg-black/50 backdrop-blur-sm"
               onClick={() => setIsMenuOpen(false)}
               aria-hidden="true"
             />
@@ -379,7 +379,7 @@ export function Header() {
                 stiffness: 260,
                 mass: 0.8
               }}
-              className="fixed inset-y-0 right-0 z-[70] w-full bg-background shadow-2xl overflow-hidden md:hidden"
+              className="fixed inset-y-0 right-0 z-[70] w-full bg-background shadow-2xl overflow-hidden lg:hidden"
               onClick={(e) => e.stopPropagation()}
             >
               {/* Header */}
