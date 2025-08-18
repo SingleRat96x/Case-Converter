@@ -1,6 +1,8 @@
 import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { BigTextConverter } from './big-text-converter';
+import { generatePageMetadata } from '@/lib/metadata';
+import { themeClasses, cn } from '@/lib/theme-config';
 import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
@@ -8,17 +10,12 @@ export const revalidate = 0;
 
 export async function generateMetadata(): Promise<Metadata> {
   const tool = await getToolContent('big-text');
-  if (!tool) {
-    return {
-      title: 'Big Text Converter',
-      description: 'Convert your text into big letters online'
-    };
-  }
-
-  return {
-    title: tool.title,
-    description: tool.short_description,
-  };
+  return generatePageMetadata(
+    'tool',
+    'big-text',
+    tool?.title || 'Big Text Converter',
+    tool?.short_description || 'Convert your text into big letters online'
+  );
 }
 
 export default async function BigTextPage() {
@@ -30,27 +27,27 @@ export default async function BigTextPage() {
 
   return (
     <main className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-8 py-8">
-        {/* Header section with more left padding */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4">
+      <div className={cn(themeClasses.container.xl, 'px-8 py-8')}>
+        {/* Header section */}
+        <div className={cn(themeClasses.container.md, 'mb-12')}>
+          <h1 className={cn(themeClasses.heading.h1, 'mb-4')}>
             {tool.title}
           </h1>
-          <p className="text-gray-600 dark:text-gray-400">
+          <p className={themeClasses.description}>
             {tool.short_description}
           </p>
           <AdScript />
         </div>
 
-        {/* Tool section with wider width */}
-        <div className="max-w-6xl mx-auto mb-12">
+        {/* Tool section */}
+        <div className={cn(themeClasses.container.lg, 'mb-12')}>
           <BigTextConverter />
         </div>
 
         <AdScript />
 
-        {/* Description section with more left padding */}
-        <div className="max-w-4xl mx-auto">
+        {/* Description section */}
+        <div className={themeClasses.container.md}>
           <div 
             className="prose dark:prose-invert"
             dangerouslySetInnerHTML={{ __html: tool.long_description }} 

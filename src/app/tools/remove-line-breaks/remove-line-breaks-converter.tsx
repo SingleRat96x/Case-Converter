@@ -16,21 +16,16 @@ const removeLineBreaks = (text: string) => {
 
 export function RemoveLineBreaksConverter() {
   return (
-    <TextToolLayout
-      title="Remove Line Breaks"
-      description="Remove all line breaks and extra spaces from your text"
-    >
-      <TextTransformation
-        transformer={removeLineBreaks}
-        toolConfig={{
-          name: 'Remove Line Breaks',
-          icon: Minus,
-          placeholder: 'Type or paste your text with line breaks here...',
-          downloadFileName: 'text-without-line-breaks.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={removeLineBreaks}
+      toolConfig={{
+        name: 'Remove Line Breaks',
+        icon: Minus,
+        placeholder: 'Type or paste your text with line breaks here...',
+        downloadFileName: 'text-without-line-breaks.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

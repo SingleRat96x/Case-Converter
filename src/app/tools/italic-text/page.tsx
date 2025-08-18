@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 import { getToolContent } from '@/lib/tools';
 import { ItalicTextConverter } from './italic-text-converter';
 import { generatePageMetadata } from '@/lib/metadata';
+import { themeClasses, cn } from '@/lib/theme-config';
 import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
@@ -25,28 +26,33 @@ export default async function ItalicTextPage() {
   }
 
   return (
-    <main className="max-w-7xl mx-auto px-8 py-8">
-      <div className="max-w-4xl mx-auto mb-12">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-3">
-          {tool.title}
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400">
-          {tool.short_description}
-        </p>
+    <main className="min-h-screen bg-background">
+      <div className={cn(themeClasses.container.xl, 'px-8 py-8')}>
+        {/* Header section */}
+        <div className={cn(themeClasses.container.md, 'mb-12')}>
+          <h1 className={cn(themeClasses.heading.h1, 'mb-4')}>
+            {tool.title}
+          </h1>
+          <p className={themeClasses.description}>
+            {tool.short_description}
+          </p>
+          <AdScript />
+        </div>
+
+        {/* Tool section */}
+        <div className={cn(themeClasses.container.lg, 'mb-12')}>
+          <ItalicTextConverter />
+        </div>
+
         <AdScript />
-      </div>
 
-      <div className="max-w-6xl mx-auto mb-12">
-        <ItalicTextConverter />
-      </div>
-
-      <AdScript />
-
-      <div className="max-w-4xl mx-auto">
-        <div 
-          className="prose dark:prose-invert" 
-          dangerouslySetInnerHTML={{ __html: tool.long_description }} 
-        />
+        {/* Description section */}
+        <div className={themeClasses.container.md}>
+          <div 
+            className="prose dark:prose-invert" 
+            dangerouslySetInnerHTML={{ __html: tool.long_description }} 
+          />
+        </div>
       </div>
     </main>
   );

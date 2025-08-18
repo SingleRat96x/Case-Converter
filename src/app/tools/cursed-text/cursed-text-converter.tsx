@@ -39,21 +39,16 @@ const convertToCursedText = (text: string, intensity: number = 10) => {
 
 export function CursedTextConverter() {
   return (
-    <TextToolLayout
-      title="Cursed Text Generator"
-      description="Create glitchy, cursed text with Unicode combining characters"
-    >
-      <TextTransformation
-        transformer={(text) => convertToCursedText(text, 10)}
-        toolConfig={{
-          name: 'Cursed Text',
-          icon: Zap,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'cursed-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={(text) => convertToCursedText(text, 10)}
+      toolConfig={{
+        name: 'Cursed Text',
+        icon: Zap,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'cursed-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

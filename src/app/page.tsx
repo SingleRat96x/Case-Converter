@@ -6,6 +6,7 @@ import { ToolBlock } from '@/components/ToolBlock';
 import { getAllTools } from '@/lib/tools';
 import { getPageContent } from '@/lib/page-content';
 import { generatePageMetadata } from '@/lib/metadata';
+import { themeClasses, cn } from '@/lib/theme-config';
 import AdScript from '@/components/ads/AdScript';
 
 export const dynamic = 'force-dynamic';
@@ -69,13 +70,13 @@ export default async function Home({
   `;
 
   return (
-    <div className="container py-8 md:py-12 space-y-8 md:space-y-12">
+    <div className={cn(themeClasses.container.xl, 'py-8 md:py-12', themeClasses.section.spacing.xl)}>
       {/* Hero */}
       <div className="text-center space-y-4 md:space-y-6">
-        <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-tight text-foreground">
+        <h1 className={cn(themeClasses.heading.h1, 'text-4xl md:text-5xl tracking-tight')}>
           {pageContent?.title || 'Text Case Converter'}
         </h1>
-        <p className="text-base sm:text-lg md:text-xl text-muted-foreground max-w-[720px] mx-auto px-4">
+        <p className={cn(themeClasses.description, 'text-base sm:text-lg md:text-xl max-w-[720px] mx-auto px-4')}>
           {pageContent?.short_description || 'Transform your text into any case: UPPERCASE, lowercase, Title Case, Sentence case, or aLtErNaTiNg case. Plus, get instant character, word, sentence, and line counts.'}
         </p>
       </div>
@@ -114,9 +115,9 @@ export default async function Home({
       </div>
 
       {/* More Text Tools */}
-      <section className="pt-8 md:pt-12 border-t border-border">
-        <h2 className="text-2xl md:text-3xl font-semibold text-center text-foreground mb-6 md:mb-8">More Text Tools</h2>
-        <div className="grid gap-4 md:gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <section className={cn('pt-8 md:pt-12', themeClasses.divider)}>
+        <h2 className={cn(themeClasses.heading.h2, 'text-center mb-6 md:mb-8')}>More Text Tools</h2>
+        <div className={cn(themeClasses.grid.base, themeClasses.grid.cols[3], themeClasses.grid.gaps.md)}>
           {tools
             .filter(tool => tool.show_in_index)
             .map(tool => (

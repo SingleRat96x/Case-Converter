@@ -43,21 +43,16 @@ const removeTextFormatting = (text: string) => {
 
 export function RemoveTextFormattingConverter() {
   return (
-    <TextToolLayout
-      title="Remove Text Formatting"
-      description="Strip all formatting from your text"
-    >
-      <TextTransformation
-        transformer={removeTextFormatting}
-        toolConfig={{
-          name: 'Remove Formatting',
-          icon: X,
-          placeholder: 'Type or paste your formatted text here...',
-          downloadFileName: 'unformatted-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={removeTextFormatting}
+      toolConfig={{
+        name: 'Remove Formatting',
+        icon: X,
+        placeholder: 'Type or paste your formatted text here...',
+        downloadFileName: 'unformatted-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 

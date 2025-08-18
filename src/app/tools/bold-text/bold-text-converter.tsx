@@ -20,21 +20,16 @@ const convertToBoldText = (text: string) => {
 
 export function BoldTextConverter() {
   return (
-    <TextToolLayout
-      title="Bold Text Generator"
-      description="Transform your text into bold Unicode characters that work anywhere"
-    >
-      <TextTransformation
-        transformer={convertToBoldText}
-        toolConfig={{
-          name: 'Bold Text',
-          icon: Type,
-          placeholder: 'Type or paste your text here...',
-          downloadFileName: 'bold-text.txt'
-        }}
-        layout="dual"
-        textareaSize="xl"
-      />
-    </TextToolLayout>
+    <TextTransformation
+      transformer={convertToBoldText}
+      toolConfig={{
+        name: 'Bold Text',
+        icon: Type,
+        placeholder: 'Type or paste your text here...',
+        downloadFileName: 'bold-text.txt'
+      }}
+      layout="dual"
+      textareaSize="xl"
+    />
   );
 } 
