@@ -163,7 +163,7 @@ export function invalidateAllMetaCaches(): void {
 // Get default meta description for a page type
 export function getDefaultMetaDescription(pageType: PageType, title: string): Partial<MetaDescription> {
   const baseDescription = 'Free online tool for text transformation and analysis.';
-  const domain = 'https://case-converter.vercel.app';
+  const domain = 'https://textcaseconverter.net';
   
   return {
     meta_title: `${title} - Text Case Converter`,

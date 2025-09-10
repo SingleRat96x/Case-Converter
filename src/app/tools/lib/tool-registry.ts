@@ -13,11 +13,11 @@ type ComponentLoader = () => Promise<{
 // Registry of tool components with dynamic imports
 export const toolRegistry: Record<string, ComponentLoader> = {
   // Step 1 tools (Case converters & basic text tools)
-  uppercase: () => import('../uppercase/uppercase-converter').then(m => ({ default: m.UppercaseConverter })),
-  lowercase: () => import('../lowercase/lowercase-converter').then(m => ({ default: m.LowercaseConverter })),
-  'title-case': () => import('../title-case/title-case-converter').then(m => ({ default: m.TitleCaseConverter })),
-  'sentence-case': () => import('../sentence-case/sentence-case-converter').then(m => ({ default: m.SentenceCaseConverter })),
-  'alternating-case': () => import('../alternating-case/alternating-case-converter').then(m => ({ default: m.AlternatingCaseConverter })),
+  uppercase: () => import('../components/UppercaseConverter'),
+  lowercase: () => import('../components/LowercaseConverter'),
+  'title-case': () => import('../components/TitleCaseConverter'),
+  'sentence-case': () => import('../components/SentenceCaseConverter'),
+  'alternating-case': () => import('../components/AlternatingCaseConverter'),
   'text-counter': () => import('../components/TextCounter'),
   'bold-text': () => import('../components/BoldTextConverter'),
   'italic-text': () => import('../components/ItalicTextConverter'),

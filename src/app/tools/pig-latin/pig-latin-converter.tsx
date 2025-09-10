@@ -2,8 +2,13 @@
 
 import { useState } from 'react';
 import { Copy, Download, RefreshCw } from 'lucide-react';
-import { TextStats } from '@/components/shared/types';
 
+interface TextStats {
+  characters: number;
+  words: number;
+  sentences: number;
+  lines: number;
+}
 
 export function PigLatinConverter() {
   const [inputText, setInputText] = useState('');
@@ -12,7 +17,6 @@ export function PigLatinConverter() {
     words: 0,
     sentences: 0,
     lines: 0,
-    paragraphs: 0,
   });
 
   const updateStats = (text: string) => {
@@ -21,7 +25,6 @@ export function PigLatinConverter() {
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
-      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
     });
   };
 

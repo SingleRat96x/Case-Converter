@@ -1,6 +1,6 @@
 'use client';
 
-import { Menu, ChevronRight, X, Home, ChevronDown, Info, Mail, Sun, Moon, House, CircleHelp, Type } from 'lucide-react';
+import { Menu, ChevronRight, X, Home, ChevronDown } from 'lucide-react';
 import Link from 'next/link';
 import { useState, useEffect, useRef } from 'react';
 import { TOOL_CATEGORIES } from '@/lib/tools';
@@ -8,7 +8,6 @@ import type { ToolContent } from '@/lib/tools';
 import { supabase } from '@/lib/supabase';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ThemeToggle } from '@/components/ui/theme-toggle';
-import { useTheme } from 'next-themes';
 
 interface MenuItem {
   id: string;
@@ -29,10 +28,8 @@ export function Header() {
   const [hoveredCategory, setHoveredCategory] = useState<string | null>(null);
   const [tools, setTools] = useState<ToolContent[]>([]);
   const [expandedCategories, setExpandedCategories] = useState<string[]>([]);
-  const [isScrolled, setIsScrolled] = useState(false);
   const drawerRef = useRef<HTMLDivElement | null>(null);
   const closeButtonRef = useRef<HTMLButtonElement | null>(null);
-  const { theme, setTheme } = useTheme();
 
   useEffect(() => {
     const fetchTools = async () => {
@@ -43,41 +40,23 @@ export function Header() {
   }, []);
 
   useEffect(() => {
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
-    };
-    
-    window.addEventListener('scroll', handleScroll);
-    handleScroll();
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
-
-  useEffect(() => {
     if (isMenuOpen) {
-      // Store current scroll position
-      const scrollY = window.scrollY;
-      document.body.style.position = 'fixed';
-      document.body.style.top = `-${scrollY}px`;
-      document.body.style.width = '100%';
       document.body.style.overflow = 'hidden';
+      document.body.style.position = 'fixed';
+      document.body.style.width = '100%';
+      document.body.style.height = '100%';
     } else {
-      // Restore scroll position
-      const scrollY = document.body.style.top;
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
       document.body.style.overflow = '';
-      if (scrollY) {
-        window.scrollTo(0, parseInt(scrollY.replace('-', '').replace('px', '')));
-      }
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
     }
 
     return () => {
-      document.body.style.position = '';
-      document.body.style.top = '';
-      document.body.style.width = '';
       document.body.style.overflow = '';
+      document.body.style.position = '';
+      document.body.style.width = '';
+      document.body.style.height = '';
     };
   }, [isMenuOpen]);
 
@@ -216,341 +195,229 @@ export function Header() {
 
   return (
     <>
-      <header className={`fixed top-0 left-0 right-0 z-50 bg-background/95 backdrop-blur-md supports-[backdrop-filter]:bg-background/80 border-b border-border transition-all duration-300 ${isScrolled ? 'shadow-md' : 'shadow-sm'}`}>
-        <div className="container mx-auto px-4">
-          <div className="flex h-16 items-center justify-between">
-            {/* Brand */}
-            <Link 
-              href="/"
-              className="flex items-center space-x-3 group focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background rounded-lg px-2 -ml-2"
-              aria-label="Text Case Converter Home"
-            >
-              <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
-                <Type className="h-5 w-5" strokeWidth={2.5} />
-              </div>
-              <span className="font-semibold text-base sm:text-lg text-foreground transition-colors duration-200">
-                Text Case Converter
+      <header className="fixed top-0 left-0 right-0 z-50 border-b border-border/40 bg-white/95 dark:bg-gray-900/95 backdrop-blur-md supports-[backdrop-filter]:bg-white/60 dark:supports-[backdrop-filter]:bg-gray-900/60 theme-transition">
+        <div className="container flex h-16 items-center justify-between mx-auto px-4">
+          <div className="flex items-center space-x-4">
+            <Link className="flex items-center" href="/">
+              <Home className="h-6 w-6 text-primary md:hidden" />
+              <span className="font-bold text-sm 2xs:text-base xs:text-lg sm:text-lg md:text-base lg:text-lg whitespace-nowrap">
+                <span className="relative z-10 text-gray-900 dark:text-white transition-all duration-300 group-hover:text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-purple-500 to-pink-500 dark:from-blue-400 dark:via-purple-400 dark:to-pink-400">
+                  Text Case Converter
+                </span>
+                <span className="absolute inset-0 rounded-lg bg-gradient-to-r from-blue-100/50 via-purple-100/50 to-pink-100/50 dark:from-blue-900/30 dark:via-purple-900/30 dark:to-pink-900/30 opacity-0 group-hover:opacity-100 transition-all duration-300 -z-10"></span>
               </span>
             </Link>
-
-            {/* Desktop Navigation */}
-            <nav className="hidden md:flex items-center space-x-1" role="navigation" aria-label="Main navigation">
-              {/* Tool Categories including About Us */}
-              {allCategories.map((category) => (
-                <div
-                  key={category}
-                  className="relative group"
-                  onMouseEnter={() => handleMenuEnter(category)}
-                  onMouseLeave={handleMenuLeave}
-                >
-                  <Link
-                    href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
-                    className="flex items-center px-3 py-2 text-sm font-medium text-muted-foreground hover:text-foreground rounded-lg hover:bg-accent transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                  >
-                    <span>{category}</span>
-                    {toolsByCategory[category]?.length > 0 && (
-                      <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-70 transition-transform duration-200 group-hover:opacity-100" />
-                    )}
-                  </Link>
-                  
-                  {/* Dropdown Menu */}
-                  {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
-                    <div 
-                      className={`absolute top-full mt-2 py-2 bg-popover rounded-lg shadow-lg border border-border backdrop-blur-sm ${category === 'About Us' ? 'right-0 min-w-[180px]' : 'left-1/2 -translate-x-1/2'}`}
-                      onMouseEnter={() => handleMenuEnter(category)}
-                      onMouseLeave={handleMenuLeave}
-                      style={category !== 'About Us' ? { 
-                        maxWidth: 'min(880px, 90vw)',
-                        width: `${Math.min(getColumnCount(toolsByCategory[category]) * 220, 880)}px`
-                      } : undefined}
-                    >
-                      <div className={`${category !== 'About Us' ? 'grid gap-x-2 px-2' : 'px-2'}`}
-                           style={category !== 'About Us' ? { 
-                             gridTemplateColumns: `repeat(${getColumnCount(toolsByCategory[category])}, minmax(0, 1fr))`
-                           } : undefined}>
-                        {category === 'About Us' ? (
-                          toolsByCategory[category].map((tool) => (
-                            <Link
-                              key={tool.id}
-                              href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
-                              className="block px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-all duration-200 whitespace-nowrap"
-                            >
-                              {tool.name}
-                            </Link>
-                          ))
-                        ) : (
-                          splitIntoColumns(toolsByCategory[category], getColumnCount(toolsByCategory[category])).map((columnTools, columnIndex) => (
-                            <div key={columnIndex} className="flex flex-col">
-                              {columnTools.map((tool) => (
-                                <Link
-                                  key={tool.id}
-                                  href={`/tools/${tool.id}`}
-                                  className={`px-4 py-2 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-md transition-all duration-200 whitespace-nowrap ${tool.custom_style || ''}`}
-                                >
-                                  {getDisplayText(tool)}
-                                </Link>
-                              ))}
-                            </div>
-                          ))
-                        )}
-                      </div>
-                    </div>
-                  )}
-                </div>
-              ))}
-            </nav>
-
-            {/* Right Side Actions */}
-            <div className="flex items-center space-x-2">
-              <div className="hidden md:block">
-                <ThemeToggle />
-              </div>
-              
-              {/* Mobile Menu Button */}
-              <button
-                className="relative p-2.5 rounded-lg bg-accent hover:bg-accent/80 text-foreground focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background transition-all duration-200 md:hidden"
-                onClick={() => setIsMenuOpen(!isMenuOpen)}
-                aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-                aria-expanded={isMenuOpen}
-                aria-controls="mobile-menu"
+          </div>
+          
+          <nav className="hidden md:flex items-center space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5 2xl:space-x-6 flex-1 justify-center px-1 sm:px-2 lg:px-4">
+            {/* Tool Categories including About Us */}
+            {allCategories.map((category) => (
+              <div
+                key={category}
+                className="relative group whitespace-nowrap"
+                onMouseEnter={() => handleMenuEnter(category)}
+                onMouseLeave={handleMenuLeave}
               >
-                <div className="relative w-5 h-5">
-                  <motion.span 
-                    animate={{
-                      rotate: isMenuOpen ? 45 : 0,
-                      y: isMenuOpen ? 6 : 0
-                    }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-0 left-0 w-5 h-0.5 bg-current origin-center"
-                  />
-                  <motion.span 
-                    animate={{
-                      opacity: isMenuOpen ? 0 : 1,
-                      x: isMenuOpen ? -20 : 0
-                    }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute top-2 left-0 w-5 h-0.5 bg-current"
-                  />
-                  <motion.span 
-                    animate={{
-                      rotate: isMenuOpen ? -45 : 0,
-                      y: isMenuOpen ? -6 : 0
-                    }}
-                    transition={{ duration: 0.2 }}
-                    className="absolute bottom-0 left-0 w-5 h-0.5 bg-current origin-center"
-                  />
-                </div>
-              </button>
-            </div>
+                <Link
+                  href={category === 'Convert Case' ? '/' : category === 'About Us' ? '/about-us' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                  className="flex items-center py-2 text-xs md:text-[13px] lg:text-sm font-medium text-gray-700 dark:text-gray-200 hover:text-primary dark:hover:text-primary rounded-md transition-all duration-200 ease-in-out relative group/item"
+                >
+                  <span className="relative z-10">
+                    {category}
+                    {toolsByCategory[category]?.length > 0 && (
+                      <ChevronDown className="inline-block h-3 w-3 md:h-3.5 md:w-3.5 lg:h-4 lg:w-4 ml-1 opacity-50 group-hover/item:opacity-100 transition-all duration-200 ease-in-out transform group-hover/item:translate-y-0.5" />
+                    )}
+                  </span>
+                  <span className="absolute inset-0 bg-gray-100 dark:bg-gray-800 rounded-md opacity-0 group-hover/item:opacity-10 transition-all duration-200 ease-in-out transform scale-90 group-hover/item:scale-100"></span>
+                </Link>
+                {hoveredCategory === category && toolsByCategory[category]?.length > 0 && (
+                  <div 
+                    className={`absolute top-full mt-1 py-2 bg-white/95 dark:bg-gray-900/95 rounded-md shadow-xl border border-gray-200/50 dark:border-gray-700/50 backdrop-blur-2xl backdrop-saturate-150 ${category === 'About Us' ? 'right-0 min-w-[180px]' : 'left-1/2 -translate-x-1/2'}`}
+                    onMouseEnter={() => handleMenuEnter(category)}
+                    onMouseLeave={handleMenuLeave}
+                    style={category !== 'About Us' ? { 
+                      maxWidth: 'min(880px, 90vw)',
+                      width: `${Math.min(getColumnCount(toolsByCategory[category]) * 220, 880)}px`
+                    } : undefined}
+                  >
+                    <div className={`${category !== 'About Us' ? 'grid gap-x-2 px-2' : 'px-2'}`}
+                         style={category !== 'About Us' ? { 
+                           gridTemplateColumns: `repeat(${getColumnCount(toolsByCategory[category])}, minmax(0, 1fr))`
+                         } : undefined}>
+                      {category === 'About Us' ? (
+                        toolsByCategory[category].map((tool) => (
+                          <Link
+                            key={tool.id}
+                            href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
+                            className="block px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap"
+                          >
+                            {tool.name}
+                          </Link>
+                        ))
+                      ) : (
+                        splitIntoColumns(toolsByCategory[category], getColumnCount(toolsByCategory[category])).map((columnTools, columnIndex) => (
+                          <div key={columnIndex} className="flex flex-col">
+                            {columnTools.map((tool) => (
+                              <Link
+                                key={tool.id}
+                                href={`/tools/${tool.id}`}
+                                className={`px-4 py-2 text-xs md:text-sm text-gray-700 dark:text-gray-200 hover:text-white dark:hover:text-white hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 rounded-md transition-all duration-200 ease-in-out transform hover:translate-x-1 hover:shadow-md whitespace-nowrap ${tool.custom_style || ''}`}
+                              >
+                                {getDisplayText(tool)}
+                              </Link>
+                            ))}
+                          </div>
+                        ))
+                      )}
+                    </div>
+                  </div>
+                )}
+              </div>
+            ))}
+          </nav>
+
+          <div className="flex items-center space-x-2">
+            <ThemeToggle />
+            <button
+              className="p-2 rounded-md text-gray-700 dark:text-gray-200 hover:bg-gray-100 dark:hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-primary theme-transition md:hidden"
+              onClick={() => setIsMenuOpen(!isMenuOpen)}
+              aria-label="Open menu"
+              aria-expanded={isMenuOpen}
+              aria-controls="mobile-menu"
+            >
+              <Menu className="h-6 w-6" />
+            </button>
           </div>
         </div>
       </header>
-      
-      {/* Spacer for fixed header */}
       <div className="h-16"></div>
 
       <AnimatePresence>
         {isMenuOpen && (
-          <>
-            {/* Backdrop */}
-            <motion.div 
-              initial={{ opacity: 0 }}
-              animate={{ opacity: 1 }}
-              exit={{ opacity: 0 }}
-              transition={{ duration: 0.2 }}
-              className="fixed inset-0 z-[60] md:hidden bg-black/50 backdrop-blur-sm"
-              onClick={() => setIsMenuOpen(false)}
-              aria-hidden="true"
-            />
-            
-            {/* Mobile Menu Drawer */}
+          <motion.div 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.2 }}
+            className="fixed inset-0 z-50 md:hidden bg-black/60 backdrop-blur-sm"
+            onClick={() => setIsMenuOpen(false)}
+            aria-hidden="true"
+          >
             <motion.div 
               ref={drawerRef}
               id="mobile-menu"
               role="dialog"
               aria-modal="true"
-              aria-label="Navigation menu"
+              aria-labelledby="mobile-menu-title"
               initial={{ x: "100%" }}
               animate={{ x: 0 }}
               exit={{ x: "100%" }}
-              transition={{ 
-                type: "spring", 
-                damping: 26, 
-                stiffness: 260,
-                mass: 0.8
+              transition={{ type: "spring", damping: 24, stiffness: 280 }}
+              drag="x"
+              dragConstraints={{ left: -120, right: 0 }}
+              dragElastic={0.2}
+              onDragEnd={(_, info) => {
+                if (info.offset.x < -80 || info.velocity.x < -800) {
+                  setIsMenuOpen(false);
+                }
               }}
-              className="fixed inset-y-0 right-0 z-[70] w-full bg-background shadow-2xl overflow-hidden md:hidden"
+              className="fixed inset-y-0 right-0 w-full max-w-sm bg-white dark:bg-gray-900 shadow-2xl drop-shadow-2xl theme-transition rounded-l-2xl border-l border-gray-200/60 dark:border-gray-800/60 will-change-transform"
               onClick={(e) => e.stopPropagation()}
             >
-              {/* Header */}
-              <div className="sticky top-0 z-20 bg-background border-b border-border">
-                <div className="flex items-center justify-between px-4 py-4">
-                  <Link
-                    href="/"
-                    className="flex items-center space-x-3 group"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    <div className="relative flex items-center justify-center w-9 h-9 rounded-lg bg-primary text-primary-foreground shadow-sm transition-transform duration-200 group-hover:scale-105">
-                      <Type className="h-5 w-5" strokeWidth={2.5} />
-                    </div>
-                    <span className="font-semibold text-base text-foreground">Text Case Converter</span>
-                  </Link>
-                  <button
-                    ref={closeButtonRef}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="w-10 h-10 rounded-lg bg-accent hover:bg-accent/80 text-foreground transition-all duration-200 flex items-center justify-center focus:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 focus-visible:ring-offset-background"
-                    aria-label="Close menu"
-                  >
-                    <X className="h-5 w-5" />
-                  </button>
-                </div>
+              <div className="sticky top-0 z-10 flex items-center justify-between p-4 border-b border-gray-200/70 dark:border-gray-800/70 bg-white/90 dark:bg-gray-900/90 backdrop-blur supports-[backdrop-filter]:bg-white/70 dark:supports-[backdrop-filter]:bg-gray-900/70 rounded-tl-2xl">
+                <h2 id="mobile-menu-title" className="text-lg font-semibold text-gray-900 dark:text-white">Menu</h2>
+                <button
+                  ref={closeButtonRef}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="p-2 rounded-md text-gray-600 hover:text-gray-900 dark:text-gray-400 dark:hover:text-white hover:bg-gray-100/70 dark:hover:bg-gray-800/70 focus:outline-none focus:ring-2 focus:ring-primary"
+                  aria-label="Close menu"
+                >
+                  <X className="h-6 w-6" />
+                </button>
               </div>
-
-              {/* Scrollable Content */}
-              <div className="h-[calc(100%-73px)] overflow-y-auto overflow-x-hidden overscroll-contain flex flex-col">
-                {/* Main Navigation */}
-                <nav className="flex-1 pt-2 pb-4">
-                  {Object.values(TOOL_CATEGORIES).map((category) => (
-                    <div key={category} className="relative">
-                      <button
-                        onClick={(e) => {
-                          if (toolsByCategory[category]?.length > 0) {
-                            toggleCategory(category, e);
-                          } else {
-                            // Navigate to category page if no subtools
-                            window.location.href = category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`;
-                            setIsMenuOpen(false);
-                          }
-                        }}
-                                                  className="w-full flex items-center justify-between px-4 py-3 text-base font-medium text-foreground hover:bg-accent transition-colors duration-150"
+              <nav className="px-2 py-3 space-y-1 pb-[max(1rem,env(safe-area-inset-bottom))]">
+                {Object.values(TOOL_CATEGORIES).map((category) => (
+                  <div key={category} className="py-1.5">
+                    <div className="flex items-center justify-between rounded-xl hover:bg-gray-100/70 dark:hover:bg-gray-800/70">
+                      <Link
+                        href={category === 'Convert Case' ? '/' : `/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`}
+                        className="flex-1 px-3 py-3 text-[15px] font-medium text-gray-900 dark:text-white"
+                        onClick={() => setIsMenuOpen(false)}
                       >
-                        <span className="text-left">{category}</span>
-                        {toolsByCategory[category]?.length > 0 && (
+                        {category}
+                      </Link>
+                      {toolsByCategory[category]?.length > 0 && (
+                        <button
+                          onClick={(e) => toggleCategory(category, e)}
+                          className="p-2.5 mr-1 text-gray-500 hover:text-gray-700 dark:text-gray-400 dark:hover:text-white rounded-lg focus:outline-none focus:ring-2 focus:ring-primary"
+                          aria-label={`Toggle ${category} submenu`}
+                          aria-expanded={expandedCategories.includes(category)}
+                          aria-controls={`submenu-${category}`}
+                        >
                           <motion.div
                             animate={{ rotate: expandedCategories.includes(category) ? 90 : 0 }}
                             transition={{ duration: 0.2 }}
-                            className="text-gray-400"
                           >
-                            <ChevronRight className="h-4 w-4" />
+                            <ChevronRight className="h-5 w-5" />
                           </motion.div>
-                        )}
-                      </button>
-                      
-                      <AnimatePresence>
-                        {expandedCategories.includes(category) && toolsByCategory[category]?.length > 0 && (
-                          <motion.div
-                            initial={{ height: 0, opacity: 0 }}
-                            animate={{ height: "auto", opacity: 1 }}
-                            exit={{ height: 0, opacity: 0 }}
-                            transition={{ duration: 0.2, ease: "easeInOut" }}
-                            className="overflow-hidden bg-accent/30"
-                          >
-                            <div className="py-1">
-                              {toolsByCategory[category].map((tool) => (
-                                <Link
-                                  key={tool.id}
-                                  href={`/tools/${tool.id}`}
-                                  className={`block px-6 py-2.5 text-sm text-muted-foreground hover:bg-accent hover:text-foreground transition-colors duration-150 ${tool.custom_style || ''}`}
-                                  onClick={() => setIsMenuOpen(false)}
-                                >
-                                  {getDisplayText(tool)}
-                                </Link>
-                              ))}
-                            </div>
-                          </motion.div>
-                        )}
-                      </AnimatePresence>
+                        </button>
+                      )}
                     </div>
-                  ))}
-                </nav>
-
-                {/* Footer Section */}
-                <div className="mt-auto border-t border-border">
-                  {/* Secondary Navigation */}
-                  <div className="px-4 py-4">
-                    <div className="flex items-center justify-center">
-                      <div className="flex items-center space-x-1">
-                        <Link
-                          href="/"
-                          onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-150 min-w-[40px]"
+                    <AnimatePresence>
+                      {expandedCategories.includes(category) && toolsByCategory[category]?.length > 0 && (
+                        <motion.div
+                          id={`submenu-${category}`}
+                          initial={{ height: 0, opacity: 0 }}
+                          animate={{ height: "auto", opacity: 1 }}
+                          exit={{ height: 0, opacity: 0 }}
+                          transition={{ duration: 0.22 }}
+                          className="overflow-hidden"
                         >
-                          <House className="h-4 w-4 mr-2" strokeWidth={1.5} />
-                          <span>Home</span>
-                        </Link>
-                        <Link
-                          href="/about-us"
-                          onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-150 min-w-[40px]"
-                        >
-                          <CircleHelp className="h-4 w-4 mr-2" strokeWidth={1.5} />
-                          <span>About</span>
-                        </Link>
-                        <Link
-                          href="/contact-us"
-                          onClick={() => setIsMenuOpen(false)}
-                          className="flex items-center px-4 py-2.5 text-sm text-muted-foreground hover:text-foreground hover:bg-accent rounded-lg transition-all duration-150 min-w-[40px]"
-                        >
-                          <Mail className="h-4 w-4 mr-2" strokeWidth={1.5} />
-                          <span>Contact</span>
-                        </Link>
-                      </div>
-                    </div>
+                          <div className="mt-2 ml-4 pl-3 border-l border-gray-200 dark:border-gray-700 space-y-0.5">
+                            {toolsByCategory[category].map((tool) => (
+                              <Link
+                                key={tool.id}
+                                href={`/tools/${tool.id}`}
+                                className={`block px-3 py-2.5 text-[15px] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 hover:text-white dark:hover:text-white transition-all duration-200 ${tool.custom_style || ''}`}
+                                onClick={() => setIsMenuOpen(false)}
+                              >
+                                {getDisplayText(tool)}
+                              </Link>
+                            ))}
+                          </div>
+                        </motion.div>
+                      )}
+                    </AnimatePresence>
                   </div>
+                ))}
 
-                  {/* Theme Switcher */}
-                  <div className="px-4 pb-4 pt-2">
-                    <div className="flex items-center justify-center">
-                      <div className="inline-flex items-center bg-accent rounded-full p-1">
-                        <button
-                          onClick={() => setTheme('light')}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                            theme === 'light' 
-                              ? 'bg-background text-foreground shadow-sm' 
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                          aria-label="Light mode"
-                        >
-                          <Sun className="h-4 w-4" strokeWidth={1.5} />
-                        </button>
-                        <button
-                          onClick={() => setTheme('system')}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                            theme === 'system' 
-                              ? 'bg-background text-foreground shadow-sm' 
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                          aria-label="System theme"
-                        >
-                          <svg className="h-4 w-4" strokeWidth={1.5} viewBox="0 0 20 20" fill="currentColor">
-                            <path fillRule="evenodd" d="M3 5a2 2 0 012-2h10a2 2 0 012 2v8a2 2 0 01-2 2h-2.22l.123.489.804.804A1 1 0 0113 18H7a1 1 0 01-.707-1.707l.804-.804L7.22 15H5a2 2 0 01-2-2V5zm5.771 7H5V5h10v7H8.771z" clipRule="evenodd" />
-                          </svg>
-                        </button>
-                        <button
-                          onClick={() => setTheme('dark')}
-                          className={`px-3 py-1.5 rounded-full text-sm font-medium transition-all duration-200 ${
-                            theme === 'dark' 
-                              ? 'bg-background text-foreground shadow-sm' 
-                              : 'text-muted-foreground hover:text-foreground'
-                          }`}
-                          aria-label="Dark mode"
-                        >
-                          <Moon className="h-4 w-4" strokeWidth={1.5} />
-                        </button>
-                      </div>
-                    </div>
+                {/* Mobile About Us Menu */}
+                <div className="py-1.5">
+                  <div className="flex items-center justify-between rounded-xl hover:bg-gray-100/70 dark:hover:bg-gray-800/70">
+                    <Link
+                      href="/about-us"
+                      className="flex-1 px-3 py-3 text-[15px] font-medium text-gray-900 dark:text-white"
+                      onClick={() => setIsMenuOpen(false)}
+                    >
+                      About Us
+                    </Link>
                   </div>
-
-                  {/* Copyright */}
-                  <div className="px-4 pb-[max(1rem,env(safe-area-inset-bottom))] pt-2">
-                    <p className="text-center text-xs text-muted-foreground/60">
-                      © 2024 Text Case Converter
-                    </p>
+                  <div className="mt-2 ml-4 pl-3 border-l border-gray-200 dark:border-gray-700 space-y-0.5">
+                    {toolsByCategory['About Us'].map((tool) => (
+                      <Link
+                        key={tool.id}
+                        href={`/${tool.id.toLowerCase().replace(/_/g, '-')}`}
+                        className="block px-3 py-2.5 text-[15px] text-gray-700 dark:text-gray-300 rounded-lg hover:bg-gradient-to-r hover:from-blue-600 hover:to-blue-700 dark:hover:from-blue-500 dark:hover:to-blue-600 hover:text-white dark:hover:text-white transition-all duration-200"
+                        onClick={() => setIsMenuOpen(false)}
+                      >
+                        {getDisplayText(tool)}
+                      </Link>
+                    ))}
                   </div>
                 </div>
-              </div>
+              </nav>
             </motion.div>
-          </>
+          </motion.div>
         )}
       </AnimatePresence>
     </>

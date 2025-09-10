@@ -217,7 +217,7 @@ export function MetaDescriptionEditor({ meta, onClose, onSave, pageType, pageId 
                   {formData.meta_title || 'Your Page Title'}
                 </div>
                 <div className={styles.googleUrl}>
-                  {formData.canonical_url || 'https://case-converter.vercel.app'}
+                  {formData.canonical_url || 'https://textcaseconverter.net'}
                 </div>
                 <div className={styles.googleDescription}>
                   {formData.meta_description || 'Your page description will appear here. Make sure to write a compelling description that accurately describes your page content.'}

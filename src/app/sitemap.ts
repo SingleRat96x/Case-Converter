@@ -7,7 +7,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const tools = await getAllTools();
 
   // Base URL from environment variable or default
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://case-converter.vercel.app';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
 
   // Static pages
   const staticPages = [

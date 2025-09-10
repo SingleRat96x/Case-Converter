@@ -1,4 +1,10 @@
-import { TextStats } from '@/components/shared/types';
+export interface TextStats {
+  characters: number;
+  words: number;
+  sentences: number;
+  paragraphs: number;
+  lines: number;
+}
 
 export function calculateTextStatistics(text: string): TextStats {
   return {

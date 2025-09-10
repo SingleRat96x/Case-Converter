@@ -407,7 +407,7 @@ export function AdminDashboard() {
         twitter_card: 'summary_large_image',
         twitter_title: tool.title,
         twitter_description: tool.short_description,
-        canonical_url: `https://case-converter.vercel.app/tools/${tool.id}`,
+        canonical_url: `https://textcaseconverter.net/tools/${tool.id}`,
         updated_at: new Date().toISOString()
       };
       setSelectedMeta(defaultMeta);
@@ -455,7 +455,7 @@ export function AdminDashboard() {
         twitter_card: 'summary_large_image',
         twitter_title: tool.title,
         twitter_description: tool.short_description,
-        canonical_url: `https://case-converter.vercel.app/tools/${tool.id}`,
+        canonical_url: `https://textcaseconverter.net/tools/${tool.id}`,
         updated_at: new Date().toISOString()
       };
       setSelectedMeta(newMeta);
