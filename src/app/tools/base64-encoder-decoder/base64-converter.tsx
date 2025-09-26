@@ -7,6 +7,7 @@ import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import AdScript from '@/components/ads/AdScript';
+import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
 
 export function Base64Converter() {
   const [input, setInput] = useState('');
@@ -99,16 +100,12 @@ export function Base64Converter() {
             />
           </div>
 
-          <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-            <Button
-              onClick={handleCopy}
-              variant="outline"
-              className="w-full sm:w-auto min-w-[140px]"
-              disabled={!output}
-            >
-              Copy Result
-            </Button>
-          </div>
+          <ActionButtonGroup
+            onCopy={handleCopy}
+            onClear={handleClear}
+            showDownload={false}
+            className="justify-center"
+          />
         </div>
       </Tabs>
     </Card>

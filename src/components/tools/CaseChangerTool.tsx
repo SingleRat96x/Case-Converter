@@ -3,14 +3,7 @@
 import { useState } from 'react';
 import { CaseConverterButtons } from '@/components/shared/CaseConverterButtons';
 import AdScript from '@/components/ads/AdScript';
-
-interface TextStats {
-  characters: number;
-  words: number;
-  sentences: number;
-  lines: number;
-  paragraphs: number;
-}
+import type { TextStats } from '@/app/components/shared/TextAnalytics';
 
 export function CaseChangerTool() {
   const [inputText, setInputText] = useState('');
@@ -19,7 +12,6 @@ export function CaseChangerTool() {
     words: 0,
     sentences: 0,
     lines: 0,
-    paragraphs: 0,
   });
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
@@ -34,7 +26,6 @@ export function CaseChangerTool() {
       words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
       sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
       lines: text.trim() === '' ? 0 : text.split('\n').length,
-      paragraphs: text.trim() === '' ? 0 : text.split(/\n\s*\n/).filter(para => para.trim() !== '').length || 1,
     });
   };
 

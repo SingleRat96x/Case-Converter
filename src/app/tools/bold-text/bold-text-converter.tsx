@@ -1,9 +1,10 @@
 'use client';
 
 import { useState } from 'react';
-import { CaseConverterButtons } from '@/lib/shared/CaseConverterButtons';
-import { TextStats } from '@/lib/shared/types';
 import AdScript from '@/components/ads/AdScript';
+import { TextInput } from '@/app/components/shared/ToolInputs';
+import { ActionButtonGroup } from '@/app/components/shared/ToolActions';
+import { TextAnalytics, generateTextStats, type TextStats } from '@/app/components/shared/TextAnalytics';
 
 const boldTextMap: { [key: string]: string } = {
   'a': '𝐚', 'b': '𝐛', 'c': '𝐜', 'd': '𝐝', 'e': '𝐞', 'f': '𝐟', 'g': '𝐠', 'h': '𝐡', 'i': '𝐢',
@@ -17,31 +18,15 @@ const boldTextMap: { [key: string]: string } = {
 
 export function BoldTextConverter() {
   const [inputText, setInputText] = useState('');
-  const [stats, setStats] = useState<TextStats>({
-    characters: 0,
-    words: 0,
-    sentences: 0,
-    lines: 0,
-  });
+  const [stats, setStats] = useState<TextStats>(generateTextStats(''));
 
   const handleInputChange = (e: React.ChangeEvent<HTMLTextAreaElement>) => {
     const newText = e.target.value;
     setInputText(newText);
-    updateStats(newText);
+    setStats(generateTextStats(newText));
   };
 
-  const updateStats = (text: string) => {
-    setStats({
-      characters: text.length,
-      words: text.trim() === '' ? 0 : text.trim().split(/\s+/).length,
-      sentences: text.trim() === '' ? 0 : text.split(/[.!?]+/).filter(Boolean).length,
-      lines: text.trim() === '' ? 0 : text.split('\n').length,
-    });
-  };
-
-  const convertToBoldText = (text: string) => {
-    return text.split('').map(char => boldTextMap[char] || char).join('');
-  };
+  const convertToBoldText = (text: string) => text.split('').map(char => boldTextMap[char] || char).join('');
 
   const handleDownload = () => {
     const blob = new Blob([convertToBoldText(inputText)], { type: 'text/plain' });
@@ -65,42 +50,51 @@ export function BoldTextConverter() {
 
   const handleClear = () => {
     setInputText('');
-    updateStats('');
+    setStats(generateTextStats(''));
   };
 
-  return (
-    <div className="max-w-[900px] mx-auto space-y-6">
-      <div className="grid gap-6 md:grid-cols-2">
-        {/* Input */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Input Text</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-background resize-y focus:outline-none focus:ring-2 focus:ring-primary/20 text-gray-900 dark:text-gray-100"
-            placeholder="Type or paste your text here..."
-            value={inputText}
-            onChange={handleInputChange}
-          />
-        </div>
+  const outputText = convertToBoldText(inputText);
 
-        {/* Output */}
-        <div className="space-y-2">
-          <label className="text-sm font-medium text-gray-900 dark:text-gray-50">Bold Text Result</label>
-          <textarea
-            className="w-full min-h-[300px] p-4 rounded-lg border bg-gray-50 dark:bg-gray-900 resize-y text-gray-900 dark:text-gray-100"
-            readOnly
-            value={convertToBoldText(inputText)}
-          />
-        </div>
+  return (
+    <div className="max-w-[900px] mx-auto space-y-8">
+      <div className="grid gap-6 md:grid-cols-2">
+        <TextInput
+          title="Input Text"
+          value={inputText}
+          onChange={handleInputChange}
+          placeholder="Type or paste your text here..."
+          minHeight="lg"
+          fontFamily="sans"
+          variant="default"
+        />
+
+        <TextInput
+          title="Bold Text Result"
+          value={outputText}
+          readOnly
+          minHeight="lg"
+          fontFamily="mono"
+          variant="glass"
+        />
       </div>
 
       <AdScript />
 
-      <CaseConverterButtons
+      <ActionButtonGroup
         onDownload={handleDownload}
         onCopy={handleCopy}
         onClear={handleClear}
-        stats={stats}
+        copyLabel="Copy to Clipboard"
+        className="justify-center"
       />
+
+      <div className="max-w-4xl mx-auto">
+        <TextAnalytics
+          stats={stats}
+          mode="grid"
+          showStats={['characters', 'words', 'sentences', 'lines']}
+        />
+      </div>
     </div>
   );
 } 
