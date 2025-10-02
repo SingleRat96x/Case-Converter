@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free Morse Code Translator - Text to Morse & Morse to Text Converter",
+    "metaDescription": "Convert text to Morse code and Morse code to text instantly. Free online Morse code translator with audio playback, customizable settings, and real-time conversion.",
+    "sections": {
+      "intro": {
+        "title": "Free Morse Code Translator - Text to Morse & Morse to Text Converter",
+        "content": "Transform text to Morse code and decode Morse code back to text with our comprehensive online translator. Features real-time conversion, audio playback, customizable settings, and detailed analytics. Perfect for learning, communication, and emergency situations."
+      },
+      "features": {
+        "title": "Advanced Morse Code Translation Features",
+        "items": [
+          {
+            "title": "Bidirectional Translation",
+            "description": "Convert text to Morse code and decode Morse code back to text with instant switching between modes."
+          },
+          {
+            "title": "Audio Playback",
+            "description": "Listen to your Morse code with authentic dot and dash sounds, adjustable speed, frequency, and volume."
+          },
+          {
+            "title": "Customizable Formatting",
+            "description": "Choose between space, slash, or pipe delimiters to format your Morse code output according to your needs."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Get detailed statistics including dot/dash counts, character counts, estimated transmission duration, and more."
+          },
+          {
+            "title": "Speed Control",
+            "description": "Adjust playback speed from 5 to 50 WPM (Words Per Minute) to match your learning pace or transmission requirements."
+          },
+          {
+            "title": "File Support",
+            "description": "Upload text files for batch conversion and download your Morse code or decoded text as files."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for Morse Code Translation",
+        "description": "Morse code remains relevant in modern communication, education, and emergency situations.",
+        "items": [
+          {
+            "title": "Amateur Radio",
+            "description": "Practice and communicate using CW (Continuous Wave) mode in amateur radio operations."
+          },
+          {
+            "title": "Emergency Communication",
+            "description": "Learn Morse code for emergency situations where other communication methods may fail."
+          },
+          {
+            "title": "Educational Learning",
+            "description": "Teach and learn Morse code in schools, scout programs, and communication courses."
+          },
+          {
+            "title": "Maritime & Aviation",
+            "description": "Use in maritime and aviation contexts where Morse code is still employed for navigation."
+          },
+          {
+            "title": "Secret Messages",
+            "description": "Create encoded messages for puzzles, games, and creative communication projects."
+          },
+          {
+            "title": "Historical Research",
+            "description": "Decode historical Morse code messages and understand telegraph communications."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Morse Code Translator",
+        "description": "Follow these simple steps to convert between text and Morse code.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose Your Mode",
+            "description": "Select whether you want to convert text to Morse code or decode Morse code to text."
+          },
+          {
+            "step": 2,
+            "title": "Enter Your Content",
+            "description": "Type or paste your text or Morse code into the input area, or upload a file for conversion."
+          },
+          {
+            "step": 3,
+            "title": "Customize Settings",
+            "description": "Adjust delimiter format, audio speed, frequency, and volume to match your preferences."
+          },
+          {
+            "step": 4,
+            "title": "Listen & Analyze",
+            "description": "Use the audio playback feature to hear your Morse code and review the detailed analytics."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Morse Code Translation Examples",
+        "description": "See how different types of content are converted between text and Morse code.",
+        "items": [
+          {
+            "title": "Simple Message",
+            "input": "HELLO WORLD",
+            "output": ".... . .-.. .-.. --- / .-- --- .-. .-.. -.."
+          },
+          {
+            "title": "Emergency Signal",
+            "input": "SOS",
+            "output": "... --- ..."
+          },
+          {
+            "title": "Numbers & Letters",
+            "input": "TEST 123",
+            "output": "- . ... - / .---- ..--- ...--"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Morse Code Translator",
+        "content": "Professional-grade Morse code translation with comprehensive features and educational value.",
+        "items": [
+          "Instant bidirectional conversion between text and Morse code",
+          "Authentic audio playback with customizable parameters",
+          "Real-time analytics and transmission time estimates",
+          "Multiple formatting options for different use cases",
+          "File upload and download capabilities",
+          "Educational features for learning Morse code",
+          "Privacy-focused - all processing happens locally",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is Morse code and how does it work?",
+          "answer": "Morse code is a communication system that uses dots and dashes to represent letters, numbers, and punctuation. Each character has a unique pattern of short signals (dots) and long signals (dashes) that can be transmitted via sound, light, or radio waves."
+        },
+        {
+          "question": "Can I adjust the audio playback speed?",
+          "answer": "Yes, you can adjust the playback speed from 5 to 50 WPM (Words Per Minute). You can also customize the frequency and volume to match your preferences or learning requirements."
+        },
+        {
+          "question": "What delimiter formats are supported?",
+          "answer": "Our translator supports three delimiter formats: spaces (standard), slashes (/), and pipes (|). Choose the format that best suits your needs or matches the Morse code format you're working with."
+        },
+        {
+          "question": "Is the translation accurate for all characters?",
+          "answer": "Yes, our translator supports the complete International Morse Code standard, including all letters (A-Z), numbers (0-9), and common punctuation marks. Special characters are handled according to standard Morse code conventions."
+        },
+        {
+          "question": "Can I use this for learning Morse code?",
+          "answer": "Absolutely! The audio playback feature, adjustable speed settings, and real-time analytics make this tool perfect for learning Morse code. Start with slower speeds and gradually increase as you improve."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Communication & Encoding Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text statistics",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode text using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary code and decode binary to text",
+            "href": "/tools/binary-code-translator"
+          },
+          {
+            "name": "Caesar Cipher",
+            "description": "Encrypt and decrypt text using Caesar cipher",
+            "href": "/tools/caesar-cipher"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Переводчик Азбуки Морзе - Конвертер Текста в Морзе и Обратно",
+    "metaDescription": "Конвертируйте текст в азбуку Морзе и обратно мгновенно. Бесплатный онлайн переводчик азбуки Морзе с воспроизведением звука, настраиваемыми параметрами и конвертацией в реальном времени.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Переводчик Азбуки Морзе - Конвертер Текста в Морзе и Обратно",
+        "content": "Преобразуйте текст в азбуку Морзе и декодируйте азбуку Морзе обратно в текст с помощью нашего комплексного онлайн переводчика. Включает конвертацию в реальном времени, воспроизведение звука, настраиваемые параметры и подробную аналитику. Идеально для обучения, связи и экстренных ситуаций."
+      },
+      "features": {
+        "title": "Расширенные Возможности Перевода Азбуки Морзе",
+        "items": [
+          {
+            "title": "Двунаправленный Перевод",
+            "description": "Конвертируйте текст в азбуку Морзе и декодируйте азбуку Морзе обратно в текст с мгновенным переключением между режимами."
+          },
+          {
+            "title": "Воспроизведение Звука",
+            "description": "Слушайте вашу азбуку Морзе с аутентичными звуками точек и тире, регулируемой скоростью, частотой и громкостью."
+          },
+          {
+            "title": "Настраиваемое Форматирование",
+            "description": "Выбирайте между пробелами, слешами или вертикальными чертами для форматирования вывода азбуки Морзе согласно вашим потребностям."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Получайте подробную статистику, включая количество точек/тире, количество символов, предполагаемую длительность передачи и многое другое."
+          },
+          {
+            "title": "Контроль Скорости",
+            "description": "Регулируйте скорость воспроизведения от 5 до 50 слов в минуту для соответствия вашему темпу обучения или требованиям передачи."
+          },
+          {
+            "title": "Поддержка Файлов",
+            "description": "Загружайте текстовые файлы для пакетной конвертации и скачивайте вашу азбуку Морзе или декодированный текст как файлы."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения Перевода Азбуки Морзе",
+        "description": "Азбука Морзе остается актуальной в современной связи, образовании и экстренных ситуациях.",
+        "items": [
+          {
+            "title": "Любительское Радио",
+            "description": "Практикуйтесь и общайтесь, используя режим CW (непрерывная волна) в любительских радиооперациях."
+          },
+          {
+            "title": "Экстренная Связь",
+            "description": "Изучайте азбуку Морзе для экстренных ситуаций, когда другие методы связи могут не работать."
+          },
+          {
+            "title": "Образовательное Обучение",
+            "description": "Преподавайте и изучайте азбуку Морзе в школах, скаутских программах и курсах связи."
+          },
+          {
+            "title": "Морское и Авиационное Дело",
+            "description": "Используйте в морском и авиационном контексте, где азбука Морзе все еще применяется для навигации."
+          },
+          {
+            "title": "Секретные Сообщения",
+            "description": "Создавайте закодированные сообщения для головоломок, игр и творческих коммуникационных проектов."
+          },
+          {
+            "title": "Историческое Исследование",
+            "description": "Декодируйте исторические сообщения азбуки Морзе и понимайте телеграфную связь."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Переводчик Азбуки Морзе",
+        "description": "Следуйте этим простым шагам для конвертации между текстом и азбукой Морзе.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Режим",
+            "description": "Выберите, хотите ли вы конвертировать текст в азбуку Морзе или декодировать азбуку Морзе в текст."
+          },
+          {
+            "step": 2,
+            "title": "Введите Контент",
+            "description": "Введите или вставьте ваш текст или азбуку Морзе в область ввода, или загрузите файл для конвертации."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Параметры",
+            "description": "Отрегулируйте формат разделителей, скорость звука, частоту и громкость в соответствии с вашими предпочтениями."
+          },
+          {
+            "step": 4,
+            "title": "Слушайте и Анализируйте",
+            "description": "Используйте функцию воспроизведения звука для прослушивания вашей азбуки Морзе и просмотра подробной аналитики."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Перевода Азбуки Морзе",
+        "description": "Посмотрите, как различные типы контента конвертируются между текстом и азбукой Морзе.",
+        "items": [
+          {
+            "title": "Простое Сообщение",
+            "input": "ПРИВЕТ МИР",
+            "output": ".--. .-. .. .-- . - / -- .. .-."
+          },
+          {
+            "title": "Сигнал Бедствия",
+            "input": "SOS",
+            "output": "... --- ..."
+          },
+          {
+            "title": "Числа и Буквы",
+            "input": "ТЕСТ 123",
+            "output": "- . ... - / .---- ..--- ...--"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Переводчик Азбуки Морзе",
+        "content": "Профессиональный перевод азбуки Морзе с комплексными функциями и образовательной ценностью.",
+        "items": [
+          "Мгновенная двунаправленная конвертация между текстом и азбукой Морзе",
+          "Аутентичное воспроизведение звука с настраиваемыми параметрами",
+          "Аналитика в реальном времени и оценки времени передачи",
+          "Множественные опции форматирования для различных случаев использования",
+          "Возможности загрузки и скачивания файлов",
+          "Образовательные функции для изучения азбуки Морзе",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое азбука Морзе и как она работает?",
+          "answer": "Азбука Морзе - это система связи, которая использует точки и тире для представления букв, цифр и знаков препинания. Каждый символ имеет уникальный паттерн коротких сигналов (точки) и длинных сигналов (тире), которые могут передаваться через звук, свет или радиоволны."
+        },
+        {
+          "question": "Могу ли я регулировать скорость воспроизведения звука?",
+          "answer": "Да, вы можете регулировать скорость воспроизведения от 5 до 50 слов в минуту. Вы также можете настроить частоту и громкость в соответствии с вашими предпочтениями или требованиями обучения."
+        },
+        {
+          "question": "Какие форматы разделителей поддерживаются?",
+          "answer": "Наш переводчик поддерживает три формата разделителей: пробелы (стандартный), слеши (/) и вертикальные черты (|). Выберите формат, который лучше всего подходит для ваших нужд или соответствует формату азбуки Морзе, с которым вы работаете."
+        },
+        {
+          "question": "Точен ли перевод для всех символов?",
+          "answer": "Да, наш переводчик поддерживает полный стандарт Международной азбуки Морзе, включая все буквы (А-Я), цифры (0-9) и общие знаки препинания. Специальные символы обрабатываются согласно стандартным конвенциям азбуки Морзе."
+        },
+        {
+          "question": "Могу ли я использовать это для изучения азбуки Морзе?",
+          "answer": "Абсолютно! Функция воспроизведения звука, настраиваемые параметры скорости и аналитика в реальном времени делают этот инструмент идеальным для изучения азбуки Морзе. Начните с медленных скоростей и постепенно увеличивайте по мере улучшения."
+        }
+      ],
+        "relatedTools": {
+          "title": "Связанные Инструменты Связи и Кодирования",
+          "items": [
+            {
+              "name": "Счетчик Текста",
+              "description": "Подсчитывайте символы, слова и анализируйте статистику текста",
+              "href": "/ru/tools/text-counter"
+            },
+            {
+              "name": "Base64 Кодировщик/Декодировщик",
+              "description": "Кодируйте и декодируйте текст используя Base64 кодирование",
+              "href": "/ru/tools/base64-encoder-decoder"
+            },
+            {
+              "name": "Переводчик Двоичного Кода",
+              "description": "Конвертируйте текст в двоичный код и декодируйте двоичный код в текст",
+              "href": "/ru/tools/binary-code-translator"
+            },
+            {
+              "name": "Шифр Цезаря",
+              "description": "Шифруйте и расшифровывайте текст используя шифр Цезаря",
+              "href": "/ru/tools/caesar-cipher"
+            }
+          ]
+        }
+    }
+  }
+}

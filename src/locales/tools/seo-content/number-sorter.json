@@ -1,0 +1,374 @@
+{
+  "en": {
+    "sections": {
+      "intro": {
+        "title": "Professional Number Sorting Tool - Free & Fast",
+        "content": "Sort numbers efficiently with our advanced number sorting tool. Whether you need ascending or descending order, numerical or lexicographical sorting, our tool handles all formats including comma-separated, space-separated, and newline-separated numbers. Perfect for data analysis, mathematical operations, and organizing numerical datasets."
+      },
+      "features": {
+        "title": "Key Features",
+        "items": [
+          {
+            "title": "Multiple Sorting Methods",
+            "description": "Choose between numerical sorting (1, 2, 10, 20) and lexicographical sorting (1, 10, 2, 20) based on your needs."
+          },
+          {
+            "title": "Flexible Input Formats",
+            "description": "Supports comma-separated, space-separated, and newline-separated number inputs for maximum convenience."
+          },
+          {
+            "title": "Ascending & Descending Order",
+            "description": "Sort numbers in ascending (smallest to largest) or descending (largest to smallest) order with one click."
+          },
+          {
+            "title": "Duplicate Removal",
+            "description": "Optional duplicate removal feature to clean your dataset and keep only unique numbers."
+          },
+          {
+            "title": "Format Preservation",
+            "description": "Choose to preserve your original input format or use the optimized newline format for better readability."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Get instant statistics including count, minimum, maximum, range, sum, and average of your numbers."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Number Sorter",
+        "description": "Follow these simple steps to sort your numbers:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Input Your Numbers",
+            "description": "Paste or type your numbers in the input field. Use commas, spaces, or new lines to separate them."
+          },
+          {
+            "step": 2,
+            "title": "Configure Sorting Options",
+            "description": "Choose your preferred sort order (ascending/descending), sort type (numerical/lexicographical), and other options."
+          },
+          {
+            "step": 3,
+            "title": "View Sorted Results",
+            "description": "The tool automatically sorts your numbers and displays the results with detailed statistics."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the sorted numbers to clipboard or download them as a text file for further use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Number Sorting Examples",
+        "description": "See how different sorting options work with real examples:",
+        "items": [
+          {
+            "input": "42, 10, 7, 100, 3, 15, 8, 25",
+            "output": "3\n7\n8\n10\n15\n25\n42\n100",
+            "description": "Numerical ascending sort - numbers arranged from smallest to largest"
+          },
+          {
+            "input": "5.7, 2.3, 8.1, 1.9, 6.4",
+            "output": "8.1\n6.4\n5.7\n2.3\n1.9",
+            "description": "Decimal numbers in descending order - largest to smallest"
+          },
+          {
+            "input": "100, 20, 3, 1",
+            "output": "1, 100, 20, 3",
+            "description": "Lexicographical sort treats numbers as text, preserving original comma format"
+          },
+          {
+            "input": "5, 3, 8, 3, 2, 8, 1",
+            "output": "1\n2\n3\n5\n8",
+            "description": "Ascending sort with duplicates removed (3 and 8 appear only once)"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases",
+        "description": "Our number sorter is perfect for various scenarios:",
+        "items": [
+          {
+            "title": "Data Analysis",
+            "description": "Sort numerical datasets for statistical analysis, finding patterns, and identifying outliers in your data."
+          },
+          {
+            "title": "Academic Research",
+            "description": "Organize research data, survey results, and experimental measurements for academic papers and reports."
+          },
+          {
+            "title": "Financial Planning",
+            "description": "Sort expense lists, income figures, and budget allocations to better understand financial patterns."
+          },
+          {
+            "title": "Inventory Management",
+            "description": "Organize product quantities, prices, and stock levels for efficient inventory tracking and management."
+          },
+          {
+            "title": "Grade Processing",
+            "description": "Sort student scores and grades for educational assessment and ranking purposes."
+          },
+          {
+            "title": "Database Preparation",
+            "description": "Pre-sort numerical data before importing into databases or spreadsheet applications."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Number Sorter?",
+        "items": [
+          "Fast and efficient sorting algorithm",
+          "No file size limitations",
+          "Works with integers, decimals, and mixed formats",
+          "Instant results with real-time processing",
+          "Mobile-friendly responsive design",
+          "No registration or software installation required",
+          "Completely free with unlimited usage",
+          "Privacy-focused - no data stored on servers",
+          "Export results in multiple formats",
+          "Professional-grade accuracy and reliability"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Number Tools",
+        "description": "Explore more tools for working with numbers:",
+        "items": [
+          {
+            "name": "Random Number Generator",
+            "description": "Generate random numbers for testing and simulation",
+            "href": "/tools/random-number"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and lines in your text",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Word Frequency Analyzer",
+            "description": "Analyze word frequency and text statistics",
+            "href": "/tools/word-frequency"
+          },
+          {
+            "name": "Online Notepad",
+            "description": "Simple notepad for organizing your data",
+            "href": "/tools/online-notepad"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What number formats are supported?",
+          "answer": "Our tool supports integers (1, 2, 3), decimals (1.5, 2.7), negative numbers (-5, -10), and scientific notation (1e10, 2.5e-3). Mixed formats are also supported in the same input."
+        },
+        {
+          "question": "What's the difference between numerical and lexicographical sorting?",
+          "answer": "Numerical sorting treats values as numbers (1, 2, 10, 20), while lexicographical sorting treats them as text strings (1, 10, 2, 20). Choose numerical for mathematical operations and lexicographical for string-based sorting."
+        },
+        {
+          "question": "How many numbers can I sort at once?",
+          "answer": "There's no strict limit on the number of entries you can sort. The tool is optimized to handle large datasets efficiently, but performance may vary based on your device's capabilities."
+        },
+        {
+          "question": "Can I upload a file with numbers?",
+          "answer": "Yes! You can upload text files (.txt) containing numbers. The tool will automatically detect the format and parse the numbers for sorting."
+        },
+        {
+          "question": "Is my data secure?",
+          "answer": "Absolutely. All processing happens in your browser - no data is sent to external servers. Your numbers remain completely private and secure."
+        },
+        {
+          "question": "Can I sort numbers with text labels?",
+          "answer": "The tool will extract and sort pure numbers. Text labels will be filtered out during processing. For mixed content, consider using lexicographical sorting."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Сортировки Чисел - Бесплатно и Быстро",
+        "content": "Эффективная сортировка чисел с нашим продвинутым инструментом. Поддерживает сортировку по возрастанию и убыванию, числовую и лексикографическую сортировку, обрабатывает все форматы включая числа через запятую, пробелы и новые строки. Идеально для анализа данных, математических операций и организации числовых наборов."
+      },
+      "features": {
+        "title": "Ключевые Возможности",
+        "items": [
+          {
+            "title": "Множественные Методы Сортировки",
+            "description": "Выберите между числовой сортировкой (1, 2, 10, 20) и лексикографической (1, 10, 2, 20) в зависимости от ваших потребностей."
+          },
+          {
+            "title": "Гибкие Форматы Ввода",
+            "description": "Поддерживает ввод чисел через запятые, пробелы и новые строки для максимального удобства."
+          },
+          {
+            "title": "Порядок по Возрастанию и Убыванию",
+            "description": "Сортируйте числа по возрастанию (от меньшего к большему) или убыванию (от большего к меньшему) одним кликом."
+          },
+          {
+            "title": "Удаление Дубликатов",
+            "description": "Опциональное удаление дубликатов для очистки набора данных и сохранения только уникальных чисел."
+          },
+          {
+            "title": "Сохранение Формата",
+            "description": "Выберите сохранение исходного формата ввода или используйте оптимизированный формат новых строк для лучшей читаемости."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Получайте мгновенную статистику включая количество, минимум, максимум, диапазон, сумму и среднее значение чисел."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Сортировщик Чисел",
+        "description": "Следуйте этим простым шагам для сортировки ваших чисел:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваши Числа",
+            "description": "Вставьте или введите числа в поле ввода. Используйте запятые, пробелы или новые строки для разделения."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Параметры Сортировки",
+            "description": "Выберите предпочтительный порядок (возрастание/убывание), тип сортировки (числовая/лексикографическая) и другие опции."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Результаты",
+            "description": "Инструмент автоматически сортирует числа и отображает результаты с подробной статистикой."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте отсортированные числа в буфер обмена или скачайте их как текстовый файл для дальнейшего использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Сортировки Чисел",
+        "description": "Посмотрите, как работают различные варианты сортировки на реальных примерах:",
+        "items": [
+          {
+            "input": "42, 10, 7, 100, 3, 15, 8, 25",
+            "output": "3\n7\n8\n10\n15\n25\n42\n100",
+            "description": "Числовая сортировка по возрастанию - числа расположены от меньшего к большему"
+          },
+          {
+            "input": "5.7, 2.3, 8.1, 1.9, 6.4",
+            "output": "8.1\n6.4\n5.7\n2.3\n1.9",
+            "description": "Десятичные числа по убыванию - от большего к меньшему"
+          },
+          {
+            "input": "100, 20, 3, 1",
+            "output": "1, 100, 20, 3",
+            "description": "Лексикографическая сортировка обрабатывает числа как текст, сохраняя исходный формат с запятыми"
+          },
+          {
+            "input": "5, 3, 8, 3, 2, 8, 1",
+            "output": "1\n2\n3\n5\n8",
+            "description": "Сортировка по возрастанию с удалением дубликатов (3 и 8 появляются только один раз)"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Типичные Случаи Использования",
+        "description": "Наш сортировщик чисел идеален для различных сценариев:",
+        "items": [
+          {
+            "title": "Анализ Данных",
+            "description": "Сортировка числовых наборов для статистического анализа, поиска закономерностей и выявления выбросов в данных."
+          },
+          {
+            "title": "Научные Исследования",
+            "description": "Организация исследовательских данных, результатов опросов и экспериментальных измерений для научных работ и отчетов."
+          },
+          {
+            "title": "Финансовое Планирование",
+            "description": "Сортировка списков расходов, доходных цифр и распределения бюджета для лучшего понимания финансовых паттернов."
+          },
+          {
+            "title": "Управление Запасами",
+            "description": "Организация количества товаров, цен и уровней запасов для эффективного отслеживания и управления складом."
+          },
+          {
+            "title": "Обработка Оценок",
+            "description": "Сортировка студенческих баллов и оценок для образовательной оценки и ранжирования."
+          },
+          {
+            "title": "Подготовка Базы Данных",
+            "description": "Предварительная сортировка числовых данных перед импортом в базы данных или приложения электронных таблиц."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наш Сортировщик Чисел?",
+        "items": [
+          "Быстрый и эффективный алгоритм сортировки",
+          "Без ограничений по размеру файла",
+          "Работает с целыми числами, десятичными и смешанными форматами",
+          "Мгновенные результаты с обработкой в реальном времени",
+          "Адаптивный дизайн для мобильных устройств",
+          "Не требует регистрации или установки ПО",
+          "Полностью бесплатно с неограниченным использованием",
+          "Ориентирован на конфиденциальность - данные не хранятся на серверах",
+          "Экспорт результатов в различных форматах",
+          "Профессиональная точность и надежность"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты для Работы с Числами",
+        "description": "Изучите больше инструментов для работы с числами:",
+        "items": [
+          {
+            "name": "Генератор Случайных Чисел",
+            "description": "Генерация случайных чисел для тестирования и моделирования",
+            "href": "/ru/tools/random-number"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчет символов, слов и строк в тексте",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Анализатор Частоты Слов",
+            "description": "Анализ частоты слов и статистики текста",
+            "href": "/ru/tools/word-frequency"
+          },
+          {
+            "name": "Онлайн Блокнот",
+            "description": "Простой блокнот для организации ваших данных",
+            "href": "/ru/tools/online-notepad"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы чисел поддерживаются?",
+          "answer": "Наш инструмент поддерживает целые числа (1, 2, 3), десятичные (1.5, 2.7), отрицательные числа (-5, -10) и научную нотацию (1e10, 2.5e-3). Смешанные форматы также поддерживаются в одном вводе."
+        },
+        {
+          "question": "В чем разница между числовой и лексикографической сортировкой?",
+          "answer": "Числовая сортировка обрабатывает значения как числа (1, 2, 10, 20), в то время как лексикографическая сортировка обрабатывает их как текстовые строки (1, 10, 2, 20). Выбирайте числовую для математических операций и лексикографическую для сортировки на основе строк."
+        },
+        {
+          "question": "Сколько чисел можно сортировать одновременно?",
+          "answer": "Нет строгого ограничения на количество записей для сортировки. Инструмент оптимизирован для эффективной обработки больших наборов данных, но производительность может варьироваться в зависимости от возможностей вашего устройства."
+        },
+        {
+          "question": "Можно ли загрузить файл с числами?",
+          "answer": "Да! Вы можете загружать текстовые файлы (.txt) содержащие числа. Инструмент автоматически определит формат и обработает числа для сортировки."
+        },
+        {
+          "question": "Безопасны ли мои данные?",
+          "answer": "Абсолютно. Вся обработка происходит в вашем браузере - никакие данные не отправляются на внешние серверы. Ваши числа остаются полностью приватными и безопасными."
+        },
+        {
+          "question": "Можно ли сортировать числа с текстовыми метками?",
+          "answer": "Инструмент извлечет и отсортирует чистые числа. Текстовые метки будут отфильтрованы в процессе обработки. Для смешанного контента рассмотрите использование лексикографической сортировки."
+        }
+      ]
+    }
+  }
+}

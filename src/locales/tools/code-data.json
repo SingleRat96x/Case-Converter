@@ -1,0 +1,1478 @@
+{
+  "en": {
+    "base64": {
+      "title": "Base64 Encoder/Decoder",
+      "description": "Encode and decode text to/from Base64 format. Perfect for data transmission, API integration, and encoding text content.",
+      "labels": {
+        "plainText": "Plain Text",
+        "base64Text": "Base64 Encoded"
+      },
+      "placeholders": {
+        "encode": "Enter text to encode to Base64...",
+        "decode": "Enter Base64 string to decode..."
+      },
+      "uploadDescription": "",
+      "modes": {
+        "encode": "Encode to Base64",
+        "decode": "Decode from Base64"
+      },
+      "dataType": {
+        "title": "Data Type",
+        "text": "Text",
+        "binary": "Binary",
+        "image": "Image"
+      },
+      "options": {
+        "title": "Options",
+        "urlSafe": "URL-Safe Encoding",
+        "includePadding": "Include Padding",
+        "lineBreaks": "Add Line Breaks",
+        "lineLength": "Line Length"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode text to Base64",
+        "decodeFailed": "Failed to decode Base64 string",
+        "invalidBase64": "Invalid Base64 string format",
+        "fileReadFailed": "Failed to read file",
+        "conversionFailed": "Conversion failed"
+      },
+      "messages": {
+        "encodeSuccess": "Successfully encoded to Base64",
+        "decodeSuccess": "Successfully decoded from Base64",
+        "fileUploaded": "File uploaded successfully"
+      },
+      "info": {
+        "description": "Base64 encoding converts text into ASCII format using 64 printable characters. Useful for safely transmitting text data.",
+        "encodingNote": "Encoding increases data size by approximately 33%."
+      },
+      "stats": {
+        "inputSize": "Input",
+        "outputSize": "Output",
+        "expansionRatio": "Expansion Ratio",
+        "compressionRatio": "Compression Ratio"
+      },
+      "analytics": {
+        "title": "Base64 Analytics",
+        "lines": "Lines",
+        "characters": "Characters",
+        "efficiency": "Efficiency"
+      }
+    },
+    "binary": {
+      "title": "Binary Code Translator",
+      "description": "Convert text to binary code and decode binary back to text. Perfect for learning, debugging, and data encoding.",
+      "labels": {
+        "binaryCode": "Binary Code"
+      },
+      "placeholders": {
+        "encode": "Enter text to convert to binary...",
+        "decode": "Enter binary code to convert to text...",
+        "encodeOutput": "Binary code will appear here...",
+        "decodeOutput": "Decoded text will appear here..."
+      },
+      "modes": {
+        "textToBinary": "Text to Binary",
+        "binaryToText": "Binary to Text"
+      },
+      "options": {
+        "title": "Options",
+        "delimiter": "Delimiter",
+        "delimiters": {
+          "space": "Space",
+          "none": "None",
+          "newline": "New Line"
+        },
+        "groupSize": "Bit Group Size",
+        "bitLabel": "bits",
+        "padding": "Pad to Group Size"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode to binary",
+        "decodeFailed": "Failed to decode from binary",
+        "invalidBinary": "Invalid binary string",
+        "invalidCharCode": "Invalid character code",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "Binary code represents text using only 0s and 1s. Each character is converted to its ASCII or Unicode value in binary format.",
+        "encodingNote": "Standard ASCII characters use 7-8 bits, while Unicode characters may use more.",
+        "decodingNote": "Binary strings must contain only 0s and 1s, separated by spaces or newlines."
+      },
+      "stats": {
+        "inputChars": "Input Characters",
+        "characters": "Characters",
+        "bits": "Total Bits",
+        "bytes": "Bytes"
+      }
+    },
+    "hex": {
+      "title": "Hex to Text Converter",
+      "description": "Convert text to hexadecimal and decode hex back to text. Perfect for debugging, data analysis, and understanding character encoding.",
+      "labels": {
+        "hexCode": "Hexadecimal Code"
+      },
+      "placeholders": {
+        "encode": "Enter text to convert to hex...",
+        "decode": "Enter hex code to convert to text..."
+      },
+      "modes": {
+        "textToHex": "Text to Hex",
+        "hexToText": "Hex to Text"
+      },
+      "options": {
+        "title": "Options",
+        "delimiter": "Delimiter",
+        "delimiters": {
+          "space": "Space",
+          "none": "None",
+          "colon": "Colon"
+        },
+        "uppercase": "Uppercase",
+        "prefix": "Add 0x Prefix"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode to hex",
+        "decodeFailed": "Failed to decode from hex",
+        "invalidHex": "Invalid hexadecimal string",
+        "invalidCharCode": "Invalid character code",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "Hexadecimal encoding represents text using base-16 digits (0-9, A-F). Each character is converted to its ASCII or Unicode value in hex format.",
+        "encodingNote": "Each character typically uses 2 hex digits, making hex more compact than binary.",
+        "decodingNote": "Hex strings must contain only 0-9 and A-F characters, with optional delimiters."
+      },
+      "stats": {
+        "inputChars": "Input Characters",
+        "hexChars": "Hex Chars",
+        "bytes": "Bytes"
+      }
+    },
+    "morse": {
+      "title": "Morse Code Translator",
+      "description": "Convert text to Morse code and decode Morse code back to text. Features audio playback for learning and communication.",
+      "labels": {
+        "morseCode": "Morse Code"
+      },
+      "placeholders": {
+        "encode": "Enter text to convert to Morse code...",
+        "decode": "Enter Morse code to convert to text..."
+      },
+      "modes": {
+        "textToMorse": "Text to Morse",
+        "morseToText": "Morse to Text"
+      },
+      "accordion": {
+        "title": "Morse Code Options"
+      },
+      "sections": {
+        "format": "Format Settings",
+        "audio": "Audio Settings"
+      },
+      "options": {
+        "title": "Options",
+        "delimiter": "Delimiter",
+        "delimiters": {
+          "space": "Space",
+          "slash": "Slash (/)",
+          "pipe": "Pipe (|)"
+        },
+        "playSpeed": "Speed",
+        "frequency": "Frequency",
+        "volume": "Volume"
+      },
+      "audio": {
+        "play": "Play Audio",
+        "stop": "Stop Audio",
+        "mute": "Mute",
+        "unmute": "Unmute"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode to Morse code",
+        "decodeFailed": "Failed to decode from Morse code",
+        "invalidMorse": "Invalid Morse code format",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "Morse code uses dots and dashes to represent letters and numbers. Click play to hear the audio representation of your Morse code.",
+        "encodingNote": "Letters are separated by spaces, words by forward slashes. Use the audio feature to learn proper timing.",
+        "decodingNote": "Enter dots (.) and dashes (-) separated by spaces. Use / or | for word separators."
+      },
+      "stats": {
+        "dots": "Dots",
+        "dashes": "Dashes", 
+        "words": "Words",
+        "duration": "Duration (sec)"
+      },
+      "analytics": {
+        "title": "Morse Code Analytics",
+        "dots": "Dots",
+        "dashes": "Dashes",
+        "characters": "Characters",
+        "words": "Words",
+        "duration": "Duration",
+        "morseLength": "Morse Length"
+      },
+      "reference": {
+        "title": "Quick Reference"
+      }
+    },
+    "caesar": {
+      "title": "Caesar Cipher Encoder",
+      "description": "Encrypt and decrypt text using the classic Caesar cipher. Perfect for learning cryptography, secure communication, and historical encryption methods.",
+      "labels": {
+        "cipherText": "Cipher Text"
+      },
+      "placeholders": {
+        "encode": "Enter text to encrypt with Caesar cipher...",
+        "decode": "Enter cipher text to decrypt..."
+      },
+      "modes": {
+        "encode": "Encode Text",
+        "decode": "Decode Text"
+      },
+      "accordion": {
+        "title": "Caesar Cipher Options"
+      },
+      "sections": {
+        "cipher": "Cipher Configuration",
+        "preservation": "Preservation Settings"
+      },
+      "tabs": {
+        "cipher": "Cipher",
+        "settings": "Settings"
+      },
+      "options": {
+        "title": "Options",
+        "shift": "Shift Value",
+        "preserveCase": "Preserve Case",
+        "preserveNumbers": "Preserve Numbers",
+        "preserveSymbols": "Preserve Symbols"
+      },
+      "actions": {
+        "random": "Random",
+        "randomShift": "Generate random shift value",
+        "resetClassic": "Reset to classic Caesar cipher (shift 3)"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode text",
+        "decodeFailed": "Failed to decode text",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "Caesar cipher shifts each letter by a fixed number of positions in the alphabet. Use different shift values and settings to customize encryption.",
+        "encodingNote": "Each letter is shifted forward in the alphabet by the shift value. Wraps around from Z to A.",
+        "decodingNote": "Each letter is shifted backward in the alphabet by the shift value to reveal the original message."
+      },
+      "stats": {
+        "letters": "Letters",
+        "shift": "Shift",
+        "shiftValue": "Value",
+        "words": "Words",
+        "alphabetic": "Alpha %"
+      },
+      "analytics": {
+        "title": "Caesar Cipher Analytics",
+        "letters": "Letters",
+        "words": "Words",
+        "shiftValue": "Shift Value",
+        "alphabeticPercentage": "Alphabetic %",
+        "totalCharacters": "Total Characters",
+        "preservedCharacters": "Preserved Characters"
+      },
+      "analysis": {
+        "frequencyTitle": "Letter Frequency Analysis",
+        "frequencyHint": "Most common letters in English: E, T, A, O, I, N"
+      }
+    },
+    "rot13": {
+      "title": "ROT13 Encoder & Decoder",
+      "description": "Encode and decode text using ROT13 cipher. A symmetric letter substitution cipher that rotates letters by 13 positions in the alphabet.",
+      "labels": {
+        "inputText": "Input Text",
+        "outputText": "ROT13 Output"
+      },
+      "placeholders": {
+        "input": "Enter text to transform with ROT13..."
+      },
+      "accordion": {
+        "title": "ROT13 Options"
+      },
+      "sections": {
+        "transformation": "Transformation Settings",
+        "preservation": "Preservation Settings"
+      },
+      "tabs": {
+        "transform": "Transform",
+        "settings": "Settings"
+      },
+      "options": {
+        "title": "Options",
+        "preserveCase": "Preserve Case",
+        "preserveNumbers": "Preserve Numbers",
+        "preserveSymbols": "Preserve Symbols",
+        "doubleEncode": "Double Encode (ROT26)"
+      },
+      "actions": {
+        "swap": "Swap Input/Output",
+        "clear": "Clear All",
+        "example": "Try Example"
+      },
+      "demo": {
+        "alphabetTitle": "Alphabet Mapping"
+      },
+      "examples": {
+        "title": "Quick Examples",
+        "hint": "Click any example to test ROT13 transformation"
+      },
+      "errors": {
+        "transformFailed": "Failed to transform text with ROT13"
+      },
+      "info": {
+        "description": "ROT13 is a symmetric cipher where encoding and decoding use the same operation. Each letter is rotated 13 positions in the alphabet.",
+        "symmetricNote": "Since ROT13 is symmetric, applying it twice returns the original text.",
+        "doubleNote": "Double encoding (ROT26) returns to the original text since 26 is a full alphabet rotation."
+      },
+      "stats": {
+        "letters": "Letters",
+        "rotation": "Rotation",
+        "words": "Words",
+        "alphabetic": "Alphabetic"
+      },
+      "analytics": {
+        "title": "ROT13 Analytics",
+        "letters": "Letters",
+        "words": "Words",
+        "rotation": "Rotation",
+        "alphabeticPercentage": "Alphabetic %",
+        "totalCharacters": "Total Characters",
+        "symmetricPairs": "Symmetric Pairs"
+      }
+    },
+    "csvJson": {
+      "title": "CSV to JSON Converter",
+      "description": "Convert CSV data to JSON format and JSON back to CSV. Perfect for data processing, API integration, and format transformation with flexible configuration options.",
+      "labels": {
+        "csvData": "CSV Data",
+        "jsonData": "JSON Data"
+      },
+      "placeholders": {
+        "csv": "Enter CSV data to convert to JSON...",
+        "json": "Enter JSON data to convert to CSV..."
+      },
+      "modes": {
+        "csvToJson": "CSV to JSON",
+        "jsonToCsv": "JSON to CSV"
+      },
+      "accordion": {
+        "title": "CSV to JSON Options"
+      },
+      "sections": {
+        "format": "Format Configuration",
+        "processing": "Processing Settings"
+      },
+      "tabs": {
+        "conversion": "Conversion",
+        "settings": "Settings"
+      },
+      "options": {
+        "title": "Options",
+        "delimiter": "Delimiter",
+        "delimiters": {
+          "comma": "Comma",
+          "semicolon": "Semicolon",
+          "tab": "Tab",
+          "pipe": "Pipe"
+        },
+        "customDelimiter": "Custom delimiter...",
+        "hasHeaders": "First Row as Headers",
+        "jsonFormat": "JSON Format",
+        "formats": {
+          "pretty": "Pretty",
+          "array": "Array",
+          "object": "Object"
+        },
+        "skipEmptyLines": "Skip Empty Lines",
+        "trimWhitespace": "Trim Whitespace",
+        "handleQuotes": "Handle Quoted Fields"
+      },
+      "actions": {
+        "clear": "Clear All",
+        "example": "Try Example"
+      },
+      "errors": {
+        "emptyInput": "Input data is empty",
+        "csvParsingFailed": "Failed to parse CSV data",
+        "jsonParsingFailed": "Failed to parse JSON data",
+        "invalidJson": "Invalid JSON format",
+        "unsupportedJsonFormat": "Unsupported JSON structure",
+        "unsupportedDataStructure": "Unsupported data structure",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "Convert between CSV and JSON formats with configurable options. Supports headers, custom delimiters, and various JSON structures.",
+        "csvNote": "CSV data can use different delimiters and may include quoted fields with embedded delimiters or line breaks.",
+        "jsonNote": "JSON data can be an array of objects, single object, or array of arrays. The tool automatically detects the structure."
+      },
+      "stats": {
+        "rows": "Data Rows",
+        "columns": "Columns",
+        "jsonSize": "JSON Size"
+      },
+      "analytics": {
+        "title": "CSV to JSON Analytics",
+        "rows": "Rows",
+        "columns": "Columns",
+        "inputSize": "Input Size",
+        "outputSize": "Output Size",
+        "dataPoints": "Data Points",
+        "compressionRatio": "Size Change"
+      },
+      "examples": {
+        "title": "Quick Examples",
+        "csvExample": "CSV Example",
+        "jsonExample": "JSON Example",
+        "hint": "Click any example to test the conversion with different data structures"
+      }
+    },
+    "jsonStringify": {
+      "title": "JSON Stringify Tool",
+      "description": "Format, stringify, and parse JSON data with advanced options. Perfect for debugging, API development, and JSON data processing.",
+      "labels": {
+        "jsonInput": "JSON Input",
+        "jsonString": "JSON String"
+      },
+      "placeholders": {
+        "json": "Enter JSON object or array to stringify...",
+        "string": "Enter JSON string to parse and format..."
+      },
+      "modes": {
+        "stringify": "Stringify JSON",
+        "parse": "Parse & Format"
+      },
+      "accordion": {
+        "title": "JSON Stringify Options"
+      },
+      "sections": {
+        "formatting": "Formatting Configuration",
+        "processing": "Processing Settings"
+      },
+      "tabs": {
+        "formatting": "Formatting",
+        "settings": "Settings"
+      },
+      "options": {
+        "title": "Options",
+        "indentSize": "Indent Size",
+        "spaces": "spaces",
+        "outputFormat": "Output Format",
+        "pretty": "Pretty",
+        "compact": "Compact",
+        "sortKeys": "Sort Keys",
+        "escapeUnicode": "Escape Unicode",
+        "removeComments": "Remove Comments",
+        "validateJson": "Validate JSON"
+      },
+      "actions": {
+        "clear": "Clear All",
+        "example": "Try Example"
+      },
+      "errors": {
+        "stringifyFailed": "Failed to stringify JSON",
+        "parseFailed": "Failed to parse JSON",
+        "invalidJson": "Invalid JSON format",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "Process JSON data with customizable formatting options. Supports pretty printing, key sorting, and validation.",
+        "stringifyNote": "JSON objects and arrays are converted to properly formatted JSON strings with customizable indentation.",
+        "parseNote": "JSON strings are parsed and formatted for better readability. Comments are supported in parse mode."
+      },
+      "stats": {
+        "inputSize": "Input Size",
+        "outputSize": "Output Size",
+        "elements": "Elements",
+        "depth": "Max Depth"
+      },
+      "analytics": {
+        "title": "JSON Stringify Analytics",
+        "inputSize": "Input Size",
+        "outputSize": "Output Size",
+        "elements": "Elements",
+        "keys": "Keys",
+        "depth": "Max Depth",
+        "compressionRatio": "Size Change"
+      },
+      "examples": {
+        "title": "Quick Examples",
+        "example": "Example",
+        "hint": "Click any example to test JSON processing with different data structures"
+      }
+    },
+    "url": {
+      "title": "URL Encoder/Decoder",
+      "description": "Encode and decode URLs and URL components. Perfect for web development, API integration, and handling special characters in URLs.",
+      "labels": {
+        "plainText": "Plain Text",
+        "encodedUrl": "Encoded URL"
+      },
+      "placeholders": {
+        "encode": "Enter text to URL encode...",
+        "decode": "Enter URL encoded text to decode..."
+      },
+      "modes": {
+        "encode": "Encode URL",
+        "decode": "Decode URL"
+      },
+      "accordion": {
+        "title": "URL Encoding Options"
+      },
+      "sections": {
+        "encoding": "Encoding Configuration"
+      },
+      "actions": {
+        "clear": "Clear",
+        "example": "Example"
+      },
+      "options": {
+        "title": "Encoding Options",
+        "encodeType": "Encoding Type",
+        "types": {
+          "component": "Component (encodeURIComponent)",
+          "uri": "Full URI (encodeURI)",
+          "form": "Form Data (application/x-www-form-urlencoded)"
+        },
+        "preserveSpaces": "Preserve Spaces as +",
+        "encodeReserved": "Encode Reserved Characters"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode URL",
+        "decodeFailed": "Failed to decode URL",
+        "invalidUrl": "Invalid URL format",
+        "malformedUri": "Malformed URI sequence",
+        "conversionFailed": "Conversion failed"
+      },
+      "messages": {
+        "encodeSuccess": "Successfully encoded URL",
+        "decodeSuccess": "Successfully decoded URL"
+      },
+      "info": {
+        "description": "URL encoding converts special characters into percent-encoded format (%XX) for safe transmission in URLs.",
+        "encodingNote": "Component encoding is stricter than URI encoding and should be used for URL parameters.",
+        "decodingNote": "Decoding converts percent-encoded sequences back to their original characters."
+      },
+      "stats": {
+        "inputLength": "Input Length",
+        "outputLength": "Output Length",
+        "encodedChars": "Encoded Chars",
+        "specialChars": "Special Chars"
+      },
+      "analytics": {
+        "title": "URL Converter Analytics",
+        "inputLength": "Input Length",
+        "outputLength": "Output Length",
+        "encodedChars": "Encoded Chars",
+        "specialChars": "Special Chars",
+        "compressionRatio": "Size Change",
+        "safetyImprovement": "Safety %"
+      },
+      "examples": {
+        "title": "Common Examples",
+        "email": "email@domain.com",
+        "path": "/path/to/file name.html",
+        "query": "search=hello world&lang=en",
+        "special": "Special chars: !@#$%^&*()",
+        "unicode": "Unicode: こんにちは"
+      }
+    },
+    "utf8": {
+      "title": "UTF-8 Encoder / Decoder",
+      "description": "Encode text to UTF-8 bytes and decode UTF-8 bytes back to text. Perfect for understanding character encoding, debugging encoding issues, and working with international text.",
+      "labels": {
+        "plainText": "Plain Text",
+        "utf8Bytes": "UTF-8 Bytes"
+      },
+      "placeholders": {
+        "encode": "Enter text to convert to UTF-8 bytes...",
+        "decode": "Enter UTF-8 bytes to convert to text..."
+      },
+      "modes": {
+        "encode": "Text to UTF-8",
+        "decode": "UTF-8 to Text"
+      },
+      "accordion": {
+        "title": "UTF-8 Encoding Options"
+      },
+      "sections": {
+        "encoding": "Encoding Configuration"
+      },
+      "actions": {
+        "clear": "Clear",
+        "example": "Example"
+      },
+      "options": {
+        "title": "Output Format",
+        "outputFormat": "Format",
+        "formats": {
+          "decimal": "Decimal (65 66 67)",
+          "hex": "Hexadecimal (41 42 43)",
+          "binary": "Binary (01000001 01000010)",
+          "array": "Array [65, 66, 67]",
+          "escaped": "Escaped (\\x41\\x42\\x43)"
+        },
+        "separator": "Separator",
+        "separators": {
+          "space": "Space",
+          "comma": "Comma",
+          "none": "None"
+        },
+        "showBom": "Show BOM (Byte Order Mark)",
+        "uppercase": "Uppercase Hex"
+      },
+      "errors": {
+        "encodeFailed": "Failed to encode text to UTF-8",
+        "decodeFailed": "Failed to decode UTF-8 bytes",
+        "invalidBytes": "Invalid byte sequence",
+        "invalidFormat": "Invalid input format",
+        "conversionFailed": "Conversion failed"
+      },
+      "messages": {
+        "encodeSuccess": "Successfully encoded to UTF-8",
+        "decodeSuccess": "Successfully decoded from UTF-8"
+      },
+      "info": {
+        "description": "UTF-8 is a variable-length character encoding that can represent any Unicode character using 1-4 bytes per character.",
+        "encodingNote": "ASCII characters (0-127) use 1 byte, while international characters may use 2-4 bytes.",
+        "decodingNote": "Enter byte values separated by spaces, commas, or as an array format."
+      },
+      "stats": {
+        "inputChars": "Input Characters",
+        "outputBytes": "Output Bytes",
+        "bytesPerChar": "Avg Bytes/Char",
+        "encoding": "Encoding Efficiency"
+      },
+      "analytics": {
+        "title": "UTF-8 Converter Analytics",
+        "inputChars": "Input Chars",
+        "outputBytes": "Output Bytes",
+        "bytesPerChar": "Bytes/Char",
+        "efficiency": "Efficiency",
+        "asciiChars": "ASCII Chars",
+        "unicodeChars": "Unicode Chars"
+      },
+      "examples": {
+        "title": "UTF-8 Examples",
+        "ascii": "Hello World",
+        "accented": "café résumé",
+        "emoji": "Hello 👋 World 🌍",
+        "chinese": "你好世界",
+        "arabic": "مرحبا بالعالم",
+        "mixed": "Mix: Hello 你好 🌍"
+      }
+    },
+    "slugify": {
+      "title": "URL Slug Generator",
+      "description": "Generate SEO-friendly URL slugs from text. Perfect for blog posts, product pages, and creating clean, readable URLs.",
+      "labels": {
+        "textInput": "Text Input",
+        "slugInput": "URL Slug",
+        "slugOutput": "URL Slug",
+        "textOutput": "Text Output"
+      },
+      "placeholders": {
+        "text": "Enter text to convert to URL slug...",
+        "slug": "Enter URL slug to humanize..."
+      },
+      "modes": {
+        "slugify": "Create Slug",
+        "humanize": "Humanize Slug"
+      },
+      "accordion": {
+        "title": "Slug Generation Options"
+      },
+      "sections": {
+        "configuration": "Slug Configuration",
+        "processing": "Processing Settings"
+      },
+      "actions": {
+        "clear": "Clear",
+        "example": "Example"
+      },
+      "options": {
+        "separator": "Separator",
+        "maxLength": "Maximum Length",
+        "lowercase": "Convert to Lowercase",
+        "removeStopWords": "Remove Stop Words",
+        "removeSpecialChars": "Remove Special Characters",
+        "preserveNumbers": "Preserve Numbers",
+        "separators": {
+          "hyphen": "Hyphen (-)",
+          "underscore": "Underscore (_)",
+          "dot": "Dot (.)"
+        }
+      },
+      "analytics": {
+        "title": "Slug Analytics",
+        "inputLength": "Input Length",
+        "outputLength": "Output Length",
+        "wordCount": "Word Count",
+        "compressionRatio": "Compression",
+        "separatorCount": "Separators",
+        "seoScore": "SEO Score"
+      },
+      "errors": {
+        "slugifyFailed": "Failed to create URL slug",
+        "humanizeFailed": "Failed to humanize slug",
+        "conversionFailed": "Conversion failed"
+      },
+      "info": {
+        "description": "URL slugs are clean, SEO-friendly text strings used in URLs. They improve readability and search engine optimization.",
+        "slugifyNote": "Text is converted to lowercase, special characters removed, and spaces replaced with separators.",
+        "humanizeNote": "Slugs are converted back to readable text with proper capitalization and spacing."
+      },
+      "stats": {
+        "inputLength": "Input Length",
+        "outputLength": "Output Length",
+        "wordCount": "Word Count"
+      }
+    }
+  },
+  "ru": {
+    "base64": {
+      "title": "Base64 Кодировщик/Декодировщик",
+      "description": "Кодируйте и декодируйте текст в/из формата Base64. Идеально для передачи данных, интеграции API и кодирования текстового контента.",
+      "labels": {
+        "plainText": "Обычный Текст",
+        "base64Text": "Base64 Кодированный"
+      },
+      "placeholders": {
+        "encode": "Введите текст для кодирования в Base64...",
+        "decode": "Введите строку Base64 для декодирования..."
+      },
+      "uploadDescription": "",
+      "modes": {
+        "encode": "Кодировать в Base64",
+        "decode": "Декодировать из Base64"
+      },
+      "dataType": {
+        "title": "Тип Данных",
+        "text": "Текст",
+        "binary": "Бинарный",
+        "image": "Изображение"
+      },
+      "options": {
+        "title": "Опции",
+        "urlSafe": "URL-Безопасное Кодирование",
+        "includePadding": "Включить Заполнение",
+        "lineBreaks": "Добавить Переводы Строк",
+        "lineLength": "Длина Строки"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось закодировать текст в Base64",
+        "decodeFailed": "Не удалось декодировать строку Base64",
+        "invalidBase64": "Неверный формат строки Base64",
+        "fileReadFailed": "Не удалось прочитать файл",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "messages": {
+        "encodeSuccess": "Успешно закодировано в Base64",
+        "decodeSuccess": "Успешно декодировано из Base64",
+        "fileUploaded": "Файл успешно загружен"
+      },
+      "info": {
+        "description": "Кодирование Base64 преобразует текст в формат ASCII, используя 64 печатных символа. Полезно для безопасной передачи текстовых данных.",
+        "encodingNote": "Кодирование увеличивает размер данных примерно на 33%."
+      },
+      "stats": {
+        "inputSize": "Вход",
+        "outputSize": "Выход",
+        "expansionRatio": "Коэффициент расширения",
+        "compressionRatio": "Коэффициент сжатия"
+      },
+      "analytics": {
+        "title": "Аналитика Base64",
+        "lines": "Строки",
+        "characters": "Символы",
+        "efficiency": "Эффективность"
+      }
+    },
+    "binary": {
+      "title": "Переводчик двоичного кода",
+      "description": "Преобразуйте текст в двоичный код и декодируйте двоичный код обратно в текст. Идеально для обучения, отладки и кодирования данных.",
+      "labels": {
+        "binaryCode": "Двоичный код"
+      },
+      "placeholders": {
+        "encode": "Введите текст для преобразования в двоичный код...",
+        "decode": "Введите двоичный код для преобразования в текст...",
+        "encodeOutput": "Двоичный код появится здесь...",
+        "decodeOutput": "Декодированный текст появится здесь..."
+      },
+      "modes": {
+        "textToBinary": "Текст в двоичный",
+        "binaryToText": "Двоичный в текст"
+      },
+      "options": {
+        "title": "Опции",
+        "delimiter": "Разделитель",
+        "delimiters": {
+          "space": "Пробел",
+          "none": "Нет",
+          "newline": "Новая строка"
+        },
+        "groupSize": "Размер группы битов",
+        "bitLabel": "бит",
+        "padding": "Дополнить до размера группы"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось закодировать в двоичный код",
+        "decodeFailed": "Не удалось декодировать из двоичного кода",
+        "invalidBinary": "Недопустимая двоичная строка",
+        "invalidCharCode": "Недопустимый код символа",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "Двоичный код представляет текст, используя только 0 и 1. Каждый символ преобразуется в его значение ASCII или Unicode в двоичном формате.",
+        "encodingNote": "Стандартные символы ASCII используют 7-8 бит, в то время как символы Unicode могут использовать больше.",
+        "decodingNote": "Двоичные строки должны содержать только 0 и 1, разделенные пробелами или новыми строками."
+      },
+      "stats": {
+        "inputChars": "Входные символы",
+        "characters": "Символы",
+        "bits": "Всего битов",
+        "bytes": "Байты"
+      }
+    },
+    "hex": {
+      "title": "Конвертер Hex в Текст",
+      "description": "Преобразуйте текст в шестнадцатеричный код и декодируйте hex обратно в текст. Идеально для отладки, анализа данных и понимания кодировки символов.",
+      "labels": {
+        "hexCode": "Шестнадцатеричный код"
+      },
+      "placeholders": {
+        "encode": "Введите текст для преобразования в hex...",
+        "decode": "Введите hex код для преобразования в текст..."
+      },
+      "modes": {
+        "textToHex": "Текст в Hex",
+        "hexToText": "Hex в Текст"
+      },
+      "options": {
+        "title": "Опции",
+        "delimiter": "Разделитель",
+        "delimiters": {
+          "space": "Пробел",
+          "none": "Нет",
+          "colon": "Двоеточие"
+        },
+        "uppercase": "Верхний регистр",
+        "prefix": "Добавить префикс 0x"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось закодировать в hex",
+        "decodeFailed": "Не удалось декодировать из hex",
+        "invalidHex": "Недопустимая шестнадцатеричная строка",
+        "invalidCharCode": "Недопустимый код символа",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "Шестнадцатеричное кодирование представляет текст, используя цифры base-16 (0-9, A-F). Каждый символ преобразуется в его значение ASCII или Unicode в hex формате.",
+        "encodingNote": "Каждый символ обычно использует 2 hex цифры, что делает hex более компактным, чем двоичный код.",
+        "decodingNote": "Hex строки должны содержать только символы 0-9 и A-F с дополнительными разделителями."
+      },
+      "stats": {
+        "inputChars": "Входные символы",
+        "hexChars": "Hex символы",
+        "bytes": "Байты"
+      }
+    },
+    "morse": {
+      "title": "Переводчик Азбуки Морзе",
+      "description": "Преобразуйте текст в азбуку Морзе и декодируйте код Морзе обратно в текст. Включает воспроизведение аудио для изучения и связи.",
+      "labels": {
+        "morseCode": "Азбука Морзе"
+      },
+      "placeholders": {
+        "encode": "Введите текст для преобразования в азбуку Морзе...",
+        "decode": "Введите код Морзе для преобразования в текст..."
+      },
+      "modes": {
+        "textToMorse": "Текст в Морзе",
+        "morseToText": "Морзе в Текст"
+      },
+      "accordion": {
+        "title": "Опции Азбуки Морзе"
+      },
+      "sections": {
+        "format": "Настройки Формата",
+        "audio": "Настройки Аудио"
+      },
+      "options": {
+        "title": "Опции",
+        "delimiter": "Разделитель",
+        "delimiters": {
+          "space": "Пробел",
+          "slash": "Слэш (/)",
+          "pipe": "Вертикальная черта (|)"
+        },
+        "playSpeed": "Скорость",
+        "frequency": "Частота",
+        "volume": "Громкость"
+      },
+      "audio": {
+        "play": "Воспроизвести Аудио",
+        "stop": "Остановить Аудио",
+        "mute": "Выключить звук",
+        "unmute": "Включить звук"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось закодировать в азбуку Морзе",
+        "decodeFailed": "Не удалось декодировать из азбуки Морзе",
+        "invalidMorse": "Недопустимый формат азбуки Морзе",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "Азбука Морзе использует точки и тире для представления букв и цифр. Нажмите воспроизвести, чтобы услышать аудио представление вашего кода Морзе.",
+        "encodingNote": "Буквы разделяются пробелами, слова - косой чертой. Используйте функцию аудио для изучения правильного ритма.",
+        "decodingNote": "Вводите точки (.) и тире (-), разделенные пробелами. Используйте / или | для разделения слов."
+      },
+      "stats": {
+        "dots": "Точки",
+        "dashes": "Тире",
+        "words": "Слова",
+        "duration": "Продолжительность (сек)"
+      },
+      "analytics": {
+        "title": "Аналитика Азбуки Морзе",
+        "dots": "Точки",
+        "dashes": "Тире",
+        "characters": "Символы",
+        "words": "Слова",
+        "duration": "Продолжительность",
+        "morseLength": "Длина Морзе"
+      },
+      "reference": {
+        "title": "Краткая Справка"
+      }
+    },
+    "caesar": {
+      "title": "Кодировщик Шифра Цезаря",
+      "description": "Шифруйте и расшифровывайте текст с помощью классического шифра Цезаря. Идеально для изучения криптографии, безопасной связи и исторических методов шифрования.",
+      "labels": {
+        "cipherText": "Шифртекст"
+      },
+      "placeholders": {
+        "encode": "Введите текст для шифрования шифром Цезаря...",
+        "decode": "Введите шифртекст для расшифровки..."
+      },
+      "modes": {
+        "encode": "Зашифровать Текст",
+        "decode": "Расшифровать Текст"
+      },
+      "accordion": {
+        "title": "Опции Шифра Цезаря"
+      },
+      "sections": {
+        "cipher": "Конфигурация Шифра",
+        "preservation": "Настройки Сохранения"
+      },
+      "tabs": {
+        "cipher": "Шифр",
+        "settings": "Настройки"
+      },
+      "options": {
+        "title": "Опции",
+        "shift": "Значение Сдвига",
+        "preserveCase": "Сохранить Регистр",
+        "preserveNumbers": "Сохранить Цифры",
+        "preserveSymbols": "Сохранить Символы"
+      },
+      "actions": {
+        "random": "Случайный",
+        "randomShift": "Генерировать случайное значение сдвига",
+        "resetClassic": "Сбросить к классическому шифру Цезаря (сдвиг 3)"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось зашифровать текст",
+        "decodeFailed": "Не удалось расшифровать текст",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "Шифр Цезаря сдвигает каждую букву на фиксированное количество позиций в алфавите. Используйте разные значения сдвига и настройки для настройки шифрования.",
+        "encodingNote": "Каждая буква сдвигается вперед в алфавите на значение сдвига. Переходит с Z на A.",
+        "decodingNote": "Каждая буква сдвигается назад в алфавите на значение сдвига для раскрытия исходного сообщения."
+      },
+      "stats": {
+        "letters": "Буквы",
+        "shift": "Сдвиг",
+        "shiftValue": "Значение",
+        "words": "Слова",
+        "alphabetic": "Альфа %"
+      },
+      "analytics": {
+        "title": "Аналитика Шифра Цезаря",
+        "letters": "Буквы",
+        "words": "Слова",
+        "shiftValue": "Значение Сдвига",
+        "alphabeticPercentage": "Алфавитный %",
+        "totalCharacters": "Всего Символов",
+        "preservedCharacters": "Сохраненные Символы"
+      },
+      "analysis": {
+        "frequencyTitle": "Анализ Частоты Букв",
+        "frequencyHint": "Наиболее частые буквы в русском языке: О, Е, А, И, Н, Т"
+      }
+    },
+    "rot13": {
+      "title": "ROT13 Кодировщик и Декодер",
+      "description": "Кодируйте и декодируйте текст с помощью шифра ROT13. Симметричный шифр подстановки букв, который поворачивает буквы на 13 позиций в алфавите.",
+      "labels": {
+        "inputText": "Входной Текст",
+        "outputText": "ROT13 Вывод"
+      },
+      "placeholders": {
+        "input": "Введите текст для преобразования с помощью ROT13..."
+      },
+      "accordion": {
+        "title": "Опции ROT13"
+      },
+      "sections": {
+        "transformation": "Настройки Преобразования",
+        "preservation": "Настройки Сохранения"
+      },
+      "tabs": {
+        "transform": "Преобразование",
+        "settings": "Настройки"
+      },
+      "options": {
+        "title": "Опции",
+        "preserveCase": "Сохранить Регистр",
+        "preserveNumbers": "Сохранить Числа",
+        "preserveSymbols": "Сохранить Символы",
+        "doubleEncode": "Двойное Кодирование (ROT26)"
+      },
+      "actions": {
+        "swap": "Поменять Местами",
+        "clear": "Очистить Все",
+        "example": "Пример"
+      },
+      "demo": {
+        "alphabetTitle": "Соответствие Алфавита"
+      },
+      "examples": {
+        "title": "Быстрые Примеры",
+        "hint": "Нажмите на любой пример для тестирования ROT13 преобразования"
+      },
+      "errors": {
+        "transformFailed": "Не удалось преобразовать текст с помощью ROT13"
+      },
+      "info": {
+        "description": "ROT13 - симметричный шифр, где кодирование и декодирование используют одну и ту же операцию. Каждая буква поворачивается на 13 позиций в алфавите.",
+        "symmetricNote": "Поскольку ROT13 симметричен, двойное применение возвращает исходный текст.",
+        "doubleNote": "Двойное кодирование (ROT26) возвращает к исходному тексту, так как 26 - это полный поворот алфавита."
+      },
+      "stats": {
+        "letters": "Буквы",
+        "rotation": "Поворот",
+        "words": "Слова",
+        "alphabetic": "Алфавитные"
+      },
+      "analytics": {
+        "title": "Аналитика ROT13",
+        "letters": "Буквы",
+        "words": "Слова",
+        "rotation": "Поворот",
+        "alphabeticPercentage": "Алфавитный %",
+        "totalCharacters": "Всего Символов",
+        "symmetricPairs": "Симметричные Пары"
+      }
+    },
+    "csvJson": {
+      "title": "Конвертер CSV в JSON",
+      "description": "Преобразуйте данные CSV в формат JSON и JSON обратно в CSV. Идеально для обработки данных, интеграции API и преобразования форматов с гибкими параметрами конфигурации.",
+      "labels": {
+        "csvData": "CSV Данные",
+        "jsonData": "JSON Данные"
+      },
+      "placeholders": {
+        "csv": "Введите данные CSV для преобразования в JSON...",
+        "json": "Введите данные JSON для преобразования в CSV..."
+      },
+      "modes": {
+        "csvToJson": "CSV в JSON",
+        "jsonToCsv": "JSON в CSV"
+      },
+      "accordion": {
+        "title": "Опции CSV в JSON"
+      },
+      "sections": {
+        "format": "Конфигурация Формата",
+        "processing": "Настройки Обработки"
+      },
+      "tabs": {
+        "conversion": "Преобразование",
+        "settings": "Настройки"
+      },
+      "options": {
+        "title": "Опции",
+        "delimiter": "Разделитель",
+        "delimiters": {
+          "comma": "Запятая",
+          "semicolon": "Точка с запятой",
+          "tab": "Табуляция",
+          "pipe": "Вертикальная черта"
+        },
+        "customDelimiter": "Пользовательский разделитель...",
+        "hasHeaders": "Первая строка как заголовки",
+        "jsonFormat": "Формат JSON",
+        "formats": {
+          "pretty": "Красивый",
+          "array": "Массив",
+          "object": "Объект"
+        },
+        "skipEmptyLines": "Пропустить пустые строки",
+        "trimWhitespace": "Удалить пробелы",
+        "handleQuotes": "Обрабатывать кавычки"
+      },
+      "actions": {
+        "clear": "Очистить все",
+        "example": "Пример"
+      },
+      "errors": {
+        "emptyInput": "Входные данные пусты",
+        "csvParsingFailed": "Не удалось разобрать CSV данные",
+        "jsonParsingFailed": "Не удалось разобрать JSON данные",
+        "invalidJson": "Неверный формат JSON",
+        "unsupportedJsonFormat": "Неподдерживаемая структура JSON",
+        "unsupportedDataStructure": "Неподдерживаемая структура данных",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "Конвертируйте между форматами CSV и JSON с настраиваемыми опциями. Поддерживает заголовки, пользовательские разделители и различные структуры JSON.",
+        "csvNote": "CSV данные могут использовать различные разделители и могут включать поля в кавычках со встроенными разделителями или переносами строк.",
+        "jsonNote": "JSON данные могут быть массивом объектов, одним объектом или массивом массивов. Инструмент автоматически определяет структуру."
+      },
+      "stats": {
+        "rows": "Строки данных",
+        "columns": "Колонки",
+        "jsonSize": "Размер JSON"
+      },
+      "analytics": {
+        "title": "Аналитика CSV в JSON",
+        "rows": "Строки",
+        "columns": "Колонки",
+        "inputSize": "Размер Ввода",
+        "outputSize": "Размер Вывода",
+        "dataPoints": "Точки Данных",
+        "compressionRatio": "Изменение Размера"
+      },
+      "examples": {
+        "title": "Быстрые примеры",
+        "csvExample": "Пример CSV",
+        "jsonExample": "Пример JSON",
+        "hint": "Нажмите на любой пример для тестирования конвертации с различными структурами данных"
+      }
+    },
+    "jsonStringify": {
+      "title": "Инструмент JSON Stringify",
+      "description": "Форматируйте, stringify и парсите JSON данные с расширенными опциями. Идеально для отладки, разработки API и обработки JSON данных.",
+      "labels": {
+        "jsonInput": "JSON Ввод",
+        "jsonString": "JSON Строка"
+      },
+      "placeholders": {
+        "json": "Введите JSON объект или массив для stringify...",
+        "string": "Введите JSON строку для парсинга и форматирования..."
+      },
+      "modes": {
+        "stringify": "Stringify JSON",
+        "parse": "Парсить и Форматировать"
+      },
+      "accordion": {
+        "title": "Опции JSON Stringify"
+      },
+      "sections": {
+        "formatting": "Конфигурация Форматирования",
+        "processing": "Настройки Обработки"
+      },
+      "tabs": {
+        "formatting": "Форматирование",
+        "settings": "Настройки"
+      },
+      "options": {
+        "title": "Опции",
+        "indentSize": "Размер отступа",
+        "spaces": "пробелов",
+        "outputFormat": "Формат вывода",
+        "pretty": "Красивый",
+        "compact": "Компактный",
+        "sortKeys": "Сортировать ключи",
+        "escapeUnicode": "Экранировать Unicode",
+        "removeComments": "Удалить комментарии",
+        "validateJson": "Проверять JSON"
+      },
+      "actions": {
+        "clear": "Очистить все",
+        "example": "Пример"
+      },
+      "errors": {
+        "stringifyFailed": "Не удалось stringify JSON",
+        "parseFailed": "Не удалось парсить JSON",
+        "invalidJson": "Неверный формат JSON",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "Обрабатывайте JSON данные с настраиваемыми опциями форматирования. Поддерживает красивую печать, сортировку ключей и валидацию.",
+        "stringifyNote": "JSON объекты и массивы преобразуются в правильно отформатированные JSON строки с настраиваемыми отступами.",
+        "parseNote": "JSON строки парсятся и форматируются для лучшей читаемости. Комментарии поддерживаются в режиме парсинга."
+      },
+      "stats": {
+        "inputSize": "Размер ввода",
+        "outputSize": "Размер вывода",
+        "elements": "Элементы",
+        "depth": "Макс. глубина"
+      },
+      "analytics": {
+        "title": "Аналитика JSON Stringify",
+        "inputSize": "Размер Ввода",
+        "outputSize": "Размер Вывода",
+        "elements": "Элементы",
+        "keys": "Ключи",
+        "depth": "Макс. Глубина",
+        "compressionRatio": "Изменение Размера"
+      },
+      "examples": {
+        "title": "Быстрые примеры",
+        "example": "Пример",
+        "hint": "Нажмите на любой пример для тестирования обработки JSON с различными структурами данных"
+      }
+    },
+    "url": {
+      "title": "URL Кодировщик/Декодировщик",
+      "description": "Кодируйте и декодируйте URL и компоненты URL. Идеально для веб-разработки, интеграции API и обработки специальных символов в URL.",
+      "labels": {
+        "plainText": "Обычный Текст",
+        "encodedUrl": "Кодированный URL"
+      },
+      "placeholders": {
+        "encode": "Введите текст для URL кодирования...",
+        "decode": "Введите URL кодированный текст для декодирования..."
+      },
+      "modes": {
+        "encode": "Кодировать URL",
+        "decode": "Декодировать URL"
+      },
+      "accordion": {
+        "title": "Опции URL Кодирования"
+      },
+      "sections": {
+        "encoding": "Конфигурация Кодирования"
+      },
+      "actions": {
+        "clear": "Очистить",
+        "example": "Пример"
+      },
+      "options": {
+        "title": "Опции Кодирования",
+        "encodeType": "Тип Кодирования",
+        "types": {
+          "component": "Компонент (encodeURIComponent)",
+          "uri": "Полный URI (encodeURI)",
+          "form": "Данные Формы (application/x-www-form-urlencoded)"
+        },
+        "preserveSpaces": "Сохранить Пробелы как +",
+        "encodeReserved": "Кодировать Зарезервированные Символы"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось закодировать URL",
+        "decodeFailed": "Не удалось декодировать URL",
+        "invalidUrl": "Неверный формат URL",
+        "malformedUri": "Неправильно сформированная последовательность URI",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "messages": {
+        "encodeSuccess": "URL успешно закодирован",
+        "decodeSuccess": "URL успешно декодирован"
+      },
+      "info": {
+        "description": "URL кодирование преобразует специальные символы в процентно-кодированный формат (%XX) для безопасной передачи в URL.",
+        "encodingNote": "Кодирование компонентов строже, чем кодирование URI, и должно использоваться для параметров URL.",
+        "decodingNote": "Декодирование преобразует процентно-кодированные последовательности обратно в исходные символы."
+      },
+      "stats": {
+        "inputLength": "Длина Ввода",
+        "outputLength": "Длина Вывода",
+        "encodedChars": "Кодированные Символы",
+        "specialChars": "Специальные Символы"
+      },
+      "analytics": {
+        "title": "Аналитика URL Конвертера",
+        "inputLength": "Длина Ввода",
+        "outputLength": "Длина Вывода",
+        "encodedChars": "Кодированные Символы",
+        "specialChars": "Специальные Символы",
+        "compressionRatio": "Изменение Размера",
+        "safetyImprovement": "Безопасность %"
+      },
+      "examples": {
+        "title": "Обычные Примеры",
+        "email": "email@domain.com",
+        "path": "/path/to/file name.html",
+        "query": "search=привет мир&lang=ru",
+        "special": "Спец. символы: !@#$%^&*()",
+        "unicode": "Unicode: こんにちは"
+      }
+    },
+    "utf8": {
+      "title": "UTF-8 Кодировщик / Декодировщик",
+      "description": "Кодируйте текст в UTF-8 байты и декодируйте UTF-8 байты обратно в текст. Идеально для понимания кодировки символов, отладки проблем кодировки и работы с международным текстом.",
+      "labels": {
+        "plainText": "Обычный Текст",
+        "utf8Bytes": "UTF-8 Байты"
+      },
+      "placeholders": {
+        "encode": "Введите текст для преобразования в UTF-8 байты...",
+        "decode": "Введите UTF-8 байты для преобразования в текст..."
+      },
+      "modes": {
+        "encode": "Текст в UTF-8",
+        "decode": "UTF-8 в Текст"
+      },
+      "accordion": {
+        "title": "Опции UTF-8 Кодирования"
+      },
+      "sections": {
+        "encoding": "Конфигурация Кодирования"
+      },
+      "actions": {
+        "clear": "Очистить",
+        "example": "Пример"
+      },
+      "options": {
+        "title": "Формат Вывода",
+        "outputFormat": "Формат",
+        "formats": {
+          "decimal": "Десятичный (65 66 67)",
+          "hex": "Шестнадцатеричный (41 42 43)",
+          "binary": "Двоичный (01000001 01000010)",
+          "array": "Массив [65, 66, 67]",
+          "escaped": "Экранированный (\\x41\\x42\\x43)"
+        },
+        "separator": "Разделитель",
+        "separators": {
+          "space": "Пробел",
+          "comma": "Запятая",
+          "none": "Без разделителя"
+        },
+        "showBom": "Показать BOM (Метка Порядка Байт)",
+        "uppercase": "Верхний регистр Hex"
+      },
+      "errors": {
+        "encodeFailed": "Не удалось закодировать текст в UTF-8",
+        "decodeFailed": "Не удалось декодировать UTF-8 байты",
+        "invalidBytes": "Неверная последовательность байт",
+        "invalidFormat": "Неверный формат ввода",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "messages": {
+        "encodeSuccess": "Успешно закодировано в UTF-8",
+        "decodeSuccess": "Успешно декодировано из UTF-8"
+      },
+      "info": {
+        "description": "UTF-8 - это кодировка символов переменной длины, которая может представить любой Unicode символ, используя 1-4 байта на символ.",
+        "encodingNote": "ASCII символы (0-127) используют 1 байт, в то время как международные символы могут использовать 2-4 байта.",
+        "decodingNote": "Введите значения байт, разделенные пробелами, запятыми или в формате массива."
+      },
+      "stats": {
+        "inputChars": "Символы Ввода",
+        "outputBytes": "Байты Вывода",
+        "bytesPerChar": "Среднее Байт/Символ",
+        "encoding": "Эффективность Кодировки"
+      },
+      "analytics": {
+        "title": "Аналитика UTF-8 Конвертера",
+        "inputChars": "Входные Символы",
+        "outputBytes": "Выходные Байты",
+        "bytesPerChar": "Байт/Символ",
+        "efficiency": "Эффективность",
+        "asciiChars": "ASCII Символы",
+        "unicodeChars": "Unicode Символы"
+      },
+      "examples": {
+        "title": "Примеры UTF-8",
+        "ascii": "Привет Мир",
+        "accented": "café résumé",
+        "emoji": "Привет 👋 Мир 🌍",
+        "chinese": "你好世界",
+        "arabic": "مرحبا بالعالم",
+        "mixed": "Микс: Hello 你好 🌍"
+      }
+    },
+    "slugify": {
+      "title": "Генератор URL Слагов",
+      "description": "Создавайте SEO-дружественные URL слаги из текста. Идеально для постов блога, страниц товаров и создания чистых, читаемых URL.",
+      "labels": {
+        "textInput": "Ввод Текста",
+        "slugInput": "URL Слаг",
+        "slugOutput": "URL Слаг",
+        "textOutput": "Вывод Текста"
+      },
+      "placeholders": {
+        "text": "Введите текст для преобразования в URL слаг...",
+        "slug": "Введите URL слаг для гуманизации..."
+      },
+      "modes": {
+        "slugify": "Создать Слаг",
+        "humanize": "Гуманизировать Слаг"
+      },
+      "accordion": {
+        "title": "Опции Генерации Слагов"
+      },
+      "sections": {
+        "configuration": "Конфигурация Слага",
+        "processing": "Настройки Обработки"
+      },
+      "actions": {
+        "clear": "Очистить",
+        "example": "Пример"
+      },
+      "options": {
+        "separator": "Разделитель",
+        "maxLength": "Максимальная Длина",
+        "lowercase": "Преобразовать в Нижний Регистр",
+        "removeStopWords": "Удалить Стоп-Слова",
+        "removeSpecialChars": "Удалить Специальные Символы",
+        "preserveNumbers": "Сохранить Цифры",
+        "separators": {
+          "hyphen": "Дефис (-)",
+          "underscore": "Подчеркивание (_)",
+          "dot": "Точка (.)"
+        }
+      },
+      "analytics": {
+        "title": "Аналитика Слагов",
+        "inputLength": "Длина Ввода",
+        "outputLength": "Длина Вывода",
+        "wordCount": "Количество Слов",
+        "compressionRatio": "Сжатие",
+        "separatorCount": "Разделители",
+        "seoScore": "SEO Оценка"
+      },
+      "errors": {
+        "slugifyFailed": "Не удалось создать URL слаг",
+        "humanizeFailed": "Не удалось гуманизировать слаг",
+        "conversionFailed": "Преобразование не удалось"
+      },
+      "info": {
+        "description": "URL слаги - это чистые, SEO-дружественные текстовые строки, используемые в URL. Они улучшают читаемость и оптимизацию для поисковых систем.",
+        "slugifyNote": "Текст преобразуется в нижний регистр, удаляются специальные символы, и пробелы заменяются разделителями.",
+        "humanizeNote": "Слаги преобразуются обратно в читаемый текст с правильной капитализацией и пробелами."
+      },
+      "stats": {
+        "inputLength": "Длина Ввода",
+        "outputLength": "Длина Вывода",
+        "wordCount": "Количество Слов"
+      }
+    }
+  }
+}

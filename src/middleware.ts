@@ -1,143 +1,145 @@
-import { NextResponse } from 'next/server';
-import type { NextRequest } from 'next/server';
+import { NextRequest, NextResponse } from 'next/server';
+import { locales, defaultLocale, type Locale, languageMappings } from './lib/i18n';
+
+// Detect preferred language from Accept-Language header
+function getPreferredLocale(acceptLanguage: string | null): Locale {
+  if (!acceptLanguage) return defaultLocale;
+
+  try {
+    // Parse Accept-Language header (e.g., "en-US,en;q=0.9,ru;q=0.8")
+    const languages = acceptLanguage
+      .split(',')
+      .map(lang => {
+        const [code, qValue] = lang.trim().split(';q=');
+        const quality = qValue ? parseFloat(qValue) || 1.0 : 1.0;
+        const langCode = code.toLowerCase().trim();
+        return { code: langCode, quality };
+      })
+      .sort((a, b) => b.quality - a.quality); // Sort by quality (preference)
+
+    // Find first supported language using mappings
+    for (const lang of languages) {
+      const mappedLocale = languageMappings[lang.code];
+      if (mappedLocale && locales.includes(mappedLocale)) {
+        return mappedLocale;
+      }
+      
+      // Also check base language code (e.g., 'ru' from 'ru-RU')
+      const baseCode = lang.code.split('-')[0];
+      const baseMappedLocale = languageMappings[baseCode];
+      if (baseMappedLocale && locales.includes(baseMappedLocale)) {
+        return baseMappedLocale;
+      }
+    }
+  } catch (error) {
+    // If parsing fails, return default locale
+    console.warn('Error parsing Accept-Language header:', error);
+  }
+
+  return defaultLocale;
+}
+
+// Check if path already has a locale
+function getLocaleFromPath(pathname: string): Locale | null {
+  const segments = pathname.split('/');
+  const firstSegment = segments[1];
+  
+  if (locales.includes(firstSegment as Locale)) {
+    return firstSegment as Locale;
+  }
+  
+  return null;
+}
+
+// Get localized path
+function getLocalizedPath(pathname: string, locale: Locale): string {
+  // Remove existing locale if present
+  const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}(?=\/|$)/, '') || '/';
+  
+  if (locale === defaultLocale) {
+    return pathWithoutLocale;
+  }
+  
+  return `/${locale}${pathWithoutLocale === '/' ? '' : pathWithoutLocale}`;
+}
 
 export function middleware(request: NextRequest) {
-  // Determine if it's development mode
-  const isDevelopment = process.env.NODE_ENV === 'development';
-
-  // Prepare Supabase Hostname: Safely extract the hostname from process.env.NEXT_PUBLIC_SUPABASE_URL
-  let supabaseHostname = '';
-  if (process.env.NEXT_PUBLIC_SUPABASE_URL) {
-    try {
-      const supabaseUrlObj = new URL(process.env.NEXT_PUBLIC_SUPABASE_URL);
-      supabaseHostname = supabaseUrlObj.hostname;
-    } catch (e) {
-      console.error('Invalid NEXT_PUBLIC_SUPABASE_URL for CSP', e);
-    }
-  } else {
-    console.warn('NEXT_PUBLIC_SUPABASE_URL is not defined. CSP will be less specific for Supabase.');
+  const pathname = request.nextUrl.pathname;
+  
+  // Skip middleware for:
+  // - API routes
+  // - Static files
+  // - Next.js internal files
+  if (
+    pathname.startsWith('/api') ||
+    pathname.startsWith('/_next') ||
+    pathname.includes('.') ||
+    pathname.startsWith('/favicon')
+  ) {
+    return NextResponse.next();
   }
 
-  // Construct script-src policies with unsafe-inline approach for dangerouslySetInnerHTML
-  let scriptSrcPolicies = [
-    "'self'",
-    supabaseHostname ? `https://${supabaseHostname}` : null,
-    "https://*.googletagmanager.com",
-    "https://*.google-analytics.com",
-    "https://pagead2.googlesyndication.com",
-    "https://*.grow.me",
-    "https://vercel.com",
-    "https://*.vercel-insights.com",
-    "https://fundingchoicesmessages.google.com",
-    "'unsafe-inline'" // Allow inline scripts for dangerouslySetInnerHTML approach
-  ].filter(Boolean) as string[];
-
-  // Conditionally add 'unsafe-eval' for development
-  if (isDevelopment) {
-    scriptSrcPolicies.push("'unsafe-eval'");
+  // Check if path already has a locale
+  const currentLocale = getLocaleFromPath(pathname);
+  
+  // If path already has a locale, no redirection needed
+  if (currentLocale) {
+    return NextResponse.next();
   }
 
-  const scriptSrcValue = scriptSrcPolicies.join(' ');
+  // Get browser's preferred language
+  const acceptLanguage = request.headers.get('accept-language');
+  const preferredLocale = getPreferredLocale(acceptLanguage);
 
-  // Construct img-src policies
-  let imgSrcPolicies = [
-    "'self'",
-    "data:",
-    supabaseHostname ? `https://*.supabase.co` : null,
-    supabaseHostname ? `https://${supabaseHostname}` : null,
-    "https://pagead2.googlesyndication.com",
-    "https://*.googleusercontent.com",
-    "https://*.googletagmanager.com",
-    "https://*.google-analytics.com",
-    "https://*.g.doubleclick.net",
-    "https://*.grow.me",
-    "https://res.cloudinary.com" // Allow Cloudinary images for Grow.me
-  ].filter(Boolean) as string[];
+  // Check if user has a language preference cookie
+  const cookieLocale = request.cookies.get('preferred-locale')?.value as Locale;
+  const targetLocale = cookieLocale && locales.includes(cookieLocale) 
+    ? cookieLocale 
+    : preferredLocale;
 
-  // Construct the full CSP header value
-  const cspDirectives = [
-    `default-src 'self' ${supabaseHostname ? `https://${supabaseHostname} wss://${supabaseHostname}` : ''}`,
-    `script-src ${scriptSrcValue}`, // Use the constructed script-src value with unsafe-inline
-    "style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://*.grow.me", // Kept grow.me for styles just in case
-    `img-src ${imgSrcPolicies.join(' ')}`,
-    "font-src 'self' data: https://fonts.gstatic.com",
-    `connect-src 'self' ${supabaseHostname ? `wss://${supabaseHostname} https://${supabaseHostname}` : ''} https://*.google-analytics.com https://*.analytics.google.com https://pagead2.googlesyndication.com https://*.googletagmanager.com https://stats.g.doubleclick.net https://*.grow.me https://vercel.com https://*.vercel-insights.com https://client-rapi-mediavine.recombee.com https://some.growplow.events https://ep1.adtrafficquality.google`,
-    "frame-src 'self' https://*.google.com https://*.doubleclick.net https://*.googlesyndication.com https://*.grow.me",
-    "object-src 'none'",
-    "base-uri 'self'",
-    "form-action 'self'",
-    "frame-ancestors 'self'",
-    "upgrade-insecure-requests"
-  ];
-  const cspHeaderValue = cspDirectives.join('; ');
-
-  // Define additional security headers
-  const permissionsPolicyValue = [
-    "accelerometer=()",
-    "autoplay=()", // Consider (self) if you need autoplay for your own videos
-    "camera=()",
-    "display-capture=()",
-    "fullscreen=(self)",
-    "geolocation=()", // Enable with (self "https://some-trusted-map-service.com") if needed
-    "gyroscope=()",
-    "keyboard-map=()",
-    "magnetometer=()",
-    "microphone=()",
-    "midi=()",
-    "payment=()",
-    "picture-in-picture=()",
-    "publickey-credentials-get=(self)", // For WebAuthn if you use it
-    "screen-wake-lock=()",
-    "sync-xhr=()",
-    "usb=()",
-    "web-share=()",
-    "xr-spatial-tracking=()",
-    "clipboard-read=()",
-    "clipboard-write=(self)",
-    // Advertising related features - try with broader allowance for now
-    // Note: '*' for ad features can be a security risk if not understood.
-    // This is for debugging the "unrecognized feature" vs. "origin trial" errors.
-    // Ideally, these would be restricted to specific ad provider domains if they actually function.
-    'attribution-reporting=*', // Try with *
-    'browsing-topics=*',       // Try with *
-    'join-ad-interest-group=*',// Try with *
-    'run-ad-auction=*'         // Try with *
-  ].join(','); // Join with comma
-
-  // Admin Authentication Logic & Response Handling
-  let response;
-
-  // Check if the request is for an admin route
-  if (request.nextUrl.pathname.startsWith('/admin/dashboard')) {
-    // Get the auth token from cookies
-    const isAuthenticated = request.cookies.get('isAdminAuthenticated')?.value === 'true';
-
-    // If not authenticated, redirect to login page
-    if (!isAuthenticated) {
-      const redirectUrl = new URL('/admin', request.url);
-      response = NextResponse.redirect(redirectUrl);
-      // response.headers.set('Content-Security-Policy', cspHeaderValue);
-      response.headers.set('X-Content-Type-Options', 'nosniff');
-      response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-      response.headers.set('Permissions-Policy', permissionsPolicyValue);
-      return response;
-    }
+  // If target locale is default (English), no redirection needed
+  if (targetLocale === defaultLocale) {
+    return NextResponse.next();
   }
 
-  // If not an admin redirect, prepare the main response
-  if (!response) {
-    response = NextResponse.next();
+  // Redirect to localized version
+  const localizedPath = getLocalizedPath(pathname, targetLocale);
+  const redirectUrl = new URL(localizedPath, request.url);
+  
+  // Add search params if they exist
+  if (request.nextUrl.search) {
+    redirectUrl.search = request.nextUrl.search;
   }
 
-  // response.headers.set('Content-Security-Policy', cspHeaderValue);
-  response.headers.set('X-Content-Type-Options', 'nosniff');
-  response.headers.set('Referrer-Policy', 'strict-origin-when-cross-origin');
-  response.headers.set('Permissions-Policy', permissionsPolicyValue);
+  // Create redirect response with SEO-friendly 302 (temporary redirect)
+  const response = NextResponse.redirect(redirectUrl, 302);
+  
+  // Set language preference cookie for future visits
+  response.cookies.set('preferred-locale', targetLocale, {
+    maxAge: 60 * 60 * 24 * 365, // 1 year
+    httpOnly: false, // Allow client-side access
+    secure: process.env.NODE_ENV === 'production',
+    sameSite: 'lax',
+    path: '/'
+  });
+
   return response;
 }
 
 export const config = {
+  // Match all paths except:
+  // - API routes (/api/*)
+  // - Static files (/_next/*, /favicon.ico, etc.)
+  // - Files with extensions
   matcher: [
-    '/((?!api|_next/static|_next/image|favicon.ico|lang-data|sitemap.xml|robots.txt).*)', // Excluded sitemap and robots
+    /*
+     * Match all request paths except for the ones starting with:
+     * - api (API routes)
+     * - _next/static (static files)
+     * - _next/image (image optimization files)
+     * - favicon.ico (favicon file)
+     * - Files with extensions (.js, .css, .png, etc.)
+     */
+    '/((?!api|_next/static|_next/image|favicon.ico|.*\\.).*)',
   ],
 };

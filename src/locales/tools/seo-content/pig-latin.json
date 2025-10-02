@@ -1,0 +1,282 @@
+{
+  "en": {
+    "title": "Free Pig Latin Translator & Text Converter Tool",
+    "metaDescription": "Convert text to Pig Latin instantly with our free online translator. Fun language game tool perfect for entertainment, education, and secret messages. Works with any text input.",
+    "sections": {
+      "intro": {
+        "title": "Free Pig Latin Translator & Text Converter Tool",
+        "content": "Transform your text into Pig Latin instantly with our professional online translator. This fun language game tool converts English words by moving consonant sounds and adding special endings. Perfect for entertainment, educational activities, childhood games, and creating playful secret messages."
+      },
+      "features": {
+        "title": "Advanced Pig Latin Conversion Features",
+        "items": [
+          { "title": "Real-time Text Translation", "description": "Instant Pig Latin conversion as you type or paste text" },
+          { "title": "Preserve Capitalization", "description": "Maintains original text capitalization patterns and formatting" },
+          { "title": "Handle Punctuation", "description": "Correctly processes punctuation marks and special characters" },
+          { "title": "Consonant Cluster Support", "description": "Properly handles words starting with multiple consonants" },
+          { "title": "Vowel Word Processing", "description": "Accurate conversion for words beginning with vowels" },
+          { "title": "Batch Text Processing", "description": "Convert large amounts of text in one operation" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Language Games & Education",
+        "description": "Our Pig Latin translator is ideal for various educational and entertainment purposes.",
+        "items": [
+          { "title": "Educational Language Games", "description": "Teach children about language structure and phonetics" },
+          { "title": "Childhood Entertainment", "description": "Create fun secret languages for kids and playgroups" },
+          { "title": "Language Learning Aid", "description": "Help understand English consonant and vowel patterns" },
+          { "title": "Secret Message Creation", "description": "Encode messages in a playful, decipherable format" },
+          { "title": "Creative Writing Projects", "description": "Add whimsical elements to stories and creative content" },
+          { "title": "Party Games & Activities", "description": "Use in word games and social activities" },
+          { "title": "Linguistic Research", "description": "Study language transformation patterns" },
+          { "title": "Content Creation", "description": "Generate unique content for social media and entertainment" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Pig Latin Translator",
+        "description": "Follow these simple steps to convert your text to Pig Latin quickly and accurately.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your English text into the input area, or upload a text file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Instant Translation", 
+            "description": "Watch as your text is automatically converted to Pig Latin in real-time with proper formatting."
+          },
+          {
+            "step": 3,
+            "title": "Review the Results",
+            "description": "Check the converted Pig Latin text with preserved capitalization and punctuation."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the translated text to your clipboard or download it as a file for later use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Pig Latin Translation Examples",
+        "description": "See how our translator processes different types of English words and phrases.",
+        "items": [
+          { "title": "Simple Words", "input": "Hello World", "output": "Ello-hay Orld-way" },
+          { "title": "Vowel Words", "input": "Apple Orange", "output": "Apple-way Orange-way" },
+          { "title": "Consonant Clusters", "input": "String Theory", "output": "Ing-stray Eory-thay" },
+          { "title": "Mixed Capitalization", "input": "Programming Code", "output": "Ogramming-pray Ode-cay" },
+          { "title": "With Punctuation", "input": "Hello, world!", "output": "Ello-hay, orld-way!" },
+          { "title": "Complete Sentence", "input": "This is fun to use.", "output": "Is-thay is-way un-fay o-tay use-way." }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Pig Latin Translator",
+        "content": "Professional Pig Latin conversion with advanced features and perfect accuracy.",
+        "items": [
+          "Completely free and unlimited translations",
+          "No registration or sign-up required",
+          "Privacy-first - all processing done locally",
+          "Accurate consonant cluster handling",
+          "Preserves original text formatting",
+          "Real-time translation with instant results",
+          "Supports file upload and download",
+          "Mobile-responsive design for all devices",
+          "Works with any length of text",
+          "Educational and entertainment value"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is Pig Latin and how does it work?",
+          "answer": "Pig Latin is a language game where English words are altered by moving consonant sounds to the end and adding 'ay' (for consonant-starting words) or 'way' (for vowel-starting words). For example, 'hello' becomes 'ello-hay' and 'apple' becomes 'apple-way'."
+        },
+        {
+          "question": "Does the translator handle multiple consonants?",
+          "answer": "Yes, our translator correctly processes consonant clusters. Words like 'string' become 'ing-stray' by moving the entire 'str' cluster to the end before adding 'ay'."
+        },
+        {
+          "question": "Is capitalization preserved in the translation?",
+          "answer": "Absolutely! Our tool maintains the original capitalization pattern. If the first letter is capitalized, the translated word will also start with a capital letter."
+        },
+        {
+          "question": "Can I translate large amounts of text?",
+          "answer": "Yes, you can paste large blocks of text or upload text files. The translator processes everything while preserving formatting, punctuation, and line breaks."
+        },
+        {
+          "question": "Is my text data stored or shared?",
+          "answer": "No, all Pig Latin translation happens locally in your browser. Your text is never stored on our servers, transmitted to third parties, or used for any other purpose."
+        },
+        {
+          "question": "Can I download the translated text?",
+          "answer": "Yes, click the 'Download' button to save your Pig Latin text as a .txt file for offline use or sharing."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Language & Encoding Tools",
+        "items": [
+          {
+            "name": "Morse Code Translator",
+            "description": "Convert text to and from Morse code for communication",
+            "href": "/tools/morse-code"
+          },
+          {
+            "name": "Caesar Cipher",
+            "description": "Encode and decode text using Caesar cipher encryption",
+            "href": "/tools/caesar-cipher"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary code and back to text",
+            "href": "/tools/binary-code"
+          },
+          {
+            "name": "NATO Phonetic Alphabet",
+            "description": "Convert text to NATO phonetic alphabet spelling",
+            "href": "/tools/nato-phonetic"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Переводчик Свиной Латыни и Конвертер Текста",
+    "metaDescription": "Мгновенно конвертируйте текст в Свиную Латынь с помощью нашего бесплатного онлайн переводчика. Забавный языковой игровой инструмент, идеальный для развлечения, образования и секретных сообщений.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Переводчик Свиной Латыни и Конвертер Текста",
+        "content": "Мгновенно преобразуйте ваш текст в Свиную Латынь с помощью нашего профессионального онлайн переводчика. Этот забавный языковой игровой инструмент конвертирует английские слова, перемещая согласные звуки и добавляя специальные окончания. Идеально для развлечения, образовательных активностей, детских игр и создания игривых секретных сообщений."
+      },
+      "features": {
+        "title": "Продвинутые Функции Конвертации в Свиную Латынь",
+        "items": [
+          { "title": "Перевод текста в реальном времени", "description": "Мгновенная конвертация в Свиную Латынь при наборе или вставке текста" },
+          { "title": "Сохранение заглавных букв", "description": "Поддерживает оригинальные паттерны капитализации и форматирования текста" },
+          { "title": "Обработка пунктуации", "description": "Корректно обрабатывает знаки препинания и специальные символы" },
+          { "title": "Поддержка кластеров согласных", "description": "Правильно обрабатывает слова, начинающиеся с нескольких согласных" },
+          { "title": "Обработка слов с гласными", "description": "Точная конвертация для слов, начинающихся с гласных" },
+          { "title": "Пакетная обработка текста", "description": "Конвертируйте большие объемы текста за одну операцию" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Языковых Игр и Образования",
+        "description": "Наш переводчик Свиной Латыни идеален для различных образовательных и развлекательных целей.",
+        "items": [
+          { "title": "Образовательные языковые игры", "description": "Обучайте детей структуре языка и фонетике" },
+          { "title": "Детские развлечения", "description": "Создавайте забавные секретные языки для детей и игровых групп" },
+          { "title": "Помощь в изучении языка", "description": "Помогает понимать паттерны английских согласных и гласных" },
+          { "title": "Создание секретных сообщений", "description": "Кодируйте сообщения в игривом, расшифровываемом формате" },
+          { "title": "Проекты творческого письма", "description": "Добавляйте причудливые элементы в истории и креативный контент" },
+          { "title": "Игры и активности на вечеринках", "description": "Используйте в словесных играх и социальных активностях" },
+          { "title": "Лингвистические исследования", "description": "Изучайте паттерны языковых трансформаций" },
+          { "title": "Создание контента", "description": "Генерируйте уникальный контент для социальных сетей и развлечения" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Переводчик Свиной Латыни",
+        "description": "Следуйте этим простым шагам для быстрой и точной конвертации вашего текста в Свиную Латынь.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш английский текст в область ввода, или загрузите текстовый файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Мгновенный Перевод",
+            "description": "Наблюдайте, как ваш текст автоматически конвертируется в Свиную Латынь в реальном времени с правильным форматированием."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Результаты",
+            "description": "Проверьте конвертированный текст Свиной Латыни с сохраненной капитализацией и пунктуацией."
+          },
+          {
+            "step": 4,
+            "title": "Копируйте или Скачайте",
+            "description": "Скопируйте переведенный текст в буфер обмена или скачайте его как файл для последующего использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Перевода в Свиную Латынь",
+        "description": "Посмотрите, как наш переводчик обрабатывает различные типы английских слов и фраз.",
+        "items": [
+          { "title": "Простые слова", "input": "Hello World", "output": "Ello-hay Orld-way" },
+          { "title": "Слова с гласными", "input": "Apple Orange", "output": "Apple-way Orange-way" },
+          { "title": "Кластеры согласных", "input": "String Theory", "output": "Ing-stray Eory-thay" },
+          { "title": "Смешанная капитализация", "input": "Programming Code", "output": "Ogramming-pray Ode-cay" },
+          { "title": "С пунктуацией", "input": "Hello, world!", "output": "Ello-hay, orld-way!" },
+          { "title": "Полное предложение", "input": "This is fun to use.", "output": "Is-thay is-way un-fay o-tay use-way." }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Переводчик Свиной Латыни",
+        "content": "Профессиональная конвертация в Свиную Латынь с продвинутыми функциями и идеальной точностью.",
+        "items": [
+          "Полностью бесплатные и неограниченные переводы",
+          "Не требует регистрации или подписки",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Точная обработка кластеров согласных",
+          "Сохраняет оригинальное форматирование текста",
+          "Перевод в реальном времени с мгновенными результатами",
+          "Поддержка загрузки и скачивания файлов",
+          "Адаптивный дизайн для всех устройств",
+          "Работает с текстом любой длины",
+          "Образовательная и развлекательная ценность"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое Свиная Латынь и как она работает?",
+          "answer": "Свиная Латынь - это языковая игра, где английские слова изменяются путем перемещения согласных звуков в конец и добавления 'ay' (для слов, начинающихся с согласных) или 'way' (для слов, начинающихся с гласных). Например, 'hello' становится 'ello-hay', а 'apple' становится 'apple-way'."
+        },
+        {
+          "question": "Обрабатывает ли переводчик несколько согласных?",
+          "answer": "Да, наш переводчик корректно обрабатывает кластеры согласных. Слова типа 'string' становятся 'ing-stray', перемещая весь кластер 'str' в конец перед добавлением 'ay'."
+        },
+        {
+          "question": "Сохраняется ли капитализация при переводе?",
+          "answer": "Абсолютно! Наш инструмент поддерживает оригинальный паттерн капитализации. Если первая буква заглавная, переведенное слово также начнется с заглавной буквы."
+        },
+        {
+          "question": "Могу ли я переводить большие объемы текста?",
+          "answer": "Да, вы можете вставлять большие блоки текста или загружать текстовые файлы. Переводчик обрабатывает всё, сохраняя форматирование, пунктуацию и переводы строк."
+        },
+        {
+          "question": "Сохраняются ли мои текстовые данные?",
+          "answer": "Нет, весь перевод в Свиную Латынь происходит локально в вашем браузере. Ваш текст никогда не сохраняется на наших серверах, не передается третьим лицам и не используется для других целей."
+        },
+        {
+          "question": "Могу ли я скачать переведенный текст?",
+          "answer": "Да, нажмите кнопку 'Скачать', чтобы сохранить ваш текст Свиной Латыни как .txt файл для офлайн использования или обмена."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Языковые Инструменты и Кодировщики",
+        "items": [
+          {
+            "name": "Переводчик Азбуки Морзе",
+            "description": "Конвертируйте текст в азбуку Морзе и обратно для коммуникации",
+            "href": "/tools/morse-code"
+          },
+          {
+            "name": "Шифр Цезаря",
+            "description": "Кодируйте и декодируйте текст, используя шифрование Цезаря",
+            "href": "/tools/caesar-cipher"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и обратно в текст",
+            "href": "/tools/binary-code"
+          },
+          {
+            "name": "Фонетический Алфавит НАТО",
+            "description": "Конвертируйте текст в написание фонетического алфавита НАТО",
+            "href": "/tools/nato-phonetic"
+          }
+        ]
+      }
+    }
+  }
+}

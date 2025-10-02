@@ -1,0 +1,342 @@
+{
+  "en": {
+    "title": "Free Hex to Text Converter - Convert Hexadecimal to Text & Text to Hex",
+    "metaDescription": "Convert hexadecimal (hex) to text and text to hexadecimal instantly with our free online converter. Supports custom delimiters, prefixes, and uppercase/lowercase formatting. Perfect for programming, debugging, and data encoding.",
+    "sections": {
+      "intro": {
+        "title": "Hex to Text Converter",
+        "content": "Convert between hexadecimal and text formats effortlessly with our powerful hex converter. Essential for programming, debugging, data analysis, and understanding how computers represent text data in hexadecimal format."
+      },
+      "features": {
+        "title": "Comprehensive Hex Conversion Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Convert text to hex or decode hex back to text with instant mode switching and real-time processing."
+          },
+          {
+            "title": "Flexible Formatting Options",
+            "description": "Choose from space, colon, or no delimiters with optional 0x prefixes and uppercase/lowercase formatting."
+          },
+          {
+            "title": "Smart Hex Detection",
+            "description": "Automatically handles various hex formats including prefixed (0x), delimited, and continuous hex strings."
+          },
+          {
+            "title": "File Upload Support",
+            "description": "Process large text files or hex data files directly through convenient file upload functionality."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "View live statistics including hex character count, byte count, and conversion metrics."
+          },
+          {
+            "title": "Error Validation",
+            "description": "Built-in validation with clear error messages for invalid hex codes and character encoding issues."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Use Cases",
+        "description": "Hex to text conversion serves many important purposes across programming and development contexts.",
+        "items": [
+          { "title": "Programming & Development", "description": "Essential for software development, debugging, and understanding data representation" },
+          { "title": "Network Analysis", "description": "Analyze network protocols, packet data, and communication formats" },
+          { "title": "Data Encoding", "description": "Handle various data encoding and decoding tasks in applications" },
+          { "title": "Reverse Engineering", "description": "Analyze binary data, firmware, and executable files" },
+          { "title": "Educational Learning", "description": "Learn hexadecimal concepts and computer science fundamentals" },
+          { "title": "Web Development", "description": "Work with color codes, character encoding, and URL encoding" },
+          { "title": "System Administration", "description": "Debug system files, configuration data, and log analysis" },
+          { "title": "Security Research", "description": "Analyze malware, forensics data, and security protocols" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "description": "Follow these simple steps to convert between hexadecimal and text formats.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Data",
+            "description": "Type or paste your text or hex data in the input field, or upload a file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Select Conversion Mode",
+            "description": "Choose between Text to Hex or Hex to Text conversion using the mode toggle button."
+          },
+          {
+            "step": 3,
+            "title": "Configure Options",
+            "description": "Select formatting options like delimiter type, case preference, and 0x prefixes."
+          },
+          {
+            "step": 4,
+            "title": "View Results",
+            "description": "See the converted result with real-time validation and detailed analytics."
+          },
+          {
+            "step": 5,
+            "title": "Export Results",
+            "description": "Copy the result to clipboard or download as a file for further use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Hex Conversion Examples",
+        "items": [
+          {
+            "input": "Hello World",
+            "output": "48 65 6C 6C 6F 20 57 6F 72 6C 64",
+            "description": "Text 'Hello World' converted to uppercase hex with space delimiters"
+          },
+          {
+            "input": "A",
+            "output": "0x41",
+            "description": "Single character 'A' converted to hex with 0x prefix"
+          },
+          {
+            "input": "48656C6C6F",
+            "output": "Hello",
+            "description": "Continuous hex string decoded back to text"
+          },
+          {
+            "input": "Programming",
+            "output": "50:72:6F:67:72:61:6D:6D:69:6E:67",
+            "description": "Text converted to lowercase hex with colon delimiters"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Hex Converter",
+        "items": [
+          "Free and unlimited usage for all conversions",
+          "Fast, accurate hex-to-text algorithms",
+          "Support for multiple hex formatting standards",
+          "Perfect for learning hexadecimal concepts",
+          "Privacy-focused: all processing happens locally",
+          "Mobile-responsive design for any device",
+          "No registration or software installation required",
+          "Professional-grade validation and error handling"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is hexadecimal and why is it used in computing?",
+          "answer": "Hexadecimal (hex) is a base-16 number system using digits 0-9 and letters A-F. It's widely used in computing because it provides a more human-readable way to represent binary data, with each hex digit representing exactly 4 bits."
+        },
+        {
+          "question": "What do the different delimiter options mean?",
+          "answer": "Space delimiters (48 65 6C) separate each byte for readability, colon delimiters (48:65:6C) are common in MAC addresses and some protocols, while no delimiters (48656C) create continuous hex strings often used in programming."
+        },
+        {
+          "question": "When should I use the 0x prefix option?",
+          "answer": "The 0x prefix is a programming convention that explicitly identifies a number as hexadecimal. It's commonly used in programming languages like C, JavaScript, and Python to distinguish hex values from decimal numbers."
+        },
+        {
+          "question": "Can this tool handle Unicode characters?",
+          "answer": "Yes! Our converter properly handles Unicode characters by converting them to their UTF-8 byte representation and then to hexadecimal, ensuring accurate conversion of international characters and symbols."
+        },
+        {
+          "question": "Is my data secure when using this hex converter?",
+          "answer": "Absolutely. All hex conversion happens locally in your browser - no data is transmitted to external servers. Your text and hex data remain completely private and secure throughout the conversion process."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Code & Data Tools",
+        "description": "Explore other useful encoding and conversion tools for developers.",
+        "items": [
+          {
+            "name": "Binary Code Translator",
+            "href": "/tools/binary-code-translator",
+            "description": "Convert text to binary code and decode binary to text"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "href": "/tools/base64-encoder-decoder",
+            "description": "Encode and decode text using Base64 format"
+          },
+          {
+            "name": "ASCII Art Generator",
+            "href": "/tools/ascii-art-generator",
+            "description": "Create ASCII art from text and images"
+          },
+          {
+            "name": "URL Encoder/Decoder",
+            "href": "/tools/url-converter",
+            "description": "Encode and decode URLs for web development"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный конвертер Hex в текст - Конвертация шестнадцатеричного кода в текст и обратно",
+    "metaDescription": "Мгновенно конвертируйте шестнадцатеричный код (hex) в текст и текст в шестнадцатеричный код с помощью нашего бесплатного онлайн-конвертера. Поддержка пользовательских разделителей, префиксов и форматирования в верхнем/нижнем регистре. Идеально для программирования, отладки и кодирования данных.",
+    "sections": {
+      "intro": {
+        "title": "Конвертер Hex в текст",
+        "content": "Легко конвертируйте между шестнадцатеричным и текстовым форматами с помощью нашего мощного hex-конвертера. Незаменим для программирования, отладки, анализа данных и понимания того, как компьютеры представляют текстовые данные в шестнадцатеричном формате."
+      },
+      "features": {
+        "title": "Комплексные функции конвертации Hex",
+        "items": [
+          {
+            "title": "Двунаправленная конвертация",
+            "description": "Конвертируйте текст в hex или декодируйте hex обратно в текст с мгновенным переключением режимов и обработкой в реальном времени."
+          },
+          {
+            "title": "Гибкие параметры форматирования",
+            "description": "Выберите пробелы, двоеточия или отсутствие разделителей с опциональными префиксами 0x и форматированием в верхнем/нижнем регистре."
+          },
+          {
+            "title": "Умное распознавание hex",
+            "description": "Автоматически обрабатывает различные hex-форматы, включая с префиксами (0x), с разделителями и непрерывные hex-строки."
+          },
+          {
+            "title": "Поддержка загрузки файлов",
+            "description": "Обрабатывайте большие текстовые файлы или файлы hex-данных напрямую через удобную функцию загрузки файлов."
+          },
+          {
+            "title": "Аналитика в реальном времени",
+            "description": "Просматривайте живую статистику, включая количество hex-символов, байтов и метрики конвертации."
+          },
+          {
+            "title": "Проверка ошибок",
+            "description": "Встроенная валидация с понятными сообщениями об ошибках для неверных hex-кодов и проблем кодировки символов."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Сферы применения",
+        "description": "Конвертация hex в текст служит многим важным целям в программировании и разработке.",
+        "items": [
+          { "title": "Программирование и разработка", "description": "Необходим для разработки ПО, отладки и понимания представления данных" },
+          { "title": "Анализ сетей", "description": "Анализ сетевых протоколов, данных пакетов и форматов связи" },
+          { "title": "Кодирование данных", "description": "Обработка различных задач кодирования и декодирования данных в приложениях" },
+          { "title": "Реверс-инжиниринг", "description": "Анализ двоичных данных, прошивок и исполняемых файлов" },
+          { "title": "Образовательное обучение", "description": "Изучение концепций шестнадцатеричной системы и основ информатики" },
+          { "title": "Веб-разработка", "description": "Работа с цветовыми кодами, кодировкой символов и URL-кодированием" },
+          { "title": "Системное администрирование", "description": "Отладка системных файлов, данных конфигурации и анализ логов" },
+          { "title": "Исследования безопасности", "description": "Анализ вредоносного ПО, криминалистических данных и протоколов безопасности" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как использовать",
+        "description": "Следуйте этим простым шагам для конвертации между шестнадцатеричным и текстовым форматами.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите ваши данные",
+            "description": "Напечатайте или вставьте текст или hex-данные в поле ввода, или загрузите файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Выберите режим конвертации",
+            "description": "Выберите между конвертацией Текст в Hex или Hex в текст, используя кнопку переключения режима."
+          },
+          {
+            "step": 3,
+            "title": "Настройте параметры",
+            "description": "Выберите параметры форматирования, такие как тип разделителя, предпочтения регистра и префиксы 0x."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите результаты",
+            "description": "Посмотрите результат конвертации с валидацией в реальном времени и подробной аналитикой."
+          },
+          {
+            "step": 5,
+            "title": "Экспортируйте результаты",
+            "description": "Скопируйте результат в буфер обмена или загрузите как файл для дальнейшего использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры конвертации Hex",
+        "items": [
+          {
+            "input": "Привет мир",
+            "output": "D0 9F D1 80 D0 B8 D0 B2 D0 B5 D1 82 20 D0 BC D0 B8 D1 80",
+            "description": "Текст 'Привет мир' конвертирован в hex в верхнем регистре с пробельными разделителями"
+          },
+          {
+            "input": "А",
+            "output": "0xD090",
+            "description": "Одиночный символ 'А' конвертирован в hex с префиксом 0x"
+          },
+          {
+            "input": "D09FD180D0B8D0B2D0B5D182",
+            "output": "Привет",
+            "description": "Непрерывная hex-строка декодирована обратно в текст"
+          },
+          {
+            "input": "Программирование",
+            "output": "d0:9f:d1:80:d0:be:d0:b3:d1:80:d0:b0:d0:bc:d0:bc:d0:b8:d1:80:d0:be:d0:b2:d0:b0:d0:bd:d0:b8:d0:b5",
+            "description": "Текст конвертирован в hex в нижнем регистре с разделителями-двоеточиями"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему стоит использовать наш Hex-конвертер",
+        "items": [
+          "Бесплатное и неограниченное использование для всех конвертаций",
+          "Быстрые и точные алгоритмы конвертации hex-в-текст",
+          "Поддержка множественных стандартов hex-форматирования",
+          "Идеально для изучения концепций шестнадцатеричной системы",
+          "Ориентированность на конфиденциальность: вся обработка происходит локально",
+          "Адаптивный дизайн для любого устройства",
+          "Не требует регистрации или установки программного обеспечения",
+          "Профессиональная валидация и обработка ошибок"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое шестнадцатеричная система и почему она используется в вычислительной технике?",
+          "answer": "Шестнадцатеричная (hex) система - это система счисления по основанию 16, использующая цифры 0-9 и буквы A-F. Она широко используется в вычислительной технике, поскольку предоставляет более читаемый способ представления двоичных данных, где каждая hex-цифра представляет ровно 4 бита."
+        },
+        {
+          "question": "Что означают различные варианты разделителей?",
+          "answer": "Пробельные разделители (48 65 6C) разделяют каждый байт для удобства чтения, разделители-двоеточия (48:65:6C) часто используются в MAC-адресах и некоторых протоколах, а отсутствие разделителей (48656C) создает непрерывные hex-строки, часто используемые в программировании."
+        },
+        {
+          "question": "Когда следует использовать опцию префикса 0x?",
+          "answer": "Префикс 0x - это программная конвенция, которая явно идентифицирует число как шестнадцатеричное. Он обычно используется в языках программирования как C, JavaScript и Python для отличения hex-значений от десятичных чисел."
+        },
+        {
+          "question": "Может ли этот инструмент обрабатывать Unicode-символы?",
+          "answer": "Да! Наш конвертер правильно обрабатывает Unicode-символы, конвертируя их в их UTF-8 байтовое представление, а затем в шестнадцатеричный код, обеспечивая точную конвертацию международных символов и знаков."
+        },
+        {
+          "question": "Безопасны ли мои данные при использовании этого hex-конвертера?",
+          "answer": "Абсолютно. Вся hex-конвертация происходит локально в вашем браузере - никакие данные не передаются на внешние серверы. Ваш текст и hex-данные остаются полностью приватными и безопасными в течение всего процесса конвертации."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные инструменты кода и данных",
+        "description": "Изучите другие полезные инструменты кодирования и конвертации для разработчиков.",
+        "items": [
+          {
+            "name": "Переводчик двоичного кода",
+            "href": "/ru/tools/binary-code-translator",
+            "description": "Конвертация текста в двоичный код и декодирование двоичного кода в текст"
+          },
+          {
+            "name": "Кодировщик/Декодировщик Base64",
+            "href": "/ru/tools/base64-encoder-decoder",
+            "description": "Кодирование и декодирование текста в формате Base64"
+          },
+          {
+            "name": "Генератор ASCII-арта",
+            "href": "/ru/tools/ascii-art-generator",
+            "description": "Создание ASCII-арта из текста и изображений"
+          },
+          {
+            "name": "Кодировщик/Декодировщик URL",
+            "href": "/ru/tools/url-converter",
+            "description": "Кодирование и декодирование URL для веб-разработки"
+          }
+        ]
+      }
+    }
+  }
+}

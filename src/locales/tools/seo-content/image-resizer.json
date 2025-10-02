@@ -1,0 +1,394 @@
+{
+  "en": {
+    "title": "Free Online Image Resizer Tool - Resize Images to Any Dimensions",
+    "metaDescription": "Resize images online with precision. Perfect for web optimization, social media, and thumbnails. Supports JPG, PNG, WebP with custom dimensions, quality control, and instant preview. Free & unlimited.",
+    "sections": {
+      "intro": {
+        "title": "Professional Image Resizer & Photo Optimizer",
+        "content": "Transform your photos with our advanced online image resizer tool. Whether you're optimizing images for web performance, creating thumbnails, or preparing content for social media platforms, our tool provides pixel-perfect resizing with real-time preview. Features custom dimensions, percentage scaling, quality control, format conversion, and preset sizes - all processed securely in your browser."
+      },
+      "features": {
+        "title": "Advanced Image Resizing Features",
+        "items": [
+          {
+            "title": "Custom Dimensions",
+            "description": "Resize to exact pixel dimensions or use percentage scaling for precise control over image size"
+          },
+          {
+            "title": "Aspect Ratio Control",
+            "description": "Choose to maintain original proportions or resize to exact dimensions with optional background fill"
+          },
+          {
+            "title": "Social Media Presets",
+            "description": "One-click presets for Instagram, Facebook, Twitter, LinkedIn and other popular platform requirements"
+          },
+          {
+            "title": "Multiple Output Formats",
+            "description": "Export in PNG, JPEG, or WebP formats with customizable quality settings for optimal file size"
+          },
+          {
+            "title": "Real-time Preview",
+            "description": "See your resized result instantly as you adjust dimensions with live preview updates"
+          },
+          {
+            "title": "Batch Processing Ready",
+            "description": "Consistent settings for processing multiple images with the same resize parameters"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Resize Images Online",
+        "description": "Follow these simple steps to resize your images to any dimensions:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Upload Your Image",
+            "description": "Click or drag and drop to upload JPG, PNG, or WebP files up to 10MB in size."
+          },
+          {
+            "step": 2,
+            "title": "Set Target Dimensions",
+            "description": "Enter custom width/height in pixels, use percentage scaling, or select from popular presets."
+          },
+          {
+            "step": 3,
+            "title": "Configure Options",
+            "description": "Choose output format, quality settings, aspect ratio handling, and interpolation method."
+          },
+          {
+            "step": 4,
+            "title": "Download Result",
+            "description": "Preview the resized image and download it instantly or copy to clipboard for immediate use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Image Resizing Examples",
+        "description": "See how different resizing techniques optimize your images:",
+        "items": [
+          {
+            "input": "High-res photo 4000×3000px (2.5MB)",
+            "output": "Web-optimized 1200×900px (180KB)",
+            "description": "Perfect for website galleries and blog posts"
+          },
+          {
+            "input": "Large product image 2400×2400px",
+            "output": "Thumbnail 300×300px for listings",
+            "description": "Ideal for e-commerce product galleries"
+          },
+          {
+            "input": "Portrait photo 3024×4032px",
+            "output": "Instagram story 1080×1920px",
+            "description": "Social media content optimization"
+          },
+          {
+            "input": "Banner image 1920×1080px",
+            "output": "Mobile banner 728×410px",
+            "description": "Responsive design image variants"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Image Resizing Use Cases",
+        "description": "Discover when and why to use our image resizer for various projects:",
+        "items": [
+          {
+            "title": "Web Performance Optimization",
+            "description": "Reduce image file sizes for faster page loading while maintaining visual quality for better user experience and SEO."
+          },
+          {
+            "title": "Social Media Content",
+            "description": "Create perfectly sized images for Instagram posts, Facebook covers, Twitter headers, and LinkedIn banners."
+          },
+          {
+            "title": "E-commerce Product Images",
+            "description": "Generate consistent thumbnail sizes and detail views for online stores and product catalogs."
+          },
+          {
+            "title": "Email Marketing",
+            "description": "Optimize images for email newsletters with proper dimensions that display correctly across email clients."
+          },
+          {
+            "title": "Mobile App Development",
+            "description": "Create multiple image sizes for different screen densities and device types in mobile applications."
+          },
+          {
+            "title": "Print to Digital Conversion",
+            "description": "Convert high-resolution print images to web-friendly sizes while maintaining quality and clarity."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Image Resizer",
+        "items": [
+          "100% free with unlimited usage - no watermarks, registration, or subscriptions required",
+          "Privacy-focused processing - all image resizing happens in your browser, never uploaded to servers",
+          "Multiple resize modes - exact dimensions, aspect ratio preservation, or percentage-based scaling",
+          "High-quality output - advanced interpolation algorithms maintain image sharpness and clarity",
+          "Real-time preview - see exactly how your resized image will look before downloading",
+          "Mobile-optimized interface - works perfectly on smartphones and tablets with touch controls",
+          "Multiple export formats - PNG for transparency, JPEG for photos, WebP for web optimization",
+          "Social media presets - one-click sizing for all major platforms and requirements",
+          "Batch-ready workflow - consistent settings for processing multiple images efficiently",
+          "Professional tools - quality control, interpolation methods, and precise pixel dimensions"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Image & Design Tools",
+        "description": "Explore other useful tools for image editing and optimization:",
+        "items": [
+          {
+            "name": "Image Cropper",
+            "description": "Crop images to specific areas while maintaining or adjusting dimensions",
+            "href": "/tools/image-cropper"
+          },
+          {
+            "name": "JPG to PNG Converter",
+            "description": "Convert JPEG images to PNG format for transparency and better quality",
+            "href": "/tools/jpg-to-png"
+          },
+          {
+            "name": "WebP Converter",
+            "description": "Convert images to modern WebP format for faster web loading",
+            "href": "/tools/png-to-webp"
+          },
+          {
+            "name": "Image to Text OCR",
+            "description": "Extract text content from images using optical character recognition",
+            "href": "/tools/image-to-text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What image formats can I resize?",
+          "answer": "Our image resizer supports JPEG, PNG, and WebP formats for both input and output. You can upload images in any of these formats and choose your preferred output format with customizable quality settings."
+        },
+        {
+          "question": "Is there a limit on image file size?",
+          "answer": "Yes, we support image files up to 10MB in size. This covers most high-resolution photos and design files. For very large files, we recommend basic compression before resizing for optimal performance."
+        },
+        {
+          "question": "Can I maintain the aspect ratio when resizing?",
+          "answer": "Absolutely! You can choose to maintain the original aspect ratio (proportions) or resize to exact dimensions. When maintaining aspect ratio, you can add background color to fill any empty space if needed."
+        },
+        {
+          "question": "Are my images stored on your servers?",
+          "answer": "No, your privacy is fully protected. All image processing happens directly in your browser using client-side JavaScript. Your images are never uploaded to our servers or stored anywhere. They remain completely private on your device."
+        },
+        {
+          "question": "What are the social media presets?",
+          "answer": "We provide one-click presets for popular platforms: Instagram Post (1080×1080), Instagram Story (1080×1920), Facebook Post (1200×630), Twitter Post (1200×675), LinkedIn Post (1200×627), and common web sizes."
+        },
+        {
+          "question": "How do I resize images by percentage?",
+          "answer": "Select the 'Percentage' resize mode and enter your desired scaling factor. For example, 50% will make the image half its original size, while 200% will double it. This maintains the original aspect ratio automatically."
+        },
+        {
+          "question": "What's the maximum size I can resize to?",
+          "answer": "For performance and browser compatibility, we limit output dimensions to 5000×5000 pixels. This covers virtually all practical use cases from thumbnails to high-resolution displays."
+        },
+        {
+          "question": "Can I batch resize multiple images?",
+          "answer": "While you process images one at a time, our tool maintains your settings between uploads, making it easy to process multiple images with the same resize parameters quickly and consistently."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Инструмент Изменения Размера Изображений - Изменение до Любых Размеров",
+    "metaDescription": "Изменяйте размер изображений онлайн с точностью. Идеально для веб-оптимизации, социальных сетей и миниатюр. Поддержка JPG, PNG, WebP с пользовательскими размерами, контролем качества и мгновенным предварительным просмотром. Бесплатно и без ограничений.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Изменитель Размера Изображений и Оптимизатор Фото",
+        "content": "Преобразуйте ваши фотографии с помощью нашего продвинутого онлайн инструмента изменения размера изображений. Оптимизируете ли вы изображения для веб-производительности, создаете миниатюры или готовите контент для социальных медиа платформ, наш инструмент обеспечивает пиксель-идеальное изменение размера с предварительным просмотром в реальном времени. Включает пользовательские размеры, процентное масштабирование, контроль качества, конверсию форматов и предустановленные размеры - все обрабатывается безопасно в вашем браузере."
+      },
+      "features": {
+        "title": "Продвинутые Функции Изменения Размера Изображений",
+        "items": [
+          {
+            "title": "Пользовательские Размеры",
+            "description": "Изменяйте размер до точных пиксельных размеров или используйте процентное масштабирование для точного контроля размера изображения"
+          },
+          {
+            "title": "Контроль Соотношения Сторон",
+            "description": "Выбирайте сохранение исходных пропорций или изменение до точных размеров с опциональной заливкой фона"
+          },
+          {
+            "title": "Предустановки Социальных Сетей",
+            "description": "Предустановки одним кликом для Instagram, Facebook, Twitter, LinkedIn и других популярных требований платформ"
+          },
+          {
+            "title": "Множественные Форматы Вывода",
+            "description": "Экспортируйте в форматы PNG, JPEG или WebP с настраиваемыми параметрами качества для оптимального размера файла"
+          },
+          {
+            "title": "Предварительный Просмотр в Реальном Времени",
+            "description": "Видите результат изменения размера мгновенно при настройке размеров с живыми обновлениями предварительного просмотра"
+          },
+          {
+            "title": "Готовность к Пакетной Обработке",
+            "description": "Постоянные настройки для обработки множественных изображений с одинаковыми параметрами изменения размера"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Изменить Размер Изображений Онлайн",
+        "description": "Следуйте этим простым шагам для изменения размера ваших изображений до любых размеров:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Загрузите Ваше Изображение",
+            "description": "Кликните или перетащите для загрузки файлов JPG, PNG или WebP размером до 10МБ."
+          },
+          {
+            "step": 2,
+            "title": "Установите Целевые Размеры",
+            "description": "Введите пользовательскую ширину/высоту в пикселях, используйте процентное масштабирование или выберите из популярных предустановок."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Опции",
+            "description": "Выберите формат вывода, настройки качества, обработку соотношения сторон и метод интерполяции."
+          },
+          {
+            "step": 4,
+            "title": "Скачайте Результат",
+            "description": "Просмотрите изображение с измененным размером и скачайте его мгновенно или скопируйте в буфер обмена для немедленного использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Изменения Размера Изображений",
+        "description": "Посмотрите, как различные техники изменения размера оптимизируют ваши изображения:",
+        "items": [
+          {
+            "input": "Высокого разрешения фото 4000×3000px (2.5МБ)",
+            "output": "Веб-оптимизированное 1200×900px (180КБ)",
+            "description": "Идеально для веб-галерей и блог-постов"
+          },
+          {
+            "input": "Большое изображение товара 2400×2400px",
+            "output": "Миниатюра 300×300px для листингов",
+            "description": "Идеально для галерей товаров e-commerce"
+          },
+          {
+            "input": "Портретная фотография 3024×4032px",
+            "output": "История Instagram 1080×1920px",
+            "description": "Оптимизация контента социальных сетей"
+          },
+          {
+            "input": "Баннерное изображение 1920×1080px",
+            "output": "Мобильный баннер 728×410px",
+            "description": "Варианты изображений для отзывчивого дизайна"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Обычные Случаи Использования Изменения Размера Изображений",
+        "description": "Откройте, когда и почему использовать наш изменитель размера изображений для различных проектов:",
+        "items": [
+          {
+            "title": "Оптимизация Веб-Производительности",
+            "description": "Уменьшайте размеры файлов изображений для более быстрой загрузки страниц сохраняя визуальное качество для лучшего пользовательского опыта и SEO."
+          },
+          {
+            "title": "Контент Социальных Сетей",
+            "description": "Создавайте идеально размеренные изображения для постов Instagram, обложек Facebook, заголовков Twitter и баннеров LinkedIn."
+          },
+          {
+            "title": "Изображения Товаров E-commerce",
+            "description": "Генерируйте постоянные размеры миниатюр и детальные виды для онлайн магазинов и каталогов товаров."
+          },
+          {
+            "title": "Email Маркетинг",
+            "description": "Оптимизируйте изображения для email рассылок с правильными размерами, которые отображаются корректно в различных email клиентах."
+          },
+          {
+            "title": "Разработка Мобильных Приложений",
+            "description": "Создавайте множественные размеры изображений для различных плотностей экранов и типов устройств в мобильных приложениях."
+          },
+          {
+            "title": "Конверсия Печати в Цифровой Формат",
+            "description": "Конвертируйте изображения высокого разрешения для печати в веб-дружественные размеры сохраняя качество и четкость."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Выбрать Наш Изменитель Размера Изображений",
+        "items": [
+          "100% бесплатно с неограниченным использованием - без водяных знаков, регистрации или подписок",
+          "Ориентированная на приватность обработка - все изменение размера изображений происходит в вашем браузере, никогда не загружается на серверы",
+          "Множественные режимы изменения размера - точные размеры, сохранение пропорций или процентное масштабирование",
+          "Высококачественный вывод - продвинутые алгоритмы интерполяции сохраняют резкость и четкость изображения",
+          "Предварительный просмотр в реальном времени - видите точно, как будет выглядеть ваше изображение с измененным размером перед скачиванием",
+          "Мобильно-оптимизированный интерфейс - идеально работает на смартфонах и планшетах с сенсорным управлением",
+          "Множественные форматы экспорта - PNG для прозрачности, JPEG для фотографий, WebP для веб-оптимизации",
+          "Предустановки социальных сетей - изменение размера одним кликом для всех основных платформ и требований",
+          "Готовый к пакетной обработке рабочий процесс - постоянные настройки для эффективной обработки множественных изображений",
+          "Профессиональные инструменты - контроль качества, методы интерполяции и точные пиксельные размеры"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты Изображений и Дизайна",
+        "description": "Изучите другие полезные инструменты для редактирования и оптимизации изображений:",
+        "items": [
+          {
+            "name": "Обрезчик Изображений",
+            "description": "Обрезайте изображения до определенных областей сохраняя или настраивая размеры",
+            "href": "/tools/image-cropper"
+          },
+          {
+            "name": "JPG в PNG Конвертер",
+            "description": "Конвертируйте JPEG изображения в PNG формат для прозрачности и лучшего качества",
+            "href": "/tools/jpg-to-png"
+          },
+          {
+            "name": "WebP Конвертер",
+            "description": "Конвертируйте изображения в современный WebP формат для более быстрой веб-загрузки",
+            "href": "/tools/png-to-webp"
+          },
+          {
+            "name": "Изображение в Текст OCR",
+            "description": "Извлекайте текстовое содержимое из изображений используя оптическое распознавание символов",
+            "href": "/tools/image-to-text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы изображений я могу изменять по размеру?",
+          "answer": "Наш изменитель размера изображений поддерживает форматы JPEG, PNG и WebP как для ввода, так и для вывода. Вы можете загружать изображения в любом из этих форматов и выбирать предпочитаемый формат вывода с настраиваемыми параметрами качества."
+        },
+        {
+          "question": "Есть ли ограничение на размер файла изображения?",
+          "answer": "Да, мы поддерживаем файлы изображений размером до 10МБ. Это покрывает большинство фотографий высокого разрешения и дизайнерских файлов. Для очень больших файлов мы рекомендуем базовое сжатие перед изменением размера для оптимальной производительности."
+        },
+        {
+          "question": "Могу ли я сохранить соотношение сторон при изменении размера?",
+          "answer": "Абсолютно! Вы можете выбрать сохранение оригинального соотношения сторон (пропорций) или изменение размера до точных размеров. При сохранении соотношения сторон вы можете добавить цвет фона для заполнения любого пустого пространства при необходимости."
+        },
+        {
+          "question": "Сохраняются ли мои изображения на ваших серверах?",
+          "answer": "Нет, ваша приватность полностью защищена. Вся обработка изображений происходит непосредственно в вашем браузере используя клиентский JavaScript. Ваши изображения никогда не загружаются на наши серверы и не сохраняются где-либо. Они остаются полностью приватными на вашем устройстве."
+        },
+        {
+          "question": "Что такое предустановки социальных сетей?",
+          "answer": "Мы предоставляем предустановки одним кликом для популярных платформ: Пост Instagram (1080×1080), История Instagram (1080×1920), Пост Facebook (1200×630), Пост Twitter (1200×675), Пост LinkedIn (1200×627) и общие веб-размеры."
+        },
+        {
+          "question": "Как изменить размер изображений по процентам?",
+          "answer": "Выберите режим изменения размера 'Процентное Соотношение' и введите желаемый коэффициент масштабирования. Например, 50% сделает изображение половиной его исходного размера, в то время как 200% удвоит его. Это автоматически сохраняет исходное соотношение сторон."
+        },
+        {
+          "question": "Какой максимальный размер я могу установить при изменении?",
+          "answer": "Для производительности и совместимости браузера мы ограничиваем выходные размеры до 5000×5000 пикселей. Это покрывает практически все практические случаи использования от миниатюр до дисплеев высокого разрешения."
+        },
+        {
+          "question": "Могу ли я пакетно изменить размер множественных изображений?",
+          "answer": "Хотя вы обрабатываете изображения по одному, наш инструмент сохраняет ваши настройки между загрузками, делая легким обработку множественных изображений с одинаковыми параметрами изменения размера быстро и постоянно."
+        }
+      ]
+    }
+  }
+}

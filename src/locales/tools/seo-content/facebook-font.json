@@ -1,0 +1,284 @@
+{
+  "en": {
+    "title": "Facebook Font Generator - Stylish Unicode Text for Social Media",
+    "metaDescription": "Generate stylish Facebook fonts with our Unicode text generator. Create bold, italic, script, and monospace fonts for Facebook posts, comments, stories, and profiles. Copy and paste anywhere!",
+    "sections": {
+      "intro": {
+        "title": "Facebook Font Generator - Stylish Unicode Text for Social Media",
+        "content": "Transform your regular text into eye-catching Facebook fonts using our advanced Unicode font generator. Create stylish text for Facebook posts, comments, stories, and profile updates with bold serif, italic, script, sans-serif, and monospace styles. Perfect for businesses, content creators, and anyone looking to make their Facebook content stand out with unique typography."
+      },
+      "features": {
+        "title": "Advanced Facebook Font Generator Features",
+        "items": [
+          { "title": "6 Stylish Font Styles", "description": "Bold serif, italic, bold italic, sans serif bold, monospace, and elegant script fonts" },
+          { "title": "Universal Compatibility", "description": "Works on all platforms - Facebook, Instagram, Twitter, LinkedIn, and more" },
+          { "title": "Real-time Preview", "description": "See your text transformed instantly as you type" },
+          { "title": "One-Click Copy", "description": "Copy your styled text to clipboard with a single click" },
+          { "title": "File Upload Support", "description": "Upload text files to convert large amounts of text at once" },
+          { "title": "Mobile Friendly", "description": "Optimized for mobile devices - perfect for on-the-go content creation" },
+          { "title": "No Registration Required", "description": "Start creating stylish fonts immediately without signing up" },
+          { "title": "Privacy-First", "description": "All font conversion happens locally - your text never leaves your device" },
+          { "title": "Download Options", "description": "Save your converted text as files for later use" },
+          { "title": "Multilingual Support", "description": "Works with any language and special characters" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Facebook & Social Media Content",
+        "description": "Our Facebook font generator is essential for creating engaging social media content across platforms.",
+        "items": [
+          { "title": "Facebook Posts", "description": "Make your Facebook posts stand out with unique typography" },
+          { "title": "Facebook Comments", "description": "Create eye-catching comments that get noticed" },
+          { "title": "Facebook Stories", "description": "Add stylish text to your Facebook stories and highlights" },
+          { "title": "Business Pages", "description": "Maintain consistent brand aesthetics with custom fonts" },
+          { "title": "Content Marketing", "description": "Differentiate your content with unique text styling" },
+          { "title": "Event Promotions", "description": "Create attention-grabbing text for event announcements" },
+          { "title": "Product Announcements", "description": "Enhance product listings with stylish font variations" },
+          { "title": "Personal Branding", "description": "Develop a unique personal brand with consistent typography" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Facebook Font Generator",
+        "description": "Follow these simple steps to create stylish Facebook fonts in seconds.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input field, or upload a text file for batch conversion."
+          },
+          {
+            "step": 2,
+            "title": "Choose Font Style",
+            "description": "Select from 6 different Facebook font styles including bold serif, italic, script, and monospace."
+          },
+          {
+            "step": 3,
+            "title": "Preview and Copy",
+            "description": "See your text transformed in real-time and copy it to your clipboard with one click."
+          },
+          {
+            "step": 4,
+            "title": "Paste on Facebook",
+            "description": "Paste your stylish text directly into Facebook posts, comments, stories, or any social media platform."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Facebook Font Style Examples",
+        "description": "See how different font styles transform your text for Facebook and social media.",
+        "items": [
+          { "title": "Bold Serif", "input": "Like and Share this post", "output": "𝐋𝐢𝐤𝐞 𝐚𝐧𝐝 𝐒𝐡𝐚𝐫𝐞 𝐭𝐡𝐢𝐬 𝐩𝐨𝐬𝐭", "description": "Perfect for headlines and important announcements" },
+          { "title": "Italic Style", "input": "New product launching soon", "output": "𝑁𝑒𝑤 𝑝𝑟𝑜𝑑𝑢𝑐𝑡 𝑙𝑎𝑢𝑛𝑐ℎ𝑖𝑛𝑔 𝑠𝑜𝑜𝑛", "description": "Great for subtle emphasis and quotes" },
+          { "title": "Script Font", "input": "Content Creator", "output": "𝒞𝑜𝓃𝓉𝑒𝓃𝓉 𝒞𝓇𝑒𝒶𝓉𝑜𝓇", "description": "Elegant and stylish for personal brands" },
+          { "title": "Monospace", "input": "Follow • Like • Share", "output": "𝙵𝚘𝚕𝚕𝚘𝚠 • 𝙻𝚒𝚔𝚎 • 𝚂𝚑𝚊𝚛𝚎", "description": "Technical and modern aesthetic" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Facebook Font Generator",
+        "content": "Professional Facebook font generation with advanced Unicode styling and social media optimization.",
+        "items": [
+          "Completely free with unlimited conversions",
+          "No registration or account required",
+          "Works on all devices and platforms",
+          "Privacy-focused - no data collection",
+          "6 different professional font styles",
+          "Real-time preview and instant copying",
+          "File upload support for batch processing",
+          "Compatible with all social media platforms"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Do Facebook fonts work on all social media platforms?",
+          "answer": "Yes! Our Facebook fonts use Unicode characters that are supported across all major platforms including Facebook, Instagram, Twitter, LinkedIn, TikTok, and more. The fonts will display consistently across different devices and operating systems."
+        },
+        {
+          "question": "Are Facebook fonts safe to use in my posts and comments?",
+          "answer": "Absolutely! Our Facebook fonts use standard Unicode characters that are officially supported by social media platforms. They won't cause any issues with your account and are safe to use in posts, comments, and profile updates."
+        },
+        {
+          "question": "Can I use these fonts for business and marketing purposes?",
+          "answer": "Yes, you can use our Facebook fonts for both personal and commercial purposes. They're perfect for business pages, marketing campaigns, content creation, and brand consistency across social media platforms."
+        },
+        {
+          "question": "Why don't some characters appear in certain font styles?",
+          "answer": "Some Unicode font styles don't have equivalents for all characters, especially numbers and special symbols. When a character doesn't have a styled version, the original character is preserved to maintain readability."
+        },
+        {
+          "question": "Can I save my favorite font styles?",
+          "answer": "While our tool doesn't save preferences, you can bookmark the page and use the download feature to save converted text files. The tool remembers your last selected style during your current session."
+        },
+        {
+          "question": "Do the fonts work on mobile devices?",
+          "answer": "Yes! Our Facebook font generator is fully optimized for mobile devices. The Unicode fonts display perfectly on iOS, Android, and all mobile browsers, making it perfect for creating content on the go."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Styling Tools",
+        "description": "Explore more text transformation tools to enhance your social media content.",
+        "items": [
+          {
+            "name": "Instagram Font Generator",
+            "description": "Stylish fonts specifically optimized for Instagram posts and profiles",
+            "href": "/tools/instagram-fonts"
+          },
+          {
+            "name": "Discord Font Generator", 
+            "description": "Unique text styles for Discord messages and usernames",
+            "href": "/tools/discord-font"
+          },
+          {
+            "name": "Bold Text Generator",
+            "description": "Generate bold Unicode text that works everywhere",
+            "href": "/tools/bold-text"
+          },
+          {
+            "name": "Italic Text Generator",
+            "description": "Create italic Unicode text for emphasis and style",
+            "href": "/tools/italic-text"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Генератор Facebook Шрифтов - Стильный Unicode Текст для Социальных Сетей",
+    "metaDescription": "Генерируйте стильные Facebook шрифты с нашим генератором Unicode текста. Создавайте жирный, курсивный, скриптовый и моноширинный шрифты для постов, комментариев, историй и профилей Facebook. Копируйте и вставляйте где угодно!",
+    "sections": {
+      "intro": {
+        "title": "Генератор Facebook Шрифтов - Стильный Unicode Текст для Социальных Сетей",
+        "content": "Преобразуйте обычный текст в привлекательные Facebook шрифты с помощью нашего продвинутого генератора Unicode шрифтов. Создавайте стильный текст для постов, комментариев, историй и обновлений профиля в Facebook с жирным шрифтом, курсивом, скриптом, без засечек и моноширинными стилями. Идеально для бизнеса, создателей контента и всех, кто хочет выделить свой Facebook контент уникальной типографикой."
+      },
+      "features": {
+        "title": "Продвинутые Функции Генератора Facebook Шрифтов",
+        "items": [
+          { "title": "6 Стильных Шрифтов", "description": "Жирный шрифт, курсив, жирный курсив, жирный без засечек, моноширинный и элегантный скриптовый шрифты" },
+          { "title": "Универсальная Совместимость", "description": "Работает на всех платформах - Facebook, Instagram, Twitter, LinkedIn и других" },
+          { "title": "Предпросмотр в Реальном Времени", "description": "Видите преобразование текста мгновенно при печати" },
+          { "title": "Копирование Одним Кликом", "description": "Скопируйте стильный текст в буфер обмена одним щелчком" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы для конвертации больших объемов текста" },
+          { "title": "Мобильная Оптимизация", "description": "Оптимизировано для мобильных устройств - идеально для создания контента на ходу" },
+          { "title": "Без Регистрации", "description": "Начните создавать стильные шрифты немедленно без регистрации" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся конвертация шрифтов происходит локально - ваш текст не покидает устройство" },
+          { "title": "Опции Скачивания", "description": "Сохраняйте конвертированный текст в файлы для дальнейшего использования" },
+          { "title": "Многоязычная Поддержка", "description": "Работает с любым языком и специальными символами" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Facebook и Контента Социальных Сетей",
+        "description": "Наш генератор Facebook шрифтов необходим для создания привлекательного контента в социальных сетях на всех платформах.",
+        "items": [
+          { "title": "Посты Facebook", "description": "Выделите свои посты Facebook уникальной типографикой" },
+          { "title": "Комментарии Facebook", "description": "Создавайте привлекающие внимание комментарии, которые будут замечены" },
+          { "title": "Истории Facebook", "description": "Добавляйте стильный текст в истории и основные моменты Facebook" },
+          { "title": "Бизнес-страницы", "description": "Поддерживайте последовательную эстетику бренда с пользовательскими шрифтами" },
+          { "title": "Контент-маркетинг", "description": "Отличайте свой контент уникальным стилем текста" },
+          { "title": "Продвижение Мероприятий", "description": "Создавайте привлекающий внимание текст для объявлений о мероприятиях" },
+          { "title": "Объявления о Товарах", "description": "Улучшайте списки товаров стильными вариантами шрифтов" },
+          { "title": "Личный Брендинг", "description": "Развивайте уникальный личный бренд с последовательной типографикой" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Facebook Шрифтов",
+        "description": "Следуйте простым шагам для создания стильных Facebook шрифтов за секунды.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Наберите или вставьте текст в поле ввода, или загрузите текстовый файл для пакетной конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Стиль Шрифта",
+            "description": "Выберите из 6 различных стилей Facebook шрифтов, включая жирный шрифт, курсив, скрипт и моноширинный."
+          },
+          {
+            "step": 3,
+            "title": "Предпросмотр и Копирование",
+            "description": "Видите преобразование текста в реальном времени и скопируйте в буфер обмена одним кликом."
+          },
+          {
+            "step": 4,
+            "title": "Вставьте в Facebook",
+            "description": "Вставьте стильный текст прямо в посты, комментарии, истории Facebook или любую платформу социальных сетей."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Стилей Facebook Шрифтов",
+        "description": "Посмотрите, как различные стили шрифтов преобразуют ваш текст для Facebook и социальных сетей.",
+        "items": [
+          { "title": "Жирный Шрифт", "input": "Лайк и Поделиться постом", "output": "𝐋𝐚𝐢̆𝐤 𝐢 𝐏𝐨𝐝𝐞𝐥𝐢𝐭𝐬𝐲 𝐩𝐨𝐬𝐭𝐨𝐦", "description": "Идеально для заголовков и важных объявлений" },
+          { "title": "Курсивный Стиль", "input": "Новый продукт скоро", "output": "𝑁𝑜𝑣𝑦𝑖 𝑝𝑟𝑜𝑑𝑢𝑘𝑡 𝑠𝑘𝑜𝑟𝑜", "description": "Отлично для тонких акцентов и цитат" },
+          { "title": "Скриптовый Шрифт", "input": "Создатель Контента", "output": "𝒮𝑜𝓏𝒹𝒶𝓉𝑒𝓁 𝒦𝑜𝓃𝓉𝑒𝓃𝓉𝒶", "description": "Элегантный и стильный для личных брендов" },
+          { "title": "Моноширинный", "input": "Подписаться • Лайк • Поделиться", "output": "𝙿𝚘𝚍𝚙𝚒𝚜𝚊𝚝𝚜𝚢 • 𝙻𝚊𝚒̆𝚔 • 𝙿𝚘𝚍𝚎𝚕𝚒𝚝𝚜𝚢", "description": "Техническая и современная эстетика" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Генератор Facebook Шрифтов",
+        "content": "Профессиональная генерация Facebook шрифтов с продвинутым Unicode стилизацией и оптимизацией для социальных сетей.",
+        "items": [
+          "Полностью бесплатно с неограниченными конвертациями",
+          "Без регистрации или аккаунта",
+          "Работает на всех устройствах и платформах",
+          "Фокус на конфиденциальности - никакого сбора данных",
+          "6 различных профессиональных стилей шрифтов",
+          "Предпросмотр в реальном времени и мгновенное копирование",
+          "Поддержка загрузки файлов для пакетной обработки",
+          "Совместимо со всеми платформами социальных сетей"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Работают ли Facebook шрифты на всех платформах социальных сетей?",
+          "answer": "Да! Наши Facebook шрифты используют символы Unicode, которые поддерживаются всеми основными платформами, включая Facebook, Instagram, Twitter, LinkedIn, TikTok и другими. Шрифты отображаются последовательно на разных устройствах и операционных системах."
+        },
+        {
+          "question": "Безопасно ли использовать Facebook шрифты в постах и комментариях?",
+          "answer": "Абсолютно! Наши Facebook шрифты используют стандартные символы Unicode, которые официально поддерживаются платформами социальных сетей. Они не вызовут проблем с вашим аккаунтом и безопасны для использования в постах, комментариях и обновлениях профиля."
+        },
+        {
+          "question": "Могу ли я использовать эти шрифты для бизнеса и маркетинга?",
+          "answer": "Да, вы можете использовать наши Facebook шрифты как для личных, так и для коммерческих целей. Они идеально подходят для бизнес-страниц, маркетинговых кампаний, создания контента и согласованности бренда в социальных сетях."
+        },
+        {
+          "question": "Почему некоторые символы не отображаются в определенных стилях шрифтов?",
+          "answer": "Некоторые стили Unicode шрифтов не имеют эквивалентов для всех символов, особенно цифр и специальных символов. Когда у символа нет стилизованной версии, оригинальный символ сохраняется для поддержания читаемости."
+        },
+        {
+          "question": "Могу ли я сохранить свои любимые стили шрифтов?",
+          "answer": "Хотя наш инструмент не сохраняет предпочтения, вы можете добавить страницу в закладки и использовать функцию скачивания для сохранения конвертированных текстовых файлов. Инструмент запоминает ваш последний выбранный стиль во время текущей сессии."
+        },
+        {
+          "question": "Работают ли шрифты на мобильных устройствах?",
+          "answer": "Да! Наш генератор Facebook шрифтов полностью оптимизирован для мобильных устройств. Unicode шрифты отображаются идеально на iOS, Android и всех мобильных браузерах, что делает его идеальным для создания контента на ходу."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Стилизации Текста",
+        "description": "Изучите больше инструментов преобразования текста для улучшения вашего контента в социальных сетях.",
+        "items": [
+          {
+            "name": "Генератор Instagram Шрифтов",
+            "description": "Стильные шрифты, специально оптимизированные для постов и профилей Instagram",
+            "href": "/tools/instagram-fonts"
+          },
+          {
+            "name": "Генератор Discord Шрифтов",
+            "description": "Уникальные стили текста для сообщений и имен пользователей Discord",
+            "href": "/tools/discord-font"
+          },
+          {
+            "name": "Генератор Жирного Текста",
+            "description": "Генерируйте жирный Unicode текст, который работает везде",
+            "href": "/tools/bold-text"
+          },
+          {
+            "name": "Генератор Курсивного Текста",
+            "description": "Создавайте курсивный Unicode текст для акцентов и стиля",
+            "href": "/tools/italic-text"
+          }
+        ]
+      }
+    }
+  }
+}

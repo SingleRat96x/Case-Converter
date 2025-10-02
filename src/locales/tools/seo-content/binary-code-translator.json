@@ -1,0 +1,332 @@
+{
+  "en": {
+    "title": "Free Binary Code Translator - Convert Text to Binary & Binary to Text",
+    "metaDescription": "Convert text to binary code and binary to text instantly with our free online binary translator. Supports custom delimiters, padding options, and bulk processing. Perfect for programming, data encoding, and computer science education.",
+    "sections": {
+      "intro": {
+        "title": "Binary Code Translator",
+        "content": "Transform text into binary code and decode binary back to readable text with our powerful binary translator. Essential for programming, computer science education, data encoding, and understanding how computers process information at the most fundamental level."
+      },
+      "features": {
+        "title": "Comprehensive Binary Conversion Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Convert text to binary code or decode binary back to text with one-click mode switching."
+          },
+          {
+            "title": "Custom Formatting Options",
+            "description": "Choose from space, newline, or no delimiters with adjustable padding and group sizes."
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "See instant conversion results as you type with live character and bit counting."
+          },
+          {
+            "title": "File Upload Support",
+            "description": "Process large text files or binary data files directly through file upload functionality."
+          },
+          {
+            "title": "Educational Analytics",
+            "description": "View detailed statistics including character count, bit count, and byte calculations."
+          },
+          {
+            "title": "Copy & Download",
+            "description": "Easily copy results to clipboard or download as text files for further use."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Use Cases",
+        "description": "Binary code conversion serves many important purposes across programming, education, and data analysis contexts.",
+        "items": [
+          { "title": "Programming & Development", "description": "Essential for software development, debugging, and understanding data representation" },
+          { "title": "Computer Science Education", "description": "Learn fundamental computing concepts and binary number systems" },
+          { "title": "Data Encoding", "description": "Handle data encoding, transmission protocols, and format conversions" },
+          { "title": "Character Encoding", "description": "Understand ASCII, Unicode, and various character encoding systems" },
+          { "title": "Debugging & Analysis", "description": "Debug binary data formats and analyze data structures" },
+          { "title": "Educational Projects", "description": "Create encoded messages, puzzles, and learning exercises" },
+          { "title": "Network Protocols", "description": "Analyze network communication and protocol data formats" },
+          { "title": "Digital Forensics", "description": "Investigate digital evidence and recover data from binary formats" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "description": "Follow these simple steps to convert between text and binary code formats.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Data",
+            "description": "Type or paste your text or binary code in the input field, or upload a file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Select Conversion Mode",
+            "description": "Choose between Text to Binary or Binary to Text conversion using the mode toggle button."
+          },
+          {
+            "step": 3,
+            "title": "Configure Options",
+            "description": "Adjust formatting options like delimiter type, padding settings, and bit group sizes."
+          },
+          {
+            "step": 4,
+            "title": "View Results",
+            "description": "See the converted result with real-time validation and detailed binary statistics."
+          },
+          {
+            "step": 5,
+            "title": "Export Results",
+            "description": "Copy the result to clipboard or download as a file for further use in your projects."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Binary Conversion Examples",
+        "items": [
+          {
+            "input": "Hello",
+            "output": "01001000 01100101 01101100 01101100 01101111",
+            "description": "Text 'Hello' converted to binary with space delimiter and 8-bit padding"
+          },
+          {
+            "input": "A",
+            "output": "01000001",
+            "description": "Single character 'A' converted to 8-bit binary representation"
+          },
+          {
+            "input": "01001000011001010110110001101100011011110000101000001010",
+            "output": "Hello\n\n",
+            "description": "Binary string decoded back to text with newlines"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Binary Translator",
+        "items": [
+          "Free and unlimited usage for all users",
+          "Fast, accurate binary conversion algorithms",
+          "Educational tool for learning computer science concepts",
+          "Professional formatting options for development work",
+          "Privacy-focused: all processing happens in your browser",
+          "Mobile-responsive design for use on any device",
+          "No registration or software installation required",
+          "Supports various binary formatting standards"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is binary code and why is it important?",
+          "answer": "Binary code is the fundamental language of computers, using only 0s and 1s to represent all data. It's important because it's how computers store and process all information, from text and images to programs and system instructions."
+        },
+        {
+          "question": "How does ASCII encoding relate to binary conversion?",
+          "answer": "ASCII assigns numerical values to characters, which are then converted to binary. For example, 'A' has ASCII value 65, which converts to binary 01000001. Our tool handles this conversion automatically."
+        },
+        {
+          "question": "What are the different delimiter options for?",
+          "answer": "Delimiters help separate binary groups for readability. Space delimiters (01001000 01100101) are most common, newline delimiters stack vertically, and no delimiters create continuous strings (0100100001100101)."
+        },
+        {
+          "question": "Can I convert files larger than just text snippets?",
+          "answer": "Yes! Our tool supports file uploads, allowing you to convert entire text files to binary or decode binary files back to text, making it suitable for larger data processing tasks."
+        },
+        {
+          "question": "Is my data secure when using this tool?",
+          "answer": "Absolutely. All conversion happens locally in your browser - no data is sent to external servers. Your text and binary data remain completely private and secure."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Code & Data Tools",
+        "description": "Explore other useful encoding and conversion tools for developers and educators.",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "href": "/tools/base64-encoder-decoder",
+            "description": "Convert text to Base64 encoding for data transmission and storage"
+          },
+          {
+            "name": "Hex to Text Converter",
+            "href": "/tools/hex-to-text",
+            "description": "Convert between hexadecimal and text formats"
+          },
+          {
+            "name": "Morse Code Translator",
+            "href": "/tools/morse-code",
+            "description": "Convert text to Morse code and decode Morse signals"
+          },
+          {
+            "name": "Caesar Cipher Encoder",
+            "href": "/tools/caesar-cipher",
+            "description": "Encode and decode text using Caesar cipher encryption"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный переводчик двоичного кода - Конвертация текста в двоичный код и обратно",
+    "metaDescription": "Мгновенно конвертируйте текст в двоичный код и двоичный код в текст с помощью нашего бесплатного онлайн-переводчика. Поддержка пользовательских разделителей, опций отступов и массовой обработки. Идеально для программирования, кодирования данных и изучения информатики.",
+    "sections": {
+      "intro": {
+        "title": "Переводчик двоичного кода",
+        "content": "Преобразуйте текст в двоичный код и декодируйте двоичный код обратно в читаемый текст с помощью нашего мощного переводчика двоичного кода. Незаменим для программирования, изучения информатики, кодирования данных и понимания того, как компьютеры обрабатывают информацию на самом фундаментальном уровне."
+      },
+      "features": {
+        "title": "Комплексные функции конвертации двоичного кода",
+        "items": [
+          {
+            "title": "Двунаправленная конвертация",
+            "description": "Конвертируйте текст в двоичный код или декодируйте двоичный код обратно в текст с переключением режима одним кликом."
+          },
+          {
+            "title": "Пользовательские параметры форматирования",
+            "description": "Выберите пробел, новую строку или отсутствие разделителей с настраиваемыми отступами и размерами групп."
+          },
+          {
+            "title": "Обработка в реальном времени",
+            "description": "Мгновенно видите результаты конвертации во время ввода с подсчетом символов и битов в реальном времени."
+          },
+          {
+            "title": "Поддержка загрузки файлов",
+            "description": "Обрабатывайте большие текстовые файлы или файлы двоичных данных напрямую через функцию загрузки файлов."
+          },
+          {
+            "title": "Образовательная аналитика",
+            "description": "Просматривайте подробную статистику, включая количество символов, битов и байтов."
+          },
+          {
+            "title": "Копирование и загрузка",
+            "description": "Легко копируйте результаты в буфер обмена или загружайте как текстовые файлы для дальнейшего использования."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Сферы применения",
+        "description": "Конвертация двоичного кода служит многим важным целям в программировании, образовании и анализе данных.",
+        "items": [
+          { "title": "Программирование и разработка", "description": "Необходим для разработки ПО, отладки и понимания представления данных" },
+          { "title": "Изучение информатики", "description": "Изучение фундаментальных концепций вычислений и двоичных систем счисления" },
+          { "title": "Кодирование данных", "description": "Обработка кодирования данных, протоколов передачи и конвертации форматов" },
+          { "title": "Кодировка символов", "description": "Понимание ASCII, Unicode и различных систем кодировки символов" },
+          { "title": "Отладка и анализ", "description": "Отладка форматов двоичных данных и анализ структур данных" },
+          { "title": "Образовательные проекты", "description": "Создание зашифрованных сообщений, головоломок и учебных упражнений" },
+          { "title": "Сетевые протоколы", "description": "Анализ сетевой связи и форматов данных протоколов" },
+          { "title": "Цифровая криминалистика", "description": "Исследование цифровых улик и восстановление данных из двоичных форматов" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как использовать",
+        "description": "Следуйте этим простым шагам для конвертации между текстом и двоичным кодом.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите ваши данные",
+            "description": "Напечатайте или вставьте текст или двоичный код в поле ввода, или загрузите файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Выберите режим конвертации",
+            "description": "Выберите между конвертацией Текст в двоичный код или Двоичный код в текст, используя кнопку переключения режима."
+          },
+          {
+            "step": 3,
+            "title": "Настройте параметры",
+            "description": "Настройте параметры форматирования, такие как тип разделителя, настройки отступов и размеры групп битов."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите результаты",
+            "description": "Посмотрите результат конвертации с валидацией в реальном времени и подробной двоичной статистикой."
+          },
+          {
+            "step": 5,
+            "title": "Экспортируйте результаты",
+            "description": "Скопируйте результат в буфер обмена или загрузите как файл для дальнейшего использования в ваших проектах."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры конвертации в двоичный код",
+        "items": [
+          {
+            "input": "Привет",
+            "output": "11010000 10011111 11010001 10000000 11010000 10111000 11010000 10110010 11010000 10110101 11010001 10000010",
+            "description": "Текст 'Привет' конвертирован в двоичный код с пробельными разделителями и 8-битными отступами"
+          },
+          {
+            "input": "А",
+            "output": "11010000 10010000",
+            "description": "Одиночный символ 'А' конвертирован в 8-битное двоичное представление"
+          },
+          {
+            "input": "0100100001100101011011000110110001101111",
+            "output": "Hello",
+            "description": "Двоичная строка декодирована обратно в текст"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему стоит использовать наш переводчик двоичного кода",
+        "items": [
+          "Бесплатное и неограниченное использование для всех пользователей",
+          "Быстрые и точные алгоритмы конвертации двоичного кода",
+          "Образовательный инструмент для изучения концепций информатики",
+          "Профессиональные параметры форматирования для разработки",
+          "Ориентированность на конфиденциальность: вся обработка происходит в вашем браузере",
+          "Адаптивный дизайн для использования на любом устройстве",
+          "Не требует регистрации или установки программного обеспечения",
+          "Поддержка различных стандартов форматирования двоичного кода"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое двоичный код и почему он важен?",
+          "answer": "Двоичный код - это фундаментальный язык компьютеров, использующий только 0 и 1 для представления всех данных. Он важен, потому что именно так компьютеры хранят и обрабатывают всю информацию, от текста и изображений до программ и системных инструкций."
+        },
+        {
+          "question": "Как кодировка ASCII связана с конвертацией в двоичный код?",
+          "answer": "ASCII присваивает числовые значения символам, которые затем конвертируются в двоичный код. Например, 'A' имеет ASCII значение 65, которое конвертируется в двоичный 01000001. Наш инструмент обрабатывает эту конвертацию автоматически."
+        },
+        {
+          "question": "Для чего нужны различные варианты разделителей?",
+          "answer": "Разделители помогают разделять двоичные группы для удобства чтения. Пробельные разделители (01001000 01100101) наиболее распространены, разделители новой строки располагают вертикально, а отсутствие разделителей создает непрерывные строки (0100100001100101)."
+        },
+        {
+          "question": "Могу ли я конвертировать файлы больше, чем просто фрагменты текста?",
+          "answer": "Да! Наш инструмент поддерживает загрузку файлов, позволяя конвертировать целые текстовые файлы в двоичный код или декодировать двоичные файлы обратно в текст, что делает его подходящим для более крупных задач обработки данных."
+        },
+        {
+          "question": "Безопасны ли мои данные при использовании этого инструмента?",
+          "answer": "Абсолютно. Вся конвертация происходит локально в вашем браузере - никакие данные не отправляются на внешние серверы. Ваш текст и двоичные данные остаются полностью приватными и безопасными."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные инструменты кода и данных",
+        "description": "Изучите другие полезные инструменты кодирования и конвертации для разработчиков и преподавателей.",
+        "items": [
+          {
+            "name": "Кодировщик/Декодировщик Base64",
+            "href": "/ru/tools/base64-encoder-decoder",
+            "description": "Конвертация текста в кодировку Base64 для передачи и хранения данных"
+          },
+          {
+            "name": "Конвертер Hex в текст",
+            "href": "/ru/tools/hex-to-text",
+            "description": "Конвертация между шестнадцатеричным и текстовым форматами"
+          },
+          {
+            "name": "Переводчик азбуки Морзе",
+            "href": "/ru/tools/morse-code",
+            "description": "Конвертация текста в азбуку Морзе и декодирование сигналов Морзе"
+          },
+          {
+            "name": "Кодировщик шифра Цезаря",
+            "href": "/ru/tools/caesar-cipher",
+            "description": "Кодирование и декодирование текста с использованием шифрования Цезаря"
+          }
+        ]
+      }
+    }
+  }
+}

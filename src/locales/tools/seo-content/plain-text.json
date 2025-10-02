@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Plain Text Converter - Remove HTML, Markdown & Formatting Online",
+    "metaDescription": "Convert formatted text to plain text instantly. Remove HTML tags, Markdown formatting, URLs, emails, and special characters. Free online plain text converter tool.",
+    "sections": {
+      "intro": {
+        "title": "Convert Any Text to Plain Text Format",
+        "content": "Transform formatted text into clean, plain text with our powerful converter. Remove HTML tags, Markdown formatting, URLs, emails, numbers, and special characters while preserving the essential content. Perfect for content migration, data cleaning, and text processing tasks."
+      },
+      "features": {
+        "title": "Plain Text Converter Features",
+        "items": [
+          {
+            "title": "HTML Tag Removal",
+            "description": "Automatically strip all HTML tags while preserving text content and converting structural elements to appropriate line breaks."
+          },
+          {
+            "title": "Markdown Formatting Cleanup",
+            "description": "Remove Markdown syntax including headers, bold, italic, links, code blocks, and lists while keeping the readable text."
+          },
+          {
+            "title": "URL & Email Detection",
+            "description": "Identify and remove web URLs, email addresses, and domain names from your text content."
+          },
+          {
+            "title": "Special Character Filtering",
+            "description": "Clean up special characters, numbers, punctuation, and emojis based on your specific requirements."
+          },
+          {
+            "title": "Whitespace Normalization",
+            "description": "Normalize different types of whitespace characters and remove extra spaces while preserving text structure."
+          },
+          {
+            "title": "Line Break Control",
+            "description": "Choose whether to preserve line breaks and paragraph structure or convert everything to continuous text."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Plain Text Conversion",
+        "description": "Clean up formatted text for various applications and workflows.",
+        "items": [
+          {
+            "title": "Content Migration",
+            "description": "Convert HTML content to plain text for migration between different systems and platforms."
+          },
+          {
+            "title": "Data Cleaning",
+            "description": "Clean up copied text from websites and documents for data analysis and processing."
+          },
+          {
+            "title": "Documentation Processing",
+            "description": "Convert Markdown documentation to plain text for compatibility with various tools."
+          },
+          {
+            "title": "Social Media Preparation",
+            "description": "Remove formatting from text to prepare clean content for social media posts."
+          },
+          {
+            "title": "Accessibility Enhancement",
+            "description": "Create clean text versions that are more accessible to screen readers and assistive technologies."
+          },
+          {
+            "title": "Machine Learning Preprocessing",
+            "description": "Prepare clean text data for natural language processing and machine learning projects."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Text to Plain Format",
+        "description": "Transform formatted text to clean plain text in simple steps.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Input Your Text",
+            "description": "Paste or type your formatted text in the input area, or upload a text file directly."
+          },
+          {
+            "step": 2,
+            "title": "Configure Options",
+            "description": "Select which formatting elements to remove using the option toggles and configure preferences."
+          },
+          {
+            "step": 3,
+            "title": "Review Analytics",
+            "description": "Watch the real-time conversion and review the analytics showing what was removed."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the cleaned text to clipboard or download it as a .txt file for later use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Plain Text Conversion Examples",
+        "description": "See how different types of formatted content are converted to clean plain text.",
+        "items": [
+          {
+            "title": "HTML to Plain Text",
+            "input": "<h1>Welcome</h1><p>This is <strong>bold</strong> text with a <a href=\"#\">link</a>.</p>",
+            "output": "Welcome\n\nThis is bold text with a link."
+          },
+          {
+            "title": "Markdown to Plain Text",
+            "input": "# Header\n\nThis is **bold** and *italic* text with a [link](https://example.com).",
+            "output": "Header\n\nThis is bold and italic text with a link."
+          },
+          {
+            "title": "Mixed Content Cleanup",
+            "input": "Contact us at info@example.com or visit https://example.com for more info!",
+            "output": "Contact us at or visit for more info!"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Plain Text Converter",
+        "content": "Fast, reliable, and privacy-focused text cleaning with comprehensive options.",
+        "items": [
+          "Instant conversion with real-time preview",
+          "Comprehensive formatting removal options",
+          "Preserves text readability and structure",
+          "Handles multiple input formats simultaneously",
+          "No file size limits or usage restrictions",
+          "Privacy-focused - all processing happens locally",
+          "Mobile-friendly responsive design",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What types of formatting can be removed?",
+          "answer": "Our converter can remove HTML tags, Markdown formatting, URLs, email addresses, numbers, special characters, punctuation, emojis, and various types of whitespace. You can selectively choose which elements to remove."
+        },
+        {
+          "question": "Will the text structure be preserved?",
+          "answer": "Yes, you can choose to preserve line breaks and paragraph structure. The converter intelligently handles structural elements like headings and paragraphs by converting them to appropriate line breaks."
+        },
+        {
+          "question": "Can I process large text files?",
+          "answer": "Yes, you can upload text files directly or paste large amounts of text. The converter handles large documents efficiently and provides real-time processing."
+        },
+        {
+          "question": "Is my text data secure?",
+          "answer": "Absolutely. All text processing happens locally in your browser. Your content is never sent to external servers, ensuring complete privacy and security."
+        },
+        {
+          "question": "What file formats are supported for upload?",
+          "answer": "You can upload plain text files (.txt), and the converter will process any formatted content within them. The tool works with any text-based content regardless of its original source."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, sentences, and paragraphs in your text",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Remove Line Breaks",
+            "description": "Remove unwanted line breaks and normalize text formatting",
+            "href": "/tools/remove-line-breaks"
+          },
+          {
+            "name": "Text Replace",
+            "description": "Find and replace text patterns with advanced options",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Word Frequency Counter",
+            "description": "Analyze word frequency and find the most common words",
+            "href": "/tools/word-frequency"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Конвертер в Обычный Текст - Удаление HTML, Markdown и Форматирования",
+    "metaDescription": "Мгновенно конвертируйте форматированный текст в обычный. Удаляйте HTML теги, Markdown форматирование, URL, email и специальные символы. Бесплатный онлайн конвертер.",
+    "sections": {
+      "intro": {
+        "title": "Конвертируйте Любой Текст в Обычный Формат",
+        "content": "Преобразуйте форматированный текст в чистый обычный текст с помощью нашего мощного конвертера. Удаляйте HTML теги, Markdown форматирование, URL, email, числа и специальные символы, сохраняя при этом основное содержание. Идеально подходит для миграции контента, очистки данных и обработки текста."
+      },
+      "features": {
+        "title": "Возможности Конвертера в Обычный Текст",
+        "items": [
+          {
+            "title": "Удаление HTML Тегов",
+            "description": "Автоматически удаляет все HTML теги, сохраняя текстовое содержание и преобразуя структурные элементы в соответствующие переносы строк."
+          },
+          {
+            "title": "Очистка Markdown Форматирования",
+            "description": "Удаляет синтаксис Markdown, включая заголовки, жирный, курсивный текст, ссылки, блоки кода и списки, сохраняя читаемый текст."
+          },
+          {
+            "title": "Обнаружение URL и Email",
+            "description": "Определяет и удаляет веб-URL, адреса электронной почты и доменные имена из вашего текстового содержания."
+          },
+          {
+            "title": "Фильтрация Специальных Символов",
+            "description": "Очищает специальные символы, числа, пунктуацию и эмодзи в соответствии с вашими конкретными требованиями."
+          },
+          {
+            "title": "Нормализация Пробелов",
+            "description": "Нормализует различные типы пробельных символов и удаляет лишние пробелы, сохраняя структуру текста."
+          },
+          {
+            "title": "Контроль Переносов Строк",
+            "description": "Выбирайте, сохранять ли переносы строк и структуру абзацев или преобразовать всё в непрерывный текст."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Случаи Использования Конвертации в Обычный Текст",
+        "description": "Очищайте форматированный текст для различных приложений и рабочих процессов.",
+        "items": [
+          {
+            "title": "Миграция Контента",
+            "description": "Конвертируйте HTML контент в обычный текст для миграции между различными системами и платформами."
+          },
+          {
+            "title": "Очистка Данных",
+            "description": "Очищайте скопированный текст с веб-сайтов и документов для анализа и обработки данных."
+          },
+          {
+            "title": "Обработка Документации",
+            "description": "Конвертируйте Markdown документацию в обычный текст для совместимости с различными инструментами."
+          },
+          {
+            "title": "Подготовка для Социальных Сетей",
+            "description": "Удаляйте форматирование из текста для подготовки чистого контента для постов в социальных сетях."
+          },
+          {
+            "title": "Улучшение Доступности",
+            "description": "Создавайте чистые текстовые версии, более доступные для программ чтения с экрана и вспомогательных технологий."
+          },
+          {
+            "title": "Предобработка для Машинного Обучения",
+            "description": "Подготавливайте чистые текстовые данные для обработки естественного языка и проектов машинного обучения."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Текст в Обычный Формат",
+        "description": "Преобразуйте форматированный текст в чистый обычный текст простыми шагами.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Вставьте или введите ваш форматированный текст в область ввода, или загрузите текстовый файл напрямую."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции",
+            "description": "Выберите, какие элементы форматирования удалить, используя переключатели опций и настройте предпочтения."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Аналитику",
+            "description": "Наблюдайте за конвертацией в реальном времени и просматривайте аналитику, показывающую, что было удалено."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте очищенный текст в буфер обмена или скачайте его как .txt файл для дальнейшего использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации в Обычный Текст",
+        "description": "Посмотрите, как различные типы форматированного контента конвертируются в чистый обычный текст.",
+        "items": [
+          {
+            "title": "HTML в Обычный Текст",
+            "input": "<h1>Добро пожаловать</h1><p>Это <strong>жирный</strong> текст со <a href=\"#\">ссылкой</a>.</p>",
+            "output": "Добро пожаловать\n\nЭто жирный текст со ссылкой."
+          },
+          {
+            "title": "Markdown в Обычный Текст",
+            "input": "# Заголовок\n\nЭто **жирный** и *курсивный* текст со [ссылкой](https://example.com).",
+            "output": "Заголовок\n\nЭто жирный и курсивный текст со ссылкой."
+          },
+          {
+            "title": "Очистка Смешанного Контента",
+            "input": "Свяжитесь с нами по адресу info@example.com или посетите https://example.com для получения дополнительной информации!",
+            "output": "Свяжитесь с нами по адресу или посетите для получения дополнительной информации!"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конвертер в Обычный Текст",
+        "content": "Быстрая, надежная и ориентированная на конфиденциальность очистка текста с комплексными опциями.",
+        "items": [
+          "Мгновенная конвертация с предварительным просмотром в реальном времени",
+          "Комплексные опции удаления форматирования",
+          "Сохраняет читаемость и структуру текста",
+          "Обрабатывает несколько форматов ввода одновременно",
+          "Без ограничений по размеру файла или использованию",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Адаптивный дизайн для мобильных устройств",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие типы форматирования можно удалить?",
+          "answer": "Наш конвертер может удалять HTML теги, Markdown форматирование, URL, адреса электронной почты, числа, специальные символы, пунктуацию, эмодзи и различные типы пробелов. Вы можете выборочно выбирать, какие элементы удалить."
+        },
+        {
+          "question": "Будет ли сохранена структура текста?",
+          "answer": "Да, вы можете выбрать сохранение переносов строк и структуры абзацев. Конвертер интеллектуально обрабатывает структурные элементы, такие как заголовки и абзацы, преобразуя их в соответствующие переносы строк."
+        },
+        {
+          "question": "Могу ли я обрабатывать большие текстовые файлы?",
+          "answer": "Да, вы можете загружать текстовые файлы напрямую или вставлять большие объемы текста. Конвертер эффективно обрабатывает большие документы и обеспечивает обработку в реальном времени."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные?",
+          "answer": "Абсолютно. Вся обработка текста происходит локально в вашем браузере. Ваш контент никогда не отправляется на внешние серверы, обеспечивая полную конфиденциальность и безопасность."
+        },
+        {
+          "question": "Какие форматы файлов поддерживаются для загрузки?",
+          "answer": "Вы можете загружать файлы обычного текста (.txt), и конвертер обработает любое форматированное содержание в них. Инструмент работает с любым текстовым содержанием независимо от его первоначального источника."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитывайте символы, слова, предложения и абзацы в вашем тексте",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Удаление Переносов Строк",
+            "description": "Удаляйте нежелательные переносы строк и нормализуйте форматирование текста",
+            "href": "/ru/tools/remove-line-breaks"
+          },
+          {
+            "name": "Замена Текста",
+            "description": "Находите и заменяйте текстовые шаблоны с расширенными опциями",
+            "href": "/ru/tools/text-replace"
+          },
+          {
+            "name": "Счетчик Частоты Слов",
+            "description": "Анализируйте частоту слов и находите наиболее распространенные слова",
+            "href": "/ru/tools/word-frequency"
+          }
+        ]
+      }
+    }
+  }
+}

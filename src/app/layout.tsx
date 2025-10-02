@@ -1,63 +1,91 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Geist, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
-import { ThemeProvider } from "./providers/theme-provider";
-import { MainLayout } from "./components/layout/MainLayout";
-import { Toaster } from "@/components/ui/toaster";
+import { LanguageDetector } from "@/components/LanguageDetector";
+import { AdSenseProvider } from "@/contexts/AdSenseContext";
+import { AdSenseManager } from "@/components/ads/AdSenseManager";
+import { LanguageHtml } from "@/components/LanguageHtml";
 
-const inter = Inter({ subsets: ["latin"] });
+const geistSans = Geist({
+  variable: "--font-geist-sans",
+  subsets: ["latin"],
+});
+
+const geistMono = Geist_Mono({
+  variable: "--font-geist-mono",
+  subsets: ["latin"],
+});
 
 export const metadata: Metadata = {
-  title: {
-    default: 'Text Case Converter - Free Online Text Case Tools',
-    template: '%s',
+  metadataBase: new URL("https://textcaseconverter.net"),
+  title: "Text Case Converter - Professional Text Transformation Tools",
+  description: "Transform your text into different cases with ease. Perfect for developers, writers, and content creators. Support for multiple languages including English and Russian.",
+  authors: [{ name: "Text Case Converter Team" }],
+  creator: "Text Case Converter",
+  publisher: "Text Case Converter",
+  robots: "index, follow",
+  verification: {
+    google: "q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE",
+    yandex: "a3f802423edf4dae"
   },
-  description: "Free online tools to convert text between different cases. Transform your text to UPPERCASE, lowercase, Title Case, Sentence case, and more.",
-  keywords: ["text case converter", "case changer", "text tools", "uppercase converter", "lowercase converter", "title case converter", "sentence case converter"],
+  icons: {
+    icon: [
+      { url: "/favicon-32x32.png", sizes: "32x32", type: "image/png" },
+      { url: "/favicon-16x16.png", sizes: "16x16", type: "image/png" }
+    ],
+    apple: [
+      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" }
+    ],
+    other: [
+      { rel: "manifest", url: "/site.webmanifest" }
+    ]
+  },
+  openGraph: {
+    title: "Text Case Converter - Professional Text Transformation Tools",
+    description: "Transform your text into different cases with ease. Perfect for developers, writers, and content creators.",
+    type: "website",
+    locale: "en_US",
+    alternateLocale: "ru_RU",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Text Case Converter - Professional Text Transformation Tools",
+    description: "Transform your text into different cases with ease. Perfect for developers, writers, and content creators.",
+  },
 };
 
 export default function RootLayout({
   children,
-}: {
+}: Readonly<{
   children: React.ReactNode;
-}) {
+}>) {
   return (
-    <html lang="en" suppressHydrationWarning>
-      <head>
-        <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
-        <meta name="yandex-verification" content="a3f802423edf4dae" />
-        <link rel="icon" type="image/png" href="/favicon-32x32.png" />
-        
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              // Google Analytics
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-1DT1KPX3XQ');
-              
-              // Grow.me initialization
-              !(function(){window.growMe||((window.growMe=function(e){window.growMe._.push(e);}),(window.growMe._=[]));var e=document.createElement("script");(e.type="text/javascript"),(e.src="https://faves.grow.me/main.js"),(e.defer=!0),e.setAttribute("data-grow-faves-site-id","U2l0ZTpjNTk3MTVjZS01NmQ1LTQ1MDUtOWIwNC03NDhjYjNhYmEzMjE=");var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(e,t);})();
-            `
-          }}
+    <html lang="en">
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"
+          strategy="afterInteractive"
         />
-        
-        {/* Google Analytics External Script */}
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"></script>
-        
-        {/* Google AdSense */}
-        <script 
-          async 
-          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905"
-          crossOrigin="anonymous"
-        ></script>
-      </head>
-      <body className={inter.className}>
-        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
-          <MainLayout>{children}</MainLayout>
-          <Toaster />
-        </ThemeProvider>
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-1DT1KPX3XQ');
+          `}
+        </Script>
+        <LanguageHtml>
+          <AdSenseProvider>
+            <AdSenseManager>
+              <LanguageDetector />
+              {children}
+            </AdSenseManager>
+          </AdSenseProvider>
+        </LanguageHtml>
       </body>
     </html>
   );

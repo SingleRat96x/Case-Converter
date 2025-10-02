@@ -1,0 +1,166 @@
+{
+  "en": {
+    "title": "Free Bubble Text Generator - Unicode Bubble Letters",
+    "metaDescription": "Transform your text into bubble letters using Unicode characters. Perfect for fun social posts, creative messages, and playful styling.",
+    "sections": {
+      "intro": {
+        "title": "Free Bubble Text Generator - Unicode Bubble Letters",
+        "content": "Create playful bubble letter text instantly with our free generator. Perfect for social media, chats, and creative content that stands out with a fun, rounded style."
+      },
+      "features": {
+        "title": "Bubble Text Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time bubble text conversion as you type or paste" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire content to bubble text" },
+          { "title": "Copy & Download", "description": "Copy results or download as a text file" },
+          { "title": "Text Analytics", "description": "See character and word counts for your bubble text" },
+          { "title": "Unicode Support", "description": "Works across platforms and devices" },
+          { "title": "Privacy-First", "description": "Everything runs locally in your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Bubble Text",
+        "description": "Add a playful tone and visual flair to your content.",
+        "items": [
+          { "title": "Social Media Captions", "description": "Make captions and bios more fun and attention-grabbing." },
+          { "title": "Messaging & Chat", "description": "Send playful messages that stand out in chats and DMs." },
+          { "title": "Creative Content", "description": "Decorate posters, notes, and graphics with bubble lettering." },
+          { "title": "Usernames & Handles", "description": "Create unique-looking usernames with bubble characters." },
+          { "title": "Headings & Callouts", "description": "Add fun headings for social cards and banners." },
+          { "title": "Kids & Education", "description": "Create engaging materials for children and learning content." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Bubble Text",
+        "description": "Convert your text to bubble letters in a few steps.",
+        "steps": [
+          { "step": 1, "title": "Enter Text", "description": "Type or paste your text, or upload a file." },
+          { "step": 2, "title": "Automatic Conversion", "description": "Your text becomes bubble letters instantly." },
+          { "step": 3, "title": "Review Analytics", "description": "Check counts and stats for your bubble text." },
+          { "step": 4, "title": "Copy or Download", "description": "Copy to clipboard or download as a text file." }
+        ]
+      },
+      "examples": {
+        "title": "Bubble Text Examples",
+        "description": "See bubble letters applied to common phrases.",
+        "items": [
+          { "title": "Greeting", "input": "Hello World", "output": "ⓗⓔⓛⓛⓞ ⓦⓞⓡⓛⓓ" },
+          { "title": "Caption", "input": "So much fun!", "output": "ⓢⓞ ⓜⓤⓒⓗ ⓕⓤⓝ!" },
+          { "title": "Username", "input": "cool_user", "output": "ⓒⓞⓞⓛ_ⓤⓢⓔⓡ" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Bubble Text Generator",
+        "content": "Fun, fast, and privacy-first bubble letter conversion.",
+        "items": [
+          "Free and unlimited usage",
+          "No sign-up required",
+          "Local-only processing for privacy",
+          "Supports multiple file formats",
+          "Real-time conversion",
+          "Analytics included",
+          "Responsive design",
+          "Works with all languages"
+        ]
+      },
+      "faqs": [
+        { "question": "What is bubble text?", "answer": "Bubble text uses rounded, enclosed Unicode characters to create a playful appearance while remaining plain text." },
+        { "question": "Will it work on all platforms?", "answer": "Yes, bubble characters are Unicode and display anywhere that supports Unicode fonts." },
+        { "question": "Can I convert files?", "answer": "Yes, upload a text file to convert the entire content to bubble text." },
+        { "question": "Is my data private?", "answer": "All conversions happen in your browser; nothing is uploaded." }
+      ],
+      "relatedTools": {
+        "title": "Related Text Styling Tools",
+        "items": [
+          { "name": "Bold Text Generator", "description": "Generate bold Unicode text that works everywhere", "href": "/tools/bold-text" },
+          { "name": "Italic Text Generator", "description": "Create italic Unicode text for emphasis and styling", "href": "/tools/italic-text" },
+          { "name": "Facebook Fonts Generator", "description": "Create eye-catching fonts for Facebook posts and profiles", "href": "/tools/facebook-font" },
+          { "name": "Instagram Fonts Generator", "description": "Generate stylish fonts perfect for Instagram bios and posts", "href": "/tools/instagram-fonts" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Пузырькового Текста - Unicode Пузырьковые Буквы",
+    "metaDescription": "Преобразуйте текст в пузырьковые буквы с помощью Unicode символов. Идеально для веселых постов, сообщений и креативного оформления.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор Пузырькового Текста - Unicode Пузырьковые Буквы",
+        "content": "Создавайте игривый пузырьковый текст мгновенно с нашим бесплатным генератором. Идеально для социальных сетей, чатов и креативного контента, который привлекает внимание." 
+      },
+      "features": {
+        "title": "Возможности Пузырькового Текста",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в пузырьковый текст в реальном времени при вводе или вставке" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целое содержимое в пузырьковый текст" },
+          { "title": "Копирование и Скачивание", "description": "Копируйте результаты или скачивайте как текстовый файл" },
+          { "title": "Аналитика Текста", "description": "Смотрите количество символов и слов" },
+          { "title": "Поддержка Unicode", "description": "Работает на платформах и устройствах" },
+          { "title": "Конфиденциальность", "description": "Вся обработка локально в вашем браузере" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Пузырькового Текста",
+        "description": "Добавляйте игривый тон и визуальный акцент вашему контенту.",
+        "items": [
+          { "title": "Подписи в Соцсетях", "description": "Делайте подписи и биографии более веселыми и заметными." },
+          { "title": "Сообщения и Чаты", "description": "Отправляйте игривые сообщения, выделяющиеся в чатах и личных сообщениях." },
+          { "title": "Креативный Контент", "description": "Украшайте постеры, заметки и графику пузырьковыми буквами." },
+          { "title": "Юзернеймы и Ники", "description": "Создавайте уникальные имена пользователей с пузырьковыми символами." },
+          { "title": "Заголовки и Вставки", "description": "Добавляйте веселые заголовки для карточек и баннеров." },
+          { "title": "Детям и Обучение", "description": "Создавайте увлекательные материалы для детей и образовательного контента." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Сгенерировать Пузырьковый Текст",
+        "description": "Конвертируйте текст в пузырьковые буквы за несколько шагов.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Введите или вставьте текст, либо загрузите файл." },
+          { "step": 2, "title": "Автоконвертация", "description": "Текст мгновенно преобразуется в пузырьковые буквы." },
+          { "step": 3, "title": "Просмотр Аналитики", "description": "Посмотрите счетчики и статистику текста." },
+          { "step": 4, "title": "Копирование или Скачивание", "description": "Скопируйте в буфер или скачайте как текстовый файл." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Пузырькового Текста",
+        "description": "Посмотрите, как пузырьковые буквы применяются к фразам.",
+        "items": [
+          { "title": "Приветствие", "input": "Hello World", "output": "ⓗⓔⓛⓛⓞ ⓦⓞⓡⓛⓓ" },
+          { "title": "Подпись", "input": "Так весело!", "output": "ⓣⓐⓚ ⓥⓔⓒⓔⓛⓞ!" },
+          { "title": "Юзернейм", "input": "cool_user", "output": "ⓒⓞⓞⓛ_ⓤⓢⓔⓡ" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор Пузырькового Текста",
+        "content": "Веселая, быстрая и приватная конвертация пузырьковых букв.",
+        "items": [
+          "Бесплатно и без ограничений",
+          "Регистрация не требуется",
+          "Локальная обработка для приватности",
+          "Поддержка множества форматов",
+          "Конвертация в реальном времени",
+          "Включена аналитика",
+          "Адаптивный дизайн",
+          "Работает со всеми языками"
+        ]
+      },
+      "faqs": [
+        { "question": "Что такое пузырьковый текст?", "answer": "Пузырьковый текст использует округлые, обведенные Unicode символы для создания игривого вида, оставаясь при этом обычным текстом." },
+        { "question": "Работает ли везде?", "answer": "Да, пузырьковые символы — это Unicode и отображаются там, где есть поддержка Unicode." },
+        { "question": "Можно ли конвертировать файлы?", "answer": "Да, загрузите текстовый файл и конвертируйте его содержимое." },
+        { "question": "Мои данные в безопасности?", "answer": "Вся обработка происходит в вашем браузере; ничего не загружается." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Стилизации Текста",
+        "items": [
+          { "name": "Генератор Жирного Текста", "description": "Создавайте жирный Unicode текст", "href": "/ru/tools/bold-text" },
+          { "name": "Генератор Курсивного Текста", "description": "Создавайте курсивный Unicode текст", "href": "/ru/tools/italic-text" },
+          { "name": "Генератор Шрифтов Facebook", "description": "Привлекающие шрифты для профилей и постов", "href": "/ru/tools/facebook-font" },
+          { "name": "Генератор Шрифтов Instagram", "description": "Стильные шрифты для биографий и постов", "href": "/ru/tools/instagram-fonts" }
+        ]
+      }
+    }
+  }
+}
+
+

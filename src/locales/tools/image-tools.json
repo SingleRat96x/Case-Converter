@@ -1,0 +1,1467 @@
+{
+  "en": {
+    "imageCropper": {
+      "title": "Image Cropper Tool",
+      "description": "Crop, resize, and optimize your images with precision. Perfect for social media, web design, and photo editing.",
+      "outputLabel": "Cropped Image",
+      "copiedMessage": "Image copied to clipboard!",
+      "downloadFileName": "cropped-image",
+      "uploadDescription": "Upload an image file to crop and edit",
+      "labels": {
+        "originalImage": "Original Image",
+        "croppedResult": "Cropped Result",
+        "uploadArea": "Upload an Image",
+        "dragDrop": "Drag and drop or click to select an image file",
+        "supportedFormats": "Supports JPG, PNG, WebP • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Processing...",
+        "cropPreview": "Cropped image will appear here"
+      },
+      "accordion": {
+        "title": "Image Cropping Options"
+      },
+      "sections": {
+        "cropSettings": "Crop Settings",
+        "outputSettings": "Output Settings",
+        "appearance": "Appearance"
+      },
+      "options": {
+        "cropSettings": "Crop Settings",
+        "aspectRatio": "Aspect Ratio",
+        "aspectRatios": {
+          "free": "Free",
+          "square": "1:1",
+          "widescreen": "16:9",
+          "standard": "4:3",
+          "photo": "3:2",
+          "portrait": "5:4",
+          "tall": "2:3"
+        },
+        "outputFormat": "Output Format",
+        "quality": "Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "outputSize": "Output Size",
+        "width": "Width (px)",
+        "height": "Height (px)",
+        "keepOriginalSize": "Keep Original Crop Size",
+        "enableRotation": "Enable Rotation",
+        "backgroundColor": "Background Color"
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "fileSize": "File Size",
+        "croppedSize": "Cropped Size",
+        "compression": "File Size"
+      },
+      "analytics": {
+        "title": "Image Cropper Analytics",
+        "originalSize": "Original Size",
+        "croppedSize": "Cropped Size",
+        "originalFileSize": "Original File Size",
+        "croppedFileSize": "Cropped File Size",
+        "compressionRatio": "Compression Ratio",
+        "cropReduction": "Crop Reduction"
+      },
+      "presets": {
+        "square": "Square",
+        "wide": "Wide",
+        "photo": "Photo"
+      },
+      "info": {
+        "description": "Upload an image and adjust the crop area by dragging the corners. The cropped result updates automatically.",
+        "supportInfo": "Supports JPG, PNG, WebP formats up to 10MB. Use different aspect ratios for various social media platforms."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid image file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToCrop": "Failed to crop image",
+        "canvasNotSupported": "Canvas context not available"
+      },
+      "actions": {
+        "rotate": "Rotate",
+        "rotateLeft": "Rotate Left",
+        "rotateRight": "Rotate Right",
+        "crop": "Crop",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload",
+        "extractText": "Extract Text",
+        "processing": "Processing...",
+        "reupload": "Replace Image",
+        "example": "Example"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all crop settings. This action cannot be undone."
+      }
+    },
+    "imageToText": {
+      "title": "Image to Text OCR",
+      "description": "Extract text from images using advanced OCR technology. Support for multiple languages and high accuracy text recognition from photos, screenshots, and documents.",
+      "outputLabel": "Extracted Text",
+      "copiedMessage": "Text copied to clipboard!",
+      "downloadFileName": "extracted-text.txt",
+      "uploadDescription": "Upload an image file to extract text",
+      "labels": {
+        "uploadArea": "Upload Image",
+        "extractedText": "Extracted Text",
+        "dragDrop": "Drag and drop or click to select an image file",
+        "supportedFormats": "Supports JPG, PNG, GIF, WebP, BMP, TIFF • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Extracting text...",
+        "textPreview": "Extracted text will appear here"
+      },
+      "accordion": {
+        "title": "OCR Processing Options"
+      },
+      "sections": {
+        "language": "Language Settings",
+        "processing": "Processing Settings"
+      },
+      "options": {
+        "ocrSettings": "OCR Settings",
+        "language": "Recognition Language",
+        "confidence": "Confidence Threshold",
+        "confidenceDescription": "Minimum confidence level for text recognition (higher = more accurate)",
+        "preserveFormatting": "Preserve Formatting",
+        "preserveFormattingDescription": "Maintain original text layout and spacing",
+        "detectOrientation": "Auto-Detect Orientation",
+        "detectOrientationDescription": "Automatically detect and correct image orientation"
+      },
+      "stats": {
+        "title": "Extraction Results",
+        "imageSize": "Image File",
+        "textLength": "Text Length",
+        "wordCount": "Word Count",
+        "confidence": "Confidence"
+      },
+      "analytics": {
+        "title": "OCR Analytics",
+        "imageFileSize": "Image File Size",
+        "textLength": "Text Length",
+        "wordCount": "Word Count",
+        "lineCount": "Line Count",
+        "confidence": "Confidence",
+        "extractionRatio": "Extraction Ratio"
+      },
+      "messages": {
+        "ocrSuccess": "Text extracted successfully!",
+        "textCopied": "Text copied to clipboard!"
+      },
+      "info": {
+        "description": "Upload any image containing text and our OCR technology will extract the text content. Works with photos, screenshots, scanned documents, and more.",
+        "supportInfo": "Supports multiple image formats and languages. Best results with clear, high-contrast text images."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid image file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "ocrFailed": "Failed to extract text from image",
+        "lowConfidence": "Text recognition confidence too low. Try adjusting settings or use a clearer image.",
+        "noTextFound": "No text was found in this image"
+      },
+      "actions": {
+        "extract": "Extract Text",
+        "extractText": "Extract Text", 
+        "processing": "Processing...",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload Image",
+        "reupload": "Reupload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and extracted text. This action cannot be undone."
+      }
+    },
+    "jpgToWebp": {
+      "title": "JPG to WebP Converter",
+      "description": "Convert JPG/JPEG images to modern WebP format for significantly smaller file sizes with great visual quality. Ideal for web performance and SEO.",
+      "outputLabel": "Converted WebP Image",
+      "copiedMessage": "WebP image copied to clipboard!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Upload a JPG/JPEG file to convert to WebP",
+      "labels": {
+        "originalImage": "Original JPG Image",
+        "convertedResult": "Converted WebP Result",
+        "uploadArea": "Upload a JPG/JPEG Image",
+        "dragDrop": "Drag and drop or click to select a JPG/JPEG file",
+        "supportedFormats": "Supports JPG, JPEG • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Converting...",
+        "convertPreview": "Converted WebP image will appear here"
+      },
+      "options": {
+        "conversionSettings": "Conversion Settings",
+        "quality": "WebP Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "compression": "Compression",
+        "compressionLevels": {
+          "none": "None",
+          "fast": "Fast",
+          "best": "Best"
+        },
+        "losslessMode": "Lossless Mode",
+        "losslessModeDescription": "Enable for perfect quality preservation (larger files)",
+        "webpSettings": "WebP Settings"
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "WebP Size",
+        "fileSize": "File Size",
+        "sizeChange": "Size Change",
+        "sizeRatio": "Size Ratio",
+        "quality": "Quality",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Upload a JPG/JPEG image and it will be automatically converted to WebP format. WebP often reduces file size dramatically while maintaining quality.",
+        "supportInfo": "Supports JPG and JPEG formats up to 10MB. WebP is widely supported in modern browsers and improves page performance."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid JPG or JPEG file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToConvert": "Failed to convert image to WebP",
+        "canvasNotSupported": "Canvas context not available",
+        "conversionFailed": "Conversion failed",
+        "failedToCreateZip": "Failed to create ZIP file"
+      },
+      "actions": {
+        "convert": "Convert to WebP",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all conversion settings. This action cannot be undone."
+      }
+    },
+    "imageResizer": {
+      "title": "Image Resizer Tool",
+      "description": "Resize your images to any dimensions while maintaining quality. Perfect for web optimization, thumbnails, and social media.",
+      "outputLabel": "Resized Image",
+      "copiedMessage": "Image copied to clipboard!",
+      "downloadFileName": "resized-image",
+      "uploadDescription": "Upload an image file to resize",
+      "labels": {
+        "originalImage": "Original Image",
+        "resizedResult": "Resized Result",
+        "uploadArea": "Upload an Image",
+        "dragDrop": "Drag and drop or click to select an image file",
+        "supportedFormats": "Supports JPG, PNG, WebP • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Processing...",
+        "resizePreview": "Resized image will appear here"
+      },
+      "options": {
+        "resizeSettings": "Resize Settings",
+        "dimensions": "Dimensions",
+        "width": "Width (px)",
+        "height": "Height (px)",
+        "percentage": "Percentage (%)",
+        "outputFormat": "Output Format",
+        "quality": "Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "resizeMode": "Resize Mode",
+        "resizeModes": {
+          "exact": "Exact Dimensions",
+          "aspectRatio": "Keep Aspect Ratio",
+          "percentage": "Percentage"
+        },
+        "maintainAspectRatio": "Maintain Aspect Ratio",
+        "backgroundColor": "Background Color",
+        "interpolation": "Interpolation Method",
+        "interpolationMethods": {
+          "auto": "Auto",
+          "nearest": "Nearest Neighbor",
+          "bilinear": "Bilinear",
+          "bicubic": "Bicubic"
+        }
+      },
+      "presets": {
+        "title": "Common Presets",
+        "social": {
+          "instagramPost": "Instagram Post (1080×1080)",
+          "instagramStory": "Instagram Story (1080×1920)",
+          "facebookPost": "Facebook Post (1200×630)",
+          "twitterPost": "Twitter Post (1200×675)",
+          "linkedinPost": "LinkedIn Post (1200×627)"
+        },
+        "web": {
+          "thumbnail": "Thumbnail (300×300)",
+          "banner": "Banner (728×90)",
+          "leaderboard": "Leaderboard (728×90)",
+          "rectangle": "Rectangle (300×250)",
+          "square": "Square (250×250)"
+        }
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "New Size",
+        "fileSize": "File Size",
+        "compression": "Compression Ratio",
+        "reduction": "Size Reduction"
+      },
+      "info": {
+        "description": "Upload an image and set your desired dimensions. Choose to maintain aspect ratio or resize to exact dimensions.",
+        "supportInfo": "Supports JPG, PNG, WebP formats up to 10MB. Use presets for common social media and web dimensions."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid image file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToResize": "Failed to resize image",
+        "invalidDimensions": "Please enter valid dimensions",
+        "dimensionsTooLarge": "Dimensions too large (max 5000×5000)",
+        "canvasNotSupported": "Canvas context not available"
+      },
+      "actions": {
+        "resize": "Resize",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload",
+        "applyPreset": "Apply Preset"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all resize settings. This action cannot be undone."
+      },
+      "tabs": {
+        "dimensions": "Dimensions",
+        "settings": "Settings",
+        "presets": "Presets"
+      }
+    },
+    "jpgToPng": {
+      "title": "JPG to PNG Converter",
+      "description": "Convert JPG/JPEG images to PNG format with transparency support and lossless quality. Perfect for web design, graphics editing, and preserving image quality.",
+      "outputLabel": "Converted PNG Image",
+      "copiedMessage": "PNG image copied to clipboard!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Upload a JPG/JPEG file to convert to PNG",
+      "labels": {
+        "originalImage": "Original JPG Image",
+        "convertedResult": "Converted PNG Result",
+        "uploadArea": "Upload a JPG/JPEG Image",
+        "dragDrop": "Drag and drop or click to select a JPG/JPEG file",
+        "supportedFormats": "Supports JPG, JPEG • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Converting...",
+        "convertPreview": "Converted PNG image will appear here"
+      },
+      "options": {
+        "conversionSettings": "Conversion Settings",
+        "quality": "PNG Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "compression": "PNG Compression",
+        "compressionLevels": {
+          "none": "None",
+          "fast": "Fast",
+          "best": "Best"
+        },
+        "preserveTransparency": "Enable Transparency",
+        "backgroundColor": "Background Color",
+        "transparency": "Transparency Settings"
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "PNG Size",
+        "fileSize": "File Size",
+        "sizeChange": "Size Change",
+        "sizeRatio": "Size Ratio",
+        "quality": "Quality",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Upload a JPG/JPEG image and it will be automatically converted to PNG format. Enable transparency to remove solid backgrounds.",
+        "supportInfo": "Supports JPG and JPEG formats up to 10MB. PNG format preserves quality and supports transparency."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid JPG or JPEG file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToConvert": "Failed to convert image to PNG",
+        "canvasNotSupported": "Canvas context not available",
+        "conversionFailed": "Conversion failed",
+        "failedToCreateZip": "Failed to create ZIP file"
+      },
+      "actions": {
+        "convert": "Convert to PNG",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all conversion settings. This action cannot be undone."
+      }
+    },
+    "pngToWebp": {
+      "title": "PNG to WebP Converter",
+      "description": "Convert PNG images to modern WebP format with superior compression and transparency support. Perfect for web optimization while preserving image quality.",
+      "outputLabel": "Converted WebP Image",
+      "copiedMessage": "WebP image copied to clipboard!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Upload a PNG file to convert to WebP",
+      "labels": {
+        "originalImage": "Original PNG Image",
+        "convertedResult": "Converted WebP Result",
+        "uploadArea": "Upload a PNG Image",
+        "dragDrop": "Drag and drop or click to select a PNG file",
+        "supportedFormats": "Supports PNG • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Converting...",
+        "convertPreview": "Converted WebP image will appear here"
+      },
+      "options": {
+        "conversionSettings": "Conversion Settings",
+        "quality": "WebP Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "compression": "Compression",
+        "compressionLevels": {
+          "none": "None",
+          "fast": "Fast",
+          "best": "Best"
+        },
+        "losslessMode": "Lossless Mode",
+        "losslessModeDescription": "Enable for perfect quality preservation with transparency",
+        "webpSettings": "WebP Settings"
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "WebP Size",
+        "fileSize": "File Size",
+        "sizeChange": "Size Change",
+        "sizeRatio": "Size Ratio",
+        "quality": "Quality",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Upload a PNG image and it will be automatically converted to WebP format. WebP preserves transparency and often provides better compression than PNG.",
+        "supportInfo": "Supports PNG format up to 10MB. WebP format supports transparency and provides superior compression."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid PNG file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToConvert": "Failed to convert image to WebP",
+        "canvasNotSupported": "Canvas context not available",
+        "conversionFailed": "Conversion failed",
+        "failedToCreateZip": "Failed to create ZIP file"
+      },
+      "actions": {
+        "convert": "Convert to WebP",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all conversion settings. This action cannot be undone."
+      }
+    },
+    "pngToJpg": {
+      "title": "PNG to JPG Converter",
+      "description": "Convert PNG images to JPG/JPEG format for smaller file sizes and web optimization. Perfect for reducing file sizes while maintaining good quality.",
+      "outputLabel": "Converted JPG Image",
+      "copiedMessage": "JPG image copied to clipboard!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Upload a PNG file to convert to JPG",
+      "labels": {
+        "originalImage": "Original PNG Image",
+        "convertedResult": "Converted JPG Result",
+        "uploadArea": "Upload a PNG Image",
+        "dragDrop": "Drag and drop or click to select a PNG file",
+        "supportedFormats": "Supports PNG • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Converting...",
+        "convertPreview": "Converted JPG image will appear here"
+      },
+      "options": {
+        "conversionSettings": "Conversion Settings",
+        "quality": "JPG Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "compression": "JPG Compression",
+        "compressionLevels": {
+          "fast": "Fast",
+          "standard": "Standard",
+          "best": "Best"
+        },
+        "handleTransparency": "Handle Transparency",
+        "backgroundColor": "Background Color"
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "JPG Size",
+        "fileSize": "File Size",
+        "sizeChange": "Size Change",
+        "sizeRatio": "Size Ratio",
+        "quality": "Quality",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Upload a PNG image and it will be automatically converted to JPG format. Transparent areas will be filled with the selected background color.",
+        "supportInfo": "Supports PNG format up to 10MB. JPG format reduces file size but removes transparency."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid PNG file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToConvert": "Failed to convert image to JPG",
+        "canvasNotSupported": "Canvas context not available",
+        "conversionFailed": "Conversion failed",
+        "failedToCreateZip": "Failed to create ZIP file"
+      },
+      "actions": {
+        "convert": "Convert to JPG",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all conversion settings. This action cannot be undone."
+      }
+    },
+    "webpToJpg": {
+      "title": "WebP to JPG Converter",
+      "description": "Convert WebP images to JPG/JPEG format for better compatibility and smaller file sizes. Perfect for web optimization and legacy browser support.",
+      "outputLabel": "Converted JPG Image",
+      "copiedMessage": "JPG image copied to clipboard!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Upload a WebP file to convert to JPG",
+      "labels": {
+        "originalImage": "Original WebP Image",
+        "convertedResult": "Converted JPG Result",
+        "uploadArea": "Upload a WebP Image",
+        "dragDrop": "Drag and drop or click to select a WebP file",
+        "supportedFormats": "Supports WebP • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Converting...",
+        "convertPreview": "Converted JPG image will appear here"
+      },
+      "options": {
+        "conversionSettings": "Conversion Settings",
+        "quality": "JPG Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "compression": "JPG Compression",
+        "compressionLevels": {
+          "fast": "Fast",
+          "standard": "Standard",
+          "best": "Best"
+        },
+        "backgroundColor": "Background Color"
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "JPG Size",
+        "fileSize": "File Size",
+        "sizeChange": "Size Change",
+        "sizeRatio": "Size Ratio",
+        "quality": "Quality",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Upload a WebP image and it will be automatically converted to JPG format. Transparent areas will be filled with the selected background color.",
+        "supportInfo": "Supports WebP format up to 10MB. JPG format provides better browser compatibility and optimized file sizes."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid WebP file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToConvert": "Failed to convert image to JPG",
+        "canvasNotSupported": "Canvas context not available",
+        "conversionFailed": "Conversion failed",
+        "failedToCreateZip": "Failed to create ZIP file"
+      },
+      "actions": {
+        "convert": "Convert to JPG",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all conversion settings. This action cannot be undone."
+      }
+    },
+    "webpToPng": {
+      "title": "WebP to PNG Converter",
+      "description": "Convert WebP images to PNG format with lossless quality and full transparency support. Ideal for design workflows and platform compatibility.",
+      "outputLabel": "Converted PNG Image",
+      "copiedMessage": "PNG image copied to clipboard!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Upload a WebP file to convert to PNG",
+      "labels": {
+        "originalImage": "Original WebP Image",
+        "convertedResult": "Converted PNG Result",
+        "uploadArea": "Upload a WebP Image",
+        "dragDrop": "Drag and drop or click to select a WebP file",
+        "supportedFormats": "Supports WebP • Max 10MB",
+        "replace": "Replace"
+      },
+      "placeholders": {
+        "uploading": "Uploading...",
+        "processing": "Converting...",
+        "convertPreview": "Converted PNG image will appear here"
+      },
+      "options": {
+        "conversionSettings": "Conversion Settings",
+        "quality": "PNG Quality",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "High",
+          "medium": "Med",
+          "low": "Low"
+        },
+        "compression": "PNG Compression",
+        "compressionLevels": {
+          "none": "None",
+          "fast": "Fast",
+          "best": "Best"
+        }
+      },
+      "stats": {
+        "originalSize": "Original Size",
+        "newSize": "PNG Size",
+        "fileSize": "File Size",
+        "sizeChange": "Size Change",
+        "sizeRatio": "Size Ratio",
+        "quality": "Quality",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Upload a WebP image and it will be automatically converted to PNG format. Transparency is preserved for design-ready assets.",
+        "supportInfo": "Supports WebP format up to 10MB. PNG output is lossless and widely supported."
+      },
+      "errors": {
+        "invalidFile": "Please select a valid WebP file",
+        "fileTooLarge": "Image file size must be less than 10MB",
+        "failedToLoad": "Failed to load image",
+        "failedToRead": "Failed to read file",
+        "failedToConvert": "Failed to convert image to PNG",
+        "canvasNotSupported": "Canvas context not available",
+        "conversionFailed": "Conversion failed",
+        "failedToCreateZip": "Failed to create ZIP file"
+      },
+      "actions": {
+        "convert": "Convert to PNG",
+        "download": "Download",
+        "copy": "Copy",
+        "clear": "Clear",
+        "upload": "Upload"
+      },
+      "dialog": {
+        "clearTitle": "Clear Image",
+        "clearDescription": "This will remove the current image and reset all conversion settings. This action cannot be undone."
+      }
+    }
+  },
+  "ru": {
+    "imageCropper": {
+      "title": "Инструмент Обрезки Изображений",
+      "description": "Обрезайте, изменяйте размер и оптимизируйте ваши изображения с точностью. Идеально для социальных сетей, веб-дизайна и редактирования фотографий.",
+      "outputLabel": "Обрезанное Изображение",
+      "copiedMessage": "Изображение скопировано в буфер обмена!",
+      "downloadFileName": "cropped-image",
+      "uploadDescription": "Загрузите файл изображения для обрезки и редактирования",
+      "labels": {
+        "originalImage": "Исходное Изображение",
+        "croppedResult": "Результат Обрезки",
+        "uploadArea": "Загрузить Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать файл изображения",
+        "supportedFormats": "Поддерживает JPG, PNG, WebP • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Обработка...",
+        "cropPreview": "Обрезанное изображение появится здесь"
+      },
+      "accordion": {
+        "title": "Опции Обрезки Изображений"
+      },
+      "sections": {
+        "cropSettings": "Настройки Обрезки",
+        "outputSettings": "Настройки Вывода",
+        "appearance": "Внешний Вид"
+      },
+      "options": {
+        "cropSettings": "Настройки Обрезки",
+        "aspectRatio": "Соотношение Сторон",
+        "aspectRatios": {
+          "free": "Свободное",
+          "square": "1:1",
+          "widescreen": "16:9",
+          "standard": "4:3",
+          "photo": "3:2",
+          "portrait": "5:4",
+          "tall": "2:3"
+        },
+        "outputFormat": "Формат Вывода",
+        "quality": "Качество",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "outputSize": "Размер Вывода",
+        "width": "Ширина (px)",
+        "height": "Высота (px)",
+        "keepOriginalSize": "Сохранить Исходный Размер Обрезки",
+        "enableRotation": "Включить Поворот",
+        "backgroundColor": "Цвет Фона"
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "fileSize": "Размер Файла",
+        "croppedSize": "Размер Обрезки",
+        "compression": "Размер Файла"
+      },
+      "analytics": {
+        "title": "Аналитика Обрезки Изображений",
+        "originalSize": "Исходный Размер",
+        "croppedSize": "Размер Обрезки",
+        "originalFileSize": "Исходный Размер Файла",
+        "croppedFileSize": "Размер Обрезанного Файла",
+        "compressionRatio": "Коэффициент Сжатия",
+        "cropReduction": "Уменьшение Обрезки"
+      },
+      "presets": {
+        "square": "Квадрат",
+        "wide": "Широкий",
+        "photo": "Фото"
+      },
+      "info": {
+        "description": "Загрузите изображение и настройте область обрезки, перетаскивая углы. Результат обрезки обновляется автоматически.",
+        "supportInfo": "Поддерживает форматы JPG, PNG, WebP до 10МБ. Используйте разные соотношения сторон для различных социальных платформ."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный файл изображения",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToCrop": "Не удалось обрезать изображение",
+        "canvasNotSupported": "Контекст Canvas недоступен"
+      },
+      "actions": {
+        "rotate": "Повернуть",
+        "rotateLeft": "Повернуть Влево",
+        "rotateRight": "Повернуть Вправо",
+        "crop": "Обрезать",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки обрезки. Это действие нельзя отменить."
+      }
+    },
+    "imageToText": {
+      "title": "Извлечение Текста из Изображений OCR",
+      "description": "Извлекайте текст из изображений с помощью передовой OCR технологии. Поддержка множества языков и высокоточное распознавание текста из фотографий, скриншотов и документов.",
+      "outputLabel": "Извлечённый Текст",
+      "copiedMessage": "Текст скопирован в буфер обмена!",
+      "downloadFileName": "extracted-text.txt",
+      "uploadDescription": "Загрузите файл изображения для извлечения текста",
+      "labels": {
+        "uploadArea": "Загрузить Изображение",
+        "extractedText": "Извлечённый Текст",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать файл изображения",
+        "supportedFormats": "Поддерживает JPG, PNG, GIF, WebP, BMP, TIFF • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Извлечение текста...",
+        "textPreview": "Извлечённый текст появится здесь"
+      },
+      "accordion": {
+        "title": "Опции OCR Обработки"
+      },
+      "sections": {
+        "language": "Настройки Языка",
+        "processing": "Настройки Обработки"
+      },
+      "options": {
+        "ocrSettings": "Настройки OCR",
+        "language": "Язык Распознавания",
+        "confidence": "Порог Достоверности",
+        "confidenceDescription": "Минимальный уровень достоверности для распознавания текста (выше = точнее)",
+        "preserveFormatting": "Сохранить Форматирование",
+        "preserveFormattingDescription": "Сохранить исходную разметку и интервалы текста",
+        "detectOrientation": "Авто-Определение Ориентации",
+        "detectOrientationDescription": "Автоматически определять и исправлять ориентацию изображения"
+      },
+      "stats": {
+        "title": "Результаты Извлечения",
+        "imageSize": "Файл Изображения",
+        "textLength": "Длина Текста",
+        "wordCount": "Количество Слов",
+        "confidence": "Достоверность"
+      },
+      "analytics": {
+        "title": "OCR Аналитика",
+        "imageFileSize": "Размер Файла Изображения",
+        "textLength": "Длина Текста",
+        "wordCount": "Количество Слов",
+        "lineCount": "Количество Строк",
+        "confidence": "Достоверность",
+        "extractionRatio": "Коэффициент Извлечения"
+      },
+      "messages": {
+        "ocrSuccess": "Текст успешно извлечён!",
+        "textCopied": "Текст скопирован в буфер обмена!"
+      },
+      "info": {
+        "description": "Загрузите любое изображение с текстом, и наша OCR технология извлечёт текстовое содержимое. Работает с фотографиями, скриншотами, отсканированными документами и многим другим.",
+        "supportInfo": "Поддерживает множество форматов изображений и языков. Лучшие результаты с чёткими, контрастными текстовыми изображениями."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный файл изображения",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "ocrFailed": "Не удалось извлечь текст из изображения",
+        "lowConfidence": "Достоверность распознавания текста слишком низкая. Попробуйте настроить параметры или использовать более чёткое изображение.",
+        "noTextFound": "В этом изображении не найдено текста"
+      },
+      "actions": {
+        "extract": "Извлечь Текст",
+        "extractText": "Извлечь Текст",
+        "processing": "Обработка...",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить Изображение",
+        "reupload": "Перезагрузить",
+        "example": "Пример"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и извлечённый текст. Это действие нельзя отменить."
+      }
+    },
+    "jpgToWebp": {
+      "title": "Конвертер JPG в WebP",
+      "description": "Конвертируйте JPG/JPEG изображения в современный формат WebP для значительно меньшего размера файлов при отличном качестве. Идеально для производительности и SEO.",
+      "outputLabel": "Конвертированное WebP Изображение",
+      "copiedMessage": "WebP изображение скопировано в буфер обмена!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Загрузите JPG/JPEG файл для конвертации в WebP",
+      "labels": {
+        "originalImage": "Исходное JPG Изображение",
+        "convertedResult": "Результат Конвертации в WebP",
+        "uploadArea": "Загрузить JPG/JPEG Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать JPG/JPEG файл",
+        "supportedFormats": "Поддерживает JPG, JPEG • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Конвертация...",
+        "convertPreview": "Конвертированное WebP изображение появится здесь"
+      },
+      "options": {
+        "conversionSettings": "Настройки Конвертации",
+        "quality": "Качество WebP",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "compression": "Сжатие",
+        "compressionLevels": {
+          "none": "Нет",
+          "fast": "Быстрое",
+          "best": "Лучшее"
+        },
+        "losslessMode": "Режим Без Потерь",
+        "losslessModeDescription": "Включите для идеального сохранения качества (большие файлы)",
+        "webpSettings": "Настройки WebP"
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Размер WebP",
+        "fileSize": "Размер Файла",
+        "sizeChange": "Изменение Размера",
+        "sizeRatio": "Соотношение Размера",
+        "quality": "Качество",
+        "format": "Формат"
+      },
+      "info": {
+        "description": "Загрузите JPG/JPEG изображение, и оно будет автоматически конвертировано в формат WebP. WebP часто значительно уменьшает размер файла при сохранении качества.",
+        "supportInfo": "Поддерживает форматы JPG и JPEG до 10МБ. WebP широко поддерживается современными браузерами и улучшает производительность страниц."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный JPG или JPEG файл",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToConvert": "Не удалось конвертировать изображение в WebP",
+        "canvasNotSupported": "Контекст Canvas недоступен",
+        "conversionFailed": "Конвертация не удалась",
+        "failedToCreateZip": "Не удалось создать ZIP файл"
+      },
+      "actions": {
+        "convert": "Конвертировать в WebP",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
+      }
+    },
+    "imageResizer": {
+      "title": "Инструмент Изменения Размера Изображений",
+      "description": "Изменяйте размер ваших изображений до любых размеров сохраняя качество. Идеально для веб-оптимизации, миниатюр и социальных сетей.",
+      "outputLabel": "Изображение с Измененным Размером",
+      "copiedMessage": "Изображение скопировано в буфер обмена!",
+      "downloadFileName": "resized-image",
+      "uploadDescription": "Загрузите файл изображения для изменения размера",
+      "labels": {
+        "originalImage": "Исходное Изображение",
+        "resizedResult": "Результат Изменения Размера",
+        "uploadArea": "Загрузить Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать файл изображения",
+        "supportedFormats": "Поддерживает JPG, PNG, WebP • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Обработка...",
+        "resizePreview": "Изображение с измененным размером появится здесь"
+      },
+      "options": {
+        "resizeSettings": "Настройки Изменения Размера",
+        "dimensions": "Размеры",
+        "width": "Ширина (px)",
+        "height": "Высота (px)",
+        "percentage": "Процент (%)",
+        "outputFormat": "Формат Вывода",
+        "quality": "Качество",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "resizeMode": "Режим Изменения Размера",
+        "resizeModes": {
+          "exact": "Точные Размеры",
+          "aspectRatio": "Сохранить Пропорции",
+          "percentage": "Процентное Соотношение"
+        },
+        "maintainAspectRatio": "Сохранить Соотношение Сторон",
+        "backgroundColor": "Цвет Фона",
+        "interpolation": "Метод Интерполяции",
+        "interpolationMethods": {
+          "auto": "Авто",
+          "nearest": "Ближайший Сосед",
+          "bilinear": "Билинейный",
+          "bicubic": "Бикубический"
+        }
+      },
+      "presets": {
+        "title": "Общие Предустановки",
+        "social": {
+          "instagramPost": "Пост Instagram (1080×1080)",
+          "instagramStory": "История Instagram (1080×1920)",
+          "facebookPost": "Пост Facebook (1200×630)",
+          "twitterPost": "Пост Twitter (1200×675)",
+          "linkedinPost": "Пост LinkedIn (1200×627)"
+        },
+        "web": {
+          "thumbnail": "Миниатюра (300×300)",
+          "banner": "Баннер (728×90)",
+          "leaderboard": "Лидерборд (728×90)",
+          "rectangle": "Прямоугольник (300×250)",
+          "square": "Квадрат (250×250)"
+        }
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Новый Размер",
+        "fileSize": "Размер Файла",
+        "compression": "Коэффициент Сжатия",
+        "reduction": "Уменьшение Размера"
+      },
+      "info": {
+        "description": "Загрузите изображение и установите желаемые размеры. Выберите сохранение пропорций или точное изменение размеров.",
+        "supportInfo": "Поддерживает форматы JPG, PNG, WebP до 10МБ. Используйте предустановки для общих размеров социальных сетей и веб-страниц."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный файл изображения",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToResize": "Не удалось изменить размер изображения",
+        "invalidDimensions": "Пожалуйста, введите действительные размеры",
+        "dimensionsTooLarge": "Размеры слишком большие (макс. 5000×5000)",
+        "canvasNotSupported": "Контекст Canvas недоступен"
+      },
+      "actions": {
+        "resize": "Изменить Размер",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить",
+        "applyPreset": "Применить Предустановку"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки изменения размера. Это действие нельзя отменить."
+      },
+      "tabs": {
+        "dimensions": "Размеры",
+        "settings": "Настройки",
+        "presets": "Предустановки"
+      }
+    },
+    "jpgToPng": {
+      "title": "Конвертер JPG в PNG",
+      "description": "Конвертируйте JPG/JPEG изображения в PNG формат с поддержкой прозрачности и без потери качества. Идеально для веб-дизайна, редактирования графики и сохранения качества изображений.",
+      "outputLabel": "Конвертированное PNG Изображение",
+      "copiedMessage": "PNG изображение скопировано в буфер обмена!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Загрузите JPG/JPEG файл для конвертации в PNG",
+      "labels": {
+        "originalImage": "Исходное JPG Изображение",
+        "convertedResult": "Результат Конвертации в PNG",
+        "uploadArea": "Загрузить JPG/JPEG Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать JPG/JPEG файл",
+        "supportedFormats": "Поддерживает JPG, JPEG • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Конвертация...",
+        "convertPreview": "Конвертированное PNG изображение появится здесь"
+      },
+      "options": {
+        "conversionSettings": "Настройки Конвертации",
+        "quality": "Качество PNG",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "compression": "Сжатие PNG",
+        "compressionLevels": {
+          "none": "Нет",
+          "fast": "Быстрое",
+          "best": "Лучшее"
+        },
+        "preserveTransparency": "Включить Прозрачность",
+        "backgroundColor": "Цвет Фона",
+        "transparency": "Настройки Прозрачности"
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Размер PNG",
+        "fileSize": "Размер Файла",
+        "sizeChange": "Изменение Размера",
+        "sizeRatio": "Соотношение Размера",
+        "quality": "Качество",
+        "format": "Формат"
+      },
+      "info": {
+        "description": "Загрузите JPG/JPEG изображение и оно будет автоматически конвертировано в PNG формат. Включите прозрачность для удаления сплошных фонов.",
+        "supportInfo": "Поддерживает JPG и JPEG форматы до 10МБ. PNG формат сохраняет качество и поддерживает прозрачность."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный JPG или JPEG файл",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToConvert": "Не удалось конвертировать изображение в PNG",
+        "canvasNotSupported": "Контекст Canvas недоступен",
+        "conversionFailed": "Конвертация не удалась",
+        "failedToCreateZip": "Не удалось создать ZIP файл"
+      },
+      "actions": {
+        "convert": "Конвертировать в PNG",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
+      }
+    },
+    "pngToWebp": {
+      "title": "Конвертер PNG в WebP",
+      "description": "Конвертируйте PNG изображения в современный формат WebP с улучшенным сжатием и поддержкой прозрачности. Идеально для веб-оптимизации с сохранением качества изображений.",
+      "outputLabel": "Конвертированное WebP Изображение",
+      "copiedMessage": "WebP изображение скопировано в буфер обмена!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Загрузите PNG файл для конвертации в WebP",
+      "labels": {
+        "originalImage": "Исходное PNG Изображение",
+        "convertedResult": "Результат Конвертации в WebP",
+        "uploadArea": "Загрузить PNG Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать PNG файл",
+        "supportedFormats": "Поддерживает PNG • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Конвертация...",
+        "convertPreview": "Конвертированное WebP изображение появится здесь"
+      },
+      "options": {
+        "conversionSettings": "Настройки Конвертации",
+        "quality": "Качество WebP",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "compression": "Сжатие",
+        "compressionLevels": {
+          "none": "Нет",
+          "fast": "Быстрое",
+          "best": "Лучшее"
+        },
+        "losslessMode": "Режим Без Потерь",
+        "losslessModeDescription": "Включите для идеального сохранения качества с прозрачностью",
+        "webpSettings": "Настройки WebP"
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Размер WebP",
+        "fileSize": "Размер Файла",
+        "sizeChange": "Изменение Размера",
+        "sizeRatio": "Соотношение Размера",
+        "quality": "Качество",
+        "format": "Формат"
+      },
+      "info": {
+        "description": "Загрузите PNG изображение и оно будет автоматически конвертировано в формат WebP. WebP сохраняет прозрачность и часто обеспечивает лучшее сжатие чем PNG.",
+        "supportInfo": "Поддерживает PNG формат до 10МБ. WebP формат поддерживает прозрачность и обеспечивает превосходное сжатие."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный PNG файл",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToConvert": "Не удалось конвертировать изображение в WebP",
+        "canvasNotSupported": "Контекст Canvas недоступен",
+        "conversionFailed": "Конвертация не удалась",
+        "failedToCreateZip": "Не удалось создать ZIP файл"
+      },
+      "actions": {
+        "convert": "Конвертировать в WebP",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
+      }
+    },
+    "pngToJpg": {
+      "title": "Конвертер PNG в JPG",
+      "description": "Конвертируйте PNG изображения в JPG/JPEG формат для уменьшения размера файлов и веб-оптимизации. Идеально для уменьшения размера файлов сохраняя хорошее качество.",
+      "outputLabel": "Конвертированное JPG Изображение",
+      "copiedMessage": "JPG изображение скопировано в буфер обмена!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Загрузите PNG файл для конвертации в JPG",
+      "labels": {
+        "originalImage": "Исходное PNG Изображение",
+        "convertedResult": "Результат Конвертации в JPG",
+        "uploadArea": "Загрузить PNG Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать PNG файл",
+        "supportedFormats": "Поддерживает PNG • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Конвертация...",
+        "convertPreview": "Конвертированное JPG изображение появится здесь"
+      },
+      "options": {
+        "conversionSettings": "Настройки Конвертации",
+        "quality": "Качество JPG",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "compression": "Сжатие JPG",
+        "compressionLevels": {
+          "fast": "Быстрое",
+          "standard": "Стандартное",
+          "best": "Лучшее"
+        },
+        "handleTransparency": "Обработка Прозрачности",
+        "backgroundColor": "Цвет Фона"
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Размер JPG",
+        "fileSize": "Размер Файла",
+        "sizeChange": "Изменение Размера",
+        "sizeRatio": "Соотношение Размера",
+        "quality": "Качество",
+        "format": "Формат"
+      },
+      "info": {
+        "description": "Загрузите PNG изображение и оно будет автоматически конвертировано в JPG формат. Прозрачные области будут заполнены выбранным цветом фона.",
+        "supportInfo": "Поддерживает PNG формат до 10МБ. JPG формат уменьшает размер файла, но убирает прозрачность."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный PNG файл",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToConvert": "Не удалось конвертировать изображение в JPG",
+        "canvasNotSupported": "Контекст Canvas недоступен",
+        "conversionFailed": "Конвертация не удалась",
+        "failedToCreateZip": "Не удалось создать ZIP файл"
+      },
+      "actions": {
+        "convert": "Конвертировать в JPG",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
+      }
+    },
+    "webpToJpg": {
+      "title": "Конвертер WebP в JPG",
+      "description": "Конвертируйте WebP изображения в JPG/JPEG формат для лучшей совместимости и меньших размеров файлов. Идеально для веб-оптимизации и поддержки устаревших браузеров.",
+      "outputLabel": "Конвертированное JPG Изображение",
+      "copiedMessage": "JPG изображение скопировано в буфер обмена!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Загрузите WebP файл для конвертации в JPG",
+      "labels": {
+        "originalImage": "Исходное WebP Изображение",
+        "convertedResult": "Результат Конвертации в JPG",
+        "uploadArea": "Загрузить WebP Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать WebP файл",
+        "supportedFormats": "Поддерживает WebP • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Конвертация...",
+        "convertPreview": "Конвертированное JPG изображение появится здесь"
+      },
+      "options": {
+        "conversionSettings": "Настройки Конвертации",
+        "quality": "Качество JPG",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "compression": "Сжатие JPG",
+        "compressionLevels": {
+          "fast": "Быстрое",
+          "standard": "Стандартное",
+          "best": "Лучшее"
+        },
+        "backgroundColor": "Цвет Фона"
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Размер JPG",
+        "fileSize": "Размер Файла",
+        "sizeChange": "Изменение Размера",
+        "sizeRatio": "Соотношение Размера",
+        "quality": "Качество",
+        "format": "Формат"
+      },
+      "info": {
+        "description": "Загрузите WebP изображение и оно будет автоматически конвертировано в JPG формат. Прозрачные области будут заполнены выбранным цветом фона.",
+        "supportInfo": "Поддерживает WebP формат до 10МБ. JPG формат обеспечивает лучшую совместимость с браузерами и оптимизированные размеры файлов."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный WebP файл",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToConvert": "Не удалось конвертировать изображение в JPG",
+        "canvasNotSupported": "Контекст Canvas недоступен",
+        "conversionFailed": "Конвертация не удалась",
+        "failedToCreateZip": "Не удалось создать ZIP файл"
+      },
+      "actions": {
+        "convert": "Конвертировать в JPG",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
+      }
+    },
+    "webpToPng": {
+      "title": "Конвертер WebP в PNG",
+      "description": "Конвертируйте WebP изображения в PNG формат с качеством без потерь и полной поддержкой прозрачности. Идеально для рабочих процессов дизайна и совместимости платформ.",
+      "outputLabel": "Конвертированное PNG Изображение",
+      "copiedMessage": "PNG изображение скопировано в буфер обмена!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "Загрузите WebP файл для конвертации в PNG",
+      "labels": {
+        "originalImage": "Исходное WebP Изображение",
+        "convertedResult": "Результат Конвертации в PNG",
+        "uploadArea": "Загрузить WebP Изображение",
+        "dragDrop": "Перетащите и отпустите или нажмите, чтобы выбрать WebP файл",
+        "supportedFormats": "Поддерживает WebP • Макс. 10МБ",
+        "replace": "Заменить"
+      },
+      "placeholders": {
+        "uploading": "Загрузка...",
+        "processing": "Конвертация...",
+        "convertPreview": "Конвертированное PNG изображение появится здесь"
+      },
+      "options": {
+        "conversionSettings": "Настройки Конвертации",
+        "quality": "Качество PNG",
+        "qualityLevels": {
+          "max": "Макс",
+          "high": "Высокое",
+          "medium": "Средн",
+          "low": "Низкое"
+        },
+        "compression": "Сжатие PNG",
+        "compressionLevels": {
+          "none": "Нет",
+          "fast": "Быстрое",
+          "best": "Лучшее"
+        }
+      },
+      "stats": {
+        "originalSize": "Исходный Размер",
+        "newSize": "Размер PNG",
+        "fileSize": "Размер Файла",
+        "sizeChange": "Изменение Размера",
+        "sizeRatio": "Соотношение Размера",
+        "quality": "Качество",
+        "format": "Формат"
+      },
+      "info": {
+        "description": "Загрузите WebP изображение и оно будет автоматически конвертировано в PNG формат. Прозрачность сохраняется для ассетов, готовых к дизайну.",
+        "supportInfo": "Поддерживает формат WebP до 10МБ. PNG — без потерь и широко поддерживается."
+      },
+      "errors": {
+        "invalidFile": "Пожалуйста, выберите действительный WebP файл",
+        "fileTooLarge": "Размер файла изображения должен быть менее 10МБ",
+        "failedToLoad": "Не удалось загрузить изображение",
+        "failedToRead": "Не удалось прочитать файл",
+        "failedToConvert": "Не удалось конвертировать изображение в PNG",
+        "canvasNotSupported": "Контекст Canvas недоступен",
+        "conversionFailed": "Конвертация не удалась",
+        "failedToCreateZip": "Не удалось создать ZIP файл"
+      },
+      "actions": {
+        "convert": "Конвертировать в PNG",
+        "download": "Скачать",
+        "copy": "Копировать",
+        "clear": "Очистить",
+        "upload": "Загрузить"
+      },
+      "dialog": {
+        "clearTitle": "Очистить Изображение",
+        "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
+      }
+    }
+  }
+}

@@ -1,0 +1,284 @@
+{
+  "en": {
+    "title": "Discord Font Generator - Gaming Text Styles for Messages & Usernames",
+    "metaDescription": "Generate unique Discord fonts with bold, italic, monospace, and gaming-inspired styles. Perfect for Discord messages, usernames, channel names, and gaming communities. Copy and paste Unicode fonts that work everywhere!",
+    "sections": {
+      "intro": {
+        "title": "Discord Font Generator - Gaming Text Styles for Messages & Usernames",
+        "content": "Transform your regular text into unique Discord fonts using our specialized Unicode font generator. Create gaming-inspired text for Discord messages, usernames, channel names, and gaming communities with bold, italic, monospace, sans serif, and double struck styles. Perfect for gamers, streamers, and Discord server owners looking to make their content stand out with distinctive typography."
+      },
+      "features": {
+        "title": "Advanced Discord Font Generator Features",
+        "items": [
+          { "title": "6 Gaming Font Styles", "description": "Bold, italic, monospace, sans serif, sans serif bold, and double struck fonts optimized for gaming communities" },
+          { "title": "Discord Compatible", "description": "Works perfectly in Discord messages, usernames, channel names, and server descriptions" },
+          { "title": "Real-time Preview", "description": "See your text transformed instantly as you type with live gaming-focused previews" },
+          { "title": "One-Click Copy", "description": "Copy your styled Discord text to clipboard with a single click" },
+          { "title": "File Upload Support", "description": "Upload text files to convert entire gaming announcements and content at once" },
+          { "title": "Mobile Gaming Ready", "description": "Optimized for mobile Discord app - perfect for gaming on-the-go" },
+          { "title": "No Registration Required", "description": "Start creating Discord fonts immediately without signing up" },
+          { "title": "Privacy-First Gaming", "description": "All font conversion happens locally - your Discord content never leaves your device" },
+          { "title": "Download Gaming Content", "description": "Save your converted Discord text as files for server announcements" },
+          { "title": "Gaming Character Support", "description": "Works with gaming terminology and special characters" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Discord Gaming Communities",
+        "description": "Our Discord font generator is essential for creating engaging gaming content and community management.",
+        "items": [
+          { "title": "Discord Usernames", "description": "Create unique Discord usernames that stand out in gaming servers" },
+          { "title": "Gaming Messages", "description": "Make important announcements and messages more noticeable in Discord channels" },
+          { "title": "Channel Names", "description": "Style Discord channel names and descriptions for better server organization" },
+          { "title": "Server Rules", "description": "Format server rules and guidelines with eye-catching Discord fonts" },
+          { "title": "Gaming Clan Tags", "description": "Create distinctive text styles for gaming clan names and member tags" },
+          { "title": "Tournament Announcements", "description": "Make esports and gaming tournament announcements stand out" },
+          { "title": "Bot Commands", "description": "Format Discord bot commands and responses with monospace fonts" },
+          { "title": "Community Events", "description": "Create attention-grabbing text for gaming events and meetups" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Discord Font Generator",
+        "description": "Follow these simple steps to create unique Discord fonts for your gaming community in seconds.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Discord Text",
+            "description": "Type or paste your text into the input field, or upload a text file for batch conversion of gaming content."
+          },
+          {
+            "step": 2,
+            "title": "Choose Gaming Font Style",
+            "description": "Select from 6 gaming-inspired font styles including bold, italic, monospace, sans serif, sans serif bold, and double struck."
+          },
+          {
+            "step": 3,
+            "title": "Preview and Copy",
+            "description": "See your text transformed in real-time and copy it to your clipboard with one click."
+          },
+          {
+            "step": 4,
+            "title": "Paste in Discord",
+            "description": "Paste your stylish Discord text directly into messages, usernames, channel names, or server descriptions."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Discord Font Style Examples",
+        "description": "See how different Discord font styles transform your text for gaming communities.",
+        "items": [
+          { "title": "Bold Gaming Text", "input": "GamerTag123", "output": "𝐆𝐚𝐦𝐞𝐫𝐓𝐚𝐠𝟏𝟐𝟑", "description": "Perfect for Discord usernames and important gaming announcements" },
+          { "title": "Monospace Commands", "input": "!help discord", "output": "𝚑𝚎𝚕𝚙 𝚍𝚒𝚜𝚌𝚘𝚛𝚍", "description": "Ideal for Discord bot commands and code snippets in gaming servers" },
+          { "title": "Italic Channel Names", "input": "general-chat", "output": "𝑔𝑒𝑛𝑒𝑟𝑎𝑙-𝑐ℎ𝑎𝑡", "description": "Great for Discord channel descriptions and server categories" },
+          { "title": "Double Struck Victory", "input": "VICTORY", "output": "𝕍𝕀ℂ𝕋𝕆ℝ𝕐", "description": "Perfect for celebrating wins in gaming Discord servers" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Discord Font Generator",
+        "content": "Professional Discord font generation with advanced Unicode styling and gaming community optimization.",
+        "items": [
+          "Completely free with unlimited conversions",
+          "No registration or account required", 
+          "Works on all devices and Discord platforms",
+          "Privacy-focused - no data collection",
+          "6 different gaming-inspired font styles",
+          "Real-time preview and instant copying",
+          "File upload support for batch processing",
+          "Compatible with all Discord text areas"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Do Discord fonts work in all Discord channels?",
+          "answer": "Yes! Our Discord font generator creates Unicode characters that work in all Discord text areas including messages, usernames, channel names, server descriptions, and more."
+        },
+        {
+          "question": "Can I use Discord fonts on mobile devices?",
+          "answer": "Absolutely! Discord fonts generated by our tool work perfectly on Discord mobile apps for iOS and Android, as well as the web version on mobile browsers."
+        },
+        {
+          "question": "Are Discord fonts against Discord's Terms of Service?",
+          "answer": "No, Discord fonts use standard Unicode characters and are completely allowed. They're just alternative representations of text, not modifications to Discord itself."
+        },
+        {
+          "question": "Do Discord fonts work with Discord bots?",
+          "answer": "Yes, Discord bots can display and process text with Discord fonts. The fonts appear normally to bots and users alike since they're standard Unicode characters."
+        },
+        {
+          "question": "Can I use Discord fonts for server names?",
+          "answer": "Yes, Discord fonts work great for server names, channel names, role names, and any other text fields within Discord servers and gaming communities."
+        },
+        {
+          "question": "Why don't some characters appear in certain font styles?",
+          "answer": "Some Unicode font styles don't have equivalents for all characters, especially numbers and special symbols. When a character doesn't have a styled version, the original character is preserved to maintain readability."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Gaming Text Tools",
+        "description": "Explore more text transformation tools to enhance your Discord gaming content.",
+        "items": [
+          {
+            "name": "Instagram Font Generator",
+            "description": "Stylish fonts specifically optimized for Instagram gaming content and esports promotion",
+            "href": "/tools/instagram-fonts"
+          },
+          {
+            "name": "Facebook Font Generator", 
+            "description": "Eye-catching fonts for Facebook gaming groups and esports posts",
+            "href": "/tools/facebook-font"
+          },
+          {
+            "name": "Bold Text Generator",
+            "description": "Generate bold Unicode text for gaming emphasis and announcements",
+            "href": "/tools/bold-text"
+          },
+          {
+            "name": "Italic Text Generator",
+            "description": "Create italic Unicode text for gaming aesthetics and style",
+            "href": "/tools/italic-text"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Генератор Discord Шрифтов - Игровые Текстовые Стили для Сообщений",
+    "metaDescription": "Создавайте уникальные Discord шрифты с жирным, курсивным, моноширинным и игровыми стилями. Идеально для сообщений Discord, имен пользователей и игровых сообществ!",
+    "sections": {
+      "intro": {
+        "title": "Генератор Discord Шрифтов - Игровые Текстовые Стили для Сообщений",
+        "content": "Преобразуйте ваш обычный текст в уникальные Discord шрифты используя наш специализированный Unicode генератор шрифтов. Создавайте игровой текст для сообщений Discord, имен пользователей, названий каналов и игровых сообществ с жирным, курсивным, моноширинным, без засечек и двойными символами. Идеально для геймеров, стримеров и владельцев Discord серверов, желающих выделить свой контент уникальной типографикой."
+      },
+      "features": {
+        "title": "Продвинутые Возможности Генератора Discord Шрифтов",
+        "items": [
+          { "title": "6 Игровых Стилей Шрифтов", "description": "Жирный, курсив, моноширинный, без засечек, жирный без засечек и двойные символы, оптимизированные для игровых сообществ" },
+          { "title": "Совместимость с Discord", "description": "Отлично работает в сообщениях Discord, именах пользователей, названиях каналов и описаниях серверов" },
+          { "title": "Предпросмотр в Реальном Времени", "description": "Видите преобразование текста мгновенно при вводе с живыми игровыми предпросмотрами" },
+          { "title": "Копирование Одним Кликом", "description": "Копируйте стилизованный Discord текст в буфер обмена одним кликом" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы для конвертации целых игровых объявлений и контента сразу" },
+          { "title": "Готовность к Мобильным Играм", "description": "Оптимизировано для мобильного приложения Discord - идеально для игр на ходу" },
+          { "title": "Без Регистрации", "description": "Начните создавать Discord шрифты немедленно без регистрации" },
+          { "title": "Конфиденциальность Для Геймеров", "description": "Вся конвертация шрифтов происходит локально - ваш Discord контент не покидает устройство" },
+          { "title": "Скачивание Игрового Контента", "description": "Сохраняйте конвертированный Discord текст как файлы для серверных объявлений" },
+          { "title": "Поддержка Игровых Символов", "description": "Работает с игровой терминологией и специальными символами" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Игровых Сообществ Discord",
+        "description": "Наш генератор Discord шрифтов незаменим для создания увлекательного игрового контента и управления сообществом.",
+        "items": [
+          { "title": "Имена Пользователей Discord", "description": "Создавайте уникальные имена пользователей Discord, которые выделяются на игровых серверах" },
+          { "title": "Игровые Сообщения", "description": "Делайте важные объявления и сообщения более заметными в каналах Discord" },
+          { "title": "Названия Каналов", "description": "Стилизуйте названия каналов Discord и описания для лучшей организации сервера" },
+          { "title": "Правила Сервера", "description": "Форматируйте правила сервера и руководства привлекающими внимание Discord шрифтами" },
+          { "title": "Теги Игровых Кланов", "description": "Создавайте отличительные текстовые стили для названий игровых кланов и тегов участников" },
+          { "title": "Объявления Турниров", "description": "Выделяйте объявления киберспорта и игровых турниров" },
+          { "title": "Команды Ботов", "description": "Форматируйте команды Discord ботов и ответы моноширинными шрифтами" },
+          { "title": "События Сообщества", "description": "Создавайте привлекающий внимание текст для игровых событий и встреч" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Discord Шрифтов",
+        "description": "Следуйте этим простым шагам для создания уникальных Discord шрифтов для вашего игрового сообщества за секунды.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Discord Текст",
+            "description": "Введите или вставьте текст в поле ввода, или загрузите текстовый файл для массовой конвертации игрового контента."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Игровой Стиль Шрифта",
+            "description": "Выберите из 6 игровых стилей шрифтов включая жирный, курсив, моноширинный, без засечек, жирный без засечек и двойные символы."
+          },
+          {
+            "step": 3,
+            "title": "Предпросмотр и Копирование",
+            "description": "Видите преобразование текста в реальном времени и скопируйте в буфер обмена одним кликом."
+          },
+          {
+            "step": 4,
+            "title": "Вставьте в Discord",
+            "description": "Вставьте стильный Discord текст прямо в сообщения, имена пользователей, названия каналов или описания серверов."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Стилей Discord Шрифтов",
+        "description": "Посмотрите, как различные стили Discord шрифтов преобразуют ваш текст для игровых сообществ.",
+        "items": [
+          { "title": "Жирный Игровой Текст", "input": "GamerTag123", "output": "𝐆𝐚𝐦𝐞𝐫𝐓𝐚𝐠𝟏𝟐𝟑", "description": "Идеально для имен пользователей Discord и важных игровых объявлений" },
+          { "title": "Моноширинные Команды", "input": "!help discord", "output": "𝚑𝚎𝚕𝚙 𝚍𝚒𝚜𝚌𝚘𝚛𝚍", "description": "Идеально для команд Discord ботов и фрагментов кода на игровых серверах" },
+          { "title": "Курсивные Названия Каналов", "input": "general-chat", "output": "𝑔𝑒𝑛𝑒𝑟𝑎𝑙-𝑐ℎ𝑎𝑡", "description": "Отлично для описаний каналов Discord и категорий серверов" },
+          { "title": "Победа Двойными Символами", "input": "VICTORY", "output": "𝕍𝕀ℂ𝕋𝕆ℝ𝕐", "description": "Идеально для празднования побед на игровых Discord серверах" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Генератор Discord Шрифтов",
+        "content": "Профессиональная генерация Discord шрифтов с продвинутым Unicode стилизацией и оптимизацией для игровых сообществ.",
+        "items": [
+          "Полностью бесплатно с неограниченными конвертациями",
+          "Без регистрации или аккаунта",
+          "Работает на всех устройствах и Discord платформах",
+          "Фокус на конфиденциальности - никакого сбора данных",
+          "6 различных игровых стилей шрифтов",
+          "Предпросмотр в реальном времени и мгновенное копирование",
+          "Поддержка загрузки файлов для пакетной обработки",
+          "Совместимо со всеми текстовыми областями Discord"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Работают ли Discord шрифты во всех каналах Discord?",
+          "answer": "Да! Наш генератор Discord шрифтов создает Unicode символы, которые работают во всех текстовых областях Discord включая сообщения, имена пользователей, названия каналов, описания серверов и многое другое."
+        },
+        {
+          "question": "Могу ли я использовать Discord шрифты на мобильных устройствах?",
+          "answer": "Абсолютно! Discord шрифты, созданные нашим инструментом, отлично работают в мобильных приложениях Discord для iOS и Android, а также в веб-версии на мобильных браузерах."
+        },
+        {
+          "question": "Противоречат ли Discord шрифты Условиям обслуживания Discord?",
+          "answer": "Нет, Discord шрифты используют стандартные Unicode символы и полностью разрешены. Это просто альтернативные представления текста, а не модификации самого Discord."
+        },
+        {
+          "question": "Работают ли Discord шрифты с ботами Discord?",
+          "answer": "Да, боты Discord могут отображать и обрабатывать текст с Discord шрифтами. Шрифты отображаются нормально как для ботов, так и для пользователей, поскольку это стандартные Unicode символы."
+        },
+        {
+          "question": "Могу ли я использовать Discord шрифты для названий серверов?",
+          "answer": "Да, Discord шрифты отлично работают для названий серверов, каналов, ролей и любых других текстовых полей в серверах и игровых сообществах Discord."
+        },
+        {
+          "question": "Почему некоторые символы не отображаются в определенных стилях шрифтов?",
+          "answer": "Некоторые стили Unicode шрифтов не имеют эквивалентов для всех символов, особенно цифр и специальных символов. Когда у символа нет стилизованной версии, оригинальный символ сохраняется для поддержания читаемости."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Игровые Текстовые Инструменты",
+        "description": "Изучите больше инструментов преобразования текста для улучшения вашего игрового контента Discord.",
+        "items": [
+          {
+            "name": "Генератор Instagram Шрифтов",
+            "description": "Стильные шрифты, специально оптимизированные для игрового контента Instagram и продвижения киберспорта",
+            "href": "/ru/tools/instagram-fonts"
+          },
+          {
+            "name": "Генератор Facebook Шрифтов",
+            "description": "Привлекающие внимание шрифты для игровых групп Facebook и постов киберспорта",
+            "href": "/ru/tools/facebook-font"
+          },
+          {
+            "name": "Генератор Жирного Текста",
+            "description": "Генерируйте жирный Unicode текст для игрового выделения и объявлений",
+            "href": "/ru/tools/bold-text"
+          },
+          {
+            "name": "Генератор Курсивного Текста",
+            "description": "Создавайте курсивный Unicode текст для игровой эстетики и стиля",
+            "href": "/ru/tools/italic-text"
+          }
+        ]
+      }
+    }
+  }
+}

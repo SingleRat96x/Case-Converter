@@ -1,0 +1,268 @@
+{
+  "en": {
+    "title": "Professional Sentence Counter & Analysis Tool",
+    "metaDescription": "Count sentences and analyze sentence structure in your text instantly. Professional sentence analysis tool with detailed statistics for writers and content creators.",
+    "sections": {
+      "intro": {
+        "title": "Professional Sentence Counter & Analysis Tool",
+        "content": "Get instant, detailed sentence analysis with our professional sentence counter tool. Count sentences, analyze sentence structure, and get comprehensive statistics including sentence types, complexity, and readability metrics. Perfect for writers, editors, and content creators who need precise sentence analytics."
+      },
+      "features": {
+        "title": "Comprehensive Sentence Analysis Features",
+        "items": [
+          { "title": "Sentence Counting", "description": "Accurate sentence counting with advanced text parsing for all sentence types" },
+          { "title": "Sentence Type Analysis", "description": "Identify declarative, interrogative, and exclamatory sentences automatically" },
+          { "title": "Length Statistics", "description": "Calculate average, shortest, and longest sentence lengths in words" },
+          { "title": "Complex Sentence Detection", "description": "Identify complex sentences with multiple clauses and conjunctions" },
+          { "title": "Readability Metrics", "description": "Assess text readability based on sentence structure and complexity" },
+          { "title": "File Upload Support", "description": "Analyze text files across common formats right in your browser" },
+          { "title": "Export Reports", "description": "Download professional sentence analysis reports for documentation" },
+          { "title": "Multilingual Support", "description": "Works with any language and Unicode characters" },
+          { "title": "Privacy-First", "description": "All analysis runs locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Writers & Content Creators",
+        "description": "Our sentence counter tool is essential for various writing and editing tasks.",
+        "items": [
+          { "title": "Content Writing", "description": "Improve readability by balancing sentence lengths and types" },
+          { "title": "Academic Writing", "description": "Ensure proper sentence variety and complexity in essays" },
+          { "title": "Technical Writing", "description": "Maintain clarity with appropriate sentence structure" },
+          { "title": "Copy Editing", "description": "Identify overly complex or simple sentence patterns" },
+          { "title": "SEO Content", "description": "Optimize content readability for better search rankings" },
+          { "title": "Creative Writing", "description": "Vary sentence structure for better flow and engagement" },
+          { "title": "ESL Learning", "description": "Practice and improve English sentence construction" },
+          { "title": "Proofreading", "description": "Check sentence structure consistency across documents" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Sentence Counter",
+        "description": "Follow these simple steps to analyze your sentences and export results.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for analysis."
+          },
+          {
+            "step": 2,
+            "title": "View Real-time Analysis", 
+            "description": "Watch as the tool automatically counts sentences and analyzes structure as you type."
+          },
+          {
+            "step": 3,
+            "title": "Review Sentence Statistics",
+            "description": "See detailed breakdown of sentence types, lengths, and complexity metrics."
+          },
+          {
+            "step": 4,
+            "title": "Export Analysis Report",
+            "description": "Download a comprehensive sentence analysis report or copy the results."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Sentence Analysis Examples",
+        "description": "See how our sentence counter analyzes different writing styles.",
+        "items": [
+          { "title": "News Article", "input": "25 sentences", "output": "Avg 18 words/sentence, balanced variety" },
+          { "title": "Academic Paper", "input": "15 sentences", "output": "Avg 25 words/sentence, high complexity" },
+          { "title": "Blog Post", "input": "30 sentences", "output": "Avg 15 words/sentence, conversational" },
+          { "title": "Technical Guide", "input": "20 sentences", "output": "Avg 12 words/sentence, clear structure" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Sentence Counter",
+        "content": "Professional sentence analysis with accurate results and comprehensive statistics.",
+        "items": [
+          "Completely free and unlimited use",
+          "No registration or sign-up required",
+          "Privacy-first - all analysis done locally",
+          "Supports multiple file formats",
+          "Real-time analysis as you type",
+          "Export results for documentation"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "How accurate is the sentence counting?",
+          "answer": "Our sentence counting algorithm is highly accurate, using advanced text parsing to properly identify sentence boundaries, handle abbreviations, and account for different punctuation styles."
+        },
+        {
+          "question": "What defines a complex sentence?",
+          "answer": "Complex sentences are identified as those with more than 15 words or containing coordinating/subordinating conjunctions like 'and', 'but', 'because', 'although', etc."
+        },
+        {
+          "question": "How is sentence type determined?",
+          "answer": "Sentence types are determined by ending punctuation: declarative (.), interrogative (?), and exclamatory (!). The tool analyzes the original text to maintain context."
+        },
+        {
+          "question": "Is my text data stored or shared?",
+          "answer": "No, all sentence analysis happens locally in your browser. Your text is never stored on our servers or shared with third parties."
+        },
+        {
+          "question": "Can I analyze non-English text?",
+          "answer": "Yes, our sentence counter works with any language and character set, though sentence type detection works best with languages using similar punctuation systems."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Analysis Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, lines, and paragraphs in your text",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Word Frequency Analyzer", 
+            "description": "Analyze word frequency and find the most common words in your text",
+            "href": "/tools/word-frequency"
+          },
+          {
+            "name": "Text Replace Tool",
+            "description": "Find and replace text with advanced pattern matching",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Duplicate Line Remover",
+            "description": "Remove duplicate lines from your text efficiently",
+            "href": "/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Профессиональный Счетчик Предложений и Инструмент Анализа",
+    "metaDescription": "Мгновенно подсчитывайте предложения и анализируйте структуру предложений в вашем тексте. Профессиональный инструмент анализа предложений с подробной статистикой для писателей и создателей контента.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Счетчик Предложений и Инструмент Анализа",
+        "content": "Получите мгновенный, подробный анализ предложений с нашим профессиональным инструментом подсчета предложений. Считайте предложения, анализируйте структуру предложений и получайте комплексную статистику, включая типы предложений, сложность и метрики читаемости. Идеально для писателей, редакторов и создателей контента, которым нужна точная аналитика предложений."
+      },
+      "features": {
+        "title": "Комплексные Функции Анализа Предложений",
+        "items": [
+          { "title": "Подсчет Предложений", "description": "Точный подсчет предложений с продвинутым парсингом текста для всех типов предложений" },
+          { "title": "Анализ Типов Предложений", "description": "Автоматическое определение повествовательных, вопросительных и восклицательных предложений" },
+          { "title": "Статистика Длины", "description": "Расчет средней, самой короткой и самой длинной длины предложений в словах" },
+          { "title": "Обнаружение Сложных Предложений", "description": "Определение сложных предложений с несколькими частями и союзами" },
+          { "title": "Метрики Читаемости", "description": "Оценка читаемости текста на основе структуры и сложности предложений" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Анализируйте текстовые файлы популярных форматов прямо в браузере" },
+          { "title": "Экспорт Отчетов", "description": "Скачивайте профессиональные отчеты анализа предложений для документации" },
+          { "title": "Многоязычная Поддержка", "description": "Работает с любым языком и символами Unicode" },
+          { "title": "Конфиденциальность", "description": "Весь анализ выполняется локально — данные не отправляются" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Писателей и Создателей Контента",
+        "description": "Наш инструмент подсчета предложений необходим для различных задач написания и редактирования.",
+        "items": [
+          { "title": "Написание Контента", "description": "Улучшите читаемость, балансируя длины и типы предложений" },
+          { "title": "Академическое Письмо", "description": "Обеспечьте правильное разнообразие и сложность предложений в эссе" },
+          { "title": "Техническое Письмо", "description": "Поддерживайте ясность с подходящей структурой предложений" },
+          { "title": "Копи-редактирование", "description": "Выявляйте слишком сложные или простые паттерны предложений" },
+          { "title": "SEO-контент", "description": "Оптимизируйте читаемость контента для лучших рейтингов в поиске" },
+          { "title": "Творческое Письмо", "description": "Варьируйте структуру предложений для лучшего потока и вовлечения" },
+          { "title": "Изучение ESL", "description": "Практикуйте и улучшайте построение английских предложений" },
+          { "title": "Корректура", "description": "Проверяйте согласованность структуры предложений в документах" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Счетчик Предложений",
+        "description": "Следуйте простым шагам, чтобы проанализировать предложения и экспортировать результаты.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для анализа."
+          },
+          {
+            "step": 2,
+            "title": "Просматривайте Анализ в Реальном Времени",
+            "description": "Наблюдайте, как инструмент автоматически считает предложения и анализирует структуру при вводе."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Статистику Предложений",
+            "description": "Смотрите подробную разбивку типов предложений, длин и метрик сложности."
+          },
+          {
+            "step": 4,
+            "title": "Экспортируйте Отчет Анализа",
+            "description": "Скачайте комплексный отчет анализа предложений или скопируйте результаты."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Анализа Предложений",
+        "description": "Посмотрите, как наш счетчик предложений анализирует разные стили письма.",
+        "items": [
+          { "title": "Новостная Статья", "input": "25 предложений", "output": "Сред. 18 слов/предложение, сбалансированное разнообразие" },
+          { "title": "Академическая Работа", "input": "15 предложений", "output": "Сред. 25 слов/предложение, высокая сложность" },
+          { "title": "Блог-пост", "input": "30 предложений", "output": "Сред. 15 слов/предложение, разговорный" },
+          { "title": "Техническое Руководство", "input": "20 предложений", "output": "Сред. 12 слов/предложение, четкая структура" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Счетчик Предложений",
+        "content": "Профессиональный анализ предложений с точными результатами и комплексной статистикой.",
+        "items": [
+          "Полностью бесплатное и неограниченное использование",
+          "Не требует регистрации или регистрации",
+          "Приоритет конфиденциальности - весь анализ происходит локально",
+          "Поддержка множества форматов файлов",
+          "Анализ в реальном времени при вводе",
+          "Экспорт результатов для документации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Насколько точен подсчет предложений?",
+          "answer": "Наш алгоритм подсчета предложений очень точен, используя продвинутый анализ текста для правильного определения границ предложений, обработки сокращений и учета различных стилей пунктуации."
+        },
+        {
+          "question": "Что определяет сложное предложение?",
+          "answer": "Сложные предложения определяются как те, которые содержат более 15 слов или содержат сочинительные/подчинительные союзы, такие как 'и', 'но', 'потому что', 'хотя' и т.д."
+        },
+        {
+          "question": "Как определяется тип предложения?",
+          "answer": "Типы предложений определяются по конечной пунктуации: повествовательные (.), вопросительные (?), и восклицательные (!). Инструмент анализирует исходный текст для сохранения контекста."
+        },
+        {
+          "question": "Сохраняются ли мои текстовые данные?",
+          "answer": "Нет, весь анализ предложений происходит локально в вашем браузере. Ваш текст никогда не сохраняется на наших серверах и не передается третьим лицам."
+        },
+        {
+          "question": "Можно ли анализировать неанглийский текст?",
+          "answer": "Да, наш счетчик предложений работает с любым языком и набором символов, хотя определение типов предложений работает лучше всего с языками, использующими похожие системы пунктуации."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Анализа Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Считайте символы, слова, строки и абзацы в вашем тексте",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Анализатор Частоты Слов",
+            "description": "Анализируйте частоту слов и находите самые распространенные слова в вашем тексте",
+            "href": "/tools/word-frequency"
+          },
+          {
+            "name": "Инструмент Замены Текста",
+            "description": "Находите и заменяйте текст с продвинутым сопоставлением шаблонов",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Удалитель Дубликатов Строк",
+            "description": "Эффективно удаляйте дублирующиеся строки из вашего текста",
+            "href": "/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm run build:*)",
+      "Bash(npx tsc:*)",
+      "Bash(node:*)",
+      "Bash(mkdir:*)",
+      "Bash(find:*)",
+      "Bash(sed:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(cd:*)",
+      "Bash(npm run lint)",
+      "Bash(npm install)",
+      "Bash(npx next build:*)",
+      "WebSearch",
+      "Bash(cd:*)",
+      "Bash(npm install:*)",
+      "Bash(cd:*)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(git clone:*)",
+      "Read(/tmp/figlet-fonts/**)",
+      "Bash(cd:*)",
+      "Bash(curl:*)",
+      "Bash(python3:*)",
+      "Bash(grep:*)",
+      "Bash(cp:*)",
+      "Bash(npm run typecheck:*)"
+    ],
+    "deny": [],
+    "ask": [],
+    "additionalDirectories": [
+      "/mnt/c/Users/DELL/Desktop"
+    ]
+  }
+}

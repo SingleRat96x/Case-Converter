@@ -1,0 +1,166 @@
+{
+  "en": {
+    "title": "Free Cursed Text Generator - Zalgo Glitch Unicode",
+    "metaDescription": "Create cursed (zalgo) text with glitchy combining diacritics. Perfect for spooky effects, memes, and attention-grabbing text that remains plain Unicode.",
+    "sections": {
+      "intro": {
+        "title": "Free Cursed Text Generator - Zalgo Glitch Unicode",
+        "content": "Generate chaotic, glitchy cursed text instantly using combining diacritical marks. Add a spooky, corrupted look to your messages while keeping them Unicode-compatible."
+      },
+      "features": {
+        "title": "Cursed Text Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time cursed text generation as you type" },
+          { "title": "Intensity Control", "description": "Choose low, medium, or high corruption levels" },
+          { "title": "File Upload", "description": "Convert entire files into cursed text" },
+          { "title": "Copy & Download", "description": "Copy to clipboard or download as text" },
+          { "title": "Text Analytics", "description": "See counts and stats for your transformed text" },
+          { "title": "Privacy-First", "description": "All processing runs locally in your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Cursed Text",
+        "description": "Create unsettling, horror-themed, or meme-style text effects.",
+        "items": [
+          { "title": "Horror & Spooky Posts", "description": "Add eerie vibes to Halloween posts and horror content." },
+          { "title": "Memes & Jokes", "description": "Create chaotic, funny outputs for meme formats." },
+          { "title": "Glitch Aesthetic", "description": "Style text with a corrupted, broken appearance." },
+          { "title": "Attention Grabbers", "description": "Make titles and callouts impossible to ignore." },
+          { "title": "Creative Projects", "description": "Use in posters, thumbnails, and art for a unique look." },
+          { "title": "Chat & Social", "description": "Send unsettling messages that stand out in chats." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Cursed Text",
+        "description": "Turn normal text into cursed text in a few steps.",
+        "steps": [
+          { "step": 1, "title": "Enter Text", "description": "Type or paste your text, or upload a file." },
+          { "step": 2, "title": "Pick Intensity", "description": "Select low, medium, or high corruption level." },
+          { "step": 3, "title": "Review Analytics", "description": "Check word/character counts and other stats." },
+          { "step": 4, "title": "Copy or Download", "description": "Copy to clipboard or download as a text file." }
+        ]
+      },
+      "examples": {
+        "title": "Cursed Text Examples",
+        "description": "Compare different intensity levels.",
+        "items": [
+          { "title": "Low", "input": "Hello there", "output": "H̗̘e̱͒l̦̑l̪͂o̟ͫ t̝͛h̙ͫė̗r̠͌ē̞" },
+          { "title": "Medium", "input": "Beware", "output": "B̳ͫe̞̍w̤͛a̬ͯr̪ͬe̱̐" },
+          { "title": "High", "input": "It comes", "output": "I͚ͫt͙ͫ c͔̃o̲̐m̗̈́e̟̊s̞̍" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Cursed Text Generator",
+        "content": "Fast, flexible, and privacy-friendly cursed text creation.",
+        "items": [
+          "Free and unlimited",
+          "No sign-up required",
+          "Local-only processing",
+          "Multiple intensity levels",
+          "Real-time conversion",
+          "Analytics included",
+          "Responsive design",
+          "Unicode-compatible output"
+        ]
+      },
+      "faqs": [
+        { "question": "What is cursed (zalgo) text?", "answer": "Cursed text uses excessive combining diacritics to create a chaotic, glitched appearance while remaining plain Unicode text." },
+        { "question": "Will it display everywhere?", "answer": "Display varies by font and platform, but most modern systems show combining marks correctly." },
+        { "question": "Can I convert files?", "answer": "Yes, upload a text file and the tool will convert its content." },
+        { "question": "Is my data private?", "answer": "All processing occurs in your browser—no uploads." }
+      ],
+      "relatedTools": {
+        "title": "Related Text Styling Tools",
+        "items": [
+          { "name": "Bold Text Generator", "description": "Generate bold Unicode text", "href": "/tools/bold-text" },
+          { "name": "Italic Text Generator", "description": "Create italic Unicode text", "href": "/tools/italic-text" },
+          { "name": "Bubble Text Generator", "description": "Transform text into playful bubble letters", "href": "/tools/bubble-text" },
+          { "name": "Discord Fonts Generator", "description": "Gaming-inspired Unicode styles for Discord", "href": "/tools/discord-font" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Проклятого Текста - Zalgo Глитч Unicode",
+    "metaDescription": "Создавайте проклятый (zalgo) текст с глитч-эффектом и диакритикой. Идеально для жутких эффектов, мемов и привлекающих внимание сообщений.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор Проклятого Текста - Zalgo Глитч Unicode",
+        "content": "Мгновенно создавайте хаотичный, глючный проклятый текст с использованием комбинированных диакритических знаков. Добавьте жуткий, испорченный вид, сохраняя совместимость Unicode."
+      },
+      "features": {
+        "title": "Возможности Проклятого Текста",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Генерация проклятого текста в реальном времени" },
+          { "title": "Уровни Интенсивности", "description": "Выбирайте низкий, средний или высокий уровень искажения" },
+          { "title": "Загрузка Файлов", "description": "Конвертируйте целые файлы в проклятый текст" },
+          { "title": "Копирование и Скачивание", "description": "Копируйте текст или скачивайте как файл" },
+          { "title": "Аналитика Текста", "description": "Смотрите счетчики и статистику" },
+          { "title": "Конфиденциальность", "description": "Вся обработка локально в вашем браузере" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Проклятого Текста",
+        "description": "Создавайте жуткие, мемные и привлекающие внимание эффекты.",
+        "items": [
+          { "title": "Ужасы и Жуть", "description": "Добавляйте атмосферу к постам на Хэллоуин и хоррор-контенту." },
+          { "title": "Мемы и Шутки", "description": "Создавайте хаотичные, смешные форматы для мемов." },
+          { "title": "Глитч-Эстетика", "description": "Придавайте тексту испорченный, сломанный вид." },
+          { "title": "Привлечение Внимания", "description": "Делайте заголовки и вставки максимально заметными." },
+          { "title": "Креативные Проекты", "description": "Используйте в постерах, превью и арте для уникального вида." },
+          { "title": "Чаты и Соцсети", "description": "Отправляйте необычные сообщения, выделяющиеся в чатах." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Сгенерировать Проклятый Текст",
+        "description": "Преобразуйте обычный текст в проклятый за несколько шагов.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Введите или вставьте текст, либо загрузите файл." },
+          { "step": 2, "title": "Выберите Интенсивность", "description": "Установите низкий, средний или высокий уровень искажения." },
+          { "step": 3, "title": "Просмотрите Аналитику", "description": "Проверьте счетчики и статистику." },
+          { "step": 4, "title": "Копирование или Скачивание", "description": "Скопируйте в буфер или скачайте как текстовый файл." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Проклятого Текста",
+        "description": "Сравните разные уровни интенсивности.",
+        "items": [
+          { "title": "Низкий", "input": "Hello there", "output": "H̗̘e̱͒l̦̑l̪͂o̟ͫ t̝͛h̙ͫė̗r̠͌ē̞" },
+          { "title": "Средний", "input": "Beware", "output": "B̳ͫe̞̍w̤͛a̬ͯr̪ͬe̱̐" },
+          { "title": "Высокий", "input": "It comes", "output": "I͚ͫt͙ͫ c͔̃o̲̐m̗̈́e̟̊s̞̍" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор Проклятого Текста",
+        "content": "Быстрая, гибкая и приватная генерация проклятого текста.",
+        "items": [
+          "Бесплатно и без ограничений",
+          "Регистрация не требуется",
+          "Локальная обработка",
+          "Несколько уровней интенсивности",
+          "Конвертация в реальном времени",
+          "Аналитика включена",
+          "Адаптивный дизайн",
+          "Совместимый с Unicode вывод"
+        ]
+      },
+      "faqs": [
+        { "question": "Что такое проклятый (zalgo) текст?", "answer": "Проклятый текст использует избыточные комбинированные диакритики для создания хаотичного вида, оставаясь обычным Unicode-текстом." },
+        { "question": "Отобразится ли везде?", "answer": "Отображение зависит от шрифта и платформы, но большинство современных систем поддерживают такие символы." },
+        { "question": "Можно ли конвертировать файлы?", "answer": "Да, загрузите текстовый файл и инструмент конвертирует его содержимое." },
+        { "question": "Данные приватны?", "answer": "Вся обработка происходит в браузере — ничего не загружается." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Стилизации Текста",
+        "items": [
+          { "name": "Генератор Жирного Текста", "description": "Создавайте жирный Unicode текст", "href": "/ru/tools/bold-text" },
+          { "name": "Генератор Курсивного Текста", "description": "Создавайте курсивный Unicode текст", "href": "/ru/tools/italic-text" },
+          { "name": "Генератор Пузырькового Текста", "description": "Преобразуйте текст в пузырьковые буквы", "href": "/ru/tools/bubble-text" },
+          { "name": "Генератор Шрифтов Discord", "description": "Игровые Unicode стили для Discord", "href": "/ru/tools/discord-font" }
+        ]
+      }
+    }
+  }
+}
+
+

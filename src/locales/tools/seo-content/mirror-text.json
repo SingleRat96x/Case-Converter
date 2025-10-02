@@ -1,0 +1,166 @@
+{
+  "en": {
+    "title": "Free Mirror Text Generator - Reverse Backwards Text",
+    "metaDescription": "Flip your text backwards to create mirror writing. Perfect for unique designs, puzzles, and mirrored effects across platforms.",
+    "sections": {
+      "intro": {
+        "title": "Free Mirror Text Generator - Reverse Backwards Text",
+        "content": "Reverse your text instantly to create mirror writing. Ideal for creative designs, brain teasers, visual effects, and playful messages—works as plain Unicode text."
+      },
+      "features": {
+        "title": "Mirror Text Features",
+        "items": [
+          { "title": "Instant Reversal", "description": "Reverse text in real time as you type or paste" },
+          { "title": "File Upload", "description": "Upload a file and mirror its entire content" },
+          { "title": "Copy & Download", "description": "Copy mirrored text or download as a file" },
+          { "title": "Text Analytics", "description": "View character and word counts" },
+          { "title": "Unicode Support", "description": "Works across apps and platforms" },
+          { "title": "Privacy-First", "description": "Everything runs locally in your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Mirror Text",
+        "description": "Create mirrored effects for fun and creative applications.",
+        "items": [
+          { "title": "Graphic Design", "description": "Design mirrored titles and decorative elements." },
+          { "title": "Puzzles & Riddles", "description": "Make brain teasers and secret mirror messages." },
+          { "title": "Social Posts", "description": "Share playful reversed captions and bios." },
+          { "title": "Print & Merch", "description": "Create mirrored prints for apparel and posters." },
+          { "title": "UI Experiments", "description": "Prototype mirrored UI and directional effects." },
+          { "title": "Education", "description": "Teach symmetry and reflection with mirrored text." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Mirror Text",
+        "description": "Flip any text in a few easy steps.",
+        "steps": [
+          { "step": 1, "title": "Enter Text", "description": "Type or paste text, or upload a file." },
+          { "step": 2, "title": "Automatic Reversal", "description": "Your text is instantly flipped backwards." },
+          { "step": 3, "title": "Review Analytics", "description": "Check text stats including character and word counts." },
+          { "step": 4, "title": "Copy or Download", "description": "Copy to clipboard or download as a text file." }
+        ]
+      },
+      "examples": {
+        "title": "Mirror Text Examples",
+        "description": "Common phrases reversed for effect.",
+        "items": [
+          { "title": "Greeting", "input": "Hello World", "output": "dlroW olleH" },
+          { "title": "Callout", "input": "Read This", "output": "sihT daeR" },
+          { "title": "Palindrome Fun", "input": "Never odd or even", "output": "neve ro ddo reveN" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Mirror Text Generator",
+        "content": "Reliable mirrored text with a privacy-first, local-only approach.",
+        "items": [
+          "Free with unlimited usage",
+          "No account required",
+          "Local processing for privacy",
+          "Multiple file formats supported",
+          "Real-time conversion",
+          "Built-in analytics",
+          "Responsive design",
+          "Works with all languages"
+        ]
+      },
+      "faqs": [
+        { "question": "What is mirror text?", "answer": "Mirror text is standard text displayed backwards (reversed order), often used for creative or puzzle purposes." },
+        { "question": "Is it compatible everywhere?", "answer": "Yes, mirrored output is plain Unicode text and works across platforms and apps." },
+        { "question": "Can I reverse entire files?", "answer": "Yes, upload a text file to reverse its entire contents." },
+        { "question": "Is my data private?", "answer": "All processing happens locally in your browser—no uploads." }
+      ],
+      "relatedTools": {
+        "title": "Related Text Tools",
+        "items": [
+          { "name": "Bold Text Generator", "description": "Generate bold Unicode text", "href": "/tools/bold-text" },
+          { "name": "Italic Text Generator", "description": "Create italic Unicode text", "href": "/tools/italic-text" },
+          { "name": "Remove Text Formatting", "description": "Strip formatting to clean plain text", "href": "/tools/remove-text-formatting" },
+          { "name": "Duplicate Line Remover", "description": "Clean duplicates from your text", "href": "/tools/duplicate-line-remover" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Зеркального Текста - Разворот Текста", 
+    "metaDescription": "Переверните текст задом наперед для создания зеркального письма. Идеально для креативных дизайнов, головоломок и эффектов.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор Зеркального Текста - Разворот Текста",
+        "content": "Мгновенно переворачивайте текст для создания зеркального написания. Подходит для креативных дизайнов, головоломок, визуальных эффектов и веселых сообщений — это обычный Unicode-текст."
+      },
+      "features": {
+        "title": "Возможности Зеркального Текста",
+        "items": [
+          { "title": "Мгновенный Разворот", "description": "Разворачивайте текст в реальном времени при вводе" },
+          { "title": "Загрузка Файлов", "description": "Загружайте файл и разворачивайте его содержимое" },
+          { "title": "Копирование и Скачивание", "description": "Копируйте зеркальный текст или скачивайте как файл" },
+          { "title": "Аналитика Текста", "description": "Смотрите количество символов и слов" },
+          { "title": "Поддержка Unicode", "description": "Работает в приложениях и на платформах" },
+          { "title": "Конфиденциальность", "description": "Вся обработка локально в вашем браузере" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Зеркального Текста",
+        "description": "Создавайте зеркальные эффекты для веселых и креативных задач.",
+        "items": [
+          { "title": "Графический Дизайн", "description": "Делайте зеркальные заголовки и декоративные элементы." },
+          { "title": "Головоломки", "description": "Создавайте ребусы и секретные зеркальные сообщения." },
+          { "title": "Социальные Посты", "description": "Делитесь игривыми перевернутыми подписями и био." },
+          { "title": "Печать и Мерч", "description": "Создавайте зеркальные принты для одежды и постеров." },
+          { "title": "UI-Эксперименты", "description": "Прототипируйте зеркальные UI и направленные эффекты." },
+          { "title": "Обучение", "description": "Объясняйте симметрию и отражение на примере текста." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Сгенерировать Зеркальный Текст",
+        "description": "Переверните любой текст в несколько шагов.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Введите или вставьте текст, либо загрузите файл." },
+          { "step": 2, "title": "Авторасворот", "description": "Текст мгновенно переворачивается задом наперед." },
+          { "step": 3, "title": "Просмотр Аналитики", "description": "Проверьте счетчики символов и слов." },
+          { "step": 4, "title": "Копирование или Скачивание", "description": "Скопируйте в буфер или скачайте как текстовый файл." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Зеркального Текста",
+        "description": "Распространенные фразы, перевернутые для эффекта.",
+        "items": [
+          { "title": "Приветствие", "input": "Hello World", "output": "dlroW olleH" },
+          { "title": "Вставка", "input": "Прочти Это", "output": "отЭ итчорП" },
+          { "title": "Палиндромы", "input": "Искать такси", "output": "искат татскИ" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор Зеркального Текста",
+        "content": "Надежный разворот текста с приватной локальной обработкой.",
+        "items": [
+          "Бесплатно и без ограничений",
+          "Регистрация не требуется",
+          "Локальная обработка",
+          "Поддержка множества форматов",
+          "В реальном времени",
+          "Аналитика включена",
+          "Адаптивный дизайн",
+          "Работает со всеми языками"
+        ]
+      },
+      "faqs": [
+        { "question": "Что такое зеркальный текст?", "answer": "Зеркальный текст — это обычный текст, отображаемый в обратном порядке, часто для креатива или головоломок." },
+        { "question": "Совместим ли везде?", "answer": "Да, результат — обычный Unicode-текст, который работает на платформах и в приложениях." },
+        { "question": "Можно ли перевернуть целые файлы?", "answer": "Да, загрузите текстовый файл и разверните все содержимое." },
+        { "question": "Данные приватны?", "answer": "Вся обработка происходит в вашем браузере — ничего не загружается." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты",
+        "items": [
+          { "name": "Генератор Жирного Текста", "description": "Создавайте жирный Unicode текст", "href": "/ru/tools/bold-text" },
+          { "name": "Генератор Курсивного Текста", "description": "Создавайте курсивный Unicode текст", "href": "/ru/tools/italic-text" },
+          { "name": "Удаление Форматирования", "description": "Удалите форматирование для чистого текста", "href": "/ru/tools/remove-text-formatting" },
+          { "name": "Удаление Дубликатов Строк", "description": "Очищайте текст от дубликатов строк", "href": "/ru/tools/duplicate-line-remover" }
+        ]
+      }
+    }
+  }
+}
+
+

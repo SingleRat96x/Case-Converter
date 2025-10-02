@@ -1,0 +1,398 @@
+{
+  "en": {
+    "title": "UUID Generator - Create Unique Identifiers Online",
+    "metaDescription": "Generate cryptographically secure UUIDs (Universally Unique Identifiers) for your applications and databases. Support for UUID v1 and v4 with multiple output formats.",
+    "sections": {
+      "intro": {
+        "title": "What is a UUID?",
+        "content": "A UUID (Universally Unique Identifier) is a 128-bit identifier used to uniquely identify information in computer systems. UUIDs are designed to be unique across both space and time, making them perfect for database primary keys, session identifiers, and distributed system coordination."
+      },
+      "features": {
+        "title": "UUID Generator Features",
+        "items": [
+          {
+            "title": "UUID v1 (Timestamp-based) generation",
+            "description": "Generate time-based UUIDs that include timestamp information for unique identification"
+          },
+          {
+            "title": "UUID v4 (Random) generation with cryptographic security",
+            "description": "Create completely random UUIDs using cryptographically secure random number generation"
+          },
+          {
+            "title": "Multiple output formats (Standard, Compact, Braced, URN)",
+            "description": "Choose from various UUID formats to match your application requirements"
+          },
+          {
+            "title": "Bulk generation up to 100 UUIDs",
+            "description": "Generate multiple UUIDs at once for large-scale applications and testing"
+          },
+          {
+            "title": "Uppercase and lowercase formatting options",
+            "description": "Customize the case of your UUIDs for different system requirements"
+          },
+          {
+            "title": "Copy and download functionality",
+            "description": "Easily copy UUIDs to clipboard or download as text file for later use"
+          },
+          {
+            "title": "No registration required - completely free",
+            "description": "Generate unlimited UUIDs without any signup or payment requirements"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the UUID Generator",
+        "content": "Generate unique identifiers in just a few simple steps:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose UUID Version",
+            "content": "Select between UUID v1 (timestamp-based) or v4 (random) depending on your needs."
+          },
+          {
+            "step": 2,
+            "title": "Select Output Format",
+            "content": "Choose from Standard, Compact, Braced, or URN format based on your application requirements."
+          },
+          {
+            "step": 3,
+            "title": "Set Quantity",
+            "content": "Use the slider to select how many UUIDs you need (1-100)."
+          },
+          {
+            "step": 4,
+            "title": "Customize Formatting",
+            "content": "Toggle uppercase/lowercase and remove dashes if needed."
+          },
+          {
+            "step": 5,
+            "title": "Generate and Use",
+            "content": "Click generate to create your UUIDs, then copy or download them for use in your project."
+          }
+        ]
+      },
+      "examples": {
+        "title": "UUID Format Examples",
+        "content": "See different UUID formats and when to use each:",
+        "items": [
+          {
+            "input": "Standard Format",
+            "output": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "Most common format, widely supported across all systems"
+          },
+          {
+            "input": "Compact Format",
+            "output": "550e8400e29b41d4a716446655440000",
+            "description": "Space-efficient format without hyphens"
+          },
+          {
+            "input": "Braced Format",
+            "output": "{550e8400-e29b-41d4-a716-446655440000}",
+            "description": "Microsoft-style format with curly braces"
+          },
+          {
+            "input": "URN Format",
+            "output": "urn:uuid:550e8400-e29b-41d4-a716-446655440000",
+            "description": "Formal URN specification format"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "UUID Use Cases",
+        "items": [
+          {
+            "title": "Database Primary Keys",
+            "description": "Unique identifiers that don't reveal table size or expose sequential patterns"
+          },
+          {
+            "title": "API Tokens",
+            "description": "Secure session and authentication tokens for web services and applications"
+          },
+          {
+            "title": "File Names",
+            "description": "Preventing naming conflicts in distributed systems and cloud storage"
+          },
+          {
+            "title": "Message IDs",
+            "description": "Unique identifiers for messaging systems and event tracking"
+          },
+          {
+            "title": "Transaction IDs",
+            "description": "Tracking financial and business transactions across multiple systems"
+          },
+          {
+            "title": "Resource Identifiers",
+            "description": "Naming resources in cloud and distributed systems for consistent identification"
+          },
+          {
+            "title": "Microservices",
+            "description": "Cross-service unique identifiers for distributed application architectures"
+          },
+          {
+            "title": "Event Sourcing",
+            "description": "Unique event identifiers in event-driven and CQRS architectures"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our UUID Generator?",
+        "content": "Professional UUID generation with enterprise-grade security and reliability.",
+        "items": [
+          "Cryptographically Secure - Uses Web Crypto API for true randomness",
+          "RFC 4122 Compliant - Full standards compliance for maximum compatibility",
+          "Multiple Formats - Support for all common UUID formats",
+          "Bulk Generation - Generate up to 100 UUIDs at once",
+          "Cross-Platform - Works on all browsers and operating systems",
+          "No Dependencies - Pure client-side generation, no server required",
+          "Privacy Focused - No data sent to servers, completely private",
+          "Developer Friendly - Easy copy/download functionality"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Generator Tools",
+        "items": [
+          {
+            "name": "Password Generator",
+            "description": "Generate cryptographically secure passwords",
+            "href": "/tools/password-generator"
+          },
+          {
+            "name": "Random Number Generator",
+            "description": "Create random numbers for testing and development",
+            "href": "/tools/random-number"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode Base64 strings",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Random IP Generator",
+            "description": "Generate random IP addresses for network testing",
+            "href": "/tools/random-ip"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What's the difference between UUID v1 and v4?",
+          "answer": "UUID v1 includes timestamp and MAC address information, making it partially predictable but guaranteeing uniqueness. UUID v4 is completely random and more secure, making it ideal for most applications."
+        },
+        {
+          "question": "Are UUIDs truly unique?",
+          "answer": "While theoretically possible, the probability of generating duplicate UUIDs is astronomically small (1 in 2^122 for v4). For practical purposes, UUIDs are considered unique."
+        },
+        {
+          "question": "Can I use these UUIDs in my commercial projects?",
+          "answer": "Yes! UUIDs are standardized (RFC 4122) and free to use in any project, commercial or otherwise. They're widely supported across all programming languages and databases."
+        },
+        {
+          "question": "Which format should I use?",
+          "answer": "Standard format is most common and widely supported. Use compact format when you need to save space. Braced format is common in Microsoft technologies, and URN format is used in formal specifications."
+        },
+        {
+          "question": "How many UUIDs can I generate at once?",
+          "answer": "You can generate up to 100 UUIDs at once. For larger quantities, simply run the generator multiple times or contact us for bulk generation solutions."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Генератор UUID - Создание Уникальных Идентификаторов Онлайн",
+    "metaDescription": "Генерируйте криптографически безопасные UUID (Универсально Уникальные Идентификаторы) для ваших приложений и баз данных. Поддержка UUID v1 и v4 с множественными форматами вывода.",
+    "sections": {
+      "intro": {
+        "title": "Что такое UUID?",
+        "content": "UUID (Универсально Уникальный Идентификатор) - это 128-битный идентификатор, используемый для уникальной идентификации информации в компьютерных системах. UUID разработаны для обеспечения уникальности как в пространстве, так и во времени, что делает их идеальными для первичных ключей баз данных, идентификаторов сессий и координации распределенных систем."
+      },
+      "features": {
+        "title": "Возможности Генератора UUID",
+        "items": [
+          {
+            "title": "Генерация UUID v1 (на основе временной метки)",
+            "description": "Генерируйте UUID на основе времени, которые включают информацию о временной метке для уникальной идентификации"
+          },
+          {
+            "title": "Генерация UUID v4 (случайный) с криптографической безопасностью",
+            "description": "Создавайте полностью случайные UUID с использованием криптографически безопасной генерации случайных чисел"
+          },
+          {
+            "title": "Множественные форматы вывода (Стандартный, Компактный, В скобках, URN)",
+            "description": "Выбирайте из различных форматов UUID для соответствия требованиям вашего приложения"
+          },
+          {
+            "title": "Массовая генерация до 100 UUID",
+            "description": "Генерируйте множественные UUID одновременно для крупномасштабных приложений и тестирования"
+          },
+          {
+            "title": "Опции форматирования в верхнем и нижнем регистре",
+            "description": "Настраивайте регистр ваших UUID для различных системных требований"
+          },
+          {
+            "title": "Функции копирования и загрузки",
+            "description": "Легко копируйте UUID в буфер обмена или загружайте как текстовый файл для последующего использования"
+          },
+          {
+            "title": "Не требует регистрации - полностью бесплатно",
+            "description": "Генерируйте неограниченное количество UUID без регистрации или оплаты"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор UUID",
+        "content": "Генерируйте уникальные идентификаторы всего за несколько простых шагов:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Версию UUID",
+            "content": "Выберите между UUID v1 (на основе временной метки) или v4 (случайный) в зависимости от ваших потребностей."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Формат Вывода",
+            "content": "Выберите из форматов Стандартный, Компактный, В скобках или URN в зависимости от требований вашего приложения."
+          },
+          {
+            "step": 3,
+            "title": "Установите Количество",
+            "content": "Используйте ползунок, чтобы выбрать, сколько UUID вам нужно (1-100)."
+          },
+          {
+            "step": 4,
+            "title": "Настройте Форматирование",
+            "content": "Переключите верхний/нижний регистр и удалите тире, если необходимо."
+          },
+          {
+            "step": 5,
+            "title": "Генерируйте и Используйте",
+            "content": "Нажмите генерировать, чтобы создать ваши UUID, затем скопируйте или загрузите их для использования в вашем проекте."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Форматов UUID",
+        "content": "Посмотрите различные форматы UUID и когда использовать каждый:",
+        "items": [
+          {
+            "input": "Стандартный Формат",
+            "output": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "Наиболее распространенный формат, широко поддерживается всеми системами"
+          },
+          {
+            "input": "Компактный Формат",
+            "output": "550e8400e29b41d4a716446655440000",
+            "description": "Экономный по месту формат без дефисов"
+          },
+          {
+            "input": "Формат В Скобках",
+            "output": "{550e8400-e29b-41d4-a716-446655440000}",
+            "description": "Формат в стиле Microsoft с фигурными скобками"
+          },
+          {
+            "input": "Формат URN",
+            "output": "urn:uuid:550e8400-e29b-41d4-a716-446655440000",
+            "description": "Формат формальной спецификации URN"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Случаи Использования UUID",
+        "items": [
+          {
+            "title": "Первичные Ключи Базы Данных",
+            "description": "Уникальные идентификаторы, которые не раскрывают размер таблицы или последовательные шаблоны"
+          },
+          {
+            "title": "API Токены",
+            "description": "Безопасные токены сессий и аутентификации для веб-сервисов и приложений"
+          },
+          {
+            "title": "Имена Файлов",
+            "description": "Предотвращение конфликтов имен в распределенных системах и облачном хранилище"
+          },
+          {
+            "title": "ID Сообщений",
+            "description": "Уникальные идентификаторы для систем обмена сообщениями и отслеживания событий"
+          },
+          {
+            "title": "ID Транзакций",
+            "description": "Отслеживание финансовых и бизнес-транзакций в нескольких системах"
+          },
+          {
+            "title": "Идентификаторы Ресурсов",
+            "description": "Именование ресурсов в облачных и распределенных системах для последовательной идентификации"
+          },
+          {
+            "title": "Микросервисы",
+            "description": "Межсервисные уникальные идентификаторы для архитектур распределенных приложений"
+          },
+          {
+            "title": "Event Sourcing",
+            "description": "Уникальные идентификаторы событий в событийно-ориентированных и CQRS архитектурах"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор UUID?",
+        "content": "Профессиональная генерация UUID с безопасностью и надежностью корпоративного уровня.",
+        "items": [
+          "Криптографически Безопасный - Использует Web Crypto API для истинной случайности",
+          "Соответствует RFC 4122 - Полное соответствие стандартам для максимальной совместимости",
+          "Множественные Форматы - Поддержка всех распространенных форматов UUID",
+          "Массовая Генерация - Генерируйте до 100 UUID за раз",
+          "Кроссплатформенность - Работает во всех браузерах и операционных системах",
+          "Без Зависимостей - Чистая клиентская генерация, сервер не требуется",
+          "Ориентированность на Приватность - Никакие данные не отправляются на серверы, полностью приватно",
+          "Дружелюбность к Разработчикам - Легкая функциональность копирования/загрузки"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты Генерации",
+        "items": [
+          {
+            "name": "Генератор Паролей",
+            "description": "Генерируйте криптографически безопасные пароли",
+            "href": "/ru/tools/password-generator"
+          },
+          {
+            "name": "Генератор Случайных Чисел",
+            "description": "Создавайте случайные числа для тестирования и разработки",
+            "href": "/ru/tools/random-number"
+          },
+          {
+            "name": "Кодировщик/Декодировщик Base64",
+            "description": "Кодируйте и декодируйте строки Base64",
+            "href": "/ru/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Генератор Случайных IP",
+            "description": "Генерируйте случайные IP-адреса для сетевого тестирования",
+            "href": "/ru/tools/random-ip"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "В чем разница между UUID v1 и v4?",
+          "answer": "UUID v1 включает информацию о временной метке и MAC-адресе, что делает его частично предсказуемым, но гарантирует уникальность. UUID v4 полностью случаен и более безопасен, что делает его идеальным для большинства приложений."
+        },
+        {
+          "question": "Действительно ли UUID уникальны?",
+          "answer": "Хотя теоретически возможно, вероятность генерации дублирующихся UUID астрономически мала (1 из 2^122 для v4). На практике UUID считаются уникальными."
+        },
+        {
+          "question": "Могу ли я использовать эти UUID в коммерческих проектах?",
+          "answer": "Да! UUID стандартизированы (RFC 4122) и свободны для использования в любых проектах, коммерческих или иных. Они широко поддерживаются во всех языках программирования и базах данных."
+        },
+        {
+          "question": "Какой формат следует использовать?",
+          "answer": "Стандартный формат наиболее распространен и широко поддерживается. Используйте компактный формат, когда нужно сэкономить место. Формат в скобках распространен в технологиях Microsoft, а формат URN используется в формальных спецификациях."
+        },
+        {
+          "question": "Сколько UUID я могу сгенерировать за раз?",
+          "answer": "Вы можете сгенерировать до 100 UUID за раз. Для больших количеств просто запустите генератор несколько раз или свяжитесь с нами для решений массовой генерации."
+        }
+      ]
+    }
+  }
+}

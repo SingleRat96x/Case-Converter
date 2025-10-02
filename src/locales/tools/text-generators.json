@@ -1,0 +1,556 @@
+{
+  "en": {
+    "bold": {
+      "title": "Bold Text Generator",
+      "description": "Generate bold Unicode text that works everywhere. Transform your regular text into bold characters for social media, documents, and messaging.",
+      "outputLabel": "Bold Text",
+      "copiedMessage": "Bold text copied to clipboard!",
+      "downloadFileName": "bold-text.txt",
+      "convertButton": "Generate Bold Text",
+      "uploadDescription": ""
+    },
+    "italic": {
+      "title": "Italic Text Generator",
+      "description": "Generate italic Unicode text that works everywhere. Transform your regular text into italic characters for emphasis and stylistic formatting.",
+      "outputLabel": "Italic Text",
+      "copiedMessage": "Italic text copied to clipboard!",
+      "downloadFileName": "italic-text.txt",
+      "convertButton": "Generate Italic Text",
+      "uploadDescription": ""
+    },
+    "subscript": {
+      "title": "Subscript Text Generator",
+      "description": "Generate subscript Unicode text for mathematical formulas, chemical equations, and scientific notation. Perfect for H₂O, CO₂, and more.",
+      "outputLabel": "Subscript Text",
+      "copiedMessage": "Subscript text copied to clipboard!",
+      "downloadFileName": "subscript-text.txt",
+      "convertButton": "Generate Subscript Text",
+      "uploadDescription": ""
+    },
+    "bigText": {
+      "title": "Big Text Generator",
+      "description": "Generate large, bold Unicode text that stands out. Perfect for headers, announcements, and making your text more prominent and eye-catching.",
+      "outputLabel": "Big Text",
+      "copiedMessage": "Big text copied to clipboard!",
+      "downloadFileName": "big-text.txt",
+      "convertButton": "Generate Big Text",
+      "uploadDescription": ""
+    },
+    "bubble": {
+      "title": "Bubble Text Generator",
+      "description": "Transform your text into bubble letters using Unicode characters. Create fun, playful text perfect for social media, messages, and creative content.",
+      "outputLabel": "Bubble Text",
+      "copiedMessage": "Bubble text copied to clipboard!",
+      "downloadFileName": "bubble-text.txt",
+      "convertButton": "Generate Bubble Text",
+      "uploadDescription": ""
+    },
+    "cursed": {
+      "title": "Cursed Text Generator",
+      "description": "Create glitchy, zalgo-style cursed text with combining diacritical marks. Perfect for creating spooky, chaotic, or attention-grabbing text effects.",
+      "outputLabel": "Cursed Text",
+      "copiedMessage": "Cursed text copied to clipboard!",
+      "downloadFileName": "cursed-text.txt",
+      "convertButton": "Generate Cursed Text",
+      "uploadDescription": ""
+    },
+    "mirror": {
+      "title": "Mirror Text Generator",
+      "description": "Flip your text backwards to create mirror writing. Perfect for creating unique designs, puzzles, or text that reads correctly in a mirror.",
+      "outputLabel": "Mirror Text",
+      "copiedMessage": "Mirror text copied to clipboard!",
+      "downloadFileName": "mirror-text.txt",
+      "convertButton": "Generate Mirror Text",
+      "uploadDescription": ""
+    },
+    "invisibleText": {
+      "title": "Invisible Text Generator",
+      "description": "Create invisible text using zero-width Unicode characters and invisible Unicode operators. Perfect for steganography, hidden messages, and special formatting applications.",
+      "outputLabel": "Text with Invisible Characters",
+      "inputPlaceholder": "Enter your text to add invisible characters...",
+      "copiedMessage": "Invisible text copied to clipboard!",
+      "downloadFileName": "invisible-text.txt",
+      "convertButton": "Generate Invisible Text",
+      "uploadDescription": "",
+      "copyInvisible": "Copy Invisible Text",
+      "copied": "Copied!",
+      "methods": {
+        "zeroWidth": "Zero-Width",
+        "unicode": "Unicode"
+      },
+      "stats": {
+        "visible": "Visible",
+        "invisible": "Invisible", 
+        "total": "Total",
+        "invisibilityRatio": "Invisibility Ratio"
+      },
+      "info": "This tool inserts invisible Unicode characters between your text. The zero-width method uses spaces, joiners, and non-joiners. The Unicode method uses function application operators. Both create text that appears normal but contains hidden characters."
+    },
+    "repeatText": {
+      "title": "Text Repeater",
+      "description": "Repeat your text multiple times with customizable separators. Perfect for creating patterns, filling space, or generating test data.",
+      "outputLabel": "Repeated Text",
+      "inputPlaceholder": "Enter text to repeat...",
+      "copiedMessage": "Repeated text copied to clipboard!",
+      "downloadFileName": "repeated-text.txt",
+      "convertButton": "Repeat Text",
+      "uploadDescription": "",
+      "times": "times",
+      "reset": "Reset", 
+      "separator": "Separator",
+      "separators": {
+        "newline": "New Line",
+        "space": "Space", 
+        "none": "None",
+        "custom": "Custom"
+      },
+      "customPlaceholder": "Enter custom separator...",
+      "warning": "Large output detected. This may affect browser performance.",
+      "hint": "Tip: Use +/- keys to adjust repeat count quickly",
+      "analytics": {
+        "title": "Repetition Analysis",
+        "originalLength": "Original Length",
+        "repeatCount": "Repeat Count",
+        "separatorType": "Separator Type", 
+        "totalLength": "Total Length",
+        "expansionRatio": "Expansion Ratio"
+      }
+    },
+    "textReplace": {
+      "title": "Find and Replace Text",
+      "description": "Find and replace text with powerful options for case sensitivity and whole word matching. Perfect for bulk text editing and corrections.",
+      "outputLabel": "Replaced Text",
+      "inputPlaceholder": "Enter text to search and replace...",
+      "copiedMessage": "Replaced text copied to clipboard!",
+      "downloadFileName": "replaced-text.txt",
+      "convertButton": "Replace Text",
+      "uploadDescription": "",
+      "find": "Find Text",
+      "findPlaceholder": "Enter text to find...",
+      "replaceWith": "Replace With", 
+      "replacePlaceholder": "Enter replacement text...",
+      "swap": "Swap",
+      "options": {
+        "caseSensitive": "Case Sensitive",
+        "wholeWord": "Whole Word",
+        "regex": "Use Regex"
+      },
+      "matches": "matches found",
+      "noMatches": "No matches found",
+      "regexInfo": "Regular expression mode enabled. Use patterns like \\d+ for digits or [a-z]+ for lowercase letters.",
+      "regexExamples": "Examples: \\d{3}-\\d{3}-\\d{4} (phone), [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,} (email)",
+      "preview": "Match Preview:",
+      "analytics": {
+        "title": "Replace Analysis",
+        "originalLength": "Original Length",
+        "matchesFound": "Matches Found",
+        "operationType": "Operation Type",
+        "replacedLength": "Replaced Length",
+        "lengthDifference": "Length Change",
+        "caseSensitive": "Case-Sensitive",
+        "wholeWord": "Whole Word",
+        "regex": "Regex",
+        "standard": "Standard"
+      }
+    },
+    "instagramFonts": {
+      "title": "Instagram Font Generator - Stylish Text for Social Media",
+      "description": "Generate stylish Unicode fonts for Instagram bios, captions, stories, and posts. Create eye-catching text with bold serif, italic, script, and monospace styles that work everywhere.",
+      "outputLabel": "Instagram Styled Text",
+      "copiedMessage": "Instagram font copied to clipboard!",
+      "downloadFileName": "instagram-fonts.txt",
+      "convertButton": "Generate Instagram Fonts",
+      "uploadDescription": "Upload a text file to convert to Instagram fonts",
+      "selectStyle": "Select Instagram Font Style",
+      "preview": "Preview"
+    },
+    "facebookFonts": {
+      "title": "Facebook Font Generator - Stylish Text for Social Media",
+      "description": "Generate stylish Unicode fonts for Facebook posts, comments, stories, and profile updates. Create eye-catching text with bold serif, italic, script, and monospace styles that work everywhere.",
+      "outputLabel": "Facebook Styled Text",
+      "copiedMessage": "Facebook font copied to clipboard!",
+      "downloadFileName": "facebook-fonts.txt",
+      "convertButton": "Generate Facebook Fonts",
+      "uploadDescription": "Upload a text file to convert to Facebook fonts",
+      "selectStyle": "Select Facebook Font Style",
+      "preview": "Preview"
+    },
+    "discordFonts": {
+      "title": "Discord Font Generator - Gaming Text Styles",
+      "description": "Generate unique Unicode fonts for Discord messages, usernames, and channel names. Create gaming-inspired text with bold, italic, monospace, and special character styles perfect for Discord communities.",
+      "outputLabel": "Discord Styled Text",
+      "copiedMessage": "Discord font copied to clipboard!",
+      "downloadFileName": "discord-fonts.txt",
+      "convertButton": "Generate Discord Fonts",
+      "uploadDescription": "Upload a text file to convert to Discord fonts",
+      "selectStyle": "Select Discord Font Style",
+      "preview": "Preview"
+    },
+    "phoneticSpelling": {
+      "title": "Phonetic Spelling Generator",
+      "description": "Convert text to phonetic spelling and vice versa. Support for multiple formats including IPA, simple letter names, sound-based spelling, and NATO phonetic alphabet. Perfect for pronunciation guides and clear communication.",
+      "outputLabel": "Phonetic Spelling",
+      "phoneticOutputLabel": "Phonetic Spelling",
+      "phoneticInputLabel": "Phonetic Text Input",
+      "inputPlaceholder": "Enter text to convert to phonetic spelling...",
+      "phoneticInputPlaceholder": "Enter phonetic text to convert back to regular text...",
+      "copiedMessage": "Phonetic spelling copied to clipboard!",
+      "downloadFileName": "phonetic-spelling.txt",
+      "convertButton": "Convert to Phonetic"
+    },
+    "pigLatin": {
+      "title": "Pig Latin Translator",
+      "description": "Convert text to Pig Latin and vice versa. Fun language game tool perfect for entertainment, education, and secret messages. Handles consonant clusters and preserves capitalization.",
+      "outputLabel": "Pig Latin Text",
+      "pigLatinOutputLabel": "Pig Latin Text",
+      "pigLatinInputLabel": "Pig Latin Input",
+      "inputPlaceholder": "Enter text to convert to Pig Latin...",
+      "pigLatinInputPlaceholder": "Enter Pig Latin text to convert back to regular text...",
+      "copiedMessage": "Pig Latin text copied to clipboard!",
+      "downloadFileName": "pig-latin.txt",
+      "convertButton": "Convert to Pig Latin"
+    },
+    "removeLineBreaks": {
+      "title": "Remove Line Breaks Tool",
+      "description": "Remove unwanted line breaks from text with options to preserve paragraphs. Perfect for cleaning copied text, formatting documents, and preparing content for web.",
+      "outputLabel": "Cleaned Text",
+      "inputPlaceholder": "Enter text with line breaks to clean...",
+      "copiedMessage": "Cleaned text copied to clipboard!",
+      "downloadFileName": "text-without-line-breaks.txt",
+      "convertButton": "Remove Line Breaks",
+      "uploadDescription": "",
+      "replaceWith": "Replace line breaks with",
+      "space": "Spaces",
+      "nothing": "Nothing",
+      "preserveParagraphs": "Preserve paragraphs",
+      "preserveInfo": "Single line breaks are removed while double line breaks (paragraphs) are preserved.",
+      "removeAllInfo": "All line breaks are removed and replaced with your selected option.",
+      "analytics": {
+        "title": "Line Break Removal Statistics",
+        "originalLines": "Original Lines",
+        "lineBreaksRemoved": "Line Breaks Removed",
+        "processingMode": "Processing Mode",
+        "convertedLines": "Final Lines",
+        "lengthReduction": "Length Change",
+        "preserveParagraphs": "Preserve Paragraphs",
+        "removeAll": "Remove All",
+        "withSpaces": "With Spaces",
+        "withoutSpaces": "Without Spaces"
+      }
+    },
+    "removeTextFormatting": {
+      "title": "Remove Text Formatting Tool",
+      "description": "Remove HTML tags, Markdown formatting, URLs, emails, and special characters from text. Clean and strip formatting from copied content with our advanced text cleaning tool.",
+      "outputLabel": "Cleaned Text",
+      "inputPlaceholder": "Enter formatted text to clean...",
+      "copiedMessage": "Cleaned text copied to clipboard!",
+      "downloadFileName": "clean-text.txt",
+      "convertButton": "Clean Text",
+      "uploadDescription": "",
+      "optionsTitle": "Cleaning Options",
+      "warning": "These options may remove important content. Review the results carefully.",
+      "options": {
+        "removeHtml": "Remove HTML tags",
+        "removeMarkdown": "Remove Markdown",
+        "removeExtraSpaces": "Remove extra spaces",
+        "removeUrls": "Remove URLs",
+        "removeEmails": "Remove emails",
+        "removeSpecialChars": "Remove special characters",
+        "removeNumbers": "Remove numbers"
+      },
+      "analytics": {
+        "title": "Text Cleaning Statistics",
+        "originalLength": "Original Length",
+        "urlsEmails": "URLs + Emails",
+        "specialCharsRemoved": "Special Chars",
+        "totalElementsRemoved": "Elements Removed",
+        "charactersReduced": "Chars Reduced",
+        "textReduction": "Text Reduction",
+        "html": "HTML",
+        "markdown": "Markdown",
+        "urls": "URLs",
+        "emails": "Emails",
+        "specialChars": "Special Chars",
+        "numbers": "Numbers",
+        "none": "None Active"
+      }
+    }
+  },
+  "ru": {
+    "bold": {
+      "title": "Генератор Жирного Текста",
+      "description": "Создавайте жирный Unicode текст, который работает везде. Преобразуйте обычный текст в жирные символы для социальных сетей, документов и сообщений.",
+      "outputLabel": "Жирный Текст",
+      "copiedMessage": "Жирный текст скопирован в буфер обмена!",
+      "downloadFileName": "bold-text.txt",
+      "convertButton": "Сгенерировать Жирный Текст",
+      "uploadDescription": ""
+    },
+    "italic": {
+      "title": "Генератор Курсивного Текста",
+      "description": "Создавайте курсивный Unicode текст, который работает везде. Преобразуйте обычный текст в курсивные символы для выделения и стилистического форматирования.",
+      "outputLabel": "Курсивный Текст",
+      "copiedMessage": "Курсивный текст скопирован в буфер обмена!",
+      "downloadFileName": "italic-text.txt",
+      "convertButton": "Сгенерировать Курсивный Текст",
+      "uploadDescription": ""
+    },
+    "subscript": {
+      "title": "Генератор Подстрочного Текста",
+      "description": "Создавайте подстрочный Unicode текст для математических формул, химических уравнений и научной нотации. Идеально для H₂O, CO₂ и многого другого.",
+      "outputLabel": "Подстрочный Текст",
+      "copiedMessage": "Подстрочный текст скопирован в буфер обмена!",
+      "downloadFileName": "subscript-text.txt",
+      "convertButton": "Сгенерировать Подстрочный Текст",
+      "uploadDescription": ""
+    },
+    "bigText": {
+      "title": "Генератор Большого Текста",
+      "description": "Создавайте большой, жирный Unicode текст, который выделяется. Идеально для заголовков, объявлений и придания вашему тексту большей заметности и привлекательности.",
+      "outputLabel": "Большой Текст",
+      "copiedMessage": "Большой текст скопирован в буфер обмена!",
+      "downloadFileName": "big-text.txt",
+      "convertButton": "Сгенерировать Большой Текст",
+      "uploadDescription": ""
+    },
+    "bubble": {
+      "title": "Генератор Пузырькового Текста",
+      "description": "Преобразуйте ваш текст в пузырьковые буквы, используя символы Unicode. Создавайте веселый, игривый текст, идеальный для социальных сетей, сообщений и креативного контента.",
+      "outputLabel": "Пузырьковый Текст",
+      "copiedMessage": "Пузырьковый текст скопирован в буфер обмена!",
+      "downloadFileName": "bubble-text.txt",
+      "convertButton": "Сгенерировать Пузырьковый Текст",
+      "uploadDescription": ""
+    },
+    "cursed": {
+      "title": "Генератор Проклятого Текста",
+      "description": "Создавайте глючный, zalgo-стиль проклятого текста с комбинированными диакритическими знаками. Идеально для создания жутких, хаотичных или привлекающих внимание текстовых эффектов.",
+      "outputLabel": "Проклятый Текст",
+      "copiedMessage": "Проклятый текст скопирован в буфер обмена!",
+      "downloadFileName": "cursed-text.txt",
+      "convertButton": "Сгенерировать Проклятый Текст",
+      "uploadDescription": ""
+    },
+    "mirror": {
+      "title": "Генератор Зеркального Текста",
+      "description": "Переверните ваш текст задом наперед для создания зеркального письма. Идеально для создания уникальных дизайнов, головоломок или текста, который правильно читается в зеркале.",
+      "outputLabel": "Зеркальный Текст",
+      "copiedMessage": "Зеркальный текст скопирован в буфер обмена!",
+      "downloadFileName": "mirror-text.txt",
+      "convertButton": "Сгенерировать Зеркальный Текст",
+      "uploadDescription": ""
+    },
+    "invisibleText": {
+      "title": "Генератор Невидимого Текста",
+      "description": "Создавайте невидимый текст, используя символы нулевой ширины Unicode и невидимые операторы Unicode. Идеально для стеганографии, скрытых сообщений и специальных приложений форматирования.",
+      "outputLabel": "Текст с Невидимыми Символами",
+      "inputPlaceholder": "Введите ваш текст для добавления невидимых символов...",
+      "copiedMessage": "Невидимый текст скопирован в буфер обмена!",
+      "downloadFileName": "invisible-text.txt",
+      "convertButton": "Сгенерировать Невидимый Текст",
+      "uploadDescription": "",
+      "copyInvisible": "Скопировать Невидимый Текст",
+      "copied": "Скопировано!",
+      "methods": {
+        "zeroWidth": "Нулевая Ширина",
+        "unicode": "Unicode"
+      },
+      "stats": {
+        "visible": "Видимые",
+        "invisible": "Невидимые",
+        "total": "Всего",
+        "invisibilityRatio": "Коэффициент Невидимости"
+      },
+      "info": "Этот инструмент вставляет невидимые символы Unicode между вашим текстом. Метод нулевой ширины использует пробелы, соединители и разделители. Метод Unicode использует операторы функциональных приложений. Оба создают текст, который выглядит нормально, но содержит скрытые символы."
+    },
+    "repeatText": {
+      "title": "Повторитель Текста",
+      "description": "Повторяйте ваш текст многократно с настраиваемыми разделителями. Идеально для создания шаблонов, заполнения пространства или генерации тестовых данных.",
+      "outputLabel": "Повторенный Текст",
+      "inputPlaceholder": "Введите текст для повторения...",
+      "copiedMessage": "Повторенный текст скопирован в буфер обмена!",
+      "downloadFileName": "repeated-text.txt",
+      "convertButton": "Повторить Текст",
+      "uploadDescription": "",
+      "times": "раз",
+      "reset": "Сброс", 
+      "separator": "Разделитель",
+      "separators": {
+        "newline": "Новая Строка",
+        "space": "Пробел", 
+        "none": "Отсутствует",
+        "custom": "Пользовательский"
+      },
+      "customPlaceholder": "Введите пользовательский разделитель...",
+      "warning": "Обнаружен большой вывод. Это может повлиять на производительность браузера.",
+      "hint": "Совет: Используйте клавиши +/- для быстрой настройки счетчика повторений",
+      "analytics": {
+        "title": "Анализ Повторений",
+        "originalLength": "Исходная Длина",
+        "repeatCount": "Количество Повторений",
+        "separatorType": "Тип Разделителя", 
+        "totalLength": "Общая Длина",
+        "expansionRatio": "Коэффициент Расширения"
+      }
+    },
+    "textReplace": {
+      "title": "Найти и Заменить Текст",
+      "description": "Найдите и замените текст с мощными опциями для чувствительности к регистру и поиска целых слов. Идеально для массового редактирования текста и исправлений.",
+      "outputLabel": "Замененный Текст",
+      "inputPlaceholder": "Введите текст для поиска и замены...",
+      "copiedMessage": "Замененный текст скопирован в буфер обмена!",
+      "downloadFileName": "replaced-text.txt",
+      "convertButton": "Заменить Текст",
+      "uploadDescription": "",
+      "find": "Найти Текст",
+      "findPlaceholder": "Введите текст для поиска...",
+      "replaceWith": "Заменить На", 
+      "replacePlaceholder": "Введите текст для замены...",
+      "swap": "Поменять Местами",
+      "options": {
+        "caseSensitive": "Учет Регистра",
+        "wholeWord": "Целое Слово",
+        "regex": "Использовать Regex"
+      },
+      "matches": "совпадений найдено",
+      "noMatches": "Совпадений не найдено",
+      "regexInfo": "Режим регулярных выражений включен. Используйте шаблоны как \\d+ для цифр или [a-z]+ для строчных букв.",
+      "regexExamples": "Примеры: \\d{3}-\\d{3}-\\d{4} (телефон), [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,} (email)",
+      "preview": "Предварительный Просмотр Совпадений:",
+      "analytics": {
+        "title": "Анализ Замены",
+        "originalLength": "Исходная Длина",
+        "matchesFound": "Найдено Совпадений",
+        "operationType": "Тип Операции",
+        "replacedLength": "Длина После Замены",
+        "lengthDifference": "Изменение Длины",
+        "caseSensitive": "С Учетом Регистра",
+        "wholeWord": "Целое Слово",
+        "regex": "Regex",
+        "standard": "Стандартная"
+      }
+    },
+    "instagramFonts": {
+      "title": "Генератор Instagram Шрифтов - Стильный Текст для Социальных Сетей",
+      "description": "Создавайте стильные Unicode шрифты для биографий, подписей, историй и постов в Instagram. Создавайте привлекательный текст с жирным шрифтом, курсивом, скриптом и моноширинными стилями, которые работают везде.",
+      "outputLabel": "Стильный Instagram Текст",
+      "copiedMessage": "Instagram шрифт скопирован в буфер обмена!",
+      "downloadFileName": "instagram-fonts.txt",
+      "convertButton": "Сгенерировать Instagram Шрифты",
+      "uploadDescription": "Загрузите текстовый файл для конвертации в Instagram шрифты",
+      "selectStyle": "Выберите Стиль Instagram Шрифта",
+      "preview": "Предпросмотр"
+    },
+    "facebookFonts": {
+      "title": "Генератор Facebook Шрифтов - Стильный Текст для Социальных Сетей",
+      "description": "Создавайте стильные Unicode шрифты для постов, комментариев, историй и обновлений профиля в Facebook. Создавайте привлекательный текст с жирным шрифтом, курсивом, скриптом и моноширинными стилями, которые работают везде.",
+      "outputLabel": "Стильный Facebook Текст",
+      "copiedMessage": "Facebook шрифт скопирован в буфер обмена!",
+      "downloadFileName": "facebook-fonts.txt",
+      "convertButton": "Сгенерировать Facebook Шрифты",
+      "uploadDescription": "Загрузите текстовый файл для конвертации в Facebook шрифты",
+      "selectStyle": "Выберите Стиль Facebook Шрифта",
+      "preview": "Предпросмотр"
+    },
+    "discordFonts": {
+      "title": "Генератор Discord Шрифтов - Игровые Текстовые Стили",
+      "description": "Создавайте уникальные Unicode шрифты для сообщений Discord, имен пользователей и названий каналов. Создавайте текст в игровом стиле с жирным шрифтом, курсивом, моноширинными и специальными символьными стилями, идеально подходящими для сообществ Discord.",
+      "outputLabel": "Стильный Discord Текст",
+      "copiedMessage": "Discord шрифт скопирован в буфер обмена!",
+      "downloadFileName": "discord-fonts.txt",
+      "convertButton": "Сгенерировать Discord Шрифты",
+      "uploadDescription": "Загрузите текстовый файл для конвертации в Discord шрифты",
+      "selectStyle": "Выберите Стиль Discord Шрифта",
+      "preview": "Предпросмотр"
+    },
+    "phoneticSpelling": {
+      "title": "Генератор Фонетического Написания",
+      "description": "Конвертируйте текст в фонетическое написание и обратно. Поддержка нескольких форматов, включая IPA, простые названия букв, звуковое написание и фонетический алфавит НАТО. Идеально для руководств по произношению и четкого общения.",
+      "outputLabel": "Фонетическое Написание",
+      "phoneticOutputLabel": "Фонетическое Написание",
+      "phoneticInputLabel": "Ввод Фонетического Текста",
+      "inputPlaceholder": "Введите текст для конвертации в фонетическое написание...",
+      "phoneticInputPlaceholder": "Введите фонетический текст для конвертации обратно в обычный текст...",
+      "copiedMessage": "Фонетическое написание скопировано в буфер обмена!",
+      "downloadFileName": "phonetic-spelling.txt",
+      "convertButton": "Конвертировать в Фонетический"
+    },
+    "pigLatin": {
+      "title": "Переводчик Свиной Латыни",
+      "description": "Конвертируйте текст в Свиную Латынь и обратно. Веселый языковой инструмент, идеальный для развлечения, образования и секретных сообщений. Обрабатывает согласные кластеры и сохраняет заглавные буквы.",
+      "outputLabel": "Текст на Свиной Латыни",
+      "pigLatinOutputLabel": "Текст на Свиной Латыни",
+      "pigLatinInputLabel": "Ввод Свиной Латыни",
+      "inputPlaceholder": "Введите текст для конвертации в Свиную Латынь...",
+      "pigLatinInputPlaceholder": "Введите текст на Свиной Латыни для конвертации обратно в обычный текст...",
+      "copiedMessage": "Текст на Свиной Латыни скопирован в буфер обмена!",
+      "downloadFileName": "pig-latin.txt",
+      "convertButton": "Конвертировать в Свиную Латынь"
+    },
+    "removeLineBreaks": {
+      "title": "Инструмент Удаления Переносов Строк",
+      "description": "Удаляйте нежелательные переносы строк из текста с возможностью сохранения абзацев. Идеально для очистки скопированного текста, форматирования документов и подготовки контента для веб.",
+      "outputLabel": "Очищенный Текст",
+      "inputPlaceholder": "Введите текст с переносами строк для очистки...",
+      "copiedMessage": "Очищенный текст скопирован в буфер обмена!",
+      "downloadFileName": "текст-без-переносов.txt",
+      "convertButton": "Удалить Переносы Строк",
+      "uploadDescription": "",
+      "replaceWith": "Заменить переносы строк на",
+      "space": "Пробелы",
+      "nothing": "Ничего",
+      "preserveParagraphs": "Сохранить абзацы",
+      "preserveInfo": "Одиночные переносы строк удаляются, а двойные переносы строк (абзацы) сохраняются.",
+      "removeAllInfo": "Все переносы строк удаляются и заменяются на выбранный вами вариант.",
+      "analytics": {
+        "title": "Статистика Удаления Переносов Строк",
+        "originalLines": "Исходные Строки",
+        "lineBreaksRemoved": "Удалено Переносов Строк",
+        "processingMode": "Режим Обработки",
+        "convertedLines": "Итоговые Строки",
+        "lengthReduction": "Изменение Длины",
+        "preserveParagraphs": "Сохранить Абзацы",
+        "removeAll": "Удалить Все",
+        "withSpaces": "С Пробелами",
+        "withoutSpaces": "Без Пробелов"
+      }
+    },
+    "removeTextFormatting": {
+      "title": "Инструмент Удаления Форматирования Текста",
+      "description": "Удаляйте HTML теги, Markdown форматирование, URL, электронную почту и специальные символы из текста. Очищайте форматирование с помощью нашего продвинутого инструмента очистки текста.",
+      "outputLabel": "Очищенный Текст",
+      "inputPlaceholder": "Введите отформатированный текст для очистки...",
+      "copiedMessage": "Очищенный текст скопирован в буфер обмена!",
+      "downloadFileName": "очищенный-текст.txt",
+      "convertButton": "Очистить Текст",
+      "uploadDescription": "",
+      "optionsTitle": "Опции Очистки",
+      "warning": "Эти опции могут удалить важный контент. Внимательно проверьте результаты.",
+      "options": {
+        "removeHtml": "Удалить HTML теги",
+        "removeMarkdown": "Удалить Markdown",
+        "removeExtraSpaces": "Удалить лишние пробелы",
+        "removeUrls": "Удалить URL",
+        "removeEmails": "Удалить электронную почту",
+        "removeSpecialChars": "Удалить специальные символы",
+        "removeNumbers": "Удалить числа"
+      },
+      "analytics": {
+        "title": "Статистика Очистки Текста",
+        "originalLength": "Исходная Длина",
+        "urlsEmails": "URL + Email",
+        "specialCharsRemoved": "Спец. Символы",
+        "totalElementsRemoved": "Удалено Элементов",
+        "charactersReduced": "Символов Удалено",
+        "textReduction": "Сокращение Текста",
+        "html": "HTML",
+        "markdown": "Markdown",
+        "urls": "URL",
+        "emails": "Email",
+        "specialChars": "Спец. Символы",
+        "numbers": "Числа",
+        "none": "Нет Активных"
+      }
+    }
+  }
+}

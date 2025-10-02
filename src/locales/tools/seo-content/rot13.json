@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free ROT13 Encoder & Decoder - Symmetric Letter Substitution Cipher",
+    "metaDescription": "Encode and decode text using ROT13 cipher. Free online ROT13 tool with alphabet demonstration, preservation options, and symmetric encryption features.",
+    "sections": {
+      "intro": {
+        "title": "Free ROT13 Encoder & Decoder - Symmetric Letter Substitution Cipher",
+        "content": "Transform text using the popular ROT13 cipher with our comprehensive online tool. Features symmetric encoding/decoding, alphabet demonstration, preservation options, and detailed analytics. Perfect for text obfuscation, forum posts, and learning basic cryptography."
+      },
+      "features": {
+        "title": "Advanced ROT13 Cipher Features",
+        "items": [
+          {
+            "title": "Symmetric Operation",
+            "description": "ROT13 is symmetric - encoding and decoding use the same operation, making it perfect for reversible text obfuscation."
+          },
+          {
+            "title": "Alphabet Demonstration",
+            "description": "Visual alphabet mapping showing how each letter transforms, with copy functionality for reference."
+          },
+          {
+            "title": "Double Encoding Option",
+            "description": "Apply ROT13 twice (ROT26) to return to original text, demonstrating the cipher's mathematical properties."
+          },
+          {
+            "title": "Preservation Settings",
+            "description": "Control whether to preserve case, numbers, and symbols during transformation for flexible text processing."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Get detailed statistics including letter counts, rotation type, and alphabetic percentage analysis."
+          },
+          {
+            "title": "Quick Examples",
+            "description": "Try predefined examples to understand ROT13 transformation patterns and practice with common phrases."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for ROT13 Encoding",
+        "description": "ROT13 is widely used for simple text obfuscation and educational purposes across various platforms.",
+        "items": [
+          {
+            "title": "Forum & Newsgroup Posts",
+            "description": "Hide spoilers, answers, or sensitive content in online discussions while keeping it easily reversible."
+          },
+          {
+            "title": "Email Obfuscation",
+            "description": "Protect email addresses from spam bots by encoding them with ROT13 in web pages and documents."
+          },
+          {
+            "title": "Educational Cryptography",
+            "description": "Learn basic cipher concepts and understand symmetric encryption principles in computer science education."
+          },
+          {
+            "title": "Puzzle Creation",
+            "description": "Create simple encoded puzzles, treasure hunts, and brain teasers for entertainment and education."
+          },
+          {
+            "title": "Text Games",
+            "description": "Use in word games, riddles, and interactive content where simple encoding adds mystery without complexity."
+          },
+          {
+            "title": "Content Filtering",
+            "description": "Bypass simple content filters or create mild obfuscation for automated systems while maintaining readability."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the ROT13 Tool",
+        "description": "Follow these simple steps to encode or decode text using ROT13 cipher.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for processing."
+          },
+          {
+            "step": 2,
+            "title": "Configure Options",
+            "description": "Adjust preservation settings and enable double encoding if needed in the options accordion."
+          },
+          {
+            "step": 3,
+            "title": "Review Transformation",
+            "description": "Watch as your text is instantly transformed using ROT13 cipher with real-time preview."
+          },
+          {
+            "step": 4,
+            "title": "Analyze & Copy",
+            "description": "Review the analytics, use the alphabet reference, and copy or download your encoded text."
+          }
+        ]
+      },
+      "examples": {
+        "title": "ROT13 Transformation Examples",
+        "description": "See how different types of text are transformed using ROT13 cipher.",
+        "items": [
+          {
+            "title": "Simple Message",
+            "input": "Hello World",
+            "output": "Uryyb Jbeyq"
+          },
+          {
+            "title": "Forum Spoiler",
+            "input": "The answer is 42",
+            "output": "Gur nafjre vf 42"
+          },
+          {
+            "title": "Email Protection",
+            "input": "contact@example.com",
+            "output": "pbagnpg@rknzcyr.pbz"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our ROT13 Tool",
+        "content": "Professional ROT13 implementation with educational features and comprehensive options.",
+        "items": [
+          "Instant symmetric encoding and decoding",
+          "Visual alphabet demonstration with copy functionality",
+          "Advanced preservation options for different character types",
+          "Real-time analytics and transformation statistics",
+          "Double encoding option for educational demonstrations",
+          "Quick example templates for learning and testing",
+          "Privacy-focused - all processing happens locally",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is ROT13 and why is it popular?",
+          "answer": "ROT13 is a letter substitution cipher that replaces each letter with the letter 13 positions after it in the alphabet. It's popular because it's symmetric (encoding and decoding are the same operation) and provides simple text obfuscation without serious security."
+        },
+        {
+          "question": "How is ROT13 different from other Caesar ciphers?",
+          "answer": "ROT13 is a special case of Caesar cipher with a fixed shift of 13. Unlike other Caesar ciphers, ROT13 is symmetric - applying it twice returns the original text because 13 + 13 = 26 (full alphabet rotation)."
+        },
+        {
+          "question": "Can I preserve numbers and symbols?",
+          "answer": "Yes, our tool offers preservation options for case sensitivity, numbers, and symbols. You can choose to transform only letters while leaving other characters unchanged."
+        },
+        {
+          "question": "What happens with double encoding?",
+          "answer": "Double encoding applies ROT13 twice, which equals ROT26. Since there are 26 letters in the alphabet, this returns the text to its original form, demonstrating the cipher's mathematical properties."
+        },
+        {
+          "question": "Is ROT13 secure for sensitive information?",
+          "answer": "No, ROT13 is not secure and should never be used for sensitive information. It's designed for simple obfuscation (hiding spoilers, email protection) and educational purposes, not security."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Cryptography & Text Tools",
+        "items": [
+          {
+            "name": "Caesar Cipher",
+            "description": "Encrypt text with customizable shift values and advanced options",
+            "href": "/tools/caesar-cipher"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode text using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary code and decode binary to text",
+            "href": "/tools/binary-code-translator"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Analyze text statistics and character frequencies",
+            "href": "/tools/text-counter"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Кодировщик и Декодировщик ROT13 - Симметричный Шифр Замещения Букв",
+    "metaDescription": "Кодируйте и декодируйте текст используя шифр ROT13. Бесплатный онлайн инструмент ROT13 с демонстрацией алфавита, опциями сохранения и функциями симметричного шифрования.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Кодировщик и Декодировщик ROT13 - Симметричный Шифр Замещения Букв",
+        "content": "Преобразуйте текст используя популярный шифр ROT13 с нашим комплексным онлайн инструментом. Включает симметричное кодирование/декодирование, демонстрацию алфавита, опции сохранения и подробную аналитику. Идеально для обфускации текста, постов на форумах и изучения основ криптографии."
+      },
+      "features": {
+        "title": "Расширенные Возможности Шифра ROT13",
+        "items": [
+          {
+            "title": "Симметричная Операция",
+            "description": "ROT13 симметричен - кодирование и декодирование используют одну и ту же операцию, что делает его идеальным для обратимой обфускации текста."
+          },
+          {
+            "title": "Демонстрация Алфавита",
+            "description": "Визуальное отображение алфавита, показывающее, как преобразуется каждая буква, с функцией копирования для справки."
+          },
+          {
+            "title": "Опция Двойного Кодирования",
+            "description": "Применяйте ROT13 дважды (ROT26) для возврата к исходному тексту, демонстрируя математические свойства шифра."
+          },
+          {
+            "title": "Настройки Сохранения",
+            "description": "Контролируйте, сохранять ли регистр, числа и символы во время преобразования для гибкой обработки текста."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Получайте подробную статистику, включая количество букв, тип поворота и анализ процента алфавитных символов."
+          },
+          {
+            "title": "Быстрые Примеры",
+            "description": "Попробуйте предопределенные примеры для понимания паттернов преобразования ROT13 и практики с общими фразами."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Применения Кодирования ROT13",
+        "description": "ROT13 широко используется для простой обфускации текста и образовательных целей на различных платформах.",
+        "items": [
+          {
+            "title": "Посты на Форумах и в Группах Новостей",
+            "description": "Скрывайте спойлеры, ответы или чувствительный контент в онлайн дискуссиях, сохраняя легкую обратимость."
+          },
+          {
+            "title": "Обфускация Email",
+            "description": "Защищайте адреса электронной почты от спам-ботов, кодируя их с помощью ROT13 на веб-страницах и в документах."
+          },
+          {
+            "title": "Образовательная Криптография",
+            "description": "Изучайте основные концепции шифров и понимайте принципы симметричного шифрования в образовании по компьютерным наукам."
+          },
+          {
+            "title": "Создание Головоломок",
+            "description": "Создавайте простые закодированные головоломки, поиски сокровищ и интеллектуальные задачи для развлечения и образования."
+          },
+          {
+            "title": "Текстовые Игры",
+            "description": "Используйте в словесных играх, загадках и интерактивном контенте, где простое кодирование добавляет загадочности без сложности."
+          },
+          {
+            "title": "Фильтрация Контента",
+            "description": "Обходите простые фильтры контента или создавайте мягкую обфускацию для автоматизированных систем, сохраняя читаемость."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Инструмент ROT13",
+        "description": "Следуйте этим простым шагам для кодирования или декодирования текста используя шифр ROT13.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Введите или вставьте ваш текст в область ввода, или загрузите текстовый файл для обработки."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции",
+            "description": "Отрегулируйте настройки сохранения и включите двойное кодирование при необходимости в аккордеоне опций."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Преобразование",
+            "description": "Наблюдайте, как ваш текст мгновенно преобразуется с помощью шифра ROT13 с предварительным просмотром в реальном времени."
+          },
+          {
+            "step": 4,
+            "title": "Анализируйте и Копируйте",
+            "description": "Просмотрите аналитику, используйте справку по алфавиту и скопируйте или скачайте ваш закодированный текст."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Преобразования ROT13",
+        "description": "Посмотрите, как различные типы текста преобразуются с помощью шифра ROT13.",
+        "items": [
+          {
+            "title": "Простое Сообщение",
+            "input": "Привет Мир",
+            "output": "Сулезх Пул"
+          },
+          {
+            "title": "Спойлер для Форума",
+            "input": "Ответ 42",
+            "output": "Бхзех 42"
+          },
+          {
+            "title": "Защита Email",
+            "input": "контакт@пример.рф",
+            "output": "пбагнпг@сулпре.еф"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент ROT13",
+        "content": "Профессиональная реализация ROT13 с образовательными функциями и комплексными опциями.",
+        "items": [
+          "Мгновенное симметричное кодирование и декодирование",
+          "Визуальная демонстрация алфавита с функцией копирования",
+          "Расширенные опции сохранения для различных типов символов",
+          "Аналитика в реальном времени и статистика преобразований",
+          "Опция двойного кодирования для образовательных демонстраций",
+          "Быстрые шаблоны примеров для изучения и тестирования",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое ROT13 и почему он популярен?",
+          "answer": "ROT13 - это шифр замещения букв, который заменяет каждую букву буквой, находящейся на 13 позиций после неё в алфавите. Он популярен, потому что симметричен (кодирование и декодирование - одна операция) и обеспечивает простую обфускацию текста без серьезной безопасности."
+        },
+        {
+          "question": "Чем ROT13 отличается от других шифров Цезаря?",
+          "answer": "ROT13 - это особый случай шифра Цезаря с фиксированным сдвигом на 13. В отличие от других шифров Цезаря, ROT13 симметричен - применение его дважды возвращает исходный текст, потому что 13 + 13 = 26 (полный оборот алфавита)."
+        },
+        {
+          "question": "Могу ли я сохранить числа и символы?",
+          "answer": "Да, наш инструмент предлагает опции сохранения для чувствительности к регистру, чисел и символов. Вы можете выбрать преобразование только букв, оставляя другие символы неизменными."
+        },
+        {
+          "question": "Что происходит при двойном кодировании?",
+          "answer": "Двойное кодирование применяет ROT13 дважды, что равно ROT26. Поскольку в алфавите 26 букв, это возвращает текст к его исходной форме, демонстрируя математические свойства шифра."
+        },
+        {
+          "question": "Безопасен ли ROT13 для чувствительной информации?",
+          "answer": "Нет, ROT13 не безопасен и никогда не должен использоваться для чувствительной информации. Он предназначен для простой обфускации (скрытие спойлеров, защита email) и образовательных целей, а не для безопасности."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Криптографии и Текста",
+        "items": [
+          {
+            "name": "Шифр Цезаря",
+            "description": "Шифруйте текст с настраиваемыми значениями сдвига и расширенными опциями",
+            "href": "/ru/tools/caesar-cipher"
+          },
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте текст используя Base64 кодирование",
+            "href": "/ru/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и декодируйте двоичный код в текст",
+            "href": "/ru/tools/binary-code-translator"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Анализируйте статистику текста и частоты символов",
+            "href": "/ru/tools/text-counter"
+          }
+        ]
+      }
+    }
+  }
+}

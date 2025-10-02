@@ -1,0 +1,60 @@
+{
+  "en": {
+    "title": "Terms of Service",
+    "intro": {
+      "heading": "Please read these terms",
+      "body": "These terms govern your use of our tools. By using the site, you agree to them."
+    },
+    "sections": {
+      "use": {
+        "heading": "Acceptable use",
+        "items": [
+          { "title": "Lawful Use", "desc": "Use the tools only for lawful purposes." },
+          { "title": "No Abuse", "desc": "Do not attempt to harm the service or other users." },
+          { "title": "Rate Limits", "desc": "We may apply fair use limits to protect performance." }
+        ]
+      },
+      "content": {
+        "heading": "Your content",
+        "body": "You are responsible for the content you input. Do not upload prohibited or illegal materials."
+      },
+      "disclaimer": {
+        "heading": "Disclaimer",
+        "body": "The service is provided as-is without warranties. We are not liable for indirect or consequential damages."
+      },
+      "changes": {
+        "heading": "Changes to terms",
+        "body": "We may update these terms. Continued use means you accept the changes."
+      }
+    }
+  },
+  "ru": {
+    "title": "Условия использования",
+    "intro": {
+      "heading": "Пожалуйста, ознакомьтесь с условиями",
+      "body": "Эти условия регулируют использование наших инструментов. Используя сайт, вы соглашаетесь с ними."
+    },
+    "sections": {
+      "use": {
+        "heading": "Допустимое использование",
+        "items": [
+          { "title": "Законное использование", "desc": "Используйте инструменты только в законных целях." },
+          { "title": "Запрет злоупотреблений", "desc": "Не наносите вред сервису и другим пользователям." },
+          { "title": "Ограничения нагрузки", "desc": "Мы можем применять разумные лимиты для защиты производительности." }
+        ]
+      },
+      "content": {
+        "heading": "Ваш контент",
+        "body": "Вы отвечаете за вводимый контент. Не загружайте запрещённые или незаконные материалы."
+      },
+      "disclaimer": {
+        "heading": "Отказ от ответственности",
+        "body": "Сервис предоставляется «как есть» без гарантий. Мы не несём ответственности за косвенный ущерб."
+      },
+      "changes": {
+        "heading": "Изменения условий",
+        "body": "Мы можем обновлять эти условия. Продолжая использовать сайт, вы принимаете изменения."
+      }
+    }
+  }
+}

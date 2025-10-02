@@ -1,0 +1,282 @@
+{
+  "en": {
+    "title": "Professional Word Frequency Analyzer & Text Analysis Tool",
+    "metaDescription": "Analyze word frequency and discover the most common words in your text. Professional word frequency analysis tool for content creators, writers, and researchers with detailed statistics and export features.",
+    "sections": {
+      "intro": {
+        "title": "Professional Word Frequency Analyzer & Text Analysis Tool",
+        "content": "Discover the most common words in your text with our advanced word frequency analyzer. Get detailed statistics, sortable frequency tables, and comprehensive analysis for content optimization, writing research, and linguistic studies. Perfect for writers, content creators, and researchers who need precise word frequency data."
+      },
+      "features": {
+        "title": "Advanced Word Frequency Analysis Features",
+        "items": [
+          { "title": "Real-time Frequency Analysis", "description": "Instant word frequency calculation as you type or paste text" },
+          { "title": "Sortable Frequency Tables", "description": "Sort by frequency, alphabetically, or custom filters for easy analysis" },
+          { "title": "Advanced Filtering Options", "description": "Filter by word length, case sensitivity, and exclude common words" },
+          { "title": "Statistical Insights", "description": "Total words, unique words, most common words, and average word length" },
+          { "title": "Visual Frequency Bars", "description": "Interactive bar charts showing relative word frequency percentages" },
+          { "title": "Customizable Display", "description": "Show top 10, 20, 50, or 100 most frequent words" },
+          { "title": "Export Analysis Reports", "description": "Download detailed frequency reports in multiple formats" },
+          { "title": "File Upload Support", "description": "Analyze text files across common formats directly in your browser" },
+          { "title": "Multilingual Support", "description": "Works with any language including accented characters and Unicode" },
+          { "title": "Privacy-First Analysis", "description": "All analysis runs locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Content Analysis & Research",
+        "description": "Our word frequency analyzer is essential for various content analysis and research tasks.",
+        "items": [
+          { "title": "Content Optimization", "description": "Identify overused words and improve content diversity" },
+          { "title": "SEO Analysis", "description": "Analyze keyword density and optimize content for search engines" },
+          { "title": "Academic Research", "description": "Study linguistic patterns and word usage in texts" },
+          { "title": "Writing Analysis", "description": "Improve writing style by identifying repetitive word usage" },
+          { "title": "Brand Monitoring", "description": "Analyze frequency of brand terms in content and reviews" },
+          { "title": "Social Media Analysis", "description": "Understand trending words and popular terms in posts" },
+          { "title": "Document Analysis", "description": "Extract key terms and themes from large documents" },
+          { "title": "Language Learning", "description": "Identify most common words for vocabulary building" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Word Frequency Analyzer",
+        "description": "Follow these simple steps to analyze word frequency and get detailed statistics.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for analysis."
+          },
+          {
+            "step": 2,
+            "title": "View Real-time Analysis", 
+            "description": "Watch as the tool automatically calculates word frequencies and displays statistics as you type."
+          },
+          {
+            "step": 3,
+            "title": "Customize Analysis Options",
+            "description": "Use filters to sort results, adjust word length requirements, and toggle case sensitivity."
+          },
+          {
+            "step": 4,
+            "title": "Export Results",
+            "description": "Download a detailed frequency analysis report or copy the results to your clipboard."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Word Frequency Analysis Examples",
+        "description": "See how our analyzer processes different types of content and reveals word patterns.",
+        "items": [
+          { "title": "Blog Article", "input": "1,000 word article", "output": "Top 20 words: 'the' (45×), 'and' (32×), 'to' (28×)" },
+          { "title": "Product Review", "input": "Customer feedback", "output": "Key terms: 'quality' (12×), 'price' (8×), 'recommend' (6×)" },
+          { "title": "Academic Paper", "input": "Research document", "output": "Technical terms: 'analysis' (24×), 'results' (18×), 'data' (15×)" },
+          { "title": "Social Media Post", "input": "Twitter thread", "output": "Trending words: 'amazing' (5×), 'love' (4×), 'awesome' (3×)" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Word Frequency Analyzer",
+        "content": "Professional word frequency analysis with advanced features and comprehensive statistics.",
+        "items": [
+          "Completely free and unlimited analysis",
+          "No registration or sign-up required",
+          "Privacy-first - all analysis done locally",
+          "Supports multiple file formats",
+          "Real-time analysis with instant results",
+          "Advanced filtering and sorting options",
+          "Export results for documentation",
+          "Works with any language and character set"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "How accurate is the word frequency analysis?",
+          "answer": "Our word frequency analyzer uses advanced text parsing algorithms to accurately identify and count words, handle punctuation properly, and support different languages and character sets including accented characters and Unicode."
+        },
+        {
+          "question": "Can I analyze files in different formats?",
+          "answer": "Yes, you can upload .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html and other text-based file formats for word frequency analysis."
+        },
+        {
+          "question": "What filtering options are available?",
+          "answer": "You can filter by minimum word length, toggle case sensitivity, sort results by frequency or alphabetically, and choose how many top words to display (10, 20, 50, or 100)."
+        },
+        {
+          "question": "Is my text data stored or shared?",
+          "answer": "No, all word frequency analysis happens locally in your browser. Your text is never stored on our servers, transmitted to third parties, or used for any other purpose."
+        },
+        {
+          "question": "Can I use this for non-English text?",
+          "answer": "Absolutely! Our word frequency analyzer works with any language and character set, including languages with accented characters, special symbols, emojis, and Unicode text."
+        },
+        {
+          "question": "How do I export the analysis results?",
+          "answer": "Click the 'Download Report' button to export a comprehensive text file containing all frequency statistics, word rankings, and the original text for documentation purposes."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Analysis Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, lines, and get reading time estimates",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Sentence Counter", 
+            "description": "Count sentences and analyze sentence structure in your text",
+            "href": "/tools/sentence-counter"
+          },
+          {
+            "name": "Text Replace Tool",
+            "description": "Find and replace text with advanced pattern matching",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Duplicate Line Remover",
+            "description": "Remove duplicate lines from your text efficiently",
+            "href": "/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Профессиональный Анализатор Частоты Слов и Инструмент Анализа Текста",
+    "metaDescription": "Анализируйте частоту слов и находите самые распространенные слова в вашем тексте. Профессиональный инструмент анализа частоты слов для создателей контента, писателей и исследователей с подробной статистикой и функциями экспорта.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Анализатор Частоты Слов и Инструмент Анализа Текста",
+        "content": "Откройте для себя самые распространенные слова в вашем тексте с нашим продвинутым анализатором частоты слов. Получите подробную статистику, сортируемые таблицы частот и комплексный анализ для оптимизации контента, исследования написания и лингвистических исследований. Идеально для писателей, создателей контента и исследователей, которым нужны точные данные о частоте слов."
+      },
+      "features": {
+        "title": "Продвинутые Функции Анализа Частоты Слов",
+        "items": [
+          { "title": "Анализ частоты в реальном времени", "description": "Мгновенный расчет частоты слов при вводе или вставке текста" },
+          { "title": "Сортируемые таблицы частот", "description": "Сортировка по частоте, алфавиту или пользовательским фильтрам для легкого анализа" },
+          { "title": "Продвинутые параметры фильтрации", "description": "Фильтрация по длине слов, учет регистра и исключение общих слов" },
+          { "title": "Статистические данные", "description": "Общее количество слов, уникальные слова, самые частые слова и средняя длина слов" },
+          { "title": "Визуальные столбцы частоты", "description": "Интерактивные столбчатые диаграммы, показывающие относительные проценты частоты слов" },
+          { "title": "Настраиваемое отображение", "description": "Показать топ 10, 20, 50 или 100 самых частых слов" },
+          { "title": "Экспорт отчетов анализа", "description": "Загрузка подробных отчетов о частоте в нескольких форматах" },
+          { "title": "Поддержка загрузки файлов", "description": "Анализ текстовых файлов популярных форматов прямо в браузере" },
+          { "title": "Многоязычная поддержка", "description": "Работает с любым языком, включая символы с диакритикими знаками и Unicode" },
+          { "title": "Анализ с приоритетом конфиденциальности", "description": "Весь анализ выполняется локально — данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Анализа Контента и Исследований",
+        "description": "Наш анализатор частоты слов необходим для различных задач анализа контента и исследований.",
+        "items": [
+          { "title": "Оптимизация контента", "description": "Выявляйте чрезмерно используемые слова и улучшайте разнообразие контента" },
+          { "title": "SEO-анализ", "description": "Анализируйте плотность ключевых слов и оптимизируйте контент для поисковых систем" },
+          { "title": "Академические исследования", "description": "Изучайте лингвистические паттерны и использование слов в текстах" },
+          { "title": "Анализ письма", "description": "Улучшайте стиль письма, выявляя повторяющееся использование слов" },
+          { "title": "Мониторинг бренда", "description": "Анализируйте частоту терминов бренда в контенте и отзывах" },
+          { "title": "Анализ социальных сетей", "description": "Понимайте популярные слова и тенденции в постах" },
+          { "title": "Анализ документов", "description": "Извлекайте ключевые термины и темы из больших документов" },
+          { "title": "Изучение языка", "description": "Выявляйте самые распространенные слова для построения словарного запаса" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Анализатор Частоты Слов",
+        "description": "Следуйте простым шагам для анализа частоты слов и получения подробной статистики.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для анализа."
+          },
+          {
+            "step": 2,
+            "title": "Просматривайте Анализ в Реальном Времени",
+            "description": "Наблюдайте, как инструмент автоматически рассчитывает частоту слов и отображает статистику при вводе."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Параметры Анализа",
+            "description": "Используйте фильтры для сортировки результатов, настройки требований к длине слов и переключения учета регистра."
+          },
+          {
+            "step": 4,
+            "title": "Экспортируйте Результаты",
+            "description": "Скачайте подробный отчет анализа частоты или скопируйте результаты в буфер обмена."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Анализа Частоты Слов",
+        "description": "Посмотрите, как наш анализатор обрабатывает различные типы контента и выявляет паттерны слов.",
+        "items": [
+          { "title": "Блог-статья", "input": "Статья из 1000 слов", "output": "Топ 20 слов: 'и' (45×), 'в' (32×), 'на' (28×)" },
+          { "title": "Обзор товара", "input": "Отзыв клиента", "output": "Ключевые термины: 'качество' (12×), 'цена' (8×), 'рекомендую' (6×)" },
+          { "title": "Научная статья", "input": "Исследовательский документ", "output": "Технические термины: 'анализ' (24×), 'результаты' (18×), 'данные' (15×)" },
+          { "title": "Пост в социальных сетях", "input": "Twitter-лента", "output": "Популярные слова: 'потрясающе' (5×), 'люблю' (4×), 'класс' (3×)" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Анализатор Частоты Слов",
+        "content": "Профессиональный анализ частоты слов с продвинутыми функциями и комплексной статистикой.",
+        "items": [
+          "Полностью бесплатный и неограниченный анализ",
+          "Не требует регистрации или подписки",
+          "Приоритет конфиденциальности - весь анализ происходит локально",
+          "Поддержка множества форматов файлов",
+          "Анализ в реальном времени с мгновенными результатами",
+          "Продвинутые параметры фильтрации и сортировки",
+          "Экспорт результатов для документации",
+          "Работает с любым языком и набором символов"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Насколько точен анализ частоты слов?",
+          "answer": "Наш анализатор частоты слов использует продвинутые алгоритмы анализа текста для точного выявления и подсчета слов, правильной обработки пунктуации и поддержки различных языков и наборов символов, включая символы с диакритическими знаками и Unicode."
+        },
+        {
+          "question": "Могу ли я анализировать файлы в разных форматах?",
+          "answer": "Да, вы можете загружать файлы .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие текстовые форматы для анализа частоты слов."
+        },
+        {
+          "question": "Какие параметры фильтрации доступны?",
+          "answer": "Вы можете фильтровать по минимальной длине слова, переключать учет регистра, сортировать результаты по частоте или алфавиту, и выбирать количество отображаемых топ-слов (10, 20, 50 или 100)."
+        },
+        {
+          "question": "Сохраняются ли мои текстовые данные?",
+          "answer": "Нет, весь анализ частоты слов происходит локально в вашем браузере. Ваш текст никогда не сохраняется на наших серверах, не передается третьим лицам и не используется для других целей."
+        },
+        {
+          "question": "Могу ли я использовать это для неанглийского текста?",
+          "answer": "Абсолютно! Наш анализатор частоты слов работает с любым языком и набором символов, включая языки с символами диакритики, специальными символами, эмодзи и Unicode текстом."
+        },
+        {
+          "question": "Как экспортировать результаты анализа?",
+          "answer": "Нажмите кнопку 'Скачать Отчет', чтобы экспортировать комплексный текстовый файл, содержащий всю статистику частоты, рейтинг слов и исходный текст для целей документации."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Анализа Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитывайте символы, слова, строки и получайте оценки времени чтения",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Счетчик Предложений",
+            "description": "Считайте предложения и анализируйте структуру предложений в вашем тексте",
+            "href": "/tools/sentence-counter"
+          },
+          {
+            "name": "Инструмент Замены Текста",
+            "description": "Находите и заменяйте текст с продвинутым сопоставлением паттернов",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Удалитель Дубликатов Строк",
+            "description": "Эффективно удаляйте дублирующиеся строки из вашего текста",
+            "href": "/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
+  }
+}

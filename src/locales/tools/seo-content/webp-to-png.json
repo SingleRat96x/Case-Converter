@@ -1,0 +1,154 @@
+{
+  "en": {
+    "title": "Free WebP to PNG Converter - Preserve Quality & Transparency Online",
+    "metaDescription": "Convert WebP images to PNG online with lossless quality and transparency support. Ideal for design workflows needing PNG output. 100% free & private.",
+    "sections": {
+      "intro": {
+        "title": "Professional WebP to PNG Image Converter",
+        "content": "Quickly convert modern WebP images to PNG format while preserving transparency and quality. Perfect when you need PNG output for design tools, asset pipelines, or platform compatibility. Runs entirely in your browser for speed and privacy."
+      },
+      "features": {
+        "title": "Powerful WebP to PNG Features",
+        "items": [
+          { "title": "Transparency Preservation", "description": "Retain alpha transparency when converting to PNG for design-ready assets" },
+          { "title": "Lossless Output", "description": "PNG keeps pixel-perfect fidelity with no compression artifacts" },
+          { "title": "Quality & Compression Presets", "description": "Choose quality and compression levels to balance speed and file size" },
+          { "title": "Bulk Conversion Ready", "description": "Queue multiple WebP files and download all results at once (ZIP)" },
+          { "title": "Instant Preview", "description": "Process and preview results in real-time without server uploads" },
+          { "title": "Mobile-first UI", "description": "Optimized for phones with large tap targets and simple controls" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert WebP to PNG Online",
+        "description": "Convert your WebP images to PNG in a few steps:",
+        "steps": [
+          { "step": 1, "title": "Upload WebP", "description": "Drag & drop or click to select WebP files (up to 10MB each)." },
+          { "step": 2, "title": "Adjust Options", "description": "Pick quality and compression presets if needed." },
+          { "step": 3, "title": "Preview Result", "description": "Review the PNG output instantly and check file size." },
+          { "step": 4, "title": "Download PNG", "description": "Download single files or all results together as a ZIP." }
+        ]
+      },
+      "examples": {
+        "title": "WebP to PNG Examples",
+        "description": "Typical conversions you can expect:",
+        "items": [
+          { "input": "Icon WebP 512×512", "output": "Transparent PNG 512×512", "description": "Keep crisp edges for UI icons" },
+          { "input": "Illustration WebP 1600×1200", "output": "Lossless PNG 1600×1200", "description": "Preserve gradients and lines for print or editing" },
+          { "input": "Logo WebP with alpha", "output": "PNG with preserved transparency", "description": "Ready for compositing on any background" }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases",
+        "description": "When PNG is the right target format:",
+        "items": [
+          { "title": "Design Tool Compatibility", "description": "Export PNGs for Figma, Sketch, Photoshop and other tools" },
+          { "title": "Asset Pipelines", "description": "Ensure PNG availability for build systems that require it" },
+          { "title": "Transparent Overlays", "description": "Use PNG when you need alpha compositing on the web or in apps" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Converter",
+        "items": [
+          "Private: images never leave your browser",
+          "Fast: real-time processing with no uploads",
+          "Flexible: single or bulk conversion flows",
+          "Accurate: preserves transparency and sharpness",
+          "Convenient: mobile-friendly controls and downloads"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Image Tools",
+        "description": "More image conversion and editing tools:",
+        "items": [
+          { "name": "JPG to PNG Converter", "description": "Convert JPEG images to PNG with transparency", "href": "/tools/jpg-to-png" },
+          { "name": "PNG to JPG Converter", "description": "Convert PNG images to JPG for smaller sizes", "href": "/tools/png-to-jpg" },
+          { "name": "Image Resizer", "description": "Resize images to exact dimensions with quality controls", "href": "/tools/image-resizer" },
+          { "name": "Image Cropper", "description": "Crop images to specific areas and aspect ratios", "href": "/tools/image-cropper" }
+        ]
+      },
+      "faqs": [
+        { "question": "Does PNG keep transparency?", "answer": "Yes. PNG supports alpha transparency, so transparent areas from WebP are preserved." },
+        { "question": "Is conversion lossless?", "answer": "PNG output is lossless; however, original WebP may already be lossy. We preserve pixels from the decoded WebP." },
+        { "question": "Are files uploaded?", "answer": "No. All processing happens locally in your browser for maximum privacy." },
+        { "question": "Can I convert multiple files?", "answer": "Yes. Add multiple WebP files and download all converted PNGs as a single ZIP." }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Конвертер WebP в PNG - Сохранение Качества и Прозрачности Онлайн",
+    "metaDescription": "Конвертируйте WebP изображения в PNG онлайн с сохранением качества и прозрачности. Идеально для рабочих процессов дизайна, где требуется PNG. 100% бесплатно и приватно.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Конвертер Изображений WebP в PNG",
+        "content": "Быстро конвертируйте современные изображения WebP в формат PNG, сохраняя прозрачность и качество. Подходит, когда требуется PNG для инструментов дизайна, пайплайнов ассетов или совместимости платформ. Работает целиком в вашем браузере." 
+      },
+      "features": {
+        "title": "Мощные Возможности WebP → PNG",
+        "items": [
+          { "title": "Сохранение Прозрачности", "description": "Сохраняйте альфа-прозрачность для ассетов, готовых к дизайну" },
+          { "title": "Без Потери Качества", "description": "PNG сохраняет пиксельную точность без артефактов сжатия" },
+          { "title": "Предустановки Качества и Сжатия", "description": "Выбирайте уровни качества и сжатия для баланса скорости и размера" },
+          { "title": "Пакетная Конвертация", "description": "Ставьте несколько WebP в очередь и скачивайте результаты одним ZIP" },
+          { "title": "Мгновенный Предпросмотр", "description": "Обрабатывайте и просматривайте результат в реальном времени без загрузок на сервер" },
+          { "title": "Мобильный Интерфейс", "description": "Оптимизировано для телефонов с крупными элементами управления" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать WebP в PNG Онлайн",
+        "description": "Конвертируйте WebP в PNG в несколько шагов:",
+        "steps": [
+          { "step": 1, "title": "Загрузите WebP", "description": "Перетащите или выберите WebP файлы (до 10МБ каждый)." },
+          { "step": 2, "title": "Настройте Опции", "description": "При необходимости выберите предустановки качества и сжатия." },
+          { "step": 3, "title": "Просмотрите Результат", "description": "Мгновенно просмотрите PNG и оцените размер файла." },
+          { "step": 4, "title": "Скачайте PNG", "description": "Скачайте отдельные файлы или все сразу архивом ZIP." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры WebP → PNG",
+        "description": "Типичные случаи конвертации:",
+        "items": [
+          { "input": "Иконка WebP 512×512", "output": "Прозрачный PNG 512×512", "description": "Сохраняйте четкие края для UI-иконок" },
+          { "input": "Иллюстрация WebP 1600×1200", "output": "PNG без потерь 1600×1200", "description": "Сохранение градиентов и линий для печати или редактирования" },
+          { "input": "Логотип WebP с альфой", "output": "PNG с сохраненной прозрачностью", "description": "Готов для наложения на любой фон" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии",
+        "description": "Когда PNG — правильный целевой формат:",
+        "items": [
+          { "title": "Совместимость с Инструментами Дизайна", "description": "Экспорт PNG для Figma, Sketch, Photoshop и других" },
+          { "title": "Пайплайны Ассетов", "description": "Обеспечьте наличие PNG для систем сборки, которые его требуют" },
+          { "title": "Прозрачные Наложения", "description": "Используйте PNG, когда нужна альфа-композиция в вебе и приложениях" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Наш Конвертер",
+        "items": [
+          "Приватность: изображения не покидают браузер",
+          "Скорость: обработка в реальном времени без загрузок",
+          "Гибкость: одиночная и пакетная конвертация",
+          "Точность: сохраняет прозрачность и четкость",
+          "Удобство: мобильный интерфейс и быстрые скачивания"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты",
+        "description": "Еще инструменты конвертации и редактирования изображений:",
+        "items": [
+          { "name": "Конвертер JPG в PNG", "description": "Конвертируйте JPEG в PNG с поддержкой прозрачности", "href": "/tools/jpg-to-png" },
+          { "name": "Конвертер PNG в JPG", "description": "Конвертируйте PNG в JPG для меньшего размера файлов", "href": "/tools/png-to-jpg" },
+          { "name": "Изменитель Размера Изображений", "description": "Точные размеры с контролем качества", "href": "/tools/image-resizer" },
+          { "name": "Обрезчик Изображений", "description": "Обрезка по области и соотношению сторон", "href": "/tools/image-cropper" }
+        ]
+      },
+      "faqs": [
+        { "question": "Сохраняет ли PNG прозрачность?", "answer": "Да. PNG поддерживает альфа-канал, прозрачные области WebP сохраняются." },
+        { "question": "Конвертация без потерь?", "answer": "PNG — без потерь; исходный WebP может быть сжат. Мы сохраняем пиксели из декодированного WebP." },
+        { "question": "Файлы загружаются на сервер?", "answer": "Нет. Вся обработка локально в вашем браузере для максимальной приватности." },
+        { "question": "Можно ли конвертировать несколько файлов?", "answer": "Да. Добавьте несколько WebP и скачайте все PNG одним ZIP." }
+      ]
+    }
+  }
+}
+
+

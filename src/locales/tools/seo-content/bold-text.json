@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Free Bold Text Generator - Unicode Bold Font Converter",
+    "metaDescription": "Generate bold Unicode text instantly with our free bold text generator. Create bold fonts for social media, documents, and messaging that work everywhere. Copy and paste bold text.",
+    "sections": {
+      "intro": {
+        "title": "Free Bold Text Generator - Unicode Bold Font Converter",
+        "content": "Transform your regular text into bold Unicode characters instantly with our powerful and free bold text generator. Perfect for creating eye-catching social media posts, professional documents, and standout messaging that works across all platforms and devices."
+      },
+      "features": {
+        "title": "Powerful Bold Text Generation Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time bold text conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to bold text" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Bold Text Generation",
+        "description": "Bold text serves many important purposes across different platforms and communication contexts.",
+        "items": [
+          { "title": "Social Media Posts", "description": "Make your Twitter, Facebook, and Instagram posts stand out with bold text" },
+          { "title": "Discord & Gaming", "description": "Create attention-grabbing messages in Discord servers and gaming communities" },
+          { "title": "WhatsApp & Messaging", "description": "Emphasize important messages in chat applications and text messaging" },
+          { "title": "Email Marketing", "description": "Highlight key points and calls-to-action in email campaigns" },
+          { "title": "Document Headers", "description": "Create bold headings and titles for professional documents" },
+          { "title": "Website Content", "description": "Emphasize important text on websites and landing pages" },
+          { "title": "Creative Writing", "description": "Add emphasis and visual impact to creative content and stories" },
+          { "title": "Educational Materials", "description": "Highlight key concepts and important information in learning materials" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Bold Text",
+        "description": "Follow these simple steps to convert your text to bold Unicode characters.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Automatic Conversion",
+            "description": "Watch as your text is instantly converted to bold Unicode characters in real-time."
+          },
+          {
+            "step": 3,
+            "title": "Review Analytics",
+            "description": "Check the text statistics including character count, word count, and more."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the bold text to your clipboard or download it as a text file for use anywhere."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Bold Text Conversion Examples",
+        "description": "See how different types of text are converted to bold Unicode format.",
+        "items": [
+          { "title": "Simple Text", "input": "Hello World", "output": "𝐇𝐞𝐥𝐥𝐨 𝐖𝐨𝐫𝐥𝐝" },
+          { "title": "Social Media", "input": "Follow me for more tips!", "output": "𝐅𝐨𝐥𝐥𝐨𝐰 𝐦𝐞 𝐟𝐨𝐫 𝐦𝐨𝐫𝐞 𝐭𝐢𝐩𝐬!" },
+          { "title": "Call to Action", "input": "CLICK HERE NOW", "output": "𝐂𝐋𝐈𝐂𝐊 𝐇𝐄𝐑𝐄 𝐍𝐎𝐖" },
+          { "title": "With Numbers", "input": "Sale 50% Off Today", "output": "𝐒𝐚𝐥𝐞 𝟓𝟎% 𝐎𝐟𝐟 𝐓𝐨𝐝𝐚𝐲" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Bold Text Generator",
+        "content": "Professional bold text generation with comprehensive features and universal compatibility.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and platforms"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is Unicode bold text?",
+          "answer": "Unicode bold text uses special Unicode characters that appear bold without requiring any formatting. These characters work across all platforms, social media sites, messaging apps, and devices, making them perfect for creating emphasis anywhere."
+        },
+        {
+          "question": "Does bold text work on all platforms?",
+          "answer": "Yes! Our bold text generator creates Unicode characters that work on Twitter, Facebook, Instagram, Discord, WhatsApp, and virtually all other platforms and applications that support Unicode text."
+        },
+        {
+          "question": "Can I convert entire files to bold text?",
+          "answer": "Absolutely! You can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and convert their entire content to bold Unicode text."
+        },
+        {
+          "question": "Is my text data safe and private?",
+          "answer": "Yes, all text conversion happens locally in your browser. Your text is never uploaded to our servers or shared with anyone. Complete privacy guaranteed."
+        },
+        {
+          "question": "What's the difference between this and regular bold formatting?",
+          "answer": "Regular bold formatting requires HTML tags or rich text editors and doesn't work everywhere. Our Unicode bold text works as plain text on any platform, social media site, or messaging app."
+        },
+        {
+          "question": "Can I use bold text in social media bios?",
+          "answer": "Yes! Bold Unicode text is perfect for social media bios, posts, comments, and anywhere you want to make text stand out without special formatting support."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Styling Tools",
+        "items": [
+          {
+            "name": "Italic Text Generator",
+            "description": "Create italic Unicode text for emphasis and stylistic purposes",
+            "href": "/tools/italic-text"
+          },
+          {
+            "name": "Instagram Fonts Generator",
+            "description": "Generate stylish fonts perfect for Instagram bios and posts",
+            "href": "/tools/instagram-fonts"
+          },
+          {
+            "name": "Facebook Fonts Generator",
+            "description": "Create eye-catching fonts for Facebook posts and profiles",
+            "href": "/tools/facebook-font"
+          },
+          {
+            "name": "Discord Fonts Generator",
+            "description": "Generate unique fonts for Discord messages and usernames",
+            "href": "/tools/discord-font"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Жирного Текста - Конвертер Unicode Жирного Шрифта",
+    "metaDescription": "Мгновенно создавайте жирный Unicode текст с помощью нашего бесплатного генератора жирного текста. Создавайте жирные шрифты для социальных сетей, документов и сообщений, которые работают везде.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор Жирного Текста - Конвертер Unicode Жирного Шрифта",
+        "content": "Мгновенно преобразуйте ваш обычный текст в жирные Unicode символы с помощью нашего мощного и бесплатного генератора жирного текста. Идеально для создания привлекающих внимание постов в социальных сетях, профессиональных документов и выделяющихся сообщений, которые работают на всех платформах и устройствах."
+      },
+      "features": {
+        "title": "Мощные Функции Генерации Жирного Текста",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в жирный текст в реальном времени при вводе или вставке текста" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в жирный текст" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем конвертированном тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и специальными символами" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся конвертация происходит локально—данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Генерацию Жирного Текста",
+        "description": "Жирный текст служит многим важным целям на различных платформах и в контекстах коммуникации.",
+        "items": [
+          { "title": "Посты в Социальных Сетях", "description": "Выделите ваши посты в Twitter, Facebook и Instagram жирным текстом" },
+          { "title": "Discord и Игры", "description": "Создавайте привлекающие внимание сообщения на серверах Discord и в игровых сообществах" },
+          { "title": "WhatsApp и Мессенджеры", "description": "Подчеркивайте важные сообщения в чат-приложениях и текстовых сообщениях" },
+          { "title": "Email-Маркетинг", "description": "Выделяйте ключевые моменты и призывы к действию в email-кампаниях" },
+          { "title": "Заголовки Документов", "description": "Создавайте жирные заголовки и титулы для профессиональных документов" },
+          { "title": "Контент Веб-сайтов", "description": "Подчеркивайте важный текст на веб-сайтах и лендинг-страницах" },
+          { "title": "Творческое Письмо", "description": "Добавляйте акценты и визуальное воздействие к креативному контенту и историям" },
+          { "title": "Образовательные Материалы", "description": "Выделяйте ключевые концепции и важную информацию в учебных материалах" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Генерировать Жирный Текст",
+        "description": "Следуйте этим простым шагам, чтобы конвертировать ваш текст в жирные Unicode символы.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Автоматическая Конвертация",
+            "description": "Наблюдайте, как ваш текст мгновенно конвертируется в жирные Unicode символы в реальном времени."
+          },
+          {
+            "step": 3,
+            "title": "Просмотр Аналитики",
+            "description": "Проверьте статистику текста, включая количество символов, слов и многое другое."
+          },
+          {
+            "step": 4,
+            "title": "Копирование или Скачивание",
+            "description": "Скопируйте жирный текст в буфер обмена или скачайте как текстовый файл для использования где угодно."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации Жирного Текста",
+        "description": "Посмотрите, как различные типы текста конвертируются в формат жирного Unicode.",
+        "items": [
+          { "title": "Простой Текст", "input": "Привет Мир", "output": "𝐏𝐫𝐢𝐯𝐞𝐭 𝐌𝐢𝐫" },
+          { "title": "Социальные Сети", "input": "Подписывайтесь на больше советов!", "output": "𝐏𝐨𝐝𝐩𝐢𝐬𝐲𝐯𝐚𝐣𝐭𝐞𝐬 𝐧𝐚 𝐛𝐨𝐥𝐬𝐡𝐞 𝐬𝐨𝐯𝐞𝐭𝐨𝐯!" },
+          { "title": "Призыв к Действию", "input": "НАЖМИТЕ ЗДЕСЬ СЕЙЧАС", "output": "𝐍𝐀𝐙𝐇𝐌𝐈𝐓𝐄 𝐙𝐃𝐄𝐒 𝐒𝐄𝐉𝐂𝐇𝐀𝐒" },
+          { "title": "С Числами", "input": "Скидка 50% Сегодня", "output": "𝐒𝐤𝐢𝐝𝐤𝐚 𝟓𝟎% 𝐒𝐞𝐠𝐨𝐝𝐧𝐲𝐚" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Генератор Жирного Текста",
+        "content": "Профессиональная генерация жирного текста с комплексными функциями и универсальной совместимостью.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени при вводе",
+          "Включена подробная аналитика текста",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Работает со всеми языками и платформами"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое Unicode жирный текст?",
+          "answer": "Unicode жирный текст использует специальные Unicode символы, которые выглядят жирными без требования какого-либо форматирования. Эти символы работают на всех платформах, сайтах социальных сетей, мессенджерах и устройствах, что делает их идеальными для создания акцентов где угодно."
+        },
+        {
+          "question": "Работает ли жирный текст на всех платформах?",
+          "answer": "Да! Наш генератор жирного текста создает Unicode символы, которые работают в Twitter, Facebook, Instagram, Discord, WhatsApp и практически во всех других платформах и приложениях, поддерживающих Unicode текст."
+        },
+        {
+          "question": "Могу ли я конвертировать целые файлы в жирный текст?",
+          "answer": "Абсолютно! Вы можете загружать текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и конвертировать их полное содержимое в жирный Unicode текст."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные и конфиденциальны?",
+          "answer": "Да, вся конвертация текста происходит локально в вашем браузере. Ваш текст никогда не загружается на наши серверы и не передается кому-либо. Полная конфиденциальность гарантирована."
+        },
+        {
+          "question": "В чем разница между этим и обычным жирным форматированием?",
+          "answer": "Обычное жирное форматирование требует HTML тегов или редакторов богатого текста и не работает везде. Наш Unicode жирный текст работает как обычный текст на любой платформе, сайте социальных сетей или мессенджере."
+        },
+        {
+          "question": "Могу ли я использовать жирный текст в биографиях социальных сетей?",
+          "answer": "Да! Жирный Unicode текст идеально подходит для биографий в социальных сетях, постов, комментариев и везде, где вы хотите выделить текст без поддержки специального форматирования."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Стилизации Текста",
+        "items": [
+          {
+            "name": "Генератор Курсивного Текста",
+            "description": "Создавайте курсивный Unicode текст для акцентов и стилистических целей",
+            "href": "/ru/tools/italic-text"
+          },
+          {
+            "name": "Генератор Шрифтов Instagram",
+            "description": "Генерируйте стильные шрифты, идеальные для биографий и постов Instagram",
+            "href": "/ru/tools/instagram-fonts"
+          },
+          {
+            "name": "Генератор Шрифтов Facebook",
+            "description": "Создавайте привлекающие внимание шрифты для постов и профилей Facebook",
+            "href": "/ru/tools/facebook-font"
+          },
+          {
+            "name": "Генератор Шрифтов Discord",
+            "description": "Генерируйте уникальные шрифты для сообщений и имен пользователей Discord",
+            "href": "/ru/tools/discord-font"
+          }
+        ]
+      }
+    }
+  }
+}

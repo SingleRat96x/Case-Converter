@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free URL Encoder/Decoder - Percent Encoding & URI Component Tool",
+    "metaDescription": "Encode and decode URLs and URL components instantly. Free online URL encoder with component, URI, and form encoding options for web development and API integration.",
+    "sections": {
+      "intro": {
+        "title": "Free URL Encoder/Decoder - Percent Encoding & URI Component Tool",
+        "content": "Encode and decode URLs and URL components with our comprehensive online tool. Features multiple encoding types, real-time conversion, and detailed analytics. Perfect for web development, API integration, and handling special characters in URLs."
+      },
+      "features": {
+        "title": "Advanced URL Encoding Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Encode plain text to URL-safe format and decode percent-encoded URLs back to readable text with instant mode switching."
+          },
+          {
+            "title": "Multiple Encoding Types",
+            "description": "Support for URI component encoding, full URI encoding, and form data encoding to match different web standards."
+          },
+          {
+            "title": "Special Character Handling",
+            "description": "Properly encode spaces, ampersands, question marks, and other special characters for safe URL transmission."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Detailed statistics including character counts, encoding ratios, and safety improvement metrics."
+          },
+          {
+            "title": "Error Detection",
+            "description": "Intelligent error handling for malformed URLs and invalid percent-encoding sequences."
+          },
+          {
+            "title": "Developer-Friendly",
+            "description": "Optimized for web developers with proper encoding standards and best practices implementation."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for URL Encoding",
+        "description": "Ensure safe URL transmission and proper handling of special characters in web applications.",
+        "items": [
+          {
+            "title": "Query Parameters",
+            "description": "Encode form data and query string parameters for safe transmission in GET and POST requests."
+          },
+          {
+            "title": "API Integration",
+            "description": "Prepare URL parameters for REST API calls and web service integration with proper encoding."
+          },
+          {
+            "title": "Web Development",
+            "description": "Handle user input and dynamic URLs in web applications with proper character escaping."
+          },
+          {
+            "title": "Form Data Processing",
+            "description": "Encode form submissions and user-generated content for safe URL transmission."
+          },
+          {
+            "title": "Link Generation",
+            "description": "Create safe URLs for email campaigns, social media sharing, and automated link generation."
+          },
+          {
+            "title": "Data Validation",
+            "description": "Validate and clean URL data from various sources with proper encoding standards."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the URL Encoder/Decoder",
+        "description": "Follow these simple steps to encode or decode URLs and URL components.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose Conversion Mode",
+            "description": "Select whether you want to encode plain text to URL format or decode percent-encoded URLs."
+          },
+          {
+            "step": 2,
+            "title": "Input Your Text",
+            "description": "Paste your text or URL into the input area, or upload a file for processing."
+          },
+          {
+            "step": 3,
+            "title": "Configure Encoding",
+            "description": "Choose the appropriate encoding type (component, URI, or form) based on your use case."
+          },
+          {
+            "step": 4,
+            "title": "Review & Copy",
+            "description": "Examine the encoded/decoded result, review analytics, and copy or download the output."
+          }
+        ]
+      },
+      "examples": {
+        "title": "URL Encoding Examples",
+        "description": "See how different types of text and URLs are encoded and decoded.",
+        "items": [
+          {
+            "title": "Query Parameters",
+            "input": "name=John Doe&email=john@example.com",
+            "output": "name%3DJohn%20Doe%26email%3Djohn%40example.com"
+          },
+          {
+            "title": "Special Characters",
+            "input": "Hello World! & Special Characters",
+            "output": "Hello%20World%21%20%26%20Special%20Characters"
+          },
+          {
+            "title": "Unicode Text",
+            "input": "café & résumé",
+            "output": "caf%C3%A9%20%26%20r%C3%A9sum%C3%A9"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our URL Encoder/Decoder",
+        "content": "Professional URL encoding with comprehensive options and web development standards compliance.",
+        "items": [
+          "Instant bidirectional URL encoding and decoding",
+          "Multiple encoding types for different web standards",
+          "Proper handling of special characters and Unicode",
+          "Real-time analytics and encoding efficiency metrics",
+          "Error detection for malformed URLs and encoding",
+          "Developer-friendly with best practices implementation",
+          "Privacy-focused - all processing happens locally",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What's the difference between URI and component encoding?",
+          "answer": "URI encoding (encodeURI) is designed for full URLs and preserves characters like :, /, ?, and # that have special meaning in URLs. Component encoding (encodeURIComponent) is stricter and encodes these characters too, making it suitable for URL parameters and query strings."
+        },
+        {
+          "question": "When should I use form encoding?",
+          "answer": "Form encoding is used for application/x-www-form-urlencoded data, where spaces are encoded as + instead of %20. This is commonly used in HTML form submissions and some API endpoints."
+        },
+        {
+          "question": "How are Unicode characters handled?",
+          "answer": "Unicode characters are encoded using UTF-8 byte sequences. For example, 'é' becomes '%C3%A9'. Our tool properly handles all Unicode characters according to web standards."
+        },
+        {
+          "question": "Can I decode malformed URLs?",
+          "answer": "The tool will attempt to decode URLs and provide error messages for malformed percent-encoding sequences. It helps identify and fix URL encoding issues."
+        },
+        {
+          "question": "Is there a limit on URL length?",
+          "answer": "There are no artificial limits in our tool. However, be aware that different browsers and servers have varying URL length limits (typically 2048-8192 characters)."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Web Development Tools",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode data using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "JSON Stringify",
+            "description": "Format and validate JSON data with syntax highlighting",
+            "href": "/tools/json-stringify"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Analyze text statistics and character counts",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "CSV to JSON Converter",
+            "description": "Convert between CSV and JSON data formats",
+            "href": "/tools/csv-to-json"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный URL Кодировщик/Декодировщик - Процентное Кодирование и URI Компоненты",
+    "metaDescription": "Кодируйте и декодируйте URL и URL компоненты мгновенно. Бесплатный онлайн URL кодировщик с опциями компонентного, URI и форм кодирования для веб-разработки и интеграции API.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный URL Кодировщик/Декодировщик - Процентное Кодирование и URI Компоненты",
+        "content": "Кодируйте и декодируйте URL и URL компоненты с нашим комплексным онлайн инструментом. Включает множественные типы кодирования, конвертацию в реальном времени и подробную аналитику. Идеально для веб-разработки, интеграции API и обработки специальных символов в URL."
+      },
+      "features": {
+        "title": "Расширенные Возможности URL Кодирования",
+        "items": [
+          {
+            "title": "Двунаправленная Конвертация",
+            "description": "Кодируйте обычный текст в URL-безопасный формат и декодируйте процентно-кодированные URL обратно в читаемый текст с мгновенным переключением режимов."
+          },
+          {
+            "title": "Множественные Типы Кодирования",
+            "description": "Поддержка кодирования URI компонентов, полного URI кодирования и кодирования данных форм для соответствия различным веб-стандартам."
+          },
+          {
+            "title": "Обработка Специальных Символов",
+            "description": "Правильно кодируйте пробелы, амперсанды, вопросительные знаки и другие специальные символы для безопасной передачи URL."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Подробная статистика, включая количество символов, коэффициенты кодирования и метрики улучшения безопасности."
+          },
+          {
+            "title": "Обнаружение Ошибок",
+            "description": "Интеллектуальная обработка ошибок для неправильно сформированных URL и недопустимых последовательностей процентного кодирования."
+          },
+          {
+            "title": "Дружелюбность к Разработчикам",
+            "description": "Оптимизировано для веб-разработчиков с правильными стандартами кодирования и реализацией лучших практик."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения URL Кодирования",
+        "description": "Обеспечьте безопасную передачу URL и правильную обработку специальных символов в веб-приложениях.",
+        "items": [
+          {
+            "title": "Параметры Запроса",
+            "description": "Кодируйте данные форм и параметры строки запроса для безопасной передачи в GET и POST запросах."
+          },
+          {
+            "title": "Интеграция API",
+            "description": "Подготавливайте URL параметры для вызовов REST API и интеграции веб-сервисов с правильным кодированием."
+          },
+          {
+            "title": "Веб-разработка",
+            "description": "Обрабатывайте пользовательский ввод и динамические URL в веб-приложениях с правильным экранированием символов."
+          },
+          {
+            "title": "Обработка Данных Форм",
+            "description": "Кодируйте отправки форм и пользовательский контент для безопасной передачи URL."
+          },
+          {
+            "title": "Генерация Ссылок",
+            "description": "Создавайте безопасные URL для email кампаний, обмена в социальных сетях и автоматизированной генерации ссылок."
+          },
+          {
+            "title": "Валидация Данных",
+            "description": "Валидируйте и очищайте URL данные из различных источников с правильными стандартами кодирования."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать URL Кодировщик/Декодировщик",
+        "description": "Следуйте этим простым шагам для кодирования или декодирования URL и URL компонентов.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Режим Конвертации",
+            "description": "Выберите, хотите ли вы кодировать обычный текст в URL формат или декодировать процентно-кодированные URL."
+          },
+          {
+            "step": 2,
+            "title": "Введите Ваш Текст",
+            "description": "Вставьте ваш текст или URL в область ввода, или загрузите файл для обработки."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Кодирование",
+            "description": "Выберите подходящий тип кодирования (компонент, URI или форма) в зависимости от вашего случая использования."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите и Скопируйте",
+            "description": "Изучите кодированный/декодированный результат, просмотрите аналитику и скопируйте или скачайте вывод."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры URL Кодирования",
+        "description": "Посмотрите, как различные типы текста и URL кодируются и декодируются.",
+        "items": [
+          {
+            "title": "Параметры Запроса",
+            "input": "имя=Иван Иванов&email=ivan@example.com",
+            "output": "%D0%B8%D0%BC%D1%8F%3D%D0%98%D0%B2%D0%B0%D0%BD%20%D0%98%D0%B2%D0%B0%D0%BD%D0%BE%D0%B2%26email%3Divan%40example.com"
+          },
+          {
+            "title": "Специальные Символы",
+            "input": "Привет Мир! & Специальные Символы",
+            "output": "%D0%9F%D1%80%D0%B8%D0%B2%D0%B5%D1%82%20%D0%9C%D0%B8%D1%80%21%20%26%20%D0%A1%D0%BF%D0%B5%D1%86%D0%B8%D0%B0%D0%BB%D1%8C%D0%BD%D1%8B%D0%B5%20%D0%A1%D0%B8%D0%BC%D0%B2%D0%BE%D0%BB%D1%8B"
+          },
+          {
+            "title": "Unicode Текст",
+            "input": "кафе & резюме",
+            "output": "%D0%BA%D0%B0%D1%84%D0%B5%20%26%20%D1%80%D0%B5%D0%B7%D1%8E%D0%BC%D0%B5"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш URL Кодировщик/Декодировщик",
+        "content": "Профессиональное URL кодирование с комплексными опциями и соответствием стандартам веб-разработки.",
+        "items": [
+          "Мгновенное двунаправленное URL кодирование и декодирование",
+          "Множественные типы кодирования для различных веб-стандартов",
+          "Правильная обработка специальных символов и Unicode",
+          "Аналитика в реальном времени и метрики эффективности кодирования",
+          "Обнаружение ошибок для неправильно сформированных URL и кодирования",
+          "Дружелюбность к разработчикам с реализацией лучших практик",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "В чем разница между URI и компонентным кодированием?",
+          "answer": "URI кодирование (encodeURI) предназначено для полных URL и сохраняет символы как :, /, ?, и #, которые имеют специальное значение в URL. Компонентное кодирование (encodeURIComponent) более строгое и кодирует эти символы тоже, что делает его подходящим для URL параметров и строк запроса."
+        },
+        {
+          "question": "Когда следует использовать кодирование форм?",
+          "answer": "Кодирование форм используется для данных application/x-www-form-urlencoded, где пробелы кодируются как + вместо %20. Это обычно используется в отправках HTML форм и некоторых API endpoints."
+        },
+        {
+          "question": "Как обрабатываются Unicode символы?",
+          "answer": "Unicode символы кодируются с использованием UTF-8 байтовых последовательностей. Например, 'ё' становится '%D1%91'. Наш инструмент правильно обрабатывает все Unicode символы согласно веб-стандартам."
+        },
+        {
+          "question": "Могу ли я декодировать неправильно сформированные URL?",
+          "answer": "Инструмент попытается декодировать URL и предоставит сообщения об ошибках для неправильно сформированных последовательностей процентного кодирования. Это помогает идентифицировать и исправить проблемы URL кодирования."
+        },
+        {
+          "question": "Есть ли ограничение на длину URL?",
+          "answer": "В нашем инструменте нет искусственных ограничений. Однако, имейте в виду, что различные браузеры и серверы имеют разные ограничения длины URL (обычно 2048-8192 символов)."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Веб-разработки",
+        "items": [
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте данные используя Base64 кодирование",
+            "href": "/ru/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "JSON Stringify",
+            "description": "Форматируйте и валидируйте JSON данные с подсветкой синтаксиса",
+            "href": "/ru/tools/json-stringify"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Анализируйте статистику текста и количество символов",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Конвертер CSV в JSON",
+            "description": "Конвертируйте между форматами данных CSV и JSON",
+            "href": "/ru/tools/csv-to-json"
+          }
+        ]
+      }
+    }
+  }
+}

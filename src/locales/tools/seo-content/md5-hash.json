@@ -1,0 +1,282 @@
+{
+  "en": {
+    "title": "Free MD5 Hash Generator - Secure Text & File Hash Calculator",
+    "metaDescription": "Generate MD5 hash checksums for text and files instantly. Professional MD5 hash calculator with multiple output formats and real-time hash generation. Free and secure.",
+    "sections": {
+      "intro": {
+        "title": "Free MD5 Hash Generator - Secure Text & File Hash Calculator",
+        "content": "Generate MD5 hash checksums for any text or file content instantly with our professional online calculator. MD5 (Message Digest Algorithm 5) creates a 128-bit hash value that serves as a digital fingerprint for data integrity verification. Perfect for security applications, file verification, password hashing, and data validation."
+      },
+      "features": {
+        "title": "Advanced MD5 Hash Generation Features",
+        "items": [
+          { "title": "Real-time Hash Generation", "description": "Instant MD5 hash calculation as you type or paste text" },
+          { "title": "Multiple Output Formats", "description": "Get MD5 hashes in lowercase, uppercase, and colon-separated formats" },
+          { "title": "File Upload Support", "description": "Upload text files to generate their MD5 hash checksums" },
+          { "title": "Detailed Analytics", "description": "View input length, hash length, and encoding information" },
+          { "title": "Copy & Download Options", "description": "Easily copy hash results or download detailed reports" },
+          { "title": "UTF-8 Encoding Support", "description": "Properly handles international characters and special symbols" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Security & Data Verification",
+        "description": "Our MD5 hash generator is ideal for various security and verification purposes.",
+        "items": [
+          { "title": "File Integrity Verification", "description": "Verify that files haven't been corrupted or tampered with" },
+          { "title": "Password Hash Generation", "description": "Create secure password hashes for authentication systems" },
+          { "title": "Data Validation", "description": "Ensure data consistency across different systems" },
+          { "title": "Digital Forensics", "description": "Create digital fingerprints for evidence and investigation" },
+          { "title": "Software Distribution", "description": "Provide checksums for software downloads and updates" },
+          { "title": "Database Integrity", "description": "Verify database records and prevent data corruption" },
+          { "title": "Security Auditing", "description": "Generate hashes for security compliance and auditing" },
+          { "title": "Development & Testing", "description": "Compare file versions and validate test data" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the MD5 Hash Generator",
+        "description": "Follow these simple steps to generate MD5 hashes for your text or files quickly and securely.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for hash generation."
+          },
+          {
+            "step": 2,
+            "title": "Instant Hash Generation", 
+            "description": "Watch as your MD5 hash is automatically calculated in real-time with detailed analytics."
+          },
+          {
+            "step": 3,
+            "title": "View Multiple Formats",
+            "description": "See your MD5 hash in lowercase, uppercase, and colon-separated formats for different use cases."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the hash to your clipboard or download a detailed report for your records."
+          }
+        ]
+      },
+      "examples": {
+        "title": "MD5 Hash Generation Examples",
+        "description": "See how our generator creates MD5 hashes for different types of input text.",
+        "items": [
+          { "title": "Simple Text", "input": "hello", "output": "5d41402abc4b2a76b9719d911017c592" },
+          { "title": "Password Example", "input": "myPassword123", "output": "34819d7beeabb9260a5c854bc85b3e44" },
+          { "title": "Numbers Only", "input": "123456789", "output": "25f9e794323b453885f5181f1b624d0b" },
+          { "title": "Special Characters", "input": "Hello, World!", "output": "65a8e27d8879283831b664bd8b7f0ad4" },
+          { "title": "Unicode Text", "input": "héllo wörld", "output": "bef4a3e50b30c980d50632e5deb47b9e" },
+          { "title": "Empty String", "input": "", "output": "d41d8cd98f00b204e9800998ecf8427e" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our MD5 Hash Generator",
+        "content": "Professional MD5 hash generation with advanced features and security-focused design.",
+        "items": [
+          "Completely free and unlimited hash generation",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Multiple output formats for different needs",
+          "Real-time generation with instant results",
+          "Detailed analytics and hash information",
+          "File upload and download capabilities",
+          "Mobile-responsive design for all devices",
+          "UTF-8 encoding support for international text",
+          "Professional-grade hash calculation accuracy"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is MD5 and how does it work?",
+          "answer": "MD5 (Message Digest Algorithm 5) is a cryptographic hash function that produces a 128-bit (32-character hexadecimal) hash value from any input. It's designed to be a one-way function, meaning you can't reverse the hash to get the original input."
+        },
+        {
+          "question": "Is MD5 secure for password storage?",
+          "answer": "MD5 is not recommended for password storage due to vulnerability to rainbow table attacks. For passwords, use stronger algorithms like bcrypt, Argon2, or PBKDF2 with salt."
+        },
+        {
+          "question": "Can two different inputs have the same MD5 hash?",
+          "answer": "While theoretically possible (called a collision), it's extremely rare in practice. MD5 collisions have been found in research but are not a concern for most practical applications like file verification."
+        },
+        {
+          "question": "What's the difference between the output formats?",
+          "answer": "Our tool provides lowercase (standard), uppercase, and colon-separated formats. Choose the format that matches your system's requirements or personal preference."
+        },
+        {
+          "question": "Is my data stored or transmitted to servers?",
+          "answer": "No, all MD5 hash generation happens locally in your browser. Your input text is never sent to our servers, stored, or shared with third parties."
+        },
+        {
+          "question": "Can I verify file integrity with MD5?",
+          "answer": "Yes, MD5 is commonly used for file integrity verification. Generate an MD5 hash of a file, then later recalculate it to ensure the file hasn't been corrupted or modified."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Security & Hash Tools",
+        "items": [
+          {
+            "name": "SHA-256 Hash Generator",
+            "description": "Generate secure SHA-256 hashes for enhanced security",
+            "href": "/tools/sha256-hash"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode text using Base64 encoding",
+            "href": "/tools/base64-encoder"
+          },
+          {
+            "name": "Password Generator",
+            "description": "Create strong, secure passwords for better security",
+            "href": "/tools/password-generator"
+          },
+          {
+            "name": "UUID Generator",
+            "description": "Generate unique identifiers for applications and databases",
+            "href": "/tools/uuid-generator"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор MD5 Хеш - Безопасный Калькулятор Хеш Текста и Файлов",
+    "metaDescription": "Мгновенно генерируйте MD5 хеш-суммы для текста и файлов. Профессиональный MD5 хеш калькулятор с множественными форматами вывода и генерацией хеша в реальном времени.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор MD5 Хеш - Безопасный Калькулятор Хеш Текста и Файлов",
+        "content": "Мгновенно генерируйте MD5 хеш-суммы для любого текста или содержимого файла с помощью нашего профессионального онлайн калькулятора. MD5 (Message Digest Algorithm 5) создает 128-битное хеш-значение, которое служит цифровым отпечатком для проверки целостности данных. Идеально для приложений безопасности, проверки файлов, хеширования паролей и валидации данных."
+      },
+      "features": {
+        "title": "Продвинутые Функции Генерации MD5 Хеша",
+        "items": [
+          { "title": "Генерация хеша в реальном времени", "description": "Мгновенный расчет MD5 хеша при наборе или вставке текста" },
+          { "title": "Множественные форматы вывода", "description": "Получайте MD5 хеши в нижнем регистре, верхнем регистре и с разделителями-двоеточиями" },
+          { "title": "Поддержка загрузки файлов", "description": "Загружайте текстовые файлы для генерации их MD5 хеш-сумм" },
+          { "title": "Детальная аналитика", "description": "Просматривайте длину входных данных, длину хеша и информацию о кодировке" },
+          { "title": "Опции копирования и загрузки", "description": "Легко копируйте результаты хеша или загружайте детальные отчеты" },
+          { "title": "Поддержка кодировки UTF-8", "description": "Правильно обрабатывает международные символы и специальные знаки" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Безопасности и Проверки Данных",
+        "description": "Наш генератор MD5 хеша идеален для различных целей безопасности и проверки.",
+        "items": [
+          { "title": "Проверка целостности файлов", "description": "Убедитесь, что файлы не были повреждены или изменены" },
+          { "title": "Генерация хеша паролей", "description": "Создавайте безопасные хеши паролей для систем аутентификации" },
+          { "title": "Валидация данных", "description": "Обеспечьте согласованность данных между различными системами" },
+          { "title": "Цифровая криминалистика", "description": "Создавайте цифровые отпечатки для доказательств и расследований" },
+          { "title": "Распространение программного обеспечения", "description": "Предоставляйте контрольные суммы для загрузок и обновлений ПО" },
+          { "title": "Целостность базы данных", "description": "Проверяйте записи базы данных и предотвращайте повреждение данных" },
+          { "title": "Аудит безопасности", "description": "Генерируйте хеши для соответствия требованиям безопасности и аудита" },
+          { "title": "Разработка и тестирование", "description": "Сравнивайте версии файлов и валидируйте тестовые данные" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор MD5 Хеша",
+        "description": "Следуйте этим простым шагам для быстрой и безопасной генерации MD5 хешей для вашего текста или файлов.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для генерации хеша."
+          },
+          {
+            "step": 2,
+            "title": "Мгновенная Генерация Хеша",
+            "description": "Наблюдайте, как ваш MD5 хеш автоматически рассчитывается в реальном времени с детальной аналитикой."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Множественные Форматы",
+            "description": "Посмотрите ваш MD5 хеш в нижнем регистре, верхнем регистре и с разделителями-двоеточиями для разных случаев использования."
+          },
+          {
+            "step": 4,
+            "title": "Копируйте или Скачайте",
+            "description": "Скопируйте хеш в буфер обмена или скачайте детальный отчет для ваших записей."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации MD5 Хеша",
+        "description": "Посмотрите, как наш генератор создает MD5 хеши для различных типов входного текста.",
+        "items": [
+          { "title": "Простой текст", "input": "hello", "output": "5d41402abc4b2a76b9719d911017c592" },
+          { "title": "Пример пароля", "input": "myPassword123", "output": "34819d7beeabb9260a5c854bc85b3e44" },
+          { "title": "Только цифры", "input": "123456789", "output": "25f9e794323b453885f5181f1b624d0b" },
+          { "title": "Специальные символы", "input": "Hello, World!", "output": "65a8e27d8879283831b664bd8b7f0ad4" },
+          { "title": "Unicode текст", "input": "héllo wörld", "output": "bef4a3e50b30c980d50632e5deb47b9e" },
+          { "title": "Пустая строка", "input": "", "output": "d41d8cd98f00b204e9800998ecf8427e" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Генератор MD5 Хеша",
+        "content": "Профессиональная генерация MD5 хеша с продвинутыми функциями и дизайном, ориентированным на безопасность.",
+        "items": [
+          "Полностью бесплатная и неограниченная генерация хеша",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Множественные форматы вывода для разных потребностей",
+          "Генерация в реальном времени с мгновенными результатами",
+          "Детальная аналитика и информация о хеше",
+          "Возможности загрузки и скачивания файлов",
+          "Адаптивный дизайн для всех устройств",
+          "Поддержка кодировки UTF-8 для международного текста",
+          "Профессиональная точность расчета хеша"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое MD5 и как он работает?",
+          "answer": "MD5 (Message Digest Algorithm 5) - это криптографическая хеш-функция, которая производит 128-битное (32-символьное шестнадцатеричное) хеш-значение из любого входа. Это односторонняя функция, что означает, что вы не можете обратить хеш, чтобы получить оригинальный ввод."
+        },
+        {
+          "question": "Безопасен ли MD5 для хранения паролей?",
+          "answer": "MD5 не рекомендуется для хранения паролей из-за уязвимости к атакам радужных таблиц. Для паролей используйте более сильные алгоритмы, такие как bcrypt, Argon2 или PBKDF2 с солью."
+        },
+        {
+          "question": "Могут ли два разных входа иметь одинаковый MD5 хеш?",
+          "answer": "Хотя теоретически возможно (называется коллизией), это крайне редко на практике. Коллизии MD5 были обнаружены в исследованиях, но не являются проблемой для большинства практических применений, таких как проверка файлов."
+        },
+        {
+          "question": "В чем разница между форматами вывода?",
+          "answer": "Наш инструмент предоставляет форматы в нижнем регистре (стандартный), верхнем регистре и с разделителями-двоеточиями. Выберите формат, который соответствует требованиям вашей системы или личным предпочтениям."
+        },
+        {
+          "question": "Сохраняются ли мои данные или передаются на серверы?",
+          "answer": "Нет, вся генерация MD5 хеша происходит локально в вашем браузере. Ваш входной текст никогда не отправляется на наши серверы, не сохраняется и не передается третьим лицам."
+        },
+        {
+          "question": "Могу ли я проверить целостность файла с помощью MD5?",
+          "answer": "Да, MD5 обычно используется для проверки целостности файлов. Сгенерируйте MD5 хеш файла, затем позже пересчитайте его, чтобы убедиться, что файл не был поврежден или изменен."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Безопасности и Хеширования",
+        "items": [
+          {
+            "name": "Генератор SHA-256 Хеша",
+            "description": "Генерируйте безопасные SHA-256 хеши для повышенной безопасности",
+            "href": "/tools/sha256-hash"
+          },
+          {
+            "name": "Кодировщик/Декодировщик Base64",
+            "description": "Кодируйте и декодируйте текст, используя кодировку Base64",
+            "href": "/tools/base64-encoder"
+          },
+          {
+            "name": "Генератор Паролей",
+            "description": "Создавайте сильные, безопасные пароли для лучшей безопасности",
+            "href": "/tools/password-generator"
+          },
+          {
+            "name": "Генератор UUID",
+            "description": "Генерируйте уникальные идентификаторы для приложений и баз данных",
+            "href": "/tools/uuid-generator"
+          }
+        ]
+      }
+    }
+  }
+}

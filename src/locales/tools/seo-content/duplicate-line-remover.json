@@ -1,0 +1,164 @@
+{
+  "en": {
+    "title": "Free Duplicate Line Remover - Clean Text Tool",
+    "metaDescription": "Remove duplicate lines from text instantly with advanced options. Case sensitive, trim lines, keep first/last, and preserve order. Perfect for data cleaning and text processing.",
+    "sections": {
+      "intro": {
+        "title": "Free Duplicate Line Remover - Clean Text Tool",
+        "content": "Remove duplicate lines from your text with powerful options including case sensitivity, line trimming, and order preservation. Perfect for cleaning data, removing duplicates, and text processing with detailed analytics."
+      },
+      "features": {
+        "title": "Powerful Duplicate Line Removal Features",
+        "items": [
+          { "title": "Advanced Options", "description": "Case sensitive comparison, line trimming, and order preservation" },
+          { "title": "Flexible Processing", "description": "Keep first or last occurrence of duplicate lines" },
+          { "title": "Real-time Analytics", "description": "Detailed statistics showing original, unique, and removed lines" },
+          { "title": "File Upload Support", "description": "Process entire text files with duplicate line removal" },
+          { "title": "Copy & Download", "description": "Easily copy results or download cleaned text files" },
+          { "title": "Privacy-First", "description": "All processing happens locally in your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Duplicate Line Removal",
+        "description": "Common scenarios where duplicate line removal is essential.",
+        "items": [
+          { "title": "Data Cleaning", "description": "Clean datasets by removing duplicate entries and redundant information." },
+          { "title": "Log File Processing", "description": "Remove duplicate log entries to reduce file size and improve readability." },
+          { "title": "Text Processing", "description": "Clean copied text from documents, websites, or databases." },
+          { "title": "Code Deduplication", "description": "Remove duplicate lines in code files, configuration files, or scripts." },
+          { "title": "List Management", "description": "Clean email lists, contact lists, or any text-based lists." },
+          { "title": "Content Organization", "description": "Organize and clean content by removing duplicate paragraphs or sections." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Remove Duplicate Lines",
+        "description": "Follow these simple steps to clean your text.",
+        "steps": [
+          { "step": 1, "title": "Enter Your Text", "description": "Paste your text or upload a file containing duplicate lines." },
+          { "step": 2, "title": "Configure Options", "description": "Choose case sensitivity, line trimming, and whether to keep first or last occurrence." },
+          { "step": 3, "title": "Review Analytics", "description": "Check the detailed statistics showing original, unique, and removed line counts." },
+          { "step": 4, "title": "Copy or Download", "description": "Copy the cleaned text or download it as a file for further use." }
+        ]
+      },
+      "examples": {
+        "title": "Duplicate Line Removal Examples",
+        "description": "See how different types of text are cleaned.",
+        "items": [
+          { "title": "Simple List", "input": "Apple\nBanana\nApple\nOrange\nBanana", "output": "Apple\nBanana\nOrange" },
+          { "title": "Case Sensitive", "input": "Hello\nhello\nHELLO", "output": "Hello\nhello\nHELLO" },
+          { "title": "With Whitespace", "input": "  Line 1  \nLine 1\n  Line 2  ", "output": "  Line 1  \n  Line 2  " }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Duplicate Line Remover",
+        "content": "Professional duplicate line removal with comprehensive analytics and flexible options.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Advanced options for precise control",
+          "Real-time analytics and statistics",
+          "Support for large text files",
+          "Mobile-optimized responsive design",
+          "Works with all text formats and languages"
+        ]
+      },
+      "faqs": [
+        { "question": "What is duplicate line removal?", "answer": "Duplicate line removal is the process of identifying and removing repeated lines from text, keeping only unique entries." },
+        { "question": "What's the difference between case sensitive and case insensitive?", "answer": "Case sensitive treats 'Hello' and 'hello' as different lines, while case insensitive treats them as the same." },
+        { "question": "Can I process large files?", "answer": "Yes, our tool can handle large text files efficiently with real-time processing and detailed analytics." },
+        { "question": "Is my data private?", "answer": "Yes, all text processing happens locally in your browser. Your data is never uploaded to our servers." }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          { "name": "Text Counter", "description": "Analyze text statistics including lines, words, and characters", "href": "/tools/text-counter" },
+          { "name": "Remove Line Breaks", "description": "Remove unwanted line breaks from text", "href": "/tools/remove-line-breaks" },
+          { "name": "Text Replace", "description": "Find and replace text with advanced options", "href": "/tools/text-replace" },
+          { "name": "Word Frequency Analyzer", "description": "Analyze word frequency and find common words", "href": "/tools/word-frequency" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Удалятель Дубликатов Строк - Инструмент Очистки Текста",
+    "metaDescription": "Удаляйте дубликаты строк из текста мгновенно с расширенными опциями. Учитывание регистра, обрезка строк, сохранение первого/последнего. Идеально для очистки данных и обработки текста.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Удалятель Дубликатов Строк - Инструмент Очистки Текста",
+        "content": "Удаляйте дубликаты строк из вашего текста с мощными опциями, включая учет регистра, обрезку строк и сохранение порядка. Идеально для очистки данных, удаления дубликатов и обработки текста с подробной аналитикой."
+      },
+      "features": {
+        "title": "Мощные Возможности Удаления Дубликатов",
+        "items": [
+          { "title": "Расширенные Опции", "description": "Учет регистра, обрезка строк и сохранение порядка" },
+          { "title": "Гибкая Обработка", "description": "Сохраняйте первое или последнее вхождение дубликатов" },
+          { "title": "Аналитика в Реальном Времени", "description": "Подробная статистика исходных, уникальных и удаленных строк" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Обрабатывайте целые текстовые файлы с удалением дубликатов" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте очищенные файлы" },
+          { "title": "Конфиденциальность", "description": "Вся обработка происходит локально в вашем браузере" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Удаления Дубликатов",
+        "description": "Распространенные случаи, где удаление дубликатов строк необходимо.",
+        "items": [
+          { "title": "Очистка Данных", "description": "Очищайте наборы данных, удаляя дубликаты и избыточную информацию." },
+          { "title": "Обработка Логов", "description": "Удаляйте дубликаты записей логов для уменьшения размера файла." },
+          { "title": "Обработка Текста", "description": "Очищайте скопированный текст из документов, веб-сайтов или баз данных." },
+          { "title": "Дедупликация Кода", "description": "Удаляйте дубликаты строк в файлах кода, конфигурации или скриптах." },
+          { "title": "Управление Списками", "description": "Очищайте списки email, контактов или любые текстовые списки." },
+          { "title": "Организация Контента", "description": "Организуйте и очищайте контент, удаляя дубликаты абзацев или разделов." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Удалить Дубликаты Строк",
+        "description": "Следуйте этим простым шагам для очистки текста.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Вставьте ваш текст или загрузите файл с дубликатами строк." },
+          { "step": 2, "title": "Настройте Опции", "description": "Выберите учет регистра, обрезку строк и сохранение первого или последнего вхождения." },
+          { "step": 3, "title": "Проверьте Аналитику", "description": "Изучите подробную статистику исходных, уникальных и удаленных строк." },
+          { "step": 4, "title": "Скопируйте или Скачайте", "description": "Скопируйте очищенный текст или скачайте его как файл." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Удаления Дубликатов",
+        "description": "Посмотрите, как очищаются разные типы текста.",
+        "items": [
+          { "title": "Простой Список", "input": "Яблоко\nБанан\nЯблоко\nАпельсин\nБанан", "output": "Яблоко\nБанан\nАпельсин" },
+          { "title": "Учет Регистра", "input": "Привет\nпривет\nПРИВЕТ", "output": "Привет\nпривет\nПРИВЕТ" },
+          { "title": "С Пробелами", "input": "  Строка 1  \nСтрока 1\n  Строка 2  ", "output": "  Строка 1  \n  Строка 2  " }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Выбрать Наш Удалятель Дубликатов",
+        "content": "Профессиональное удаление дубликатов с подробной аналитикой и гибкими опциями.",
+        "items": [
+          "Полностью бесплатно без ограничений",
+          "Регистрация не требуется",
+          "Конфиденциальность - вся обработка локально",
+          "Расширенные опции для точного контроля",
+          "Аналитика и статистика в реальном времени",
+          "Поддержка больших текстовых файлов",
+          "Адаптивный дизайн для мобильных устройств",
+          "Работает со всеми форматами текста и языками"
+        ]
+      },
+      "faqs": [
+        { "question": "Что такое удаление дубликатов строк?", "answer": "Удаление дубликатов строк - это процесс поиска и удаления повторяющихся строк из текста, оставляя только уникальные записи." },
+        { "question": "В чем разница между учетом и игнорированием регистра?", "answer": "Учет регистра рассматривает 'Привет' и 'привет' как разные строки, а игнорирование регистра - как одинаковые." },
+        { "question": "Можно ли обрабатывать большие файлы?", "answer": "Да, наш инструмент эффективно обрабатывает большие текстовые файлы с аналитикой в реальном времени." },
+        { "question": "Данные приватны?", "answer": "Да, вся обработка текста происходит локально в вашем браузере. Ваши данные никогда не загружаются на наши серверы." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          { "name": "Счетчик Текста", "description": "Анализируйте статистику текста включая строки, слова и символы", "href": "/ru/tools/text-counter" },
+          { "name": "Удалить Переводы Строк", "description": "Удаляйте нежелательные переводы строк из текста", "href": "/ru/tools/remove-line-breaks" },
+          { "name": "Найти и Заменить", "description": "Находите и заменяйте текст с расширенными опциями", "href": "/ru/tools/text-replace" },
+          { "name": "Анализатор Частоты Слов", "description": "Анализируйте частоту слов и находите распространенные слова", "href": "/ru/tools/word-frequency" }
+        ]
+      }
+    }
+  }
+}

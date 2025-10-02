@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free Online Image Cropper - Crop, Resize & Edit Images",
+    "metaDescription": "Crop and resize images online for free. Professional image cropper with aspect ratio presets, quality control, and instant preview. Perfect for social media, web design, and photo editing.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Image Cropper - Crop, Resize & Edit Images",
+        "content": "Crop, resize, and optimize your images with precision using our professional online image cropper. Features multiple aspect ratio presets, quality control, format conversion, and real-time preview. Perfect for social media posts, web design, profile pictures, and professional photo editing. No software installation required - crop images directly in your browser."
+      },
+      "features": {
+        "title": "Advanced Image Cropping Features",
+        "items": [
+          {
+            "title": "Precision Cropping",
+            "description": "Interactive crop tool with drag-and-drop functionality, visual guides, and pixel-perfect precision for professional results."
+          },
+          {
+            "title": "Aspect Ratio Presets",
+            "description": "Pre-configured aspect ratios for social media (1:1, 16:9, 4:3), photography (3:2, 5:4), and custom free-form cropping."
+          },
+          {
+            "title": "Format Conversion",
+            "description": "Convert between PNG, JPEG, and WebP formats with customizable quality settings for optimal file size and image quality."
+          },
+          {
+            "title": "Real-time Preview",
+            "description": "Instant preview of cropped results with zoom controls and detailed analytics showing file size and dimension changes."
+          },
+          {
+            "title": "Rotation & Enhancement",
+            "description": "Rotate images in 90-degree increments and customize background colors for transparent areas in your cropped images."
+          },
+          {
+            "title": "Batch Processing Ready",
+            "description": "Efficient workflow for processing multiple images with consistent settings and professional-quality output."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for Image Cropping",
+        "description": "Professional image cropping for various digital media and design applications.",
+        "items": [
+          {
+            "title": "Social Media Content",
+            "description": "Create perfectly sized images for Instagram posts, Facebook covers, Twitter headers, and LinkedIn profile pictures."
+          },
+          {
+            "title": "Web Design & Development",
+            "description": "Optimize images for websites, blogs, and web applications with precise dimensions and optimized file sizes."
+          },
+          {
+            "title": "E-commerce Product Photos",
+            "description": "Crop product images to consistent dimensions for online stores, marketplaces, and catalog presentations."
+          },
+          {
+            "title": "Profile Pictures & Avatars",
+            "description": "Create professional profile pictures and avatars with perfect square cropping for various platforms and applications."
+          },
+          {
+            "title": "Print & Marketing Materials",
+            "description": "Prepare images for brochures, flyers, business cards, and other marketing materials with specific aspect ratios."
+          },
+          {
+            "title": "Photo Enhancement",
+            "description": "Remove unwanted elements, focus on subjects, and improve composition by cropping to highlight key areas."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image Cropper",
+        "description": "Follow these simple steps to crop and optimize your images professionally.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Upload Your Image",
+            "description": "Click to select or drag and drop your image file. Supports JPG, PNG, and WebP formats up to 10MB."
+          },
+          {
+            "step": 2,
+            "title": "Set Crop Area",
+            "description": "Drag the crop handles to select your desired area. Choose from preset aspect ratios or use free-form cropping."
+          },
+          {
+            "step": 3,
+            "title": "Configure Settings",
+            "description": "Adjust output format, quality, dimensions, and background color in the options panel for optimal results."
+          },
+          {
+            "step": 4,
+            "title": "Download Result",
+            "description": "Preview your cropped image with real-time analytics, then download or copy to clipboard for immediate use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Image Cropping Examples",
+        "description": "See how different cropping techniques can transform your images for various purposes.",
+        "items": [
+          {
+            "title": "Social Media Square",
+            "input": "Landscape photo 1920×1080",
+            "output": "Square crop 1080×1080 for Instagram"
+          },
+          {
+            "title": "Profile Picture",
+            "input": "Portrait photo 2000×3000",
+            "output": "Circular crop 500×500 for avatars"
+          },
+          {
+            "title": "Web Banner",
+            "input": "Wide photo 3000×2000",
+            "output": "Banner crop 1200×400 for websites"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Image Cropper",
+        "content": "Professional-grade image cropping with advanced features and intuitive interface for all skill levels.",
+        "items": [
+          "Interactive drag-and-drop cropping interface",
+          "Multiple aspect ratio presets for different platforms",
+          "Real-time preview with zoom and pan controls",
+          "Format conversion with quality optimization",
+          "Detailed analytics showing size and compression data",
+          "Rotation tools for perfect image orientation",
+          "Custom background colors for transparent areas",
+          "Privacy-focused - all processing happens locally"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What image formats are supported?",
+          "answer": "Our image cropper supports JPG/JPEG, PNG, and WebP formats for both input and output. You can upload images up to 10MB in size and convert between formats during the cropping process."
+        },
+        {
+          "question": "How do I crop images for social media?",
+          "answer": "Use our preset aspect ratios: 1:1 for Instagram posts, 16:9 for YouTube thumbnails, 4:3 for Facebook posts, and 5:4 for Pinterest pins. These presets ensure your images display perfectly on each platform."
+        },
+        {
+          "question": "Can I maintain image quality while cropping?",
+          "answer": "Yes! Our cropper offers quality settings from Low to Max. For best results, use 'High' or 'Max' quality settings. PNG format preserves the highest quality, while JPEG offers smaller file sizes with adjustable compression."
+        },
+        {
+          "question": "What's the difference between the output formats?",
+          "answer": "PNG offers lossless compression and transparency support, ideal for graphics and logos. JPEG provides smaller file sizes with adjustable quality, perfect for photos. WebP offers the best compression with high quality, supported by modern browsers."
+        },
+        {
+          "question": "How does the crop reduction percentage work?",
+          "answer": "Crop reduction shows how much of the original image area was removed during cropping. Higher percentages indicate more aggressive cropping, which can help focus attention on specific subjects or fit specific dimensions."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Image Tools",
+        "items": [
+          {
+            "name": "Image Resizer",
+            "description": "Resize images to specific dimensions while maintaining quality",
+            "href": "/tools/image-resizer"
+          },
+          {
+            "name": "JPG to PNG Converter",
+            "description": "Convert JPEG images to PNG format with transparency support",
+            "href": "/tools/jpg-to-png"
+          },
+          {
+            "name": "PNG to JPG Converter",
+            "description": "Convert PNG images to JPEG format for smaller file sizes",
+            "href": "/tools/png-to-jpg"
+          },
+          {
+            "name": "WebP Converter",
+            "description": "Convert images to WebP format for optimal web performance",
+            "href": "/tools/jpg-to-webp"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Обрезчик Изображений - Обрезка, Изменение Размера и Редактирование",
+    "metaDescription": "Обрезайте и изменяйте размер изображений онлайн бесплатно. Профессиональный обрезчик изображений с предустановками соотношения сторон, контролем качества и мгновенным предварительным просмотром.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Обрезчик Изображений - Обрезка, Изменение Размера и Редактирование",
+        "content": "Обрезайте, изменяйте размер и оптимизируйте ваши изображения с точностью, используя наш профессиональный онлайн обрезчик изображений. Включает множественные предустановки соотношения сторон, контроль качества, конвертацию форматов и предварительный просмотр в реальном времени. Идеально для постов в социальных сетях, веб-дизайна, фотографий профиля и профессионального редактирования фото."
+      },
+      "features": {
+        "title": "Расширенные Возможности Обрезки Изображений",
+        "items": [
+          {
+            "title": "Точная Обрезка",
+            "description": "Интерактивный инструмент обрезки с функциональностью перетаскивания, визуальными направляющими и пиксельной точностью для профессиональных результатов."
+          },
+          {
+            "title": "Предустановки Соотношения Сторон",
+            "description": "Предварительно настроенные соотношения сторон для социальных сетей (1:1, 16:9, 4:3), фотографии (3:2, 5:4) и пользовательской свободной обрезки."
+          },
+          {
+            "title": "Конвертация Форматов",
+            "description": "Конвертируйте между форматами PNG, JPEG и WebP с настраиваемыми настройками качества для оптимального размера файла и качества изображения."
+          },
+          {
+            "title": "Предварительный Просмотр в Реальном Времени",
+            "description": "Мгновенный предварительный просмотр обрезанных результатов с элементами управления масштабированием и подробной аналитикой, показывающей изменения размера файла и размеров."
+          },
+          {
+            "title": "Поворот и Улучшение",
+            "description": "Поворачивайте изображения с шагом в 90 градусов и настраивайте цвета фона для прозрачных областей в ваших обрезанных изображениях."
+          },
+          {
+            "title": "Готовность к Пакетной Обработке",
+            "description": "Эффективный рабочий процесс для обработки множественных изображений с последовательными настройками и профессиональным качеством вывода."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения Обрезки Изображений",
+        "description": "Профессиональная обрезка изображений для различных цифровых медиа и дизайнерских приложений.",
+        "items": [
+          {
+            "title": "Контент для Социальных Сетей",
+            "description": "Создавайте изображения идеального размера для постов Instagram, обложек Facebook, заголовков Twitter и фотографий профиля LinkedIn."
+          },
+          {
+            "title": "Веб-Дизайн и Разработка",
+            "description": "Оптимизируйте изображения для веб-сайтов, блогов и веб-приложений с точными размерами и оптимизированными размерами файлов."
+          },
+          {
+            "title": "Фотографии Товаров для Электронной Коммерции",
+            "description": "Обрезайте фотографии товаров до последовательных размеров для онлайн-магазинов, маркетплейсов и каталожных презентаций."
+          },
+          {
+            "title": "Фотографии Профиля и Аватары",
+            "description": "Создавайте профессиональные фотографии профиля и аватары с идеальной квадратной обрезкой для различных платформ и приложений."
+          },
+          {
+            "title": "Печатные и Маркетинговые Материалы",
+            "description": "Подготавливайте изображения для брошюр, флаеров, визитных карточек и других маркетинговых материалов с определенными соотношениями сторон."
+          },
+          {
+            "title": "Улучшение Фотографий",
+            "description": "Удаляйте нежелательные элементы, фокусируйтесь на объектах и улучшайте композицию, обрезая для выделения ключевых областей."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Обрезчик Изображений",
+        "description": "Следуйте этим простым шагам для профессиональной обрезки и оптимизации ваших изображений.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Загрузите Ваше Изображение",
+            "description": "Нажмите для выбора или перетащите ваш файл изображения. Поддерживает форматы JPG, PNG и WebP до 10МБ."
+          },
+          {
+            "step": 2,
+            "title": "Установите Область Обрезки",
+            "description": "Перетащите ручки обрезки для выбора желаемой области. Выберите из предустановленных соотношений сторон или используйте свободную обрезку."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Параметры",
+            "description": "Отрегулируйте формат вывода, качество, размеры и цвет фона в панели опций для оптимальных результатов."
+          },
+          {
+            "step": 4,
+            "title": "Скачайте Результат",
+            "description": "Просмотрите ваше обрезанное изображение с аналитикой в реальном времени, затем скачайте или скопируйте в буфер обмена для немедленного использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Обрезки Изображений",
+        "description": "Посмотрите, как различные техники обрезки могут трансформировать ваши изображения для различных целей.",
+        "items": [
+          {
+            "title": "Квадрат для Социальных Сетей",
+            "input": "Пейзажное фото 1920×1080",
+            "output": "Квадратная обрезка 1080×1080 для Instagram"
+          },
+          {
+            "title": "Фотография Профиля",
+            "input": "Портретное фото 2000×3000",
+            "output": "Круглая обрезка 500×500 для аватаров"
+          },
+          {
+            "title": "Веб-Баннер",
+            "input": "Широкое фото 3000×2000",
+            "output": "Обрезка баннера 1200×400 для веб-сайтов"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Обрезчик Изображений",
+        "content": "Профессиональная обрезка изображений с расширенными функциями и интуитивным интерфейсом для всех уровней навыков.",
+        "items": [
+          "Интерактивный интерфейс обрезки с перетаскиванием",
+          "Множественные предустановки соотношения сторон для разных платформ",
+          "Предварительный просмотр в реальном времени с элементами управления масштабированием и панорамированием",
+          "Конвертация форматов с оптимизацией качества",
+          "Подробная аналитика, показывающая данные о размере и сжатии",
+          "Инструменты поворота для идеальной ориентации изображения",
+          "Пользовательские цвета фона для прозрачных областей",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы изображений поддерживаются?",
+          "answer": "Наш обрезчик изображений поддерживает форматы JPG/JPEG, PNG и WebP как для ввода, так и для вывода. Вы можете загружать изображения размером до 10МБ и конвертировать между форматами во время процесса обрезки."
+        },
+        {
+          "question": "Как обрезать изображения для социальных сетей?",
+          "answer": "Используйте наши предустановленные соотношения сторон: 1:1 для постов Instagram, 16:9 для миниатюр YouTube, 4:3 для постов Facebook и 5:4 для пинов Pinterest. Эти предустановки обеспечивают идеальное отображение ваших изображений на каждой платформе."
+        },
+        {
+          "question": "Могу ли я сохранить качество изображения при обрезке?",
+          "answer": "Да! Наш обрезчик предлагает настройки качества от Низкого до Максимального. Для лучших результатов используйте настройки качества 'Высокое' или 'Максимальное'. Формат PNG сохраняет наивысшее качество, в то время как JPEG предлагает меньшие размеры файлов с регулируемым сжатием."
+        },
+        {
+          "question": "В чем разница между выходными форматами?",
+          "answer": "PNG предлагает сжатие без потерь и поддержку прозрачности, идеально для графики и логотипов. JPEG обеспечивает меньшие размеры файлов с регулируемым качеством, идеально для фотографий. WebP предлагает лучшее сжатие с высоким качеством, поддерживается современными браузерами."
+        },
+        {
+          "question": "Как работает процент уменьшения обрезки?",
+          "answer": "Уменьшение обрезки показывает, сколько от исходной области изображения было удалено во время обрезки. Более высокие проценты указывают на более агрессивную обрезку, что может помочь сфокусировать внимание на определенных объектах или подогнать под определенные размеры."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты для Изображений",
+        "items": [
+          {
+            "name": "Изменение Размера Изображений",
+            "description": "Изменяйте размер изображений до определенных размеров, сохраняя качество",
+            "href": "/ru/tools/image-resizer"
+          },
+          {
+            "name": "Конвертер JPG в PNG",
+            "description": "Конвертируйте изображения JPEG в формат PNG с поддержкой прозрачности",
+            "href": "/ru/tools/jpg-to-png"
+          },
+          {
+            "name": "Конвертер PNG в JPG",
+            "description": "Конвертируйте изображения PNG в формат JPEG для меньших размеров файлов",
+            "href": "/ru/tools/png-to-jpg"
+          },
+          {
+            "name": "Конвертер WebP",
+            "description": "Конвертируйте изображения в формат WebP для оптимальной веб-производительности",
+            "href": "/ru/tools/jpg-to-webp"
+          }
+        ]
+      }
+    }
+  }
+}

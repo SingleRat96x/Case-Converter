@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free Caesar Cipher Encoder/Decoder - ROT13 & Classical Cryptography Tool",
+    "metaDescription": "Encrypt and decrypt text using the classic Caesar cipher. Free online tool with customizable shift values, ROT13 support, and advanced cryptographic analysis features.",
+    "sections": {
+      "intro": {
+        "title": "Free Caesar Cipher Encoder/Decoder - ROT13 & Classical Cryptography Tool",
+        "content": "Encrypt and decrypt text using the classic Caesar cipher with our comprehensive online tool. Features customizable shift values, ROT13 support, preservation options, and detailed cryptographic analysis. Perfect for learning cryptography, secure communication, and historical encryption methods."
+      },
+      "features": {
+        "title": "Advanced Caesar Cipher Features",
+        "items": [
+          {
+            "title": "Bidirectional Encryption",
+            "description": "Encrypt plain text to cipher text and decrypt cipher text back to plain text with instant mode switching."
+          },
+          {
+            "title": "Customizable Shift Values",
+            "description": "Choose any shift value from 1 to 25, including popular variants like ROT13 and classic Caesar (ROT3)."
+          },
+          {
+            "title": "Preservation Options",
+            "description": "Control whether to preserve case, numbers, and symbols during encryption for flexible cipher requirements."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Get detailed statistics including letter counts, shift analysis, and alphabetic percentage for cryptographic insights."
+          },
+          {
+            "title": "Frequency Analysis",
+            "description": "Advanced letter frequency analysis for decode mode to help with cryptanalysis and cipher breaking."
+          },
+          {
+            "title": "Quick Actions",
+            "description": "Generate random shift values or reset to classic Caesar cipher settings with one-click convenience."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for Caesar Cipher Encryption",
+        "description": "Caesar cipher remains valuable for education, simple encryption, and understanding cryptographic principles.",
+        "items": [
+          {
+            "title": "Cryptography Education",
+            "description": "Learn fundamental encryption concepts and understand how substitution ciphers work in practice."
+          },
+          {
+            "title": "Simple Message Encryption",
+            "description": "Encrypt messages for puzzles, games, and basic privacy where advanced security isn't required."
+          },
+          {
+            "title": "Historical Research",
+            "description": "Decode historical Caesar cipher messages and understand ancient encryption methods."
+          },
+          {
+            "title": "Programming Practice",
+            "description": "Implement and test Caesar cipher algorithms for coding exercises and computer science education."
+          },
+          {
+            "title": "Puzzle Creation",
+            "description": "Create encrypted puzzles, treasure hunts, and brain teasers for entertainment and education."
+          },
+          {
+            "title": "ROT13 Processing",
+            "description": "Use the popular ROT13 variant for text obfuscation in forums, newsgroups, and online communities."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Caesar Cipher Tool",
+        "description": "Follow these simple steps to encrypt or decrypt text using Caesar cipher.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose Your Mode",
+            "description": "Select whether you want to encrypt plain text or decrypt cipher text using the mode switcher."
+          },
+          {
+            "step": 2,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for processing."
+          },
+          {
+            "step": 3,
+            "title": "Configure Settings",
+            "description": "Adjust the shift value and preservation options in the accordion to customize your cipher."
+          },
+          {
+            "step": 4,
+            "title": "Analyze Results",
+            "description": "Review the encrypted/decrypted text and examine the detailed analytics and frequency analysis."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Caesar Cipher Examples",
+        "description": "See how different shift values and settings affect text encryption.",
+        "items": [
+          {
+            "title": "Classic Caesar (ROT3)",
+            "input": "HELLO WORLD",
+            "output": "KHOOR ZRUOG"
+          },
+          {
+            "title": "ROT13 Encryption",
+            "input": "SECRET MESSAGE",
+            "output": "FRPERG ZRFFNTR"
+          },
+          {
+            "title": "Custom Shift (ROT7)",
+            "input": "CRYPTOGRAPHY",
+            "output": "JYFWAVNYHWOF"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Caesar Cipher Tool",
+        "content": "Professional-grade Caesar cipher implementation with educational features and cryptographic analysis.",
+        "items": [
+          "Instant bidirectional encryption and decryption",
+          "Customizable shift values from 1 to 25",
+          "Advanced preservation options for case, numbers, and symbols",
+          "Real-time cryptographic analytics and statistics",
+          "Letter frequency analysis for cryptanalysis practice",
+          "Educational features for learning classical cryptography",
+          "Privacy-focused - all processing happens locally",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is the Caesar cipher and how does it work?",
+          "answer": "The Caesar cipher is a substitution cipher where each letter is shifted by a fixed number of positions in the alphabet. For example, with a shift of 3, 'A' becomes 'D', 'B' becomes 'E', and so on. It's named after Julius Caesar, who reportedly used it for military communications."
+        },
+        {
+          "question": "What is ROT13 and how is it different?",
+          "answer": "ROT13 is a special case of Caesar cipher with a shift of 13. It's popular because applying ROT13 twice returns the original text (since 13 + 13 = 26, a full alphabet rotation). It's commonly used for text obfuscation in online forums."
+        },
+        {
+          "question": "Can I preserve numbers and symbols during encryption?",
+          "answer": "Yes, our tool offers preservation options for case sensitivity, numbers, and symbols. You can choose to encrypt only letters while leaving other characters unchanged, or apply the cipher to all characters."
+        },
+        {
+          "question": "How secure is the Caesar cipher?",
+          "answer": "The Caesar cipher is not secure by modern standards and can be easily broken with frequency analysis or brute force (only 25 possible keys). It's primarily used for educational purposes and simple obfuscation rather than serious security."
+        },
+        {
+          "question": "What is frequency analysis and how does it help?",
+          "answer": "Frequency analysis examines how often each letter appears in the cipher text. Since letter frequencies are consistent in languages (e.g., 'E' is most common in English), this analysis can help identify the shift value and break the cipher."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Cryptography & Encoding Tools",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode text using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary code and decode binary to text",
+            "href": "/tools/binary-code-translator"
+          },
+          {
+            "name": "Morse Code Translator",
+            "description": "Convert text to Morse code with audio playback",
+            "href": "/tools/morse-code"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Analyze text statistics and character frequencies",
+            "href": "/tools/text-counter"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Кодировщик/Декодировщик Шифра Цезаря - ROT13 и Классическая Криптография",
+    "metaDescription": "Шифруйте и расшифровывайте текст используя классический шифр Цезаря. Бесплатный онлайн инструмент с настраиваемыми значениями сдвига, поддержкой ROT13 и расширенными функциями криптографического анализа.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Кодировщик/Декодировщик Шифра Цезаря - ROT13 и Классическая Криптография",
+        "content": "Шифруйте и расшифровывайте текст используя классический шифр Цезаря с нашим комплексным онлайн инструментом. Включает настраиваемые значения сдвига, поддержку ROT13, опции сохранения и подробный криптографический анализ. Идеально для изучения криптографии, безопасной связи и исторических методов шифрования."
+      },
+      "features": {
+        "title": "Расширенные Возможности Шифра Цезаря",
+        "items": [
+          {
+            "title": "Двунаправленное Шифрование",
+            "description": "Шифруйте обычный текст в шифртекст и расшифровывайте шифртекст обратно в обычный текст с мгновенным переключением режимов."
+          },
+          {
+            "title": "Настраиваемые Значения Сдвига",
+            "description": "Выбирайте любое значение сдвига от 1 до 25, включая популярные варианты как ROT13 и классический Цезарь (ROT3)."
+          },
+          {
+            "title": "Опции Сохранения",
+            "description": "Контролируйте, сохранять ли регистр, числа и символы во время шифрования для гибких требований шифра."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Получайте подробную статистику, включая количество букв, анализ сдвига и процент алфавитных символов для криптографических инсайтов."
+          },
+          {
+            "title": "Частотный Анализ",
+            "description": "Расширенный частотный анализ букв для режима расшифровки для помощи с криптоанализом и взломом шифра."
+          },
+          {
+            "title": "Быстрые Действия",
+            "description": "Генерируйте случайные значения сдвига или сбрасывайте к настройкам классического шифра Цезаря одним кликом."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения Шифрования Цезаря",
+        "description": "Шифр Цезаря остается ценным для образования, простого шифрования и понимания криптографических принципов.",
+        "items": [
+          {
+            "title": "Образование в Криптографии",
+            "description": "Изучайте фундаментальные концепции шифрования и понимайте, как работают шифры замещения на практике."
+          },
+          {
+            "title": "Простое Шифрование Сообщений",
+            "description": "Шифруйте сообщения для головоломок, игр и базовой приватности, где продвинутая безопасность не требуется."
+          },
+          {
+            "title": "Историческое Исследование",
+            "description": "Расшифровывайте исторические сообщения шифра Цезаря и понимайте древние методы шифрования."
+          },
+          {
+            "title": "Практика Программирования",
+            "description": "Реализуйте и тестируйте алгоритмы шифра Цезаря для упражнений по кодированию и образования в области компьютерных наук."
+          },
+          {
+            "title": "Создание Головоломок",
+            "description": "Создавайте зашифрованные головоломки, поиски сокровищ и интеллектуальные задачи для развлечения и образования."
+          },
+          {
+            "title": "Обработка ROT13",
+            "description": "Используйте популярный вариант ROT13 для обфускации текста на форумах, в группах новостей и онлайн сообществах."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Инструмент Шифра Цезаря",
+        "description": "Следуйте этим простым шагам для шифрования или расшифровки текста используя шифр Цезаря.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Режим",
+            "description": "Выберите, хотите ли вы зашифровать обычный текст или расшифровать шифртекст, используя переключатель режимов."
+          },
+          {
+            "step": 2,
+            "title": "Введите Ваш Текст",
+            "description": "Введите или вставьте ваш текст в область ввода, или загрузите текстовый файл для обработки."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Параметры",
+            "description": "Отрегулируйте значение сдвига и опции сохранения в аккордеоне для настройки вашего шифра."
+          },
+          {
+            "step": 4,
+            "title": "Анализируйте Результаты",
+            "description": "Просмотрите зашифрованный/расшифрованный текст и изучите подробную аналитику и частотный анализ."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Шифра Цезаря",
+        "description": "Посмотрите, как различные значения сдвига и настройки влияют на шифрование текста.",
+        "items": [
+          {
+            "title": "Классический Цезарь (ROT3)",
+            "input": "ПРИВЕТ МИР",
+            "output": "СУЛЕЗХ ПЛУ"
+          },
+          {
+            "title": "Шифрование ROT13",
+            "input": "СЕКРЕТНОЕ СООБЩЕНИЕ",
+            "output": "ФРПЕРГАБР ФББОЩРАВР"
+          },
+          {
+            "title": "Пользовательский Сдвиг (ROT7)",
+            "input": "КРИПТОГРАФИЯ",
+            "output": "ПУЛСХЙНЧЛФЛГ"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент Шифра Цезаря",
+        "content": "Профессиональная реализация шифра Цезаря с образовательными функциями и криптографическим анализом.",
+        "items": [
+          "Мгновенное двунаправленное шифрование и расшифровка",
+          "Настраиваемые значения сдвига от 1 до 25",
+          "Расширенные опции сохранения для регистра, чисел и символов",
+          "Криптографическая аналитика и статистика в реальном времени",
+          "Частотный анализ букв для практики криптоанализа",
+          "Образовательные функции для изучения классической криптографии",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое шифр Цезаря и как он работает?",
+          "answer": "Шифр Цезаря - это шифр замещения, где каждая буква сдвигается на фиксированное количество позиций в алфавите. Например, при сдвиге на 3, 'А' становится 'Г', 'Б' становится 'Д' и так далее. Он назван в честь Юлия Цезаря, который якобы использовал его для военной связи."
+        },
+        {
+          "question": "Что такое ROT13 и чем он отличается?",
+          "answer": "ROT13 - это особый случай шифра Цезаря со сдвигом на 13. Он популярен, потому что применение ROT13 дважды возвращает исходный текст (поскольку 13 + 13 = 26, полный оборот алфавита). Он обычно используется для обфускации текста на онлайн форумах."
+        },
+        {
+          "question": "Могу ли я сохранить числа и символы во время шифрования?",
+          "answer": "Да, наш инструмент предлагает опции сохранения для чувствительности к регистру, чисел и символов. Вы можете выбрать шифрование только букв, оставляя другие символы неизменными, или применить шифр ко всем символам."
+        },
+        {
+          "question": "Насколько безопасен шифр Цезаря?",
+          "answer": "Шифр Цезаря не является безопасным по современным стандартам и может быть легко взломан с помощью частотного анализа или грубой силы (только 25 возможных ключей). Он в основном используется для образовательных целей и простой обфускации, а не для серьезной безопасности."
+        },
+        {
+          "question": "Что такое частотный анализ и как он помогает?",
+          "answer": "Частотный анализ исследует, как часто каждая буква появляется в шифртексте. Поскольку частоты букв постоянны в языках (например, 'О' наиболее распространена в русском), этот анализ может помочь определить значение сдвига и взломать шифр."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Криптографии и Кодирования",
+        "items": [
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте текст используя Base64 кодирование",
+            "href": "/ru/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и декодируйте двоичный код в текст",
+            "href": "/ru/tools/binary-code-translator"
+          },
+          {
+            "name": "Переводчик Азбуки Морзе",
+            "description": "Конвертируйте текст в азбуку Морзе с воспроизведением звука",
+            "href": "/ru/tools/morse-code"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Анализируйте статистику текста и частоты символов",
+            "href": "/ru/tools/text-counter"
+          }
+        ]
+      }
+    }
+  }
+}

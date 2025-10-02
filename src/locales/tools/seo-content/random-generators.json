@@ -1,0 +1,322 @@
+{
+  "en": {
+    "title": "Random Generators - Secure Random Data & Password Generation Tools",
+    "metaDescription": "Professional random generation tools for developers, designers, and security professionals. Generate random numbers, letters, dates, IP addresses, passwords, UUIDs, and more. Cryptographically secure with unlimited free usage.",
+    "sections": {
+      "intro": {
+        "title": "Professional Random Generation Tools",
+        "content": "Generate secure, high-quality random data for development, testing, security, and creative projects with our comprehensive suite of random generation tools. From cryptographically secure passwords and UUIDs to random numbers, dates, and IP addresses, these tools provide developers and professionals with reliable randomness for any use case. All generators use secure algorithms with unlimited free usage."
+      },
+      "features": {
+        "title": "Comprehensive Random Generation Capabilities",
+        "items": [
+          {
+            "title": "Cryptographically Secure",
+            "description": "All generators use crypto.getRandomValues() for true randomness, ensuring unpredictable and secure results"
+          },
+          {
+            "title": "Developer-Optimized",
+            "description": "Generate UUIDs, random IPs, secure passwords, and other development resources with proper formatting"
+          },
+          {
+            "title": "Customizable Parameters",
+            "description": "Control ranges, formats, character sets, lengths, and other parameters for precise random generation"
+          },
+          {
+            "title": "Bulk Generation",
+            "description": "Generate thousands of random values at once for testing, data seeding, and batch operations"
+          },
+          {
+            "title": "Multiple Formats",
+            "description": "Output in various formats including lists, arrays, CSV, and custom separators for different use cases"
+          },
+          {
+            "title": "Validation & Quality",
+            "description": "Built-in validation ensures generated data meets specifications and quality standards"
+          },
+          {
+            "title": "Real-time Generation",
+            "description": "Instant random generation with live preview and immediate copy-to-clipboard functionality"
+          },
+          {
+            "title": "Cross-Platform Support",
+            "description": "Works across all programming languages, frameworks, and development environments"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Available Random Generation Tools",
+        "items": [
+          {
+            "name": "Random Number Generator",
+            "href": "/tools/random-number",
+            "description": "Generate random integers, decimals, and numbers within custom ranges"
+          },
+          {
+            "name": "Random Letter Generator",
+            "href": "/tools/random-letter", 
+            "description": "Generate random letters, alphabets, and character sequences"
+          },
+          {
+            "name": "Random Date Generator",
+            "href": "/tools/random-date",
+            "description": "Generate random dates within specified ranges and formats"
+          },
+          {
+            "name": "Random Month Generator",
+            "href": "/tools/random-month",
+            "description": "Generate random months with full names, abbreviations, and numbers"
+          },
+          {
+            "name": "Random IP Generator",
+            "href": "/tools/random-ip",
+            "description": "Generate random IPv4 and IPv6 addresses for network testing"
+          },
+          {
+            "name": "Random Choice Picker",
+            "href": "/tools/random-choice",
+            "description": "Pick random selections from custom lists for decision making"
+          },
+          {
+            "name": "Secure Password Generator",
+            "href": "/tools/password-generator",
+            "description": "Generate cryptographically secure passwords with custom requirements"
+          },
+          {
+            "name": "UUID Generator",
+            "href": "/tools/uuid-generator",
+            "description": "Generate unique identifiers v1 and v4 for applications and databases"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Random Generators",
+        "items": [
+          {
+            "title": "Software Development",
+            "description": "Generate test data, mock APIs, database seeds, unique identifiers, and development resources"
+          },
+          {
+            "title": "Security & Authentication",
+            "description": "Create secure passwords, tokens, salts, nonces, and other cryptographic materials"
+          },
+          {
+            "title": "Testing & QA",
+            "description": "Generate test datasets, random inputs, stress test data, and edge case scenarios"
+          },
+          {
+            "title": "Game Development",
+            "description": "Create random levels, characters, events, loot, and procedural content generation"
+          },
+          {
+            "title": "Data Science & Analytics",
+            "description": "Generate sample datasets, random sampling, statistical analysis, and data modeling"
+          },
+          {
+            "title": "Network Administration",
+            "description": "Create IP ranges, network testing, configuration examples, and simulation data"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Random Generation Tools",
+        "items": [
+          "Complete suite of 8+ random generation tools covering all common development needs",
+          "Cryptographically secure algorithms using crypto.getRandomValues() for true randomness",
+          "Customizable parameters with ranges, formats, character sets, and output options",
+          "Bulk generation capabilities for creating thousands of random values efficiently",
+          "Real-time processing with instant preview and immediate results display",
+          "Developer-friendly features including multiple output formats and API-ready data",
+          "Copy-to-clipboard and download functionality for seamless workflow integration",
+          "Mobile-optimized interface that works perfectly across all devices and platforms",
+          "Completely free with unlimited usage and no registration or rate limits required"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Related Tool Categories",
+        "items": [
+          {
+            "name": "Code & Data Translation",
+            "href": "/category/code-data-translation",
+            "description": "Convert between formats, encode data, and process various file types"
+          },
+          {
+            "name": "Text Modification & Formatting",
+            "href": "/category/text-modification-formatting",
+            "description": "Format, style, and transform text content with various tools"
+          },
+          {
+            "name": "Analysis & Counter Tools", 
+            "href": "/category/text-analysis",
+            "description": "Analyze and count text content, words, characters, and statistics"
+          },
+          {
+            "name": "Image Tools",
+            "href": "/category/image-tools",
+            "description": "Process, convert, and manipulate images for web development"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Генераторы Случайных Данных - Безопасная Генерация Паролей и Данных",
+    "metaDescription": "Профессиональные инструменты генерации случайных данных для разработчиков, дизайнеров и специалистов по безопасности. Генерируйте случайные числа, буквы, даты, IP адреса, пароли, UUID и многое другое.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональные Инструменты Генерации Случайных Данных",
+        "content": "Генерируйте безопасные, высококачественные случайные данные для разработки, тестирования, безопасности и творческих проектов с нашим комплексным набором инструментов генерации случайных данных. От криптографически безопасных паролей и UUID до случайных чисел, дат и IP адресов, эти инструменты предоставляют разработчикам и профессионалам надежную случайность."
+      },
+      "features": {
+        "title": "Комплексные Возможности Генерации Случайных Данных",
+        "items": [
+          {
+            "title": "Криптографически Безопасно",
+            "description": "Все генераторы используют crypto.getRandomValues() для истинной случайности, обеспечивая непредсказуемые и безопасные результаты"
+          },
+          {
+            "title": "Оптимизировано для Разработчиков",
+            "description": "Генерируйте UUID, случайные IP, безопасные пароли и другие ресурсы разработки с правильным форматированием"
+          },
+          {
+            "title": "Настраиваемые Параметры",
+            "description": "Контролируйте диапазоны, форматы, наборы символов, длины и другие параметры для точной генерации"
+          },
+          {
+            "title": "Массовая Генерация",
+            "description": "Генерируйте тысячи случайных значений одновременно для тестирования, заполнения данных и пакетных операций"
+          },
+          {
+            "title": "Множественные Форматы",
+            "description": "Вывод в различных форматах, включая списки, массивы, CSV и пользовательские разделители"
+          },
+          {
+            "title": "Валидация и Качество",
+            "description": "Встроенная валидация обеспечивает соответствие сгенерированных данных спецификациям и стандартам качества"
+          },
+          {
+            "title": "Генерация в Реальном Времени",
+            "description": "Мгновенная генерация случайных данных с живым предварительным просмотром и копированием в буфер обмена"
+          },
+          {
+            "title": "Кроссплатформенная Поддержка",
+            "description": "Работает во всех языках программирования, фреймворках и средах разработки"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Доступные Инструменты Генерации Случайных Данных",
+        "items": [
+          {
+            "name": "Генератор Случайных Чисел",
+            "href": "/ru/tools/random-number",
+            "description": "Генерируйте случайные целые числа, десятичные и числа в пользовательских диапазонах"
+          },
+          {
+            "name": "Генератор Случайных Букв",
+            "href": "/ru/tools/random-letter", 
+            "description": "Генерируйте случайные буквы, алфавиты и последовательности символов"
+          },
+          {
+            "name": "Генератор Случайных Дат",
+            "href": "/ru/tools/random-date",
+            "description": "Генерируйте случайные даты в указанных диапазонах и форматах"
+          },
+          {
+            "name": "Генератор Случайных Месяцев",
+            "href": "/ru/tools/random-month",
+            "description": "Генерируйте случайные месяцы с полными названиями, аббревиатурами и номерами"
+          },
+          {
+            "name": "Генератор Случайных IP",
+            "href": "/ru/tools/random-ip",
+            "description": "Генерируйте случайные IPv4 и IPv6 адреса для тестирования сети"
+          },
+          {
+            "name": "Выбор Случайного Варианта",
+            "href": "/ru/tools/random-choice",
+            "description": "Выбирайте случайные варианты из пользовательских списков для принятия решений"
+          },
+          {
+            "name": "Генератор Безопасных Паролей",
+            "href": "/ru/tools/password-generator",
+            "description": "Генерируйте криптографически безопасные пароли с пользовательскими требованиями"
+          },
+          {
+            "name": "Генератор UUID",
+            "href": "/ru/tools/uuid-generator",
+            "description": "Генерируйте уникальные идентификаторы v1 и v4 для приложений и баз данных"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Генераторов Случайных Данных",
+        "items": [
+          {
+            "title": "Разработка Программного Обеспечения",
+            "description": "Генерируйте тестовые данные, мок API, заполнение баз данных, уникальные идентификаторы и ресурсы разработки"
+          },
+          {
+            "title": "Безопасность и Аутентификация",
+            "description": "Создавайте безопасные пароли, токены, соли, nonce и другие криптографические материалы"
+          },
+          {
+            "title": "Тестирование и QA",
+            "description": "Генерируйте тестовые наборы данных, случайные входные данные, данные для стресс-тестов и граничные сценарии"
+          },
+          {
+            "title": "Разработка Игр",
+            "description": "Создавайте случайные уровни, персонажей, события, добычу и процедурную генерацию контента"
+          },
+          {
+            "title": "Наука о Данных и Аналитика",
+            "description": "Генерируйте образцы наборов данных, случайную выборку, статистический анализ и моделирование данных"
+          },
+          {
+            "title": "Сетевое Администрирование",
+            "description": "Создавайте IP диапазоны, тестирование сети, примеры конфигураций и данные симуляции"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наши Инструменты Генерации Случайных Данных",
+        "items": [
+          "Полный набор из 8+ инструментов генерации случайных данных, покрывающих все общие потребности разработки",
+          "Криптографически безопасные алгоритмы, использующие crypto.getRandomValues() для истинной случайности",
+          "Настраиваемые параметры с диапазонами, форматами, наборами символов и опциями вывода",
+          "Возможности массовой генерации для эффективного создания тысяч случайных значений",
+          "Обработка в реальном времени с мгновенным предварительным просмотром и немедленным отображением результатов",
+          "Дружественные для разработчиков функции, включая множественные форматы вывода и готовые для API данные",
+          "Функции копирования в буфер обмена и загрузки для бесшовной интеграции в рабочий процесс",
+          "Мобильно-оптимизированный интерфейс, который идеально работает на всех устройствах и платформах",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или ограничений скорости"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Связанные Категории Инструментов",
+        "items": [
+          {
+            "name": "Перевод Кода и Данных",
+            "href": "/ru/category/code-data-translation",
+            "description": "Конвертируйте между форматами, кодируйте данные и обрабатывайте различные типы файлов"
+          },
+          {
+            "name": "Изменение и Форматирование Текста",
+            "href": "/ru/category/text-modification-formatting",
+            "description": "Форматируйте, стилизуйте и преобразуйте текстовый контент с различными инструментами"
+          },
+          {
+            "name": "Инструменты Анализа и Подсчета", 
+            "href": "/ru/category/text-analysis",
+            "description": "Анализируйте и считайте текстовый контент, слова, символы и статистику"
+          },
+          {
+            "name": "Инструменты Изображений",
+            "href": "/ru/category/image-tools",
+            "description": "Обрабатывайте, конвертируйте и манипулируйте изображениями для веб-разработки"
+          }
+        ]
+      }
+    }
+  }
+}

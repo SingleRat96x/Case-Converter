@@ -1,0 +1,286 @@
+{
+  "en": {
+    "title": "Free UTM Parameter Builder - Track Marketing Campaigns Effectively",
+    "metaDescription": "Build UTM parameters for Google Analytics campaign tracking. Generate trackable URLs with custom UTM tags to measure marketing attribution, campaign performance, and traffic sources accurately.",
+    "sections": {
+      "intro": {
+        "title": "Professional UTM Parameter Builder & Campaign Tracking Tool",
+        "content": "Create accurate UTM parameters for comprehensive marketing campaign tracking with our professional UTM parameter builder. Generate trackable URLs with source, medium, campaign, term, and content parameters that integrate seamlessly with Google Analytics and other analytics platforms. Perfect for marketers, digital agencies, and businesses who need precise attribution data and campaign performance insights."
+      },
+      "features": {
+        "title": "Advanced UTM Parameter Building Features",
+        "items": [
+          { "title": "Complete UTM Parameter Support", "description": "Build all five UTM parameters: source, medium, campaign, term, and content for comprehensive tracking" },
+          { "title": "Real-time URL Generation", "description": "Instant UTM URL generation with live preview as you enter campaign parameters" },
+          { "title": "Campaign Validation", "description": "Built-in validation ensures proper UTM parameter formatting and URL structure" },
+          { "title": "Quick Campaign Presets", "description": "Pre-configured templates for common marketing channels like email, social, ads, and organic" },
+          { "title": "URL Compatibility Checking", "description": "Verify URL compatibility with major platforms including Twitter, Facebook, and LinkedIn" },
+          { "title": "Parameter Analytics Dashboard", "description": "Visual insights into URL structure, parameter count, and campaign configuration" },
+          { "title": "Campaign Export Options", "description": "Download UTM parameters and generated URLs for documentation and team sharing" },
+          { "title": "Social Media Optimization", "description": "URL length optimization for social media platforms with character limit warnings" },
+          { "title": "Marketing Attribution Insights", "description": "Preview how UTM parameters will appear in Google Analytics reports" },
+          { "title": "Mobile-Responsive Interface", "description": "Touch-optimized form fields and controls work perfectly on all devices" }
+        ]
+      },
+      "useCases": {
+        "title": "Essential for Marketing Campaign Tracking",
+        "description": "Our UTM parameter builder is indispensable for accurate marketing attribution and campaign performance measurement.",
+        "items": [
+          { "title": "Email Marketing Campaigns", "description": "Track newsletter performance, promotional emails, and automated email sequences" },
+          { "title": "Social Media Marketing", "description": "Measure engagement from Facebook, Twitter, LinkedIn, Instagram, and YouTube campaigns" },
+          { "title": "Paid Advertising Tracking", "description": "Monitor Google Ads, Facebook Ads, LinkedIn Ads, and other PPC campaign performance" },
+          { "title": "Content Marketing Attribution", "description": "Track traffic from blog posts, guest articles, and content syndication efforts" },
+          { "title": "Influencer Marketing ROI", "description": "Measure the effectiveness of influencer partnerships and sponsored content" },
+          { "title": "Affiliate Program Tracking", "description": "Monitor affiliate partner performance and commission-driving traffic sources" },
+          { "title": "PR and Media Outreach", "description": "Track mentions, press releases, and media coverage driving website traffic" },
+          { "title": "Cross-Channel Attribution", "description": "Compare performance across different marketing channels and campaigns" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Build UTM Parameters",
+        "description": "Follow these steps to create professional UTM parameters for accurate campaign tracking.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Landing Page URL",
+            "description": "Start with the destination URL where you want to track visitors arriving from your marketing campaigns."
+          },
+          {
+            "step": 2,
+            "title": "Configure Campaign Parameters",
+            "description": "Fill in UTM source (traffic origin), medium (marketing channel), and campaign name for identification."
+          },
+          {
+            "step": 3,
+            "title": "Add Optional Parameters",
+            "description": "Include UTM term (for paid keywords) and UTM content (for A/B testing) if needed for your campaign."
+          },
+          {
+            "step": 4,
+            "title": "Review and Copy UTM URL",
+            "description": "Verify the generated UTM URL, check analytics preview, and copy for use in your marketing campaigns."
+          }
+        ]
+      },
+      "examples": {
+        "title": "UTM Parameter Building Examples",
+        "description": "See how to build UTM parameters for different marketing scenarios and campaign types.",
+        "items": [
+          { "title": "Email Newsletter", "input": "utm_source=newsletter&utm_medium=email&utm_campaign=weekly_digest", "output": "Track newsletter subscribers clicking to your website", "description": "Perfect for measuring email marketing engagement" },
+          { "title": "Facebook Ad Campaign", "input": "utm_source=facebook&utm_medium=cpc&utm_campaign=spring_sale", "output": "Track paid Facebook advertising performance", "description": "Ideal for measuring social media advertising ROI" },
+          { "title": "Blog Content Marketing", "input": "utm_source=blog&utm_medium=organic&utm_campaign=seo_article", "output": "Track content marketing attribution", "description": "Essential for measuring content marketing effectiveness" },
+          { "title": "Affiliate Partnership", "input": "utm_source=partner_site&utm_medium=affiliate&utm_campaign=product_review", "output": "Track affiliate and partner traffic", "description": "Critical for measuring partnership ROI" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our UTM Parameter Builder",
+        "content": "Professional UTM parameter generation with comprehensive analytics and marketing insights.",
+        "items": [
+          "Completely free UTM parameter builder with unlimited campaign creation",
+          "No registration required - start building UTM parameters immediately",
+          "Real-time validation ensures properly formatted UTM parameters",
+          "Campaign preset templates for faster UTM parameter generation",
+          "Social media compatibility checking for optimal URL sharing",
+          "Visual analytics dashboard showing parameter structure and insights",
+          "Export functionality for team collaboration and campaign documentation",
+          "Mobile-responsive interface works perfectly on smartphones and tablets",
+          "Privacy-focused tool - no UTM parameters stored on our servers",
+          "Google Analytics integration guidance and best practices included"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What are UTM parameters and why are they important?",
+          "answer": "UTM parameters are tags added to URLs that help track the effectiveness of marketing campaigns. They tell analytics platforms like Google Analytics exactly where your website traffic is coming from, allowing you to measure ROI and optimize marketing spend across different channels."
+        },
+        {
+          "question": "Which UTM parameters are required vs optional?",
+          "answer": "Three UTM parameters are required: utm_source (traffic source), utm_medium (marketing channel), and utm_campaign (campaign identifier). Two are optional: utm_term (for paid keywords) and utm_content (for A/B testing different ads or links)."
+        },
+        {
+          "question": "How do UTM parameters appear in Google Analytics?",
+          "answer": "UTM parameters populate the Acquisition reports in Google Analytics under Source/Medium, Campaigns, and other attribution reports. They help you see exactly which marketing efforts are driving traffic, conversions, and revenue."
+        },
+        {
+          "question": "Can UTM parameters affect my website's SEO?",
+          "answer": "UTM parameters don't directly impact SEO rankings, but they can help with SEO tracking and analysis. They're ignored by search engines for ranking purposes but provide valuable data for measuring organic and paid campaign performance."
+        },
+        {
+          "question": "What are best practices for UTM parameter naming?",
+          "answer": "Use consistent, lowercase naming conventions. Avoid spaces (use underscores or hyphens instead), keep names descriptive but concise, and establish standard naming conventions across your team to ensure data consistency in analytics reports."
+        },
+        {
+          "question": "How can I track UTM parameter performance?",
+          "answer": "View UTM parameter performance in Google Analytics under Acquisition > Campaigns > All Campaigns. You can also create custom reports and dashboards to track specific UTM parameter combinations and measure campaign ROI across different channels."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Marketing & Analytics Tools",
+        "items": [
+          {
+            "name": "URL Encoder/Decoder",
+            "description": "Encode and decode URLs for proper formatting and compatibility",
+            "href": "/tools/url-converter"
+          },
+          {
+            "name": "URL Slug Generator", 
+            "description": "Create SEO-friendly URL slugs for landing pages and content",
+            "href": "/tools/slugify-url"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Count characters in UTM parameters and campaign descriptions",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Online Notepad",
+            "description": "Document and organize your UTM parameter strategies",
+            "href": "/tools/online-notepad"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Конструктор UTM Параметров - Эффективное Отслеживание Маркетинговых Кампаний",
+    "metaDescription": "Создавайте UTM параметры для отслеживания кампаний в Google Analytics. Генерируйте отслеживаемые URL с пользовательскими UTM тегами для измерения маркетинговой атрибуции, производительности кампаний и источников трафика.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Конструктор UTM Параметров и Инструмент Отслеживания Кампаний",
+        "content": "Создавайте точные UTM параметры для комплексного отслеживания маркетинговых кампаний с нашим профессиональным конструктором UTM параметров. Генерируйте отслеживаемые URL с параметрами источника, канала, кампании, термина и контента, которые бесшовно интегрируются с Google Analytics и другими аналитическими платформами. Идеально для маркетологов, цифровых агентств и бизнесов, которым нужны точные данные атрибуции и инсайты производительности кампаний."
+      },
+      "features": {
+        "title": "Расширенные Функции Создания UTM Параметров",
+        "items": [
+          { "title": "Полная Поддержка UTM Параметров", "description": "Создавайте все пять UTM параметров: источник, канал, кампания, термин и контент для комплексного отслеживания" },
+          { "title": "Генерация URL в Реальном Времени", "description": "Мгновенная генерация UTM URL с живым предварительным просмотром при вводе параметров кампании" },
+          { "title": "Валидация Кампаний", "description": "Встроенная валидация обеспечивает правильное форматирование UTM параметров и структуру URL" },
+          { "title": "Быстрые Предустановки Кампаний", "description": "Предварительно настроенные шаблоны для популярных маркетинговых каналов как email, социальные сети, реклама и органика" },
+          { "title": "Проверка Совместимости URL", "description": "Проверяйте совместимость URL с основными платформами включая Twitter, Facebook и LinkedIn" },
+          { "title": "Панель Аналитики Параметров", "description": "Визуальные инсайты в структуру URL, количество параметров и конфигурацию кампании" },
+          { "title": "Опции Экспорта Кампаний", "description": "Скачивайте UTM параметры и сгенерированные URL для документации и обмена с командой" },
+          { "title": "Оптимизация для Социальных Сетей", "description": "Оптимизация длины URL для социальных платформ с предупреждениями о лимите символов" },
+          { "title": "Инсайты Маркетинговой Атрибуции", "description": "Предварительный просмотр того, как UTM параметры будут отображаться в отчетах Google Analytics" },
+          { "title": "Мобильно-Адаптивный Интерфейс", "description": "Оптимизированные для касания поля формы и элементы управления идеально работают на всех устройствах" }
+        ]
+      },
+      "useCases": {
+        "title": "Необходимо для Отслеживания Маркетинговых Кампаний",
+        "description": "Наш конструктор UTM параметров незаменим для точной маркетинговой атрибуции и измерения производительности кампаний.",
+        "items": [
+          { "title": "Email Маркетинговые Кампании", "description": "Отслеживайте производительность рассылок, промо-писем и автоматизированных email последовательностей" },
+          { "title": "Маркетинг в Социальных Сетях", "description": "Измеряйте вовлеченность от кампаний Facebook, Twitter, LinkedIn, Instagram и YouTube" },
+          { "title": "Отслеживание Платной Рекламы", "description": "Мониторьте производительность Google Ads, Facebook Ads, LinkedIn Ads и других PPC кампаний" },
+          { "title": "Атрибуция Контент-Маркетинга", "description": "Отслеживайте трафик от блог постов, гостевых статей и усилий синдикации контента" },
+          { "title": "ROI Инфлюенсер Маркетинга", "description": "Измеряйте эффективность партнерств с инфлюенсерами и спонсируемого контента" },
+          { "title": "Отслеживание Партнерских Программ", "description": "Мониторьте производительность партнеров и источники трафика, приносящие комиссию" },
+          { "title": "PR и Медиа Охват", "description": "Отслеживайте упоминания, пресс-релизы и медиа освещение, приводящее трафик на сайт" },
+          { "title": "Кросс-Канальная Атрибуция", "description": "Сравнивайте производительность разных маркетинговых каналов и кампаний" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Создать UTM Параметры",
+        "description": "Следуйте этим шагам для создания профессиональных UTM параметров для точного отслеживания кампаний.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите URL Целевой Страницы",
+            "description": "Начните с URL назначения, где вы хотите отслеживать посетителей, приходящих из ваших маркетинговых кампаний."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Параметры Кампании",
+            "description": "Заполните UTM source (источник трафика), medium (маркетинговый канал) и название кампании для идентификации."
+          },
+          {
+            "step": 3,
+            "title": "Добавьте Опциональные Параметры",
+            "description": "Включите UTM term (для платных ключевых слов) и UTM content (для A/B тестирования) если нужно для вашей кампании."
+          },
+          {
+            "step": 4,
+            "title": "Проверьте и Скопируйте UTM URL",
+            "description": "Проверьте сгенерированный UTM URL, посмотрите предварительный просмотр аналитики и скопируйте для использования в маркетинговых кампаниях."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Создания UTM Параметров",
+        "description": "Посмотрите, как создавать UTM параметры для разных маркетинговых сценариев и типов кампаний.",
+        "items": [
+          { "title": "Email Рассылка", "input": "utm_source=newsletter&utm_medium=email&utm_campaign=weekly_digest", "output": "Отслеживание подписчиков рассылки, переходящих на ваш сайт", "description": "Идеально для измерения вовлеченности email маркетинга" },
+          { "title": "Рекламная Кампания Facebook", "input": "utm_source=facebook&utm_medium=cpc&utm_campaign=spring_sale", "output": "Отслеживание производительности платной рекламы Facebook", "description": "Идеально для измерения ROI рекламы в социальных сетях" },
+          { "title": "Контент-Маркетинг Блога", "input": "utm_source=blog&utm_medium=organic&utm_campaign=seo_article", "output": "Отслеживание атрибуции контент-маркетинга", "description": "Необходимо для измерения эффективности контент-маркетинга" },
+          { "title": "Партнерство", "input": "utm_source=partner_site&utm_medium=affiliate&utm_campaign=product_review", "output": "Отслеживание трафика от партнеров", "description": "Критично для измерения ROI партнерств" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конструктор UTM Параметров",
+        "content": "Профессиональная генерация UTM параметров с комплексной аналитикой и маркетинговыми инсайтами.",
+        "items": [
+          "Полностью бесплатный конструктор UTM параметров с неограниченным созданием кампаний",
+          "Регистрация не требуется - начните создавать UTM параметры немедленно",
+          "Валидация в реальном времени обеспечивает правильно отформатированные UTM параметры",
+          "Шаблоны предустановок кампаний для быстрой генерации UTM параметров",
+          "Проверка совместимости с социальными сетями для оптимального обмена URL",
+          "Визуальная панель аналитики, показывающая структуру параметров и инсайты",
+          "Функция экспорта для командного сотрудничества и документации кампаний",
+          "Мобильно-адаптивный интерфейс идеально работает на смартфонах и планшетах",
+          "Инструмент, ориентированный на конфиденциальность - UTM параметры не сохраняются на наших серверах",
+          "Руководство по интеграции с Google Analytics и включенные лучшие практики"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое UTM параметры и почему они важны?",
+          "answer": "UTM параметры - это теги, добавляемые к URL, которые помогают отслеживать эффективность маркетинговых кампаний. Они сообщают аналитическим платформам как Google Analytics точно, откуда приходит трафик на ваш сайт, позволяя измерять ROI и оптимизировать маркетинговые расходы по разным каналам."
+        },
+        {
+          "question": "Какие UTM параметры обязательны, а какие опциональны?",
+          "answer": "Три UTM параметра обязательны: utm_source (источник трафика), utm_medium (маркетинговый канал) и utm_campaign (идентификатор кампании). Два опциональны: utm_term (для платных ключевых слов) и utm_content (для A/B тестирования разных объявлений или ссылок)."
+        },
+        {
+          "question": "Как UTM параметры отображаются в Google Analytics?",
+          "answer": "UTM параметры заполняют отчеты Привлечения в Google Analytics под Источник/Канал, Кампании и другие отчеты атрибуции. Они помогают вам видеть точно, какие маркетинговые усилия приводят трафик, конверсии и доход."
+        },
+        {
+          "question": "Могут ли UTM параметры повлиять на SEO моего сайта?",
+          "answer": "UTM параметры не влияют напрямую на SEO рейтинги, но они могут помочь с отслеживанием и анализом SEO. Они игнорируются поисковыми системами для целей ранжирования, но предоставляют ценные данные для измерения производительности органических и платных кампаний."
+        },
+        {
+          "question": "Каковы лучшие практики для именования UTM параметров?",
+          "answer": "Используйте последовательные, строчные соглашения об именовании. Избегайте пробелов (используйте подчеркивания или дефисы вместо этого), делайте имена описательными, но краткими, и установите стандартные соглашения об именовании в вашей команде для обеспечения согласованности данных в аналитических отчетах."
+        },
+        {
+          "question": "Как я могу отслеживать производительность UTM параметров?",
+          "answer": "Просматривайте производительность UTM параметров в Google Analytics под Привлечение > Кампании > Все Кампании. Вы также можете создавать пользовательские отчеты и панели для отслеживания конкретных комбинаций UTM параметров и измерения ROI кампаний по разным каналам."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Маркетинговые и Аналитические Инструменты",
+        "items": [
+          {
+            "name": "URL Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте URL для правильного форматирования и совместимости",
+            "href": "/ru/tools/url-converter"
+          },
+          {
+            "name": "Генератор URL Слагов",
+            "description": "Создавайте SEO-дружественные URL слаги для целевых страниц и контента",
+            "href": "/ru/tools/slugify-url"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Считайте символы в UTM параметрах и описаниях кампаний",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Онлайн Блокнот",
+            "description": "Документируйте и организуйте ваши стратегии UTM параметров",
+            "href": "/ru/tools/online-notepad"
+          }
+        ]
+      }
+    }
+  }
+}

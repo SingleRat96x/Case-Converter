@@ -1,0 +1,502 @@
+{
+  "en": {
+    "textCounter": {
+      "title": "Text Counter - Character, Word & Line Counter",
+      "description": "Count characters, words, lines, sentences, and paragraphs in your text instantly. Perfect for writers, students, and content creators.",
+      "inputLabel": "Text to Analyze",
+      "inputPlaceholder": "Enter or paste your text here to analyze...",
+      "uploadDescription": "",
+      "downloadFileName": "text-analysis-report.txt",
+      "report": {
+        "title": "Text Analysis Report",
+        "generatedAt": "Generated",
+        "summary": "Summary",
+        "originalText": "Original Text"
+      },
+      "results": {
+        "title": "Analysis Results",
+        "realTimeTitle": "Real-time Analysis"
+      },
+      "analytics": {
+        "characters": "Characters",
+        "charactersNoSpaces": "Characters (no spaces)",
+        "words": "Words",
+        "sentences": "Sentences", 
+        "lines": "Lines",
+        "paragraphs": "Paragraphs",
+        "readingTime": "Reading Time",
+        "speakingTime": "Speaking Time"
+      },
+      "actions": {
+        "analyzeFile": "Analyze File",
+        "exportReport": "Export Report",
+        "clearText": "Clear Text",
+        "copyResults": "Copy Results"
+      },
+      "messages": {
+        "analysisComplete": "Text analysis complete!",
+        "resultsCopied": "Analysis results copied to clipboard!",
+        "fileAnalyzed": "File analyzed successfully!",
+        "noTextProvided": "Please enter some text to analyze.",
+        "estimatedReadingTime": "minute read",
+        "estimatedSpeakingTime": "minute speech"
+      }
+    },
+    "sentenceCounter": {
+      "title": "Sentence Counter & Analysis Tool",
+      "description": "Analyze sentence structure, count sentences, and get detailed sentence statistics. Perfect for writers, editors, and content creators.",
+      "inputLabel": "Text to Analyze",
+      "inputPlaceholder": "Enter or paste your text here to analyze sentence structure...",
+      "uploadDescription": "",
+      "downloadFileName": "sentence-analysis-report.txt",
+      "report": {
+        "title": "Sentence Analysis Report",
+        "generatedAt": "Generated",
+        "summary": "Summary",
+        "originalText": "Original Text"
+      },
+      "results": {
+        "title": "Analysis Results",
+        "realTimeTitle": "Real-time Analysis"
+      },
+      "analytics": {
+        "totalSentences": "Total Sentences",
+        "averageWordsPerSentence": "Average Words per Sentence",
+        "shortestSentence": "Shortest Sentence",
+        "longestSentence": "Longest Sentence",
+        "declarativeSentences": "Declarative Sentences",
+        "questionSentences": "Question Sentences",
+        "exclamatorySentences": "Exclamatory Sentences",
+        "complexSentences": "Complex Sentences"
+      },
+      "actions": {
+        "analyzeFile": "Analyze File",
+        "exportReport": "Export Report",
+        "clearText": "Clear Text",
+        "copyResults": "Copy Results"
+      },
+      "messages": {
+        "analysisComplete": "Sentence analysis complete!",
+        "resultsCopied": "Analysis results copied to clipboard!",
+        "fileAnalyzed": "File analyzed successfully!",
+        "noTextProvided": "Please enter some text to analyze.",
+        "sentencesFound": "sentences found"
+      }
+    },
+    "wordFrequency": {
+      "title": "Word Frequency Analyzer - Find Most Common Words",
+      "description": "Analyze word frequency and discover the most common words in your text. Perfect for content analysis, writing optimization, and linguistic research.",
+      "inputLabel": "Text to Analyze",
+      "inputPlaceholder": "Enter or paste your text here to analyze word frequency...",
+      "uploadDescription": "",
+      "downloadFileName": "word-frequency-analysis.txt",
+      "report": {
+        "title": "Word Frequency Analysis Report",
+        "generatedAt": "Generated",
+        "summary": "Summary",
+        "originalText": "Original Text",
+        "topWordsTitle": "Most Frequent Words"
+      },
+      "results": {
+        "title": "Analysis Results",
+        "realTimeTitle": "Real-time Analysis"
+      },
+      "analytics": {
+        "totalWords": "Total Words",
+        "uniqueWords": "Unique Words",
+        "mostCommon": "Most Common",
+        "averageLength": "Average Length",
+        "rank": "Rank",
+        "word": "Word",
+        "count": "Count",
+        "percentage": "Percentage"
+      },
+      "actions": {
+        "analyzeFile": "Analyze File",
+        "exportReport": "Export Report",
+        "clearText": "Clear Text",
+        "copyResults": "Copy Results"
+      },
+      "messages": {
+        "analysisComplete": "Word frequency analysis complete!",
+        "resultsCopied": "Analysis results copied to clipboard!",
+        "fileAnalyzed": "File analyzed successfully!",
+        "noTextProvided": "Please enter some text to analyze.",
+        "topWordsFound": "most frequent words found"
+      }
+    },
+    "duplicateLineRemover": {
+      "title": "Remove Duplicate Lines",
+      "description": "Remove duplicate lines from your text with advanced options. Perfect for cleaning data, removing duplicates, and text processing.",
+      "inputLabel": "Text to Process",
+      "outputLabel": "Unique Lines",
+      "inputPlaceholder": "Enter or paste your text here to remove duplicate lines...",
+      "uploadDescription": "",
+      "downloadFileName": "unique-lines.txt",
+      "options": {
+        "caseSensitive": "Case Sensitive",
+        "trimLines": "Trim Lines",
+        "keepFirst": "Keep First",
+        "preserveOrder": "Preserve Order"
+      },
+      "stats": {
+        "title": "Processing Statistics",
+        "original": "Original Lines",
+        "unique": "Unique Lines",
+        "removed": "Duplicates Removed"
+      },
+      "info": {
+        "caseSensitive": "",
+        "trimLines": "",
+        "keepFirst": "",
+        "keepLast": "Keep the last occurrence of duplicate lines"
+      }
+    },
+    "wordSorter": {
+      "title": "Sort Words - Alphabetical & Length Sorting Tool",
+      "description": "Sort words alphabetically, by length, or randomly with advanced options. Perfect for data organization and text processing.",
+      "inputLabel": "Text to Sort",
+      "outputLabel": "Sorted Words",
+      "inputPlaceholder": "Enter or paste your text here to sort words...",
+      "uploadDescription": "",
+      "downloadFileName": "sorted-words.txt",
+      "sortMode": "Sort Mode",
+      "sortOrder": "Sort Order",
+      "separator": "Separator",
+      "modes": {
+        "alphabetical": "Alphabetical",
+        "length": "Length",
+        "reverse": "Reverse"
+      },
+      "orders": {
+        "ascending": "Ascending",
+        "descending": "Descending",
+        "random": "Random"
+      },
+      "separators": {
+        "space": "Space",
+        "newline": "Newline",
+        "comma": "Comma",
+        "custom": "Custom"
+      },
+      "customSeparatorPlaceholder": "Enter custom separator...",
+      "options": {
+        "title": "Advanced Options",
+        "caseSensitive": "Case Sensitive",
+        "removeDuplicates": "Remove Duplicates",
+        "trimWhitespace": "Trim Whitespace"
+      },
+      "stats": {
+        "original": "Original Words",
+        "sorted": "Sorted Words",
+        "duplicates": "Duplicates Removed",
+        "mode": "Sort Mode",
+        "order": "Sort Order",
+        "separator": "Separator"
+      },
+      "wordCount": "Sorted {{count}} words",
+      "duplicatesRemoved": "{{count}} duplicates removed"
+    },
+    "plainText": {
+      "title": "Plain Text Converter - Remove HTML, Markdown & Formatting",
+      "description": "Convert formatted text to clean plain text by removing HTML tags, Markdown formatting, URLs, emails, and special characters.",
+      "inputLabel": "Formatted Text",
+      "outputLabel": "Plain Text",
+      "inputPlaceholder": "Enter or paste your formatted text here (HTML, Markdown, etc.)...",
+      "uploadDescription": "",
+      "downloadFileName": "plain-text.txt",
+      "accordion": {
+        "title": "Plain Text Conversion Options"
+      },
+      "tabs": {
+        "formatRemoval": "Format Removal",
+        "contentFiltering": "Content Filtering",
+        "textProcessing": "Text Processing"
+      },
+      "options": {
+        "common": "Common Options",
+        "contentRemoval": "Content Removal",
+        "lineBreaks": "Line Break Options",
+        "removeHtml": "Remove HTML Tags",
+        "removeMarkdown": "Remove Markdown",
+        "removeUrls": "Remove URLs",
+        "removeEmails": "Remove Email Addresses",
+        "removeNumbers": "Remove Numbers",
+        "removeSpecialChars": "Remove Special Characters",
+        "removePunctuation": "Remove Punctuation",
+        "removeEmojis": "Remove Emojis",
+        "removeExtraSpaces": "Remove Extra Spaces",
+        "normalizeWhitespace": "Normalize Whitespace",
+        "preserveLineBreaks": "Preserve Line Breaks",
+        "trimLines": "Trim Line Whitespace"
+      },
+      "warning": "Warning: Aggressive options may remove important content. Review the output carefully.",
+      "stats": {
+        "removed": "{{count}} characters removed",
+        "original": "Original",
+        "result": "Result"
+      },
+      "analytics": {
+        "title": "Plain Text Conversion Analytics",
+        "originalLength": "Original Length",
+        "plainLength": "Plain Text Length",
+        "charactersRemoved": "Characters Removed",
+        "reductionPercentage": "Reduction %",
+        "htmlElements": "HTML Elements",
+        "markdownElements": "Markdown Elements",
+        "urlsRemoved": "URLs Removed",
+        "emailsRemoved": "Emails Removed"
+      }
+    }
+  },
+  "ru": {
+    "textCounter": {
+      "title": "Счетчик Текста - Счетчик Символов, Слов и Строк",
+      "description": "Мгновенно подсчитывайте символы, слова, строки, предложения и абзацы в вашем тексте. Идеально для писателей, студентов и создателей контента.",
+      "inputLabel": "Текст для Анализа",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для анализа...",
+      "uploadDescription": "Загрузите текстовый файл для анализа (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "отчет-анализа-текста.txt",
+      "report": {
+        "title": "Отчет об Анализе Текста",
+        "generatedAt": "Сгенерировано",
+        "summary": "Сводка",
+        "originalText": "Исходный Текст"
+      },
+      "results": {
+        "title": "Результаты Анализа",
+        "realTimeTitle": "Анализ в Реальном Времени"
+      },
+      "analytics": {
+        "characters": "Символы",
+        "charactersNoSpaces": "Символы (без пробелов)",
+        "words": "Слова",
+        "sentences": "Предложения",
+        "lines": "Строки", 
+        "paragraphs": "Абзацы",
+        "readingTime": "Время Чтения",
+        "speakingTime": "Время Речи"
+      },
+      "actions": {
+        "analyzeFile": "Анализировать Файл",
+        "exportReport": "Экспортировать Отчет",
+        "clearText": "Очистить Текст",
+        "copyResults": "Копировать Результаты"
+      },
+      "messages": {
+        "analysisComplete": "Анализ текста завершен!",
+        "resultsCopied": "Результаты анализа скопированы в буфер обмена!",
+        "fileAnalyzed": "Файл успешно проанализирован!",
+        "noTextProvided": "Пожалуйста, введите текст для анализа.",
+        "estimatedReadingTime": "минут чтения",
+        "estimatedSpeakingTime": "минут речи"
+      }
+    },
+    "sentenceCounter": {
+      "title": "Счетчик Предложений и Инструмент Анализа",
+      "description": "Анализируйте структуру предложений, подсчитывайте предложения и получайте подробную статистику предложений. Идеально для писателей, редакторов и создателей контента.",
+      "inputLabel": "Текст для Анализа",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для анализа структуры предложений...",
+      "uploadDescription": "Загрузите текстовый файл для анализа (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "отчет-анализа-предложений.txt",
+      "report": {
+        "title": "Отчет об Анализе Предложений",
+        "generatedAt": "Сгенерировано",
+        "summary": "Сводка",
+        "originalText": "Исходный Текст"
+      },
+      "results": {
+        "title": "Результаты Анализа",
+        "realTimeTitle": "Анализ в Реальном Времени"
+      },
+      "analytics": {
+        "totalSentences": "Всего Предложений",
+        "averageWordsPerSentence": "Среднее Слов в Предложении",
+        "shortestSentence": "Самое Короткое Предложение",
+        "longestSentence": "Самое Длинное Предложение",
+        "declarativeSentences": "Повествовательные Предложения",
+        "questionSentences": "Вопросительные Предложения",
+        "exclamatorySentences": "Восклицательные Предложения",
+        "complexSentences": "Сложные Предложения"
+      },
+      "actions": {
+        "analyzeFile": "Анализировать Файл",
+        "exportReport": "Экспортировать Отчет",
+        "clearText": "Очистить Текст",
+        "copyResults": "Копировать Результаты"
+      },
+      "messages": {
+        "analysisComplete": "Анализ предложений завершен!",
+        "resultsCopied": "Результаты анализа скопированы в буфер обмена!",
+        "fileAnalyzed": "Файл успешно проанализирован!",
+        "noTextProvided": "Пожалуйста, введите текст для анализа.",
+        "sentencesFound": "предложений найдено"
+      }
+    },
+    "wordFrequency": {
+      "title": "Анализатор Частоты Слов - Найдите Самые Часто Используемые Слова",
+      "description": "Анализируйте частоту слов и находите самые распространенные слова в вашем тексте. Идеально для анализа контента, оптимизации письма и лингвистических исследований.",
+      "inputLabel": "Текст для Анализа",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для анализа частоты слов...",
+      "uploadDescription": "Загрузите текстовый файл для анализа (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "анализ-частоты-слов.txt",
+      "report": {
+        "title": "Отчет об Анализе Частоты Слов",
+        "generatedAt": "Сгенерировано",
+        "summary": "Сводка",
+        "originalText": "Исходный Текст",
+        "topWordsTitle": "Самые Частые Слова"
+      },
+      "results": {
+        "title": "Результаты Анализа",
+        "realTimeTitle": "Анализ в Реальном Времени"
+      },
+      "analytics": {
+        "totalWords": "Общее Количество Слов",
+        "uniqueWords": "Уникальные Слова",
+        "mostCommon": "Самое Частое",
+        "averageLength": "Средняя Длина",
+        "rank": "Ранг",
+        "word": "Слово",
+        "count": "Количество",
+        "percentage": "Процент"
+      },
+      "actions": {
+        "analyzeFile": "Анализировать Файл",
+        "exportReport": "Экспортировать Отчет",
+        "clearText": "Очистить Текст",
+        "copyResults": "Копировать Результаты"
+      },
+      "messages": {
+        "analysisComplete": "Анализ частоты слов завершен!",
+        "resultsCopied": "Результаты анализа скопированы в буфер обмена!",
+        "fileAnalyzed": "Файл успешно проанализирован!",
+        "noTextProvided": "Пожалуйста, введите текст для анализа.",
+        "topWordsFound": "самых частых слов найдено"
+      }
+    },
+    "duplicateLineRemover": {
+      "title": "Удалить Дубликаты Строк - Инструмент Очистки Текста",
+      "description": "Удалите дубликаты строк из вашего текста с расширенными опциями. Идеально для очистки данных, удаления дубликатов и обработки текста.",
+      "inputLabel": "Текст для Обработки",
+      "outputLabel": "Уникальные Строки",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для удаления дубликатов строк...",
+      "uploadDescription": "",
+      "downloadFileName": "уникальные-строки.txt",
+      "options": {
+        "caseSensitive": "Учитывать Регистр",
+        "trimLines": "Обрезать Строки",
+        "keepFirst": "Оставить Первое",
+        "preserveOrder": "Сохранить Порядок"
+      },
+      "stats": {
+        "title": "Статистика Обработки",
+        "original": "Исходные Строки",
+        "unique": "Уникальные Строки",
+        "removed": "Дубликаты Удалены"
+      },
+      "info": {
+        "caseSensitive": "",
+        "trimLines": "",
+        "keepFirst": "",
+        "keepLast": "Оставить последнее вхождение дубликатов строк"
+      }
+    },
+    "wordSorter": {
+      "title": "Сортировка Слов - Инструмент Алфавитной и Длины Сортировки",
+      "description": "Сортируйте слова по алфавиту, длине или случайно с расширенными опциями. Идеально для организации данных и обработки текста.",
+      "inputLabel": "Текст для Сортировки",
+      "outputLabel": "Отсортированные Слова",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для сортировки слов...",
+      "uploadDescription": "",
+      "downloadFileName": "отсортированные-слова.txt",
+      "sortMode": "Режим Сортировки",
+      "sortOrder": "Порядок Сортировки",
+      "separator": "Разделитель",
+      "modes": {
+        "alphabetical": "По Алфавиту",
+        "length": "По Длине",
+        "reverse": "Обратный"
+      },
+      "orders": {
+        "ascending": "По Возрастанию",
+        "descending": "По Убыванию",
+        "random": "Случайный"
+      },
+      "separators": {
+        "space": "Пробел",
+        "newline": "Перенос Строки",
+        "comma": "Запятая",
+        "custom": "Пользовательский"
+      },
+      "customSeparatorPlaceholder": "Введите пользовательский разделитель...",
+      "options": {
+        "title": "Расширенные Опции",
+        "caseSensitive": "Учитывать Регистр",
+        "removeDuplicates": "Удалить Дубликаты",
+        "trimWhitespace": "Обрезать Пробелы"
+      },
+      "stats": {
+        "original": "Исходные Слова",
+        "sorted": "Отсортированные Слова",
+        "duplicates": "Дубликаты Удалены",
+        "mode": "Режим Сортировки",
+        "order": "Порядок Сортировки",
+        "separator": "Разделитель"
+      },
+      "wordCount": "Отсортировано {{count}} слов",
+      "duplicatesRemoved": "{{count}} дубликатов удалено"
+    },
+    "plainText": {
+      "title": "Конвертер в Обычный Текст - Удаление HTML, Markdown и Форматирования",
+      "description": "Конвертируйте форматированный текст в чистый обычный текст, удаляя HTML теги, Markdown форматирование, URL, email и специальные символы.",
+      "inputLabel": "Форматированный Текст",
+      "outputLabel": "Обычный Текст",
+      "inputPlaceholder": "Введите или вставьте ваш форматированный текст здесь (HTML, Markdown и т.д.)...",
+      "uploadDescription": "",
+      "downloadFileName": "обычный-текст.txt",
+      "accordion": {
+        "title": "Опции Конвертации в Обычный Текст"
+      },
+      "tabs": {
+        "formatRemoval": "Удаление Форматирования",
+        "contentFiltering": "Фильтрация Контента",
+        "textProcessing": "Обработка Текста"
+      },
+      "options": {
+        "common": "Основные Опции",
+        "contentRemoval": "Удаление Контента",
+        "lineBreaks": "Опции Переносов Строк",
+        "removeHtml": "Удалить HTML Теги",
+        "removeMarkdown": "Удалить Markdown",
+        "removeUrls": "Удалить URL",
+        "removeEmails": "Удалить Email Адреса",
+        "removeNumbers": "Удалить Числа",
+        "removeSpecialChars": "Удалить Специальные Символы",
+        "removePunctuation": "Удалить Пунктуацию",
+        "removeEmojis": "Удалить Эмодзи",
+        "removeExtraSpaces": "Удалить Лишние Пробелы",
+        "normalizeWhitespace": "Нормализовать Пробелы",
+        "preserveLineBreaks": "Сохранить Переносы Строк",
+        "trimLines": "Обрезать Пробелы в Строках"
+      },
+      "warning": "Предупреждение: Агрессивные опции могут удалить важный контент. Внимательно проверьте результат.",
+      "stats": {
+        "removed": "{{count}} символов удалено",
+        "original": "Исходный",
+        "result": "Результат"
+      },
+      "analytics": {
+        "title": "Аналитика Конвертации в Обычный Текст",
+        "originalLength": "Исходная Длина",
+        "plainLength": "Длина Обычного Текста",
+        "charactersRemoved": "Символов Удалено",
+        "reductionPercentage": "Сокращение %",
+        "htmlElements": "HTML Элементы",
+        "markdownElements": "Markdown Элементы",
+        "urlsRemoved": "URL Удалено",
+        "emailsRemoved": "Email Удалено"
+      }
+    }
+  }
+}

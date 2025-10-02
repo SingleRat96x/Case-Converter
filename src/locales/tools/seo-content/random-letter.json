@@ -1,0 +1,458 @@
+{
+  "en": {
+    "title": "Free Random Letter Generator - Customizable Case & Format Options",
+    "metaDescription": "Generate random letters instantly with our advanced random letter generator. Choose uppercase, lowercase, or mixed case. Format as spaced, continuous, or line breaks. Perfect for games, education, testing, and creative projects. Free & unlimited.",
+    "sections": {
+      "intro": {
+        "title": "Professional Random Letter Generator Tool",
+        "content": "Generate cryptographically secure random letters with our advanced random letter generator. Whether you need letters for word games, educational activities, testing, or creative projects, our tool provides reliable, unbiased random letter generation with extensive customization options. Features include case control, output formatting, duplicate handling, and quantity control up to 10,000 letters."
+      },
+      "features": {
+        "title": "Advanced Random Letter Generation Features",
+        "items": [
+          {
+            "title": "Cryptographically Secure",
+            "description": "Uses crypto.getRandomValues() for true randomness, ensuring unbiased and unpredictable letter generation"
+          },
+          {
+            "title": "Case Control Options",
+            "description": "Choose from uppercase only (A-Z), lowercase only (a-z), or mixed case (A-Z, a-z) for maximum flexibility"
+          },
+          {
+            "title": "Multiple Output Formats",
+            "description": "Format letters as spaced (A B C), continuous (ABC), or line breaks for different use cases"
+          },
+          {
+            "title": "Bulk Generation",
+            "description": "Generate up to 10,000 random letters at once for large-scale applications and testing"
+          },
+          {
+            "title": "Duplicate Management",
+            "description": "Choose to allow or prevent duplicate letters based on your specific requirements"
+          },
+          {
+            "title": "Instant Results",
+            "description": "Fast generation with real-time validation and immediate results display"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Random Letter Generator",
+        "steps": [
+          {
+            "title": "Set Quantity",
+            "description": "Enter how many random letters you want to generate (1 to 10,000). Consider available letters when disabling duplicates."
+          },
+          {
+            "title": "Choose Case Type",
+            "description": "Select from mixed case (52 letters), uppercase only (26 letters), or lowercase only (26 letters) based on your needs."
+          },
+          {
+            "title": "Select Output Format",
+            "description": "Choose how to format the output: spaced for readability, continuous for compact display, or line breaks for vertical lists."
+          },
+          {
+            "title": "Configure Duplicates",
+            "description": "Toggle duplicate allowance. When disabled, each letter appears only once (limited by available letters in chosen case)."
+          },
+          {
+            "title": "Generate & Download",
+            "description": "Click 'Generate Random Letters' to create your letter set. Copy to clipboard or download as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Random Letter Generation Examples",
+        "items": [
+          {
+            "title": "Word Game Letters",
+            "input": "Quantity: 7, Mixed Case, Spaced Format",
+            "output": "K m R a T n B"
+          },
+          {
+            "title": "Alphabet Learning",
+            "input": "Quantity: 5, Uppercase Only, Line Breaks",
+            "output": "F\nM\nQ\nC\nW"
+          },
+          {
+            "title": "Password Characters",
+            "input": "Quantity: 12, Mixed Case, Continuous",
+            "output": "xPmKqLnRtFaD"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Random Letter Generation",
+        "items": [
+          {
+            "title": "Educational Games",
+            "description": "Create random letters for spelling games, alphabet learning, phonics practice, and vocabulary building activities"
+          },
+          {
+            "title": "Word Games & Puzzles",
+            "description": "Generate letter sets for Scrabble practice, crossword creation, anagram games, and word formation challenges"
+          },
+          {
+            "title": "Software Testing",
+            "description": "Create random character inputs for testing text fields, validation systems, and string processing functions"
+          },
+          {
+            "title": "Creative Writing",
+            "description": "Use random letters as writing prompts, character name generation, or creative constraints for stories and poems"
+          },
+          {
+            "title": "Data Generation",
+            "description": "Generate random alphabetic data for database testing, form filling, and placeholder content creation"
+          },
+          {
+            "title": "Cryptography & Security",
+            "description": "Create random letter components for passwords, tokens, and other security-related applications"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Random Letter Generator",
+        "items": [
+          "Cryptographically secure generation ensures truly random, unbiased results for critical applications",
+          "Generate unlimited random letters with no usage restrictions or subscription requirements",
+          "Instant generation even for large quantities with optimized algorithms for maximum performance",
+          "Multiple formatting options accommodate different use cases and presentation needs",
+          "Copy to clipboard or download as text file for seamless integration with your workflow",
+          "All generation happens locally in your browser - no data is sent to servers or stored"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Tools You Might Find Useful",
+        "items": [
+          {
+            "name": "Random Number Generator",
+            "description": "Generate random numbers within specified ranges",
+            "href": "/tools/random-number"
+          },
+          {
+            "name": "Random Date Generator",
+            "description": "Generate random dates with custom ranges and formats",
+            "href": "/tools/random-date"
+          },
+          {
+            "name": "Random Month Generator",
+            "description": "Generate random months with different formats",
+            "href": "/tools/random-month"
+          },
+          {
+            "name": "Text Case Converter",
+            "description": "Convert text to uppercase, lowercase, title case and more",
+            "href": "/tools/uppercase"
+          },
+          {
+            "name": "Base64 Encoder Decoder",
+            "description": "Encode and decode text using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary and binary to text",
+            "href": "/tools/binary-code-translator"
+          },
+          {
+            "name": "JSON Stringify Tool",
+            "description": "Format and stringify JSON data with proper indentation",
+            "href": "/tools/json-stringify"
+          },
+          {
+            "name": "OCR Image to Text",
+            "description": "Extract text from images using OCR technology",
+            "href": "/tools/image-to-text"
+          }
+        ]
+      },
+      "faqs": [
+          {
+            "question": "How random are the generated letters?",
+            "answer": "Our generator uses crypto.getRandomValues(), which provides cryptographically secure random letters. This ensures true randomness suitable for security applications, educational use, and any scenario requiring unbiased random letter generation."
+          },
+          {
+            "question": "What's the difference between the case options?",
+            "answer": "Uppercase generates only capital letters (A-Z), lowercase generates only small letters (a-z), and mixed case generates both (A-Z, a-z). Mixed case provides 52 possible letters, while single case options provide 26 each."
+          },
+          {
+            "question": "Can I generate letters without duplicates?",
+            "answer": "Yes! Toggle the 'Allow Duplicate Letters' option to prevent duplicates. Note that when duplicates are disabled, the quantity cannot exceed available letters (26 for single case, 52 for mixed case)."
+          },
+          {
+            "question": "What are the different output formats?",
+            "answer": "Spaced format separates letters with spaces (A B C), continuous format creates unbroken sequences (ABC), and line breaks format puts each letter on a new line. Choose based on your intended use."
+          },
+          {
+            "question": "How many letters can I generate at once?",
+            "answer": "You can generate up to 10,000 random letters in a single operation. This limit ensures optimal performance while accommodating most use cases."
+          },
+          {
+            "question": "Can I use these letters for commercial purposes?",
+            "answer": "Yes! The generated letters are completely free to use for any purpose, including commercial applications, games, educational materials, or any other project you have in mind."
+          },
+          {
+            "question": "Does the tool work offline?",
+            "answer": "Once the page is loaded, the random letter generation works entirely in your browser and doesn't require an internet connection. However, you'll need internet access to initially load the tool."
+          },
+          {
+            "question": "Is my data secure and private?",
+            "answer": "Absolutely! All random letter generation happens locally in your browser. No data is transmitted to servers, stored, or tracked. Your generated letters remain completely private."
+          }
+        ],
+      "tips": {
+        "title": "Tips for Effective Random Letter Generation",
+        "items": [
+          {
+            "title": "Choose Appropriate Case",
+            "description": "Use uppercase for formal applications, lowercase for casual use, or mixed case for maximum variety and unpredictability."
+          },
+          {
+            "title": "Consider Output Format",
+            "description": "Use spaced format for readability, continuous for compact storage, or line breaks for vertical lists and easy counting."
+          },
+          {
+            "title": "Manage Duplicates Wisely",
+            "description": "Allow duplicates for true random sampling, or disable for unique letter sets like game tiles or educational flashcards."
+          },
+          {
+            "title": "Validate Quantity Limits",
+            "description": "When duplicates are disabled, ensure your quantity doesn't exceed available letters (26 for single case, 52 for mixed)."
+          },
+          {
+            "title": "Save Important Results",
+            "description": "Download generated letters as text files for important applications where you need to preserve the exact sequence."
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Случайных Букв - Настраиваемые Опции Регистра и Формата",
+    "metaDescription": "Мгновенно генерируйте случайные буквы с помощью нашего продвинутого генератора. Выбирайте заглавные, строчные или смешанный регистр. Форматируйте с пробелами, непрерывно или по строкам. Идеально для игр, образования, тестирования и творческих проектов. Бесплатно и без ограничений.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Генерации Случайных Букв",
+        "content": "Генерируйте криптографически безопасные случайные буквы с помощью нашего продвинутого генератора случайных букв. Независимо от того, нужны ли вам буквы для словесных игр, образовательных мероприятий, тестирования или творческих проектов, наш инструмент обеспечивает надежную, беспристрастную генерацию случайных букв с обширными возможностями настройки. Включает контроль регистра, форматирование вывода, обработку дубликатов и контроль количества до 10 000 букв."
+      },
+      "features": {
+        "title": "Продвинутые Функции Генерации Случайных Букв",
+        "items": [
+          {
+            "title": "Криптографически Безопасный",
+            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая беспристрастную и непредсказуемую генерацию букв"
+          },
+          {
+            "title": "Опции Контроля Регистра",
+            "description": "Выберите из только заглавных (A-Z), только строчных (a-z) или смешанного регистра (A-Z, a-z) для максимальной гибкости"
+          },
+          {
+            "title": "Множественные Форматы Вывода",
+            "description": "Форматируйте буквы с пробелами (A B C), непрерывно (ABC) или с переносами строк для разных случаев использования"
+          },
+          {
+            "title": "Массовая Генерация",
+            "description": "Генерируйте до 10 000 случайных букв одновременно для крупномасштабных приложений и тестирования"
+          },
+          {
+            "title": "Управление Дубликатами",
+            "description": "Выберите разрешение или предотвращение дублирующихся букв в зависимости от ваших конкретных требований"
+          },
+          {
+            "title": "Мгновенные Результаты",
+            "description": "Быстрая генерация с проверкой в реальном времени и немедленным отображением результатов"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Случайных Букв",
+        "steps": [
+          {
+            "title": "Установите Количество",
+            "description": "Введите, сколько случайных букв вы хотите сгенерировать (от 1 до 10 000). Учитывайте доступные буквы при отключении дубликатов."
+          },
+          {
+            "title": "Выберите Тип Регистра",
+            "description": "Выберите из смешанного регистра (52 буквы), только заглавных (26 букв) или только строчных (26 букв) в зависимости от ваших потребностей."
+          },
+          {
+            "title": "Выберите Формат Вывода",
+            "description": "Выберите, как форматировать вывод: с пробелами для читабельности, непрерывно для компактного отображения или с переносами строк для вертикальных списков."
+          },
+          {
+            "title": "Настройте Дубликаты",
+            "description": "Переключите разрешение дубликатов. При отключении каждая буква появляется только один раз (ограничено доступными буквами в выбранном регистре)."
+          },
+          {
+            "title": "Генерируйте и Скачивайте",
+            "description": "Нажмите 'Генерировать Случайные Буквы', чтобы создать набор букв. Скопируйте в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации Случайных Букв",
+        "items": [
+          {
+            "title": "Буквы для Словесных Игр",
+            "input": "Количество: 7, Смешанный Регистр, Формат с Пробелами",
+            "output": "K m R a T n B"
+          },
+          {
+            "title": "Изучение Алфавита",
+            "input": "Количество: 5, Только Заглавные, Переносы Строк",
+            "output": "F\nM\nQ\nC\nW"
+          },
+          {
+            "title": "Символы Пароля",
+            "input": "Количество: 12, Смешанный Регистр, Непрерывно",
+            "output": "xPmKqLnRtFaD"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Распространенные Случаи Использования Генерации Случайных Букв",
+        "items": [
+          {
+            "title": "Образовательные Игры",
+            "description": "Создавайте случайные буквы для игр на правописание, изучения алфавита, фонетической практики и упражнений на расширение словарного запаса"
+          },
+          {
+            "title": "Словесные Игры и Головоломки",
+            "description": "Генерируйте наборы букв для практики Эрудита, создания кроссвордов, анаграммных игр и задач по формированию слов"
+          },
+          {
+            "title": "Тестирование Программного Обеспечения",
+            "description": "Создавайте случайные символьные входные данные для тестирования текстовых полей, систем проверки и функций обработки строк"
+          },
+          {
+            "title": "Творческое Письмо",
+            "description": "Используйте случайные буквы как подсказки для письма, генерации имен персонажей или творческих ограничений для рассказов и стихов"
+          },
+          {
+            "title": "Генерация Данных",
+            "description": "Генерируйте случайные алфавитные данные для тестирования баз данных, заполнения форм и создания содержимого-заполнителя"
+          },
+          {
+            "title": "Криптография и Безопасность",
+            "description": "Создавайте компоненты случайных букв для паролей, токенов и других приложений, связанных с безопасностью"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наш Генератор Случайных Букв",
+        "items": [
+          "Криптографически безопасная генерация обеспечивает действительно случайные, беспристрастные результаты для критических приложений",
+          "Генерируйте неограниченное количество случайных букв без ограничений использования или требований подписки",
+          "Мгновенная генерация даже для больших количеств с оптимизированными алгоритмами для максимальной производительности",
+          "Множественные варианты форматирования подходят для разных случаев использования и потребностей представления",
+          "Копирование в буфер обмена или скачивание как текстовый файл для бесшовной интеграции с вашим рабочим процессом",
+          "Вся генерация происходит локально в вашем браузере - никакие данные не отправляются на серверы и не сохраняются"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты Которые Могут Быть Полезны",
+        "items": [
+          {
+            "name": "Генератор Случайных Чисел",
+            "description": "Генерируйте случайные числа в заданных диапазонах",
+            "href": "/tools/random-number"
+          },
+          {
+            "name": "Генератор Случайных Дат",
+            "description": "Генерируйте случайные даты с пользовательскими диапазонами и форматами",
+            "href": "/tools/random-date"
+          },
+          {
+            "name": "Генератор Случайных Месяцев",
+            "description": "Генерируйте случайные месяцы с различными форматами",
+            "href": "/tools/random-month"
+          },
+          {
+            "name": "Конвертер Регистра Текста",
+            "description": "Конвертируйте текст в верхний, нижний, заглавный регистр и другие",
+            "href": "/tools/text-case-converter"
+          },
+          {
+            "name": "Кодировщик Декодировщик Base64",
+            "description": "Кодируйте и декодируйте текст используя кодировку Base64",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и обратно",
+            "href": "/tools/binary-translator"
+          },
+          {
+            "name": "Инструмент JSON Stringify",
+            "description": "Форматируйте и преобразуйте JSON данные с правильными отступами",
+            "href": "/tools/json-stringify"
+          },
+          {
+            "name": "OCR Изображение в Текст",
+            "description": "Извлекайте текст из изображений с помощью технологии OCR",
+            "href": "/tools/ocr-image-to-text"
+          }
+        ]
+      },
+      "faqs": [
+          {
+            "question": "Насколько случайны сгенерированные буквы?",
+            "answer": "Наш генератор использует crypto.getRandomValues(), который обеспечивает криптографически безопасные случайные буквы. Это гарантирует истинную случайность, подходящую для приложений безопасности, образовательного использования и любых сценариев, требующих беспристрастной генерации случайных букв."
+          },
+          {
+            "question": "В чем разница между опциями регистра?",
+            "answer": "Заглавные генерируют только большие буквы (A-Z), строчные генерируют только маленькие буквы (a-z), а смешанный регистр генерирует и те, и другие (A-Z, a-z). Смешанный регистр предоставляет 52 возможные буквы, а опции одного регистра предоставляют по 26 каждая."
+          },
+          {
+            "question": "Могу ли я генерировать буквы без дубликатов?",
+            "answer": "Да! Переключите опцию 'Разрешить Повторяющиеся Буквы', чтобы предотвратить дубликаты. Обратите внимание, что когда дубликаты отключены, количество не может превышать доступные буквы (26 для одного регистра, 52 для смешанного)."
+          },
+          {
+            "question": "Что такое различные форматы вывода?",
+            "answer": "Формат с пробелами разделяет буквы пробелами (A B C), непрерывный формат создает неразрывные последовательности (ABC), а формат с переносами строк помещает каждую букву на новую строку. Выбирайте в зависимости от предполагаемого использования."
+          },
+          {
+            "question": "Сколько букв я могу сгенерировать за раз?",
+            "answer": "Вы можете сгенерировать до 10 000 случайных букв за одну операцию. Это ограничение обеспечивает оптимальную производительность, удовлетворяя большинство случаев использования."
+          },
+          {
+            "question": "Могу ли я использовать эти буквы в коммерческих целях?",
+            "answer": "Да! Сгенерированные буквы абсолютно бесплатны для использования в любых целях, включая коммерческие приложения, игры, образовательные материалы или любые другие проекты."
+          },
+          {
+            "question": "Работает ли инструмент в автономном режиме?",
+            "answer": "После загрузки страницы генерация случайных букв работает полностью в вашем браузере и не требует подключения к интернету. Однако для первоначальной загрузки инструмента вам понадобится интернет."
+          },
+          {
+            "question": "Безопасны ли мои данные и конфиденциальны?",
+            "answer": "Абсолютно! Вся генерация случайных букв происходит локально в вашем браузере. Никакие данные не передаются на серверы, не сохраняются и не отслеживаются. Ваши сгенерированные буквы остаются полностью конфиденциальными."
+          }
+        ],
+      "tips": {
+        "title": "Советы для Эффективной Генерации Случайных Букв",
+        "items": [
+          {
+            "title": "Выбирайте Подходящий Регистр",
+            "description": "Используйте заглавные буквы для формальных приложений, строчные для повседневного использования или смешанный регистр для максимального разнообразия и непредсказуемости."
+          },
+          {
+            "title": "Учитывайте Формат Вывода",
+            "description": "Используйте формат с пробелами для читабельности, непрерывный для компактного хранения или переносы строк для вертикальных списков и легкого подсчета."
+          },
+          {
+            "title": "Разумно Управляйте Дубликатами",
+            "description": "Разрешите дубликаты для истинной случайной выборки или отключите для уникальных наборов букв, таких как игровые плитки или образовательные карточки."
+          },
+          {
+            "title": "Проверяйте Ограничения Количества",
+            "description": "Когда дубликаты отключены, убедитесь, что ваше количество не превышает доступные буквы (26 для одного регистра, 52 для смешанного)."
+          },
+          {
+            "title": "Сохраняйте Важные Результаты",
+            "description": "Скачивайте сгенерированные буквы как текстовые файлы для важных приложений, где вам нужно сохранить точную последовательность."
+          }
+        ]
+      }
+    }
+  }
+}

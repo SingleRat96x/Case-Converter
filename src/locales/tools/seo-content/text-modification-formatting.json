@@ -1,0 +1,390 @@
+{
+  "en": {
+    "title": "Text Modification & Formatting Tools - Transform Your Text Content",
+    "metaDescription": "Professional text modification and formatting tools for content creators, writers, and developers. Bold text, italic text, text replacement, line break removal, duplicate removal, and 15+ text transformation utilities. Free and unlimited use.",
+    "sections": {
+      "intro": {
+        "title": "Professional Text Modification & Formatting Tools",
+        "content": "Transform and enhance your text content with our comprehensive suite of text modification and formatting tools. Whether you're a content creator, writer, developer, or marketer, these tools provide everything you need to format, style, and manipulate text for any purpose. From basic formatting like bold and italic text to advanced operations like duplicate line removal and text replacement, all tools are free with unlimited usage."
+      },
+      "features": {
+        "title": "Comprehensive Text Formatting Capabilities",
+        "items": [
+          {
+            "title": "Unicode Text Styling",
+            "description": "Generate bold, italic, subscript, and other Unicode text styles that work across all platforms and social media"
+          },
+          {
+            "title": "Advanced Text Replacement",
+            "description": "Find and replace text with support for case sensitivity, whole words, and bulk operations"
+          },
+          {
+            "title": "Text Cleaning & Organization",
+            "description": "Remove line breaks, strip formatting, eliminate duplicates, and sort text content efficiently"
+          },
+          {
+            "title": "Special Text Effects",
+            "description": "Create bubble text, cursed text, mirror text, invisible text, and other unique text effects"
+          },
+          {
+            "title": "Content Processing",
+            "description": "Repeat text, convert to plain text, and perform bulk text modifications for content workflows"
+          },
+          {
+            "title": "Cross-Platform Compatibility",
+            "description": "All generated text works across social media, documents, websites, and messaging platforms"
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "Instant text transformation with live preview and immediate copy-to-clipboard functionality"
+          },
+          {
+            "title": "Batch Operations",
+            "description": "Process large amounts of text efficiently with bulk operations and file upload support"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Available Text Modification Tools",
+        "items": [
+          {
+            "name": "Bold Text Generator",
+            "href": "/tools/bold-text",
+            "description": "Convert text to bold Unicode characters that work everywhere"
+          },
+          {
+            "name": "Italic Text Generator",
+            "href": "/tools/italic-text", 
+            "description": "Transform text into italic Unicode format for emphasis"
+          },
+          {
+            "name": "Subscript Text Generator",
+            "href": "/tools/subscript-text",
+            "description": "Create subscript text for mathematical and scientific notation"
+          },
+          {
+            "name": "Big Text Generator",
+            "href": "/tools/big-text",
+            "description": "Generate large, attention-grabbing text for headers and titles"
+          },
+          {
+            "name": "Bubble Text Generator",
+            "href": "/tools/bubble-text",
+            "description": "Create decorative bubble-style text for social media posts"
+          },
+          {
+            "name": "Cursed Text Generator",
+            "href": "/tools/cursed-text",
+            "description": "Generate glitchy, distorted text with special Unicode characters"
+          },
+          {
+            "name": "Mirror Text Generator",
+            "href": "/tools/mirror-text",
+            "description": "Flip and reverse text horizontally for creative effects"
+          },
+          {
+            "name": "Invisible Text Generator",
+            "href": "/tools/invisible-text",
+            "description": "Create invisible characters for spacing and formatting tricks"
+          },
+          {
+            "name": "Text Repeater",
+            "href": "/tools/repeat-text",
+            "description": "Repeat text multiple times with custom separators"
+          },
+          {
+            "name": "Find and Replace Text",
+            "href": "/tools/text-replace",
+            "description": "Advanced text replacement with case sensitivity and pattern matching"
+          },
+          {
+            "name": "Remove Line Breaks",
+            "href": "/tools/remove-line-breaks",
+            "description": "Strip line breaks and unwanted whitespace from text"
+          },
+          {
+            "name": "Remove Text Formatting",
+            "href": "/tools/remove-text-formatting",
+            "description": "Convert formatted text to plain text, removing all styling"
+          },
+          {
+            "name": "Remove Duplicate Lines",
+            "href": "/tools/duplicate-line-remover",
+            "description": "Eliminate duplicate lines and clean up text content"
+          },
+          {
+            "name": "Word Sorter",
+            "href": "/tools/sort-words",
+            "description": "Sort words alphabetically or numerically with custom options"
+          },
+          {
+            "name": "Convert to Plain Text",
+            "href": "/tools/plain-text",
+            "description": "Strip all formatting and convert text to plain format"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Text Modification Tools",
+        "items": [
+          {
+            "title": "Social Media Content",
+            "description": "Create eye-catching posts with bold, italic, and decorative text styles that stand out in feeds and grab attention"
+          },
+          {
+            "title": "Content Writing & Editing",
+            "description": "Clean up text, remove formatting, eliminate duplicates, and prepare content for publication across different platforms"
+          },
+          {
+            "title": "Marketing & Advertising",
+            "description": "Generate attention-grabbing headlines, stylized text for campaigns, and formatted content for various marketing channels"
+          },
+          {
+            "title": "Academic & Research",
+            "description": "Format scientific notation with subscripts, clean data, organize text content, and prepare documents for publication"
+          },
+          {
+            "title": "Web Development",
+            "description": "Process text content, clean up data imports, format user-generated content, and prepare text for web applications"
+          },
+          {
+            "title": "Document Processing",
+            "description": "Convert between formats, clean up imported text, organize content, and prepare documents for different systems"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Text Modification Tools",
+        "items": [
+          "Complete suite of 15+ text formatting and modification tools in one place",
+          "Unicode-based text styling that works across all platforms, devices, and applications",
+          "Advanced find-and-replace with pattern matching, case sensitivity, and bulk operations",
+          "Smart text cleaning features including duplicate removal and formatting stripping",
+          "Real-time processing with instant preview and immediate results display",
+          "Copy-to-clipboard functionality and file download options for easy workflow integration",
+          "Mobile-optimized interface that works perfectly on all devices and screen sizes",
+          "Completely free with unlimited usage and no registration or personal data required"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Related Tool Categories",
+        "items": [
+          {
+            "name": "Convert Case Tools",
+            "href": "/category/case-converters",
+            "description": "Convert text between uppercase, lowercase, title case, and other case formats"
+          },
+          {
+            "name": "Social Media Text Generators",
+            "href": "/category/social-media-generators",
+            "description": "Specialized text generators for Instagram, Facebook, Discord, and other platforms"
+          },
+          {
+            "name": "Analysis & Counter Tools", 
+            "href": "/category/text-analysis",
+            "description": "Count characters, words, sentences, and analyze text content statistics"
+          },
+          {
+            "name": "Code & Data Translation",
+            "href": "/category/code-data-tools",
+            "description": "Encode, decode, and convert between various data formats and encodings"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструменты Изменения и Форматирования Текста - Преобразуйте Ваш Контент",
+    "metaDescription": "Профессиональные инструменты изменения и форматирования текста для создателей контента, писателей и разработчиков. Жирный текст, курсивный текст, замена текста, удаление переносов строк, удаление дубликатов и 15+ утилит преобразования текста.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональные Инструменты Изменения и Форматирования Текста",
+        "content": "Преобразуйте и улучшите ваш текстовый контент с нашим комплексным набором инструментов изменения и форматирования текста. Независимо от того, являетесь ли вы создателем контента, писателем, разработчиком или маркетологом, эти инструменты предоставляют все необходимое для форматирования, стилизации и манипулирования текстом для любых целей."
+      },
+      "features": {
+        "title": "Комплексные Возможности Форматирования Текста",
+        "items": [
+          {
+            "title": "Стилизация Unicode Текста",
+            "description": "Генерируйте жирный, курсивный, подстрочный и другие стили Unicode текста, которые работают на всех платформах и в социальных сетях"
+          },
+          {
+            "title": "Расширенная Замена Текста",
+            "description": "Находите и заменяйте текст с поддержкой чувствительности к регистру, целых слов и массовых операций"
+          },
+          {
+            "title": "Очистка и Организация Текста",
+            "description": "Удаляйте переводы строк, убирайте форматирование, устраняйте дубликаты и эффективно сортируйте текстовый контент"
+          },
+          {
+            "title": "Специальные Текстовые Эффекты",
+            "description": "Создавайте пузырьковый текст, проклятый текст, зеркальный текст, невидимый текст и другие уникальные текстовые эффекты"
+          },
+          {
+            "title": "Обработка Контента",
+            "description": "Повторяйте текст, конвертируйте в простой текст и выполняйте массовые изменения текста для рабочих процессов контента"
+          },
+          {
+            "title": "Кроссплатформенная Совместимость",
+            "description": "Весь сгенерированный текст работает в социальных сетях, документах, веб-сайтах и платформах обмена сообщениями"
+          },
+          {
+            "title": "Обработка в Реальном Времени",
+            "description": "Мгновенное преобразование текста с живым предварительным просмотром и немедленным копированием в буфер обмена"
+          },
+          {
+            "title": "Пакетные Операции",
+            "description": "Эффективно обрабатывайте большие объемы текста с массовыми операциями и поддержкой загрузки файлов"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Доступные Инструменты Изменения Текста",
+        "items": [
+          {
+            "name": "Генератор Жирного Текста",
+            "href": "/ru/tools/bold-text",
+            "description": "Конвертируйте текст в жирные Unicode символы, которые работают везде"
+          },
+          {
+            "name": "Генератор Курсивного Текста",
+            "href": "/ru/tools/italic-text", 
+            "description": "Преобразуйте текст в курсивный Unicode формат для выделения"
+          },
+          {
+            "name": "Генератор Подстрочного Текста",
+            "href": "/ru/tools/subscript-text",
+            "description": "Создавайте подстрочный текст для математических и научных обозначений"
+          },
+          {
+            "name": "Генератор Большого Текста",
+            "href": "/ru/tools/big-text",
+            "description": "Генерируйте большой, привлекающий внимание текст для заголовков и названий"
+          },
+          {
+            "name": "Генератор Пузырькового Текста",
+            "href": "/ru/tools/bubble-text",
+            "description": "Создавайте декоративный пузырьковый текст для постов в социальных сетях"
+          },
+          {
+            "name": "Генератор Проклятого Текста",
+            "href": "/ru/tools/cursed-text",
+            "description": "Генерируйте глючный, искаженный текст со специальными Unicode символами"
+          },
+          {
+            "name": "Генератор Зеркального Текста",
+            "href": "/ru/tools/mirror-text",
+            "description": "Переворачивайте и отражайте текст горизонтально для творческих эффектов"
+          },
+          {
+            "name": "Генератор Невидимого Текста",
+            "href": "/ru/tools/invisible-text",
+            "description": "Создавайте невидимые символы для интервалов и форматирования"
+          },
+          {
+            "name": "Повторитель Текста",
+            "href": "/ru/tools/repeat-text",
+            "description": "Повторяйте текст несколько раз с пользовательскими разделителями"
+          },
+          {
+            "name": "Найти и Заменить Текст",
+            "href": "/ru/tools/text-replace",
+            "description": "Расширенная замена текста с чувствительностью к регистру и сопоставлением шаблонов"
+          },
+          {
+            "name": "Удалить Переводы Строк",
+            "href": "/ru/tools/remove-line-breaks",
+            "description": "Убирайте переводы строк и нежелательные пробелы из текста"
+          },
+          {
+            "name": "Удалить Форматирование Текста",
+            "href": "/ru/tools/remove-text-formatting",
+            "description": "Конвертируйте форматированный текст в простой текст, удаляя все стили"
+          },
+          {
+            "name": "Удалить Дублирующиеся Строки",
+            "href": "/ru/tools/duplicate-line-remover",
+            "description": "Устраняйте дублирующиеся строки и очищайте текстовый контент"
+          },
+          {
+            "name": "Сортировщик Слов",
+            "href": "/ru/tools/sort-words",
+            "description": "Сортируйте слова по алфавиту или численно с пользовательскими опциями"
+          },
+          {
+            "name": "Конвертировать в Простой Текст",
+            "href": "/ru/tools/plain-text",
+            "description": "Убирайте все форматирование и конвертируйте текст в простой формат"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Инструментов Изменения Текста",
+        "items": [
+          {
+            "title": "Контент для Социальных Сетей",
+            "description": "Создавайте привлекающие внимание посты с жирным, курсивным и декоративным текстом, который выделяется в лентах"
+          },
+          {
+            "title": "Написание и Редактирование Контента",
+            "description": "Очищайте текст, удаляйте форматирование, устраняйте дубликаты и подготавливайте контент для публикации"
+          },
+          {
+            "title": "Маркетинг и Реклама",
+            "description": "Генерируйте привлекающие внимание заголовки, стилизованный текст для кампаний и форматированный контент"
+          },
+          {
+            "title": "Академические и Исследовательские Работы",
+            "description": "Форматируйте научные обозначения с подстрочными знаками, очищайте данные, организуйте текстовый контент"
+          },
+          {
+            "title": "Веб-разработка",
+            "description": "Обрабатывайте текстовый контент, очищайте импорты данных, форматируйте пользовательский контент"
+          },
+          {
+            "title": "Обработка Документов",
+            "description": "Конвертируйте между форматами, очищайте импортированный текст, организуйте контент"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наши Инструменты Изменения Текста",
+        "items": [
+          "Полный набор из 15+ инструментов форматирования и изменения текста в одном месте",
+          "Стилизация текста на основе Unicode, которая работает на всех платформах, устройствах и приложениях",
+          "Расширенный поиск и замена с сопоставлением шаблонов, чувствительностью к регистру и массовыми операциями",
+          "Умные функции очистки текста, включая удаление дубликатов и устранение форматирования",
+          "Обработка в реальном времени с мгновенным предварительным просмотром и немедленным отображением результатов",
+          "Функция копирования в буфер обмена и опции загрузки файлов для легкой интеграции в рабочий процесс",
+          "Мобильно-оптимизированный интерфейс, который идеально работает на всех устройствах и размерах экрана",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или требования личных данных"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Связанные Категории Инструментов",
+        "items": [
+          {
+            "name": "Инструменты Конвертации Регистра",
+            "href": "/ru/category/case-converters",
+            "description": "Конвертируйте текст между верхним регистром, нижним регистром, заглавным регистром и другими форматами"
+          },
+          {
+            "name": "Генераторы Текста для Социальных Сетей",
+            "href": "/ru/category/social-media-generators",
+            "description": "Специализированные генераторы текста для Instagram, Facebook, Discord и других платформ"
+          },
+          {
+            "name": "Инструменты Анализа и Подсчета", 
+            "href": "/ru/category/text-analysis",
+            "description": "Считайте символы, слова, предложения и анализируйте статистику текстового контента"
+          },
+          {
+            "name": "Перевод Кода и Данных",
+            "href": "/ru/category/code-data-tools",
+            "description": "Кодируйте, декодируйте и конвертируйте между различными форматами данных и кодировками"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,60 @@
+{
+  "en": {
+    "title": "Privacy Policy",
+    "intro": {
+      "heading": "Your privacy matters",
+      "body": "We design our tools with privacy in mind. This policy explains what we do and don’t collect."
+    },
+    "sections": {
+      "collection": {
+        "heading": "Information we collect",
+        "items": [
+          { "title": "Usage Data", "desc": "Basic analytics to improve performance and reliability." },
+          { "title": "No Accounts", "desc": "You can use our tools without creating an account." },
+          { "title": "Client-Side Processing", "desc": "Most inputs are processed in your browser." }
+        ]
+      },
+      "cookies": {
+        "heading": "Cookies",
+        "body": "We may use cookies for language preference and basic analytics."
+      },
+      "thirdParties": {
+        "heading": "Third-party services",
+        "body": "Advertising and analytics providers may set their own cookies; see their policies."
+      },
+      "contact": {
+        "heading": "Contact",
+        "body": "Questions? Reach out via the Contact page."
+      }
+    }
+  },
+  "ru": {
+    "title": "Политика конфиденциальности",
+    "intro": {
+      "heading": "Ваша приватность важна",
+      "body": "Мы проектируем инструменты с учётом приватности. В этой политике объясняется, что мы собираем и чего не собираем."
+    },
+    "sections": {
+      "collection": {
+        "heading": "Какие данные мы собираем",
+        "items": [
+          { "title": "Данные использования", "desc": "Базовая аналитика для повышения производительности и надёжности." },
+          { "title": "Без аккаунтов", "desc": "Вы можете пользоваться инструментами без регистрации." },
+          { "title": "Обработка на стороне клиента", "desc": "Большинство данных обрабатывается в вашем браузере." }
+        ]
+      },
+      "cookies": {
+        "heading": "Cookies",
+        "body": "Мы можем использовать cookies для языка и базовой аналитики."
+      },
+      "thirdParties": {
+        "heading": "Сторонние сервисы",
+        "body": "Провайдеры рекламы и аналитики могут использовать свои cookies; см. их политики."
+      },
+      "contact": {
+        "heading": "Контакты",
+        "body": "Есть вопросы? Напишите нам через страницу Контакты."
+      }
+    }
+  }
+}

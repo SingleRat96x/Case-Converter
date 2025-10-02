@@ -1,0 +1,626 @@
+{
+  "en": {
+    "randomNumber": {
+      "title": "Random Number Generator",
+      "description": "Generate random numbers within specified ranges. Perfect for games, sampling, testing, and statistical analysis.",
+      "outputLabel": "Generated Numbers",
+      "generateButton": "Generate Random Numbers",
+      "options": {
+        "minValue": "Minimum Value",
+        "maxValue": "Maximum Value",
+        "quantity": "How Many Numbers",
+        "allowDuplicates": "Allow Duplicate Numbers",
+        "sortResults": "Sort Results",
+        "sortOrder": "Sort Order",
+        "ascending": "Ascending (1, 2, 3...)",
+        "descending": "Descending (3, 2, 1...)",
+        "none": "No Sorting"
+      },
+      "placeholders": {
+        "minValue": "Enter minimum value (e.g., 1)",
+        "maxValue": "Enter maximum value (e.g., 100)",
+        "quantity": "Enter quantity (1-10000)"
+      },
+      "validation": {
+        "minRequired": "Minimum value is required",
+        "maxRequired": "Maximum value is required",
+        "quantityRequired": "Quantity is required",
+        "minMaxInvalid": "Maximum value must be greater than minimum value",
+        "quantityInvalid": "Quantity must be between 1 and 10,000",
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the range size",
+        "invalidNumber": "Please enter a valid number",
+        "rangeTooBig": "Range is too large. Please use a smaller range or allow duplicates"
+      },
+      "downloadFileName": "random-numbers.txt",
+      "copiedMessage": "Random numbers copied to clipboard!",
+      "generatedMessage": "Successfully generated {count} random number(s)!",
+      "help": {
+        "minValue": "The smallest number that can be generated",
+        "maxValue": "The largest number that can be generated",
+        "quantity": "How many random numbers to generate (maximum 10,000)",
+        "allowDuplicates": "When enabled, the same number can appear multiple times",
+        "sortResults": "Choose how to order the generated numbers"
+      }
+    },
+    "randomIP": {
+      "title": "Random IP Address Generator",
+      "description": "Generate random IPv4 and IPv6 addresses for network testing, development, and simulation. Supports custom ranges, private/public IPs, and multiple output formats.",
+      "outputLabel": "Generated IP Addresses",
+      "generateButton": "Generate Random IPs",
+      "options": {
+        "ipVersion": "IP Version",
+        "ipType": "IP Address Type",
+        "quantity": "How Many IP Addresses",
+        "outputFormat": "Output Format",
+        "allowDuplicates": "Allow Duplicate IPs",
+        "sortResults": "Sort Results",
+        "customRange": "Custom IP Range",
+        "subnetMask": "Subnet Mask",
+        "ipv4": "IPv4",
+        "ipv6": "IPv6",
+        "any": "Any IP Address",
+        "private": "Private IP Only",
+        "public": "Public IP Only",
+        "custom": "Custom Range",
+        "standard": "Standard (192.168.1.1)",
+        "cidr": "CIDR Notation (192.168.1.1/24)",
+        "hex": "Hexadecimal",
+        "binary": "Binary"
+      },
+      "placeholders": {
+        "quantity": "Enter quantity (1-10000)",
+        "customRange": "e.g., 192.168.1.0/24"
+      },
+      "validation": {
+        "quantityRequired": "Quantity is required",
+        "quantityInvalid": "Quantity must be between 1 and 10,000",
+        "customRangeRequired": "Custom range is required",
+        "invalidCIDR": "Please enter a valid CIDR notation (e.g., 192.168.1.0/24)",
+        "invalidSubnetMask": "Subnet mask must be between 1 and 32 for IPv4"
+      },
+      "downloadFileName": "random-ip-addresses.txt",
+      "help": {
+        "ipVersion": "Choose between IPv4 (32-bit) and IPv6 (128-bit) addresses",
+        "ipType": "Select the type of IP addresses to generate: Any (all types), Private (internal networks), Public (internet), or Custom (specific range)",
+        "quantity": "How many random IP addresses to generate (maximum 10,000)",
+        "outputFormat": "Choose how to format the generated IP addresses: Standard (192.168.1.1), CIDR (192.168.1.1/24), Hex (c0a80101), or Binary (11000000.10101000.00000001.00000001)",
+        "allowDuplicates": "When enabled, the same IP address can appear multiple times",
+        "sortResults": "Sort IP addresses numerically",
+        "customRange": "Enter a CIDR range to generate IPs from (e.g., 192.168.1.0/24)"
+      }
+    },
+    "randomLetter": {
+      "title": "Random Letter Generator",
+      "description": "Generate random letters with customizable case options and output formats. Perfect for games, testing, educational activities, and creative projects.",
+      "outputLabel": "Generated Letters",
+      "generateButton": "Generate Random Letters",
+      "options": {
+        "quantity": "How Many Letters",
+        "caseType": "Letter Case",
+        "outputFormat": "Output Format",
+        "allowDuplicates": "Allow Duplicate Letters",
+        "mixed": "Mixed Case (A-Z, a-z)",
+        "uppercase": "Uppercase Only (A-Z)",
+        "lowercase": "Lowercase Only (a-z)",
+        "spaced": "Spaced (A B C)",
+        "continuous": "Continuous (ABC)",
+        "lines": "Line Breaks (A\\nB\\nC)"
+      },
+      "placeholders": {
+        "quantity": "Enter quantity (1-10000)"
+      },
+      "validation": {
+        "quantityRequired": "Quantity is required",
+        "quantityInvalid": "Quantity must be between 1 and 10,000",
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed available letters (26 for single case, 52 for mixed case)"
+      },
+      "downloadFileName": "random-letters.txt",
+      "copiedMessage": "Random letters copied to clipboard!",
+      "generatedMessage": "Successfully generated {count} random letter(s)!",
+      "help": {
+        "quantity": "How many random letters to generate (maximum 10,000)",
+        "caseType": "Choose between uppercase, lowercase, or mixed case letters",
+        "outputFormat": "How to format the generated letters in the output",
+        "allowDuplicates": "When enabled, the same letter can appear multiple times"
+      }
+    },
+    "randomMonth": {
+      "title": "Random Month Generator",
+      "description": "Generate random months within specified year ranges with multiple output formats. Perfect for planning, scheduling, testing, and data generation applications.",
+      "outputLabel": "Generated Months",
+      "generateButton": "Generate Random Months",
+      "options": {
+        "startYear": "Start Year",
+        "endYear": "End Year",
+        "quantity": "How Many Months",
+        "outputFormat": "Output Format",
+        "allowDuplicates": "Allow Duplicate Months",
+        "sortResults": "Sort Results Chronologically",
+        "numeric": "Numeric (01, 02, 03...)",
+        "short": "Short Names (Jan, Feb, Mar...)",
+        "long": "Long Names (January, February, March...)",
+        "yearMonth": "Year + Month (January 2024, February 2024...)"
+      },
+      "placeholders": {
+        "startYear": "Enter start year (e.g., 2020)",
+        "endYear": "Enter end year (e.g., 2030)",
+        "quantity": "Enter quantity (1-10000)"
+      },
+      "validation": {
+        "startYearRequired": "Start year is required",
+        "endYearRequired": "End year is required",
+        "quantityRequired": "Quantity is required",
+        "invalidYear": "Please enter a valid year between 1900 and 2100",
+        "endBeforeStart": "End year must be after or equal to start year",
+        "quantityInvalid": "Quantity must be between 1 and 10,000",
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the total months in the year range"
+      },
+      "downloadFileName": "random-months.txt",
+      "copiedMessage": "Random months copied to clipboard!",
+      "generatedMessage": "Successfully generated {count} random month(s)!",
+      "help": {
+        "startYear": "The earliest year from which months can be generated",
+        "endYear": "The latest year from which months can be generated", 
+        "quantity": "How many random months to generate (maximum 10,000)",
+        "outputFormat": "Choose how to format the generated months",
+        "allowDuplicates": "When enabled, the same month can appear multiple times",
+        "sortResults": "When enabled, months are sorted chronologically"
+      }
+    },
+    "randomDate": {
+      "title": "Random Date Generator",
+      "description": "Generate random dates within specified date ranges with multiple output formats. Perfect for testing, data generation, and scheduling applications.",
+      "outputLabel": "Generated Dates",
+      "generateButton": "Generate Random Dates",
+      "options": {
+        "startDate": "Start Date",
+        "endDate": "End Date",
+        "quantity": "How Many Dates",
+        "outputFormat": "Output Format",
+        "allowDuplicates": "Allow Duplicate Dates",
+        "iso": "ISO Format (YYYY-MM-DD)",
+        "us": "US Format (MM/DD/YYYY)",
+        "eu": "EU Format (DD/MM/YYYY)",
+        "readable": "Readable Format (Month DD, YYYY)"
+      },
+      "placeholders": {
+        "quantity": "Enter quantity (1-10000)"
+      },
+      "validation": {
+        "startDateRequired": "Start date is required",
+        "endDateRequired": "End date is required",
+        "quantityRequired": "Quantity is required",
+        "quantityInvalid": "Quantity must be between 1 and 10,000",
+        "endBeforeStart": "End date must be after start date",
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the number of days in the date range",
+        "invalidDate": "Please enter a valid date"
+      },
+      "downloadFileName": "random-dates.txt",
+      "copiedMessage": "Random dates copied to clipboard!",
+      "generatedMessage": "Successfully generated {count} random date(s)!",
+      "help": {
+        "startDate": "The earliest date that can be generated",
+        "endDate": "The latest date that can be generated",
+        "quantity": "How many random dates to generate (maximum 10,000)",
+        "outputFormat": "Choose how to format the generated dates",
+        "allowDuplicates": "When enabled, the same date can appear multiple times"
+      }
+    },
+    "randomChoice": {
+      "title": "Random Choice Picker",
+      "description": "Pick random choices from your own list of options. Perfect for decision making, prize draws, random selection, and eliminating choice paralysis.",
+      "outputLabel": "Selected Choices",
+      "generateButton": "Pick Random Choice",
+      "options": {
+        "choices": "Your Choices (One Per Line)",
+        "quantity": "How Many Choices to Pick",
+        "outputFormat": "Output Format",
+        "allowDuplicates": "Allow Same Choice Multiple Times",
+        "removeBlanks": "Remove Empty Lines",
+        "lines": "Line Breaks (Choice1\\nChoice2)",
+        "comma": "Comma Separated (Choice1, Choice2)",
+        "numbered": "Numbered List (1. Choice1)",
+        "bulleted": "Bulleted List (• Choice1)"
+      },
+      "placeholders": {
+        "choices": "Pizza\\nBurger\\nSushi\\nTacos\\nSalad",
+        "quantity": "Enter quantity (1-1000)"
+      },
+      "validation": {
+        "choicesRequired": "Please enter at least one choice",
+        "noValidChoices": "No valid choices found after processing",
+        "needMoreChoices": "Need more choices for the requested quantity",
+        "quantityRequired": "Quantity is required",
+        "quantityInvalid": "Quantity must be between 1 and 1,000",
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the number of available choices"
+      },
+      "downloadFileName": "random-choices.txt",
+      "help": {
+        "choices": "Enter your options, one per line. Each line will be treated as a separate choice to pick from",
+        "quantity": "How many random choices to pick from your list (maximum 1,000)",
+        "outputFormat": "Choose how the selected choices should be formatted in the output",
+        "allowDuplicates": "When enabled, the same choice can be selected multiple times",
+        "removeBlanks": "When enabled, empty lines in your choices will be ignored"
+      }
+    },
+    "passwordGenerator": {
+      "title": "Secure Password Generator",
+      "description": "Generate cryptographically secure passwords with customizable length and character sets. Perfect for creating strong, unique passwords for accounts, applications, and security purposes.",
+      "outputLabel": "Generated Password",
+      "generateButton": "Generate Secure Password",
+      "options": {
+        "length": "Password Length",
+        "includeUppercase": "Include Uppercase Letters (A-Z)",
+        "includeLowercase": "Include Lowercase Letters (a-z)",
+        "includeNumbers": "Include Numbers (0-9)",
+        "includeSymbols": "Include Symbols (!@#$%^&*)",
+        "excludeAmbiguous": "Exclude Ambiguous Characters",
+        "requireAllTypes": "Require All Selected Character Types",
+        "characterTypes": "Characters used:"
+      },
+      "placeholders": {
+        "length": "Enter length (4-128)"
+      },
+      "validation": {
+        "lengthRequired": "Password length is required",
+        "lengthInvalid": "Password length must be between 4 and 128 characters",
+        "noCharacterSets": "At least one character set must be selected"
+      },
+      "downloadFileName": "secure-password.txt",
+      "copiedMessage": "Secure password copied to clipboard!",
+      "generatedMessage": "Successfully generated secure password!",
+      "help": {
+        "length": "Choose password length between 4 and 128 characters. Longer passwords are more secure",
+        "includeUppercase": "Include uppercase letters (A-Z) for additional security and complexity",
+        "includeLowercase": "Include lowercase letters (a-z) for basic alphabetic characters",
+        "includeNumbers": "Include numeric digits (0-9) to increase password strength",
+        "includeSymbols": "Include special symbols (!@#$%^&*) for maximum security",
+        "excludeAmbiguous": "Exclude visually similar characters like 0/O, l/1/I for better readability",
+        "requireAllTypes": "Ensure the password contains at least one character from each selected type"
+      }
+    },
+    "uuidGenerator": {
+      "title": "UUID Generator",
+      "description": "Generate unique identifiers (UUIDs) for your applications and databases. Support for UUID v1 (timestamp) and v4 (random) with multiple output formats.",
+      "outputLabel": "Generated UUIDs",
+      "generateButton": "Generate UUIDs",
+      "downloadFileName": "generated-uuids.txt",
+      "options": {
+        "version": "UUID Version",
+        "format": "Output Format",
+        "quantity": "Number of UUIDs",
+        "formatting": "Formatting Options",
+        "uppercase": "Uppercase",
+        "removeDashes": "Remove Dashes"
+      },
+      "versions": {
+        "v1": "Version 1 (Timestamp-based)",
+        "v4": "Version 4 (Random)"
+      },
+      "formats": {
+        "standard": "Standard (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)",
+        "compact": "Compact (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)",
+        "braced": "Braced ({xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx})",
+        "urn": "URN (urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+      },
+      "help": {
+        "version": "UUID v4 uses random data, v1 includes timestamp and is partially predictable",
+        "format": "Choose how UUIDs should be formatted in the output",
+        "uppercase": "Display UUIDs in uppercase letters instead of lowercase",
+        "removeDashes": "Remove hyphens from standard UUID format"
+      }
+    }
+  },
+  "ru": {
+    "randomNumber": {
+      "title": "Генератор Случайных Чисел",
+      "description": "Генерируйте случайные числа в заданных диапазонах. Идеально для игр, выборки, тестирования и статистического анализа.",
+      "outputLabel": "Сгенерированные Числа",
+      "generateButton": "Генерировать Случайные Числа",
+      "options": {
+        "minValue": "Минимальное Значение",
+        "maxValue": "Максимальное Значение",
+        "quantity": "Количество Чисел",
+        "allowDuplicates": "Разрешить Повторяющиеся Числа",
+        "sortResults": "Сортировать Результаты",
+        "sortOrder": "Порядок Сортировки",
+        "ascending": "По возрастанию (1, 2, 3...)",
+        "descending": "По убыванию (3, 2, 1...)",
+        "none": "Без Сортировки"
+      },
+      "placeholders": {
+        "minValue": "Введите минимальное значение (например, 1)",
+        "maxValue": "Введите максимальное значение (например, 100)",
+        "quantity": "Введите количество (1-10000)"
+      },
+      "validation": {
+        "minRequired": "Минимальное значение обязательно",
+        "maxRequired": "Максимальное значение обязательно",
+        "quantityRequired": "Количество обязательно",
+        "minMaxInvalid": "Максимальное значение должно быть больше минимального",
+        "quantityInvalid": "Количество должно быть от 1 до 10 000",
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать размер диапазона",
+        "invalidNumber": "Пожалуйста, введите действительное число",
+        "rangeTooBig": "Диапазон слишком большой. Используйте меньший диапазон или разрешите повторения"
+      },
+      "downloadFileName": "random-numbers.txt",
+      "copiedMessage": "Случайные числа скопированы в буфер обмена!",
+      "generatedMessage": "Успешно сгенерировано {count} случайных чисел!",
+      "help": {
+        "minValue": "Наименьшее число, которое может быть сгенерировано",
+        "maxValue": "Наибольшее число, которое может быть сгенерировано",
+        "quantity": "Сколько случайных чисел сгенерировать (максимум 10 000)",
+        "allowDuplicates": "Когда включено, одно и то же число может появляться несколько раз",
+        "sortResults": "Выберите, как упорядочить сгенерированные числа"
+      }
+    },
+    "randomLetter": {
+      "title": "Генератор Случайных Букв",
+      "description": "Генерируйте случайные буквы с настраиваемыми параметрами регистра и форматами вывода. Идеально для игр, тестирования, образовательных мероприятий и творческих проектов.",
+      "outputLabel": "Сгенерированные Буквы",
+      "generateButton": "Генерировать Случайные Буквы",
+      "options": {
+        "quantity": "Количество Букв",
+        "caseType": "Регистр Букв",
+        "outputFormat": "Формат Вывода",
+        "allowDuplicates": "Разрешить Повторяющиеся Буквы",
+        "mixed": "Смешанный Регистр (A-Z, a-z)",
+        "uppercase": "Только Заглавные (A-Z)",
+        "lowercase": "Только Строчные (a-z)",
+        "spaced": "С Пробелами (A B C)",
+        "continuous": "Непрерывно (ABC)",
+        "lines": "По Строкам (A\\nB\\nC)"
+      },
+      "placeholders": {
+        "quantity": "Введите количество (1-10000)"
+      },
+      "validation": {
+        "quantityRequired": "Количество обязательно",
+        "quantityInvalid": "Количество должно быть от 1 до 10 000",
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать доступные буквы (26 для одного регистра, 52 для смешанного)"
+      },
+      "downloadFileName": "random-letters.txt",
+      "copiedMessage": "Случайные буквы скопированы в буфер обмена!",
+      "generatedMessage": "Успешно сгенерировано {count} случайных букв!",
+      "help": {
+        "quantity": "Сколько случайных букв сгенерировать (максимум 10 000)",
+        "caseType": "Выберите между заглавными, строчными или смешанным регистром букв",
+        "outputFormat": "Как форматировать сгенерированные буквы в выводе",
+        "allowDuplicates": "Когда включено, одна и та же буква может появляться несколько раз"
+      }
+    },
+    "randomMonth": {
+      "title": "Генератор Случайных Месяцев",
+      "description": "Генерируйте случайные месяцы в заданных диапазонах лет с различными форматами вывода. Идеально для планирования, составления расписаний, тестирования и генерации данных.",
+      "outputLabel": "Сгенерированные Месяцы",
+      "generateButton": "Генерировать Случайные Месяцы",
+      "options": {
+        "startYear": "Начальный Год",
+        "endYear": "Конечный Год",
+        "quantity": "Количество Месяцев",
+        "outputFormat": "Формат Вывода",
+        "allowDuplicates": "Разрешить Повторяющиеся Месяцы",
+        "sortResults": "Сортировать Результаты Хронологически",
+        "numeric": "Числовой (01, 02, 03...)",
+        "short": "Короткие Названия (Янв, Фев, Мар...)",
+        "long": "Полные Названия (Январь, Февраль, Март...)",
+        "yearMonth": "Год + Месяц (Январь 2024, Февраль 2024...)"
+      },
+      "placeholders": {
+        "startYear": "Введите начальный год (например, 2020)",
+        "endYear": "Введите конечный год (например, 2030)",
+        "quantity": "Введите количество (1-10000)"
+      },
+      "validation": {
+        "startYearRequired": "Начальный год обязателен",
+        "endYearRequired": "Конечный год обязателен",
+        "quantityRequired": "Количество обязательно",
+        "invalidYear": "Пожалуйста, введите действительный год между 1900 и 2100",
+        "endBeforeStart": "Конечный год должен быть после или равен начальному году",
+        "quantityInvalid": "Количество должно быть от 1 до 10 000",
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать общее количество месяцев в диапазоне лет"
+      },
+      "downloadFileName": "random-months.txt",
+      "copiedMessage": "Случайные месяцы скопированы в буфер обмена!",
+      "generatedMessage": "Успешно сгенерировано {count} случайных месяцев!",
+      "help": {
+        "startYear": "Самый ранний год, из которого могут быть сгенерированы месяцы",
+        "endYear": "Самый поздний год, из которого могут быть сгенерированы месяцы",
+        "quantity": "Сколько случайных месяцев сгенерировать (максимум 10 000)",
+        "outputFormat": "Выберите, как форматировать сгенерированные месяцы",
+        "allowDuplicates": "Когда включено, один и тот же месяц может появляться несколько раз",
+        "sortResults": "Когда включено, месяцы сортируются хронологически"
+      }
+    },
+    "randomIP": {
+      "title": "Генератор Случайных IP Адресов",
+      "description": "Генерируйте случайные IPv4 и IPv6 адреса для тестирования сети, разработки и симуляции. Поддержка настраиваемых диапазонов, частных/публичных IP и различных форматов вывода.",
+      "outputLabel": "Сгенерированные IP Адреса",
+      "generateButton": "Генерировать Случайные IP",
+      "options": {
+        "ipVersion": "Версия IP",
+        "ipType": "Тип IP Адреса",
+        "quantity": "Количество IP Адресов",
+        "outputFormat": "Формат Вывода",
+        "allowDuplicates": "Разрешить Повторяющиеся IP",
+        "sortResults": "Сортировать Результаты",
+        "customRange": "Настраиваемый IP Диапазон",
+        "subnetMask": "Маска Подсети",
+        "ipv4": "IPv4",
+        "ipv6": "IPv6",
+        "any": "Любой IP Адрес",
+        "private": "Только Частный IP",
+        "public": "Только Публичный IP",
+        "custom": "Настраиваемый Диапазон",
+        "standard": "Стандартный (192.168.1.1)",
+        "cidr": "CIDR Нотация (192.168.1.1/24)",
+        "hex": "Шестнадцатеричный",
+        "binary": "Двоичный"
+      },
+      "placeholders": {
+        "quantity": "Введите количество (1-10000)",
+        "customRange": "например, 192.168.1.0/24"
+      },
+      "validation": {
+        "quantityRequired": "Количество обязательно",
+        "quantityInvalid": "Количество должно быть от 1 до 10 000",
+        "customRangeRequired": "Настраиваемый диапазон обязателен",
+        "invalidCIDR": "Пожалуйста, введите действительную CIDR нотацию (например, 192.168.1.0/24)",
+        "invalidSubnetMask": "Маска подсети должна быть от 1 до 32 для IPv4"
+      },
+      "downloadFileName": "random-ip-addresses.txt",
+      "help": {
+        "ipVersion": "Выберите между IPv4 (32-бит) и IPv6 (128-бит) адресами",
+        "ipType": "Выберите тип IP-адресов для генерации: Любой (все типы), Частный (внутренние сети), Публичный (интернет) или Настраиваемый (конкретный диапазон)",
+        "quantity": "Сколько случайных IP-адресов сгенерировать (максимум 10,000)",
+        "outputFormat": "Выберите, как форматировать сгенерированные IP-адреса: Стандартный (192.168.1.1), CIDR (192.168.1.1/24), Hex (c0a80101) или Двоичный (11000000.10101000.00000001.00000001)",
+        "allowDuplicates": "Когда включено, один и тот же IP-адрес может появляться несколько раз",
+        "sortResults": "Сортировать IP-адреса численно",
+        "customRange": "Введите CIDR диапазон для генерации IP из него (например, 192.168.1.0/24)"
+      }
+    },
+    "randomDate": {
+      "title": "Генератор Случайных Дат",
+      "description": "Генерируйте случайные даты в заданных диапазонах дат с различными форматами вывода. Идеально для тестирования, генерации данных и планирования.",
+      "outputLabel": "Сгенерированные Даты",
+      "generateButton": "Генерировать Случайные Даты",
+      "options": {
+        "startDate": "Начальная Дата",
+        "endDate": "Конечная Дата",
+        "quantity": "Количество Дат",
+        "outputFormat": "Формат Вывода",
+        "allowDuplicates": "Разрешить Повторяющиеся Даты",
+        "iso": "ISO Формат (ГГГГ-ММ-ДД)",
+        "us": "US Формат (ММ/ДД/ГГГГ)",
+        "eu": "EU Формат (ДД/ММ/ГГГГ)",
+        "readable": "Читаемый Формат (Месяц ДД, ГГГГ)"
+      },
+      "placeholders": {
+        "quantity": "Введите количество (1-10000)"
+      },
+      "validation": {
+        "startDateRequired": "Начальная дата обязательна",
+        "endDateRequired": "Конечная дата обязательна",
+        "quantityRequired": "Количество обязательно",
+        "quantityInvalid": "Количество должно быть от 1 до 10 000",
+        "endBeforeStart": "Конечная дата должна быть после начальной даты",
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать количество дней в диапазоне дат",
+        "invalidDate": "Пожалуйста, введите действительную дату"
+      },
+      "downloadFileName": "random-dates.txt",
+      "copiedMessage": "Случайные даты скопированы в буфер обмена!",
+      "generatedMessage": "Успешно сгенерировано {count} случайных дат!",
+      "help": {
+        "startDate": "Самая ранняя дата, которая может быть сгенерирована",
+        "endDate": "Самая поздняя дата, которая может быть сгенерирована",
+        "quantity": "Сколько случайных дат сгенерировать (максимум 10 000)",
+        "outputFormat": "Выберите, как форматировать сгенерированные даты",
+        "allowDuplicates": "Когда включено, одна и та же дата может появляться несколько раз"
+      }
+    },
+    "randomChoice": {
+      "title": "Генератор Случайного Выбора",
+      "description": "Выбирайте случайные варианты из вашего собственного списка опций. Идеально для принятия решений, розыгрышей призов, случайного выбора и устранения паралича выбора.",
+      "outputLabel": "Выбранные Варианты",
+      "generateButton": "Выбрать Случайный Вариант",
+      "options": {
+        "choices": "Ваши Варианты (По Одному в Строке)",
+        "quantity": "Сколько Вариантов Выбрать",
+        "outputFormat": "Формат Вывода",
+        "allowDuplicates": "Разрешить Одинаковые Варианты Несколько Раз",
+        "removeBlanks": "Удалить Пустые Строки",
+        "lines": "Переносы Строк (Вариант1\\nВариант2)",
+        "comma": "Через Запятую (Вариант1, Вариант2)",
+        "numbered": "Нумерованный Список (1. Вариант1)",
+        "bulleted": "Маркированный Список (• Вариант1)"
+      },
+      "placeholders": {
+        "choices": "Пицца\\nБургер\\nСуши\\nТако\\nСалат",
+        "quantity": "Введите количество (1-1000)"
+      },
+      "validation": {
+        "choicesRequired": "Пожалуйста, введите хотя бы один вариант",
+        "noValidChoices": "Не найдено допустимых вариантов после обработки",
+        "needMoreChoices": "Нужно больше вариантов для запрошенного количества",
+        "quantityRequired": "Количество обязательно",
+        "quantityInvalid": "Количество должно быть от 1 до 1 000",
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать число доступных вариантов"
+      },
+      "downloadFileName": "random-choices.txt",
+      "help": {
+        "choices": "Введите ваши варианты, по одному на строку. Каждая строка будет рассматриваться как отдельный вариант для выбора",
+        "quantity": "Сколько случайных вариантов выбрать из вашего списка (максимум 1 000)",
+        "outputFormat": "Выберите, как должны быть отформатированы выбранные варианты в выводе",
+        "allowDuplicates": "Когда включено, один и тот же вариант может быть выбран несколько раз",
+        "removeBlanks": "Когда включено, пустые строки в ваших вариантах будут игнорироваться"
+      }
+    },
+    "passwordGenerator": {
+      "title": "Генератор Безопасных Паролей",
+      "description": "Генерируйте криптографически безопасные пароли с настраиваемой длиной и наборами символов. Идеально для создания надежных, уникальных паролей для аккаунтов, приложений и целей безопасности.",
+      "outputLabel": "Сгенерированный Пароль",
+      "generateButton": "Генерировать Безопасный Пароль",
+      "options": {
+        "length": "Длина Пароля",
+        "includeUppercase": "Включить Заглавные Буквы (A-Z)",
+        "includeLowercase": "Включить Строчные Буквы (a-z)",
+        "includeNumbers": "Включить Цифры (0-9)",
+        "includeSymbols": "Включить Символы (!@#$%^&*)",
+        "excludeAmbiguous": "Исключить Двусмысленные Символы",
+        "requireAllTypes": "Требовать Все Выбранные Типы Символов",
+        "characterTypes": "Используемые символы:"
+      },
+      "placeholders": {
+        "length": "Введите длину (4-128)"
+      },
+      "validation": {
+        "lengthRequired": "Длина пароля обязательна",
+        "lengthInvalid": "Длина пароля должна быть от 4 до 128 символов",
+        "noCharacterSets": "Должен быть выбран хотя бы один набор символов"
+      },
+      "downloadFileName": "secure-password.txt",
+      "copiedMessage": "Безопасный пароль скопирован в буфер обмена!",
+      "generatedMessage": "Безопасный пароль успешно сгенерирован!",
+      "help": {
+        "length": "Выберите длину пароля от 4 до 128 символов. Более длинные пароли более безопасны",
+        "includeUppercase": "Включить заглавные буквы (A-Z) для дополнительной безопасности и сложности",
+        "includeLowercase": "Включить строчные буквы (a-z) для основных алфавитных символов",
+        "includeNumbers": "Включить цифры (0-9) для увеличения стойкости пароля",
+        "includeSymbols": "Включить специальные символы (!@#$%^&*) для максимальной безопасности",
+        "excludeAmbiguous": "Исключить визуально похожие символы как 0/O, l/1/I для лучшей читаемости",
+        "requireAllTypes": "Убедиться, что пароль содержит хотя бы один символ из каждого выбранного типа"
+      }
+    },
+    "uuidGenerator": {
+      "title": "Генератор UUID",
+      "description": "Генерируйте уникальные идентификаторы (UUID) для ваших приложений и баз данных. Поддержка UUID v1 (временная метка) и v4 (случайный) с множественными форматами вывода.",
+      "outputLabel": "Сгенерированные UUID",
+      "generateButton": "Генерировать UUID",
+      "downloadFileName": "generated-uuids.txt",
+      "options": {
+        "version": "Версия UUID",
+        "format": "Формат Вывода",
+        "quantity": "Количество UUID",
+        "formatting": "Параметры Форматирования",
+        "uppercase": "Верхний Регистр",
+        "removeDashes": "Убрать Тире"
+      },
+      "versions": {
+        "v1": "Версия 1 (На основе временной метки)",
+        "v4": "Версия 4 (Случайный)"
+      },
+      "formats": {
+        "standard": "Стандартный (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)",
+        "compact": "Компактный (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)",
+        "braced": "В фигурных скобках ({xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx})",
+        "urn": "URN (urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+      },
+      "help": {
+        "version": "UUID v4 использует случайные данные, v1 включает временную метку и частично предсказуем",
+        "format": "Выберите, как UUID должны быть отформатированы в выводе",
+        "uppercase": "Отображать UUID в верхнем регистре вместо нижнего",
+        "removeDashes": "Удалить дефисы из стандартного формата UUID"
+      }
+    }
+  }
+}

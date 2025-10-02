@@ -1,0 +1,382 @@
+{
+  "en": {
+    "title": "Free Random IP Address Generator - IPv4 & IPv6 Network Testing Tool",
+    "metaDescription": "Generate secure random IP addresses for network testing, development, and simulation. Supports both IPv4 and IPv6 with custom subnet ranges, CIDR notation, and bulk generation up to 10,000 addresses.",
+    "sections": {
+      "intro": {
+        "title": "Professional Random IP Address Generator Tool",
+        "content": "Generate cryptographically secure random IP addresses with our advanced network testing tool. Whether you need IPv4 or IPv6 addresses for development, testing, simulation, or educational purposes, our tool provides reliable, unbiased IP generation with extensive customization options. Features include custom subnet ranges, private/public IP selection, multiple output formats, and bulk generation capabilities."
+      },
+      "features": {
+        "title": "Advanced IP Address Generation Features",
+        "items": [
+          {
+            "title": "IPv4 & IPv6 Support",
+            "description": "Generate both IPv4 (32-bit) and IPv6 (128-bit) addresses with full protocol compliance and proper formatting"
+          },
+          {
+            "title": "Custom IP Ranges", 
+            "description": "Define custom CIDR ranges, subnet masks, and network segments for targeted IP generation within specific network boundaries"
+          },
+          {
+            "title": "Private & Public IPs",
+            "description": "Choose between private IP ranges (10.x.x.x, 192.168.x.x, 172.16-31.x.x) or public internet-routable addresses"
+          },
+          {
+            "title": "Multiple Output Formats",
+            "description": "Export in standard notation, CIDR format, hexadecimal, or binary representation for different use cases"
+          },
+          {
+            "title": "Cryptographically Secure", 
+            "description": "Uses crypto.getRandomValues() for true randomness, ensuring unbiased and unpredictable IP address generation"
+          },
+          {
+            "title": "Bulk Generation",
+            "description": "Generate up to 10,000 random IP addresses at once for large-scale network testing and simulation projects"
+          },
+          {
+            "title": "Network Testing Ready",
+            "description": "Perfect for penetration testing, network simulation, load testing, and development environments"
+          },
+          {
+            "title": "Duplicate Management",
+            "description": "Choose to allow or prevent duplicate IP addresses based on your specific testing requirements"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Random IP Address Generator",
+        "steps": [
+          {
+            "title": "Select IP Version",
+            "description": "Choose between IPv4 for standard networking or IPv6 for modern network implementations and larger address spaces."
+          },
+          {
+            "title": "Choose IP Address Type",
+            "description": "Select 'Any' for random IPs, 'Private' for internal network addresses, 'Public' for internet-routable IPs, or 'Custom' for specific ranges."
+          },
+          {
+            "title": "Configure Custom Ranges (Optional)",
+            "description": "When using custom ranges, enter CIDR notation (e.g., 192.168.1.0/24) to generate IPs within specific network segments."
+          },
+          {
+            "title": "Set Generation Parameters",
+            "description": "Specify the number of IP addresses to generate (1-10,000), choose output format, and configure duplicate and sorting options."
+          },
+          {
+            "title": "Generate & Export",
+            "description": "Click generate to create your random IP addresses. Copy to clipboard, download as text file, or use directly in your applications."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Random IP Address Generation Examples",
+        "items": [
+          {
+            "title": "IPv4 Standard Format",
+            "input": "IP Version: IPv4, Type: Any, Quantity: 3, Format: Standard",
+            "output": "192.168.1.145\n10.0.0.23\n203.134.56.78"
+          },
+          {
+            "title": "IPv4 CIDR Format", 
+            "input": "IP Version: IPv4, Type: Any, Quantity: 3, Format: CIDR",
+            "output": "192.168.1.145/32\n10.0.0.23/32\n172.16.5.100/32"
+          },
+          {
+            "title": "IPv6 Standard Format",
+            "input": "IP Version: IPv6, Type: Any, Quantity: 3, Format: Standard",
+            "output": "2001:0db8:85a3:0000:0000:8a2e:0370:7334\nfe80::1\nfc00::1"
+          },
+          {
+            "title": "Private IP Ranges",
+            "input": "IP Version: IPv4, Type: Private, Quantity: 3, Format: Standard",
+            "output": "10.45.123.67\n192.168.100.200\n172.20.15.88"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Random IP Addresses",
+        "items": [
+          {
+            "title": "Network Testing",
+            "description": "Test network configurations, firewall rules, and routing protocols with diverse IP address ranges"
+          },
+          {
+            "title": "Software Development",
+            "description": "Generate test data for applications that handle IP addresses, network monitoring tools, and log analysis systems"
+          },
+          {
+            "title": "Security Testing",
+            "description": "Create realistic IP address datasets for penetration testing, vulnerability assessments, and security research"
+          },
+          {
+            "title": "Load Testing",
+            "description": "Simulate traffic from different IP addresses to test server capacity and geographic load distribution"
+          },
+          {
+            "title": "Educational Purposes",
+            "description": "Teaching network concepts, subnetting, CIDR notation, and IP address space management"
+          },
+          {
+            "title": "Network Simulation",
+            "description": "Create virtual network topologies and simulate large-scale network environments for research and testing"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Random IP Generator",
+        "items": [
+          "Supports both IPv4 and IPv6 protocols with full compliance and proper formatting",
+          "Cryptographically secure randomization using Web Crypto API for unbiased results",
+          "Custom CIDR range support for targeted network testing and development scenarios",
+          "Private and public IP address selection for realistic network simulation environments",
+          "Multiple output formats including standard, CIDR, hexadecimal, and binary representations",
+          "Bulk generation capability up to 10,000 IP addresses for large-scale testing projects",
+          "Real-time validation with helpful error messages and duplicate management options",
+          "Optimized performance with efficient algorithms for quick generation of large datasets"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Tools",
+        "items": [
+          {
+            "name": "Random Number Generator",
+            "href": "/tools/random-number",
+            "description": "Generate random numbers for numerical testing and data creation"
+          },
+          {
+            "name": "Random Date Generator", 
+            "href": "/tools/random-date",
+            "description": "Create random dates for temporal data testing and scheduling"
+          },
+          {
+            "name": "Random Month Generator",
+            "href": "/tools/random-month",
+            "description": "Generate random months for planning and time-based testing"
+          },
+          {
+            "name": "Random Letter Generator",
+            "href": "/tools/random-letter",
+            "description": "Create random letters for text generation and testing"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "How secure are the generated IP addresses?",
+          "answer": "Our generator uses crypto.getRandomValues(), which provides cryptographically secure random IP addresses. This ensures true randomness suitable for security testing, network simulation, and any scenario requiring unbiased IP address generation."
+        },
+        {
+          "question": "Can I generate both IPv4 and IPv6 addresses?",
+          "answer": "Yes, our tool supports both IPv4 (32-bit) and IPv6 (128-bit) address generation with full protocol compliance and proper formatting for each standard."
+        },
+        {
+          "question": "What's the difference between private and public IP addresses?",
+          "answer": "Private IP addresses (like 192.168.x.x, 10.x.x.x) are used for internal networks and aren't routable on the internet. Public IP addresses are globally unique and internet-routable. Our tool can generate both types."
+        },
+        {
+          "question": "How do I use CIDR notation with custom ranges?",
+          "answer": "CIDR notation like '192.168.1.0/24' specifies a network range. The '/24' means the first 24 bits are the network portion, leaving 8 bits for host addresses (256 possible IPs in this case)."
+        },
+        {
+          "question": "Can I prevent duplicate IP addresses?",
+          "answer": "Yes, you can disable duplicates in the settings. When disabled, each generated IP will be unique within the specified range until all possible combinations are exhausted."
+        },
+        {
+          "question": "What output formats are supported?",
+          "answer": "We support standard notation (192.168.1.1), CIDR format (192.168.1.1/24), hexadecimal representation, and binary format for different use cases and applications."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Случайных IP Адресов - IPv4 и IPv6 для Тестирования Сети",
+    "metaDescription": "Генерируйте безопасные случайные IP адреса для тестирования сети, разработки и симуляции. Поддержка IPv4 и IPv6 с настраиваемыми подсетями, CIDR нотацией и массовой генерацией до 10,000 адресов.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Генератор Случайных IP Адресов",
+        "content": "Генерируйте криптографически безопасные случайные IP адреса с помощью нашего продвинутого инструмента для тестирования сети. Независимо от того, нужны ли вам IPv4 или IPv6 адреса для разработки, тестирования, симуляции или образовательных целей, наш инструмент обеспечивает надежную, беспристрастную генерацию IP с обширными возможностями настройки."
+      },
+      "features": {
+        "title": "Расширенные Возможности Генерации IP Адресов",
+        "items": [
+          {
+            "title": "Поддержка IPv4 и IPv6",
+            "description": "Генерируйте как IPv4 (32-битные), так и IPv6 (128-битные) адреса с полным соответствием протоколов и правильным форматированием"
+          },
+          {
+            "title": "Настраиваемые IP Диапазоны", 
+            "description": "Определите настраиваемые CIDR диапазоны, маски подсети и сегменты сети для целевой генерации IP в пределах определенных границ сети"
+          },
+          {
+            "title": "Частные и Публичные IP",
+            "description": "Выбирайте между диапазонами частных IP (10.x.x.x, 192.168.x.x, 172.16-31.x.x) или публичными интернет-маршрутизируемыми адресами"
+          },
+          {
+            "title": "Множественные Форматы Вывода",
+            "description": "Экспортируйте в стандартной нотации, формате CIDR, шестнадцатеричном или двоичном представлении для разных случаев использования"
+          },
+          {
+            "title": "Криптографически Безопасный", 
+            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая беспристрастную и непредсказуемую генерацию IP адресов"
+          },
+          {
+            "title": "Массовая Генерация",
+            "description": "Генерируйте до 10,000 случайных IP адресов одновременно для крупномасштабных проектов тестирования и симуляции сети"
+          },
+          {
+            "title": "Готовность к Тестированию Сети",
+            "description": "Идеально подходит для тестирования на проникновение, симуляции сети, нагрузочного тестирования и сред разработки"
+          },
+          {
+            "title": "Управление Дубликатами",
+            "description": "Выбирайте разрешение или предотвращение дублирующих IP адресов в зависимости от ваших конкретных требований тестирования"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Случайных IP Адресов",
+        "steps": [
+          {
+            "title": "Выберите Версию IP",
+            "description": "Выбирайте между IPv4 для стандартных сетей или IPv6 для современных сетевых реализаций и больших адресных пространств."
+          },
+          {
+            "title": "Выберите Тип IP Адреса",
+            "description": "Выберите 'Любой' для случайных IP, 'Частный' для адресов внутренней сети, 'Публичный' для интернет-маршрутизируемых IP, или 'Настраиваемый' для конкретных диапазонов."
+          },
+          {
+            "title": "Настройте Пользовательские Диапазоны (Опционально)",
+            "description": "При использовании настраиваемых диапазонов введите CIDR нотацию (например, 192.168.1.0/24) для генерации IP в пределах конкретных сегментов сети."
+          },
+          {
+            "title": "Установите Параметры Генерации",
+            "description": "Укажите количество IP адресов для генерации (1-10,000), выберите формат вывода и настройте параметры дубликатов и сортировки."
+          },
+          {
+            "title": "Генерируйте и Экспортируйте",
+            "description": "Нажмите 'генерировать' для создания ваших случайных IP адресов. Скопируйте в буфер обмена, скачайте как текстовый файл или используйте напрямую в ваших приложениях."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации Случайных IP Адресов",
+        "items": [
+          {
+            "title": "IPv4 Стандартный Формат",
+            "input": "Версия IP: IPv4, Тип: Любой, Количество: 3, Формат: Стандартный",
+            "output": "192.168.1.145\n10.0.0.23\n203.134.56.78"
+          },
+          {
+            "title": "IPv4 CIDR Формат", 
+            "input": "Версия IP: IPv4, Тип: Любой, Количество: 3, Формат: CIDR",
+            "output": "192.168.1.145/32\n10.0.0.23/32\n172.16.5.100/32"
+          },
+          {
+            "title": "IPv6 Стандартный Формат",
+            "input": "Версия IP: IPv6, Тип: Любой, Количество: 3, Формат: Стандартный",
+            "output": "2001:0db8:85a3:0000:0000:8a2e:0370:7334\nfe80::1\nfc00::1"
+          },
+          {
+            "title": "Диапазоны Частных IP",
+            "input": "Версия IP: IPv4, Тип: Частный, Количество: 3, Формат: Стандартный",
+            "output": "10.45.123.67\n192.168.100.200\n172.20.15.88"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Случайных IP Адресов",
+        "items": [
+          {
+            "title": "Тестирование Сети",
+            "description": "Тестируйте конфигурации сети, правила брандмауэра и протоколы маршрутизации с разнообразными диапазонами IP адресов"
+          },
+          {
+            "title": "Разработка Программного Обеспечения",
+            "description": "Генерируйте тестовые данные для приложений, обрабатывающих IP адреса, инструментов мониторинга сети и систем анализа логов"
+          },
+          {
+            "title": "Тестирование Безопасности",
+            "description": "Создавайте реалистичные наборы данных IP адресов для тестирования на проникновение, оценки уязвимостей и исследований безопасности"
+          },
+          {
+            "title": "Нагрузочное Тестирование",
+            "description": "Симулируйте трафик с разных IP адресов для тестирования производительности сервера и географического распределения нагрузки"
+          },
+          {
+            "title": "Образовательные Цели",
+            "description": "Обучение сетевым концепциям, подсетям, CIDR нотации и управлению адресными пространствами IP"
+          },
+          {
+            "title": "Симуляция Сети",
+            "description": "Создавайте виртуальные сетевые топологии и симулируйте крупномасштабные сетевые среды для исследований и тестирования"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наш Генератор IP Адресов",
+        "items": [
+          "Поддержка протоколов IPv4 и IPv6 с полным соответствием и правильным форматированием",
+          "Криптографически безопасная рандомизация с использованием Web Crypto API для беспристрастных результатов",
+          "Поддержка настраиваемых CIDR диапазонов для целевого сетевого тестирования и сценариев разработки",
+          "Выбор частных и публичных IP адресов для реалистичных сред симуляции сети",
+          "Множественные форматы вывода, включая стандартный, CIDR, шестнадцатеричный и двоичный представления",
+          "Возможность массовой генерации до 10,000 IP адресов для крупномасштабных проектов тестирования",
+          "Валидация в реальном времени с полезными сообщениями об ошибках и опциями управления дубликатами",
+          "Оптимизированная производительность с эффективными алгоритмами для быстрой генерации больших наборов данных"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты",
+        "items": [
+          {
+            "name": "Генератор Случайных Чисел",
+            "href": "/ru/tools/random-number",
+            "description": "Генерируйте случайные числа для численного тестирования и создания данных"
+          },
+          {
+            "name": "Генератор Случайных Дат", 
+            "href": "/ru/tools/random-date",
+            "description": "Создавайте случайные даты для тестирования временных данных и планирования"
+          },
+          {
+            "name": "Генератор Случайных Месяцев",
+            "href": "/ru/tools/random-month",
+            "description": "Генерируйте случайные месяцы для планирования и тестирования на основе времени"
+          },
+          {
+            "name": "Генератор Случайных Букв",
+            "href": "/ru/tools/random-letter",
+            "description": "Создавайте случайные буквы для генерации текста и тестирования"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Насколько безопасны сгенерированные IP адреса?",
+          "answer": "Наш генератор использует crypto.getRandomValues(), который обеспечивает криптографически безопасные случайные IP адреса. Это гарантирует истинную случайность, подходящую для тестирования безопасности, симуляции сети и любых сценариев, требующих беспристрастной генерации IP адресов."
+        },
+        {
+          "question": "Могу ли я генерировать адреса IPv4 и IPv6?",
+          "answer": "Да, наш инструмент поддерживает генерацию как IPv4 (32-битных), так и IPv6 (128-битных) адресов с полным соответствием протоколов и правильным форматированием для каждого стандарта."
+        },
+        {
+          "question": "В чем разница между частными и публичными IP адресами?",
+          "answer": "Частные IP адреса (как 192.168.x.x, 10.x.x.x) используются для внутренних сетей и не маршрутизируются в интернете. Публичные IP адреса глобально уникальны и маршрутизируемы в интернете. Наш инструмент может генерировать оба типа."
+        },
+        {
+          "question": "Как использовать CIDR нотацию с настраиваемыми диапазонами?",
+          "answer": "CIDR нотация как '192.168.1.0/24' указывает диапазон сети. '/24' означает, что первые 24 бита являются сетевой частью, оставляя 8 битов для адресов хостов (256 возможных IP в этом случае)."
+        },
+        {
+          "question": "Могу ли я предотвратить дублирование IP адресов?",
+          "answer": "Да, вы можете отключить дубликаты в настройках. При отключении каждый сгенерированный IP будет уникальным в указанном диапазоне до тех пор, пока не будут исчерпаны все возможные комбинации."
+        },
+        {
+          "question": "Какие форматы вывода поддерживаются?",
+          "answer": "Мы поддерживаем стандартную нотацию (192.168.1.1), формат CIDR (192.168.1.1/24), шестнадцатеричное представление и двоичный формат для различных случаев использования и приложений."
+        }
+      ]
+    }
+  }
+}

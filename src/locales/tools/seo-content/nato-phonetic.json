@@ -1,0 +1,440 @@
+{
+  "en": {
+    "title": "NATO Phonetic Alphabet Converter - Military & Aviation Communication Tool",
+    "metaDescription": "Convert text to NATO phonetic alphabet and vice versa. Professional military and aviation communication tool with complete phonetic alphabet reference table. Perfect for clear voice communication, radio transmissions, and spelling clarification.",
+    "sections": {
+      "intro": {
+        "title": "Professional NATO Phonetic Alphabet Converter for Clear Communication",
+        "content": "Transform your text into the standardized NATO phonetic alphabet used by military, aviation, and emergency services worldwide. Our comprehensive converter provides bidirectional conversion between regular text and phonetic spelling, complete with an interactive reference table of all 26 letters and numbers. Essential for radio communications, customer service, and any situation requiring crystal-clear verbal spelling."
+      },
+      "features": {
+        "title": "Advanced NATO Phonetic Alphabet Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Convert text to NATO phonetic alphabet and convert phonetic words back to text with intelligent auto-detection"
+          },
+          {
+            "title": "Complete Reference Table",
+            "description": "Interactive NATO phonetic alphabet chart with all 26 letters (Alpha to Zulu) and numbers (Zero to Nine)"
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "Instant conversion as you type with live preview and immediate results for efficient workflow"
+          },
+          {
+            "title": "Auto-Detection Mode",
+            "description": "Smart detection of input type automatically switches between text-to-phonetic and phonetic-to-text conversion"
+          },
+          {
+            "title": "Military & Aviation Standard",
+            "description": "Follows official ICAO/ITU/NATO standards used by professional communicators worldwide"
+          },
+          {
+            "title": "Mobile Optimized",
+            "description": "Responsive design works perfectly on smartphones, tablets, and desktop computers"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the NATO Phonetic Alphabet Converter",
+        "description": "Follow these simple steps to convert between text and NATO phonetic alphabet:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type regular text to convert to NATO phonetic, or enter phonetic words to convert back to text"
+          },
+          {
+            "step": 2,
+            "title": "Choose Conversion Mode",
+            "description": "Select Auto-detect for smart conversion, or manually choose Text→NATO or NATO→Text mode"
+          },
+          {
+            "step": 3,
+            "title": "View Instant Results",
+            "description": "See your conversion results immediately with detailed statistics and formatting"
+          },
+          {
+            "step": 4,
+            "title": "Use Reference Table",
+            "description": "Expand the NATO phonetic alphabet table to view all letters and numbers with click-to-copy functionality"
+          },
+          {
+            "step": 5,
+            "title": "Copy or Download",
+            "description": "Copy results to clipboard or download as text file for use in your communications"
+          }
+        ]
+      },
+      "examples": {
+        "title": "NATO Phonetic Alphabet Conversion Examples",
+        "description": "See how different types of text are converted to NATO phonetic alphabet:",
+        "items": [
+          {
+            "input": "ABC123",
+            "output": "Alpha Bravo Charlie One Two Three",
+            "description": "Basic alphanumeric conversion showing letters and numbers"
+          },
+          {
+            "input": "HELP",
+            "output": "Hotel Echo Lima Papa",
+            "description": "Emergency communication - clear spelling of urgent messages"
+          },
+          {
+            "input": "Alpha Bravo Charlie",
+            "output": "ABC",
+            "description": "Reverse conversion from NATO phonetic back to original text"
+          },
+          {
+            "input": "Call Sign Delta-7",
+            "output": "Charlie Alpha Lima Lima [SPACE] Sierra India Golf November [SPACE] Delta Echo Lima Tango Alpha [-] Seven",
+            "description": "Complex text with spaces and special characters"
+          },
+          {
+            "input": "GPS: N40 W74",
+            "output": "Golf Papa Sierra [:] [SPACE] November Four Zero [SPACE] Whiskey Seven Four",
+            "description": "Coordinates and technical data with special formatting"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Professional Use Cases for NATO Phonetic Alphabet",
+        "description": "Essential applications across industries requiring clear voice communication:",
+        "items": [
+          {
+            "title": "Military Communications",
+            "description": "Standard military radio communications, call signs, coordinates, and operational orders requiring precise spelling"
+          },
+          {
+            "title": "Aviation Industry",
+            "description": "Pilot communications, air traffic control, flight numbers, airport codes, and navigation instructions"
+          },
+          {
+            "title": "Emergency Services",
+            "description": "Police, fire, and medical emergency communications where clarity can save lives"
+          },
+          {
+            "title": "Customer Service",
+            "description": "Phone support for spelling names, addresses, serial numbers, and confirmation codes clearly"
+          },
+          {
+            "title": "Maritime Communications",
+            "description": "Ship-to-shore radio communications, vessel identification, and navigation messaging"
+          },
+          {
+            "title": "Ham Radio Operations",
+            "description": "Amateur radio operators using phonetic alphabet for clear signal identification and messaging"
+          },
+          {
+            "title": "Corporate Communications",
+            "description": "Conference calls, international business communications, and professional presentations"
+          },
+          {
+            "title": "Education and Training",
+            "description": "Teaching proper communication protocols, military training, and professional development programs"
+          }
+        ]
+      },
+      "phoneticTable": {
+        "title": "Complete NATO Phonetic Alphabet Reference Table",
+        "description": "The official NATO phonetic alphabet with pronunciation guide and usage notes:",
+        "content": "The NATO phonetic alphabet, also known as the International Radiotelephony Spelling Alphabet, assigns code words to each letter and number to ensure clear communication over radio and telephone. Each word was carefully chosen to be easily distinguishable even in poor audio conditions.\n\n**Letters A-Z:**\nA = Alpha, B = Bravo, C = Charlie, D = Delta, E = Echo, F = Foxtrot, G = Golf, H = Hotel, I = India, J = Juliet, K = Kilo, L = Lima, M = Mike, N = November, O = Oscar, P = Papa, Q = Quebec, R = Romeo, S = Sierra, T = Tango, U = Uniform, V = Victor, W = Whiskey, X = X-ray, Y = Yankee, Z = Zulu\n\n**Numbers 0-9:**\n0 = Zero, 1 = One, 2 = Two, 3 = Three, 4 = Four, 5 = Five, 6 = Six, 7 = Seven, 8 = Eight, 9 = Nine\n\n**Pronunciation Tips:**\n- AL-fah (not AL-pha)\n- BRAH-voh\n- CHAR-lee\n- DELL-tah\n- ECK-oh\n- FOKS-trot\n- GOLF\n- hoh-TELL\n- IN-dee-ah\n- JEW-lee-ett\n- KEE-loh\n- LEE-mah\n- MIKE\n- no-VEM-ber\n- OSS-car\n- pah-PAH\n- keh-BECK\n- ROW-me-oh\n- see-AIR-rah\n- TANG-go\n- YOU-nee-form\n- VIK-ter\n- WISS-key\n- ECKS-ray\n- YANG-key\n- ZOO-loo"
+      },
+      "benefits": {
+        "title": "Why Use Our NATO Phonetic Alphabet Converter",
+        "items": [
+          "Professional-grade NATO phonetic alphabet conversion following official ICAO/ITU/NATO standards",
+          "Bidirectional conversion with intelligent auto-detection for maximum flexibility and ease of use",
+          "Complete interactive reference table with all 26 letters and 10 numbers for quick lookup",
+          "Real-time conversion with instant feedback and detailed statistics for efficient workflow",
+          "Click-to-copy functionality for individual phonetic words to streamline your communication process",
+          "Mobile-responsive design that works perfectly across all devices and screen sizes",
+          "Support for numbers, special characters, and complex text formatting with clear indication",
+          "Privacy-focused processing with all conversions performed locally in your browser",
+          "Free unlimited usage with no registration, subscriptions, or feature restrictions required",
+          "Essential tool for military, aviation, emergency services, and professional communication needs"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Communication and Text Tools",
+        "description": "Explore other professional tools for text processing and communication:",
+        "items": [
+          {
+            "name": "Text Counter",
+            "href": "/tools/text-counter",
+            "description": "Count characters, words, sentences, and analyze text composition and statistics"
+          },
+          {
+            "name": "Online Notepad",
+            "href": "/tools/online-notepad",
+            "description": "Simple web-based notepad for quick text editing and temporary note storage"
+          },
+          {
+            "name": "ASCII Art Generator",
+            "href": "/tools/ascii-art-generator",
+            "description": "Convert text and images to ASCII art for creative text-based graphics"
+          },
+          {
+            "name": "Word Frequency Analyzer",
+            "href": "/tools/word-frequency",
+            "description": "Analyze word frequency and find the most common words in your text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is the NATO phonetic alphabet and why is it used?",
+          "answer": "The NATO phonetic alphabet is a standardized set of code words used to represent letters and numbers in voice communications. It's designed to ensure clear, unambiguous communication over radio, telephone, and in noisy environments. Each word was carefully chosen to be easily distinguishable from others, reducing miscommunication in critical situations like military operations, aviation, and emergency services."
+        },
+        {
+          "question": "How accurate is this NATO phonetic alphabet converter?",
+          "answer": "Our converter follows the official ICAO (International Civil Aviation Organization), ITU (International Telecommunication Union), and NATO standards for the phonetic alphabet. It provides 100% accurate conversion between text and phonetic words, including proper handling of numbers (0-9) and special characters with clear formatting."
+        },
+        {
+          "question": "Can I convert NATO phonetic words back to regular text?",
+          "answer": "Yes! Our converter supports bidirectional conversion. You can enter NATO phonetic words like 'Alpha Bravo Charlie' and convert them back to 'ABC'. The auto-detection mode automatically recognizes whether your input is regular text or phonetic words and converts accordingly."
+        },
+        {
+          "question": "Does the converter work with numbers and special characters?",
+          "answer": "Yes, the converter handles numbers 0-9 with their phonetic equivalents (Zero, One, Two, etc.) and preserves special characters by marking them clearly in brackets. Spaces are indicated as [SPACE] and punctuation is preserved with appropriate formatting."
+        },
+        {
+          "question": "Is the NATO phonetic alphabet the same worldwide?",
+          "answer": "Yes, the NATO phonetic alphabet is an international standard used globally by military forces, aviation authorities, emergency services, and other organizations. It was adopted by NATO, ICAO, and ITU to ensure consistent communication across different countries and languages."
+        },
+        {
+          "question": "Can I use this tool for customer service and business communications?",
+          "answer": "Absolutely! The NATO phonetic alphabet is widely used in customer service for spelling names, addresses, confirmation codes, and serial numbers clearly over the phone. Many businesses train their staff to use it for improved customer communication and reduced errors."
+        },
+        {
+          "question": "How do I pronounce the NATO phonetic words correctly?",
+          "answer": "Each phonetic word has a specific pronunciation: Alpha (AL-fah), Bravo (BRAH-voh), Charlie (CHAR-lee), Delta (DELL-tah), Echo (ECK-oh), etc. Our tool includes a complete reference table with pronunciation guides for all 26 letters and 10 numbers."
+        },
+        {
+          "question": "Is my data safe when using this converter?",
+          "answer": "Yes, your privacy is completely protected. All text conversion is performed locally in your browser - no data is transmitted to our servers or stored anywhere. Your text never leaves your device, ensuring complete confidentiality for sensitive communications."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Конвертер Фонетического Алфавита НАТО - Военный и Авиационный Инструмент Связи",
+    "metaDescription": "Конвертируйте текст в фонетический алфавит НАТО и обратно. Профессиональный инструмент военной и авиационной связи с полной справочной таблицей фонетического алфавита. Идеально для четкой голосовой связи, радиопередач и уточнения правописания.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Конвертер Фонетического Алфавита НАТО для Четкой Связи",
+        "content": "Преобразуйте ваш текст в стандартизированный фонетический алфавит НАТО, используемый военными, авиацией и службами экстренного реагирования по всему миру. Наш комплексный конвертер обеспечивает двустороннее преобразование между обычным текстом и фонетическим правописанием, дополненное интерактивной справочной таблицей всех 26 букв и цифр. Незаменим для радиосвязи, клиентского сервиса и любых ситуаций, требующих кристально чистого устного правописания."
+      },
+      "features": {
+        "title": "Продвинутые Возможности Фонетического Алфавита НАТО",
+        "items": [
+          {
+            "title": "Двустороннее Преобразование",
+            "description": "Конвертируйте текст в фонетический алфавит НАТО и обратно с интеллектуальным автоопределением"
+          },
+          {
+            "title": "Полная Справочная Таблица",
+            "description": "Интерактивная таблица фонетического алфавита НАТО со всеми 26 буквами (от Альфа до Зулу) и цифрами (от Ноль до Девять)"
+          },
+          {
+            "title": "Обработка в Реальном Времени",
+            "description": "Мгновенное преобразование при наборе с живым предварительным просмотром и немедленными результатами"
+          },
+          {
+            "title": "Режим Автоопределения",
+            "description": "Умное определение типа ввода автоматически переключается между преобразованием текста в фонетический и обратно"
+          },
+          {
+            "title": "Военный и Авиационный Стандарт",
+            "description": "Следует официальным стандартам ICAO/ITU/NATO, используемым профессиональными коммуникаторами по всему миру"
+          },
+          {
+            "title": "Мобильная Оптимизация",
+            "description": "Адаптивный дизайн идеально работает на смартфонах, планшетах и настольных компьютерах"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Конвертер Фонетического Алфавита НАТО",
+        "description": "Следуйте этим простым шагам для преобразования между текстом и фонетическим алфавитом НАТО:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Наберите обычный текст для преобразования в фонетический НАТО, или введите фонетические слова для обратного преобразования"
+          },
+          {
+            "step": 2,
+            "title": "Выберите Режим Преобразования",
+            "description": "Выберите Автоопределение для умного преобразования, или вручную выберите режим Текст→НАТО или НАТО→Текст"
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Мгновенные Результаты",
+            "description": "Увидьте результаты преобразования немедленно с подробной статистикой и форматированием"
+          },
+          {
+            "step": 4,
+            "title": "Используйте Справочную Таблицу",
+            "description": "Разверните таблицу фонетического алфавита НАТО для просмотра всех букв и цифр с функцией копирования по клику"
+          },
+          {
+            "step": 5,
+            "title": "Копируйте или Скачайте",
+            "description": "Скопируйте результаты в буфер обмена или скачайте как текстовый файл для использования в ваших коммуникациях"
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Преобразования Фонетического Алфавита НАТО",
+        "description": "Посмотрите, как различные типы текста преобразуются в фонетический алфавит НАТО:",
+        "items": [
+          {
+            "input": "ABC123",
+            "output": "Alpha Bravo Charlie One Two Three",
+            "description": "Базовое буквенно-цифровое преобразование, показывающее буквы и цифры"
+          },
+          {
+            "input": "HELP",
+            "output": "Hotel Echo Lima Papa",
+            "description": "Экстренная связь - четкое правописание срочных сообщений"
+          },
+          {
+            "input": "Alpha Bravo Charlie",
+            "output": "ABC",
+            "description": "Обратное преобразование из фонетического НАТО обратно в исходный текст"
+          },
+          {
+            "input": "Call Sign Delta-7",
+            "output": "Charlie Alpha Lima Lima [SPACE] Sierra India Golf November [SPACE] Delta Echo Lima Tango Alpha [-] Seven",
+            "description": "Сложный текст с пробелами и специальными символами"
+          },
+          {
+            "input": "GPS: N40 W74",
+            "output": "Golf Papa Sierra [:] [SPACE] November Four Zero [SPACE] Whiskey Seven Four",
+            "description": "Координаты и технические данные со специальным форматированием"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Профессиональные Случаи Использования Фонетического Алфавита НАТО",
+        "description": "Основные применения в отраслях, требующих четкой голосовой связи:",
+        "items": [
+          {
+            "title": "Военные Коммуникации",
+            "description": "Стандартная военная радиосвязь, позывные, координаты и оперативные приказы, требующие точного правописания"
+          },
+          {
+            "title": "Авиационная Промышленность",
+            "description": "Связь пилотов, управление воздушным движением, номера рейсов, коды аэропортов и навигационные инструкции"
+          },
+          {
+            "title": "Службы Экстренного Реагирования",
+            "description": "Полиция, пожарная служба и медицинская экстренная связь, где ясность может спасти жизни"
+          },
+          {
+            "title": "Клиентский Сервис",
+            "description": "Телефонная поддержка для четкого произношения имен, адресов, серийных номеров и кодов подтверждения"
+          },
+          {
+            "title": "Морские Коммуникации",
+            "description": "Радиосвязь корабль-берег, идентификация судов и навигационные сообщения"
+          },
+          {
+            "title": "Любительское Радио",
+            "description": "Радиолюбители используют фонетический алфавит для четкой идентификации сигналов и обмена сообщениями"
+          },
+          {
+            "title": "Корпоративные Коммуникации",
+            "description": "Конференц-связь, международные деловые коммуникации и профессиональные презентации"
+          },
+          {
+            "title": "Образование и Обучение",
+            "description": "Обучение правильным протоколам связи, военная подготовка и программы профессионального развития"
+          }
+        ]
+      },
+      "phoneticTable": {
+        "title": "Полная Справочная Таблица Фонетического Алфавита НАТО",
+        "description": "Официальный фонетический алфавит НАТО с руководством по произношению и примечаниями по использованию:",
+        "content": "Фонетический алфавит НАТО, также известный как Международный Радиотелефонный Алфавит Правописания, назначает кодовые слова каждой букве и цифре для обеспечения четкой связи по радио и телефону. Каждое слово было тщательно выбрано, чтобы быть легко различимым даже в плохих звуковых условиях.\n\n**Буквы А-Я:**\nA = Alpha, B = Bravo, C = Charlie, D = Delta, E = Echo, F = Foxtrot, G = Golf, H = Hotel, I = India, J = Juliet, K = Kilo, L = Lima, M = Mike, N = November, O = Oscar, P = Papa, Q = Quebec, R = Romeo, S = Sierra, T = Tango, U = Uniform, V = Victor, W = Whiskey, X = X-ray, Y = Yankee, Z = Zulu\n\n**Цифры 0-9:**\n0 = Zero, 1 = One, 2 = Two, 3 = Three, 4 = Four, 5 = Five, 6 = Six, 7 = Seven, 8 = Eight, 9 = Nine\n\n**Советы по Произношению:**\n- АЛ-фа (не АЛ-фа)\n- БРА-во\n- ЧАР-ли\n- ДЕЛЬ-та\n- ЭХО\n- ФОКС-трот\n- ГОЛЬФ\n- хо-ТЕЛЬ\n- ИН-дия\n- ЖУ-льет\n- КИ-ло\n- ЛИ-ма\n- МАЙК\n- но-ЯБР\n- ОС-кар\n- па-ПА\n- ке-БЕК\n- РО-мео\n- си-ЕР-ра\n- ТАН-го\n- ЮНИ-форм\n- ВИК-тор\n- ВИСКИ\n- ИКС-рей\n- ЯН-ки\n- ЗУ-лу"
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конвертер Фонетического Алфавита НАТО",
+        "items": [
+          "Профессиональное преобразование фонетического алфавита НАТО по официальным стандартам ICAO/ITU/NATO",
+          "Двустороннее преобразование с интеллектуальным автоопределением для максимальной гибкости и простоты использования",
+          "Полная интерактивная справочная таблица со всеми 26 буквами и 10 цифрами для быстрого поиска",
+          "Преобразование в реальном времени с мгновенной обратной связью и подробной статистикой для эффективного рабочего процесса",
+          "Функция копирования по клику для отдельных фонетических слов для оптимизации процесса коммуникации",
+          "Мобильно-адаптивный дизайн, который идеально работает на всех устройствах и размерах экранов",
+          "Поддержка цифр, специальных символов и сложного форматирования текста с четким указанием",
+          "Обработка с фокусом на приватность с выполнением всех преобразований локально в вашем браузере",
+          "Бесплатное неограниченное использование без регистрации, подписок или ограничений функций",
+          "Важный инструмент для военных, авиации, служб экстренного реагирования и профессиональных коммуникационных нужд"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты Коммуникации и Текста",
+        "description": "Изучите другие профессиональные инструменты для обработки текста и коммуникации:",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "href": "/ru/tools/text-counter",
+            "description": "Подсчитывайте символы, слова, предложения и анализируйте состав и статистику текста"
+          },
+          {
+            "name": "Онлайн Блокнот",
+            "href": "/ru/tools/online-notepad",
+            "description": "Простой веб-блокнот для быстрого редактирования текста и временного хранения заметок"
+          },
+          {
+            "name": "Генератор ASCII Арт",
+            "href": "/ru/tools/ascii-art-generator",
+            "description": "Конвертируйте текст и изображения в ASCII арт для творческой текстовой графики"
+          },
+          {
+            "name": "Анализатор Частоты Слов",
+            "href": "/ru/tools/word-frequency",
+            "description": "Анализируйте частоту слов и находите наиболее часто используемые слова в вашем тексте"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое фонетический алфавит НАТО и зачем он используется?",
+          "answer": "Фонетический алфавит НАТО - это стандартизированный набор кодовых слов, используемых для представления букв и цифр в голосовой связи. Он разработан для обеспечения четкой, однозначной связи по радио, телефону и в шумных условиях. Каждое слово было тщательно выбрано, чтобы легко отличаться от других, уменьшая недопонимание в критических ситуациях, таких как военные операции, авиация и службы экстренного реагирования."
+        },
+        {
+          "question": "Насколько точен этот конвертер фонетического алфавита НАТО?",
+          "answer": "Наш конвертер следует официальным стандартам ICAO (Международная организация гражданской авиации), ITU (Международный союз электросвязи) и НАТО для фонетического алфавита. Он обеспечивает 100% точное преобразование между текстом и фонетическими словами, включая правильную обработку цифр (0-9) и специальных символов с четким форматированием."
+        },
+        {
+          "question": "Могу ли я конвертировать фонетические слова НАТО обратно в обычный текст?",
+          "answer": "Да! Наш конвертер поддерживает двустороннее преобразование. Вы можете ввести фонетические слова НАТО, такие как 'Alpha Bravo Charlie', и конвертировать их обратно в 'ABC'. Режим автоопределения автоматически распознает, является ли ваш ввод обычным текстом или фонетическими словами, и конвертирует соответственно."
+        },
+        {
+          "question": "Работает ли конвертер с цифрами и специальными символами?",
+          "answer": "Да, конвертер обрабатывает цифры 0-9 с их фонетическими эквивалентами (Zero, One, Two и т.д.) и сохраняет специальные символы, четко отмечая их в скобках. Пробелы обозначаются как [SPACE], а пунктуация сохраняется с соответствующим форматированием."
+        },
+        {
+          "question": "Одинаков ли фонетический алфавит НАТО во всем мире?",
+          "answer": "Да, фонетический алфавит НАТО является международным стандартом, используемым глобально военными силами, авиационными властями, службами экстренного реагирования и другими организациями. Он был принят НАТО, ICAO и ITU для обеспечения последовательной связи в разных странах и языках."
+        },
+        {
+          "question": "Могу ли я использовать этот инструмент для клиентского сервиса и деловых коммуникаций?",
+          "answer": "Абсолютно! Фонетический алфавит НАТО широко используется в клиентском сервисе для четкого произношения имен, адресов, кодов подтверждения и серийных номеров по телефону. Многие компании обучают свой персонал использовать его для улучшения связи с клиентами и уменьшения ошибок."
+        },
+        {
+          "question": "Как правильно произносить фонетические слова НАТО?",
+          "answer": "Каждое фонетическое слово имеет специфическое произношение: Alpha (АЛ-фа), Bravo (БРА-во), Charlie (ЧАР-ли), Delta (ДЕЛЬ-та), Echo (ЭХО) и т.д. Наш инструмент включает полную справочную таблицу с руководствами по произношению для всех 26 букв и 10 цифр."
+        },
+        {
+          "question": "Безопасны ли мои данные при использовании этого конвертера?",
+          "answer": "Да, ваша приватность полностью защищена. Все преобразования текста выполняются локально в вашем браузере - никакие данные не передаются на наши серверы или не хранятся где-либо. Ваш текст никогда не покидает ваше устройство, обеспечивая полную конфиденциальность для чувствительных коммуникаций."
+        }
+      ]
+    }
+  }
+}

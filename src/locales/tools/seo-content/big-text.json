@@ -1,0 +1,166 @@
+{
+  "en": {
+    "title": "Free Big Text Generator - Large Bold Unicode Text",
+    "metaDescription": "Generate large, bold Unicode text that stands out. Perfect for headers, announcements, and making your text more prominent and eye-catching.",
+    "sections": {
+      "intro": {
+        "title": "Free Big Text Generator - Large Bold Unicode Text",
+        "content": "Create attention-grabbing large text instantly using Unicode-friendly characters. Ideal for headings, social media posts, callouts, and announcements that need impact and readability across platforms."
+      },
+      "features": {
+        "title": "Powerful Big Text Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time big text conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to big text" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Big Text",
+        "description": "Make content stand out with readable, high-impact large text.",
+        "items": [
+          { "title": "Headings & Banners", "description": "Create bold headings for pages, landing sections, and banners." },
+          { "title": "Announcements", "description": "Highlight important updates, sales, or alerts with big text." },
+          { "title": "Social Media", "description": "Design scroll-stopping posts and story captions." },
+          { "title": "Presentation Slides", "description": "Improve readability and emphasis on slides and posters." },
+          { "title": "Callouts & CTAs", "description": "Draw attention to call-to-action phrases and key points." },
+          { "title": "Accessibility", "description": "Enhance legibility for users who benefit from larger text sizes." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Big Text",
+        "description": "Follow these simple steps to convert your text to a larger, bold format.",
+        "steps": [
+          { "step": 1, "title": "Enter Your Text", "description": "Type or paste your text into the input area, or upload a text file for conversion." },
+          { "step": 2, "title": "Automatic Conversion", "description": "Watch as your text is instantly converted to large, bold-styled characters." },
+          { "step": 3, "title": "Review Analytics", "description": "Check the text statistics including character count, word count, and more." },
+          { "step": 4, "title": "Copy or Download", "description": "Copy the big text to your clipboard or download it as a text file." }
+        ]
+      },
+      "examples": {
+        "title": "Big Text Conversion Examples",
+        "description": "See how different types of text are converted to a larger, impactful style.",
+        "items": [
+          { "title": "Headline", "input": "Flash Sale Today", "output": "🅵🅻🅰🆂🅷 🆂🅰🅻🅴 🆃🅾🅳🅰🆈" },
+          { "title": "Callout", "input": "Limited Time Offer", "output": "🅻🅸🅼🅸🆃🅴🅳 🆃🅸🅼🅴 🅾🅵🅵🅴🆁" },
+          { "title": "CTA", "input": "Join Now", "output": "🅹🅾🅸🅽 🅽🅾🆆" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Big Text Generator",
+        "content": "Professional large text conversion with comprehensive features and analytics.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and characters"
+        ]
+      },
+      "faqs": [
+        { "question": "What is big text?", "answer": "Big text is visually larger or styled text created using Unicode-friendly characters and transformations to increase impact and readability." },
+        { "question": "Does the tool work everywhere?", "answer": "Yes, the generated characters are plain text and work across platforms, apps, and browsers that support Unicode." },
+        { "question": "Can I convert entire files?", "answer": "Absolutely! Upload a text file to convert its content into a large text style." },
+        { "question": "Is my data private?", "answer": "All processing occurs locally in your browser. Nothing is uploaded." }
+      ],
+      "relatedTools": {
+        "title": "Related Text Styling Tools",
+        "items": [
+          { "name": "Bold Text Generator", "description": "Generate bold Unicode text that works everywhere", "href": "/tools/bold-text" },
+          { "name": "Italic Text Generator", "description": "Create italic Unicode text for emphasis and styling", "href": "/tools/italic-text" },
+          { "name": "Instagram Fonts Generator", "description": "Generate stylish fonts for social media bios and posts", "href": "/tools/instagram-fonts" },
+          { "name": "Facebook Fonts Generator", "description": "Create eye-catching fonts for Facebook posts and profiles", "href": "/tools/facebook-font" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Большого Текста - Крупный Жирный Unicode Текст",
+    "metaDescription": "Создавайте большой, жирный Unicode текст, который выделяется. Идеально для заголовков, объявлений и привлечения внимания.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор Большого Текста - Крупный Жирный Unicode Текст",
+        "content": "Мгновенно создавайте привлекающий внимание крупный текст с использованием символов Unicode. Идеально для заголовков, постов в соцсетях, callout-блоков и объявлений, где важны выразительность и читаемость."
+      },
+      "features": {
+        "title": "Мощные Возможности Большого Текста",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в большой текст в реальном времени при вводе или вставке" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в большой текст" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и особыми символами" },
+          { "title": "Конфиденциальность", "description": "Вся обработка происходит локально — данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Использования Большого Текста",
+        "description": "Сделайте контент заметным и читабельным благодаря крупному тексту.",
+        "items": [
+          { "title": "Заголовки и Баннеры", "description": "Создавайте выразительные заголовки для страниц, секций и баннеров." },
+          { "title": "Объявления", "description": "Выделяйте важные обновления, акции и предупреждения крупным текстом." },
+          { "title": "Социальные Сети", "description": "Делайте посты и подписи более заметными в ленте." },
+          { "title": "Презентации", "description": "Повышайте читаемость и акценты на слайдах и постерах." },
+          { "title": "Callout и Призывы", "description": "Привлекайте внимание к призывам к действию и ключевым моментам." },
+          { "title": "Доступность", "description": "Улучшайте читаемость для пользователей, которым удобен крупный размер шрифта." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Сгенерировать Большой Текст",
+        "description": "Следуйте простым шагам, чтобы конвертировать текст в крупный стиль.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Введите или вставьте текст в поле ввода, либо загрузите текстовый файл." },
+          { "step": 2, "title": "Автоконвертация", "description": "Наблюдайте, как текст мгновенно преобразуется в крупные, выразительные символы." },
+          { "step": 3, "title": "Просмотр Аналитики", "description": "Посмотрите статистику текста, включая количество символов, слов и многое другое." },
+          { "step": 4, "title": "Копирование или Скачивание", "description": "Скопируйте большой текст или скачайте как текстовый файл." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации Большого Текста",
+        "description": "Посмотрите, как различный текст преобразуется в выразительный крупный стиль.",
+        "items": [
+          { "title": "Заголовок", "input": "Супер Распродажа Сегодня", "output": "🆂🆄🅿🅴🆁 🆁🅰🆂🅿🆁🅾🅳🅰🆉🅷🅰 🆂🅴🅶🅾🅳🅽🅸🅰" },
+          { "title": "Вставка", "input": "Ограниченное Предложение", "output": "🄾🄶🄾🅁🄰🄽🄸🄲🄴🄽🄽🄾🄴 🄿🅁🄴🄳🄻🄾🄶🄾🄴🄽🄸🄴" },
+          { "title": "CTA", "input": "Присоединяйтесь", "output": "🄿🅁🄸🅂🄾🄴🄳🄸🄽🄸🄰🄹🅃🄴🅂🄸" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор Большого Текста",
+        "content": "Профессиональная конвертация крупного текста с полным набором функций и аналитикой.",
+        "items": [
+          "Полностью бесплатно и без ограничений",
+          "Регистрация не требуется",
+          "Конфиденциальность — все локально в браузере",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени",
+          "Подробная аналитика текста",
+          "Адаптивный дизайн",
+          "Работает со всеми языками и символами"
+        ]
+      },
+      "faqs": [
+        { "question": "Что такое большой текст?", "answer": "Большой текст — это визуально крупный или стилизованный текст, созданный с использованием символов Unicode для повышения выразительности и читаемости." },
+        { "question": "Работает ли инструмент везде?", "answer": "Да, сгенерированные символы — это обычный текст, который работает на платформах и в браузерах, поддерживающих Unicode." },
+        { "question": "Могу ли я конвертировать целые файлы?", "answer": "Конечно! Загрузите текстовый файл, чтобы конвертировать его содержимое в крупный стиль." },
+        { "question": "Безопасны ли мои данные?", "answer": "Вся обработка происходит локально в вашем браузере. Ничего не загружается." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Стилизации Текста",
+        "items": [
+          { "name": "Генератор Жирного Текста", "description": "Создавайте жирный Unicode текст, который работает везде", "href": "/ru/tools/bold-text" },
+          { "name": "Генератор Курсивного Текста", "description": "Создавайте курсивный Unicode текст для акцентов", "href": "/ru/tools/italic-text" },
+          { "name": "Генератор Шрифтов Instagram", "description": "Стильные шрифты для биографий и постов", "href": "/ru/tools/instagram-fonts" },
+          { "name": "Генератор Шрифтов Facebook", "description": "Привлекающие шрифты для постов и профилей Facebook", "href": "/ru/tools/facebook-font" }
+        ]
+      }
+    }
+  }
+}
+
+

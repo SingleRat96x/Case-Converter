@@ -1,0 +1,310 @@
+{
+  "en": {
+    "title": "Remove Line Breaks Tool - Clean Text Formatting Online",
+    "metaDescription": "Remove unwanted line breaks from text with options to preserve paragraphs. Perfect for cleaning copied text, formatting documents, and preparing content for web.",
+    "sections": {
+      "intro": {
+        "title": "Professional Text Line Break Remover",
+        "content": "Remove unwanted line breaks from your text with precision control. Whether you need to clean up copied content, format documents for web publishing, or prepare text for different platforms, our tool provides flexible options to handle line breaks exactly how you need them."
+      },
+      "features": {
+        "title": "Professional Line Break Removal Features",
+        "items": [
+          {
+            "title": "Smart Line Break Removal",
+            "description": "Automatically detect and remove single line breaks while preserving intentional paragraph separations."
+          },
+          {
+            "title": "Paragraph Preservation",
+            "description": "Option to maintain paragraph structure by keeping double line breaks intact for proper formatting."
+          },
+          {
+            "title": "Flexible Replacement Options",
+            "description": "Choose to replace line breaks with spaces or remove them entirely based on your formatting needs."
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "See results instantly as you type or paste text, with immediate feedback on formatting changes."
+          },
+          {
+            "title": "Batch Text Processing",
+            "description": "Handle large amounts of text efficiently with support for documents, articles, and extensive content."
+          },
+          {
+            "title": "Copy-Paste Friendly",
+            "description": "Perfect for cleaning text copied from PDFs, emails, websites, and other sources with unwanted formatting."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases",
+        "description": "Line break removal has practical applications across content creation, document processing, and text formatting tasks.",
+        "items": [
+          { "title": "PDF Text Cleanup", "description": "Clean text copied from PDF documents that contains unwanted line breaks" },
+          { "title": "Web Content Formatting", "description": "Format content for web publishing with proper text flow" },
+          { "title": "Social Media Posts", "description": "Prepare text for social media posts with consistent formatting" },
+          { "title": "Single Line Conversion", "description": "Convert multi-line text to single lines for specific applications" },
+          { "title": "Email Content", "description": "Clean up email content formatting for better readability" },
+          { "title": "Data Entry", "description": "Process documents for data entry with standardized text format" },
+          { "title": "Database Import", "description": "Format text for database import with clean, consistent formatting" },
+          { "title": "Translation Services", "description": "Prepare content for translation services with proper text structure" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Line Break Remover",
+        "description": "Follow these simple steps to clean your text and remove unwanted line breaks.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Paste or type your text in the input area, or upload a text file with unwanted line breaks."
+          },
+          {
+            "step": 2,
+            "title": "Choose Replacement Option",
+            "description": "Select whether to replace line breaks with spaces or remove them entirely based on your needs."
+          },
+          {
+            "step": 3,
+            "title": "Configure Paragraph Settings",
+            "description": "Toggle paragraph preservation if you want to keep double line breaks (paragraph separators) intact."
+          },
+          {
+            "step": 4,
+            "title": "Review and Download",
+            "description": "View the cleaned text in the output area, then copy or download the formatted result."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Line Break Removal Examples",
+        "items": [
+          {
+            "title": "PDF Text Cleanup",
+            "input": "This is a sample\\ntext from a PDF\\ndocument with\\nunwanted breaks.",
+            "output": "This is a sample text from a PDF document with unwanted breaks."
+          },
+          {
+            "title": "Paragraph Preservation",
+            "input": "First paragraph\\nwith line break.\\n\\nSecond paragraph\\nwith another break.",
+            "output": "First paragraph with line break.\\n\\nSecond paragraph with another break."
+          },
+          {
+            "title": "Email Formatting",
+            "input": "Email content\\nbroken across\\nmultiple lines\\nfor readability.",
+            "output": "Email content broken across multiple lines for readability."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Line Break Remover?",
+        "items": [
+          "Save time on manual text formatting",
+          "Ensure consistent text presentation",
+          "Handle large documents efficiently",
+          "Preserve important paragraph structure",
+          "Clean text for better readability",
+          "Prepare content for various platforms",
+          "Eliminate formatting inconsistencies",
+          "Streamline content workflow"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What's the difference between replacing with space vs nothing?",
+          "answer": "Replacing with space maintains word separation and readability, while removing entirely creates continuous text without spaces between joined lines."
+        },
+        {
+          "question": "How does paragraph preservation work?",
+          "answer": "When enabled, the tool only removes single line breaks but keeps double line breaks (paragraph separators) intact to maintain document structure."
+        },
+        {
+          "question": "Can I process very large text documents?",
+          "answer": "Yes, our tool efficiently handles large amounts of text, making it suitable for processing entire documents, articles, and extensive content."
+        },
+        {
+          "question": "Is this tool useful for cleaning PDF text?",
+          "answer": "Absolutely! PDF text often contains unwanted line breaks when copied. Our tool is perfect for cleaning such text while maintaining readability."
+        },
+        {
+          "question": "Does the tool work with text in different languages?",
+          "answer": "Yes, the line break removal works with text in any language, as it operates on formatting characters rather than language-specific content."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and lines in your text",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Find and Replace",
+            "description": "Find and replace specific text patterns",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Word Frequency Counter",
+            "description": "Analyze word frequency and text statistics",
+            "href": "/tools/word-frequency-counter"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Удаление Переносов Строк - Онлайн Форматирование Текста",
+    "metaDescription": "Удаляйте нежелательные переносы строк из текста с возможностью сохранения абзацев. Идеально для очистки скопированного текста и подготовки контента.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Удаления Переносов Строк",
+        "content": "Удаляйте нежелательные переносы строк из текста с точным контролем. Независимо от того, нужно ли вам очистить скопированный контент, отформатировать документы для веб-публикации или подготовить текст для различных платформ, наш инструмент предоставляет гибкие опции для обработки переносов строк именно так, как вам нужно."
+      },
+      "features": {
+        "title": "Профессиональные Возможности Удаления Переносов Строк",
+        "items": [
+          {
+            "title": "Умное Удаление Переносов Строк",
+            "description": "Автоматическое обнаружение и удаление одиночных переносов строк с сохранением намеренных разделений абзацев."
+          },
+          {
+            "title": "Сохранение Абзацев",
+            "description": "Опция сохранения структуры абзацев путем сохранения двойных переносов строк для правильного форматирования."
+          },
+          {
+            "title": "Гибкие Опции Замены",
+            "description": "Выбирайте замену переносов строк пробелами или полное их удаление в зависимости от ваших потребностей форматирования."
+          },
+          {
+            "title": "Обработка в Реальном Времени",
+            "description": "Видите результаты мгновенно при вводе или вставке текста с немедленной обратной связью об изменениях форматирования."
+          },
+          {
+            "title": "Пакетная Обработка Текста",
+            "description": "Эффективно обрабатывайте большие объемы текста с поддержкой документов, статей и обширного контента."
+          },
+          {
+            "title": "Удобство Копирования-Вставки",
+            "description": "Идеально подходит для очистки текста, скопированного из PDF, электронной почты, веб-сайтов и других источников с нежелательным форматированием."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Частые Случаи Использования",
+        "description": "Удаление переносов строк имеет практические применения в создании контента, обработке документов и задачах форматирования текста.",
+        "items": [
+          { "title": "Очистка PDF Текста", "description": "Очистка текста, скопированного из PDF документов, который содержит нежелательные переносы строк" },
+          { "title": "Веб-Форматирование", "description": "Форматирование контента для веб-публикации с правильным потоком текста" },
+          { "title": "Социальные Сети", "description": "Подготовка текста для постов в социальных сетях с последовательным форматированием" },
+          { "title": "Преобразование в Одну Строку", "description": "Преобразование многострочного текста в одну строку для конкретных приложений" },
+          { "title": "Контент Электронной Почты", "description": "Очистка форматирования контента электронной почты для лучшей читаемости" },
+          { "title": "Ввод Данных", "description": "Обработка документов для ввода данных со стандартизированным форматом текста" },
+          { "title": "Импорт в Базу Данных", "description": "Форматирование текста для импорта в базу данных с чистым, последовательным форматированием" },
+          { "title": "Службы Перевода", "description": "Подготовка контента для служб перевода с правильной структурой текста" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Инструмент Удаления Переносов Строк",
+        "description": "Следуйте этим простым шагам, чтобы очистить ваш текст и удалить нежелательные переносы строк.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Вставьте или введите ваш текст в область ввода, или загрузите текстовый файл с нежелательными переносами строк."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Опцию Замены",
+            "description": "Выберите, заменять ли переносы строк пробелами или полностью удалить их в зависимости от ваших потребностей."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Параметры Абзацев",
+            "description": "Включите сохранение абзацев, если хотите сохранить двойные переносы строк (разделители абзацев) нетронутыми."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите и Скачайте",
+            "description": "Просмотрите очищенный текст в области вывода, затем скопируйте или скачайте отформатированный результат."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Удаления Переносов Строк",
+        "items": [
+          {
+            "title": "Очистка PDF Текста",
+            "input": "Это образец\\nтекста из PDF\\nдокумента с\\nнежелательными переносами.",
+            "output": "Это образец текста из PDF документа с нежелательными переносами."
+          },
+          {
+            "title": "Сохранение Абзацев",
+            "input": "Первый абзац\\nс переносом строки.\\n\\nВторой абзац\\nс другим переносом.",
+            "output": "Первый абзац с переносом строки.\\n\\nВторой абзац с другим переносом."
+          },
+          {
+            "title": "Форматирование Электронной Почты",
+            "input": "Контент электронной\\nпочты разбитый\\nна несколько строк\\nдля читаемости.",
+            "output": "Контент электронной почты разбитый на несколько строк для читаемости."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент Удаления Переносов Строк?",
+        "items": [
+          "Экономьте время на ручном форматировании текста",
+          "Обеспечивайте последовательное представление текста",
+          "Эффективно обрабатывайте большие документы",
+          "Сохраняйте важную структуру абзацев",
+          "Очищайте текст для лучшей читаемости",
+          "Подготавливайте контент для различных платформ",
+          "Устраняйте несоответствия форматирования",
+          "Оптимизируйте рабочий процесс с контентом"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "В чем разница между заменой пробелом и полным удалением?",
+          "answer": "Замена пробелом сохраняет разделение слов и читаемость, в то время как полное удаление создает непрерывный текст без пробелов между соединенными строками."
+        },
+        {
+          "question": "Как работает сохранение абзацев?",
+          "answer": "При включении этой опции инструмент удаляет только одиночные переносы строк, но сохраняет двойные переносы строк (разделители абзацев) для поддержания структуры документа."
+        },
+        {
+          "question": "Можно ли обрабатывать очень большие текстовые документы?",
+          "answer": "Да, наш инструмент эффективно обрабатывает большие объемы текста, что делает его подходящим для обработки целых документов, статей и обширного контента."
+        },
+        {
+          "question": "Полезен ли этот инструмент для очистки PDF текста?",
+          "answer": "Абсолютно! PDF текст часто содержит нежелательные переносы строк при копировании. Наш инструмент идеально подходит для очистки такого текста с сохранением читаемости."
+        },
+        {
+          "question": "Работает ли инструмент с текстом на разных языках?",
+          "answer": "Да, удаление переносов строк работает с текстом на любом языке, поскольку оно работает с символами форматирования, а не с языково-специфичным контентом."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитайте символы, слова и строки в вашем тексте",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Найти и Заменить",
+            "description": "Найдите и замените определенные текстовые шаблоны",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Счетчик Частоты Слов",
+            "description": "Анализируйте частоту слов и статистику текста",
+            "href": "/tools/word-frequency-counter"
+          }
+        ]
+      }
+    }
+  }
+}

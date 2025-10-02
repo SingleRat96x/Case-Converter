@@ -1,27 +1,14 @@
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
 
 export default function robots(): MetadataRoute.Robots {
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL?.replace(/\/+$/, '') || 'https://textcaseconverter.net';
-
+  const base = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
   return {
     rules: {
       userAgent: '*',
-      allow: [
-        '/',
-        '/tools/',
-        '/category/',
-        '/about-us',
-        '/contact-us',
-        '/privacy-policy',
-        '/terms-of-service',
-      ],
-      disallow: [
-        '/admin/',
-        '/api/',
-        '/_next/',
-        '/*?*',
-      ],
+      allow: '/',
     },
-    sitemap: `${baseUrl}/sitemap.xml`,
+    sitemap: [`${base}/sitemap.xml`],
+    host: base,
   };
-} 
+}
+

@@ -1,0 +1,144 @@
+{
+  "en": {
+    "sections": {
+      "intro": {
+        "title": "PNG to WebP Converter",
+        "content": "Convert PNG images to modern WebP format while preserving transparency and achieving superior compression. WebP maintains PNG's transparency support with significantly smaller file sizes, perfect for web performance optimization."
+      },
+      "features": {
+        "title": "Key Features",
+        "items": [
+          { "title": "Transparency preservation", "description": "Maintain PNG transparency with WebP's superior compression." },
+          { "title": "Lossless and lossy modes", "description": "Choose between perfect quality or smaller file sizes." },
+          { "title": "Batch conversion support", "description": "Convert multiple PNG files at once with ZIP download." },
+          { "title": "Private processing", "description": "All conversion happens locally in your browser for privacy." },
+          { "title": "Superior compression", "description": "Achieve 25-50% smaller file sizes compared to PNG format." },
+          { "title": "Modern web optimization", "description": "Perfect for faster loading websites and better user experience." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to convert PNG to WebP",
+        "description": "Follow these simple steps to convert your PNG images.",
+        "steps": [
+          { "step": 1, "title": "Upload PNG files", "description": "Drag & drop PNG files or click to choose from your device." },
+          { "step": 2, "title": "Adjust settings", "description": "Choose quality level and enable lossless mode if needed." },
+          { "step": 3, "title": "Download WebP", "description": "Download individual files or all results as a ZIP archive." }
+        ]
+      },
+      "examples": {
+        "title": "Conversion Examples",
+        "description": "Typical file size improvements when converting PNG to WebP.",
+        "items": [
+          { "input": "1024×768 PNG with transparency (650 KB)", "output": "WebP (280 KB)", "description": "~57% size reduction with transparency preserved." },
+          { "input": "1200×800 PNG graphics (1.2 MB)", "output": "WebP (420 KB)", "description": "~65% size reduction in lossless mode." }
+        ]
+      },
+      "useCases": {
+        "title": "When to use PNG to WebP",
+        "description": "Ideal scenarios for converting PNG to WebP format.",
+        "items": [
+          { "title": "Web graphics with transparency", "description": "Icons, logos, and graphics that need transparent backgrounds." },
+          { "title": "E-commerce product images", "description": "Product photos with transparent backgrounds for better presentation." },
+          { "title": "UI elements and icons", "description": "Interface elements that benefit from smaller file sizes and transparency." },
+          { "title": "Mobile app assets", "description": "App icons and graphics that need optimization for mobile performance." }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          "Preserve transparency with better compression",
+          "Reduce bandwidth usage significantly", 
+          "Improve page load speeds",
+          "Better mobile performance"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related tools",
+        "description": "You may also like these image conversion tools.",
+        "items": [
+          { "name": "JPG to WebP", "description": "Convert JPG images to WebP for smaller file sizes.", "href": "/tools/jpg-to-webp" },
+          { "name": "WebP to PNG", "description": "Convert WebP images back to PNG format.", "href": "/tools/webp-to-png" },
+          { "name": "WebP to JPG", "description": "Convert WebP to JPG for broader compatibility.", "href": "/tools/webp-to-jpg" },
+          { "name": "Image Resizer", "description": "Resize images while maintaining quality and format.", "href": "/tools/image-resizer" }
+        ]
+      },
+      "faqs": [
+        { "question": "Does WebP support transparency like PNG?", "answer": "Yes, WebP fully supports transparency while offering better compression than PNG." },
+        { "question": "Will my PNG transparency be preserved?", "answer": "Absolutely. WebP maintains all transparency information from your PNG files." },
+        { "question": "What's the difference between lossless and lossy WebP?", "answer": "Lossless preserves perfect quality (like PNG) while lossy provides smaller files with minimal quality loss." },
+        { "question": "Are my images uploaded to a server?", "answer": "No, all conversion happens locally in your browser for complete privacy." }
+      ]
+    }
+  },
+  "ru": {
+    "sections": {
+      "intro": {
+        "title": "Конвертер PNG в WebP",
+        "content": "Конвертируйте PNG изображения в современный формат WebP с сохранением прозрачности и достижением превосходного сжатия. WebP сохраняет поддержку прозрачности PNG при значительно меньших размерах файлов, идеально для оптимизации веб-производительности."
+      },
+      "features": {
+        "title": "Ключевые возможности",
+        "items": [
+          { "title": "Сохранение прозрачности", "description": "Сохраняйте прозрачность PNG с превосходным сжатием WebP." },
+          { "title": "Режимы с потерями и без потерь", "description": "Выбирайте между идеальным качеством или меньшими размерами файлов." },
+          { "title": "Пакетная конвертация", "description": "Конвертируйте несколько PNG файлов одновременно с ZIP загрузкой." },
+          { "title": "Приватная обработка", "description": "Вся конвертация происходит локально в браузере для конфиденциальности." },
+          { "title": "Превосходное сжатие", "description": "Достигайте на 25-50% меньших размеров файлов по сравнению с PNG форматом." },
+          { "title": "Современная веб-оптимизация", "description": "Идеально для быстрой загрузки сайтов и лучшего пользовательского опыта." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как конвертировать PNG в WebP",
+        "description": "Выполните эти простые шаги для конвертации PNG изображений.",
+        "steps": [
+          { "step": 1, "title": "Загрузите PNG файлы", "description": "Перетащите PNG файлы или выберите с вашего устройства." },
+          { "step": 2, "title": "Настройте параметры", "description": "Выберите уровень качества и включите режим без потерь при необходимости." },
+          { "step": 3, "title": "Скачайте WebP", "description": "Скачайте отдельные файлы или все результаты как ZIP архив." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации",
+        "description": "Типичные улучшения размера файла при конвертации PNG в WebP.",
+        "items": [
+          { "input": "1024×768 PNG с прозрачностью (650 КБ)", "output": "WebP (280 КБ)", "description": "~57% уменьшение размера с сохранением прозрачности." },
+          { "input": "1200×800 PNG графика (1.2 МБ)", "output": "WebP (420 КБ)", "description": "~65% уменьшение размера в режиме без потерь." }
+        ]
+      },
+      "useCases": {
+        "title": "Когда использовать PNG в WebP",
+        "description": "Идеальные сценарии для конвертации PNG в формат WebP.",
+        "items": [
+          { "title": "Веб-графика с прозрачностью", "description": "Иконки, логотипы и графика, требующие прозрачного фона." },
+          { "title": "Изображения товаров e-commerce", "description": "Фотографии товаров с прозрачным фоном для лучшей презентации." },
+          { "title": "UI элементы и иконки", "description": "Элементы интерфейса, которые выигрывают от меньших размеров файлов и прозрачности." },
+          { "title": "Мобильные ресурсы приложений", "description": "Иконки приложений и графика, требующие оптимизации для мобильной производительности." }
+        ]
+      },
+      "benefits": {
+        "title": "Преимущества",
+        "items": [
+          "Сохранение прозрачности с лучшим сжатием",
+          "Значительное снижение использования трафика",
+          "Улучшение скорости загрузки страниц",
+          "Лучшая производительность на мобильных устройствах"
+        ]
+      },
+      "relatedTools": {
+        "title": "Похожие инструменты",
+        "description": "Вам также могут понравиться эти инструменты конвертации изображений.",
+        "items": [
+          { "name": "JPG в WebP", "description": "Конвертируйте JPG изображения в WebP для меньших размеров файлов.", "href": "/tools/jpg-to-webp" },
+          { "name": "WebP в PNG", "description": "Конвертируйте WebP изображения обратно в PNG формат.", "href": "/tools/webp-to-png" },
+          { "name": "WebP в JPG", "description": "Конвертируйте WebP в JPG для более широкой совместимости.", "href": "/tools/webp-to-jpg" },
+          { "name": "Изменение Размера Изображений", "description": "Изменяйте размер изображений сохраняя качество и формат.", "href": "/tools/image-resizer" }
+        ]
+      },
+      "faqs": [
+        { "question": "Поддерживает ли WebP прозрачность как PNG?", "answer": "Да, WebP полностью поддерживает прозрачность, предлагая при этом лучшее сжатие чем PNG." },
+        { "question": "Будет ли сохранена прозрачность моего PNG?", "answer": "Абсолютно. WebP сохраняет всю информацию о прозрачности из ваших PNG файлов." },
+        { "question": "В чем разница между WebP без потерь и с потерями?", "answer": "Без потерь сохраняет идеальное качество (как PNG), а с потерями обеспечивает меньшие файлы с минимальной потерей качества." },
+        { "question": "Загружаются ли мои изображения на сервер?", "answer": "Нет, вся конвертация происходит локально в вашем браузере для полной конфиденциальности." }
+      ]
+    }
+  }
+}

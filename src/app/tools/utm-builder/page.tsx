@@ -1,53 +1,34 @@
+import { Layout } from '@/components/layout/Layout';
+import { UTMParameterBuilder } from '@/components/tools/UTMParameterBuilder';
+import { SEOContent } from '@/components/seo/SEOContent';
+import { generateToolMetadata } from '@/lib/metadata/metadataGenerator';
 import type { Metadata } from 'next';
-import { getToolContent } from '@/lib/tools';
-import { UtmBuilder } from './utm-builder';
-import { generatePageMetadata } from '@/lib/metadata';
-import AdScript from '@/components/ads/AdScript';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+const toolConfig = {
+  name: 'utm-builder',
+  path: '/tools/utm-builder'
+};
 
 export async function generateMetadata(): Promise<Metadata> {
-  const tool = await getToolContent('utm-builder');
-  return generatePageMetadata(
-    'tool',
-    'utm-builder',
-    tool?.title || 'UTM Builder',
-    tool?.short_description || 'Create UTM tracking URLs for marketing campaigns'
-  );
+  return generateToolMetadata(toolConfig.name, {
+    locale: 'en',
+    pathname: toolConfig.path
+  });
 }
 
-export default async function UtmPage() {
-  const tool = await getToolContent('utm-builder');
-
-  if (!tool) {
-    return null;
-  }
-
+export default function UTMBuilderPage() {
   return (
-    <main className="max-w-7xl mx-auto px-8 py-8">
-      <div className="max-w-4xl mx-auto mb-12">
-        <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-3">
-          {tool.title}
-        </h1>
-        <p className="text-gray-600 dark:text-gray-400">
-          {tool.short_description}
-        </p>
-        <AdScript />
+    <Layout>
+      <div className="py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <UTMParameterBuilder />
+          <SEOContent 
+            toolName={toolConfig.name} 
+            enableAds={true} 
+            adDensity="medium" 
+          />
+        </div>
       </div>
-
-      <div className="max-w-6xl mx-auto mb-12">
-        <UtmBuilder />
-      </div>
-
-      <AdScript />
-
-      <div className="max-w-4xl mx-auto">
-        <div 
-          className="prose dark:prose-invert" 
-          dangerouslySetInnerHTML={{ __html: tool.long_description }} 
-        />
-      </div>
-    </main>
+    </Layout>
   );
-} 
+}

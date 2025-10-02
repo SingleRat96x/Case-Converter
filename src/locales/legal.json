@@ -1,0 +1,1054 @@
+{
+  "en": {
+    "privacy": {
+      "title": "Privacy Policy",
+      "lastUpdated": "Last updated: {date}",
+      "version": "Version {version}",
+      "effectiveDate": "Effective date: {date}",
+      "summary": {
+        "title": "Plain-English Summary",
+        "intro": "We respect your privacy and design tools with privacy-by-default.",
+        "points": [
+          "Most tools process data entirely in your browser",
+          "We don't require registration or collect personal information",
+          "Basic analytics help us improve site performance",
+          "Third-party services may set cookies for advertising and analytics"
+        ]
+      },
+      "tableOfContents": {
+        "title": "Table of Contents"
+      },
+      "examples": "Examples:",
+      "sections": {
+        "introduction": {
+          "title": "Introduction & Scope",
+          "content": "This Privacy Policy describes how {companyName} (\"we\", \"us\" or \"our\") processes information when you use our text conversion tools and services at {domain}. This policy covers all interactions with our website and tools. We are committed to protecting your privacy through privacy-by-design principles and transparent data handling practices."
+        },
+        "dataProcessing": {
+          "title": "Data We Process",
+          "subtitle": "We process minimal data to provide and improve our services:",
+          "categories": {
+            "0": {
+              "title": "Tool Input Data",
+              "description": "Text and files you input into our tools are processed client-side in your browser when possible. This data is not transmitted to our servers unless required for tool functionality.",
+              "examples": "Text for case conversion, files for format conversion, user content"
+            },
+            "1": {
+              "title": "Usage Analytics",
+              "description": "We collect aggregated usage data to understand how our tools are used and improve performance.",
+              "examples": "Pages viewed, tool usage frequency, approximate geographic location (country/region), device type, browser information"
+            },
+            "2": {
+              "title": "Technical Data",
+              "description": "Information automatically collected to ensure proper site functionality and security.",
+              "examples": "IP address, user agent string, referrer, session duration, error logs"
+            },
+            "3": {
+              "title": "Cookies & Local Storage",
+              "description": "Small data files stored on your device to remember preferences and enable analytics.",
+              "examples": "Language preferences, theme choice, analytics identifiers"
+            }
+          },
+          "noAccountData": {
+            "title": "No Account Data",
+            "description": "We don't require user accounts. You can use all tools without providing personal information like names, email addresses, or creating passwords."
+          }
+        },
+        "legalBases": {
+          "title": "Legal Bases for Processing (GDPR)",
+          "intro": "Under the General Data Protection Regulation (GDPR), we process data based on the following legal grounds:",
+          "bases": {
+            "0": {
+              "title": "Legitimate Interest",
+              "description": "For analytics, fraud prevention, and security monitoring to operate and improve our services"
+            },
+            "1": {
+              "title": "Consent",
+              "description": "For optional cookies and advertising services (where required by law)"
+            },
+            "2": {
+              "title": "Contract Performance",
+              "description": "To provide the specific tool functionality you request"
+            }
+          }
+        },
+        "dataUse": {
+          "title": "How We Use Data",
+          "purposes": {
+            "0": "Providing and operating our text conversion tools",
+            "1": "Analyzing usage patterns to improve tool performance and reliability",
+            "2": "Detecting and preventing fraud, abuse, and security threats",
+            "3": "Complying with legal obligations and responding to legal requests",
+            "4": "Developing new features and tools based on user needs"
+          },
+          "noSelling": "We do not sell, rent, or trade your personal data to third parties for their marketing purposes."
+        },
+        "dataSharing": {
+          "title": "Data Sharing & Third Parties",
+          "intro": "We share limited data with trusted service providers who help us operate our website:",
+          "vendors": "See detailed vendor information in our cookie table below.",
+          "circumstances": {
+            "title": "We may also share data in the following circumstances:",
+            "items": {
+              "0": "Legal Compliance: When required by law, regulation, or court order",
+              "1": "Safety Protection: To protect the rights, property, or safety of our users or others",
+              "2": "Business Transfer: In connection with a merger, acquisition, or sale of assets"
+            }
+          }
+        },
+        "internationalTransfers": {
+          "title": "International Data Transfers",
+          "description": "Some of our service providers may be located outside your country. When transferring data internationally, we use appropriate safeguards such as:",
+          "safeguards": {
+            "0": "Standard Contractual Clauses approved by the European Commission",
+            "1": "Adequacy decisions for countries with sufficient data protection laws",
+            "2": "Vendor privacy certifications and commitments"
+          }
+        },
+        "retention": {
+          "title": "Data Retention",
+          "intro": "We retain data only as long as necessary for the purposes outlined in this policy:",
+          "periods": {
+            "0": "Analytics data: {analyticsRetention} days",
+            "1": "Server logs: {logsRetention} days",
+            "2": "Cookie data: Up to {cookiesRetention} days",
+            "3": "Contact form messages: {contactRetention} days"
+          },
+          "criteria": "Data is deleted based on automated retention schedules unless longer retention is required by law or for legitimate business purposes."
+        },
+        "security": {
+          "title": "Security Measures",
+          "intro": "We implement appropriate technical and organizational measures to protect your data:",
+          "measures": {
+            "0": "Transport Layer Security (TLS) encryption for all data transmission",
+            "1": "Regular security assessments and monitoring",
+            "2": "Access controls and least-privilege principles for our systems",
+            "3": "Secure coding practices and regular security updates",
+            "4": "Incident response procedures for potential data breaches"
+          }
+        },
+        "rights": {
+          "title": "Your Privacy Rights",
+          "intro": "Depending on your location, you may have the following rights regarding your data:",
+          "list": {
+            "0": "Access: Request information about data we hold about you",
+            "1": "Rectification: Correct inaccurate or incomplete data",
+            "2": "Erasure: Request deletion of your data (\"right to be forgotten\")",
+            "3": "Restriction: Limit how we process your data",
+            "4": "Portability: Receive your data in a machine-readable format",
+            "5": "Objection: Object to certain types of data processing"
+          },
+          "exercise": {
+            "title": "Exercising Your Rights",
+            "description": "To exercise these rights, contact us at {privacyEmail}. We will respond within {responseDays} days. You may also have the right to lodge a complaint with your local data protection authority."
+          }
+        },
+        "optOut": {
+          "title": "Opt-Out Options",
+          "analytics": {
+            "title": "Analytics Opt-Out",
+            "description": "You can opt out of Google Analytics tracking by installing the Google Analytics Opt-out Browser Add-on or configuring cookie preferences."
+          },
+          "advertising": {
+            "title": "Advertising Management",
+            "description": "Manage advertising cookies through browser settings or visit the Digital Advertising Alliance opt-out page."
+          },
+          "cookies": {
+            "title": "Cookie Management",
+            "description": "Most browsers allow you to manage cookies through settings. Note that disabling certain cookies may affect site functionality."
+          }
+        },
+        "children": {
+          "title": "Children's Privacy",
+          "description": "Our services are not directed to children under {minimumAge} years old. We do not knowingly collect personal information from children under {minimumAge}. If you believe a child has provided us with personal information, please contact us immediately."
+        },
+        "contact": {
+          "title": "Contact Information",
+          "intro": "For privacy-related questions, contact us:",
+          "email": "Email: {privacyEmail}",
+          "postal": "Postal address: {postalAddress}"
+        },
+        "changes": {
+          "title": "Changes to This Policy",
+          "description": "We may periodically update this Privacy Policy to reflect changes in our practices or applicable laws. We will notify users of material changes by posting the updated policy on our website with a new effective date. Continued use of our services after policy updates constitutes acceptance of the changes."
+        }
+      }
+    },
+    "terms": {
+      "title": "Terms of Service",
+      "lastUpdated": "Last updated: {date}",
+      "version": "Version {version}",
+      "effectiveDate": "Effective date: {date}",
+      "tableOfContents": {
+        "title": "Table of Contents"
+      },
+      "prohibitedActivities": "Prohibited Activities",
+      "ownership": "Ownership",
+      "licenseGrant": "License Grant",
+      "yourResponsibility": "Your Responsibility",
+      "importantDisclaimer": "Important Disclaimer",
+      "liabilityLimitation": "Liability Limitation",
+      "sections": {
+        "acceptance": {
+          "title": "Acceptance of Terms",
+          "content": "By accessing or using {companyName} services at {domain}, you agree to be bound by these Terms of Service and our Privacy Policy. If you disagree with these terms, please do not use our services."
+        },
+        "description": {
+          "title": "Service Description",
+          "content": "We provide text conversion tools and utilities for converting, formatting, and manipulating text and data. Our services are provided \"as-is\" and most tools process data locally in your browser for privacy and speed. Some features may require server-side processing, which will be clearly indicated."
+        },
+        "acceptableUse": {
+          "title": "Acceptable Use",
+          "intro": "You agree to use our services responsibly and lawfully. Prohibited activities include:",
+          "prohibited": {
+            "0": "Using tools for illegal purposes or violating applicable laws",
+            "1": "Attempting to circumvent rate limits, security measures, or access controls",
+            "2": "Uploading malicious code, viruses, or harmful content",
+            "3": "Scraping or automated access at abusive rates that may harm service performance",
+            "4": "Violating the intellectual property rights of others",
+            "5": "Distributing spam, abusive, or harmful content",
+            "6": "Attempting to gain unauthorized access to our systems or other users' data"
+          },
+          "enforcement": "We reserve the right to suspend or terminate access for violations of these terms."
+        },
+        "userContent": {
+          "title": "User Content & License",
+          "ownership": "You retain ownership of any content you input into our tools. For tools that process data client-side, your content is not stored on our servers.",
+          "license": "By using our services, you grant us a limited, non-exclusive license to process your content solely to provide the requested tool functionality.",
+          "responsibility": "You are responsible for ensuring you have necessary rights to any content you submit and that it complies with applicable laws."
+        },
+        "intellectualProperty": {
+          "title": "Intellectual Property",
+          "content": "The {companyName} website, tools, and related content are protected by copyright, trademark, and other intellectual property laws. Our trademarks and branding may not be used without permission. We respect intellectual property rights and expect the same from users."
+        },
+        "availability": {
+          "title": "Service Availability & Modifications",
+          "content": "We strive to maintain reliable service but cannot guarantee 100% uptime. We reserve the right to modify, suspend, or discontinue any feature or service at any time without prior notice. We may also set usage limits or restrictions as needed to maintain service quality."
+        },
+        "disclaimers": {
+          "title": "Disclaimers",
+          "content": "Our services are provided \"as is\" and \"as available\" without any warranties, express or implied. We disclaim all warranties including but not limited to merchantability, fitness for a particular purpose, and non-infringement. We do not guarantee that our services will be error-free, secure, or uninterrupted."
+        },
+        "liability": {
+          "title": "Limitation of Liability",
+          "content": "To the maximum extent permitted by law, our liability for any damages arising from your use of our services is limited to the amount you paid us in the last 12 months (or $100 if you paid us nothing). We are not liable for indirect, incidental, consequential, or punitive damages."
+        },
+        "indemnification": {
+          "title": "Indemnification",
+          "content": "You agree to indemnify and hold us harmless from any claims, damages, or expenses arising from your use of our services, violation of these terms, or infringement of third-party rights."
+        },
+        "governingLaw": {
+          "title": "Governing Law & Jurisdiction",
+          "content": "These terms are governed by the laws of {governingLaw}. Any disputes will be resolved in the courts of {governingLaw}. If any provision of these terms is found unenforceable, the remaining provisions will remain in effect."
+        },
+        "dmca": {
+          "title": "DMCA Notice Procedure",
+          "content": "If you believe content on our site infringes your copyright, please send a DMCA notice to {contactEmail} with: (1) identification of the copyrighted work, (2) identification of the infringing material, (3) your contact information, (4) a good faith statement, and (5) a statement of accuracy under penalty of perjury."
+        },
+        "age": {
+          "title": "Age Requirements",
+          "content": "You must be at least {minimumAge} years old to use our services. If you are under {minimumAge}, you may only use our services with parental consent and supervision."
+        },
+        "changes": {
+          "title": "Changes to Terms",
+          "content": "We may periodically update these terms. Material changes will be posted on our website with an updated effective date. Continued use after changes constitutes acceptance of the new terms."
+        },
+        "contact": {
+          "title": "Contact Information",
+          "content": "For questions about these terms, contact us at {contactEmail} or {postalAddress}."
+        }
+      }
+    },
+    "about": {
+      "title": "About Us",
+      "subtitle": "Professional text tools built with privacy and performance in mind",
+      "tableOfContents": {
+        "title": "On This Page"
+      },
+      "responseTime": "Response Time:",
+      "sections": {
+        "mission": {
+          "title": "Our Mission & Value Proposition",
+          "content": "We believe text conversion tools should be fast, private, and accessible to everyone. Our mission is to provide professional text utilities that respect your privacy through client-side processing, deliver lightning-fast performance, and maintain the highest standards of accessibility and user experience.",
+          "values": {
+            "0": {
+              "title": "Privacy by Design",
+              "description": "Most tools process data entirely in your browser, ensuring your content never leaves your device unnecessarily."
+            },
+            "1": {
+              "title": "Speed & Performance",
+              "description": "Optimized algorithms and client-side processing deliver instant results for most operations."
+            },
+            "2": {
+              "title": "Universal Accessibility",
+              "description": "Full keyboard navigation, screen reader support, and WCAG AA compliance ensure our tools work for everyone."
+            },
+            "3": {
+              "title": "No Account Required",
+              "description": "Start using any tool immediately without creating accounts or providing personal information."
+            }
+          }
+        },
+        "howItWorks": {
+          "title": "How Our Tools Work",
+          "intro": "Understanding our technical approach helps you use our tools more effectively:",
+          "clientSide": {
+            "title": "Client-Side Processing",
+            "description": "Most text transformations happen entirely in your browser using JavaScript. This means:",
+            "benefits": {
+              "0": "Your data never leaves your device",
+              "1": "Instant results with no server delays",
+              "2": "Works offline after page loads",
+              "3": "No usage limits or quotas"
+            }
+          },
+          "serverSide": {
+            "title": "Server-Side Processing",
+            "description": "Some advanced features require server processing, including:",
+            "examples": {
+              "0": "Large file conversions (>10MB)",
+              "1": "Complex image processing operations",
+              "2": "OCR (Optical Character Recognition)",
+              "3": "Advanced format conversions"
+            },
+            "privacy": "When server processing is required, data is processed immediately and not stored permanently."
+          }
+        },
+        "accessibility": {
+          "title": "Accessibility Commitment",
+          "intro": "We're committed to making our tools usable by everyone, regardless of abilities or assistive technologies:",
+          "features": {
+            "0": {
+              "title": "Keyboard Navigation",
+              "description": "Full keyboard accessibility with logical tab order and visible focus indicators"
+            },
+            "1": {
+              "title": "Screen Reader Support",
+              "description": "Proper ARIA labels, roles, and live regions for assistive technologies"
+            },
+            "2": {
+              "title": "Visual Design",
+              "description": "WCAG AA contrast ratios, scalable text, and reduced motion options"
+            },
+            "3": {
+              "title": "Alternative Formats",
+              "description": "Text alternatives for images and multiple ways to access functionality"
+            }
+          },
+          "feedback": "If you encounter accessibility barriers, please contact us at {contactEmail}. We're committed to continuous improvement."
+        },
+        "roadmap": {
+          "title": "Development Roadmap",
+          "intro": "Upcoming features and improvements based on user feedback:",
+          "upcoming": {
+            "0": {
+              "title": "Enhanced File Processing",
+              "description": "Support for larger files and additional format conversions",
+              "timeline": "Q2 2026"
+            },
+            "1": {
+              "title": "Batch Operations",
+              "description": "Process multiple files or text blocks simultaneously",
+              "timeline": "Q2 2026"
+            },
+            "2": {
+              "title": "Custom Tool Workflows",
+              "description": "Chain multiple tools together for complex transformations",
+              "timeline": "Q3 2026"
+            },
+            "3": {
+              "title": "API Access",
+              "description": "Programmatic access for developers and automation",
+              "timeline": "Q4 2026"
+            }
+          },
+          "feedback": "Have ideas for new features? Share them through our contact page."
+        },
+        "contact": {
+          "title": "Contact & Partnership",
+          "intro": "We welcome feedback, suggestions, and partnership opportunities:",
+          "purposes": {
+            "0": {
+              "title": "General Feedback",
+              "description": "Suggestions for improvements, bug reports, or feature requests"
+            },
+            "1": {
+              "title": "Business Partnership",
+              "description": "Integration opportunities, white-label solutions, or enterprise licensing"
+            },
+            "2": {
+              "title": "Technical Support",
+              "description": "Help with specific tools or accessibility questions"
+            },
+            "3": {
+              "title": "Media & Press",
+              "description": "Press inquiries, interviews, or review requests"
+            }
+          },
+          "response": "We typically respond to inquiries within 1-2 business days."
+        }
+      }
+    },
+    "contact": {
+      "title": "Contact Us",
+      "subtitle": "Get in touch with our team",
+      "reasons": {
+        "title": "Reasons to Contact Us",
+        "items": {
+          "0": {
+            "title": "Bug Reports",
+            "description": "Found an issue? Help us fix it quickly."
+          },
+          "1": {
+            "title": "Feature Requests",
+            "description": "Suggest new tools or improvements."
+          },
+          "2": {
+            "title": "Business Partnership",
+            "description": "Explore collaboration opportunities."
+          },
+          "3": {
+            "title": "Technical Support",
+            "description": "Get help with specific tools or features."
+          }
+        }
+      },
+      "form": {
+        "title": "Send us a message",
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Your full name",
+            "required": true
+          },
+          "email": {
+            "label": "Email address",
+            "placeholder": "your.email@example.com",
+            "required": true
+          },
+          "category": {
+            "label": "Category",
+            "placeholder": "Select a category",
+            "required": true,
+            "options": {
+              "general-inquiry": "General Inquiry",
+              "bug-report": "Bug Report",
+              "feature-request": "Feature Request",
+              "business-partnership": "Business Partnership",
+              "privacy-request": "Privacy Request",
+              "other": "Other"
+            }
+          },
+          "message": {
+            "label": "Message",
+            "placeholder": "Describe your question or feedback in detail...",
+            "required": true
+          }
+        },
+        "submit": "Send message",
+        "submitting": "Sending...",
+        "privacy": "By submitting this form, you agree to our {privacyLink}.",
+        "privacyLinkText": "Privacy Policy"
+      },
+      "success": {
+        "title": "Message sent successfully!",
+        "description": "Thank you for contacting us. We'll respond within 1-2 business days.",
+        "sendAnother": "Send another message"
+      },
+      "errors": {
+        "required": "This field is required",
+        "invalidEmail": "Please enter a valid email address",
+        "rateLimited": "Too many requests. Please wait before sending another message.",
+        "serverError": "Unable to send message. Please try again later.",
+        "networkError": "Network error. Please check your connection and try again."
+      },
+      "direct": {
+        "title": "Direct Contact",
+        "email": "Email: {contactEmail}",
+        "response": "Response time: 1-2 business days"
+      },
+      "additional": {
+        "title": "Need immediate help?",
+        "description1": "For urgent technical issues, try checking our tool documentation or common troubleshooting steps first.",
+        "description2": "Most issues can be resolved by refreshing the page or clearing your browser cache."
+      },
+      "privacy": {
+        "title": "Privacy Notice",
+        "description": "We respect your privacy. Contact form submissions are used only to respond to your inquiry and are not shared with third parties."
+      }
+    },
+    "cookies": {
+      "title": "Cookie Details",
+      "description": "Detailed information about cookies and similar technologies used on our website:",
+      "table": {
+        "headers": {
+          "name": "Cookie Name",
+          "purpose": "Purpose",
+          "duration": "Duration",
+          "type": "Type",
+          "category": "Category"
+        }
+      },
+      "categories": {
+        "essential": "Essential",
+        "analytics": "Analytics",
+        "advertising": "Advertising",
+        "preferences": "Preferences"
+      },
+      "types": {
+        "first-party": "First-party",
+        "third-party": "Third-party"
+      },
+      "cookiePurposes": {
+        "theme-preference": "Remember dark/light mode preference",
+        "language-preference": "Remember selected language (en/ru)",
+        "_ga": "Google Analytics - distinguish users",
+        "_ga_*": "Google Analytics - session data",
+        "__gads": "Google AdSense - ad serving"
+      }
+    },
+    "common": {
+      "jumpToSection": "Jump to section",
+      "backToTop": "Back to top",
+      "printPage": "Print this page",
+      "sharePage": "Share this page",
+      "copyLink": "Copy link",
+      "linkCopied": "Link copied to clipboard",
+      "readMore": "Read more",
+      "showLess": "Show less",
+      "loading": "Loading...",
+      "error": "Error",
+      "retry": "Retry",
+      "close": "Close",
+      "open": "Open",
+      "yes": "Yes",
+      "no": "No"
+    }
+  },
+  "ru": {
+    "privacy": {
+      "title": "Политика конфиденциальности",
+      "lastUpdated": "Последнее обновление: {date}",
+      "version": "Версия {version}",
+      "effectiveDate": "Дата вступления в силу: {date}",
+      "summary": {
+        "title": "Краткое описание простым языком",
+        "intro": "Мы уважаем вашу конфиденциальность и проектируем инструменты с приватностью по умолчанию.",
+        "points": [
+          "Большинство инструментов обрабатывают данные полностью в вашем браузере",
+          "Мы не требуем регистрации и не собираем личную информацию",
+          "Базовая аналитика помогает нам улучшать производительность сайта",
+          "Сторонние сервисы могут устанавливать cookies для рекламы и аналитики"
+        ]
+      },
+      "tableOfContents": {
+        "title": "Содержание"
+      },
+      "examples": "Примеры:",
+      "sections": {
+        "introduction": {
+          "title": "Введение и область применения",
+          "content": "Эта Политика конфиденциальности описывает, как {companyName} (\"мы\", \"нас\" или \"наша\") обрабатывает информацию при использовании вами наших инструментов преобразования текста и сервисов на {domain}. Эта политика охватывает все взаимодействия с нашим веб-сайтом и инструментами. Мы привержены защите вашей конфиденциальности через принципы приватности по дизайну и прозрачные практики обработки данных."
+        },
+        "dataProcessing": {
+          "title": "Данные, которые мы обрабатываем",
+          "subtitle": "Мы обрабатываем минимальное количество данных для предоставления и улучшения наших сервисов:",
+          "categories": {
+            "0": {
+              "title": "Входные данные инструментов",
+              "description": "Текст и файлы, которые вы вводите в наши инструменты, обрабатываются на стороне клиента в вашем браузере, когда это возможно. Эти данные не передаются на наши серверы, если это не требуется для функциональности инструмента.",
+              "examples": "Текст для изменения регистра, файлы для конвертации формата, пользовательский контент"
+            },
+            "1": {
+              "title": "Аналитика использования",
+              "description": "Мы собираем агрегированные данные использования для понимания того, как используются наши инструменты, и улучшения производительности.",
+              "examples": "Просмотренные страницы, частота использования инструментов, приблизительное географическое положение (страна/регион), тип устройства, информация о браузере"
+            },
+            "2": {
+              "title": "Технические данные",
+              "description": "Информация, автоматически собираемая для обеспечения правильной работы сайта и безопасности.",
+              "examples": "IP-адрес, строка пользовательского агента, реферер, продолжительность сессии, журналы ошибок"
+            },
+            "3": {
+              "title": "Cookies и локальное хранилище",
+              "description": "Небольшие файлы данных, хранящиеся на вашем устройстве для запоминания предпочтений и включения аналитики.",
+              "examples": "Языковые предпочтения, выбор темы, идентификаторы аналитики"
+            }
+          },
+          "noAccountData": {
+            "title": "Никаких данных аккаунта",
+            "description": "Мы не требуем пользовательских аккаунтов. Вы можете использовать все инструменты без предоставления личной информации, такой как имена, адреса электронной почты или создания паролей."
+          }
+        },
+        "legalBases": {
+          "title": "Правовые основания для обработки (GDPR)",
+          "intro": "В соответствии с Общим регламентом по защите данных (GDPR), мы обрабатываем данные на основе следующих правовых оснований:",
+          "bases": {
+            "0": {
+              "title": "Законный интерес",
+              "description": "Для аналитики, предотвращения мошенничества и мониторинга безопасности для работы и улучшения наших услуг"
+            },
+            "1": {
+              "title": "Согласие",
+              "description": "Для необязательных cookies и рекламных услуг (где требуется законом)"
+            },
+            "2": {
+              "title": "Исполнение договора",
+              "description": "Для предоставления конкретной функциональности инструмента, которую вы запрашиваете"
+            }
+          }
+        },
+        "dataUse": {
+          "title": "Как мы используем данные",
+          "purposes": {
+            "0": "Предоставление и работа наших инструментов преобразования текста",
+            "1": "Анализ паттернов использования для улучшения производительности и надежности инструментов",
+            "2": "Обнаружение и предотвращение мошенничества, злоупотреблений и угроз безопасности",
+            "3": "Соблюдение правовых обязательств и ответ на правовые запросы",
+            "4": "Разработка новых функций и инструментов на основе потребностей пользователей"
+          },
+          "noSelling": "Мы не продаем, не сдаем в аренду и не передаем ваши персональные данные третьим лицам для их маркетинговых целей."
+        },
+        "dataSharing": {
+          "title": "Передача данных и третьи стороны",
+          "intro": "Мы передаем ограниченные данные надежным поставщикам услуг, которые помогают нам управлять нашим веб-сайтом:",
+          "vendors": "См. подробную информацию о поставщиках в нашей таблице cookies ниже.",
+          "circumstances": {
+            "title": "Мы также можем передавать данные в следующих обстоятельствах:",
+            "items": {
+              "0": "Соблюдение законодательства: Когда требуется законом, регулированием или судебным приказом",
+              "1": "Защита безопасности: Для защиты прав, собственности или безопасности наших пользователей или других лиц",
+              "2": "Передача бизнеса: В связи со слиянием, приобретением или продажей активов"
+            }
+          }
+        },
+        "internationalTransfers": {
+          "title": "Международная передача данных",
+          "description": "Некоторые из наших поставщиков услуг могут находиться за пределами вашей страны. При международной передаче данных мы используем соответствующие гарантии, такие как:",
+          "safeguards": {
+            "0": "Стандартные договорные условия, одобренные Европейской комиссией",
+            "1": "Решения об адекватности для стран с достаточными законами о защите данных",
+            "2": "Сертификаты конфиденциальности поставщиков и обязательства"
+          }
+        },
+        "retention": {
+          "title": "Хранение данных",
+          "intro": "Мы храним данные только столько, сколько необходимо для целей, изложенных в этой политике:",
+          "periods": {
+            "0": "Данные аналитики: {analyticsRetention} дней",
+            "1": "Журналы сервера: {logsRetention} дней",
+            "2": "Данные cookies: До {cookiesRetention} дней",
+            "3": "Сообщения контактных форм: {contactRetention} дней"
+          },
+          "criteria": "Данные удаляются на основе автоматизированных графиков хранения, если более длительное хранение не требуется по закону или для законных бизнес-целей."
+        },
+        "security": {
+          "title": "Меры безопасности",
+          "intro": "Мы реализуем соответствующие технические и организационные меры для защиты ваших данных:",
+          "measures": {
+            "0": "Шифрование Transport Layer Security (TLS) для всей передачи данных",
+            "1": "Регулярные оценки безопасности и мониторинг",
+            "2": "Контроль доступа и принципы минимальных привилегий для наших систем",
+            "3": "Безопасные практики кодирования и регулярные обновления безопасности",
+            "4": "Процедуры реагирования на инциденты для потенциальных утечек данных"
+          }
+        },
+        "rights": {
+          "title": "Ваши права на конфиденциальность",
+          "intro": "В зависимости от вашего местоположения, у вас могут быть следующие права относительно ваших данных:",
+          "list": {
+            "0": "Доступ: Запросить информацию о данных, которые мы храним о вас",
+            "1": "Исправление: Исправить неточные или неполные данные",
+            "2": "Удаление: Запросить удаление ваших данных (\"право быть забытым\")",
+            "3": "Ограничение: Ограничить способы обработки ваших данных",
+            "4": "Переносимость: Получить ваши данные в машиночитаемом формате",
+            "5": "Возражение: Возражать против определенных типов обработки данных"
+          },
+          "exercise": {
+            "title": "Осуществление ваших прав",
+            "description": "Чтобы воспользоваться этими правами, свяжитесь с нами по адресу {privacyEmail}. Мы ответим в течение {responseDays} дней. У вас также может быть право подать жалобу в местный орган по защите данных."
+          }
+        },
+        "optOut": {
+          "title": "Отказ и управление cookies",
+          "analytics": {
+            "title": "Отказ от аналитики",
+            "description": "Вы можете отказаться от отслеживания Google Analytics, установив дополнение браузера Google Analytics Opt-out или настроив предпочтения cookies."
+          },
+          "advertising": {
+            "title": "Управление рекламой",
+            "description": "Управляйте рекламными cookies через настройки браузера или посетите страницу отказа Digital Advertising Alliance."
+          },
+          "cookies": {
+            "title": "Управление cookies",
+            "description": "Большинство браузеров позволяют управлять cookies через настройки. Обратите внимание, что отключение определенных cookies может повлиять на функциональность сайта."
+          }
+        },
+        "children": {
+          "title": "Конфиденциальность детей",
+          "description": "Наши услуги не предназначены для детей младше {minimumAge} лет. Мы сознательно не собираем личную информацию от детей младше {minimumAge}. Если вы считаете, что ребенок предоставил нам личную информацию, немедленно свяжитесь с нами."
+        },
+        "contact": {
+          "title": "Контактная информация",
+          "intro": "По вопросам, связанным с конфиденциальностью, обращайтесь к нам:",
+          "email": "Email: {privacyEmail}",
+          "postal": "Почтовый адрес: {postalAddress}"
+        },
+        "changes": {
+          "title": "Изменения в этой политике",
+          "description": "Мы можем периодически обновлять эту Политику конфиденциальности, чтобы отразить изменения в наших практиках или применимых законах. Мы уведомим пользователей о существенных изменениях, разместив обновленную политику на нашем веб-сайте с новой датой вступления в силу. Продолжение использования наших услуг после обновления политики означает принятие изменений."
+        }
+      }
+    },
+    "terms": {
+      "title": "Условия обслуживания",
+      "lastUpdated": "Последнее обновление: {date}",
+      "version": "Версия {version}",
+      "effectiveDate": "Дата вступления в силу: {date}",
+      "tableOfContents": {
+        "title": "Содержание"
+      },
+      "prohibitedActivities": "Запрещенные действия",
+      "ownership": "Право собственности",
+      "licenseGrant": "Предоставление лицензии",
+      "yourResponsibility": "Ваша ответственность",
+      "importantDisclaimer": "Важное уведомление",
+      "liabilityLimitation": "Ограничение ответственности",
+      "sections": {
+        "acceptance": {
+          "title": "Принятие условий",
+          "content": "Получив доступ к услугам {companyName} на {domain} или используя их, вы соглашаетесь быть связанными настоящими Условиями обслуживания и нашей Политикой конфиденциальности. Если вы не согласны с этими условиями, пожалуйста, не используйте наши услуги."
+        },
+        "description": {
+          "title": "Описание сервиса",
+          "content": "Мы предоставляем инструменты преобразования текста и утилиты для конвертации, форматирования и манипулирования текстом и данными. Наши услуги предоставляются \"как есть\", и большинство инструментов обрабатывают данные локально в вашем браузере для конфиденциальности и скорости. Некоторые функции могут требовать серверной обработки, что будет четко указано."
+        },
+        "acceptableUse": {
+          "title": "Приемлемое использование",
+          "intro": "Вы соглашаетесь использовать наши услуги ответственно и законно. Запрещенные действия включают:",
+          "prohibited": {
+            "0": "Использование инструментов в незаконных целях или в нарушение применимых законов",
+            "1": "Попытки обойти ограничения скорости, меры безопасности или контроль доступа",
+            "2": "Отправка вредоносного кода, вирусов или вредного контента",
+            "3": "Скрапинг или автоматизированный доступ с абузивной скоростью, который может повредить производительности сервиса",
+            "4": "Нарушение прав интеллектуальной собственности других лиц",
+            "5": "Распространение спама, оскорбительного или вредного контента",
+            "6": "Попытки получить несанкционированный доступ к нашим системам или данным других пользователей"
+          },
+          "enforcement": "Мы оставляем за собой право приостановить или прекратить доступ за нарушения этих условий."
+        },
+        "userContent": {
+          "title": "Пользовательский контент и лицензия",
+          "ownership": "Вы сохраняете право собственности на любой контент, который вводите в наши инструменты. Для инструментов, которые обрабатывают данные на стороне клиента, ваш контент не хранится на наших серверах.",
+          "license": "Используя наши услуги, вы предоставляете нам ограниченную, неисключительную лицензию на обработку вашего контента исключительно для предоставления запрошенной функциональности инструмента.",
+          "responsibility": "Вы несете ответственность за обеспечение того, что у вас есть необходимые права на любой контент, который вы отправляете, и что он соответствует применимым законам."
+        },
+        "intellectualProperty": {
+          "title": "Интеллектуальная собственность",
+          "content": "Веб-сайт {companyName}, инструменты и связанный контент защищены авторским правом, товарными знаками и другими законами об интеллектуальной собственности. Наши товарные знаки и брендинг не могут использоваться без разрешения. Мы уважаем права интеллектуальной собственности и ожидаем того же от пользователей."
+        },
+        "availability": {
+          "title": "Доступность сервиса и модификации",
+          "content": "Мы стремимся поддерживать надежный сервис, но не можем гарантировать 100% времени работы. Мы оставляем за собой право изменять, приостанавливать или прекращать любую функцию или сервис в любое время без предварительного уведомления. Мы также можем устанавливать ограничения использования или ограничения по мере необходимости для поддержания качества сервиса."
+        },
+        "disclaimers": {
+          "title": "Отказ от гарантий",
+          "content": "Наши услуги предоставляются \"как есть\" и \"как доступно\" без каких-либо гарантий, явных или подразумеваемых. Мы отказываемся от всех гарантий, включая, но не ограничиваясь, товарность, пригодность для конкретной цели и ненарушение прав. Мы не гарантируем, что наши услуги будут безошибочными, безопасными или непрерывными."
+        },
+        "liability": {
+          "title": "Ограничение ответственности",
+          "content": "В максимальной степени, разрешенной законом, наша ответственность за любой ущерб, возникающий в результате использования вами наших услуг, ограничивается суммой, которую вы заплатили нам за последние 12 месяцев (или $100, если вы нам ничего не платили). Мы не несем ответственности за косвенный, случайный, последующий или штрафной ущерб."
+        },
+        "indemnification": {
+          "title": "Возмещение ущерба",
+          "content": "Вы соглашаетесь возместить и обезопасить нас от любых претензий, ущерба или расходов, возникающих в результате использования вами наших услуг, нарушения этих условий или нарушения прав третьих лиц."
+        },
+        "governingLaw": {
+          "title": "Применимое право и юрисдикция",
+          "content": "Эти условия регулируются законами {governingLaw}. Любые споры будут разрешаться в судах {governingLaw}. Если какое-либо положение этих условий признано неисполнимым, остальные положения останутся в силе."
+        },
+        "dmca": {
+          "title": "Процедура уведомления DMCA",
+          "content": "Если вы считаете, что контент на нашем сайте нарушает ваши авторские права, пожалуйста, отправьте уведомление DMCA на {contactEmail} с: (1) идентификацией произведения, защищенного авторским правом, (2) идентификацией нарушающего материала, (3) вашей контактной информацией, (4) заявлением о добросовестной вере, и (5) заявлением о точности под страхом лжесвидетельства."
+        },
+        "age": {
+          "title": "Возрастные требования",
+          "content": "Вам должно быть не менее {minimumAge} лет для использования наших услуг. Если вам меньше {minimumAge}, вы можете использовать наши услуги только с согласия и под присмотром родителей."
+        },
+        "changes": {
+          "title": "Изменения условий",
+          "content": "Мы можем периодически обновлять эти условия. Существенные изменения будут размещены на нашем веб-сайте с обновленной датой вступления в силу. Продолжение использования после изменений означает принятие новых условий."
+        },
+        "contact": {
+          "title": "Контактная информация",
+          "content": "По вопросам об этих условиях свяжитесь с нами по адресу {contactEmail} или {postalAddress}."
+        }
+      }
+    },
+    "about": {
+      "title": "О нас",
+      "subtitle": "Профессиональные текстовые инструменты, созданные с учетом конфиденциальности и производительности",
+      "tableOfContents": {
+        "title": "На этой странице"
+      },
+      "responseTime": "Время ответа:",
+      "sections": {
+        "mission": {
+          "title": "Наша миссия и ценностное предложение",
+          "content": "Мы считаем, что инструменты преобразования текста должны быть быстрыми, приватными и доступными для всех. Наша миссия - предоставить профессиональные текстовые утилиты, которые уважают вашу конфиденциальность через обработку на стороне клиента, обеспечивают молниеносную производительность и поддерживают высочайшие стандарты доступности и пользовательского опыта.",
+          "values": {
+            "0": {
+              "title": "Конфиденциальность по дизайну",
+              "description": "Большинство инструментов обрабатывают данные полностью в вашем браузере, обеспечивая, что ваш контент не покидает ваше устройство без необходимости."
+            },
+            "1": {
+              "title": "Скорость и производительность",
+              "description": "Оптимизированные алгоритмы и обработка на стороне клиента обеспечивают мгновенные результаты для большинства операций."
+            },
+            "2": {
+              "title": "Универсальная доступность",
+              "description": "Полная навигация с клавиатуры, поддержка программ чтения с экрана и соответствие WCAG AA обеспечивают работу наших инструментов для всех."
+            },
+            "3": {
+              "title": "Без регистрации аккаунта",
+              "description": "Начните использовать любой инструмент немедленно без создания аккаунтов или предоставления личной информации."
+            }
+          }
+        },
+        "howItWorks": {
+          "title": "Как работают наши инструменты",
+          "intro": "Понимание нашего технического подхода поможет вам более эффективно использовать наши инструменты:",
+          "clientSide": {
+            "title": "Обработка на стороне клиента",
+            "description": "Большинство преобразований текста происходит полностью в вашем браузере с использованием JavaScript. Это означает:",
+            "benefits": {
+              "0": "Ваши данные никогда не покидают ваше устройство",
+              "1": "Мгновенные результаты без задержек сервера",
+              "2": "Работает офлайн после загрузки страницы",
+              "3": "Никаких ограничений использования или квот"
+            }
+          },
+          "serverSide": {
+            "title": "Обработка на стороне сервера",
+            "description": "Некоторые расширенные функции требуют серверной обработки, включая:",
+            "examples": {
+              "0": "Конвертация больших файлов (>10МБ)",
+              "1": "Сложные операции обработки изображений",
+              "2": "OCR (Оптическое распознавание символов)",
+              "3": "Расширенные конвертации форматов"
+            },
+            "privacy": "Когда требуется серверная обработка, данные обрабатываются немедленно и не хранятся постоянно."
+          }
+        },
+        "accessibility": {
+          "title": "Обязательства по доступности",
+          "intro": "Мы привержены тому, чтобы сделать наши инструменты пригодными для использования всеми, независимо от способностей или вспомогательных технологий:",
+          "features": {
+            "0": {
+              "title": "Навигация с клавиатуры",
+              "description": "Полная доступность с клавиатуры с логичным порядком табуляции и видимыми индикаторами фокуса"
+            },
+            "1": {
+              "title": "Поддержка программ чтения с экрана",
+              "description": "Правильные ARIA-метки, роли и живые области для вспомогательных технологий"
+            },
+            "2": {
+              "title": "Визуальный дизайн",
+              "description": "Коэффициенты контрастности WCAG AA, масштабируемый текст и опции уменьшенного движения"
+            },
+            "3": {
+              "title": "Альтернативные форматы",
+              "description": "Текстовые альтернативы для изображений и множественные способы доступа к функциональности"
+            }
+          },
+          "feedback": "Если вы сталкиваетесь с барьерами доступности, пожалуйста, свяжитесь с нами по адресу {contactEmail}. Мы привержены постоянному улучшению."
+        },
+        "roadmap": {
+          "title": "Дорожная карта разработки",
+          "intro": "Предстоящие функции и улучшения на основе отзывов пользователей:",
+          "upcoming": {
+            "0": {
+              "title": "Улучшенная обработка файлов",
+              "description": "Поддержка больших файлов и дополнительных конвертаций форматов",
+              "timeline": "Q2 2026"
+            },
+            "1": {
+              "title": "Массовые операции",
+              "description": "Обработка множественных файлов или текстовых блоков одновременно",
+              "timeline": "Q2 2026"
+            },
+            "2": {
+              "title": "Пользовательские рабочие процессы инструментов",
+              "description": "Связывание множественных инструментов вместе для сложных преобразований",
+              "timeline": "Q3 2026"
+            },
+            "3": {
+              "title": "API доступ",
+              "description": "Программный доступ для разработчиков и автоматизации",
+              "timeline": "Q4 2026"
+            }
+          },
+          "feedback": "Есть идеи для новых функций? Поделитесь ими через нашу страницу контактов."
+        },
+        "contact": {
+          "title": "Контакты и партнерство",
+          "intro": "Мы приветствуем отзывы, предложения и возможности партнерства:",
+          "purposes": {
+            "0": {
+              "title": "Общие отзывы",
+              "description": "Предложения по улучшениям, отчеты об ошибках или запросы функций"
+            },
+            "1": {
+              "title": "Бизнес-партнерство",
+              "description": "Возможности интеграции, white-label решения или групповое лицензирование"
+            },
+            "2": {
+              "title": "Техническая поддержка",
+              "description": "Помощь с конкретными инструментами или вопросами доступности"
+            },
+            "3": {
+              "title": "Медиа и пресса",
+              "description": "Запросы прессы, интервью или запросы на обзоры"
+            }
+          },
+          "response": "Мы обычно отвечаем на запросы в течение 1-2 рабочих дней."
+        }
+      }
+    },
+    "contact": {
+      "title": "Свяжитесь с нами",
+      "subtitle": "Свяжитесь с нашей командой",
+      "reasons": {
+        "title": "Причины связаться с нами",
+        "items": {
+          "0": {
+            "title": "Отчеты об ошибках",
+            "description": "Нашли проблему? Помогите нам быстро ее исправить."
+          },
+          "1": {
+            "title": "Запросы функций",
+            "description": "Предложите новые инструменты или улучшения."
+          },
+          "2": {
+            "title": "Бизнес-партнерство",
+            "description": "Изучите возможности сотрудничества."
+          },
+          "3": {
+            "title": "Техническая поддержка",
+            "description": "Получите помощь с конкретными инструментами или функциями."
+          }
+        }
+      },
+      "form": {
+        "title": "Отправьте нам сообщение",
+        "fields": {
+          "name": {
+            "label": "Имя",
+            "placeholder": "Ваше полное имя",
+            "required": true
+          },
+          "email": {
+            "label": "Адрес электронной почты",
+            "placeholder": "your.email@example.com",
+            "required": true
+          },
+          "category": {
+            "label": "Категория",
+            "placeholder": "Выберите категорию",
+            "required": true,
+            "options": {
+              "general-inquiry": "Общий запрос",
+              "bug-report": "Отчет об ошибке",
+              "feature-request": "Запрос функции",
+              "business-partnership": "Бизнес-партнерство",
+              "privacy-request": "Запрос конфиденциальности",
+              "other": "Другое"
+            }
+          },
+          "message": {
+            "label": "Сообщение",
+            "placeholder": "Опишите ваш вопрос или отзыв подробно...",
+            "required": true
+          }
+        },
+        "submit": "Отправить сообщение",
+        "submitting": "Отправка...",
+        "privacy": "Отправляя эту форму, вы соглашаетесь с нашей {privacyLink}.",
+        "privacyLinkText": "Политикой конфиденциальности"
+      },
+      "success": {
+        "title": "Сообщение успешно отправлено!",
+        "description": "Спасибо за обращение к нам. Мы ответим в течение 1-2 рабочих дней.",
+        "sendAnother": "Отправить другое сообщение"
+      },
+      "errors": {
+        "required": "Это поле обязательно",
+        "invalidEmail": "Пожалуйста, введите действительный адрес электронной почты",
+        "rateLimited": "Слишком много запросов. Пожалуйста, подождите перед отправкой другого сообщения.",
+        "serverError": "Невозможно отправить сообщение. Пожалуйста, попробуйте еще раз позже.",
+        "networkError": "Ошибка сети. Пожалуйста, проверьте ваше соединение и попробуйте еще раз."
+      },
+      "direct": {
+        "title": "Прямой контакт",
+        "email": "Электронная почта: {contactEmail}",
+        "response": "Время ответа: 1-2 рабочих дня"
+      },
+      "additional": {
+        "title": "Нужна срочная помощь?",
+        "description1": "При срочных технических проблемах сначала попробуйте проверить документацию наших инструментов или общие шаги по устранению неполадок.",
+        "description2": "Большинство проблем можно решить, обновив страницу или очистив кеш браузера."
+      },
+      "privacy": {
+        "title": "Уведомление о конфиденциальности",
+        "description": "Мы уважаем вашу конфиденциальность. Сообщения контактной формы используются только для ответа на ваш запрос и не передаются третьим лицам."
+      }
+    },
+    "cookies": {
+      "title": "Детали cookies",
+      "description": "Подробная информация о cookies и похожих технологиях, используемых на нашем веб-сайте:",
+      "table": {
+        "headers": {
+          "name": "Название Cookie",
+          "purpose": "Цель",
+          "duration": "Продолжительность",
+          "type": "Тип",
+          "category": "Категория"
+        }
+      },
+      "categories": {
+        "essential": "Основные",
+        "analytics": "Аналитика",
+        "advertising": "Реклама",
+        "preferences": "Предпочтения"
+      },
+      "types": {
+        "first-party": "Первой стороны",
+        "third-party": "Третьей стороны"
+      },
+      "cookiePurposes": {
+        "theme-preference": "Запоминание предпочтения темной/светлой темы",
+        "language-preference": "Запоминание выбранного языка (en/ru)",
+        "_ga": "Google Analytics - различение пользователей",
+        "_ga_*": "Google Analytics - данные сессии",
+        "__gads": "Google AdSense - показ рекламы"
+      }
+    },
+    "common": {
+      "jumpToSection": "Перейти к разделу",
+      "backToTop": "Наверх",
+      "printPage": "Распечатать эту страницу",
+      "sharePage": "Поделиться этой страницей",
+      "copyLink": "Скопировать ссылку",
+      "linkCopied": "Ссылка скопирована в буфер обмена",
+      "readMore": "Читать больше",
+      "showLess": "Показать меньше",
+      "loading": "Загрузка...",
+      "error": "Ошибка",
+      "retry": "Повторить",
+      "close": "Закрыть",
+      "open": "Открыть",
+      "yes": "Да",
+      "no": "Нет"
+    }
+  }
+}

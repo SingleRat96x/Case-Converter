@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free CSV to JSON Converter - Bidirectional Data Format Transformation",
+    "metaDescription": "Convert CSV to JSON and JSON to CSV instantly. Free online converter with customizable delimiters, headers support, and advanced formatting options for data processing.",
+    "sections": {
+      "intro": {
+        "title": "Free CSV to JSON Converter - Bidirectional Data Format Transformation",
+        "content": "Transform data between CSV and JSON formats with our comprehensive online converter. Features bidirectional conversion, customizable delimiters, header support, and advanced formatting options. Perfect for data processing, API integration, and format transformation tasks."
+      },
+      "features": {
+        "title": "Advanced CSV to JSON Conversion Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Convert CSV to JSON and JSON back to CSV with instant mode switching and intelligent format detection."
+          },
+          {
+            "title": "Customizable Delimiters",
+            "description": "Support for comma, semicolon, tab, pipe, and custom delimiters to handle various CSV formats and regional standards."
+          },
+          {
+            "title": "Header Management",
+            "description": "Intelligent header detection and processing with options to include or exclude headers in the conversion process."
+          },
+          {
+            "title": "JSON Format Options",
+            "description": "Choose between array format, object format, or pretty-printed JSON with proper indentation for readability."
+          },
+          {
+            "title": "Data Processing Options",
+            "description": "Advanced options for handling quotes, trimming whitespace, skipping empty lines, and data type detection."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Detailed statistics including row/column counts, file sizes, compression ratios, and data point analysis."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for CSV to JSON Conversion",
+        "description": "Transform data formats for various applications, APIs, and data processing workflows.",
+        "items": [
+          {
+            "title": "API Integration",
+            "description": "Convert CSV data to JSON format for REST API consumption and web service integration."
+          },
+          {
+            "title": "Data Migration",
+            "description": "Transform data between different systems, databases, and applications with format compatibility."
+          },
+          {
+            "title": "Web Development",
+            "description": "Convert CSV datasets to JSON for JavaScript applications, charts, and dynamic web content."
+          },
+          {
+            "title": "Data Analysis",
+            "description": "Prepare CSV data for analysis tools and frameworks that require JSON input format."
+          },
+          {
+            "title": "Configuration Files",
+            "description": "Convert CSV configuration data to JSON format for modern applications and microservices."
+          },
+          {
+            "title": "Report Generation",
+            "description": "Transform CSV reports to JSON for automated processing and dashboard integration."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Between CSV and JSON",
+        "description": "Follow these simple steps to transform your data between CSV and JSON formats.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose Conversion Mode",
+            "description": "Select whether you want to convert CSV to JSON or JSON to CSV using the mode switcher."
+          },
+          {
+            "step": 2,
+            "title": "Input Your Data",
+            "description": "Paste your CSV or JSON data into the input area, or upload a file for conversion."
+          },
+          {
+            "step": 3,
+            "title": "Configure Options",
+            "description": "Adjust delimiter settings, header options, and JSON formatting preferences in the options panel."
+          },
+          {
+            "step": 4,
+            "title": "Review & Download",
+            "description": "Examine the converted data, review analytics, and download or copy the results."
+          }
+        ]
+      },
+      "examples": {
+        "title": "CSV to JSON Conversion Examples",
+        "description": "See how different types of data are converted between CSV and JSON formats.",
+        "items": [
+          {
+            "title": "Simple CSV to JSON",
+            "input": "Name,Age,City\nJohn,25,New York\nJane,30,Los Angeles",
+            "output": "[\n  {\"Name\": \"John\", \"Age\": 25, \"City\": \"New York\"},\n  {\"Name\": \"Jane\", \"Age\": 30, \"City\": \"Los Angeles\"}\n]"
+          },
+          {
+            "title": "JSON to CSV",
+            "input": "[{\"product\": \"Laptop\", \"price\": 999.99}, {\"product\": \"Mouse\", \"price\": 29.99}]",
+            "output": "product,price\nLaptop,999.99\nMouse,29.99"
+          },
+          {
+            "title": "Custom Delimiter",
+            "input": "ID;Name;Active\n1;User1;true\n2;User2;false",
+            "output": "[\n  {\"ID\": 1, \"Name\": \"User1\", \"Active\": true},\n  {\"ID\": 2, \"Name\": \"User2\", \"Active\": false}\n]"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our CSV to JSON Converter",
+        "content": "Professional-grade data conversion with comprehensive options and intelligent processing.",
+        "items": [
+          "Instant bidirectional conversion between CSV and JSON formats",
+          "Support for multiple delimiter types and custom separators",
+          "Intelligent header detection and processing options",
+          "Advanced JSON formatting with pretty-printing support",
+          "Real-time analytics and file size optimization insights",
+          "Robust error handling and data validation",
+          "Privacy-focused - all processing happens locally",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What CSV formats are supported?",
+          "answer": "Our converter supports standard CSV with comma delimiters, as well as semicolon-separated values (SSV), tab-separated values (TSV), pipe-separated values, and custom delimiters. It handles quoted fields, escaped characters, and various regional CSV standards."
+        },
+        {
+          "question": "How are data types handled during conversion?",
+          "answer": "The converter automatically detects and converts numeric values to numbers in JSON. Text values remain as strings. Boolean values (true/false) are converted to JSON booleans when detected. You can control this behavior through the processing options."
+        },
+        {
+          "question": "Can I convert JSON arrays back to CSV?",
+          "answer": "Yes, our tool supports bidirectional conversion. It can handle JSON arrays of objects, nested data structures, and various JSON formats. The converter intelligently extracts headers and flattens data for CSV output."
+        },
+        {
+          "question": "What happens with empty cells or missing data?",
+          "answer": "Empty CSV cells are converted to empty strings in JSON. Missing JSON properties become empty CSV cells. You can configure whether to skip empty lines and how to handle whitespace through the processing options."
+        },
+        {
+          "question": "Is there a limit on file size?",
+          "answer": "There are no artificial limits imposed by our tool. The conversion happens in your browser, so the practical limit depends on your device's memory. Large files are processed efficiently with real-time progress feedback."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Data Processing Tools",
+        "items": [
+          {
+            "name": "JSON Stringify",
+            "description": "Format and validate JSON with syntax highlighting",
+            "href": "/tools/json-stringify"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode data using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Analyze text statistics and data structure",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "URL Converter",
+            "description": "Encode and decode URLs for web applications",
+            "href": "/tools/url-converter"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Конвертер CSV в JSON - Двунаправленное Преобразование Форматов Данных",
+    "metaDescription": "Конвертируйте CSV в JSON и JSON в CSV мгновенно. Бесплатный онлайн конвертер с настраиваемыми разделителями, поддержкой заголовков и расширенными опциями форматирования для обработки данных.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Конвертер CSV в JSON - Двунаправленное Преобразование Форматов Данных",
+        "content": "Преобразуйте данные между форматами CSV и JSON с помощью нашего комплексного онлайн конвертера. Включает двунаправленную конвертацию, настраиваемые разделители, поддержку заголовков и расширенные опции форматирования. Идеально для обработки данных, интеграции API и задач преобразования форматов."
+      },
+      "features": {
+        "title": "Расширенные Возможности Конвертации CSV в JSON",
+        "items": [
+          {
+            "title": "Двунаправленная Конвертация",
+            "description": "Конвертируйте CSV в JSON и JSON обратно в CSV с мгновенным переключением режимов и интеллектуальным определением формата."
+          },
+          {
+            "title": "Настраиваемые Разделители",
+            "description": "Поддержка запятых, точек с запятой, табуляции, вертикальных черт и пользовательских разделителей для обработки различных форматов CSV и региональных стандартов."
+          },
+          {
+            "title": "Управление Заголовками",
+            "description": "Интеллектуальное определение и обработка заголовков с опциями включения или исключения заголовков в процессе конвертации."
+          },
+          {
+            "title": "Опции Формата JSON",
+            "description": "Выбирайте между форматом массива, форматом объекта или красиво отформатированным JSON с правильными отступами для читаемости."
+          },
+          {
+            "title": "Опции Обработки Данных",
+            "description": "Расширенные опции для обработки кавычек, обрезки пробелов, пропуска пустых строк и определения типов данных."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Подробная статистика, включая количество строк/столбцов, размеры файлов, коэффициенты сжатия и анализ точек данных."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения Конвертации CSV в JSON",
+        "description": "Преобразуйте форматы данных для различных приложений, API и рабочих процессов обработки данных.",
+        "items": [
+          {
+            "title": "Интеграция API",
+            "description": "Конвертируйте данные CSV в формат JSON для потребления REST API и интеграции веб-сервисов."
+          },
+          {
+            "title": "Миграция Данных",
+            "description": "Преобразуйте данные между различными системами, базами данных и приложениями с совместимостью форматов."
+          },
+          {
+            "title": "Веб-разработка",
+            "description": "Конвертируйте наборы данных CSV в JSON для JavaScript приложений, графиков и динамического веб-контента."
+          },
+          {
+            "title": "Анализ Данных",
+            "description": "Подготавливайте данные CSV для инструментов анализа и фреймворков, которые требуют входной формат JSON."
+          },
+          {
+            "title": "Файлы Конфигурации",
+            "description": "Конвертируйте данные конфигурации CSV в формат JSON для современных приложений и микросервисов."
+          },
+          {
+            "title": "Генерация Отчетов",
+            "description": "Преобразуйте отчеты CSV в JSON для автоматизированной обработки и интеграции с панелями управления."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Между CSV и JSON",
+        "description": "Следуйте этим простым шагам для преобразования ваших данных между форматами CSV и JSON.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Режим Конвертации",
+            "description": "Выберите, хотите ли вы конвертировать CSV в JSON или JSON в CSV, используя переключатель режимов."
+          },
+          {
+            "step": 2,
+            "title": "Введите Ваши Данные",
+            "description": "Вставьте ваши данные CSV или JSON в область ввода, или загрузите файл для конвертации."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Опции",
+            "description": "Отрегулируйте настройки разделителей, опции заголовков и предпочтения форматирования JSON в панели опций."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите и Скачайте",
+            "description": "Изучите конвертированные данные, просмотрите аналитику и скачайте или скопируйте результаты."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации CSV в JSON",
+        "description": "Посмотрите, как различные типы данных конвертируются между форматами CSV и JSON.",
+        "items": [
+          {
+            "title": "Простой CSV в JSON",
+            "input": "Имя,Возраст,Город\nИван,25,Москва\nМария,30,Санкт-Петербург",
+            "output": "[\n  {\"Имя\": \"Иван\", \"Возраст\": 25, \"Город\": \"Москва\"},\n  {\"Имя\": \"Мария\", \"Возраст\": 30, \"Город\": \"Санкт-Петербург\"}\n]"
+          },
+          {
+            "title": "JSON в CSV",
+            "input": "[{\"товар\": \"Ноутбук\", \"цена\": 999.99}, {\"товар\": \"Мышь\", \"цена\": 29.99}]",
+            "output": "товар,цена\nНоутбук,999.99\nМышь,29.99"
+          },
+          {
+            "title": "Пользовательский Разделитель",
+            "input": "ID;Имя;Активен\n1;Пользователь1;true\n2;Пользователь2;false",
+            "output": "[\n  {\"ID\": 1, \"Имя\": \"Пользователь1\", \"Активен\": true},\n  {\"ID\": 2, \"Имя\": \"Пользователь2\", \"Активен\": false}\n]"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Конвертер CSV в JSON",
+        "content": "Профессиональная конвертация данных с комплексными опциями и интеллектуальной обработкой.",
+        "items": [
+          "Мгновенная двунаправленная конвертация между форматами CSV и JSON",
+          "Поддержка множественных типов разделителей и пользовательских сепараторов",
+          "Интеллектуальное определение и обработка заголовков",
+          "Расширенное форматирование JSON с поддержкой красивой печати",
+          "Аналитика в реальном времени и инсайты оптимизации размера файлов",
+          "Надежная обработка ошибок и валидация данных",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы CSV поддерживаются?",
+          "answer": "Наш конвертер поддерживает стандартный CSV с разделителями-запятыми, а также значения, разделенные точкой с запятой (SSV), значения, разделенные табуляцией (TSV), значения, разделенные вертикальной чертой, и пользовательские разделители. Он обрабатывает поля в кавычках, экранированные символы и различные региональные стандарты CSV."
+        },
+        {
+          "question": "Как обрабатываются типы данных во время конвертации?",
+          "answer": "Конвертер автоматически определяет и преобразует числовые значения в числа в JSON. Текстовые значения остаются строками. Булевы значения (true/false) преобразуются в JSON булевы при обнаружении. Вы можете контролировать это поведение через опции обработки."
+        },
+        {
+          "question": "Могу ли я конвертировать массивы JSON обратно в CSV?",
+          "answer": "Да, наш инструмент поддерживает двунаправленную конвертацию. Он может обрабатывать массивы объектов JSON, вложенные структуры данных и различные форматы JSON. Конвертер интеллектуально извлекает заголовки и выравнивает данные для вывода CSV."
+        },
+        {
+          "question": "Что происходит с пустыми ячейками или отсутствующими данными?",
+          "answer": "Пустые ячейки CSV конвертируются в пустые строки в JSON. Отсутствующие свойства JSON становятся пустыми ячейками CSV. Вы можете настроить, пропускать ли пустые строки и как обрабатывать пробелы через опции обработки."
+        },
+        {
+          "question": "Есть ли ограничение на размер файла?",
+          "answer": "Наш инструмент не накладывает искусственных ограничений. Конвертация происходит в вашем браузере, поэтому практическое ограничение зависит от памяти вашего устройства. Большие файлы обрабатываются эффективно с обратной связью о прогрессе в реальном времени."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Данных",
+        "items": [
+          {
+            "name": "JSON Stringify",
+            "description": "Форматируйте и валидируйте JSON с подсветкой синтаксиса",
+            "href": "/ru/tools/json-stringify"
+          },
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте данные используя Base64 кодирование",
+            "href": "/ru/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Анализируйте статистику текста и структуру данных",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "URL Конвертер",
+            "description": "Кодируйте и декодируйте URL для веб-приложений",
+            "href": "/ru/tools/url-converter"
+          }
+        ]
+      }
+    }
+  }
+}

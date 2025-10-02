@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Free Online Lowercase Text Converter Tool",
+    "metaDescription": "Convert any text to lowercase letters instantly with our free online lowercase converter. Perfect for consistency, URLs, coding standards, and professional formatting needs.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Lowercase Text Converter Tool",
+        "content": "Transform any text to lowercase letters instantly with our powerful and free lowercase converter tool. Perfect for creating consistent formatting, standardizing URLs, meeting coding standards, or any formatting requirements that need all lowercase text."
+      },
+      "features": {
+        "title": "Powerful Lowercase Conversion Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time lowercase conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to lowercase" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Lowercase Text Conversion",
+        "description": "Lowercase text serves many important purposes across different contexts and applications.",
+        "items": [
+          { "title": "URL Formatting", "description": "Convert domain names and URL paths to lowercase for web standards" },
+          { "title": "Programming Variables", "description": "Format variable names and identifiers following coding conventions" },
+          { "title": "Database Fields", "description": "Standardize column names and data entries in databases" },
+          { "title": "Email Addresses", "description": "Ensure email consistency and prevent case-sensitive issues" },
+          { "title": "File Naming", "description": "Create consistent file names for web servers and systems" },
+          { "title": "CSS Classes", "description": "Format CSS class names following best practices" },
+          { "title": "Search Optimization", "description": "Normalize search terms for better matching" },
+          { "title": "Data Processing", "description": "Clean and standardize text data for analysis" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Text to Lowercase",
+        "description": "Follow these simple steps to convert your text to lowercase format.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Automatic Conversion",
+            "description": "Watch as your text is instantly converted to lowercase letters in real-time."
+          },
+          {
+            "step": 3,
+            "title": "Review Analytics",
+            "description": "Check the text statistics including character count, word count, and more."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the lowercase text to your clipboard or download it as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Lowercase Conversion Examples",
+        "description": "See how different types of text are converted to lowercase format.",
+        "items": [
+          { "title": "Simple Text", "input": "Hello World", "output": "hello world" },
+          { "title": "Mixed Case", "input": "ThIs Is MiXeD cAsE", "output": "this is mixed case" },
+          { "title": "With Numbers", "input": "Version 2.5.1", "output": "version 2.5.1" },
+          { "title": "Email Format", "input": "User@EXAMPLE.COM", "output": "user@example.com" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Lowercase Converter",
+        "content": "Professional lowercase conversion with comprehensive features and analytics.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and characters"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is lowercase text conversion?",
+          "answer": "Lowercase conversion transforms all letters in your text to small letters (a-z). This is commonly used for consistency, URL formatting, coding standards, and data normalization."
+        },
+        {
+          "question": "Does the tool work with non-English text?",
+          "answer": "Yes, our lowercase converter works with all languages and character sets, including accented characters, special symbols, and Unicode text from any language."
+        },
+        {
+          "question": "Can I convert entire files to lowercase?",
+          "answer": "Absolutely! You can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and convert their entire content to lowercase format."
+        },
+        {
+          "question": "Is my text data safe and private?",
+          "answer": "Yes, all text conversion happens locally in your browser. Your text is never uploaded to our servers or shared with anyone. Complete privacy guaranteed."
+        },
+        {
+          "question": "What file formats can I upload?",
+          "answer": "You can upload various text-based file formats including .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html and other plain text files."
+        },
+        {
+          "question": "Are numbers and special characters affected?",
+          "answer": "Numbers and special characters remain unchanged during lowercase conversion. Only alphabetic characters (letters) are converted to their lowercase equivalents."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Case Conversion Tools",
+        "items": [
+          {
+            "name": "Uppercase Converter",
+            "description": "Convert text to uppercase letters for headings and emphasis",
+            "href": "/tools/uppercase"
+          },
+          {
+            "name": "Title Case Converter",
+            "description": "Convert text to proper title case with capitalized first letters",
+            "href": "/tools/title-case"
+          },
+          {
+            "name": "Sentence Case Converter",
+            "description": "Convert text to sentence case with proper grammar formatting",
+            "href": "/tools/sentence-case"
+          },
+          {
+            "name": "Alternating Case Converter",
+            "description": "Create alternating case text for creative and stylistic purposes",
+            "href": "/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Конвертер Текста в Нижний Регистр",
+    "metaDescription": "Мгновенно конвертируйте любой текст в нижний регистр с помощью нашего бесплатного онлайн конвертера. Идеально для единообразия, URL, стандартов кодирования и профессионального форматирования.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Конвертер Текста в Нижний Регистр",
+        "content": "Мгновенно преобразуйте любой текст в нижний регистр с помощью нашего мощного и бесплатного инструмента конвертации. Идеально для создания последовательного форматирования, стандартизации URL, соблюдения стандартов кодирования или любых требований форматирования, требующих текст строчными буквами."
+      },
+      "features": {
+        "title": "Мощные Функции Конвертации в Нижний Регистр",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в нижний регистр в реальном времени при вводе или вставке текста" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в нижний регистр" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем конвертированном тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и специальными символами" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся конвертация происходит локально—данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Конвертацию в Нижний Регистр",
+        "description": "Текст в нижнем регистре служит многим важным целям в различных контекстах и приложениях.",
+        "items": [
+          { "title": "Форматирование URL", "description": "Конвертируйте доменные имена и пути URL в нижний регистр для веб-стандартов" },
+          { "title": "Переменные Программирования", "description": "Форматируйте имена переменных и идентификаторы согласно соглашениям кодирования" },
+          { "title": "Поля Базы Данных", "description": "Стандартизируйте имена столбцов и записи данных в базах данных" },
+          { "title": "Адреса Электронной Почты", "description": "Обеспечьте единообразие email и предотвратите проблемы с регистрозависимостью" },
+          { "title": "Именование Файлов", "description": "Создавайте последовательные имена файлов для веб-серверов и систем" },
+          { "title": "CSS Классы", "description": "Форматируйте имена CSS классов следуя лучшим практикам" },
+          { "title": "Оптимизация Поиска", "description": "Нормализуйте поисковые термины для лучшего сопоставления" },
+          { "title": "Обработка Данных", "description": "Очищайте и стандартизируйте текстовые данные для анализа" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Текст в Нижний Регистр",
+        "description": "Следуйте этим простым шагам, чтобы конвертировать ваш текст в формат нижнего регистра.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Автоматическая Конвертация",
+            "description": "Наблюдайте, как ваш текст мгновенно конвертируется в нижний регистр в реальном времени."
+          },
+          {
+            "step": 3,
+            "title": "Просмотр Аналитики",
+            "description": "Проверьте статистику текста, включая количество символов, слов и многое другое."
+          },
+          {
+            "step": 4,
+            "title": "Копирование или Скачивание",
+            "description": "Скопируйте текст в нижнем регистре в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации в Нижний Регистр",
+        "description": "Посмотрите, как различные типы текста конвертируются в формат нижнего регистра.",
+        "items": [
+          { "title": "Простой Текст", "input": "Привет Мир", "output": "привет мир" },
+          { "title": "Смешанный Регистр", "input": "ЭтО СмЕшАнНыЙ рЕгИсТр", "output": "это смешанный регистр" },
+          { "title": "С Числами", "input": "Версия 2.5.1", "output": "версия 2.5.1" },
+          { "title": "Формат Email", "input": "Пользователь@EXAMPLE.COM", "output": "пользователь@example.com" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конвертер в Нижний Регистр",
+        "content": "Профессиональная конвертация в нижний регистр с комплексными функциями и аналитикой.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени при вводе",
+          "Включена подробная аналитика текста",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Работает со всеми языками и символами"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое конвертация текста в нижний регистр?",
+          "answer": "Конвертация в нижний регистр преобразует все буквы в вашем тексте в строчные буквы (а-я). Это обычно используется для единообразия, форматирования URL, стандартов кодирования и нормализации данных."
+        },
+        {
+          "question": "Работает ли инструмент с не-русским текстом?",
+          "answer": "Да, наш конвертер в нижний регистр работает со всеми языками и наборами символов, включая буквы с диакритическими знаками, специальные символы и Unicode текст любого языка."
+        },
+        {
+          "question": "Могу ли я конвертировать целые файлы в нижний регистр?",
+          "answer": "Абсолютно! Вы можете загружать текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и конвертировать их полное содержимое в формат нижнего регистра."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные и конфиденциальны?",
+          "answer": "Да, вся конвертация текста происходит локально в вашем браузере. Ваш текст никогда не загружается на наши серверы и не передается кому-либо. Полная конфиденциальность гарантирована."
+        },
+        {
+          "question": "Какие форматы файлов я могу загружать?",
+          "answer": "Вы можете загружать различные текстовые форматы файлов, включая .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие файлы с обычным текстом."
+        },
+        {
+          "question": "Влияют ли числа и специальные символы?",
+          "answer": "Числа и специальные символы остаются неизменными во время конвертации в нижний регистр. Только алфавитные символы (буквы) конвертируются в их эквиваленты в нижнем регистре."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Конвертации Регистра Текста",
+        "items": [
+          {
+            "name": "Конвертер в Верхний Регистр",
+            "description": "Конвертируйте текст в верхний регистр для заголовков и выделения",
+            "href": "/ru/tools/uppercase"
+          },
+          {
+            "name": "Конвертер в Заглавный Регистр",
+            "description": "Конвертируйте текст в правильный заглавный регистр с заглавными первыми буквами",
+            "href": "/ru/tools/title-case"
+          },
+          {
+            "name": "Конвертер в Регистр Предложения",
+            "description": "Конвертируйте текст в регистр предложения с правильным грамматическим форматированием",
+            "href": "/ru/tools/sentence-case"
+          },
+          {
+            "name": "Конвертер в Чередующийся Регистр",
+            "description": "Создавайте текст в чередующемся регистре для творческих и стилистических целей",
+            "href": "/ru/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  }
+}

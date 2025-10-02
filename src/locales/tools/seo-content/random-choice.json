@@ -1,0 +1,382 @@
+{
+  "en": {
+    "title": "Free Random Choice Picker - Decision Maker & Random Selection Tool",
+    "metaDescription": "Make decisions effortlessly with our random choice picker. Enter your options and let our tool randomly select for you. Perfect for decision making, prize draws, team selection, and eliminating choice paralysis. Free and unlimited use.",
+    "sections": {
+      "intro": {
+        "title": "Professional Random Choice Picker Tool",
+        "content": "Eliminate decision fatigue and choice paralysis with our advanced random choice picker. Whether you need to decide what to eat, pick a winner from a list, select team members, or make any random selection, our tool provides unbiased, cryptographically secure random choices from your custom list. Features include multiple output formats, duplicate control, and bulk selection capabilities."
+      },
+      "features": {
+        "title": "Advanced Random Choice Selection Features",
+        "items": [
+          {
+            "title": "Custom Choice Lists",
+            "description": "Enter your own options, one per line, with support for any text content including names, places, activities, or decisions"
+          },
+          {
+            "title": "Multiple Output Formats", 
+            "description": "Display results as line breaks, comma-separated lists, numbered lists, or bulleted lists for different use cases"
+          },
+          {
+            "title": "Cryptographically Secure",
+            "description": "Uses crypto.getRandomValues() for true randomness, ensuring fair and unbiased selection every time"
+          },
+          {
+            "title": "Duplicate Control",
+            "description": "Choose whether to allow the same choice to be selected multiple times or ensure unique selections"
+          },
+          {
+            "title": "Bulk Selection",
+            "description": "Pick multiple random choices at once, up to 1,000 selections for large-scale decision making"
+          },
+          {
+            "title": "Smart Input Processing",
+            "description": "Automatically removes empty lines and handles various text formats for clean, reliable results"
+          },
+          {
+            "title": "Instant Results",
+            "description": "Fast generation with immediate results display and easy copy-to-clipboard functionality"
+          },
+          {
+            "title": "No Registration Required",
+            "description": "Completely free tool with unlimited usage, no account creation or personal information required"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Random Choice Picker",
+        "steps": [
+          {
+            "title": "Enter Your Choices",
+            "description": "Type your options in the text area, putting each choice on a separate line. You can enter anything from food options to team members."
+          },
+          {
+            "title": "Set Selection Quantity",
+            "description": "Choose how many random selections you want from your list (1-1,000). Perfect for picking multiple winners or making several decisions."
+          },
+          {
+            "title": "Configure Options",
+            "description": "Select your preferred output format and choose whether to allow duplicate selections or remove empty lines from your input."
+          },
+          {
+            "title": "Generate Random Selection",
+            "description": "Click the generate button to randomly select from your choices using cryptographically secure randomization."
+          },
+          {
+            "title": "Copy or Download Results",
+            "description": "Use the built-in copy button to clipboard or download your results as a text file for future reference."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Random Choice Selection Examples",
+        "items": [
+          {
+            "title": "Food Decision Making",
+            "input": "Choices: Pizza, Burger, Sushi, Tacos, Salad | Quantity: 1 | Format: Lines",
+            "output": "Sushi"
+          },
+          {
+            "title": "Prize Draw Winners",
+            "input": "Choices: John Smith, Mary Johnson, Alex Wilson, Sarah Davis | Quantity: 2 | Format: Numbered",
+            "output": "1. Mary Johnson\n2. Alex Wilson"
+          },
+          {
+            "title": "Team Assignment",
+            "input": "Choices: Team Alpha, Team Beta, Team Gamma, Team Delta | Quantity: 3 | Format: Bulleted",
+            "output": "• Team Beta\n• Team Alpha\n• Team Delta"
+          },
+          {
+            "title": "Activity Planning",
+            "input": "Choices: Movie Night, Board Games, Hiking, Restaurant | Quantity: 2 | Format: Comma",
+            "output": "Board Games, Hiking"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Random Choice Picker",
+        "items": [
+          {
+            "title": "Decision Making",
+            "description": "Overcome choice paralysis by letting randomness decide between equally good options like restaurants, movies, or activities"
+          },
+          {
+            "title": "Prize Draws & Contests",
+            "description": "Fairly select winners from a list of participants for giveaways, contests, or random drawings"
+          },
+          {
+            "title": "Team & Group Selection",
+            "description": "Randomly assign people to teams, select group leaders, or choose participants for activities"
+          },
+          {
+            "title": "Educational Activities",
+            "description": "Pick students for presentations, select topics for assignments, or choose random questions for review"
+          },
+          {
+            "title": "Event Planning",
+            "description": "Choose venues, select dates, pick activities, or decide on themes for parties and events"
+          },
+          {
+            "title": "Gaming & Entertainment",
+            "description": "Select random challenges, pick characters, choose game modes, or create unpredictable scenarios"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Random Choice Picker",
+        "items": [
+          "Cryptographically secure randomization for truly fair and unbiased selections",
+          "Custom input support - enter any choices you want, no predefined lists or limitations",
+          "Multiple output formats including lists, numbers, and comma-separated for different needs",
+          "Bulk selection capability up to 1,000 choices for large-scale decision making",
+          "Duplicate control options to prevent or allow repeated selections based on your needs",
+          "Smart text processing that handles empty lines and various input formats automatically",
+          "Instant results with copy-to-clipboard and download functionality for easy sharing",
+          "Completely free with unlimited usage and no registration or personal data required"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Tools",
+        "items": [
+          {
+            "name": "Random Number Generator",
+            "href": "/tools/random-number",
+            "description": "Generate random numbers for numerical decisions and lottery-style selections"
+          },
+          {
+            "name": "Random Letter Generator", 
+            "href": "/tools/random-letter",
+            "description": "Create random letters for games, passwords, and alphabetical selections"
+          },
+          {
+            "name": "Random Date Generator",
+            "href": "/tools/random-date",
+            "description": "Pick random dates for scheduling, planning, and temporal decisions"
+          },
+          {
+            "name": "Random IP Generator",
+            "href": "/tools/random-ip",
+            "description": "Generate random IP addresses for network testing and development"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "How random are the selections?",
+          "answer": "Our tool uses crypto.getRandomValues(), which provides cryptographically secure random selections. This ensures truly unbiased and unpredictable results, making it suitable for fair contests, drawings, and decision making."
+        },
+        {
+          "question": "Can I select multiple choices at once?",
+          "answer": "Yes, you can select up to 1,000 random choices at once. This is perfect for picking multiple winners, making several decisions, or selecting large groups from your list."
+        },
+        {
+          "question": "What happens if I allow duplicates?",
+          "answer": "When duplicates are allowed, the same choice can be selected multiple times. When disabled, each choice can only be selected once until all unique options are exhausted."
+        },
+        {
+          "question": "What output formats are available?",
+          "answer": "You can choose from line breaks (each choice on a new line), comma-separated lists, numbered lists (1. Choice), or bulleted lists (• Choice) to match your specific needs."
+        },
+        {
+          "question": "Is there a limit to how many choices I can enter?",
+          "answer": "There's no hard limit on the number of choices you can enter. The tool can handle large lists efficiently, making it suitable for extensive decision-making scenarios."
+        },
+        {
+          "question": "Can I save or share my results?",
+          "answer": "Yes, you can copy the results to your clipboard with one click or download them as a text file for saving and sharing with others."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Случайного Выбора - Инструмент Принятия Решений",
+    "metaDescription": "Принимайте решения без усилий с нашим генератором случайного выбора. Введите ваши варианты и позвольте нашему инструменту случайно выбрать за вас. Идеально для принятия решений, розыгрышей призов, выбора команды и устранения паралича выбора.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Случайного Выбора",
+        "content": "Устраните усталость от принятия решений и паралич выбора с нашим продвинутым генератором случайного выбора. Независимо от того, нужно ли вам решить, что поесть, выбрать победителя из списка, отобрать членов команды или сделать любой случайный выбор, наш инструмент обеспечивает беспристрастный, криптографически безопасный случайный выбор из вашего пользовательского списка."
+      },
+      "features": {
+        "title": "Расширенные Возможности Случайного Выбора",
+        "items": [
+          {
+            "title": "Пользовательские Списки Выбора",
+            "description": "Введите ваши собственные варианты, по одному на строку, с поддержкой любого текстового содержимого, включая имена, места, деятельность или решения"
+          },
+          {
+            "title": "Множественные Форматы Вывода", 
+            "description": "Отображайте результаты как переносы строк, списки через запятую, нумерованные списки или маркированные списки для разных случаев использования"
+          },
+          {
+            "title": "Криптографически Безопасный",
+            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая справедливый и беспристрастный выбор каждый раз"
+          },
+          {
+            "title": "Контроль Дубликатов",
+            "description": "Выбирайте, разрешить ли выбирать один и тот же вариант несколько раз или обеспечить уникальные выборы"
+          },
+          {
+            "title": "Массовый Выбор",
+            "description": "Выбирайте несколько случайных вариантов одновременно, до 1000 выборов для крупномасштабного принятия решений"
+          },
+          {
+            "title": "Умная Обработка Ввода",
+            "description": "Автоматически удаляет пустые строки и обрабатывает различные текстовые форматы для чистых, надежных результатов"
+          },
+          {
+            "title": "Мгновенные Результаты",
+            "description": "Быстрая генерация с немедленным отображением результатов и легкой функцией копирования в буфер обмена"
+          },
+          {
+            "title": "Регистрация Не Требуется",
+            "description": "Полностью бесплатный инструмент с неограниченным использованием, без создания аккаунта или требования личной информации"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Случайного Выбора",
+        "steps": [
+          {
+            "title": "Введите Ваши Варианты",
+            "description": "Введите ваши варианты в текстовое поле, размещая каждый выбор на отдельной строке. Вы можете ввести что угодно от вариантов еды до членов команды."
+          },
+          {
+            "title": "Установите Количество Выборов",
+            "description": "Выберите, сколько случайных выборов вы хотите из вашего списка (1-1000). Идеально для выбора нескольких победителей или принятия нескольких решений."
+          },
+          {
+            "title": "Настройте Параметры",
+            "description": "Выберите предпочитаемый формат вывода и решите, разрешить ли дублирующие выборы или удалить пустые строки из вашего ввода."
+          },
+          {
+            "title": "Генерируйте Случайный Выбор",
+            "description": "Нажмите кнопку генерации для случайного выбора из ваших вариантов с использованием криптографически безопасной рандомизации."
+          },
+          {
+            "title": "Скопируйте или Скачайте Результаты",
+            "description": "Используйте встроенную кнопку копирования в буфер обмена или скачайте ваши результаты как текстовый файл для будущей ссылки."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Случайного Выбора",
+        "items": [
+          {
+            "title": "Принятие Решения о Еде",
+            "input": "Варианты: Пицца, Бургер, Суши, Тако, Салат | Количество: 1 | Формат: Строки",
+            "output": "Суши"
+          },
+          {
+            "title": "Розыгрыш Призов",
+            "input": "Варианты: Иван Иванов, Мария Петрова, Алекс Сидоров, Сара Козлова | Количество: 2 | Формат: Нумерованный",
+            "output": "1. Мария Петрова\n2. Алекс Сидоров"
+          },
+          {
+            "title": "Назначение Команды",
+            "input": "Варианты: Команда Альфа, Команда Бета, Команда Гамма, Команда Дельта | Количество: 3 | Формат: Маркированный",
+            "output": "• Команда Бета\n• Команда Альфа\n• Команда Дельта"
+          },
+          {
+            "title": "Планирование Активности",
+            "input": "Варианты: Вечер Кино, Настольные Игры, Поход, Ресторан | Количество: 2 | Формат: Запятая",
+            "output": "Настольные Игры, Поход"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Генератора Случайного Выбора",
+        "items": [
+          {
+            "title": "Принятие Решений",
+            "description": "Преодолевайте паралич выбора, позволяя случайности решать между одинаково хорошими вариантами, такими как рестораны, фильмы или активности"
+          },
+          {
+            "title": "Розыгрыши Призов и Конкурсы",
+            "description": "Справедливо выбирайте победителей из списка участников для подарков, конкурсов или случайных розыгрышей"
+          },
+          {
+            "title": "Выбор Команды и Группы",
+            "description": "Случайно назначайте людей в команды, выбирайте лидеров групп или выбирайте участников для активностей"
+          },
+          {
+            "title": "Образовательные Активности",
+            "description": "Выбирайте студентов для презентаций, выбирайте темы для заданий или выбирайте случайные вопросы для обзора"
+          },
+          {
+            "title": "Планирование Событий",
+            "description": "Выбирайте места проведения, выбирайте даты, выбирайте активности или решайте темы для вечеринок и событий"
+          },
+          {
+            "title": "Игры и Развлечения",
+            "description": "Выбирайте случайные вызовы, выбирайте персонажей, выбирайте игровые режимы или создавайте непредсказуемые сценарии"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наш Генератор Случайного Выбора",
+        "items": [
+          "Криптографически безопасная рандомизация для по-настоящему справедливых и беспристрастных выборов",
+          "Поддержка пользовательского ввода - вводите любые варианты, без предопределенных списков или ограничений",
+          "Множественные форматы вывода, включая списки, цифры и разделенные запятыми для разных потребностей",
+          "Возможность массового выбора до 1000 вариантов для крупномасштабного принятия решений",
+          "Опции контроля дубликатов для предотвращения или разрешения повторных выборов в зависимости от ваших потребностей",
+          "Умная обработка текста, которая автоматически обрабатывает пустые строки и различные форматы ввода",
+          "Мгновенные результаты с функциями копирования в буфер обмена и скачивания для легкого обмена",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или требования личных данных"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты",
+        "items": [
+          {
+            "name": "Генератор Случайных Чисел",
+            "href": "/ru/tools/random-number",
+            "description": "Генерируйте случайные числа для численных решений и выборов в стиле лотереи"
+          },
+          {
+            "name": "Генератор Случайных Букв", 
+            "href": "/ru/tools/random-letter",
+            "description": "Создавайте случайные буквы для игр, паролей и алфавитных выборов"
+          },
+          {
+            "name": "Генератор Случайных Дат",
+            "href": "/ru/tools/random-date",
+            "description": "Выбирайте случайные даты для планирования, составления расписания и временных решений"
+          },
+          {
+            "name": "Генератор Случайных IP",
+            "href": "/ru/tools/random-ip",
+            "description": "Генерируйте случайные IP адреса для тестирования сети и разработки"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Насколько случайны выборы?",
+          "answer": "Наш инструмент использует crypto.getRandomValues(), который обеспечивает криптографически безопасные случайные выборы. Это гарантирует по-настоящему беспристрастные и непредсказуемые результаты, делая его подходящим для справедливых конкурсов, розыгрышей и принятия решений."
+        },
+        {
+          "question": "Могу ли я выбрать несколько вариантов одновременно?",
+          "answer": "Да, вы можете выбрать до 1000 случайных вариантов одновременно. Это идеально для выбора нескольких победителей, принятия нескольких решений или выбора больших групп из вашего списка."
+        },
+        {
+          "question": "Что происходит, если я разрешаю дубликаты?",
+          "answer": "Когда дубликаты разрешены, один и тот же вариант может быть выбран несколько раз. Когда отключено, каждый вариант может быть выбран только один раз, пока все уникальные опции не будут исчерпаны."
+        },
+        {
+          "question": "Какие форматы вывода доступны?",
+          "answer": "Вы можете выбрать из переносов строк (каждый выбор на новой строке), списков через запятую, нумерованных списков (1. Выбор) или маркированных списков (• Выбор) в соответствии с вашими конкретными потребностями."
+        },
+        {
+          "question": "Есть ли ограничение на количество вариантов, которые я могу ввести?",
+          "answer": "Нет жесткого ограничения на количество вариантов, которые вы можете ввести. Инструмент может эффективно обрабатывать большие списки, делая его подходящим для обширных сценариев принятия решений."
+        },
+        {
+          "question": "Могу ли я сохранить или поделиться моими результатами?",
+          "answer": "Да, вы можете скопировать результаты в ваш буфер обмена одним кликом или скачать их как текстовый файл для сохранения и обмена с другими."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,320 @@
+{
+  "en": {
+    "title": "Free Word Sorter - Alphabetical & Length Sorting Tool",
+    "metaDescription": "Sort words alphabetically, by length, or randomly with advanced options. Remove duplicates, case-sensitive sorting, and custom separators. Perfect for data organization and text processing.",
+    "sections": {
+      "intro": {
+        "title": "Sort Words Instantly with Advanced Options",
+        "content": "Our word sorting tool helps you organize text data efficiently. Sort words alphabetically, by length, or randomly with powerful customization options including case sensitivity, duplicate removal, and custom separators."
+      },
+      "features": {
+        "title": "Powerful Word Sorting Features",
+        "items": [
+          {
+            "title": "Multiple Sort Modes",
+            "description": "Sort alphabetically, by word length, or reverse order with random shuffling options"
+          },
+          {
+            "title": "Flexible Separators",
+            "description": "Support for spaces, commas, newlines, and custom separators for different data formats"
+          },
+          {
+            "title": "Advanced Options",
+            "description": "Case-sensitive sorting, duplicate removal, and whitespace trimming for clean results"
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "Instant sorting with live preview as you type or modify options"
+          },
+          {
+            "title": "Bulk Processing",
+            "description": "Handle large text files with efficient processing and memory management"
+          },
+          {
+            "title": "Export Options",
+            "description": "Download sorted results in various formats with customizable file names"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Word Sorting",
+        "description": "Word sorting is essential for data organization, content management, and text processing workflows.",
+        "items": [
+          {
+            "title": "Data Organization",
+            "description": "Sort lists, inventories, and datasets for better organization and analysis"
+          },
+          {
+            "title": "Content Management",
+            "description": "Organize tags, categories, and keywords for websites and content systems"
+          },
+          {
+            "title": "Academic Research",
+            "description": "Sort bibliographies, references, and research data for systematic organization"
+          },
+          {
+            "title": "Programming",
+            "description": "Sort function names, variables, and code elements for better code organization"
+          },
+          {
+            "title": "Language Learning",
+            "description": "Sort vocabulary lists alphabetically or by difficulty for structured learning"
+          },
+          {
+            "title": "Business Applications",
+            "description": "Sort customer lists, product names, and business data for reporting and analysis"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Sort Words",
+        "description": "Follow these simple steps to organize your text data.",
+        "steps": [
+          { "step": 1, "title": "Enter Your Text", "description": "Paste your text or upload a file containing words to sort." },
+          { "step": 2, "title": "Choose Sort Mode", "description": "Select alphabetical, length-based, or reverse sorting with random options." },
+          { "step": 3, "title": "Configure Separator", "description": "Choose the appropriate separator (space, comma, newline, or custom)." },
+          { "step": 4, "title": "Set Advanced Options", "description": "Configure case sensitivity, duplicate removal, and whitespace trimming." },
+          { "step": 5, "title": "View Results", "description": "Review the sorted words instantly and download if needed." }
+        ]
+      },
+      "examples": {
+        "title": "Word Sorting Examples",
+        "description": "See how different types of text are sorted.",
+        "items": [
+          {
+            "title": "Alphabetical Sorting",
+            "input": "zebra apple banana cherry",
+            "output": "apple banana cherry zebra"
+          },
+          {
+            "title": "Length-based Sorting",
+            "input": "cat elephant dog",
+            "output": "cat dog elephant"
+          },
+          {
+            "title": "Custom Separator",
+            "input": "red,blue,green,yellow",
+            "output": "blue,green,red,yellow"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits of Word Sorting",
+        "items": [
+          "Improved data organization and readability",
+          "Faster data processing and analysis",
+          "Better content management and categorization",
+          "Enhanced productivity in text-based workflows",
+          "Professional presentation of organized data",
+          "Efficient handling of large datasets"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Can I sort words by length instead of alphabetically?",
+          "answer": "Yes! Choose the 'Length' sorting mode to sort words from shortest to longest or vice versa."
+        },
+        {
+          "question": "How do I handle different separators in my text?",
+          "answer": "Select the appropriate separator option (space, comma, newline) or use custom separator for specific characters."
+        },
+        {
+          "question": "Can I remove duplicate words while sorting?",
+          "answer": "Absolutely! Enable the 'Remove Duplicates' option to eliminate repeated words from your sorted list."
+        },
+        {
+          "question": "Is the sorting case-sensitive?",
+          "answer": "You can choose case-sensitive or case-insensitive sorting using the advanced options."
+        },
+        {
+          "question": "Can I sort words in random order?",
+          "answer": "Yes! Select 'Random' order to shuffle your words in a random sequence."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text and Data Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count words, characters, and lines in your text",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Word Frequency",
+            "description": "Analyze word frequency and usage patterns",
+            "href": "/tools/word-frequency"
+          },
+          {
+            "name": "Remove Duplicates",
+            "description": "Remove duplicate lines and words from text",
+            "href": "/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Text Replace",
+            "description": "Find and replace text with advanced options",
+            "href": "/tools/text-replace"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Сортировщик Слов - Инструмент Алфавитной и Длины Сортировки",
+    "metaDescription": "Сортируйте слова по алфавиту, длине или случайно с расширенными опциями. Удаление дубликатов, чувствительная к регистру сортировка и пользовательские разделители. Идеально для организации данных и обработки текста.",
+    "sections": {
+      "intro": {
+        "title": "Сортируйте Слова Мгновенно с Расширенными Опциями",
+        "content": "Наш инструмент сортировки слов помогает эффективно организовывать текстовые данные. Сортируйте слова по алфавиту, длине или случайно с мощными настройками, включая чувствительность к регистру, удаление дубликатов и пользовательские разделители."
+      },
+      "features": {
+        "title": "Мощные Функции Сортировки Слов",
+        "items": [
+          {
+            "title": "Множественные Режимы Сортировки",
+            "description": "Сортировка по алфавиту, длине слов или в обратном порядке с опциями случайного перемешивания"
+          },
+          {
+            "title": "Гибкие Разделители",
+            "description": "Поддержка пробелов, запятых, переносов строк и пользовательских разделителей для различных форматов данных"
+          },
+          {
+            "title": "Расширенные Опции",
+            "description": "Чувствительная к регистру сортировка, удаление дубликатов и обрезка пробелов для чистых результатов"
+          },
+          {
+            "title": "Обработка в Реальном Времени",
+            "description": "Мгновенная сортировка с живым предварительным просмотром при вводе или изменении опций"
+          },
+          {
+            "title": "Массовая Обработка",
+            "description": "Обработка больших текстовых файлов с эффективной обработкой и управлением памятью"
+          },
+          {
+            "title": "Опции Экспорта",
+            "description": "Загрузка отсортированных результатов в различных форматах с настраиваемыми именами файлов"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Применения Сортировки Слов",
+        "description": "Сортировка слов необходима для организации данных, управления контентом и рабочих процессов обработки текста.",
+        "items": [
+          {
+            "title": "Организация Данных",
+            "description": "Сортировка списков, инвентарей и наборов данных для лучшей организации и анализа"
+          },
+          {
+            "title": "Управление Контентом",
+            "description": "Организация тегов, категорий и ключевых слов для веб-сайтов и систем контента"
+          },
+          {
+            "title": "Академические Исследования",
+            "description": "Сортировка библиографий, ссылок и исследовательских данных для систематической организации"
+          },
+          {
+            "title": "Программирование",
+            "description": "Сортировка имен функций, переменных и элементов кода для лучшей организации кода"
+          },
+          {
+            "title": "Изучение Языков",
+            "description": "Сортировка словарных списков по алфавиту или сложности для структурированного обучения"
+          },
+          {
+            "title": "Бизнес-Приложения",
+            "description": "Сортировка списков клиентов, названий продуктов и бизнес-данных для отчетности и анализа"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Сортировать Слова",
+        "description": "Следуйте этим простым шагам для организации ваших текстовых данных.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Вставьте ваш текст или загрузите файл со словами для сортировки." },
+          { "step": 2, "title": "Выберите Режим Сортировки", "description": "Выберите алфавитную, по длине или обратную сортировку с случайными опциями." },
+          { "step": 3, "title": "Настройте Разделитель", "description": "Выберите подходящий разделитель (пробел, запятая, перенос строки или пользовательский)." },
+          { "step": 4, "title": "Установите Расширенные Опции", "description": "Настройте чувствительность к регистру, удаление дубликатов и обрезку пробелов." },
+          { "step": 5, "title": "Просмотрите Результаты", "description": "Просмотрите отсортированные слова мгновенно и загрузите при необходимости." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Сортировки Слов",
+        "description": "Посмотрите, как сортируются разные типы текста.",
+        "items": [
+          {
+            "title": "Алфавитная Сортировка",
+            "input": "зебра яблоко банан вишня",
+            "output": "банан вишня яблоко зебра"
+          },
+          {
+            "title": "Сортировка по Длине",
+            "input": "кот слон собака",
+            "output": "кот собака слон"
+          },
+          {
+            "title": "Пользовательский Разделитель",
+            "input": "красный,синий,зеленый,желтый",
+            "output": "зеленый,желтый,красный,синий"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Преимущества Сортировки Слов",
+        "items": [
+          "Улучшенная организация данных и читаемость",
+          "Быстрая обработка и анализ данных",
+          "Лучшее управление контентом и категоризация",
+          "Повышенная продуктивность в текстовых рабочих процессах",
+          "Профессиональная презентация организованных данных",
+          "Эффективная обработка больших наборов данных"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Могу ли я сортировать слова по длине вместо алфавита?",
+          "answer": "Да! Выберите режим сортировки 'По длине', чтобы сортировать слова от коротких к длинным или наоборот."
+        },
+        {
+          "question": "Как обрабатывать разные разделители в моем тексте?",
+          "answer": "Выберите подходящую опцию разделителя (пробел, запятая, перенос строки) или используйте пользовательский разделитель для конкретных символов."
+        },
+        {
+          "question": "Могу ли я удалить дублирующиеся слова при сортировке?",
+          "answer": "Абсолютно! Включите опцию 'Удалить дубликаты', чтобы исключить повторяющиеся слова из вашего отсортированного списка."
+        },
+        {
+          "question": "Чувствительна ли сортировка к регистру?",
+          "answer": "Вы можете выбрать чувствительную или нечувствительную к регистру сортировку, используя расширенные опции."
+        },
+        {
+          "question": "Могу ли я сортировать слова в случайном порядке?",
+          "answer": "Да! Выберите порядок 'Случайный', чтобы перемешать ваши слова в случайной последовательности."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Текстовые и Инструменты Данных",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитывайте слова, символы и строки в вашем тексте",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Частота Слов",
+            "description": "Анализируйте частоту и паттерны использования слов",
+            "href": "/ru/tools/word-frequency"
+          },
+          {
+            "name": "Удаление Дубликатов",
+            "description": "Удаляйте дублирующиеся строки и слова из текста",
+            "href": "/ru/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Замена Текста",
+            "description": "Находите и заменяйте текст с расширенными опциями",
+            "href": "/ru/tools/text-replace"
+          }
+        ]
+      }
+    }
+  }
+}

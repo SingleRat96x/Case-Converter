@@ -1,0 +1,166 @@
+{
+  "en": {
+    "title": "Free Subscript Text Generator - Unicode Subscript Converter",
+    "metaDescription": "Generate subscript Unicode text for formulas, chemistry, and scientific notation. Convert H2O to H₂O, CO2 to CO₂, and more. Free & works everywhere.",
+    "sections": {
+      "intro": {
+        "title": "Free Subscript Text Generator - Unicode Subscript Converter",
+        "content": "Create subscript Unicode characters instantly for scientific notation, math formulas, and chemistry equations. Convert regular numbers and letters into proper subscript symbols like H₂O, CO₂, x₁, y₂ directly in your browser."
+      },
+      "features": {
+        "title": "Powerful Subscript Conversion Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time subscript conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to subscript" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Uses for Subscript Text",
+        "description": "Subscript characters are essential for science, math, and technical writing.",
+        "items": [
+          { "title": "Chemistry Notation", "description": "Write chemical formulas like H₂O, CO₂, SO₄²⁻ with correct subscripts." },
+          { "title": "Mathematics", "description": "Format variables with indices such as x₁, x₂, aₙ for sequences and series." },
+          { "title": "Physics & Engineering", "description": "Use subscripts for vector components and specialized variables (vₓ, Fᵧ)." },
+          { "title": "Documentation & Academia", "description": "Create precise technical documents with correct scientific formatting." },
+          { "title": "Education & Study Notes", "description": "Prepare clean, readable notes and assignments with proper subscripts." },
+          { "title": "Cross-Platform Publishing", "description": "Ensure consistent subscript rendering across apps and platforms using Unicode." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Subscript Text",
+        "description": "Follow these simple steps to convert your text to subscript characters.",
+        "steps": [
+          { "step": 1, "title": "Enter Your Text", "description": "Type or paste your text into the input area, or upload a text file for conversion." },
+          { "step": 2, "title": "Automatic Conversion", "description": "Watch as your text is instantly converted to Unicode subscript characters in real-time." },
+          { "step": 3, "title": "Review Analytics", "description": "Check the text statistics including character count, word count, and more." },
+          { "step": 4, "title": "Copy or Download", "description": "Copy the subscript text or download it as a text file for use anywhere." }
+        ]
+      },
+      "examples": {
+        "title": "Subscript Conversion Examples",
+        "description": "See how different types of text are converted to Unicode subscript format.",
+        "items": [
+          { "title": "Chemistry", "input": "H2O, CO2, NH3", "output": "H₂O, CO₂, NH₃" },
+          { "title": "Mathematics", "input": "x1, x2, an", "output": "x₁, x₂, aₙ" },
+          { "title": "Physics", "input": "vx, Fy", "output": "vₓ, Fᵧ" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Subscript Converter",
+        "content": "Professional subscript conversion with comprehensive features and analytics.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and characters"
+        ]
+      },
+      "faqs": [
+        { "question": "What is subscript text?", "answer": "Subscript text appears slightly below the baseline and is commonly used in chemical formulas, mathematical indices, and scientific notation." },
+        { "question": "Does the tool work with non-English text?", "answer": "Yes, our subscript converter works with all languages and character sets, including Unicode symbols." },
+        { "question": "Can I convert entire files to subscript text?", "answer": "Absolutely! You can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and convert their entire content to subscript format." },
+        { "question": "Is my text data safe and private?", "answer": "Yes, all text conversion happens locally in your browser. Your text is never uploaded or shared." }
+      ],
+      "relatedTools": {
+        "title": "Related Text and Science Tools",
+        "items": [
+          { "name": "Italic Text Generator", "description": "Create italic Unicode text for emphasis and styling", "href": "/tools/italic-text" },
+          { "name": "Bold Text Generator", "description": "Generate bold Unicode text that works everywhere", "href": "/tools/bold-text" },
+          { "name": "Phonetic Spelling Generator", "description": "Convert text to phonetic spelling (IPA, NATO, simple letter names)", "href": "/tools/phonetic-spelling" },
+          { "name": "Roman Numeral Date Converter", "description": "Convert dates to Roman numerals for classic scientific notation", "href": "/tools/roman-numeral-date" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Подстрочного Текста - Конвертер Unicode Подстрочных Символов",
+    "metaDescription": "Создавайте подстрочный Unicode текст для формул, химии и научной нотации. Конвертируйте H2O в H₂O, CO2 в CO₂ и многое другое.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор Подстрочного Текста - Конвертер Unicode",
+        "content": "Создавайте подстрочные Unicode символы мгновенно для научной нотации, математических формул и химических уравнений. Конвертируйте обычные цифры и буквы в правильные подстрочные символы, например H₂O, CO₂, x₁, y₂ прямо в браузере."
+      },
+      "features": {
+        "title": "Мощные Возможности Конвертации Подстрочного Текста",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в подстрочный текст в реальном времени при вводе или вставке" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в подстрочный текст" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и особыми символами" },
+          { "title": "Конфиденциальность", "description": "Вся обработка происходит локально — данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Использования Подстрочного Текста",
+        "description": "Подстрочные символы необходимы для науки, математики и технического письма.",
+        "items": [
+          { "title": "Химическая Нотация", "description": "Пишите формулы, такие как H₂O, CO₂, SO₄²⁻ с правильными подстрочными символами." },
+          { "title": "Математика", "description": "Форматируйте переменные с индексами: x₁, x₂, aₙ для последовательностей и рядов." },
+          { "title": "Физика и Инжиниринг", "description": "Используйте подстрочные символы для компонент векторов и специальных переменных (vₓ, Fᵧ)." },
+          { "title": "Документация и Академия", "description": "Создавайте точные технические документы с корректным научным форматированием." },
+          { "title": "Образование и Конспекты", "description": "Готовьте аккуратные заметки и задания с корректными подстрочными символами." },
+          { "title": "Кроссплатформенная Публикация", "description": "Обеспечьте единое отображение подстрочного текста в приложениях и на платформах." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Сгенерировать Подстрочный Текст",
+        "description": "Следуйте простым шагам, чтобы конвертировать текст в подстрочные символы.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Введите или вставьте текст в поле ввода, либо загрузите текстовый файл." },
+          { "step": 2, "title": "Автоконвертация", "description": "Наблюдайте, как текст мгновенно преобразуется в Unicode подстрочные символы." },
+          { "step": 3, "title": "Просмотр Аналитики", "description": "Посмотрите статистику текста, включая количество символов, слов и многое другое." },
+          { "step": 4, "title": "Копирование или Скачивание", "description": "Скопируйте подстрочный текст или скачайте как текстовый файл." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации Подстрочного Текста",
+        "description": "Посмотрите, как различный текст конвертируется в формат Unicode подстрочных символов.",
+        "items": [
+          { "title": "Химия", "input": "H2O, CO2, NH3", "output": "H₂O, CO₂, NH₃" },
+          { "title": "Математика", "input": "x1, x2, an", "output": "x₁, x₂, aₙ" },
+          { "title": "Физика", "input": "vx, Fy", "output": "vₓ, Fᵧ" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Конвертер Подстрочного Текста",
+        "content": "Профессиональная конвертация подстрочного текста с полным набором функций и аналитикой.",
+        "items": [
+          "Полностью бесплатно и без ограничений",
+          "Регистрация не требуется",
+          "Конфиденциальность — все локально в браузере",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени",
+          "Подробная аналитика текста",
+          "Адаптивный дизайн",
+          "Работает со всеми языками и символами"
+        ]
+      },
+      "faqs": [
+        { "question": "Что такое подстрочный текст?", "answer": "Подстрочный текст располагается ниже базовой линии и часто используется в химических формулах, математических индексах и научной нотации." },
+        { "question": "Работает ли инструмент с неанглийским текстом?", "answer": "Да, наш конвертер работает со всеми языками и Unicode-символами." },
+        { "question": "Могу ли я конвертировать целые файлы?", "answer": "Конечно! Загружайте текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и конвертируйте их содержимое в подстрочный формат." },
+        { "question": "Безопасны ли мои данные?", "answer": "Да, вся обработка происходит локально в вашем браузере. Ничего не загружается и не передается." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Для Текста и Науки",
+        "items": [
+          { "name": "Генератор Курсивного Текста", "description": "Создавайте курсивный Unicode текст для акцентов", "href": "/ru/tools/italic-text" },
+          { "name": "Генератор Жирного Текста", "description": "Создавайте жирный Unicode текст, который работает везде", "href": "/ru/tools/bold-text" },
+          { "name": "Генератор Фонетического Написания", "description": "Конвертируйте текст в фонетическое написание (IPA, НАТО, простые названия)", "href": "/ru/tools/phonetic-spelling" },
+          { "name": "Конвертер Даты в Римские Цифры", "description": "Преобразуйте даты в римские цифры для классической научной нотации", "href": "/ru/tools/roman-numeral-date" }
+        ]
+      }
+    }
+  }
+}
+
+

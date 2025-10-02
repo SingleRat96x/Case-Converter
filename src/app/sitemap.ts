@@ -1,73 +1,35 @@
-import { getAllTools } from '@/lib/tools';
-import { TOOL_CATEGORIES } from '@/lib/tools';
-import { MetadataRoute } from 'next';
+import type { MetadataRoute } from 'next';
+import { getAllMetadataEntries } from '@/lib/metadata/toolMetadata';
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
-  // Get all tools
-  const tools = await getAllTools();
+export default function sitemap(): MetadataRoute.Sitemap {
+  const base = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
+  const now = new Date().toISOString();
 
-  // Base URL from environment variable or default
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
+  const entries = getAllMetadataEntries();
+  const urls: MetadataRoute.Sitemap = [];
 
-  // Static pages
-  const staticPages = [
-    {
-      url: `${baseUrl}`,
-      lastModified: new Date(),
-      changeFrequency: 'daily' as const,
-      priority: 1,
-    },
-    {
-      url: `${baseUrl}/about-us`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/contact-us`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/privacy-policy`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    },
-    {
-      url: `${baseUrl}/terms-of-service`,
-      lastModified: new Date(),
-      changeFrequency: 'monthly' as const,
-      priority: 0.8,
-    }
+  for (const e of entries) {
+    urls.push({ url: `${base}${e.pathname}`, changeFrequency: 'weekly', lastModified: now, priority: e.type === 'category' ? 0.7 : 0.6 });
+    // RU locale path
+    urls.push({ url: `${base}/ru${e.pathname === '/' ? '' : e.pathname}`, changeFrequency: 'weekly', lastModified: now, priority: e.type === 'category' ? 0.7 : 0.6 });
+  }
+
+  // Add home pages
+  urls.push({ url: `${base}/`, changeFrequency: 'weekly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/ru`, changeFrequency: 'weekly', lastModified: now, priority: 0.8 });
+
+  // Add static company/legal pages explicitly
+  const staticPaths = [
+    '/about-us',
+    '/contact-us',
+    '/privacy-policy',
+    '/terms-of-service'
   ];
+  for (const p of staticPaths) {
+    urls.push({ url: `${base}${p}`, changeFrequency: 'monthly', lastModified: now, priority: 0.5 });
+    urls.push({ url: `${base}/ru${p}`, changeFrequency: 'monthly', lastModified: now, priority: 0.5 });
+  }
 
-  // Category pages - using the actual categories from your codebase
-  const categories = [
-    'Convert Case',
-    'Text Modification/Formatting',
-    'Code & Data Translation',
-    'Image Tools',
-    'Random Generators',
-    'Misc. Tools'
-  ];
+  return urls;
+}
 
-  const categoryPages = categories.map(category => ({
-    url: `${baseUrl}/category/${category.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`,
-    lastModified: new Date(),
-    changeFrequency: 'weekly' as const,
-    priority: 0.9,
-  }));
-
-  // Tool pages - include all tools regardless of visibility
-  const toolPages = tools.map(tool => ({
-    url: `${baseUrl}/tools/${tool.id}`,
-    lastModified: new Date(tool.updated_at),
-    changeFrequency: 'weekly' as const,
-    priority: 0.7,
-  }));
-
-  // Combine all pages
-  return [...staticPages, ...categoryPages, ...toolPages];
-} 

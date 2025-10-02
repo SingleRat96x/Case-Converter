@@ -1,0 +1,352 @@
+{
+  "en": {
+    "title": "Code & Data Translation Tools - Convert Between Formats & Encodings",
+    "metaDescription": "Professional code and data translation tools for developers and data analysts. Base64 encoding, binary conversion, hex translation, JSON processing, URL encoding, and 11+ format converters. Free developer utilities with unlimited usage.",
+    "sections": {
+      "intro": {
+        "title": "Professional Code & Data Translation Tools",
+        "content": "Transform and convert between different data formats, encodings, and codes with our comprehensive suite of developer tools. Whether you're working with Base64 encoding, binary conversion, JSON processing, or URL manipulation, these tools provide everything developers need for data transformation, encoding, decoding, and format conversion. All tools are optimized for performance with unlimited free usage."
+      },
+      "features": {
+        "title": "Comprehensive Data Conversion Capabilities",
+        "items": [
+          {
+            "title": "Encoding & Decoding",
+            "description": "Convert between Base64, binary, hexadecimal, UTF-8, and URL encoding formats with bidirectional support"
+          },
+          {
+            "title": "Cipher & Encryption Tools",
+            "description": "Encode and decode with Caesar cipher, ROT13, and Morse code for security and communication purposes"
+          },
+          {
+            "title": "Data Format Conversion",
+            "description": "Transform CSV to JSON, stringify JSON objects, and convert between various structured data formats"
+          },
+          {
+            "title": "URL Processing",
+            "description": "Encode/decode URLs and generate SEO-friendly slugs for web development and content management"
+          },
+          {
+            "title": "Developer-Optimized",
+            "description": "Fast processing with syntax highlighting, error handling, and batch conversion capabilities"
+          },
+          {
+            "title": "Cross-Platform Compatibility",
+            "description": "Works across all programming languages, frameworks, and development environments"
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "Instant conversion with live preview and immediate copy-to-clipboard functionality"
+          },
+          {
+            "title": "Validation & Error Handling",
+            "description": "Built-in validation with clear error messages and format verification"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Available Code & Data Translation Tools",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "href": "/tools/base64-encoder-decoder",
+            "description": "Encode and decode text and files to/from Base64 format for data transmission"
+          },
+          {
+            "name": "Binary Code Translator",
+            "href": "/tools/binary-code-translator", 
+            "description": "Convert text to binary code and binary to text with ASCII support"
+          },
+          {
+            "name": "Hex to Text Converter",
+            "href": "/tools/hex-to-text",
+            "description": "Convert hexadecimal values to text and text to hex format"
+          },
+          {
+            "name": "Morse Code Translator",
+            "href": "/tools/morse-code",
+            "description": "Translate text to Morse code and Morse code back to text"
+          },
+          {
+            "name": "Caesar Cipher Encoder",
+            "href": "/tools/caesar-cipher",
+            "description": "Encode and decode text using Caesar cipher with custom shift values"
+          },
+          {
+            "name": "ROT13 Encoder/Decoder",
+            "href": "/tools/rot13",
+            "description": "Apply ROT13 encoding and decoding for simple text obfuscation"
+          },
+          {
+            "name": "CSV to JSON Converter",
+            "href": "/tools/csv-to-json",
+            "description": "Convert CSV data to JSON format with custom delimiters and options"
+          },
+          {
+            "name": "JSON Stringify Tool",
+            "href": "/tools/json-stringify",
+            "description": "Format, minify, and stringify JSON objects with validation"
+          },
+          {
+            "name": "UTF-8 Converter",
+            "href": "/tools/utf8-converter",
+            "description": "Encode and decode UTF-8 text with support for special characters"
+          },
+          {
+            "name": "URL Encoder/Decoder",
+            "href": "/tools/url-converter",
+            "description": "Encode and decode URLs for web development and API integration"
+          },
+          {
+            "name": "URL Slug Generator",
+            "href": "/tools/slugify-url",
+            "description": "Generate SEO-friendly URL slugs from text for web content"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Code & Data Translation",
+        "items": [
+          {
+            "title": "Web Development",
+            "description": "Encode URLs, process form data, convert API responses, and handle various data formats in web applications"
+          },
+          {
+            "title": "Data Processing & Analysis",
+            "description": "Transform data between formats, clean datasets, convert CSV exports, and prepare data for analysis tools"
+          },
+          {
+            "title": "API Integration",
+            "description": "Encode request parameters, decode responses, handle authentication tokens, and process webhook data"
+          },
+          {
+            "title": "Security & Encryption",
+            "description": "Implement basic encryption, obfuscate data, encode sensitive information, and decode encrypted messages"
+          },
+          {
+            "title": "Database Operations",
+            "description": "Convert data for imports/exports, handle character encoding, process JSON fields, and transform query results"
+          },
+          {
+            "title": "Content Management",
+            "description": "Generate URL slugs, encode special characters, process user input, and handle multilingual content"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Code & Data Translation Tools",
+        "items": [
+          "Complete suite of 11+ encoding, decoding, and conversion tools for developers",
+          "Bidirectional conversion support - encode and decode in both directions seamlessly",
+          "Advanced validation with error detection and format verification for reliable results",
+          "Batch processing capabilities for handling large datasets and multiple files efficiently",
+          "Real-time processing with instant preview and immediate results display",
+          "Developer-friendly features including syntax highlighting and code formatting",
+          "Copy-to-clipboard and download functionality for easy workflow integration",
+          "Mobile-optimized interface that works perfectly across all devices and platforms",
+          "Completely free with unlimited usage and no registration or API limits required"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Related Tool Categories",
+        "items": [
+          {
+            "name": "Text Modification & Formatting",
+            "href": "/category/text-modification-formatting",
+            "description": "Format, style, and transform text content with bold, italic, and cleaning tools"
+          },
+          {
+            "name": "Random Generators",
+            "href": "/category/random-generators",
+            "description": "Generate random data, passwords, UUIDs, and other development resources"
+          },
+          {
+            "name": "Analysis & Counter Tools", 
+            "href": "/category/text-analysis",
+            "description": "Analyze text content, count characters, and extract statistical information"
+          },
+          {
+            "name": "Image Tools",
+            "href": "/category/image-tools",
+            "description": "Process, convert, and manipulate images for web development and content creation"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструменты Перевода Кода и Данных - Конвертация Между Форматами",
+    "metaDescription": "Профессиональные инструменты перевода кода и данных для разработчиков и аналитиков данных. Base64 кодирование, двоичное преобразование, hex перевод, JSON обработка, URL кодирование и 11+ конвертеров форматов.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональные Инструменты Перевода Кода и Данных",
+        "content": "Преобразуйте и конвертируйте между различными форматами данных, кодировками и кодами с нашим комплексным набором инструментов для разработчиков. Независимо от того, работаете ли вы с Base64 кодированием, двоичным преобразованием, JSON обработкой или URL манипуляциями, эти инструменты предоставляют все необходимое разработчикам для преобразования данных."
+      },
+      "features": {
+        "title": "Комплексные Возможности Конвертации Данных",
+        "items": [
+          {
+            "title": "Кодирование и Декодирование",
+            "description": "Конвертируйте между Base64, двоичным, шестнадцатеричным, UTF-8 и URL форматами кодирования с двунаправленной поддержкой"
+          },
+          {
+            "title": "Инструменты Шифрования",
+            "description": "Кодируйте и декодируйте с шифром Цезаря, ROT13 и азбукой Морзе для безопасности и коммуникации"
+          },
+          {
+            "title": "Конвертация Форматов Данных",
+            "description": "Преобразуйте CSV в JSON, stringify JSON объекты и конвертируйте между различными структурированными форматами данных"
+          },
+          {
+            "title": "Обработка URL",
+            "description": "Кодируйте/декодируйте URL и генерируйте SEO-дружественные слаги для веб-разработки и управления контентом"
+          },
+          {
+            "title": "Оптимизировано для Разработчиков",
+            "description": "Быстрая обработка с подсветкой синтаксиса, обработкой ошибок и возможностями пакетной конвертации"
+          },
+          {
+            "title": "Кроссплатформенная Совместимость",
+            "description": "Работает во всех языках программирования, фреймворках и средах разработки"
+          },
+          {
+            "title": "Обработка в Реальном Времени",
+            "description": "Мгновенная конвертация с живым предварительным просмотром и немедленным копированием в буфер обмена"
+          },
+          {
+            "title": "Валидация и Обработка Ошибок",
+            "description": "Встроенная валидация с четкими сообщениями об ошибках и проверкой формата"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Доступные Инструменты Перевода Кода и Данных",
+        "items": [
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "href": "/ru/tools/base64-encoder-decoder",
+            "description": "Кодируйте и декодируйте текст и файлы в/из формата Base64 для передачи данных"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "href": "/ru/tools/binary-code-translator", 
+            "description": "Конвертируйте текст в двоичный код и двоичный код в текст с поддержкой ASCII"
+          },
+          {
+            "name": "Конвертер Hex в Текст",
+            "href": "/ru/tools/hex-to-text",
+            "description": "Конвертируйте шестнадцатеричные значения в текст и текст в hex формат"
+          },
+          {
+            "name": "Переводчик Азбуки Морзе",
+            "href": "/ru/tools/morse-code",
+            "description": "Переводите текст в азбуку Морзе и азбуку Морзе обратно в текст"
+          },
+          {
+            "name": "Кодировщик Шифра Цезаря",
+            "href": "/ru/tools/caesar-cipher",
+            "description": "Кодируйте и декодируйте текст с использованием шифра Цезаря с пользовательскими значениями сдвига"
+          },
+          {
+            "name": "ROT13 Кодировщик/Декодировщик",
+            "href": "/ru/tools/rot13",
+            "description": "Применяйте ROT13 кодирование и декодирование для простого скрытия текста"
+          },
+          {
+            "name": "Конвертер CSV в JSON",
+            "href": "/ru/tools/csv-to-json",
+            "description": "Конвертируйте CSV данные в JSON формат с пользовательскими разделителями и опциями"
+          },
+          {
+            "name": "Инструмент JSON Stringify",
+            "href": "/ru/tools/json-stringify",
+            "description": "Форматируйте, минифицируйте и stringify JSON объекты с валидацией"
+          },
+          {
+            "name": "UTF-8 Конвертер",
+            "href": "/ru/tools/utf8-converter",
+            "description": "Кодируйте и декодируйте UTF-8 текст с поддержкой специальных символов"
+          },
+          {
+            "name": "URL Кодировщик/Декодировщик",
+            "href": "/ru/tools/url-converter",
+            "description": "Кодируйте и декодируйте URL для веб-разработки и интеграции API"
+          },
+          {
+            "name": "Генератор URL Слагов",
+            "href": "/ru/tools/slugify-url",
+            "description": "Генерируйте SEO-дружественные URL слаги из текста для веб-контента"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Перевода Кода и Данных",
+        "items": [
+          {
+            "title": "Веб-разработка",
+            "description": "Кодируйте URL, обрабатывайте данные форм, конвертируйте ответы API и обрабатывайте различные форматы данных"
+          },
+          {
+            "title": "Обработка и Анализ Данных",
+            "description": "Преобразуйте данные между форматами, очищайте наборы данных, конвертируйте CSV экспорты"
+          },
+          {
+            "title": "Интеграция API",
+            "description": "Кодируйте параметры запросов, декодируйте ответы, обрабатывайте токены аутентификации"
+          },
+          {
+            "title": "Безопасность и Шифрование",
+            "description": "Реализуйте базовое шифрование, скрывайте данные, кодируйте чувствительную информацию"
+          },
+          {
+            "title": "Операции с Базами Данных",
+            "description": "Конвертируйте данные для импорта/экспорта, обрабатывайте кодировку символов, обрабатывайте JSON поля"
+          },
+          {
+            "title": "Управление Контентом",
+            "description": "Генерируйте URL слаги, кодируйте специальные символы, обрабатывайте пользовательский ввод"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наши Инструменты Перевода Кода и Данных",
+        "items": [
+          "Полный набор из 11+ инструментов кодирования, декодирования и конвертации для разработчиков",
+          "Поддержка двунаправленной конвертации - кодируйте и декодируйте в обоих направлениях беспрепятственно",
+          "Расширенная валидация с обнаружением ошибок и проверкой формата для надежных результатов",
+          "Возможности пакетной обработки для эффективной работы с большими наборами данных и множественными файлами",
+          "Обработка в реальном времени с мгновенным предварительным просмотром и немедленным отображением результатов",
+          "Дружественные для разработчиков функции, включая подсветку синтаксиса и форматирование кода",
+          "Функции копирования в буфер обмена и загрузки для легкой интеграции в рабочий процесс",
+          "Мобильно-оптимизированный интерфейс, который идеально работает на всех устройствах и платформах",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или ограничений API"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Связанные Категории Инструментов",
+        "items": [
+          {
+            "name": "Изменение и Форматирование Текста",
+            "href": "/ru/category/text-modification-formatting",
+            "description": "Форматируйте, стилизуйте и преобразуйте текстовый контент с жирным, курсивным и инструментами очистки"
+          },
+          {
+            "name": "Генераторы Случайных Данных",
+            "href": "/ru/category/random-generators",
+            "description": "Генерируйте случайные данные, пароли, UUID и другие ресурсы для разработки"
+          },
+          {
+            "name": "Инструменты Анализа и Подсчета", 
+            "href": "/ru/category/text-analysis",
+            "description": "Анализируйте текстовый контент, считайте символы и извлекайте статистическую информацию"
+          },
+          {
+            "name": "Инструменты Изображений",
+            "href": "/ru/category/image-tools",
+            "description": "Обрабатывайте, конвертируйте и манипулируйте изображениями для веб-разработки и создания контента"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,332 @@
+{
+  "en": {
+    "title": "Miscellaneous Tools - Essential Utilities for Every Professional",
+    "metaDescription": "Collection of essential miscellaneous tools for developers, marketers, and professionals. Online notepad, ASCII art generator, NATO phonetic alphabet, hash generator, UTM builder, and specialized utilities. Free and unlimited usage.",
+    "sections": {
+      "intro": {
+        "title": "Essential Miscellaneous Tools for Every Professional",
+        "content": "Discover a comprehensive collection of specialized utility tools designed for professionals across various fields. From creative ASCII art generation and phonetic spelling to secure hash generation and marketing UTM parameters, these miscellaneous tools provide essential functionality that doesn't fit into traditional categories but proves invaluable for daily workflows. Perfect for developers, marketers, educators, and creative professionals."
+      },
+      "features": {
+        "title": "Diverse Utility Capabilities",
+        "items": [
+          {
+            "title": "Creative & Artistic Tools",
+            "description": "Generate ASCII art, create phonetic spellings, and transform text with specialized creative utilities"
+          },
+          {
+            "title": "Professional Communication",
+            "description": "NATO phonetic alphabet reference, clear spelling generation, and standardized communication tools"
+          },
+          {
+            "title": "Security & Hashing",
+            "description": "Generate MD5 hashes for data integrity verification and security applications"
+          },
+          {
+            "title": "Marketing & Analytics",
+            "description": "Build UTM parameters for campaign tracking and detailed marketing attribution analysis"
+          },
+          {
+            "title": "Data Organization",
+            "description": "Sort numbers efficiently and organize data with specialized sorting algorithms"
+          },
+          {
+            "title": "Historical & Cultural Tools",
+            "description": "Convert dates to Roman numerals and explore historical number systems"
+          },
+          {
+            "title": "Productivity Utilities",
+            "description": "Online notepad for quick notes and temporary text storage with auto-save functionality"
+          },
+          {
+            "title": "Cross-Platform Compatibility",
+            "description": "All tools work seamlessly across devices, browsers, and operating systems"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Available Miscellaneous Tools",
+        "items": [
+          {
+            "name": "Online Notepad",
+            "href": "/tools/online-notepad",
+            "description": "Simple and efficient web-based notepad for quick note-taking and text editing"
+          },
+          {
+            "name": "ASCII Art Generator",
+            "href": "/tools/ascii-art-generator", 
+            "description": "Create stunning ASCII art from text with multiple font styles and customization options"
+          },
+          {
+            "name": "NATO Phonetic Alphabet",
+            "href": "/tools/nato-phonetic",
+            "description": "Convert text to NATO phonetic alphabet for clear radio and telephone communication"
+          },
+          {
+            "name": "Phonetic Spelling Generator",
+            "href": "/tools/phonetic-spelling",
+            "description": "Generate phonetic spellings to help with pronunciation and communication clarity"
+          },
+          {
+            "name": "Pig Latin Translator",
+            "href": "/tools/pig-latin",
+            "description": "Convert text to and from Pig Latin for fun wordplay and educational purposes"
+          },
+          {
+            "name": "Roman Numeral Date Converter",
+            "href": "/tools/roman-numeral-date",
+            "description": "Convert modern dates to Roman numeral format for historical and decorative use"
+          },
+          {
+            "name": "Number Sorting Tool",
+            "href": "/tools/number-sorter",
+            "description": "Sort lists of numbers in ascending or descending order with advanced options"
+          },
+          {
+            "name": "MD5 Hash Generator",
+            "href": "/tools/md5-hash",
+            "description": "Generate MD5 hashes for data integrity verification and security applications"
+          },
+          {
+            "name": "UTM Parameter Builder",
+            "href": "/tools/utm-builder",
+            "description": "Build UTM parameters for marketing campaigns and track traffic sources effectively"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Miscellaneous Tools",
+        "items": [
+          {
+            "title": "Creative Projects",
+            "description": "Generate ASCII art for banners, create unique text effects, and add visual flair to digital projects"
+          },
+          {
+            "title": "Professional Communication",
+            "description": "Use NATO phonetic alphabet for clear communication, generate phonetic spellings for names and terms"
+          },
+          {
+            "title": "Marketing & Analytics",
+            "description": "Build UTM parameters for campaign tracking, analyze traffic sources, and measure marketing effectiveness"
+          },
+          {
+            "title": "Data Security",
+            "description": "Generate MD5 hashes for file verification, password storage, and data integrity checks"
+          },
+          {
+            "title": "Education & Learning",
+            "description": "Teach historical numbering systems, practice phonetic spelling, and explore linguistic concepts"
+          },
+          {
+            "title": "Content Creation",
+            "description": "Create decorative text, historical references, and unique formatting for various media projects"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Miscellaneous Tools",
+        "items": [
+          "Diverse collection of 9+ specialized tools covering unique utility needs across professions",
+          "Creative tools for ASCII art generation with multiple fonts and customization options",
+          "Professional communication aids including NATO phonetic alphabet and phonetic spelling",
+          "Security utilities for MD5 hash generation and data integrity verification",
+          "Marketing tools for UTM parameter building and campaign tracking setup",
+          "Educational resources for historical numbering systems and linguistic exploration",
+          "Productivity utilities including online notepad with auto-save and download features",
+          "Mobile-responsive design that works perfectly across all devices and platforms",
+          "Completely free with unlimited usage and no registration or feature restrictions required"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Related Tool Categories",
+        "items": [
+          {
+            "name": "Text Modification & Formatting",
+            "href": "/category/text-modification-formatting",
+            "description": "Format and transform text content with styling and modification tools"
+          },
+          {
+            "name": "Code & Data Translation",
+            "href": "/category/code-data-translation",
+            "description": "Convert between data formats and handle various encoding schemes"
+          },
+          {
+            "name": "Random Generators",
+            "href": "/category/random-generators",
+            "description": "Generate random data, passwords, and values for testing and development"
+          },
+          {
+            "name": "Image Tools",
+            "href": "/category/image-tools",
+            "description": "Process, convert, and manipulate images for various use cases"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Разные Инструменты - Основные Утилиты для Каждого Профессионала",
+    "metaDescription": "Коллекция основных разных инструментов для разработчиков, маркетологов и профессионалов. Онлайн блокнот, генератор ASCII арт, фонетический алфавит НАТО, генератор хэш, UTM билдер и специализированные утилиты.",
+    "sections": {
+      "intro": {
+        "title": "Основные Разные Инструменты для Каждого Профессионала",
+        "content": "Откройте для себя комплексную коллекцию специализированных утилит, разработанных для профессионалов в различных областях. От творческой генерации ASCII арт и фонетического написания до безопасной генерации хэш и маркетинговых UTM параметров, эти разные инструменты предоставляют основную функциональность, которая не вписывается в традиционные категории, но оказывается бесценной для ежедневных рабочих процессов."
+      },
+      "features": {
+        "title": "Разнообразные Возможности Утилит",
+        "items": [
+          {
+            "title": "Творческие и Художественные Инструменты",
+            "description": "Генерируйте ASCII арт, создавайте фонетические написания и преобразуйте текст с помощью специализированных творческих утилит"
+          },
+          {
+            "title": "Профессиональная Коммуникация",
+            "description": "Справочник фонетического алфавита НАТО, генерация четкого написания и стандартизированные инструменты коммуникации"
+          },
+          {
+            "title": "Безопасность и Хэширование",
+            "description": "Генерируйте MD5 хэши для проверки целостности данных и приложений безопасности"
+          },
+          {
+            "title": "Маркетинг и Аналитика",
+            "description": "Создавайте UTM параметры для отслеживания кампаний и детального анализа маркетинговой атрибуции"
+          },
+          {
+            "title": "Организация Данных",
+            "description": "Эффективно сортируйте числа и организуйте данные с помощью специализированных алгоритмов сортировки"
+          },
+          {
+            "title": "Исторические и Культурные Инструменты",
+            "description": "Конвертируйте даты в римские цифры и исследуйте исторические системы счисления"
+          },
+          {
+            "title": "Утилиты Продуктивности",
+            "description": "Онлайн блокнот для быстрых заметок и временного хранения текста с функцией автосохранения"
+          },
+          {
+            "title": "Кроссплатформенная Совместимость",
+            "description": "Все инструменты работают бесшовно на всех устройствах, браузерах и операционных системах"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Доступные Разные Инструменты",
+        "items": [
+          {
+            "name": "Онлайн Блокнот",
+            "href": "/ru/tools/online-notepad",
+            "description": "Простой и эффективный веб-блокнот для быстрого создания заметок и редактирования текста"
+          },
+          {
+            "name": "Генератор ASCII Арт",
+            "href": "/ru/tools/ascii-art-generator", 
+            "description": "Создавайте потрясающее ASCII искусство из текста с множественными стилями шрифтов и опциями настройки"
+          },
+          {
+            "name": "Фонетический Алфавит НАТО",
+            "href": "/ru/tools/nato-phonetic",
+            "description": "Конвертируйте текст в фонетический алфавит НАТО для четкой радио и телефонной связи"
+          },
+          {
+            "name": "Генератор Фонетического Написания",
+            "href": "/ru/tools/phonetic-spelling",
+            "description": "Генерируйте фонетические написания для помощи с произношением и ясностью коммуникации"
+          },
+          {
+            "name": "Переводчик Поросячьей Латыни",
+            "href": "/ru/tools/pig-latin",
+            "description": "Конвертируйте текст в и из поросячьей латыни для забавной игры слов и образовательных целей"
+          },
+          {
+            "name": "Конвертер Дат в Римские Цифры",
+            "href": "/ru/tools/roman-numeral-date",
+            "description": "Конвертируйте современные даты в формат римских цифр для исторического и декоративного использования"
+          },
+          {
+            "name": "Инструмент Сортировки Чисел",
+            "href": "/ru/tools/number-sorter",
+            "description": "Сортируйте списки чисел в возрастающем или убывающем порядке с расширенными опциями"
+          },
+          {
+            "name": "Генератор MD5 Хэш",
+            "href": "/ru/tools/md5-hash",
+            "description": "Генерируйте MD5 хэши для проверки целостности данных и приложений безопасности"
+          },
+          {
+            "name": "Конструктор UTM Параметров",
+            "href": "/ru/tools/utm-builder",
+            "description": "Создавайте UTM параметры для маркетинговых кампаний и эффективно отслеживайте источники трафика"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Разных Инструментов",
+        "items": [
+          {
+            "title": "Творческие Проекты",
+            "description": "Генерируйте ASCII арт для баннеров, создавайте уникальные текстовые эффекты и добавляйте визуальную привлекательность к цифровым проектам"
+          },
+          {
+            "title": "Профессиональная Коммуникация",
+            "description": "Используйте фонетический алфавит НАТО для четкой коммуникации, генерируйте фонетические написания для имен и терминов"
+          },
+          {
+            "title": "Маркетинг и Аналитика",
+            "description": "Создавайте UTM параметры для отслеживания кампаний, анализируйте источники трафика и измеряйте эффективность маркетинга"
+          },
+          {
+            "title": "Безопасность Данных",
+            "description": "Генерируйте MD5 хэши для проверки файлов, хранения паролей и проверки целостности данных"
+          },
+          {
+            "title": "Образование и Обучение",
+            "description": "Обучайте историческим системам счисления, практикуйте фонетическое написание и исследуйте лингвистические концепции"
+          },
+          {
+            "title": "Создание Контента",
+            "description": "Создавайте декоративный текст, исторические ссылки и уникальное форматирование для различных медиа проектов"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наши Разные Инструменты",
+        "items": [
+          "Разнообразная коллекция из 9+ специализированных инструментов, покрывающих уникальные потребности утилит в различных профессиях",
+          "Творческие инструменты для генерации ASCII арт с множественными шрифтами и опциями настройки",
+          "Профессиональные помощники коммуникации, включая фонетический алфавит НАТО и фонетическое написание",
+          "Утилиты безопасности для генерации MD5 хэш и проверки целостности данных",
+          "Маркетинговые инструменты для создания UTM параметров и настройки отслеживания кампаний",
+          "Образовательные ресурсы для исторических систем счисления и лингвистического исследования",
+          "Утилиты продуктивности, включая онлайн блокнот с автосохранением и функциями загрузки",
+          "Мобильно-адаптивный дизайн, который идеально работает на всех устройствах и платформах",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или ограничений функций"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Связанные Категории Инструментов",
+        "items": [
+          {
+            "name": "Изменение и Форматирование Текста",
+            "href": "/ru/category/text-modification-formatting",
+            "description": "Форматируйте и преобразуйте текстовый контент с помощью инструментов стилизации и модификации"
+          },
+          {
+            "name": "Перевод Кода и Данных",
+            "href": "/ru/category/code-data-translation",
+            "description": "Конвертируйте между форматами данных и обрабатывайте различные схемы кодирования"
+          },
+          {
+            "name": "Генераторы Случайных Данных",
+            "href": "/ru/category/random-generators",
+            "description": "Генерируйте случайные данные, пароли и значения для тестирования и разработки"
+          },
+          {
+            "name": "Инструменты Изображений",
+            "href": "/ru/category/image-tools",
+            "description": "Обрабатывайте, конвертируйте и манипулируйте изображениями для различных случаев использования"
+          }
+        ]
+      }
+    }
+  }
+}

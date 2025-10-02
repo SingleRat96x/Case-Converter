@@ -1,57 +1,34 @@
+import { Layout } from '@/components/layout/Layout';
+import { SentenceCaseConverter } from '@/components/tools/SentenceCaseConverter';
+import { SEOContent } from '@/components/seo/SEOContent';
+import { generateToolMetadata } from '@/lib/metadata/metadataGenerator';
 import type { Metadata } from 'next';
-import { getToolContent } from '@/lib/tools';
-import { SentenceCaseConverter } from './sentence-case-converter';
-import { generatePageMetadata } from '@/lib/metadata';
-import AdScript from '@/components/ads/AdScript';
 
-export const dynamic = 'force-dynamic';
-export const revalidate = 0;
+const toolConfig = {
+  name: 'sentence-case',
+  path: '/tools/sentence-case'
+};
 
 export async function generateMetadata(): Promise<Metadata> {
-  const tool = await getToolContent('sentence-case');
-  return generatePageMetadata(
-    'tool',
-    'sentence-case',
-    tool?.title || 'Sentence Case Converter',
-    tool?.short_description || 'Convert text to Sentence case format'
-  );
+  return generateToolMetadata(toolConfig.name, {
+    locale: 'en',
+    pathname: toolConfig.path
+  });
 }
 
-export default async function SentenceCasePage() {
-  const content = await getToolContent('sentence-case');
-  
+export default function SentenceCasePage() {
   return (
-    <main className="min-h-screen bg-background">
-      <div className="max-w-7xl mx-auto px-8 py-8">
-        {/* Header section with more left padding */}
-        <div className="max-w-4xl mx-auto mb-12">
-          <h1 className="text-3xl font-bold text-gray-900 dark:text-gray-50 mb-4">
-            {content?.title || 'Sentence Case Converter'}
-          </h1>
-          <p className="text-gray-600 dark:text-gray-400">
-            {content?.short_description || 'Convert your text to sentence case online'}
-          </p>
-          <AdScript />
-        </div>
-
-        {/* Tool section with wider width */}
-        <div className="max-w-6xl mx-auto mb-12">
+    <Layout>
+      <div className="py-8">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <SentenceCaseConverter />
-        </div>
-
-        <AdScript />
-
-        {/* Description section with more left padding */}
-        <div className="max-w-4xl mx-auto">
-          <div className="prose dark:prose-invert">
-            {content?.long_description ? (
-              <div dangerouslySetInnerHTML={{ __html: content.long_description }} />
-            ) : (
-              <p>Convert your text to sentence case with this online tool.</p>
-            )}
-          </div>
+          <SEOContent 
+            toolName={toolConfig.name} 
+            enableAds={true} 
+            adDensity="medium" 
+          />
         </div>
       </div>
-    </main>
+    </Layout>
   );
-} 
+}

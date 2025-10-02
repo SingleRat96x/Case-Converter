@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free JSON Stringify Tool - Format, Parse & Validate JSON Online",
+    "metaDescription": "Format, stringify, and parse JSON data with advanced options. Free online JSON tool with pretty printing, key sorting, validation, and syntax highlighting for developers.",
+    "sections": {
+      "intro": {
+        "title": "Free JSON Stringify Tool - Format, Parse & Validate JSON Online",
+        "content": "Format, stringify, and parse JSON data with our comprehensive online tool. Features pretty printing, key sorting, validation, customizable indentation, and advanced processing options. Perfect for API development, debugging, and JSON data processing tasks."
+      },
+      "features": {
+        "title": "Advanced JSON Processing Features",
+        "items": [
+          {
+            "title": "Bidirectional Processing",
+            "description": "Stringify JSON objects to formatted strings and parse JSON strings back to formatted objects with instant mode switching."
+          },
+          {
+            "title": "Customizable Formatting",
+            "description": "Choose between pretty-printed and compact output with customizable indentation sizes (2, 4, or 8 spaces)."
+          },
+          {
+            "title": "Key Sorting",
+            "description": "Automatically sort object keys alphabetically for consistent output and better readability in formatted JSON."
+          },
+          {
+            "title": "Unicode Handling",
+            "description": "Option to escape Unicode characters for compatibility with systems that require ASCII-only JSON output."
+          },
+          {
+            "title": "Comment Removal",
+            "description": "Parse mode supports removing single-line and multi-line comments from JSON-like input for flexible processing."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Detailed statistics including file sizes, element counts, nesting depth, and compression analysis."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for JSON Stringify Tool",
+        "description": "Process and format JSON data for various development, debugging, and data processing workflows.",
+        "items": [
+          {
+            "title": "API Development",
+            "description": "Format and validate JSON payloads for REST APIs, GraphQL, and web service development."
+          },
+          {
+            "title": "Debugging & Testing",
+            "description": "Pretty-print JSON responses and requests for easier debugging and error identification."
+          },
+          {
+            "title": "Configuration Files",
+            "description": "Format and validate JSON configuration files for applications, tools, and deployment scripts."
+          },
+          {
+            "title": "Data Processing",
+            "description": "Clean up and standardize JSON data from various sources with consistent formatting and validation."
+          },
+          {
+            "title": "Code Generation",
+            "description": "Generate properly formatted JSON for code templates, documentation, and automated tools."
+          },
+          {
+            "title": "Data Migration",
+            "description": "Process and validate JSON data during migration between different systems and databases."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the JSON Stringify Tool",
+        "description": "Follow these simple steps to format, parse, and validate your JSON data.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose Processing Mode",
+            "description": "Select whether you want to stringify JSON objects or parse and format JSON strings."
+          },
+          {
+            "step": 2,
+            "title": "Input Your JSON",
+            "description": "Paste your JSON data into the input area, or upload a JSON file for processing."
+          },
+          {
+            "step": 3,
+            "title": "Configure Options",
+            "description": "Adjust formatting preferences, indentation, key sorting, and processing options in the accordion."
+          },
+          {
+            "step": 4,
+            "title": "Review & Export",
+            "description": "Examine the formatted output, review analytics, and copy or download the processed JSON."
+          }
+        ]
+      },
+      "examples": {
+        "title": "JSON Stringify Examples",
+        "description": "See how different JSON structures are processed and formatted.",
+        "items": [
+          {
+            "title": "Object Formatting",
+            "input": "{\"name\":\"John\",\"age\":30,\"city\":\"New York\"}",
+            "output": "{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"New York\"\n}"
+          },
+          {
+            "title": "Array Processing",
+            "input": "[{\"id\":1,\"active\":true},{\"id\":2,\"active\":false}]",
+            "output": "[\n  {\n    \"id\": 1,\n    \"active\": true\n  },\n  {\n    \"id\": 2,\n    \"active\": false\n  }\n]"
+          },
+          {
+            "title": "Nested Structure",
+            "input": "{\"user\":{\"profile\":{\"name\":\"Jane\",\"settings\":{\"theme\":\"dark\"}}}}",
+            "output": "{\n  \"user\": {\n    \"profile\": {\n      \"name\": \"Jane\",\n      \"settings\": {\n        \"theme\": \"dark\"\n      }\n    }\n  }\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our JSON Stringify Tool",
+        "content": "Professional-grade JSON processing with comprehensive formatting and validation options.",
+        "items": [
+          "Instant bidirectional JSON processing and formatting",
+          "Customizable indentation and output formatting options",
+          "Advanced key sorting for consistent JSON structure",
+          "Unicode escaping for cross-platform compatibility",
+          "Comment removal support for flexible input processing",
+          "Real-time analytics and structure analysis",
+          "Privacy-focused - all processing happens locally",
+          "Free to use with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What's the difference between stringify and parse modes?",
+          "answer": "Stringify mode converts JSON objects to formatted JSON strings with proper indentation and formatting. Parse mode takes JSON strings and formats them for better readability, while also validating the JSON structure."
+        },
+        {
+          "question": "Can I sort object keys alphabetically?",
+          "answer": "Yes, enable the 'Sort Keys' option to automatically sort all object keys alphabetically. This creates consistent output and makes it easier to compare JSON structures."
+        },
+        {
+          "question": "What does Unicode escaping do?",
+          "answer": "Unicode escaping converts non-ASCII characters to their Unicode escape sequences (\\uXXXX). This ensures compatibility with systems that only support ASCII characters in JSON."
+        },
+        {
+          "question": "Can I remove comments from JSON?",
+          "answer": "Yes, in parse mode, you can enable comment removal to strip single-line (//) and multi-line (/* */) comments from JSON-like input before processing."
+        },
+        {
+          "question": "How does the validation work?",
+          "answer": "The tool validates JSON syntax in real-time and displays detailed error messages if the JSON is malformed. This helps identify and fix JSON structure issues quickly."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related JSON & Data Processing Tools",
+        "items": [
+          {
+            "name": "CSV to JSON Converter",
+            "description": "Convert between CSV and JSON formats with advanced options",
+            "href": "/tools/csv-to-json"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Encode and decode data using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Analyze text statistics and data structure",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "URL Converter",
+            "description": "Encode and decode URLs for web applications",
+            "href": "/tools/url-converter"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Инструмент JSON Stringify - Форматирование, Парсинг и Валидация JSON Онлайн",
+    "metaDescription": "Форматируйте, stringify и парсите JSON данные с расширенными опциями. Бесплатный онлайн JSON инструмент с красивой печатью, сортировкой ключей, валидацией и подсветкой синтаксиса для разработчиков.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Инструмент JSON Stringify - Форматирование, Парсинг и Валидация JSON Онлайн",
+        "content": "Форматируйте, stringify и парсите JSON данные с нашим комплексным онлайн инструментом. Включает красивую печать, сортировку ключей, валидацию, настраиваемые отступы и расширенные опции обработки. Идеально для разработки API, отладки и задач обработки JSON данных."
+      },
+      "features": {
+        "title": "Расширенные Возможности Обработки JSON",
+        "items": [
+          {
+            "title": "Двунаправленная Обработка",
+            "description": "Stringify JSON объекты в форматированные строки и парсите JSON строки обратно в форматированные объекты с мгновенным переключением режимов."
+          },
+          {
+            "title": "Настраиваемое Форматирование",
+            "description": "Выбирайте между красиво отформатированным и компактным выводом с настраиваемыми размерами отступов (2, 4 или 8 пробелов)."
+          },
+          {
+            "title": "Сортировка Ключей",
+            "description": "Автоматически сортируйте ключи объектов по алфавиту для последовательного вывода и лучшей читаемости в форматированном JSON."
+          },
+          {
+            "title": "Обработка Unicode",
+            "description": "Опция экранирования Unicode символов для совместимости с системами, которые требуют только ASCII вывод JSON."
+          },
+          {
+            "title": "Удаление Комментариев",
+            "description": "Режим парсинга поддерживает удаление однострочных и многострочных комментариев из JSON-подобного ввода для гибкой обработки."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Подробная статистика, включая размеры файлов, количество элементов, глубину вложенности и анализ сжатия."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения Инструмента JSON Stringify",
+        "description": "Обрабатывайте и форматируйте JSON данные для различных рабочих процессов разработки, отладки и обработки данных.",
+        "items": [
+          {
+            "title": "Разработка API",
+            "description": "Форматируйте и валидируйте JSON полезные нагрузки для REST API, GraphQL и разработки веб-сервисов."
+          },
+          {
+            "title": "Отладка и Тестирование",
+            "description": "Красиво печатайте JSON ответы и запросы для более легкой отладки и идентификации ошибок."
+          },
+          {
+            "title": "Файлы Конфигурации",
+            "description": "Форматируйте и валидируйте JSON файлы конфигурации для приложений, инструментов и скриптов развертывания."
+          },
+          {
+            "title": "Обработка Данных",
+            "description": "Очищайте и стандартизируйте JSON данные из различных источников с последовательным форматированием и валидацией."
+          },
+          {
+            "title": "Генерация Кода",
+            "description": "Генерируйте правильно отформатированный JSON для шаблонов кода, документации и автоматизированных инструментов."
+          },
+          {
+            "title": "Миграция Данных",
+            "description": "Обрабатывайте и валидируйте JSON данные во время миграции между различными системами и базами данных."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Инструмент JSON Stringify",
+        "description": "Следуйте этим простым шагам для форматирования, парсинга и валидации ваших JSON данных.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Режим Обработки",
+            "description": "Выберите, хотите ли вы stringify JSON объекты или парсить и форматировать JSON строки."
+          },
+          {
+            "step": 2,
+            "title": "Введите Ваш JSON",
+            "description": "Вставьте ваши JSON данные в область ввода, или загрузите JSON файл для обработки."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Опции",
+            "description": "Отрегулируйте предпочтения форматирования, отступы, сортировку ключей и опции обработки в аккордеоне."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите и Экспортируйте",
+            "description": "Изучите отформатированный вывод, просмотрите аналитику и скопируйте или скачайте обработанный JSON."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры JSON Stringify",
+        "description": "Посмотрите, как различные JSON структуры обрабатываются и форматируются.",
+        "items": [
+          {
+            "title": "Форматирование Объекта",
+            "input": "{\"имя\":\"Иван\",\"возраст\":30,\"город\":\"Москва\"}",
+            "output": "{\n  \"имя\": \"Иван\",\n  \"возраст\": 30,\n  \"город\": \"Москва\"\n}"
+          },
+          {
+            "title": "Обработка Массива",
+            "input": "[{\"id\":1,\"активен\":true},{\"id\":2,\"активен\":false}]",
+            "output": "[\n  {\n    \"id\": 1,\n    \"активен\": true\n  },\n  {\n    \"id\": 2,\n    \"активен\": false\n  }\n]"
+          },
+          {
+            "title": "Вложенная Структура",
+            "input": "{\"пользователь\":{\"профиль\":{\"имя\":\"Мария\",\"настройки\":{\"тема\":\"темная\"}}}}",
+            "output": "{\n  \"пользователь\": {\n    \"профиль\": {\n      \"имя\": \"Мария\",\n      \"настройки\": {\n        \"тема\": \"темная\"\n      }\n    }\n  }\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент JSON Stringify",
+        "content": "Профессиональная обработка JSON с комплексными опциями форматирования и валидации.",
+        "items": [
+          "Мгновенная двунаправленная обработка и форматирование JSON",
+          "Настраиваемые отступы и опции форматирования вывода",
+          "Расширенная сортировка ключей для последовательной структуры JSON",
+          "Экранирование Unicode для кроссплатформенной совместимости",
+          "Поддержка удаления комментариев для гибкой обработки ввода",
+          "Аналитика в реальном времени и анализ структуры",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально",
+          "Бесплатное использование без регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "В чем разница между режимами stringify и parse?",
+          "answer": "Режим stringify конвертирует JSON объекты в форматированные JSON строки с правильными отступами и форматированием. Режим parse берет JSON строки и форматирует их для лучшей читаемости, также валидируя структуру JSON."
+        },
+        {
+          "question": "Могу ли я сортировать ключи объектов по алфавиту?",
+          "answer": "Да, включите опцию 'Сортировать Ключи' для автоматической сортировки всех ключей объектов по алфавиту. Это создает последовательный вывод и упрощает сравнение JSON структур."
+        },
+        {
+          "question": "Что делает экранирование Unicode?",
+          "answer": "Экранирование Unicode конвертирует не-ASCII символы в их Unicode escape последовательности (\\uXXXX). Это обеспечивает совместимость с системами, которые поддерживают только ASCII символы в JSON."
+        },
+        {
+          "question": "Могу ли я удалить комментарии из JSON?",
+          "answer": "Да, в режиме parse вы можете включить удаление комментариев для удаления однострочных (//) и многострочных (/* */) комментариев из JSON-подобного ввода перед обработкой."
+        },
+        {
+          "question": "Как работает валидация?",
+          "answer": "Инструмент валидирует синтаксис JSON в реальном времени и отображает подробные сообщения об ошибках, если JSON неправильно сформирован. Это помогает быстро идентифицировать и исправить проблемы структуры JSON."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты JSON и Обработки Данных",
+        "items": [
+          {
+            "name": "Конвертер CSV в JSON",
+            "description": "Конвертируйте между форматами CSV и JSON с расширенными опциями",
+            "href": "/ru/tools/csv-to-json"
+          },
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте данные используя Base64 кодирование",
+            "href": "/ru/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Анализируйте статистику текста и структуру данных",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "URL Конвертер",
+            "description": "Кодируйте и декодируйте URL для веб-приложений",
+            "href": "/ru/tools/url-converter"
+          }
+        ]
+      }
+    }
+  }
+}

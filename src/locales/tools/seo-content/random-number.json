@@ -1,0 +1,398 @@
+{
+  "en": {
+    "title": "Free Random Number Generator - Secure & Customizable",
+    "metaDescription": "Generate random numbers instantly with our secure random number generator. Customize ranges, quantities, duplicates, and sorting. Perfect for games, statistics, testing, and research. Free & unlimited.",
+    "sections": {
+      "intro": {
+        "title": "Professional Random Number Generator Tool",
+        "content": "Generate cryptographically secure random numbers with our advanced random number generator. Whether you need numbers for games, statistical sampling, testing, or research, our tool provides reliable, unbiased random number generation with extensive customization options. Features include custom ranges, quantity control, duplicate handling, and sorting capabilities."
+      },
+      "features": {
+        "title": "Advanced Random Number Generation Features",
+        "items": [
+          {
+            "title": "Cryptographically Secure",
+            "description": "Uses crypto.getRandomValues() for true randomness, ensuring unbiased and unpredictable number generation"
+          },
+          {
+            "title": "Custom Range Control",
+            "description": "Set any minimum and maximum values from -1,000,000 to 1,000,000 for precise range control"
+          },
+          {
+            "title": "Bulk Generation",
+            "description": "Generate up to 10,000 random numbers at once for large-scale applications and testing"
+          },
+          {
+            "title": "Duplicate Management",
+            "description": "Choose to allow or prevent duplicate numbers based on your specific requirements"
+          },
+          {
+            "title": "Flexible Sorting",
+            "description": "Sort results in ascending order, descending order, or keep the original random sequence"
+          },
+          {
+            "title": "Instant Results",
+            "description": "Fast generation with real-time validation and immediate results display"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Random Number Generator",
+        "steps": [
+          {
+            "title": "Set Your Range",
+            "description": "Enter the minimum and maximum values for your desired number range. The generator supports both positive and negative numbers."
+          },
+          {
+            "title": "Choose Quantity",
+            "description": "Specify how many random numbers you want to generate (1 to 10,000). Consider your range size when disabling duplicates."
+          },
+          {
+            "title": "Configure Options",
+            "description": "Toggle duplicate allowance and select your preferred sorting method (none, ascending, or descending)."
+          },
+          {
+            "title": "Generate Numbers",
+            "description": "Click 'Generate Random Numbers' to create your random number set instantly with cryptographic security."
+          },
+          {
+            "title": "Copy or Download",
+            "description": "Copy numbers to clipboard for immediate use or download as a text file for later reference."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Random Number Generation Examples",
+        "items": [
+          {
+            "title": "Gaming Dice Roll",
+            "input": "Min: 1, Max: 6, Quantity: 1",
+            "output": "4"
+          },
+          {
+            "title": "Lottery Numbers",
+            "input": "Min: 1, Max: 49, Quantity: 6, No Duplicates",
+            "output": "7, 15, 23, 31, 42, 48"
+          },
+          {
+            "title": "Test Data",
+            "input": "Min: 100, Max: 999, Quantity: 10",
+            "output": "234, 567, 891, 123, 456, 789, 345, 678, 912, 135"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Random Number Generation",
+        "items": [
+          {
+            "title": "Gaming & Entertainment",
+            "description": "Generate random numbers for dice rolls, lottery numbers, game mechanics, and random events in games"
+          },
+          {
+            "title": "Statistical Sampling",
+            "description": "Create random samples for surveys, research studies, and statistical analysis with unbiased selection"
+          },
+          {
+            "title": "Software Testing",
+            "description": "Generate test data, random inputs, and edge cases for comprehensive software testing and QA"
+          },
+          {
+            "title": "Educational Purposes",
+            "description": "Create random datasets for mathematics, statistics, and probability lessons and exercises"
+          },
+          {
+            "title": "Security & Cryptography",
+            "description": "Generate random seeds, initialization vectors, and other cryptographic components"
+          },
+          {
+            "title": "Simulation & Modeling",
+            "description": "Provide random inputs for Monte Carlo simulations, mathematical modeling, and scientific research"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Random Number Generator",
+        "items": [
+          "Cryptographically secure generation ensures truly random, unbiased results for critical applications",
+          "Generate unlimited random numbers with no usage restrictions or subscription requirements",
+          "Instant generation even for large quantities with optimized algorithms for maximum performance",
+          "Intuitive interface with helpful tooltips, validation, and clear error messages for easy use",
+          "Copy to clipboard or download as text file for seamless integration with your workflow",
+          "All generation happens locally in your browser - no data is sent to servers or stored"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Random Generation Tools",
+        "items": [
+          {
+            "name": "Random Letter Generator",
+            "description": "Generate random letters and alphabetic sequences",
+            "href": "/tools/random-letter"
+          },
+          {
+            "name": "Random Date Generator",
+            "description": "Create random dates within specified ranges",
+            "href": "/tools/random-date"
+          },
+          {
+            "name": "Random Month Generator",
+            "description": "Generate random months with different formats",
+            "href": "/tools/random-month"
+          },
+          {
+            "name": "Base64 Encoder Decoder",
+            "description": "Encode and decode text using Base64 encoding",
+            "href": "/tools/base64-encoder-decoder"
+          }
+        ]
+      },
+      "faqs": [
+          {
+            "question": "How random are the generated numbers?",
+            "answer": "Our generator uses crypto.getRandomValues(), which provides cryptographically secure random numbers. This ensures true randomness suitable for security applications, statistical analysis, and any use case requiring unbiased random generation."
+          },
+          {
+            "question": "What's the maximum range I can use?",
+            "answer": "You can generate numbers from -1,000,000 to 1,000,000. This range covers most practical applications while maintaining performance and accuracy."
+          },
+          {
+            "question": "Can I generate numbers without duplicates?",
+            "answer": "Yes! Toggle the 'Allow Duplicate Numbers' option to prevent duplicates. Note that when duplicates are disabled, the quantity cannot exceed the range size (max - min + 1)."
+          },
+          {
+            "question": "How many numbers can I generate at once?",
+            "answer": "You can generate up to 10,000 random numbers in a single operation. This limit ensures optimal performance while accommodating most use cases."
+          },
+          {
+            "question": "Is my data secure and private?",
+            "answer": "Absolutely! All random number generation happens locally in your browser. No data is transmitted to servers, stored, or tracked. Your generated numbers remain completely private."
+          },
+          {
+            "question": "Can I use these numbers for cryptographic purposes?",
+            "answer": "Yes, the numbers are generated using cryptographically secure methods. However, for critical security applications, consider additional entropy sources and consult security best practices."
+          }
+        ],
+      "tips": {
+        "title": "Tips for Effective Random Number Generation",
+        "items": [
+          {
+            "title": "Choose Appropriate Ranges",
+            "description": "Select ranges that match your specific needs. Smaller ranges provide more even distribution when generating multiple numbers."
+          },
+          {
+            "title": "Consider Duplicate Settings",
+            "description": "Enable duplicates for true random sampling, or disable for unique number sets like lottery picks or unique identifiers."
+          },
+          {
+            "title": "Use Sorting Wisely",
+            "description": "Sort results for easier analysis and presentation, but keep unsorted for maintaining true randomness in sequence."
+          },
+          {
+            "title": "Validate Your Requirements",
+            "description": "Ensure your quantity doesn't exceed your range when duplicates are disabled to avoid generation errors."
+          },
+          {
+            "title": "Save Important Results",
+            "description": "Download generated numbers as text files for important applications where you need to preserve the exact sequence."
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Случайных Чисел - Безопасный и Настраиваемый",
+    "metaDescription": "Мгновенно генерируйте случайные числа с помощью нашего безопасного генератора. Настраивайте диапазоны, количество, дубликаты и сортировку. Идеально для игр, статистики, тестирования и исследований. Бесплатно и без ограничений.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Генерации Случайных Чисел",
+        "content": "Генерируйте криптографически безопасные случайные числа с помощью нашего продвинутого генератора случайных чисел. Независимо от того, нужны ли вам числа для игр, статистической выборки, тестирования или исследований, наш инструмент обеспечивает надежную, беспристрастную генерацию случайных чисел с обширными возможностями настройки. Включает пользовательские диапазоны, контроль количества, обработку дубликатов и возможности сортировки."
+      },
+      "features": {
+        "title": "Продвинутые Функции Генерации Случайных Чисел",
+        "items": [
+          {
+            "title": "Криптографически Безопасный",
+            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая беспристрастную и непредсказуемую генерацию чисел"
+          },
+          {
+            "title": "Контроль Пользовательского Диапазона",
+            "description": "Установите любые минимальные и максимальные значения от -1 000 000 до 1 000 000 для точного контроля диапазона"
+          },
+          {
+            "title": "Массовая Генерация",
+            "description": "Генерируйте до 10 000 случайных чисел одновременно для крупномасштабных приложений и тестирования"
+          },
+          {
+            "title": "Управление Дубликатами",
+            "description": "Выберите разрешение или предотвращение дублирующихся чисел в зависимости от ваших конкретных требований"
+          },
+          {
+            "title": "Гибкая Сортировка",
+            "description": "Сортируйте результаты по возрастанию, убыванию или сохраняйте исходную случайную последовательность"
+          },
+          {
+            "title": "Мгновенные Результаты",
+            "description": "Быстрая генерация с проверкой в реальном времени и немедленным отображением результатов"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Случайных Чисел",
+        "steps": [
+          {
+            "title": "Установите Ваш Диапазон",
+            "description": "Введите минимальные и максимальные значения для желаемого диапазона чисел. Генератор поддерживает как положительные, так и отрицательные числа."
+          },
+          {
+            "title": "Выберите Количество",
+            "description": "Укажите, сколько случайных чисел вы хотите сгенерировать (от 1 до 10 000). Учитывайте размер диапазона при отключении дубликатов."
+          },
+          {
+            "title": "Настройте Опции",
+            "description": "Переключите разрешение дубликатов и выберите предпочитаемый метод сортировки (нет, по возрастанию или по убыванию)."
+          },
+          {
+            "title": "Генерируйте Числа",
+            "description": "Нажмите 'Генерировать Случайные Числа', чтобы мгновенно создать набор случайных чисел с криптографической безопасностью."
+          },
+          {
+            "title": "Копируйте или Скачайте",
+            "description": "Скопируйте числа в буфер обмена для немедленного использования или скачайте как текстовый файл для дальнейшего использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации Случайных Чисел",
+        "items": [
+          {
+            "title": "Бросок Игрового Кубика",
+            "input": "Мин: 1, Макс: 6, Количество: 1",
+            "output": "4"
+          },
+          {
+            "title": "Лотерейные Номера",
+            "input": "Мин: 1, Макс: 49, Количество: 6, Без Дубликатов",
+            "output": "7, 15, 23, 31, 42, 48"
+          },
+          {
+            "title": "Тестовые Данные",
+            "input": "Мин: 100, Макс: 999, Количество: 10",
+            "output": "234, 567, 891, 123, 456, 789, 345, 678, 912, 135"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Распространенные Случаи Использования Генерации Случайных Чисел",
+        "items": [
+          {
+            "title": "Игры и Развлечения",
+            "description": "Генерируйте случайные числа для бросков костей, лотерейных номеров, игровой механики и случайных событий в играх"
+          },
+          {
+            "title": "Статистическая Выборка",
+            "description": "Создавайте случайные выборки для опросов, исследований и статистического анализа с беспристрастным отбором"
+          },
+          {
+            "title": "Тестирование Программного Обеспечения",
+            "description": "Генерируйте тестовые данные, случайные входные данные и граничные случаи для комплексного тестирования ПО и контроля качества"
+          },
+          {
+            "title": "Образовательные Цели",
+            "description": "Создавайте случайные наборы данных для уроков и упражнений по математике, статистике и теории вероятностей"
+          },
+          {
+            "title": "Безопасность и Криптография",
+            "description": "Генерируйте случайные семена, векторы инициализации и другие криптографические компоненты"
+          },
+          {
+            "title": "Симуляция и Моделирование",
+            "description": "Предоставляйте случайные входные данные для симуляций Монте-Карло, математического моделирования и научных исследований"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наш Генератор Случайных Чисел",
+        "items": [
+          "Криптографически безопасная генерация обеспечивает действительно случайные, беспристрастные результаты для критических приложений",
+          "Генерируйте неограниченное количество случайных чисел без ограничений использования или требований подписки",
+          "Мгновенная генерация даже для больших количеств с оптимизированными алгоритмами для максимальной производительности",
+          "Интуитивный интерфейс с полезными подсказками, проверкой и понятными сообщениями об ошибках для легкого использования",
+          "Копирование в буфер обмена или скачивание как текстовый файл для бесшовной интеграции с вашим рабочим процессом",
+          "Вся генерация происходит локально в вашем браузере - никакие данные не отправляются на серверы и не сохраняются"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты Генерации Случайных Данных",
+        "items": [
+          {
+            "name": "Генератор Случайных Букв",
+            "description": "Генерируйте случайные буквы и алфавитные последовательности"
+          },
+          {
+            "name": "Генератор Случайных Дат", 
+            "description": "Создавайте случайные даты в заданных диапазонах"
+          },
+          {
+            "name": "Генератор Паролей",
+            "description": "Генерируйте безопасные случайные пароли с настраиваемыми критериями"
+          },
+          {
+            "name": "Генератор UUID",
+            "description": "Создавайте уникальные идентификаторы для приложений и баз данных"
+          }
+        ]
+      },
+      "faqs": [
+          {
+            "question": "Насколько случайны сгенерированные числа?",
+            "answer": "Наш генератор использует crypto.getRandomValues(), который обеспечивает криптографически безопасные случайные числа. Это гарантирует истинную случайность, подходящую для приложений безопасности, статистического анализа и любых случаев использования, требующих беспристрастной случайной генерации."
+          },
+          {
+            "question": "Какой максимальный диапазон я могу использовать?",
+            "answer": "Вы можете генерировать числа от -1 000 000 до 1 000 000. Этот диапазон покрывает большинство практических приложений, сохраняя производительность и точность."
+          },
+          {
+            "question": "Могу ли я генерировать числа без дубликатов?",
+            "answer": "Да! Переключите опцию 'Разрешить Повторяющиеся Числа', чтобы предотвратить дубликаты. Обратите внимание, что когда дубликаты отключены, количество не может превышать размер диапазона (макс - мин + 1)."
+          },
+          {
+            "question": "Сколько чисел я могу сгенерировать за раз?",
+            "answer": "Вы можете сгенерировать до 10 000 случайных чисел за одну операцию. Это ограничение обеспечивает оптимальную производительность, удовлетворяя большинство случаев использования."
+          },
+          {
+            "question": "Безопасны ли мои данные и конфиденциальны?",
+            "answer": "Абсолютно! Вся генерация случайных чисел происходит локально в вашем браузере. Никакие данные не передаются на серверы, не сохраняются и не отслеживаются. Ваши сгенерированные числа остаются полностью конфиденциальными."
+          },
+          {
+            "question": "Могу ли я использовать эти числа для криптографических целей?",
+            "answer": "Да, числа генерируются с использованием криптографически безопасных методов. Однако для критических приложений безопасности рассмотрите дополнительные источники энтропии и обратитесь к лучшим практикам безопасности."
+          }
+        ],
+      "tips": {
+        "title": "Советы для Эффективной Генерации Случайных Чисел",
+        "items": [
+          {
+            "title": "Выбирайте Подходящие Диапазоны",
+            "description": "Выбирайте диапазоны, которые соответствуют вашим конкретным потребностям. Меньшие диапазоны обеспечивают более равномерное распределение при генерации нескольких чисел."
+          },
+          {
+            "title": "Учитывайте Настройки Дубликатов",
+            "description": "Включите дубликаты для истинной случайной выборки или отключите для уникальных наборов чисел, таких как лотерейные билеты или уникальные идентификаторы."
+          },
+          {
+            "title": "Используйте Сортировку Разумно",
+            "description": "Сортируйте результаты для более легкого анализа и представления, но сохраняйте несортированными для поддержания истинной случайности в последовательности."
+          },
+          {
+            "title": "Проверяйте Ваши Требования",
+            "description": "Убедитесь, что ваше количество не превышает ваш диапазон, когда дубликаты отключены, чтобы избежать ошибок генерации."
+          },
+          {
+            "title": "Сохраняйте Важные Результаты",
+            "description": "Скачивайте сгенерированные числа как текстовые файлы для важных приложений, где вам нужно сохранить точную последовательность."
+          }
+        ]
+      }
+    }
+  }
+}

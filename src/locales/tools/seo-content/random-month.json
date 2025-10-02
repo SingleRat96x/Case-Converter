@@ -1,0 +1,406 @@
+{
+  "en": {
+    "title": "Random Month Generator - Generate Random Months Online",
+    "metaDescription": "Generate random months within specified year ranges with multiple output formats. Perfect for planning, scheduling, testing, and data generation applications.",
+    "sections": {
+      "intro": {
+        "title": "Professional Random Month Generator Tool",
+        "content": "Generate cryptographically secure random months with our advanced random month generator. Whether you need months for project planning, testing, scheduling, or data generation, our tool provides reliable, unbiased month generation with extensive customization options. Features include year range control, multiple output formats, duplicate handling, and chronological sorting."
+      },
+      "features": {
+        "title": "Advanced Month Generation Features",
+        "items": [
+          {
+            "title": "Multiple Output Formats",
+            "description": "Choose from Numeric (01, 02, 03...), Short Names (Jan, Feb, Mar...), Long Names (January, February, March...), or Year+Month (January 2024, February 2024...)"
+          },
+          {
+            "title": "Flexible Year Ranges", 
+            "description": "Generate months for any years between 1900 and 2100, accommodating historical data analysis and future projections"
+          },
+          {
+            "title": "Cryptographically Secure",
+            "description": "Uses crypto.getRandomValues() for true randomness, ensuring unbiased and unpredictable month generation"
+          },
+          {
+            "title": "Bulk Generation",
+            "description": "Generate up to 10,000 random months at once for large-scale applications and testing"
+          },
+          {
+            "title": "Duplicate Management", 
+            "description": "Choose to allow or prevent duplicate months based on your specific requirements"
+          },
+          {
+            "title": "Chronological Sorting",
+            "description": "Optionally sort generated months chronologically from earliest to latest"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Random Month Generator",
+        "steps": [
+          {
+            "title": "Set Year Range",
+            "description": "Enter your desired start year and end year (1900-2100). The end year must be greater than or equal to the start year."
+          },
+          {
+            "title": "Choose Quantity",
+            "description": "Specify how many random months you want to generate (1 to 10,000). Consider your year range when disabling duplicates."
+          },
+          {
+            "title": "Select Output Format",
+            "description": "Choose from four professional formats: Numeric, Short Names, Long Names, or Year+Month combination."
+          },
+          {
+            "title": "Configure Options",
+            "description": "Enable or disable duplicate months and chronological sorting based on your needs."
+          },
+          {
+            "title": "Generate and Export",
+            "description": "Click generate to create your month list, then copy to clipboard or download as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Month Generation Examples",
+        "items": [
+          {
+            "input": "Year Range: 2020-2025, Quantity: 5, Format: Long Names",
+            "output": "March\nJuly\nNovember\nApril\nSeptember"
+          },
+          {
+            "input": "Year Range: 2023-2024, Quantity: 3, Format: Year+Month, Sorted",
+            "output": "February 2023\nAugust 2023\nJune 2024"
+          },
+          {
+            "input": "Year Range: 2022-2022, Quantity: 4, Format: Numeric",
+            "output": "03\n07\n12\n01"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Use Cases for Random Month Generator",
+        "items": [
+          {
+            "title": "Project Planning",
+            "description": "Schedule milestones and plan project timelines with random month selection for testing and scenario planning"
+          },
+          {
+            "title": "Software Testing",
+            "description": "Generate test data with random months to validate date ranges, temporal logic, and time-based functionality"
+          },
+          {
+            "title": "Database Seeding",
+            "description": "Create realistic sample data for databases with random month values for development and testing environments"
+          },
+          {
+            "title": "Event Scheduling",
+            "description": "Randomly assign months for events, activities, and scheduling applications to distribute workload evenly"
+          },
+          {
+            "title": "Educational Activities",
+            "description": "Create educational games, quizzes, and learning materials that involve months, seasons, and calendar concepts"
+          },
+          {
+            "title": "Statistical Research",
+            "description": "Generate random month samples for statistical analysis, research studies, and data modeling applications"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Random Month Generator?",
+        "items": [
+          "Cryptographically secure random generation using Web Crypto API",
+          "Multiple professional output formats for different use cases",
+          "Comprehensive validation to prevent invalid configurations", 
+          "Fast generation with optimized algorithms",
+          "Mobile-friendly responsive design",
+          "No registration required - completely free",
+          "Real-time statistics and analytics",
+          "Professional-grade tool suitable for business use"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Tools",
+        "items": [
+          {
+            "name": "Random Date Generator",
+            "href": "/tools/random-date",
+            "description": "Generate random dates with full day precision"
+          },
+          {
+            "name": "Random Number Generator", 
+            "href": "/tools/random-number",
+            "description": "Generate random numbers with custom ranges"
+          },
+          {
+            "name": "Random Letter Generator",
+            "href": "/tools/random-letter", 
+            "description": "Generate random letters with case options"
+          },
+          {
+            "name": "Text Case Converter",
+            "href": "/tools/uppercase",
+            "description": "Convert text between different cases"
+          },
+          {
+            "name": "CSV to JSON Converter",
+            "href": "/tools/csv-to-json",
+            "description": "Convert CSV data to JSON format"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "href": "/tools/base64-encoder-decoder",
+            "description": "Encode and decode Base64 text"
+          },
+          {
+            "name": "Image Resizer",
+            "href": "/tools/image-resizer", 
+            "description": "Resize images to custom dimensions"
+          },
+          {
+            "name": "URL Slug Generator",
+            "href": "/tools/slugify-url",
+            "description": "Create SEO-friendly URL slugs"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What output formats are available for generated months?",
+          "answer": "Our generator offers four professional formats: Numeric (01, 02, 03...), Short Names (Jan, Feb, Mar...), Long Names (January, February, March...), and Year+Month (January 2024, February 2024...). Choose the format that best fits your specific use case."
+        },
+        {
+          "question": "Can I generate months without duplicates?",
+          "answer": "Yes! Toggle off 'Allow Duplicate Months' to ensure each generated month is unique within your specified year range. The system automatically validates that your quantity doesn't exceed the total available months in the range."
+        },
+        {
+          "question": "What year range is supported for month generation?",
+          "answer": "You can generate months for any years between 1900 and 2100. This wide range accommodates historical data analysis, current planning needs, and long-term future projections."
+        },
+        {
+          "question": "How does the chronological sorting feature work?",
+          "answer": "When enabled, the chronological sorting arranges generated months in time order from earliest to latest. This is particularly useful for timeline creation, project planning, and creating sequential month lists."
+        },
+        {
+          "question": "Is the month generation truly random and secure?",
+          "answer": "Absolutely! We use the Web Crypto API's cryptographically secure random number generator, ensuring true randomness suitable for professional applications, testing, and security-sensitive use cases."
+        },
+        {
+          "question": "Can I generate large quantities of months?",
+          "answer": "Yes, you can generate up to 10,000 months in a single operation. For even larger datasets, simply run the generator multiple times. The tool handles bulk generation efficiently with optimized performance."
+        },
+        {
+          "question": "What happens if I set an invalid year range?",
+          "answer": "Our intelligent validation system automatically detects invalid configurations (like end year before start year) and provides clear error messages. This prevents generation failures and ensures reliable results."
+        },
+        {
+          "question": "How can I save or share the generated months?",
+          "answer": "Use the 'Copy' button to instantly copy all months to your clipboard, or click 'Download' to save them as a text file. The generated data maintains your chosen format for easy integration into other applications."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Генератор Случайных Месяцев - Генерация Случайных Месяцев Онлайн",
+    "metaDescription": "Генерируйте случайные месяцы в заданных диапазонах лет с различными форматами вывода. Идеально для планирования, составления расписаний, тестирования и генерации данных.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Генератор Случайных Месяцев",
+        "content": "Генерируйте криптографически безопасные случайные месяцы с помощью нашего продвинутого генератора случайных месяцев. Независимо от того, нужны ли вам месяцы для планирования проектов, тестирования, составления расписаний или генерации данных, наш инструмент предоставляет надежную, беспристрастную генерацию месяцев с обширными опциями настройки."
+      },
+      "features": {
+        "title": "Расширенные Функции Генерации Месяцев",
+        "items": [
+          {
+            "title": "Множественные Форматы Вывода",
+            "description": "Выберите из Числового (01, 02, 03...), Коротких Названий (Янв, Фев, Мар...), Полных Названий (Январь, Февраль, Март...) или Год+Месяц (Январь 2024, Февраль 2024...)"
+          },
+          {
+            "title": "Гибкие Диапазоны Лет",
+            "description": "Генерируйте месяцы для любых лет между 1900 и 2100, подходящих для анализа исторических данных и будущих прогнозов"
+          },
+          {
+            "title": "Криптографическая Безопасность",
+            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая беспристрастную и непредсказуемую генерацию месяцев"
+          },
+          {
+            "title": "Массовая Генерация",
+            "description": "Генерируйте до 10 000 случайных месяцев одновременно для крупномасштабных приложений и тестирования"
+          },
+          {
+            "title": "Управление Дубликатами",
+            "description": "Выберите разрешение или предотвращение дубликатов месяцев в зависимости от ваших конкретных требований"
+          },
+          {
+            "title": "Хронологическая Сортировка",
+            "description": "Опционально сортируйте сгенерированные месяцы хронологически от самых ранних к самым поздним"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Случайных Месяцев",
+        "steps": [
+          {
+            "title": "Установите Диапазон Лет",
+            "description": "Введите желаемый начальный и конечный год (1900-2100). Конечный год должен быть больше или равен начальному году."
+          },
+          {
+            "title": "Выберите Количество",
+            "description": "Укажите, сколько случайных месяцев вы хотите сгенерировать (от 1 до 10 000). Учитывайте диапазон лет при отключении дубликатов."
+          },
+          {
+            "title": "Выберите Формат Вывода",
+            "description": "Выберите из четырех профессиональных форматов: Числовой, Короткие Названия, Полные Названия или комбинация Год+Месяц."
+          },
+          {
+            "title": "Настройте Опции",
+            "description": "Включите или отключите дубликаты месяцев и хронологическую сортировку в зависимости от ваших потребностей."
+          },
+          {
+            "title": "Генерируйте и Экспортируйте",
+            "description": "Нажмите генерировать, чтобы создать список месяцев, затем скопируйте в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации Месяцев",
+        "items": [
+          {
+            "input": "Диапазон лет: 2020-2025, Количество: 5, Формат: Полные названия",
+            "output": "Март\nИюль\nНоябрь\nАпрель\nСентябрь"
+          },
+          {
+            "input": "Диапазон лет: 2023-2024, Количество: 3, Формат: Год+Месяц, Сортировка",
+            "output": "Февраль 2023\nАвгуст 2023\nИюнь 2024"
+          },
+          {
+            "input": "Диапазон лет: 2022-2022, Количество: 4, Формат: Числовой",
+            "output": "03\n07\n12\n01"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Случаи Использования Генератора Случайных Месяцев",
+        "items": [
+          {
+            "title": "Планирование Проектов",
+            "description": "Планируйте этапы и временные рамки проектов с выбором случайных месяцев для тестирования и планирования сценариев"
+          },
+          {
+            "title": "Тестирование ПО",
+            "description": "Генерируйте тестовые данные со случайными месяцами для проверки диапазонов дат, временной логики и функций, зависящих от времени"
+          },
+          {
+            "title": "Наполнение Баз Данных",
+            "description": "Создавайте реалистичные образцы данных для баз данных со случайными значениями месяцев для среды разработки и тестирования"
+          },
+          {
+            "title": "Планирование Событий",
+            "description": "Случайно назначайте месяцы для событий, мероприятий и приложений планирования для равномерного распределения нагрузки"
+          },
+          {
+            "title": "Образовательная Деятельность",
+            "description": "Создавайте образовательные игры, викторины и учебные материалы, связанные с месяцами, сезонами и календарными концепциями"
+          },
+          {
+            "title": "Статистические Исследования",
+            "description": "Генерируйте случайные выборки месяцев для статистического анализа, исследований и приложений моделирования данных"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наш Генератор Случайных Месяцев?",
+        "items": [
+          "Криптографически безопасная случайная генерация с использованием Web Crypto API",
+          "Множественные профессиональные форматы вывода для разных случаев использования",
+          "Комплексная валидация для предотвращения некорректных конфигураций",
+          "Быстрая генерация с оптимизированными алгоритмами",
+          "Мобильно-дружественный отзывчивый дизайн",
+          "Не требует регистрации - полностью бесплатный",
+          "Статистика и аналитика в реальном времени",
+          "Профессиональный инструмент, подходящий для бизнес-использования"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты",
+        "items": [
+          {
+            "name": "Генератор Случайных Дат",
+            "href": "/ru/tools/random-date",
+            "description": "Генерируйте случайные даты с полной точностью до дня"
+          },
+          {
+            "name": "Генератор Случайных Чисел",
+            "href": "/ru/tools/random-number",
+            "description": "Генерируйте случайные числа с настраиваемыми диапазонами"
+          },
+          {
+            "name": "Генератор Случайных Букв",
+            "href": "/ru/tools/random-letter",
+            "description": "Генерируйте случайные буквы с опциями регистра"
+          },
+          {
+            "name": "Конвертер Регистра Текста",
+            "href": "/ru/tools/uppercase",
+            "description": "Конвертируйте текст между различными регистрами"
+          },
+          {
+            "name": "Конвертер CSV в JSON",
+            "href": "/ru/tools/csv-to-json",
+            "description": "Конвертируйте данные CSV в формат JSON"
+          },
+          {
+            "name": "Кодировщик/Декодировщик Base64",
+            "href": "/ru/tools/base64-encoder-decoder",
+            "description": "Кодируйте и декодируйте текст Base64"
+          },
+          {
+            "name": "Изменение Размера Изображений",
+            "href": "/ru/tools/image-resizer",
+            "description": "Измените размер изображений до настраиваемых размеров"
+          },
+          {
+            "name": "Генератор URL Слагов",
+            "href": "/ru/tools/slugify-url",
+            "description": "Создавайте SEO-дружественные URL слаги"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы вывода доступны для генерируемых месяцев?",
+          "answer": "Наш генератор предлагает четыре профессиональных формата: Числовой (01, 02, 03...), Короткие Названия (Янв, Фев, Мар...), Полные Названия (Январь, Февраль, Март...), и Год+Месяц (Январь 2024, Февраль 2024...). Выберите формат, который лучше всего подходит для вашего конкретного случая использования."
+        },
+        {
+          "question": "Могу ли я генерировать месяцы без дубликатов?",
+          "answer": "Да! Отключите 'Разрешить Повторяющиеся Месяцы', чтобы обеспечить уникальность каждого сгенерированного месяца в указанном диапазоне лет. Система автоматически проверяет, что ваше количество не превышает общее количество доступных месяцев в диапазоне."
+        },
+        {
+          "question": "Какой диапазон лет поддерживается для генерации месяцев?",
+          "answer": "Вы можете генерировать месяцы для любых лет между 1900 и 2100. Этот широкий диапазон подходит для анализа исторических данных, текущих потребностей планирования и долгосрочных прогнозов."
+        },
+        {
+          "question": "Как работает функция хронологической сортировки?",
+          "answer": "При включении хронологическая сортировка упорядочивает сгенерированные месяцы по времени от самых ранних к самым поздним. Это особенно полезно для создания временных шкал, планирования проектов и создания последовательных списков месяцев."
+        },
+        {
+          "question": "Действительно ли генерация месяцев случайна и безопасна?",
+          "answer": "Абсолютно! Мы используем криптографически безопасный генератор случайных чисел Web Crypto API, обеспечивая истинную случайность, подходящую для профессиональных приложений, тестирования и чувствительных к безопасности случаев использования."
+        },
+        {
+          "question": "Могу ли я генерировать большое количество месяцев?",
+          "answer": "Да, вы можете сгенерировать до 10 000 месяцев за одну операцию. Для еще больших наборов данных просто запустите генератор несколько раз. Инструмент эффективно обрабатывает массовую генерацию с оптимизированной производительностью."
+        },
+        {
+          "question": "Что происходит, если я установлю некорректный диапазон лет?",
+          "answer": "Наша интеллектуальная система валидации автоматически обнаруживает некорректные конфигурации (например, конечный год раньше начального года) и предоставляет четкие сообщения об ошибках. Это предотвращает сбои генерации и обеспечивает надежные результаты."
+        },
+        {
+          "question": "Как я могу сохранить или поделиться сгенерированными месяцами?",
+          "answer": "Используйте кнопку 'Копировать', чтобы мгновенно скопировать все месяцы в буфер обмена, или нажмите 'Скачать', чтобы сохранить их как текстовый файл. Сгенерированные данные сохраняют выбранный формат для легкой интеграции в другие приложения."
+        }
+      ]
+    }
+  }
+}

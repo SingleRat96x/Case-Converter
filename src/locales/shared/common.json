@@ -1,0 +1,236 @@
+{
+  "en": {
+    "header": {
+      "title": "Text Case Converter"
+    },
+    "notFound": {
+      "title": "Page not found",
+      "description": "Sorry, the page you’re looking for doesn’t exist or has been moved.",
+      "backHome": "Back to Home",
+      "viewTools": "Browse All Tools"
+    },
+    "buttons": {
+      "copy": "Copy",
+      "copied": "Copied",
+      "clear": "Clear",
+      "download": "Download",
+      "upload": "Upload File",
+      "downloadReport": "Download Report"
+    },
+    "messages": {
+      "copied": "Text copied to clipboard!",
+      "cleared": "Text cleared!",
+      "uploadSuccess": "File uploaded successfully!",
+      "uploadError": "Failed to read file",
+      "invalidFile": "Please select a valid text file"
+    },
+    "labels": {
+      "inputText": "Input Text",
+      "outputText": "Output Text",
+      "convertedImages": "Converted Images",
+      "convertedImage": "Converted Image"
+    },
+    "placeholders": {
+      "enterText": "Enter or paste your text here..."
+    },
+    "descriptions": {
+      "uploadFile": "Upload a text file to convert"
+    },
+    "analytics": {
+      "title": "Text Statistics",
+      "characters": "Characters",
+      "charactersNoSpaces": "Characters (no spaces)",
+      "words": "Words",
+      "sentences": "Sentences",
+      "lines": "Lines",
+      "paragraphs": "Paragraphs",
+      "numberStatistics": "Number Statistics",
+      "letterStatistics": "Letter Statistics",
+      "dateStatistics": "Date Statistics",
+      "monthStatistics": "Month Statistics",
+      "ipAnalysis": "IP Address Analysis",
+      "ipBreakdown": "Network address breakdown and statistics",
+      "comprehensiveIPBreakdown": "Detailed analysis of your generated IP addresses",
+      "totalIPs": "Total IP Addresses",
+      "uniqueAddresses": "unique addresses",
+      "ipVersions": "IP Versions",
+      "addressTypes": "Address Types",
+      "additionalInfo": "Additional Info",
+      "private": "Private",
+      "public": "Public",
+      "withCIDR": "With CIDR",
+      "duplicates": "Duplicates",
+      "unique": "Unique",
+      "count": "Count",
+      "minimum": "Minimum",
+      "maximum": "Maximum",
+      "range": "Range",
+      "sum": "Sum",
+      "average": "Average",
+      "totalLetters": "Total Letters",
+      "uniqueLetters": "Unique Letters",
+      "uppercase": "Uppercase",
+      "lowercase": "Lowercase",
+      "mostCommon": "Most Common",
+      "totalDates": "Total Dates",
+      "uniqueDates": "Unique Dates",
+      "earliestDate": "Earliest Date",
+      "latestDate": "Latest Date",
+      "dateRange": "Date Range",
+      "mostCommonYear": "Most Common Year",
+      "totalMonths": "Total Months",
+      "uniqueMonths": "Unique Months",
+      "earliestMonth": "Earliest Month",
+      "latestMonth": "Latest Month",
+      "monthRange": "Month Range"
+    },
+    "dialog": {
+      "clearConfirm": {
+        "title": "Clear Text",
+        "titleImages": "Clear Images",
+        "titleFiles": "Clear Files",
+        "description": "Are you sure you want to clear all text? This action cannot be undone.",
+        "descriptionImages": "Are you sure you want to clear all images? This action cannot be undone.",
+        "descriptionFiles": "Are you sure you want to clear all files? This action cannot be undone.",
+        "confirm": "Clear",
+        "cancel": "Cancel"
+      }
+    },
+    "generator": {
+      "generatorOptions": "Generator Options",
+      "configureSettings": "Configure your generation settings",
+      "generatedContent": "Your generated content",
+      "contentPlaceholder": "Generated content will appear here...",
+      "faqTitle": "Frequently Asked Questions (FAQ)"
+    },
+    "footer": {
+      "tagline": "Professional text transformation tools for developers, writers, and content creators. Transform your text with ease and precision.",
+      "availableIn": "Available in:",
+      "languages": {
+        "en": "🇺🇸 English",
+        "ru": "🇷🇺 Русский"
+      }
+    },
+    "category": {
+      "toolsAvailableBadge": "{count} Professional Tools Available",
+      "toolsListSummary": "{count} tools available • All tools are free and unlimited"
+    }
+  },
+  "ru": {
+    "header": {
+      "title": "Конвертер Регистра Текста"
+    },
+    "notFound": {
+      "title": "Страница не найдена",
+      "description": "Извините, страница не существует или была перемещена.",
+      "backHome": "На главную",
+      "viewTools": "Смотреть все инструменты"
+    },
+    "buttons": {
+      "copy": "Копировать",
+      "copied": "Скопировано",
+      "clear": "Очистить",
+      "download": "Скачать",
+      "upload": "Загрузить Файл",
+      "downloadReport": "Скачать Отчет"
+    },
+    "messages": {
+      "copied": "Текст скопирован в буфер обмена!",
+      "cleared": "Текст очищен!",
+      "uploadSuccess": "Файл успешно загружен!",
+      "uploadError": "Не удалось прочитать файл",
+      "invalidFile": "Пожалуйста, выберите действительный текстовый файл"
+    },
+    "labels": {
+      "inputText": "Входной Текст",
+      "outputText": "Выходной Текст",
+      "convertedImages": "Конвертированные Изображения",
+      "convertedImage": "Конвертированное Изображение"
+    },
+    "placeholders": {
+      "enterText": "Введите или вставьте ваш текст здесь..."
+    },
+    "descriptions": {
+      "uploadFile": "Загрузите текстовый файл для конвертации"
+    },
+    "analytics": {
+      "title": "Статистика Текста",
+      "characters": "Символы",
+      "charactersNoSpaces": "Символы (без пробелов)",
+      "words": "Слова",
+      "sentences": "Предложения",
+      "lines": "Строки",
+      "paragraphs": "Абзацы",
+      "numberStatistics": "Статистика Чисел",
+      "letterStatistics": "Статистика Букв",
+      "dateStatistics": "Статистика Дат",
+      "monthStatistics": "Статистика Месяцев",
+      "ipAnalysis": "Анализ IP Адресов",
+      "ipBreakdown": "Разбивка и статистика сетевых адресов",
+      "comprehensiveIPBreakdown": "Детальный анализ ваших сгенерированных IP адресов",
+      "totalIPs": "Всего IP Адресов",
+      "uniqueAddresses": "уникальных адресов",
+      "ipVersions": "Версии IP",
+      "addressTypes": "Типы Адресов",
+      "additionalInfo": "Дополнительная Информация",
+      "private": "Частные",
+      "public": "Публичные",
+      "withCIDR": "С CIDR",
+      "duplicates": "Дубликаты",
+      "unique": "Уникальные",
+      "count": "Количество",
+      "minimum": "Минимум",
+      "maximum": "Максимум",
+      "range": "Диапазон",
+      "sum": "Сумма",
+      "average": "Среднее",
+      "totalLetters": "Всего Букв",
+      "uniqueLetters": "Уникальных Букв",
+      "uppercase": "Заглавные",
+      "lowercase": "Строчные",
+      "mostCommon": "Наиболее Частая",
+      "totalDates": "Всего Дат",
+      "uniqueDates": "Уникальных Дат",
+      "earliestDate": "Самая Ранняя Дата",
+      "latestDate": "Самая Поздняя Дата",
+      "dateRange": "Диапазон Дат",
+      "mostCommonYear": "Наиболее Частый Год",
+      "totalMonths": "Всего Месяцев",
+      "uniqueMonths": "Уникальных Месяцев",
+      "earliestMonth": "Самый Ранний Месяц",
+      "latestMonth": "Самый Поздний Месяц",
+      "monthRange": "Диапазон Месяцев"
+    },
+    "dialog": {
+      "clearConfirm": {
+        "title": "Очистить текст",
+        "titleImages": "Очистить изображения",
+        "titleFiles": "Очистить файлы",
+        "description": "Вы уверены, что хотите очистить весь текст? Это действие нельзя отменить.",
+        "descriptionImages": "Вы уверены, что хотите очистить все изображения? Это действие нельзя отменить.",
+        "descriptionFiles": "Вы уверены, что хотите очистить все файлы? Это действие нельзя отменить.",
+        "confirm": "Очистить",
+        "cancel": "Отмена"
+      }
+    },
+    "generator": {
+      "generatorOptions": "Опции Генератора",
+      "configureSettings": "Настройте параметры генерации",
+      "generatedContent": "Ваш сгенерированный контент",
+      "contentPlaceholder": "Сгенерированный контент появится здесь...",
+      "faqTitle": "Часто Задаваемые Вопросы (FAQ)"
+    },
+    "footer": {
+      "tagline": "Профессиональные инструменты преобразования текста для разработчиков, авторов и создателей контента. Преобразуйте текст легко и точно.",
+      "availableIn": "Доступно на языках:",
+      "languages": {
+        "en": "🇺🇸 English",
+        "ru": "🇷🇺 Русский"
+      }
+    },
+    "category": {
+      "toolsAvailableBadge": "{count} профессиональных инструментов",
+      "toolsListSummary": "Доступно {count} инструментов • Все инструменты бесплатны и без ограничений"
+    }
+  }
+}

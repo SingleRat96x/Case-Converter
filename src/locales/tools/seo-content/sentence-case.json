@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Free Online Sentence Case Converter Tool - Proper Grammar Formatting",
+    "metaDescription": "Convert any text to proper sentence case instantly with our free online sentence case converter. Perfect for grammar correction, writing improvement, and professional text formatting.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Sentence Case Converter Tool - Proper Grammar Formatting",
+        "content": "Transform any text to proper sentence case formatting instantly with our powerful and free sentence case converter tool. Perfect for correcting grammar, improving writing quality, or ensuring proper sentence structure with correct capitalization."
+      },
+      "features": {
+        "title": "Powerful Sentence Case Conversion Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time sentence case conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to sentence case" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Sentence Case Conversion",
+        "description": "Sentence case formatting is essential for proper grammar and professional writing across various contexts.",
+        "items": [
+          { "title": "Grammar Correction", "description": "Fix capitalization errors and improve text readability" },
+          { "title": "Academic Writing", "description": "Format essays, research papers, and academic content properly" },
+          { "title": "Professional Documents", "description": "Ensure proper formatting in business reports and communications" },
+          { "title": "Content Writing", "description": "Improve blog posts, articles, and web content readability" },
+          { "title": "Email Formatting", "description": "Make email content more professional and easier to read" },
+          { "title": "Data Cleaning", "description": "Standardize text data for analysis and processing" },
+          { "title": "Translation Work", "description": "Format translated content with proper sentence structure" },
+          { "title": "Social Media Content", "description": "Create readable posts with proper grammar for better engagement" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Text to Sentence Case",
+        "description": "Follow these simple steps to convert your text to proper sentence case format.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Automatic Conversion",
+            "description": "Watch as your text is instantly converted to proper sentence case formatting in real-time."
+          },
+          {
+            "step": 3,
+            "title": "Review Analytics",
+            "description": "Check the text statistics including character count, word count, and more."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the sentence case text to your clipboard or download it as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Sentence Case Conversion Examples",
+        "description": "See how different types of text are converted to proper sentence case format.",
+        "items": [
+          { "title": "Simple Text", "input": "HELLO WORLD. HOW ARE YOU?", "output": "Hello world. How are you?" },
+          { "title": "Mixed Case", "input": "tHiS iS mIxEd CaSe. nEeDs FiXiNg.", "output": "This is mixed case. Needs fixing." },
+          { "title": "All Lowercase", "input": "this needs proper capitalization. fix this sentence.", "output": "This needs proper capitalization. Fix this sentence." },
+          { "title": "Multiple Sentences", "input": "first sentence. second sentence! third sentence?", "output": "First sentence. Second sentence! Third sentence?" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Sentence Case Converter",
+        "content": "Professional sentence case conversion with comprehensive features and analytics.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and characters"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is sentence case formatting?",
+          "answer": "Sentence case is a capitalization style where only the first letter of each sentence is capitalized, while the rest of the text remains in lowercase. This is the standard format for most written content and follows proper grammar rules."
+        },
+        {
+          "question": "Does the tool work with non-English text?",
+          "answer": "Yes, our sentence case converter works with all languages and character sets, including accented characters, special symbols, and Unicode text from any language."
+        },
+        {
+          "question": "Can I convert entire files to sentence case?",
+          "answer": "Absolutely! You can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and convert their entire content to sentence case format."
+        },
+        {
+          "question": "Is my text data safe and private?",
+          "answer": "Yes, all text conversion happens locally in your browser. Your text is never uploaded to our servers or shared with anyone. Complete privacy guaranteed."
+        },
+        {
+          "question": "What file formats can I upload?",
+          "answer": "You can upload various text-based file formats including .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html and other plain text files."
+        },
+        {
+          "question": "How does the tool handle punctuation?",
+          "answer": "Our sentence case converter recognizes common sentence endings (periods, exclamation marks, question marks) and properly capitalizes the first letter of the next sentence while maintaining proper punctuation."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Case Conversion Tools",
+        "items": [
+          {
+            "name": "Uppercase Converter",
+            "description": "Convert text to uppercase letters for headings and emphasis",
+            "href": "/tools/uppercase"
+          },
+          {
+            "name": "Lowercase Converter",
+            "description": "Convert text to lowercase letters for consistency and URLs",
+            "href": "/tools/lowercase"
+          },
+          {
+            "name": "Title Case Converter",
+            "description": "Convert text to proper title case for headings and headlines",
+            "href": "/tools/title-case"
+          },
+          {
+            "name": "Alternating Case Converter",
+            "description": "Create alternating case text for creative and stylistic purposes",
+            "href": "/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Конвертер в Регистр Предложения - Правильное Грамматическое Форматирование",
+    "metaDescription": "Мгновенно конвертируйте любой текст в правильный регистр предложения с помощью нашего бесплатного онлайн конвертера. Идеально для коррекции грамматики, улучшения письма и профессионального форматирования текста.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Конвертер в Регистр Предложения - Правильное Грамматическое Форматирование",
+        "content": "Мгновенно преобразуйте любой текст в правильный формат регистра предложения с помощью нашего мощного и бесплатного инструмента конвертации регистра предложения. Идеально для исправления грамматики, улучшения качества письма или обеспечения правильной структуры предложений с корректной капитализацией."
+      },
+      "features": {
+        "title": "Мощные Функции Конвертации в Регистр Предложения",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в регистр предложения в реальном времени при вводе или вставке текста" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в регистр предложения" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем конвертированном тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и специальными символами" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся конвертация происходит локально—данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Конвертацию в Регистр Предложения",
+        "description": "Форматирование регистра предложения необходимо для правильной грамматики и профессионального письма в различных контекстах.",
+        "items": [
+          { "title": "Коррекция Грамматики", "description": "Исправляйте ошибки капитализации и улучшайте читаемость текста" },
+          { "title": "Академическое Письмо", "description": "Форматируйте эссе, исследовательские работы и академический контент правильно" },
+          { "title": "Профессиональные Документы", "description": "Обеспечьте правильное форматирование в деловых отчетах и коммуникациях" },
+          { "title": "Создание Контента", "description": "Улучшайте читаемость блог-постов, статей и веб-контента" },
+          { "title": "Форматирование Email", "description": "Делайте содержимое электронной почты более профессиональным и легким для чтения" },
+          { "title": "Очистка Данных", "description": "Стандартизируйте текстовые данные для анализа и обработки" },
+          { "title": "Переводческая Работа", "description": "Форматируйте переведенный контент с правильной структурой предложений" },
+          { "title": "Контент Социальных Сетей", "description": "Создавайте читаемые посты с правильной грамматикой для лучшего вовлечения" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Текст в Регистр Предложения",
+        "description": "Следуйте этим простым шагам, чтобы конвертировать ваш текст в правильный формат регистра предложения.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Автоматическая Конвертация",
+            "description": "Наблюдайте, как ваш текст мгновенно конвертируется в правильное форматирование регистра предложения в реальном времени."
+          },
+          {
+            "step": 3,
+            "title": "Просмотр Аналитики",
+            "description": "Проверьте статистику текста, включая количество символов, слов и многое другое."
+          },
+          {
+            "step": 4,
+            "title": "Копирование или Скачивание",
+            "description": "Скопируйте текст в регистре предложения в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации в Регистр Предложения",
+        "description": "Посмотрите, как различные типы текста конвертируются в правильный формат регистра предложения.",
+        "items": [
+          { "title": "Простой Текст", "input": "ПРИВЕТ МИР. КАК ДЕЛА?", "output": "Привет мир. Как дела?" },
+          { "title": "Смешанный Регистр", "input": "эТо СмЕшАнНыЙ рЕгИсТр. нУжНо ИсПрАвИтЬ.", "output": "Это смешанный регистр. Нужно исправить." },
+          { "title": "Все Строчные", "input": "это нуждается в правильной капитализации. исправьте это предложение.", "output": "Это нуждается в правильной капитализации. Исправьте это предложение." },
+          { "title": "Несколько Предложений", "input": "первое предложение. второе предложение! третье предложение?", "output": "Первое предложение. Второе предложение! Третье предложение?" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конвертер в Регистр Предложения",
+        "content": "Профессиональная конвертация в регистр предложения с комплексными функциями и аналитикой.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени при вводе",
+          "Включена подробная аналитика текста",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Работает со всеми языками и символами"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое форматирование регистра предложения?",
+          "answer": "Регистр предложения - это стиль капитализации, где только первая буква каждого предложения пишется с заглавной буквы, в то время как остальной текст остается строчным. Это стандартный формат для большинства письменного контента и следует правильным грамматическим правилам."
+        },
+        {
+          "question": "Работает ли инструмент с не-русским текстом?",
+          "answer": "Да, наш конвертер в регистр предложения работает со всеми языками и наборами символов, включая буквы с диакритическими знаками, специальные символы и Unicode текст любого языка."
+        },
+        {
+          "question": "Могу ли я конвертировать целые файлы в регистр предложения?",
+          "answer": "Абсолютно! Вы можете загружать текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и конвертировать их полное содержимое в формат регистра предложения."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные и конфиденциальны?",
+          "answer": "Да, вся конвертация текста происходит локально в вашем браузере. Ваш текст никогда не загружается на наши серверы и не передается кому-либо. Полная конфиденциальность гарантирована."
+        },
+        {
+          "question": "Какие форматы файлов я могу загружать?",
+          "answer": "Вы можете загружать различные текстовые форматы файлов, включая .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие файлы с обычным текстом."
+        },
+        {
+          "question": "Как инструмент обрабатывает пунктуацию?",
+          "answer": "Наш конвертер регистра предложения распознает общие окончания предложений (точки, восклицательные знаки, вопросительные знаки) и правильно капитализирует первую букву следующего предложения, сохраняя правильную пунктуацию."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Конвертации Регистра Текста",
+        "items": [
+          {
+            "name": "Конвертер в Верхний Регистр",
+            "description": "Конвертируйте текст в верхний регистр для заголовков и выделения",
+            "href": "/ru/tools/uppercase"
+          },
+          {
+            "name": "Конвертер в Нижний Регистр",
+            "description": "Конвертируйте текст в нижний регистр для последовательности и URL",
+            "href": "/ru/tools/lowercase"
+          },
+          {
+            "name": "Конвертер в Заглавный Регистр",
+            "description": "Конвертируйте текст в правильный заглавный регистр для заголовков и headlines",
+            "href": "/ru/tools/title-case"
+          },
+          {
+            "name": "Конвертер в Чередующийся Регистр",
+            "description": "Создавайте текст в чередующемся регистре для творческих и стилистических целей",
+            "href": "/ru/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  }
+}

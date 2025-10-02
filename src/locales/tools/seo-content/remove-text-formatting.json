@@ -1,0 +1,280 @@
+{
+  "en": {
+    "title": "Remove Text Formatting Tool - Clean & Strip HTML, Markdown, URLs",
+    "metaDescription": "Remove HTML tags, Markdown formatting, URLs, emails, and special characters from text. Clean and strip formatting from copied content with our advanced text cleaning tool.",
+    "sections": {
+      "intro": {
+        "title": "Professional Text Formatting Remover",
+        "content": "Strip unwanted formatting from your text with precision control. Remove HTML tags, Markdown syntax, URLs, email addresses, and special characters to get clean, plain text. Perfect for content migration, data cleaning, and preparing text for various platforms."
+      },
+      "features": {
+        "title": "Advanced Text Cleaning Features",
+        "items": [
+          { "title": "HTML Tag Removal", "description": "Strip all HTML tags and decode HTML entities for clean text output" },
+          { "title": "Markdown Formatting", "description": "Remove Markdown syntax including headers, bold, italic, links, and code blocks" },
+          { "title": "URL & Email Cleaning", "description": "Automatically detect and remove URLs and email addresses from text" },
+          { "title": "Special Character Control", "description": "Option to remove special characters while preserving essential punctuation" },
+          { "title": "Smart Space Management", "description": "Clean up extra spaces and normalize whitespace for better readability" },
+          { "title": "Flexible Options", "description": "Choose which formatting elements to remove with granular control options" },
+          { "title": "Real-time Processing", "description": "See results instantly as you adjust settings with live preview" },
+          { "title": "Batch Processing", "description": "Handle large amounts of text efficiently with file upload support" }
+        ]
+      },
+      "useCases": {
+        "title": "Practical Applications for Text Cleaning",
+        "description": "Text formatting removal has numerous applications across content management, data processing, and document preparation.",
+        "items": [
+          { "title": "Content Migration", "description": "Clean text when migrating content between different platforms or systems" },
+          { "title": "Data Cleaning", "description": "Prepare text data for analysis by removing formatting and special characters" },
+          { "title": "Copy-Paste Cleanup", "description": "Clean text copied from websites, documents, or emails with unwanted formatting" },
+          { "title": "Plain Text Conversion", "description": "Convert formatted documents to plain text for simple text editors" },
+          { "title": "Database Import", "description": "Prepare text for database import by removing problematic formatting" },
+          { "title": "Email Templates", "description": "Clean text for email templates that require plain text formatting" },
+          { "title": "Social Media Posts", "description": "Prepare content for platforms that don't support rich formatting" },
+          { "title": "Translation Preparation", "description": "Clean text before sending to translation services for better accuracy" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Text Formatting Remover",
+        "description": "Follow these steps to clean and strip formatting from your text.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Paste or type the formatted text you want to clean, or upload a text file with formatting."
+          },
+          {
+            "step": 2,
+            "title": "Select Cleaning Options",
+            "description": "Choose which formatting elements to remove: HTML, Markdown, URLs, emails, special characters, or numbers."
+          },
+          {
+            "step": 3,
+            "title": "Review Results",
+            "description": "See the cleaned text instantly with real-time processing and preview of changes."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the clean text to your clipboard or download it as a text file for use elsewhere."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Text Cleaning Examples",
+        "items": [
+          {
+            "title": "HTML Tag Removal",
+            "input": "<p>This is <strong>bold</strong> and <em>italic</em> text.</p>",
+            "output": "This is bold and italic text."
+          },
+          {
+            "title": "Markdown Cleanup",
+            "input": "# Header\\n**Bold text** and [link](http://example.com)",
+            "output": "Header\\nBold text and link"
+          },
+          {
+            "title": "URL and Email Removal",
+            "input": "Contact us at support@example.com or visit https://example.com",
+            "output": "Contact us at or visit"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Text Formatting Remover?",
+        "content": "Professional text cleaning with advanced options and intelligent processing.",
+        "items": [
+          "Remove HTML tags and decode entities automatically",
+          "Strip Markdown formatting while preserving content",
+          "Clean URLs and email addresses from text",
+          "Flexible options for different cleaning needs",
+          "Smart whitespace management and normalization",
+          "Real-time preview of cleaning results",
+          "Handle large documents with batch processing",
+          "Mobile-optimized interface with responsive design"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What types of formatting can this tool remove?",
+          "answer": "The tool can remove HTML tags, Markdown syntax, URLs, email addresses, special characters, numbers, and extra whitespace. You can choose which elements to remove using the toggle options."
+        },
+        {
+          "question": "Will removing special characters affect punctuation?",
+          "answer": "The special character removal option preserves basic punctuation like periods, commas, question marks, and exclamation points while removing other special symbols."
+        },
+        {
+          "question": "Can I clean text from multiple sources at once?",
+          "answer": "Yes, you can paste text from different sources into the input area, or upload a file containing formatted text for batch processing."
+        },
+        {
+          "question": "Is the original text modified permanently?",
+          "answer": "No, the tool creates a cleaned copy of your text. Your original text remains unchanged, and you can adjust settings to try different cleaning options."
+        },
+        {
+          "question": "How does HTML entity decoding work?",
+          "answer": "The tool automatically converts HTML entities like &amp;, &lt;, &gt;, and &nbsp; back to their original characters (& < > and space) for readable text."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          {
+            "name": "Remove Line Breaks",
+            "description": "Clean unwanted line breaks from text while preserving paragraphs",
+            "href": "/tools/remove-line-breaks"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text statistics",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Find and Replace",
+            "description": "Find and replace specific text patterns with advanced options",
+            "href": "/tools/text-replace"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструмент Удаления Форматирования Текста - Очистка HTML, Markdown, URL",
+    "metaDescription": "Удаляйте HTML теги, Markdown форматирование, URL, электронную почту и специальные символы из текста. Очищайте форматирование с помощью нашего продвинутого инструмента.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Удаления Форматирования Текста",
+        "content": "Удаляйте нежелательное форматирование из вашего текста с точным контролем. Убирайте HTML теги, Markdown синтаксис, URL, адреса электронной почты и специальные символы для получения чистого, простого текста. Идеально для миграции контента, очистки данных и подготовки текста для различных платформ."
+      },
+      "features": {
+        "title": "Продвинутые Возможности Очистки Текста",
+        "items": [
+          { "title": "Удаление HTML Тегов", "description": "Удаление всех HTML тегов и декодирование HTML сущностей для чистого текстового вывода" },
+          { "title": "Форматирование Markdown", "description": "Удаление Markdown синтаксиса включая заголовки, жирный, курсивный текст, ссылки и блоки кода" },
+          { "title": "Очистка URL и Email", "description": "Автоматическое обнаружение и удаление URL и адресов электронной почты из текста" },
+          { "title": "Контроль Специальных Символов", "description": "Опция удаления специальных символов с сохранением основной пунктуации" },
+          { "title": "Умное Управление Пробелами", "description": "Очистка лишних пробелов и нормализация отступов для лучшей читаемости" },
+          { "title": "Гибкие Опции", "description": "Выбирайте какие элементы форматирования удалять с детальным контролем опций" },
+          { "title": "Обработка в Реальном Времени", "description": "Видите результаты мгновенно при настройке параметров с живым предпросмотром" },
+          { "title": "Пакетная Обработка", "description": "Эффективно обрабатывайте большие объемы текста с поддержкой загрузки файлов" }
+        ]
+      },
+      "useCases": {
+        "title": "Практические Применения для Очистки Текста",
+        "description": "Удаление форматирования текста имеет множество применений в управлении контентом, обработке данных и подготовке документов.",
+        "items": [
+          { "title": "Миграция Контента", "description": "Очистка текста при миграции контента между различными платформами или системами" },
+          { "title": "Очистка Данных", "description": "Подготовка текстовых данных для анализа путем удаления форматирования и специальных символов" },
+          { "title": "Очистка Копирования-Вставки", "description": "Очистка текста, скопированного с веб-сайтов, документов или электронной почты с нежелательным форматированием" },
+          { "title": "Преобразование в Простой Текст", "description": "Преобразование отформатированных документов в простой текст для простых текстовых редакторов" },
+          { "title": "Импорт в Базу Данных", "description": "Подготовка текста для импорта в базу данных путем удаления проблематичного форматирования" },
+          { "title": "Шаблоны Email", "description": "Очистка текста для email шаблонов, которые требуют простого текстового форматирования" },
+          { "title": "Посты в Социальных Сетях", "description": "Подготовка контента для платформ, которые не поддерживают расширенное форматирование" },
+          { "title": "Подготовка к Переводу", "description": "Очистка текста перед отправкой в службы перевода для лучшей точности" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Инструмент Удаления Форматирования Текста",
+        "description": "Следуйте этим шагам для очистки и удаления форматирования из вашего текста.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Вставьте или введите отформатированный текст, который хотите очистить, или загрузите текстовый файл с форматированием."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Опции Очистки",
+            "description": "Выберите какие элементы форматирования удалить: HTML, Markdown, URL, электронную почту, специальные символы или числа."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Результаты",
+            "description": "Видите очищенный текст мгновенно с обработкой в реальном времени и предпросмотром изменений."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте чистый текст в буфер обмена или скачайте его как текстовый файл для использования в другом месте."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Очистки Текста",
+        "items": [
+          {
+            "title": "Удаление HTML Тегов",
+            "input": "<p>Это <strong>жирный</strong> и <em>курсивный</em> текст.</p>",
+            "output": "Это жирный и курсивный текст."
+          },
+          {
+            "title": "Очистка Markdown",
+            "input": "# Заголовок\\n**Жирный текст** и [ссылка](http://example.com)",
+            "output": "Заголовок\\nЖирный текст и ссылка"
+          },
+          {
+            "title": "Удаление URL и Email",
+            "input": "Свяжитесь с нами по support@example.com или посетите https://example.com",
+            "output": "Свяжитесь с нами по или посетите"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент Удаления Форматирования Текста?",
+        "content": "Профессиональная очистка текста с продвинутыми опциями и интеллектуальной обработкой.",
+        "items": [
+          "Удаление HTML тегов и автоматическое декодирование сущностей",
+          "Удаление Markdown форматирования с сохранением контента",
+          "Очистка URL и адресов электронной почты из текста",
+          "Гибкие опции для различных потребностей очистки",
+          "Умное управление отступами и нормализация",
+          "Предпросмотр результатов очистки в реальном времени",
+          "Обработка больших документов с пакетной обработкой",
+          "Мобильно-оптимизированный интерфейс с адаптивным дизайном"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие типы форматирования может удалить этот инструмент?",
+          "answer": "Инструмент может удалять HTML теги, Markdown синтаксис, URL, адреса электронной почты, специальные символы, числа и лишние пробелы. Вы можете выбрать какие элементы удалить, используя переключатели опций."
+        },
+        {
+          "question": "Повлияет ли удаление специальных символов на пунктуацию?",
+          "answer": "Опция удаления специальных символов сохраняет основную пунктуацию как точки, запятые, вопросительные и восклицательные знаки, удаляя другие специальные символы."
+        },
+        {
+          "question": "Могу ли я очистить текст из нескольких источников одновременно?",
+          "answer": "Да, вы можете вставить текст из разных источников в область ввода или загрузить файл, содержащий отформатированный текст для пакетной обработки."
+        },
+        {
+          "question": "Изменяется ли исходный текст навсегда?",
+          "answer": "Нет, инструмент создает очищенную копию вашего текста. Ваш исходный текст остается неизменным, и вы можете настроить параметры для попытки различных опций очистки."
+        },
+        {
+          "question": "Как работает декодирование HTML сущностей?",
+          "answer": "Инструмент автоматически преобразует HTML сущности как &amp;, &lt;, &gt; и &nbsp; обратно в их исходные символы (& < > и пробел) для читаемого текста."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          {
+            "name": "Удаление Переносов Строк",
+            "description": "Очистка нежелательных переносов строк из текста с сохранением абзацев",
+            "href": "/tools/remove-line-breaks"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчет символов, слов и анализ статистики текста",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Найти и Заменить",
+            "description": "Найти и заменить определенные текстовые шаблоны с продвинутыми опциями",
+            "href": "/tools/text-replace"
+          }
+        ]
+      }
+    }
+  }
+}

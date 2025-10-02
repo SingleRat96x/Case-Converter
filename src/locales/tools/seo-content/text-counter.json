@@ -1,0 +1,268 @@
+{
+  "en": {
+    "title": "Professional Text Counter & Analytics Tool",
+    "metaDescription": "Count characters, words, lines, sentences, and paragraphs in your text instantly. Professional text analysis tool with reading time estimates for writers and content creators.",
+    "sections": {
+      "intro": {
+        "title": "Professional Text Counter & Analytics Tool",
+        "content": "Get instant, accurate text analysis with our professional text counter tool. Count characters, words, lines, sentences, and paragraphs while getting reading time estimates. Perfect for writers, students, and content creators who need precise text analytics."
+      },
+      "features": {
+        "title": "Comprehensive Text Analysis Features",
+        "items": [
+          { "title": "Character Counts", "description": "Real-time character counting, with and without spaces, for accurate limits" },
+          { "title": "Word & Sentence Detection", "description": "Accurately counts words and sentences with robust text parsing" },
+          { "title": "Paragraph & Line Counts", "description": "Measure structure with paragraph and line counting" },
+          { "title": "Reading Time", "description": "Estimate reading time using an average of 200 WPM" },
+          { "title": "Speaking Time", "description": "Estimate speaking time using an average of 130 WPM" },
+          { "title": "File Upload", "description": "Analyze text files across common formats right in your browser" },
+          { "title": "Export Reports", "description": "Download professional analysis reports for documentation" },
+          { "title": "Multilingual", "description": "Works with any language and Unicode characters" },
+          { "title": "Privacy-First", "description": "All analysis runs locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Content Creators & Writers",
+        "description": "Our text counter tool is essential for various writing and content creation tasks.",
+        "items": [
+          { "title": "Articles & Blogs", "description": "Write with precision under strict character limits" },
+          { "title": "Social Media", "description": "Optimize copy for Twitter, LinkedIn, and more" },
+          { "title": "Academic Writing", "description": "Meet essay length requirements with confidence" },
+          { "title": "SEO Content", "description": "Fine-tune meta descriptions and titles for search" },
+          { "title": "Email Marketing", "description": "Balance subject length for engagement" },
+          { "title": "Books & Manuscripts", "description": "Track word counts across drafts and chapters" },
+          { "title": "Code Docs", "description": "Audit comments and documentation length" },
+          { "title": "Localization", "description": "Compare text lengths across languages" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Text Counter",
+        "description": "Follow these simple steps to analyze your text and export results.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for analysis."
+          },
+          {
+            "step": 2,
+            "title": "View Real-time Analysis", 
+            "description": "Watch as the tool automatically counts characters, words, lines, and more as you type."
+          },
+          {
+            "step": 3,
+            "title": "Get Reading Estimates",
+            "description": "See estimated reading and speaking times based on your text length."
+          },
+          {
+            "step": 4,
+            "title": "Export Results",
+            "description": "Download a detailed analysis report or copy the results to your clipboard."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Text Analysis Examples",
+        "description": "See how our text counter analyzes different content types.",
+        "items": [
+          { "title": "Blog Post", "input": "500 words", "output": "~2 minute read" },
+          { "title": "Tweet", "input": "Max 280 characters", "output": "Fits social media limits" },
+          { "title": "Email Subject", "input": "50 characters", "output": "Recommended for higher open rates" },
+          { "title": "Meta Description", "input": "150–160 characters", "output": "Optimal for search snippets" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Text Counter",
+        "content": "Professional text analysis with accurate results and comprehensive statistics.",
+        "items": [
+          "Completely free and unlimited use",
+          "No registration or sign-up required",
+          "Privacy-first - all analysis done locally",
+          "Supports multiple file formats",
+          "Real-time analysis as you type",
+          "Export results for documentation"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "How accurate is the word counting?",
+          "answer": "Our word counting algorithm is highly accurate, using advanced text parsing to properly identify words, handle punctuation, and account for different languages and writing styles."
+        },
+        {
+          "question": "What file formats are supported?",
+          "answer": "You can upload .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html files and other text-based formats for analysis."
+        },
+        {
+          "question": "How is reading time calculated?",
+          "answer": "Reading time is calculated based on an average reading speed of 200-250 words per minute. Speaking time uses an average of 130-150 words per minute."
+        },
+        {
+          "question": "Is my text data stored or shared?",
+          "answer": "No, all text analysis happens locally in your browser. Your text is never stored on our servers or shared with third parties."
+        },
+        {
+          "question": "Can I use this for non-English text?",
+          "answer": "Yes, our text counter works with any language and character set, including special characters, emojis, and Unicode text."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Analysis Tools",
+        "items": [
+          {
+            "name": "Word Frequency Analyzer",
+            "description": "Analyze word frequency and find the most common words in your text",
+            "href": "/tools/word-frequency"
+          },
+          {
+            "name": "Sentence Counter", 
+            "description": "Count sentences and analyze sentence structure in your text",
+            "href": "/tools/sentence-counter"
+          },
+          {
+            "name": "Text Replace Tool",
+            "description": "Find and replace text with advanced pattern matching",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Duplicate Line Remover",
+            "description": "Remove duplicate lines from your text efficiently",
+            "href": "/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Профессиональный Счетчик Текста и Инструмент Аналитики",
+    "metaDescription": "Мгновенно подсчитывайте символы, слова, строки, предложения и абзацы в вашем тексте. Профессиональный инструмент анализа текста с оценками времени чтения для писателей и создателей контента.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Счетчик Текста и Инструмент Аналитики",
+        "content": "Получите мгновенный, точный анализ текста с нашим профессиональным инструментом подсчета текста. Считайте символы, слова, строки, предложения и абзацы, получая оценки времени чтения. Идеально для писателей, студентов и создателей контента, которым нужна точная аналитика текста."
+      },
+      "features": {
+        "title": "Комплексные Функции Анализа Текста",
+        "items": [
+          { "title": "Подсчет символов", "description": "Подсчет символов в реальном времени, с пробелами и без" },
+          { "title": "Слова и Предложения", "description": "Точное определение слов и предложений с устойчивым парсингом" },
+          { "title": "Абзацы и Строки", "description": "Оценка структуры с подсчетом абзацев и строк" },
+          { "title": "Время Чтения", "description": "Оценка времени чтения на основе среднего 200 слов/мин" },
+          { "title": "Время Речи", "description": "Оценка времени произношения на основе среднего 130 слов/мин" },
+          { "title": "Загрузка Файлов", "description": "Анализируйте текстовые файлы популярных форматов прямо в браузере" },
+          { "title": "Экспорт Отчетов", "description": "Скачивайте профессиональные отчеты анализа для документации" },
+          { "title": "Многоязычность", "description": "Работает с любым языком и символами Unicode" },
+          { "title": "Конфиденциальность", "description": "Весь анализ выполняется локально — данные не отправляются" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Создателей Контента и Писателей",
+        "description": "Наш инструмент подсчета текста необходим для различных задач написания и создания контента.",
+        "items": [
+          { "title": "Статьи и Блоги", "description": "Пишите точно, соблюдая строгие лимиты символов" },
+          { "title": "Социальные Сети", "description": "Оптимизируйте тексты для Twitter, LinkedIn и др." },
+          { "title": "Академическое Письмо", "description": "Соответствуйте требованиям по длине эссе" },
+          { "title": "SEO-Контент", "description": "Точите мета-описания и заголовки для поиска" },
+          { "title": "Email-Маркетинг", "description": "Балансируйте длину тем для вовлечения" },
+          { "title": "Книги и Рукописи", "description": "Отслеживайте количество слов по черновикам и главам" },
+          { "title": "Документация Кода", "description": "Анализируйте длину комментариев и документации" },
+          { "title": "Локализация", "description": "Сравнивайте длину текста на разных языках" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Счетчик Текста",
+        "description": "Следуйте простым шагам, чтобы проанализировать текст и экспортировать результаты.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для анализа."
+          },
+          {
+            "step": 2,
+            "title": "Просматривайте Анализ в Реальном Времени",
+            "description": "Наблюдайте, как инструмент автоматически считает символы, слова, строки и многое другое при вводе."
+          },
+          {
+            "step": 3,
+            "title": "Получайте Оценки Чтения",
+            "description": "Смотрите приблизительное время чтения и произношения на основе длины вашего текста."
+          },
+          {
+            "step": 4,
+            "title": "Экспортируйте Результаты",
+            "description": "Скачайте подробный отчет анализа или скопируйте результаты в буфер обмена."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Анализа Текста",
+        "description": "Посмотрите, как наш счетчик анализирует разные типы контента.",
+        "items": [
+          { "title": "Блог-пост", "input": "500 слов", "output": "~2 минуты чтения" },
+          { "title": "Твит", "input": "Макс. 280 символов", "output": "Соответствует лимитам соцсетей" },
+          { "title": "Тема Письма", "input": "50 символов", "output": "Рекомендуется для высокой открываемости" },
+          { "title": "Мета-Описание", "input": "150–160 символов", "output": "Оптимально для сниппетов поиска" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Счетчик Текста",
+        "content": "Профессиональный анализ текста с точными результатами и комплексной статистикой.",
+        "items": [
+          "Полностью бесплатное и неограниченное использование",
+          "Не требует регистрации или регистрации",
+          "Приоритет конфиденциальности - весь анализ происходит локально",
+          "Поддержка множества форматов файлов",
+          "Анализ в реальном времени при вводе",
+          "Экспорт результатов для документации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Насколько точен подсчет слов?",
+          "answer": "Наш алгоритм подсчета слов очень точен, используя продвинутый анализ текста для правильного определения слов, обработки пунктуации и учета различных языков и стилей письма."
+        },
+        {
+          "question": "Какие форматы файлов поддерживаются?",
+          "answer": "Вы можете загружать файлы .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие текстовые форматы для анализа."
+        },
+        {
+          "question": "Как рассчитывается время чтения?",
+          "answer": "Время чтения рассчитывается на основе средней скорости чтения 200-250 слов в минуту. Время произношения использует среднюю скорость 130-150 слов в минуту."
+        },
+        {
+          "question": "Сохраняются ли мои текстовые данные?",
+          "answer": "Нет, весь анализ текста происходит локально в вашем браузере. Ваш текст никогда не сохраняется на наших серверах и не передается третьим лицам."
+        },
+        {
+          "question": "Можно ли использовать это для неанглийского текста?",
+          "answer": "Да, наш счетчик текста работает с любым языком и набором символов, включая специальные символы, эмодзи и Unicode текст."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Анализа Текста",
+        "items": [
+          {
+            "name": "Анализатор Частоты Слов",
+            "description": "Анализируйте частоту слов и находите самые распространенные слова в вашем тексте",
+            "href": "/tools/word-frequency"
+          },
+          {
+            "name": "Счетчик Предложений",
+            "description": "Считайте предложения и анализируйте структуру предложений в вашем тексте",
+            "href": "/tools/sentence-counter"
+          },
+          {
+            "name": "Инструмент Замены Текста",
+            "description": "Находите и заменяйте текст с продвинутым сопоставлением шаблонов",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Удалитель Дубликатов Строк",
+            "description": "Эффективно удаляйте дублирующиеся строки из вашего текста",
+            "href": "/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
+  }
+}

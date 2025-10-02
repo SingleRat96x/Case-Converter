@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Find and Replace Text Tool - Advanced Text Search & Replace",
+    "metaDescription": "Find and replace text with powerful options including case sensitivity, whole word matching, and regular expressions. Perfect for bulk text editing, code corrections, and content management.",
+    "sections": {
+      "intro": {
+        "title": "Advanced Find and Replace Text Tool",
+        "content": "Perform sophisticated text search and replace operations with our advanced tool. Features include case-sensitive matching, whole word searching, regular expression support, and real-time preview. Perfect for content editing, code refactoring, data cleaning, and bulk text modifications."
+      },
+      "features": {
+        "title": "Find and Replace Features",
+        "items": [
+          { "title": "Case-Sensitive Search", "description": "Toggle case sensitivity for precise or flexible text matching" },
+          { "title": "Whole Word Matching", "description": "Match complete words only to avoid partial replacements" },
+          { "title": "Regular Expression Support", "description": "Use regex patterns for complex search and replace operations" },
+          { "title": "Real-time Match Count", "description": "See how many matches found instantly as you type" },
+          { "title": "Search Pattern Highlighting", "description": "Visual preview with highlighted matches in the original text" },
+          { "title": "Quick Swap Function", "description": "Instantly swap find and replace terms with one click" },
+          { "title": "File Upload Support", "description": "Upload text files and perform bulk find and replace operations" },
+          { "title": "Instant Download", "description": "Save modified text as files for use in other applications" },
+          { "title": "Mobile Optimized", "description": "Responsive design with optimized mobile button layout" }
+        ]
+      },
+      "useCases": {
+        "title": "Practical Applications for Find and Replace",
+        "description": "Text replacement has numerous practical applications across different fields and industries.",
+        "items": [
+          { "title": "Content Editing", "description": "Update terminology, fix typos, or standardize formatting across documents" },
+          { "title": "Code Refactoring", "description": "Rename variables, update function names, or modify code patterns" },
+          { "title": "Data Cleaning", "description": "Clean and standardize data by replacing inconsistent formats" },
+          { "title": "URL Updates", "description": "Bulk update URLs, links, or references in documentation" },
+          { "title": "Translation Preparation", "description": "Replace placeholders or standardize text for translation" },
+          { "title": "Format Conversion", "description": "Convert between different text formats or markup languages" },
+          { "title": "Configuration Updates", "description": "Update configuration files, settings, or environment variables" },
+          { "title": "Content Standardization", "description": "Ensure consistent terminology and formatting across multiple documents" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use Find and Replace",
+        "description": "Follow these steps to perform text search and replace operations.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste the text you want to modify, or upload a text file for bulk operations."
+          },
+          {
+            "step": 2,
+            "title": "Set Search Parameters",
+            "description": "Enter the text to find and the replacement text. Configure options like case sensitivity, whole word matching, or regex."
+          },
+          {
+            "step": 3,
+            "title": "Review Matches",
+            "description": "See the match count and preview highlighted matches to verify your search pattern."
+          },
+          {
+            "step": 4,
+            "title": "Apply and Download",
+            "description": "Review the replaced text and copy or download the results for use in your projects."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Find and Replace Examples",
+        "description": "See how different options affect search and replace operations.",
+        "items": [
+          { "title": "Simple Replacement", "input": "Find: 'cat' → Replace: 'dog'", "output": "Changes all instances of 'cat' to 'dog'" },
+          { "title": "Case Sensitive", "input": "Find: 'API' (case sensitive)", "output": "Matches only 'API', not 'api' or 'Api'" },
+          { "title": "Whole Word", "input": "Find: 'car' (whole word)", "output": "Matches 'car' but not 'card' or 'scared'" },
+          { "title": "Regex Pattern", "input": "Find: '\\d{3}-\\d{3}-\\d{4}' → Replace: '[PHONE]'", "output": "Replaces phone numbers with placeholder" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Find and Replace Tool",
+        "content": "Professional text replacement with advanced features and real-time feedback.",
+        "items": [
+          "Case-sensitive and case-insensitive matching",
+          "Whole word matching to prevent partial replacements",
+          "Regular expression support for complex patterns",
+          "Real-time match count and highlighting",
+          "Quick swap function for find/replace terms",
+          "File upload and download support",
+          "Mobile-optimized responsive design",
+          "Privacy-first: all processing done locally",
+          "No registration required - completely free"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is the difference between case-sensitive and case-insensitive search?",
+          "answer": "Case-sensitive search matches text exactly as typed, including uppercase and lowercase letters. Case-insensitive search ignores capitalization, so 'Hello', 'HELLO', and 'hello' would all match."
+        },
+        {
+          "question": "How does whole word matching work?",
+          "answer": "Whole word matching ensures that your search term only matches complete words, not parts of larger words. For example, searching for 'car' with whole word enabled would match 'car' but not 'card' or 'scared'."
+        },
+        {
+          "question": "Can I use regular expressions?",
+          "answer": "Yes! Enable regex mode to use powerful pattern matching. You can search for patterns like phone numbers (\\d{3}-\\d{3}-\\d{4}), email addresses, or any complex text pattern."
+        },
+        {
+          "question": "Is there a limit to how much text I can process?",
+          "answer": "The tool can handle large amounts of text, but very large files may affect browser performance. For optimal experience, we recommend processing files under 1MB."
+        },
+        {
+          "question": "Can I undo a replace operation?",
+          "answer": "The tool shows you the results before you copy or download them. If you need to undo, simply modify your search terms or reload your original text. Always keep a backup of important files."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text statistics",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Text Repeater", 
+            "description": "Repeat text multiple times with custom separators",
+            "href": "/tools/repeat-text"
+          },
+          {
+            "name": "Remove Text Formatting",
+            "description": "Clean text by removing unwanted formatting",
+            "href": "/tools/remove-text-formatting"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary code and back",
+            "href": "/tools/binary-code-translator"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструмент Поиска и Замены Текста - Продвинутый Поиск и Замена",
+    "metaDescription": "Найдите и замените текст с мощными опциями, включая чувствительность к регистру, поиск целых слов и регулярные выражения. Идеально для массового редактирования текста, исправления кода и управления контентом.",
+    "sections": {
+      "intro": {
+        "title": "Продвинутый Инструмент Поиска и Замены Текста",
+        "content": "Выполняйте сложные операции поиска и замены текста с нашим продвинутым инструментом. Функции включают учет регистра, поиск целых слов, поддержку регулярных выражений и предварительный просмотр в реальном времени. Идеально для редактирования контента, рефакторинга кода, очистки данных и массовых изменений текста."
+      },
+      "features": {
+        "title": "Функции Поиска и Замены",
+        "items": [
+          { "title": "Поиск с Учетом Регистра", "description": "Переключите чувствительность к регистру для точного или гибкого поиска текста" },
+          { "title": "Поиск Целых Слов", "description": "Найдите только полные слова, чтобы избежать частичных замен" },
+          { "title": "Поддержка Регулярных Выражений", "description": "Используйте regex-шаблоны для сложных операций поиска и замены" },
+          { "title": "Подсчет Совпадений в Реальном Времени", "description": "Мгновенно видите количество найденных совпадений при вводе" },
+          { "title": "Выделение Шаблона Поиска", "description": "Визуальный предварительный просмотр с выделенными совпадениями в исходном тексте" },
+          { "title": "Функция Быстрого Обмена", "description": "Мгновенно меняйте местами термины поиска и замены одним кликом" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и выполняйте массовые операции поиска и замены" },
+          { "title": "Мгновенная Загрузка", "description": "Сохраняйте измененный текст в виде файлов для использования в других приложениях" },
+          { "title": "Оптимизировано для Мобильных", "description": "Адаптивный дизайн с оптимизированной мобильной раскладкой кнопок" }
+        ]
+      },
+      "useCases": {
+        "title": "Практические Применения Поиска и Замены",
+        "description": "Замена текста имеет множество практических применений в различных областях и отраслях.",
+        "items": [
+          { "title": "Редактирование Контента", "description": "Обновляйте терминологию, исправляйте опечатки или стандартизируйте форматирование в документах" },
+          { "title": "Рефакторинг Кода", "description": "Переименовывайте переменные, обновляйте имена функций или изменяйте шаблоны кода" },
+          { "title": "Очистка Данных", "description": "Очищайте и стандартизируйте данные, заменяя несогласованные форматы" },
+          { "title": "Обновление URL", "description": "Массово обновляйте URL, ссылки или ссылки в документации" },
+          { "title": "Подготовка к Переводу", "description": "Заменяйте заполнители или стандартизируйте текст для перевода" },
+          { "title": "Конвертация Форматов", "description": "Конвертируйте между различными текстовыми форматами или языками разметки" },
+          { "title": "Обновление Конфигурации", "description": "Обновляйте конфигурационные файлы, настройки или переменные окружения" },
+          { "title": "Стандартизация Контента", "description": "Обеспечивайте единообразную терминологию и форматирование в нескольких документах" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Поиск и Замену",
+        "description": "Следуйте этим шагам для выполнения операций поиска и замены текста.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Наберите или вставьте текст, который хотите изменить, или загрузите текстовый файл для массовых операций."
+          },
+          {
+            "step": 2,
+            "title": "Установите Параметры Поиска",
+            "description": "Введите текст для поиска и текст для замены. Настройте опции такие как чувствительность к регистру, поиск целых слов или regex."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Совпадения",
+            "description": "Посмотрите количество совпадений и предварительный просмотр выделенных совпадений для проверки вашего шаблона поиска."
+          },
+          {
+            "step": 4,
+            "title": "Примените и Скачайте",
+            "description": "Просмотрите замененный текст и скопируйте или скачайте результаты для использования в ваших проектах."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Поиска и Замены",
+        "description": "Посмотрите, как различные опции влияют на операции поиска и замены.",
+        "items": [
+          { "title": "Простая Замена", "input": "Найти: 'кот' → Заменить: 'собака'", "output": "Изменяет все экземпляры 'кот' на 'собака'" },
+          { "title": "Учет Регистра", "input": "Найти: 'API' (с учетом регистра)", "output": "Соответствует только 'API', а не 'api' или 'Api'" },
+          { "title": "Целое Слово", "input": "Найти: 'дом' (целое слово)", "output": "Соответствует 'дом', но не 'домик' или 'домашний'" },
+          { "title": "Regex Шаблон", "input": "Найти: '\\d{3}-\\d{3}-\\d{4}' → Заменить: '[ТЕЛЕФОН]'", "output": "Заменяет номера телефонов заполнителем" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент Поиска и Замены",
+        "content": "Профессиональная замена текста с продвинутыми функциями и обратной связью в реальном времени.",
+        "items": [
+          "Поиск с учетом и без учета регистра",
+          "Поиск целых слов для предотвращения частичных замен",
+          "Поддержка регулярных выражений для сложных шаблонов",
+          "Подсчет совпадений и выделение в реальном времени",
+          "Функция быстрого обмена для терминов поиска/замены",
+          "Поддержка загрузки и скачивания файлов",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Конфиденциальность прежде всего: вся обработка происходит локально",
+          "Не требует регистрации - полностью бесплатно"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "В чем разница между поиском с учетом и без учета регистра?",
+          "answer": "Поиск с учетом регистра соответствует тексту точно как набрано, включая заглавные и строчные буквы. Поиск без учета регистра игнорирует капитализацию, поэтому 'Привет', 'ПРИВЕТ' и 'привет' будут совпадать."
+        },
+        {
+          "question": "Как работает поиск целых слов?",
+          "answer": "Поиск целых слов гарантирует, что ваш поисковый термин соответствует только полным словам, а не частям больших слов. Например, поиск 'дом' с включенным целым словом будет соответствовать 'дом', но не 'домик' или 'домашний'."
+        },
+        {
+          "question": "Могу ли я использовать регулярные выражения?",
+          "answer": "Да! Включите режим regex для использования мощного сопоставления шаблонов. Вы можете искать шаблоны как номера телефонов (\\d{3}-\\d{3}-\\d{4}), адреса электронной почты или любые сложные текстовые шаблоны."
+        },
+        {
+          "question": "Есть ли ограничение на количество текста, который я могу обработать?",
+          "answer": "Инструмент может обрабатывать большие объемы текста, но очень большие файлы могут повлиять на производительность браузера. Для оптимального опыта мы рекомендуем обрабатывать файлы размером менее 1МБ."
+        },
+        {
+          "question": "Могу ли я отменить операцию замены?",
+          "answer": "Инструмент показывает вам результаты перед тем, как вы их скопируете или скачаете. Если вам нужно отменить, просто измените ваши поисковые термины или перезагрузите ваш исходный текст. Всегда делайте резервную копию важных файлов."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитывайте символы, слова и анализируйте статистику текста",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Повторитель Текста", 
+            "description": "Повторяйте текст многократно с пользовательскими разделителями",
+            "href": "/tools/repeat-text"
+          },
+          {
+            "name": "Удалить Форматирование Текста",
+            "description": "Очищайте текст, удаляя нежелательное форматирование",
+            "href": "/tools/remove-text-formatting"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и обратно",
+            "href": "/tools/binary-code-translator"
+          }
+        ]
+      }
+    }
+  }
+}

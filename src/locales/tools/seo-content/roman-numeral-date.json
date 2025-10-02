@@ -1,0 +1,424 @@
+{
+  "en": {
+    "title": "Roman Numeral Date Converter - Transform Modern Dates to Classical Format",
+    "metaDescription": "Convert modern dates to Roman numeral format and vice versa. Perfect for wedding invitations, historical documents, monuments, and classical design. Support for multiple Roman date formats with instant conversion.",
+    "sections": {
+      "intro": {
+        "title": "Convert Dates to Roman Numerals with Professional Precision",
+        "content": "Transform modern dates into elegant Roman numeral format with our comprehensive date converter. Whether you're designing wedding invitations, creating historical documents, engraving monuments, or working on classical design projects, our tool provides accurate conversion between modern dates and Roman numeral formats. Support for multiple styles including classical, medieval, minimal, and decorative formats ensures your dates look perfect for any occasion."
+      },
+      "features": {
+        "title": "Advanced Roman Date Conversion Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Convert from modern dates to Roman numerals and back with automatic format detection"
+          },
+          {
+            "title": "Multiple Roman Styles",
+            "description": "Choose from classical, medieval, minimal, and decorative Roman date formats"
+          },
+          {
+            "title": "Historical Accuracy",
+            "description": "Authentic Latin month names and proper Roman numeral construction (1-3999 CE)"
+          },
+          {
+            "title": "Smart Date Recognition",
+            "description": "Supports multiple input formats: ISO (YYYY-MM-DD), US (MM/DD/YYYY), EU (DD/MM/YYYY)"
+          },
+          {
+            "title": "Instant Preview",
+            "description": "Real-time conversion with immediate visual feedback and validation"
+          },
+          {
+            "title": "Batch Processing",
+            "description": "Upload files with multiple dates for bulk conversion and download results"
+          },
+          {
+            "title": "Educational Examples",
+            "description": "Historical date examples including famous events and milestones"
+          },
+          {
+            "title": "Professional Output",
+            "description": "Copy-ready formats perfect for invitations, documents, and design projects"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Dates to Roman Numerals",
+        "description": "Follow these simple steps to convert modern dates to Roman numeral format:",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Choose Conversion Mode",
+            "description": "Select automatic detection, modern to Roman, or Roman to modern conversion mode based on your input type."
+          },
+          {
+            "step": "2",
+            "title": "Enter Your Date",
+            "description": "Type a modern date (2024-12-25) or Roman date (XXV DECEMBER MMXXIV). Use the date picker for quick selection."
+          },
+          {
+            "step": "3",
+            "title": "Select Output Format",
+            "description": "Choose from classical, medieval, minimal, or decorative Roman date styles to match your project needs."
+          },
+          {
+            "step": "4",
+            "title": "Convert and Copy",
+            "description": "Click convert to transform your date, then copy the result or download for use in your documents."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Roman Date Conversion Examples",
+        "description": "See how modern dates transform into various Roman numeral formats:",
+        "items": [
+          {
+            "input": "2024-12-25",
+            "output": "XXV DECEMBER MMXXIV",
+            "description": "Christmas Day 2024 in classical Roman format"
+          },
+          {
+            "input": "1776-07-04",
+            "output": "IV DIE IULIUS ANNO DOMINI MDCCLXXVI",
+            "description": "American Independence Day in medieval format"
+          },
+          {
+            "input": "2000-01-01",
+            "output": "I.IAN.MM",
+            "description": "Millennium celebration in minimal format"
+          },
+          {
+            "input": "1969-07-20",
+            "output": "ⅩⅩ • IULIUS • ⅯⅭⅯⅬⅩⅨ",
+            "description": "Moon landing date in decorative format"
+          },
+          {
+            "input": "44-03-15",
+            "output": "XV MARTIUS XLIV",
+            "description": "Ides of March (Caesar's assassination) in classical format"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Professional Applications for Roman Date Conversion",
+        "description": "Discover the many ways Roman numeral dates enhance your projects:",
+        "items": [
+          {
+            "title": "Wedding Invitations",
+            "description": "Add elegant classical touch to save-the-dates, invitations, and ceremony programs with Roman numeral dates"
+          },
+          {
+            "title": "Historical Documents",
+            "description": "Create authentic-looking historical documents, manuscripts, and academic papers with period-appropriate dating"
+          },
+          {
+            "title": "Monument Engraving",
+            "description": "Professional date formatting for tombstones, plaques, building cornerstones, and memorial inscriptions"
+          },
+          {
+            "title": "Classical Design",
+            "description": "Enhance architectural drawings, classical art projects, and traditional design work with Roman dating"
+          },
+          {
+            "title": "Educational Materials",
+            "description": "Create engaging history lessons, timeline projects, and educational content about Roman culture"
+          },
+          {
+            "title": "Luxury Branding",
+            "description": "Add sophistication to high-end product launches, anniversary celebrations, and premium brand materials"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Roman Date Converter",
+        "items": [
+          "Accurate conversion between modern dates and authentic Roman numeral formats",
+          "Multiple Roman styles: classical, medieval, minimal, and decorative formatting options",
+          "Historical accuracy with proper Latin month names and Roman numeral construction",
+          "Support for years 1-3999 CE with comprehensive date validation and error handling",
+          "Bidirectional conversion: modern to Roman and Roman back to modern format",
+          "Multiple input formats: ISO, US, and European date formats accepted",
+          "Instant conversion with real-time preview and immediate format validation",
+          "Professional output ready for invitations, documents, engravings, and design projects",
+          "Educational examples featuring famous historical dates and significant events",
+          "Bulk processing capability with file upload and download for multiple dates",
+          "Mobile-responsive design that works perfectly on all devices and screen sizes",
+          "Completely free with unlimited usage and no registration or payment required"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Date and Number Tools",
+        "description": "Explore more tools for working with dates, numbers, and historical formats:",
+        "items": [
+          {
+            "name": "Random Date Generator",
+            "href": "/tools/random-date",
+            "description": "Generate random dates for testing, examples, and data creation"
+          },
+          {
+            "name": "Number Sorter",
+            "href": "/tools/number-sorter",
+            "description": "Sort lists of numbers in ascending or descending order"
+          },
+          {
+            "name": "Text Counter",
+            "href": "/tools/text-counter",
+            "description": "Count characters, words, and analyze text statistics"
+          },
+          {
+            "name": "ASCII Art Generator",
+            "href": "/tools/ascii-art-generator",
+            "description": "Create decorative text art for classical design projects"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What date range does the Roman numeral converter support?",
+          "answer": "Our converter supports dates from year 1 to 3999 CE (Common Era). This range covers the practical limits of Roman numeral representation while including all historically relevant dates and future dates for modern applications."
+        },
+        {
+          "question": "What Roman date formats are available?",
+          "answer": "We offer four distinct formats: Classical (XIX APRILIS MMXXIV), Medieval (XIX DIE APRILIS ANNO DOMINI MMXXIV), Minimal (XIX.APR.MMXXIV), and Decorative (ⅩⅨ • APRILIS • ⅯⅯⅩⅩⅣ). Each format serves different design and historical accuracy needs."
+        },
+        {
+          "question": "Can I convert Roman dates back to modern format?",
+          "answer": "Yes! Our tool supports bidirectional conversion. You can input Roman numeral dates in any of our supported formats, and the tool will convert them back to modern date format (YYYY-MM-DD)."
+        },
+        {
+          "question": "What modern date formats can I input?",
+          "answer": "We accept multiple input formats: ISO format (YYYY-MM-DD), US format (MM/DD/YYYY), European format (DD/MM/YYYY), and dash-separated format (DD-MM-YYYY). The tool automatically detects the format you're using."
+        },
+        {
+          "question": "Are the Latin month names historically accurate?",
+          "answer": "Yes, we use authentic Latin month names as they appeared in classical Roman calendars: IANUARIUS, FEBRUARIUS, MARTIUS, APRILIS, MAIUS, IUNIUS, IULIUS, AUGUSTUS, SEPTEMBER, OCTOBER, NOVEMBER, and DECEMBER."
+        },
+        {
+          "question": "Can I use this for professional projects like wedding invitations?",
+          "answer": "Absolutely! Our converter is designed for professional use. The output is copy-ready and perfect for wedding invitations, historical documents, monument engravings, and classical design projects."
+        },
+        {
+          "question": "Does the tool work on mobile devices?",
+          "answer": "Yes, our Roman date converter is fully responsive and works seamlessly on all devices including smartphones, tablets, and desktop computers. The interface adapts to your screen size for optimal usability."
+        },
+        {
+          "question": "Can I convert multiple dates at once?",
+          "answer": "Yes! You can upload a text file containing multiple dates, and our tool will convert them all at once. You can then download the converted results as a file for easy use in your projects."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Конвертер Дат в Римские Цифры - Преобразование в Классический Формат",
+    "metaDescription": "Конвертируйте современные даты в формат римских цифр и обратно. Идеально для свадебных приглашений, исторических документов, памятников и классического дизайна. Поддержка множественных римских форматов с мгновенной конвертацией.",
+    "sections": {
+      "intro": {
+        "title": "Конвертируйте Даты в Римские Цифры с Профессиональной Точностью",
+        "content": "Преобразуйте современные даты в элегантный формат римских цифр с помощью нашего комплексного конвертера дат. Независимо от того, создаете ли вы свадебные приглашения, исторические документы, гравируете памятники или работаете над классическими дизайн-проектами, наш инструмент обеспечивает точную конвертацию между современными датами и форматами римских цифр. Поддержка множественных стилей, включая классический, средневековый, минимальный и декоративный форматы, гарантирует, что ваши даты будут выглядеть идеально для любого случая."
+      },
+      "features": {
+        "title": "Продвинутые Функции Конвертации Римских Дат",
+        "items": [
+          {
+            "title": "Двунаправленная Конвертация",
+            "description": "Конвертируйте из современных дат в римские цифры и обратно с автоматическим определением формата"
+          },
+          {
+            "title": "Множественные Римские Стили",
+            "description": "Выбирайте из классических, средневековых, минимальных и декоративных форматов римских дат"
+          },
+          {
+            "title": "Историческая Точность",
+            "description": "Аутентичные латинские названия месяцев и правильная конструкция римских цифр (1-3999 н.э.)"
+          },
+          {
+            "title": "Умное Распознавание Дат",
+            "description": "Поддерживает множественные форматы ввода: ISO (YYYY-MM-DD), US (MM/DD/YYYY), EU (DD/MM/YYYY)"
+          },
+          {
+            "title": "Мгновенный Предпросмотр",
+            "description": "Конвертация в реальном времени с немедленной визуальной обратной связью и валидацией"
+          },
+          {
+            "title": "Пакетная Обработка",
+            "description": "Загружайте файлы с множественными датами для массовой конвертации и скачивания результатов"
+          },
+          {
+            "title": "Образовательные Примеры",
+            "description": "Примеры исторических дат, включая знаменитые события и важные вехи"
+          },
+          {
+            "title": "Профессиональный Вывод",
+            "description": "Готовые для копирования форматы, идеальные для приглашений, документов и дизайн-проектов"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Даты в Римские Цифры",
+        "description": "Следуйте этим простым шагам для конвертации современных дат в формат римских цифр:",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Выберите Режим Конвертации",
+            "description": "Выберите автоматическое определение, современная в римскую или римская в современную конвертацию на основе вашего типа ввода."
+          },
+          {
+            "step": "2",
+            "title": "Введите Вашу Дату",
+            "description": "Введите современную дату (2024-12-25) или римскую дату (XXV DECEMBER MMXXIV). Используйте выбор даты для быстрого выбора."
+          },
+          {
+            "step": "3",
+            "title": "Выберите Формат Вывода",
+            "description": "Выберите из классических, средневековых, минимальных или декоративных стилей римских дат для соответствия потребностям вашего проекта."
+          },
+          {
+            "step": "4",
+            "title": "Конвертируйте и Копируйте",
+            "description": "Нажмите конвертировать для преобразования вашей даты, затем скопируйте результат или скачайте для использования в ваших документах."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации Римских Дат",
+        "description": "Посмотрите, как современные даты преобразуются в различные форматы римских цифр:",
+        "items": [
+          {
+            "input": "2024-12-25",
+            "output": "XXV DECEMBER MMXXIV",
+            "description": "Рождество 2024 в классическом римском формате"
+          },
+          {
+            "input": "1776-07-04",
+            "output": "IV DIE IULIUS ANNO DOMINI MDCCLXXVI",
+            "description": "День Независимости Америки в средневековом формате"
+          },
+          {
+            "input": "2000-01-01",
+            "output": "I.IAN.MM",
+            "description": "Празднование миллениума в минимальном формате"
+          },
+          {
+            "input": "1969-07-20",
+            "output": "ⅩⅩ • IULIUS • ⅯⅭⅯⅬⅩⅨ",
+            "description": "Дата высадки на Луну в декоративном формате"
+          },
+          {
+            "input": "44-03-15",
+            "output": "XV MARTIUS XLIV",
+            "description": "Иды марта (убийство Цезаря) в классическом формате"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Профессиональные Применения Конвертации Римских Дат",
+        "description": "Откройте множество способов, как римские цифры дат улучшают ваши проекты:",
+        "items": [
+          {
+            "title": "Свадебные Приглашения",
+            "description": "Добавьте элегантный классический штрих к уведомлениям о дате, приглашениям и программам церемонии с римскими цифрами дат"
+          },
+          {
+            "title": "Исторические Документы",
+            "description": "Создавайте аутентично выглядящие исторические документы, рукописи и академические работы с соответствующим периоду датированием"
+          },
+          {
+            "title": "Гравировка Памятников",
+            "description": "Профессиональное форматирование дат для надгробий, мемориальных досок, краеугольных камней зданий и мемориальных надписей"
+          },
+          {
+            "title": "Классический Дизайн",
+            "description": "Улучшите архитектурные чертежи, классические художественные проекты и традиционную дизайнерскую работу с римским датированием"
+          },
+          {
+            "title": "Образовательные Материалы",
+            "description": "Создавайте увлекательные уроки истории, проекты временных линий и образовательный контент о римской культуре"
+          },
+          {
+            "title": "Люксовый Брендинг",
+            "description": "Добавьте изысканность к запускам высококлассных продуктов, юбилейным празднованиям и материалам премиум-брендов"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Выбрать Наш Конвертер Римских Дат",
+        "items": [
+          "Точная конвертация между современными датами и аутентичными форматами римских цифр",
+          "Множественные римские стили: классические, средневековые, минимальные и декоративные варианты форматирования",
+          "Историческая точность с правильными латинскими названиями месяцев и конструкцией римских цифр",
+          "Поддержка годов 1-3999 н.э. с комплексной валидацией дат и обработкой ошибок",
+          "Двунаправленная конвертация: современная в римскую и римская обратно в современный формат",
+          "Множественные форматы ввода: ISO, US и европейские форматы дат принимаются",
+          "Мгновенная конвертация с предпросмотром в реальном времени и немедленной валидацией формата",
+          "Профессиональный вывод готов для приглашений, документов, гравировок и дизайн-проектов",
+          "Образовательные примеры с знаменитыми историческими датами и значимыми событиями",
+          "Возможность пакетной обработки с загрузкой файла и скачиванием для множественных дат",
+          "Мобильно-адаптивный дизайн, который идеально работает на всех устройствах и размерах экрана",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или платы"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные Инструменты Дат и Чисел",
+        "description": "Исследуйте больше инструментов для работы с датами, числами и историческими форматами:",
+        "items": [
+          {
+            "name": "Генератор Случайных Дат",
+            "href": "/ru/tools/random-date",
+            "description": "Генерируйте случайные даты для тестирования, примеров и создания данных"
+          },
+          {
+            "name": "Сортировщик Чисел",
+            "href": "/ru/tools/number-sorter",
+            "description": "Сортируйте списки чисел в возрастающем или убывающем порядке"
+          },
+          {
+            "name": "Счетчик Текста",
+            "href": "/ru/tools/text-counter",
+            "description": "Подсчитывайте символы, слова и анализируйте статистику текста"
+          },
+          {
+            "name": "Генератор ASCII Арт",
+            "href": "/ru/tools/ascii-art-generator",
+            "description": "Создавайте декоративное текстовое искусство для классических дизайн-проектов"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какой диапазон дат поддерживает конвертер римских цифр?",
+          "answer": "Наш конвертер поддерживает даты от 1 до 3999 года н.э. (нашей эры). Этот диапазон покрывает практические пределы представления римских цифр, включая все исторически значимые даты и будущие даты для современных применений."
+        },
+        {
+          "question": "Какие форматы римских дат доступны?",
+          "answer": "Мы предлагаем четыре различных формата: Классический (XIX APRILIS MMXXIV), Средневековый (XIX DIE APRILIS ANNO DOMINI MMXXIV), Минимальный (XIX.APR.MMXXIV) и Декоративный (ⅩⅨ • APRILIS • ⅯⅯⅩⅩⅣ). Каждый формат служит различным потребностям дизайна и исторической точности."
+        },
+        {
+          "question": "Могу ли я конвертировать римские даты обратно в современный формат?",
+          "answer": "Да! Наш инструмент поддерживает двунаправленную конвертацию. Вы можете вводить римские цифры дат в любом из наших поддерживаемых форматов, и инструмент конвертирует их обратно в современный формат дат (YYYY-MM-DD)."
+        },
+        {
+          "question": "Какие форматы современных дат я могу вводить?",
+          "answer": "Мы принимаем множественные форматы ввода: ISO формат (YYYY-MM-DD), US формат (MM/DD/YYYY), европейский формат (DD/MM/YYYY) и формат с тире (DD-MM-YYYY). Инструмент автоматически определяет формат, который вы используете."
+        },
+        {
+          "question": "Являются ли латинские названия месяцев исторически точными?",
+          "answer": "Да, мы используем аутентичные латинские названия месяцев, как они появлялись в классических римских календарях: IANUARIUS, FEBRUARIUS, MARTIUS, APRILIS, MAIUS, IUNIUS, IULIUS, AUGUSTUS, SEPTEMBER, OCTOBER, NOVEMBER и DECEMBER."
+        },
+        {
+          "question": "Могу ли я использовать это для профессиональных проектов, таких как свадебные приглашения?",
+          "answer": "Абсолютно! Наш конвертер разработан для профессионального использования. Вывод готов для копирования и идеален для свадебных приглашений, исторических документов, гравировок памятников и классических дизайн-проектов."
+        },
+        {
+          "question": "Работает ли инструмент на мобильных устройствах?",
+          "answer": "Да, наш конвертер римских дат полностью адаптивен и работает бесшовно на всех устройствах, включая смартфоны, планшеты и настольные компьютеры. Интерфейс адаптируется к размеру вашего экрана для оптимального удобства использования."
+        },
+        {
+          "question": "Могу ли я конвертировать множественные даты одновременно?",
+          "answer": "Да! Вы можете загрузить текстовый файл, содержащий множественные даты, и наш инструмент конвертирует их все сразу. Затем вы можете скачать конвертированные результаты как файл для легкого использования в ваших проектах."
+        }
+      ]
+    }
+  }
+}

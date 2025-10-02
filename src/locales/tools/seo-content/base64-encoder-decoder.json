@@ -1,0 +1,270 @@
+{
+  "en": {
+    "title": "Free Base64 Encoder & Decoder - Text and Data Converter Tool",
+    "metaDescription": "Encode and decode Base64 online with URL-safe options, padding control, and line breaks. Upload files, analyze sizes, and convert instantly—privacy-first.",
+    "sections": {
+      "intro": {
+        "title": "Free Base64 Encoder & Decoder - Text and Data Converter Tool",
+        "content": "Encode and decode Base64 online with URL-safe options, padding control, and line breaks. Upload files, analyze sizes, and convert instantly—privacy-first. Perfect for developers, data transmission, and API integration."
+      },
+      "features": {
+        "title": "Comprehensive Base64 Encoding Features",
+        "items": [
+          { "title": "Bidirectional Conversion", "description": "Encode text to Base64 and decode Base64 back to text instantly" },
+          { "title": "URL-Safe Encoding", "description": "Generate URL-safe Base64 strings for web applications and APIs" },
+          { "title": "Padding Control", "description": "Include or exclude padding characters based on your requirements" },
+          { "title": "Line Break Options", "description": "Add line breaks with customizable line length for better readability" },
+          { "title": "File Upload Support", "description": "Upload and process files directly in your browser" },
+          { "title": "Real-time Analytics", "description": "View input/output sizes, expansion ratios, and efficiency metrics" },
+          { "title": "Privacy-First", "description": "All processing happens locally—no data leaves your browser" },
+          { "title": "Mobile Optimized", "description": "Works perfectly on all devices with responsive design" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Developers & Data Processing",
+        "description": "Our Base64 encoder/decoder is essential for various development and data processing tasks.",
+        "items": [
+          { "title": "API Development", "description": "Encode data for secure API transmission and authentication" },
+          { "title": "Email Attachments", "description": "Encode binary files for email transmission" },
+          { "title": "Web Development", "description": "Encode images and data for inline embedding in HTML/CSS" },
+          { "title": "Data Storage", "description": "Encode sensitive data for secure storage in databases" },
+          { "title": "Configuration Files", "description": "Encode configuration data for application settings" },
+          { "title": "Binary Data Transfer", "description": "Safely transfer binary data through text-based protocols" },
+          { "title": "Authentication", "description": "Encode credentials and tokens for secure authentication" },
+          { "title": "Data Compression", "description": "Prepare data for compression algorithms and archiving" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Base64 Encoder/Decoder",
+        "description": "Follow these simple steps to encode or decode your data with Base64.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Data",
+            "description": "Type or paste your text into the input area, or upload a file for processing."
+          },
+          {
+            "step": 2,
+            "title": "Choose Mode",
+            "description": "Select 'Encode to Base64' to convert text to Base64, or 'Decode from Base64' to convert back to text."
+          },
+          {
+            "step": 3,
+            "title": "Configure Options",
+            "description": "Set URL-safe encoding, padding, line breaks, and other options as needed."
+          },
+          {
+            "step": 4,
+            "title": "View Results",
+            "description": "See the converted data, analytics, and download or copy the results."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Base64 Encoding Examples",
+        "description": "See how our Base64 encoder handles different types of data.",
+        "items": [
+          { "title": "Simple Text", "input": "Hello World", "output": "SGVsbG8gV29ybGQ=" },
+          { "title": "URL-Safe", "input": "Hello World", "output": "SGVsbG8gV29ybGQ" },
+          { "title": "With Line Breaks", "input": "Long text", "output": "TG9uZyB0ZXh0 (with line breaks)" },
+          { "title": "Binary Data", "input": "Binary file", "output": "Encoded binary representation" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Base64 Encoder/Decoder",
+        "content": "Professional Base64 encoding with advanced options and comprehensive analytics.",
+        "items": [
+          "Completely free and unlimited use",
+          "No registration or sign-up required",
+          "Privacy-first - all processing done locally",
+          "Supports multiple file formats",
+          "Real-time encoding/decoding",
+          "Advanced configuration options",
+          "Detailed analytics and statistics",
+          "Mobile-optimized interface"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is Base64 encoding used for?",
+          "answer": "Base64 encoding is used to encode binary data into ASCII text format, making it safe for transmission over text-based protocols like HTTP, email, and XML. It's commonly used for embedding images in HTML, storing binary data in databases, and API authentication."
+        },
+        {
+          "question": "What's the difference between regular and URL-safe Base64?",
+          "answer": "URL-safe Base64 replaces the '+' and '/' characters with '-' and '_' respectively, and removes padding '=' characters. This makes the encoded string safe for use in URLs and filenames without requiring additional encoding."
+        },
+        {
+          "question": "How much does Base64 encoding increase data size?",
+          "answer": "Base64 encoding typically increases data size by approximately 33%. This is because every 3 bytes of binary data becomes 4 bytes of Base64 text (4/3 = 1.33x increase)."
+        },
+        {
+          "question": "Is my data secure when using this tool?",
+          "answer": "Yes, all Base64 encoding and decoding happens locally in your browser. Your data is never sent to our servers or stored anywhere. This ensures complete privacy and security for your sensitive information."
+        },
+        {
+          "question": "Can I encode binary files with this tool?",
+          "answer": "Yes, you can upload binary files and they will be encoded to Base64. The tool handles all file types and provides detailed analytics about the encoding process including size changes and efficiency metrics."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Data Encoding Tools",
+        "items": [
+          {
+            "name": "Hex to Text Converter",
+            "description": "Convert between hexadecimal and text with flexible formatting options",
+            "href": "/tools/hex-to-text"
+          },
+          {
+            "name": "Binary Code Translator",
+            "description": "Convert text to binary code and decode binary back to text",
+            "href": "/tools/binary-code-translator"
+          },
+          {
+            "name": "URL Encoder/Decoder",
+            "description": "Encode and decode URLs with multiple encoding types",
+            "href": "/tools/url-converter"
+          },
+          {
+            "name": "UTF-8 Converter",
+            "description": "Encode text to UTF-8 bytes and decode UTF-8 bytes back to text",
+            "href": "/tools/utf8-converter"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Base64 Кодировщик и Декодировщик - Инструмент Конвертации Текста и Данных",
+    "metaDescription": "Кодируйте и декодируйте Base64 онлайн с URL-безопасными опциями, контролем заполнения и переносами строк. Загружайте файлы, анализируйте размеры и конвертируйте мгновенно—приоритет конфиденциальности.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Base64 Кодировщик и Декодировщик - Инструмент Конвертации Текста и Данных",
+        "content": "Кодируйте и декодируйте Base64 онлайн с URL-безопасными опциями, контролем заполнения и переносами строк. Загружайте файлы, анализируйте размеры и конвертируйте мгновенно—приоритет конфиденциальности. Идеально для разработчиков, передачи данных и интеграции API."
+      },
+      "features": {
+        "title": "Комплексные Функции Кодирования Base64",
+        "items": [
+          { "title": "Двунаправленная Конвертация", "description": "Кодируйте текст в Base64 и декодируйте Base64 обратно в текст мгновенно" },
+          { "title": "URL-Безопасное Кодирование", "description": "Генерируйте URL-безопасные Base64 строки для веб-приложений и API" },
+          { "title": "Контроль Заполнения", "description": "Включайте или исключайте символы заполнения в зависимости от ваших требований" },
+          { "title": "Опции Переноса Строк", "description": "Добавляйте переносы строк с настраиваемой длиной строки для лучшей читаемости" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте и обрабатывайте файлы прямо в браузере" },
+          { "title": "Аналитика в Реальном Времени", "description": "Просматривайте размеры ввода/вывода, коэффициенты расширения и метрики эффективности" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся обработка происходит локально—данные не покидают ваш браузер" },
+          { "title": "Мобильная Оптимизация", "description": "Работает идеально на всех устройствах с адаптивным дизайном" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Разработчиков и Обработки Данных",
+        "description": "Наш Base64 кодировщик/декодировщик необходим для различных задач разработки и обработки данных.",
+        "items": [
+          { "title": "Разработка API", "description": "Кодируйте данные для безопасной передачи API и аутентификации" },
+          { "title": "Вложения Email", "description": "Кодируйте бинарные файлы для передачи по email" },
+          { "title": "Веб-Разработка", "description": "Кодируйте изображения и данные для встраивания в HTML/CSS" },
+          { "title": "Хранение Данных", "description": "Кодируйте конфиденциальные данные для безопасного хранения в базах данных" },
+          { "title": "Файлы Конфигурации", "description": "Кодируйте данные конфигурации для настроек приложений" },
+          { "title": "Передача Бинарных Данных", "description": "Безопасно передавайте бинарные данные через текстовые протоколы" },
+          { "title": "Аутентификация", "description": "Кодируйте учетные данные и токены для безопасной аутентификации" },
+          { "title": "Сжатие Данных", "description": "Подготавливайте данные для алгоритмов сжатия и архивирования" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Base64 Кодировщик/Декодировщик",
+        "description": "Следуйте этим простым шагам для кодирования или декодирования ваших данных с Base64.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваши Данные",
+            "description": "Введите или вставьте ваш текст в область ввода, или загрузите файл для обработки."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Режим",
+            "description": "Выберите 'Кодировать в Base64' для преобразования текста в Base64, или 'Декодировать из Base64' для преобразования обратно в текст."
+          },
+          {
+            "step": 3,
+            "title": "Настройте Опции",
+            "description": "Установите URL-безопасное кодирование, заполнение, переносы строк и другие опции по необходимости."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите Результаты",
+            "description": "Посмотрите преобразованные данные, аналитику и скачайте или скопируйте результаты."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Кодирования Base64",
+        "description": "Посмотрите, как наш Base64 кодировщик обрабатывает различные типы данных.",
+        "items": [
+          { "title": "Простой Текст", "input": "Привет Мир", "output": "0J/RgNC40LLQtdGCINCh0LjRgQ==" },
+          { "title": "URL-Безопасный", "input": "Привет Мир", "output": "0J_RgNC40LLQtdGCINCh0LjRgQ" },
+          { "title": "С Переносами Строк", "input": "Длинный текст", "output": "0LTQu9C40L3RgdC60L7QuSDQutC10LrRgQ== (с переносами строк)" },
+          { "title": "Бинарные Данные", "input": "Бинарный файл", "output": "Закодированное бинарное представление" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Base64 Кодировщик/Декодировщик",
+        "content": "Профессиональное кодирование Base64 с расширенными опциями и комплексной аналитикой.",
+        "items": [
+          "Полностью бесплатное и неограниченное использование",
+          "Не требует регистрации или регистрации",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Поддержка множества форматов файлов",
+          "Кодирование/декодирование в реальном времени",
+          "Расширенные опции конфигурации",
+          "Подробная аналитика и статистика",
+          "Мобильно-оптимизированный интерфейс"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Для чего используется кодирование Base64?",
+          "answer": "Кодирование Base64 используется для кодирования бинарных данных в формат ASCII текста, делая их безопасными для передачи через текстовые протоколы, такие как HTTP, email и XML. Обычно используется для встраивания изображений в HTML, хранения бинарных данных в базах данных и аутентификации API."
+        },
+        {
+          "question": "В чем разница между обычным и URL-безопасным Base64?",
+          "answer": "URL-безопасный Base64 заменяет символы '+' и '/' на '-' и '_' соответственно, и удаляет символы заполнения '='. Это делает закодированную строку безопасной для использования в URL и именах файлов без необходимости дополнительного кодирования."
+        },
+        {
+          "question": "Насколько кодирование Base64 увеличивает размер данных?",
+          "answer": "Кодирование Base64 обычно увеличивает размер данных примерно на 33%. Это происходит потому, что каждые 3 байта бинарных данных становятся 4 байтами Base64 текста (4/3 = увеличение в 1.33 раза)."
+        },
+        {
+          "question": "Безопасны ли мои данные при использовании этого инструмента?",
+          "answer": "Да, все кодирование и декодирование Base64 происходит локально в вашем браузере. Ваши данные никогда не отправляются на наши серверы и не сохраняются где-либо. Это обеспечивает полную конфиденциальность и безопасность для вашей конфиденциальной информации."
+        },
+        {
+          "question": "Могу ли я кодировать бинарные файлы с помощью этого инструмента?",
+          "answer": "Да, вы можете загружать бинарные файлы, и они будут закодированы в Base64. Инструмент обрабатывает все типы файлов и предоставляет подробную аналитику о процессе кодирования, включая изменения размера и метрики эффективности."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Кодирования Данных",
+        "items": [
+          {
+            "name": "Конвертер Hex в Текст",
+            "description": "Конвертируйте между шестнадцатеричным и текстом с гибкими опциями форматирования",
+            "href": "/tools/hex-to-text"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и декодируйте двоичный код обратно в текст",
+            "href": "/tools/binary-code-translator"
+          },
+          {
+            "name": "URL Кодировщик/Декодировщик",
+            "description": "Кодируйте и декодируйте URL с множественными типами кодирования",
+            "href": "/tools/url-converter"
+          },
+          {
+            "name": "UTF-8 Конвертер",
+            "description": "Кодируйте текст в UTF-8 байты и декодируйте UTF-8 байты обратно в текст",
+            "href": "/tools/utf8-converter"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "en": {
+    "title": "About Us",
+    "intro": {
+      "heading": "Our Mission",
+      "body": "We build fast, privacy-first tools that help developers, writers, and creators transform text, code, and images with ease."
+    },
+    "sections": {
+      "values": {
+        "heading": "What We Value",
+        "items": [
+          { "title": "Speed & Reliability", "desc": "All tools run in your browser with instant results and no limits." },
+          { "title": "Privacy by Design", "desc": "We process inputs client-side whenever possible and avoid storing personal data." },
+          { "title": "Accessibility", "desc": "Clear UI, keyboard support, and readable content for everyone." }
+        ]
+      },
+      "stack": {
+        "heading": "Technology Stack",
+        "body": "Modern web technologies power our tools to ensure responsive UX and great SEO."
+      },
+      "roadmap": {
+        "heading": "Roadmap",
+        "items": [
+          { "title": "More Image Tools", "desc": "Batch operations and smart presets." },
+          { "title": "Advanced Text Analytics", "desc": "Deep insights and export options." },
+          { "title": "Localization", "desc": "More languages and locale-aware behavior." }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "О нас",
+    "intro": {
+      "heading": "Наша миссия",
+      "body": "Мы создаём быстрые и приватные инструменты, которые помогают разработчикам, авторам и создателям легко преобразовывать текст, код и изображения."
+    },
+    "sections": {
+      "values": {
+        "heading": "Наши ценности",
+        "items": [
+          { "title": "Скорость и Надёжность", "desc": "Инструменты работают в браузере с мгновенным результатом и без ограничений." },
+          { "title": "Приватность по Умолчанию", "desc": "Мы обрабатываем данные на стороне клиента и избегаем хранения персональных данных." },
+          { "title": "Доступность", "desc": "Понятный интерфейс, поддержка клавиатуры и читаемый контент для всех." }
+        ]
+      },
+      "stack": {
+        "heading": "Технологический стек",
+        "body": "Современные веб‑технологии обеспечивают отзывчивый интерфейс и отличное SEO."
+      },
+      "roadmap": {
+        "heading": "Дорожная карта",
+        "items": [
+          { "title": "Больше инструментов для изображений", "desc": "Пакетные операции и умные пресеты." },
+          { "title": "Продвинутый анализ текста", "desc": "Глубокие инсайты и экспорт результатов." },
+          { "title": "Локализация", "desc": "Больше языков и учёт локали." }
+        ]
+      }
+    }
+  }
+}
+

@@ -1,0 +1,332 @@
+{
+  "en": {
+    "title": "Image Tools - Professional Image Processing & Format Conversion",
+    "metaDescription": "Professional image processing tools for designers, developers, and content creators. Crop, resize, convert between JPG, PNG, WebP formats, and extract text with OCR. Fast, secure, and unlimited usage for all your image needs.",
+    "sections": {
+      "intro": {
+        "title": "Professional Image Processing & Conversion Tools",
+        "content": "Transform, optimize, and process images with our comprehensive suite of professional image tools. Whether you need to crop images, resize for different platforms, convert between formats, or extract text with OCR technology, these tools provide everything you need for image processing. Perfect for web developers, designers, content creators, and digital marketers with fast processing and unlimited usage."
+      },
+      "features": {
+        "title": "Comprehensive Image Processing Capabilities",
+        "items": [
+          {
+            "title": "Advanced Image Cropping",
+            "description": "Precisely crop images with custom aspect ratios, freeform selection, and preset dimensions for social media"
+          },
+          {
+            "title": "Smart Image Resizing",
+            "description": "Resize images while maintaining quality with intelligent algorithms and multiple scaling options"
+          },
+          {
+            "title": "OCR Text Extraction",
+            "description": "Extract text from images using advanced optical character recognition technology with high accuracy"
+          },
+          {
+            "title": "Universal Format Conversion",
+            "description": "Convert between JPG, PNG, and WebP formats with optimized compression and quality settings"
+          },
+          {
+            "title": "Batch Processing",
+            "description": "Process multiple images simultaneously for efficient workflow and time-saving operations"
+          },
+          {
+            "title": "Quality Optimization",
+            "description": "Automatic quality optimization while maintaining visual fidelity and reducing file sizes"
+          },
+          {
+            "title": "Privacy-First Processing",
+            "description": "All image processing happens locally in your browser - no uploads to external servers"
+          },
+          {
+            "title": "Mobile-Optimized",
+            "description": "Responsive interface that works perfectly on desktop, tablet, and mobile devices"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Available Image Processing Tools",
+        "items": [
+          {
+            "name": "Image Cropper",
+            "href": "/tools/image-cropper",
+            "description": "Crop images with precision using custom aspect ratios and selection tools"
+          },
+          {
+            "name": "Image Resizer",
+            "href": "/tools/image-resizer", 
+            "description": "Resize images to specific dimensions while maintaining quality and aspect ratio"
+          },
+          {
+            "name": "Image to Text OCR",
+            "href": "/tools/image-to-text",
+            "description": "Extract text from images using advanced optical character recognition"
+          },
+          {
+            "name": "JPG to PNG Converter",
+            "href": "/tools/jpg-to-png",
+            "description": "Convert JPG images to PNG format with transparency support"
+          },
+          {
+            "name": "PNG to JPG Converter",
+            "href": "/tools/png-to-jpg",
+            "description": "Convert PNG images to JPG format with customizable quality settings"
+          },
+          {
+            "name": "WebP to JPG Converter",
+            "href": "/tools/webp-to-jpg",
+            "description": "Convert modern WebP images to widely compatible JPG format"
+          },
+          {
+            "name": "WebP to PNG Converter",
+            "href": "/tools/webp-to-png",
+            "description": "Convert WebP images to PNG format while preserving transparency"
+          },
+          {
+            "name": "JPG to WebP Converter",
+            "href": "/tools/jpg-to-webp",
+            "description": "Convert JPG images to modern WebP format for better compression"
+          },
+          {
+            "name": "PNG to WebP Converter",
+            "href": "/tools/png-to-webp",
+            "description": "Convert PNG images to WebP format with superior compression and quality"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Image Tools",
+        "items": [
+          {
+            "title": "Web Development",
+            "description": "Optimize images for websites, convert to modern formats, resize for responsive design, and improve page load speeds"
+          },
+          {
+            "title": "Social Media Content",
+            "description": "Crop images for different platforms, resize for optimal display, and convert formats for maximum compatibility"
+          },
+          {
+            "title": "E-commerce & Marketing",
+            "description": "Process product images, create thumbnails, optimize for faster loading, and maintain consistent sizing"
+          },
+          {
+            "title": "Content Creation",
+            "description": "Edit images for blogs, resize for different devices, extract text from screenshots, and prepare graphics"
+          },
+          {
+            "title": "Document Processing",
+            "description": "Extract text from scanned documents, convert image formats, and prepare files for digital workflows"
+          },
+          {
+            "title": "Digital Asset Management",
+            "description": "Standardize image formats, optimize file sizes, batch process collections, and organize visual content"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Image Processing Tools",
+        "items": [
+          "Complete suite of 9+ image processing tools covering all common editing and conversion needs",
+          "Privacy-first approach with all processing happening locally in your browser for security",
+          "Professional-grade quality with advanced algorithms for cropping, resizing, and format conversion",
+          "OCR technology for accurate text extraction from images and scanned documents",
+          "Universal format support including JPG, PNG, WebP with optimized compression settings",
+          "Batch processing capabilities for handling multiple images efficiently and saving time",
+          "Real-time preview with instant results and immediate download functionality",
+          "Mobile-responsive design that works seamlessly across all devices and screen sizes",
+          "Completely free with unlimited usage and no registration or file size restrictions"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Related Tool Categories",
+        "items": [
+          {
+            "name": "Code & Data Translation",
+            "href": "/category/code-data-translation",
+            "description": "Convert between data formats, encode files, and process various document types"
+          },
+          {
+            "name": "Text Modification & Formatting",
+            "href": "/category/text-modification-formatting",
+            "description": "Format, style, and transform text content extracted from images"
+          },
+          {
+            "name": "Random Generators",
+            "href": "/category/random-generators",
+            "description": "Generate random data, test images, and mock content for development"
+          },
+          {
+            "name": "Analysis & Counter Tools", 
+            "href": "/category/text-analysis",
+            "description": "Analyze extracted text, count characters, and process OCR results"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструменты Изображений - Профессиональная Обработка и Конвертация",
+    "metaDescription": "Профессиональные инструменты обработки изображений для дизайнеров, разработчиков и создателей контента. Обрезка, изменение размера, конвертация между JPG, PNG, WebP форматами и извлечение текста с OCR.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональные Инструменты Обработки и Конвертации Изображений",
+        "content": "Преобразуйте, оптимизируйте и обрабатывайте изображения с нашим комплексным набором профессиональных инструментов для изображений. Независимо от того, нужно ли вам обрезать изображения, изменить размер для различных платформ, конвертировать между форматами или извлечь текст с помощью OCR технологии, эти инструменты предоставляют все необходимое для обработки изображений."
+      },
+      "features": {
+        "title": "Комплексные Возможности Обработки Изображений",
+        "items": [
+          {
+            "title": "Расширенная Обрезка Изображений",
+            "description": "Точно обрезайте изображения с пользовательскими соотношениями сторон, свободным выделением и предустановленными размерами для социальных сетей"
+          },
+          {
+            "title": "Умное Изменение Размера Изображений",
+            "description": "Изменяйте размер изображений, сохраняя качество с интеллектуальными алгоритмами и множественными опциями масштабирования"
+          },
+          {
+            "title": "OCR Извлечение Текста",
+            "description": "Извлекайте текст из изображений, используя передовую технологию оптического распознавания символов с высокой точностью"
+          },
+          {
+            "title": "Универсальная Конвертация Форматов",
+            "description": "Конвертируйте между JPG, PNG и WebP форматами с оптимизированными настройками сжатия и качества"
+          },
+          {
+            "title": "Пакетная Обработка",
+            "description": "Обрабатывайте несколько изображений одновременно для эффективного рабочего процесса и экономии времени"
+          },
+          {
+            "title": "Оптимизация Качества",
+            "description": "Автоматическая оптимизация качества при сохранении визуальной точности и уменьшении размеров файлов"
+          },
+          {
+            "title": "Обработка с Приоритетом Конфиденциальности",
+            "description": "Вся обработка изображений происходит локально в вашем браузере - никаких загрузок на внешние серверы"
+          },
+          {
+            "title": "Мобильно-Оптимизировано",
+            "description": "Отзывчивый интерфейс, который идеально работает на настольных компьютерах, планшетах и мобильных устройствах"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Доступные Инструменты Обработки Изображений",
+        "items": [
+          {
+            "name": "Обрезчик Изображений",
+            "href": "/ru/tools/image-cropper",
+            "description": "Обрезайте изображения с точностью, используя пользовательские соотношения сторон и инструменты выделения"
+          },
+          {
+            "name": "Изменение Размера Изображений",
+            "href": "/ru/tools/image-resizer", 
+            "description": "Изменяйте размер изображений до определенных размеров, сохраняя качество и соотношение сторон"
+          },
+          {
+            "name": "Извлечение Текста из Изображений OCR",
+            "href": "/ru/tools/image-to-text",
+            "description": "Извлекайте текст из изображений с использованием передового оптического распознавания символов"
+          },
+          {
+            "name": "Конвертер JPG в PNG",
+            "href": "/ru/tools/jpg-to-png",
+            "description": "Конвертируйте JPG изображения в PNG формат с поддержкой прозрачности"
+          },
+          {
+            "name": "Конвертер PNG в JPG",
+            "href": "/ru/tools/png-to-jpg",
+            "description": "Конвертируйте PNG изображения в JPG формат с настраиваемыми настройками качества"
+          },
+          {
+            "name": "Конвертер WebP в JPG",
+            "href": "/ru/tools/webp-to-jpg",
+            "description": "Конвертируйте современные WebP изображения в широко совместимый JPG формат"
+          },
+          {
+            "name": "Конвертер WebP в PNG",
+            "href": "/ru/tools/webp-to-png",
+            "description": "Конвертируйте WebP изображения в PNG формат, сохраняя прозрачность"
+          },
+          {
+            "name": "Конвертер JPG в WebP",
+            "href": "/ru/tools/jpg-to-webp",
+            "description": "Конвертируйте JPG изображения в современный WebP формат для лучшего сжатия"
+          },
+          {
+            "name": "Конвертер PNG в WebP",
+            "href": "/ru/tools/png-to-webp",
+            "description": "Конвертируйте PNG изображения в WebP формат с превосходным сжатием и качеством"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Инструментов Изображений",
+        "items": [
+          {
+            "title": "Веб-разработка",
+            "description": "Оптимизируйте изображения для веб-сайтов, конвертируйте в современные форматы, изменяйте размер для адаптивного дизайна"
+          },
+          {
+            "title": "Контент для Социальных Сетей",
+            "description": "Обрезайте изображения для различных платформ, изменяйте размер для оптимального отображения и конвертируйте форматы"
+          },
+          {
+            "title": "Электронная Коммерция и Маркетинг",
+            "description": "Обрабатывайте изображения товаров, создавайте миниатюры, оптимизируйте для быстрой загрузки"
+          },
+          {
+            "title": "Создание Контента",
+            "description": "Редактируйте изображения для блогов, изменяйте размер для различных устройств, извлекайте текст из скриншотов"
+          },
+          {
+            "title": "Обработка Документов",
+            "description": "Извлекайте текст из отсканированных документов, конвертируйте форматы изображений, подготавливайте файлы"
+          },
+          {
+            "title": "Управление Цифровыми Активами",
+            "description": "Стандартизируйте форматы изображений, оптимизируйте размеры файлов, пакетно обрабатывайте коллекции"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наши Инструменты Обработки Изображений",
+        "items": [
+          "Полный набор из 9+ инструментов обработки изображений, покрывающих все общие потребности редактирования и конвертации",
+          "Подход с приоритетом конфиденциальности - вся обработка происходит локально в вашем браузере для безопасности",
+          "Профессиональное качество с передовыми алгоритмами для обрезки, изменения размера и конвертации форматов",
+          "OCR технология для точного извлечения текста из изображений и отсканированных документов",
+          "Универсальная поддержка форматов, включая JPG, PNG, WebP с оптимизированными настройками сжатия",
+          "Возможности пакетной обработки для эффективной работы с множественными изображениями и экономии времени",
+          "Предварительный просмотр в реальном времени с мгновенными результатами и немедленной функцией загрузки",
+          "Мобильно-адаптивный дизайн, который бесшовно работает на всех устройствах и размерах экрана",
+          "Полностью бесплатно с неограниченным использованием и без регистрации или ограничений размера файлов"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Связанные Категории Инструментов",
+        "items": [
+          {
+            "name": "Перевод Кода и Данных",
+            "href": "/ru/category/code-data-translation",
+            "description": "Конвертируйте между форматами данных, кодируйте файлы и обрабатывайте различные типы документов"
+          },
+          {
+            "name": "Изменение и Форматирование Текста",
+            "href": "/ru/category/text-modification-formatting",
+            "description": "Форматируйте, стилизуйте и преобразуйте текстовый контент, извлеченный из изображений"
+          },
+          {
+            "name": "Генераторы Случайных Данных",
+            "href": "/ru/category/random-generators",
+            "description": "Генерируйте случайные данные, тестовые изображения и мок-контент для разработки"
+          },
+          {
+            "name": "Инструменты Анализа и Подсчета", 
+            "href": "/ru/category/text-analysis",
+            "description": "Анализируйте извлеченный текст, считайте символы и обрабатывайте результаты OCR"
+          }
+        ]
+      }
+    }
+  }
+}

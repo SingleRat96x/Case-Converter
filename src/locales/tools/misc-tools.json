@@ -1,0 +1,98 @@
+{
+  "en": {
+    "numberSorter": {
+      "title": "Number Sorter Tool ",
+      "description": "Sort numbers efficiently with options for ascending/descending order, numerical vs lexicographical sorting, and duplicate removal. Supports comma-separated, space-separated, and newline-separated input formats.",
+      "inputLabel": "Enter Numbers to Sort",
+      "inputPlaceholder": "Enter numbers to sort:\n42, 10, 7, 100, 3\n15 8 25 91\n12 - 89; 45, 23",
+      "uploadDescription": "",
+      "downloadFileName": "sorted-numbers.txt",
+      "options": {
+        "title": "Sorting Options",
+        "sortOrder": "Sort Order",
+        "ascending": "Ascending (1, 2, 3...)",
+        "descending": "Descending (3, 2, 1...)",
+        "sortType": "Sort Type",
+        "numerical": "Numerical (1, 2, 10, 20)",
+        "lexicographical": "Lexicographical (1, 10, 2, 20)",
+        "removeDuplicates": "Remove Duplicates",
+        "preserveFormat": "Preserve Original Format",
+        "separator": "Input Separator",
+        "separatorAuto": "Smart Mode (Auto-detect)",
+        "separatorNewline": "New Line",
+        "separatorSpace": "Space",
+        "separatorComma": "Comma (,)",
+        "separatorDash": "Dash (-)",
+        "separatorSemicolon": "Semicolon (;)",
+        "primaryOptions": "Primary Options",
+        "additionalOptions": "Additional Options",
+        "removeDuplicatesDesc": "Remove duplicate numbers from the list",
+        "preserveFormatDesc": "Keep original input format (commas, spaces)"
+      },
+      "results": {
+        "title": "Sorted Numbers"
+      },
+      "statistics": {
+        "title": "Sorting Statistics",
+        "originalCount": "Original Count",
+        "sortedCount": "Final Count",
+        "duplicatesRemoved": "Duplicates Removed",
+        "sortMethod": "Sort Method"
+      },
+      "analytics": {
+        "numericValues": "Numeric Values",
+        "minValue": "Minimum",
+        "maxValue": "Maximum",
+        "average": "Average"
+      }
+    }
+  },
+  "ru": {
+    "numberSorter": {
+      "title": "Инструмент Сортировки Чисел - Сортировка по Возрастанию или Убыванию",
+      "description": "Эффективная сортировка чисел с опциями возрастания/убывания, числовой или лексикографической сортировки и удаления дубликатов. Поддерживает ввод через запятые, пробелы или новые строки.",
+      "inputLabel": "Введите Числа для Сортировки",
+      "inputPlaceholder": "Введите числа для сортировки:\n42, 10, 7, 100, 3\n15 8 25 91\n12 - 89; 45, 23",
+      "uploadDescription": "",
+      "downloadFileName": "отсортированные-числа.txt",
+      "options": {
+        "title": "Параметры Сортировки",
+        "sortOrder": "Порядок Сортировки",
+        "ascending": "По возрастанию (1, 2, 3...)",
+        "descending": "По убыванию (3, 2, 1...)",
+        "sortType": "Тип Сортировки",
+        "numerical": "Числовая (1, 2, 10, 20)",
+        "lexicographical": "Лексикографическая (1, 10, 2, 20)",
+        "removeDuplicates": "Удалить Дубликаты",
+        "preserveFormat": "Сохранить Исходный Формат",
+        "separator": "Разделитель Ввода",
+        "separatorAuto": "Умный Режим (Авто-определение)",
+        "separatorNewline": "Новая Строка",
+        "separatorSpace": "Пробел",
+        "separatorComma": "Запятая (,)",
+        "separatorDash": "Тире (-)",
+        "separatorSemicolon": "Точка с запятой (;)",
+        "primaryOptions": "Основные Опции",
+        "additionalOptions": "Дополнительные Опции",
+        "removeDuplicatesDesc": "Удалить повторяющиеся числа из списка",
+        "preserveFormatDesc": "Сохранить исходный формат ввода (запятые, пробелы)"
+      },
+      "results": {
+        "title": "Отсортированные Числа"
+      },
+      "statistics": {
+        "title": "Статистика Сортировки",
+        "originalCount": "Исходное Количество",
+        "sortedCount": "Итоговое Количество",
+        "duplicatesRemoved": "Удалено Дубликатов",
+        "sortMethod": "Метод Сортировки"
+      },
+      "analytics": {
+        "numericValues": "Числовые Значения",
+        "minValue": "Минимум",
+        "maxValue": "Максимум",
+        "average": "Среднее"
+      }
+    }
+  }
+}

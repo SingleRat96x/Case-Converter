@@ -1,0 +1,284 @@
+{
+  "en": {
+    "title": "Free Phonetic Spelling Generator - Convert Text to Phonetic Alphabet",
+    "metaDescription": "Convert text to phonetic spelling with multiple formats including IPA, simple letter names, sound-based spelling, and NATO phonetic alphabet. Bidirectional conversion for pronunciation guides, language learning, and clear communication.",
+    "sections": {
+      "intro": {
+        "title": "Professional Phonetic Spelling Generator & Converter Tool",
+        "content": "Convert text to phonetic spelling and vice versa with our comprehensive phonetic generator. Support for multiple formats including International Phonetic Alphabet (IPA), simple letter names, sound-based spelling, and NATO phonetic alphabet. Perfect for pronunciation guides, language learning, speech therapy, and clear communication across different contexts."
+      },
+      "features": {
+        "title": "Advanced Phonetic Conversion Features",
+        "items": [
+          { "title": "Multiple Phonetic Formats", "description": "Choose from IPA, simple letter names, sound-based spelling, and NATO phonetic alphabet" },
+          { "title": "Bidirectional Conversion", "description": "Convert text to phonetic spelling and phonetic spelling back to text seamlessly" },
+          { "title": "Auto-Format Detection", "description": "Automatically detect phonetic format in input text for accurate reverse conversion" },
+          { "title": "Real-time Processing", "description": "Instant conversion as you type with live preview and format switching" },
+          { "title": "IPA Symbol Support", "description": "Full International Phonetic Alphabet support for accurate pronunciation guides" },
+          { "title": "NATO Phonetic Integration", "description": "Military and aviation standard phonetic alphabet for clear communication" },
+          { "title": "Sound-Based Spelling", "description": "Simplify spelling based on actual pronunciation patterns" },
+          { "title": "Educational Value", "description": "Perfect for language learning, pronunciation practice, and speech therapy" },
+          { "title": "File Upload Support", "description": "Convert entire documents with batch processing capabilities" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Education, Communication & Accessibility",
+        "description": "Our phonetic spelling generator serves multiple professional and educational purposes.",
+        "items": [
+          { "title": "Language Learning", "description": "Help students learn correct pronunciation with phonetic guides" },
+          { "title": "Speech Therapy", "description": "Create pronunciation exercises and therapy materials" },
+          { "title": "Teaching Tools", "description": "Develop educational content with clear pronunciation guides" },
+          { "title": "Communication Aids", "description": "Assist people with speech difficulties or hearing impairments" },
+          { "title": "Radio Communication", "description": "Use NATO phonetic for clear voice communication" },
+          { "title": "Linguistics Research", "description": "Analyze phonetic patterns and pronunciation variations" },
+          { "title": "Dictionary Creation", "description": "Add phonetic pronunciations to vocabulary resources" },
+          { "title": "Foreign Language Support", "description": "Help non-native speakers with pronunciation guides" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Phonetic Spelling Generator",
+        "description": "Follow these simple steps to convert between text and phonetic spelling formats.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Choose Conversion Mode",
+            "description": "Select whether to convert text to phonetic spelling or phonetic spelling back to text using the mode toggle."
+          },
+          {
+            "step": 2,
+            "title": "Select Phonetic Format",
+            "description": "Choose from IPA, simple letter names, sound-based spelling, or NATO phonetic alphabet based on your needs."
+          },
+          {
+            "step": 3,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text, or upload a file. Watch real-time conversion as you type."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download Results",
+            "description": "Copy the converted text to clipboard or download it as a file for future use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Phonetic Spelling Conversion Examples",
+        "description": "See how different phonetic formats handle the same text for various use cases.",
+        "items": [
+          { "title": "Simple Format", "input": "hello world", "output": "aych ee ell ell oh / double-you oh ar ell dee", "description": "Letter name pronunciation" },
+          { "title": "NATO Phonetic", "input": "help", "output": "Hotel Echo Lima Papa", "description": "Military/aviation standard" },
+          { "title": "IPA Format", "input": "cat", "output": "kæt", "description": "International Phonetic Alphabet" },
+          { "title": "Sound-Based", "input": "phone", "output": "fone", "description": "Simplified pronunciation spelling" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Phonetic Spelling Generator",
+        "content": "Professional phonetic conversion with multiple format support and educational features.",
+        "items": [
+          "Multiple phonetic format support in one tool",
+          "Bidirectional conversion capabilities",
+          "Real-time processing with instant results",
+          "Auto-detection of phonetic formats",
+          "Educational value for language learning",
+          "Accessibility support for communication aids",
+          "Professional IPA symbol accuracy",
+          "Mobile-responsive interface design",
+          "Free unlimited usage with no registration",
+          "Privacy-first processing - no data stored"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What phonetic formats are supported?",
+          "answer": "Our tool supports four main formats: International Phonetic Alphabet (IPA) for accurate pronunciation, Simple letter names (bee, see, dee), Sound-based spelling (simplified pronunciation), and NATO phonetic alphabet (Alpha, Bravo, Charlie) for clear communication."
+        },
+        {
+          "question": "Can I convert phonetic spelling back to regular text?",
+          "answer": "Yes! Our tool supports bidirectional conversion. You can convert regular text to phonetic spelling and also convert phonetic spelling back to regular text. The auto-detection feature helps identify the phonetic format automatically."
+        },
+        {
+          "question": "Is this tool suitable for language learning?",
+          "answer": "Absolutely! Our phonetic spelling generator is perfect for language learning, pronunciation practice, speech therapy, and teaching. The multiple format options cater to different learning styles and educational needs."
+        },
+        {
+          "question": "How accurate is the IPA conversion?",
+          "answer": "Our IPA conversion uses standard International Phonetic Alphabet symbols and follows established pronunciation patterns. While it provides good approximations for common English sounds, complex phonetic analysis may require specialized linguistic tools."
+        },
+        {
+          "question": "Can I use this for professional communication?",
+          "answer": "Yes, especially the NATO phonetic alphabet format which is the international standard for radio communication in aviation, military, and emergency services. It ensures clear communication when audio quality is poor."
+        },
+        {
+          "question": "Does the tool work with uploaded files?",
+          "answer": "Yes, you can upload text files in common formats (.txt, .md, etc.) for batch conversion. This is useful for converting entire documents or educational materials to phonetic spelling."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Communication & Language Tools",
+        "items": [
+          {
+            "name": "NATO Phonetic Alphabet",
+            "description": "Military and aviation phonetic alphabet converter and reference",
+            "href": "/tools/nato-phonetic"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text structure",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Online Notepad",
+            "description": "Simple text editor for preparing content and notes",
+            "href": "/tools/online-notepad"
+          },
+          {
+            "name": "ASCII Art Generator",
+            "description": "Create visual text art and creative typography",
+            "href": "/tools/ascii-art-generator"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор Фонетического Написания - Конвертер в Фонетический Алфавит",
+    "metaDescription": "Конвертируйте текст в фонетическое написание с несколькими форматами, включая IPA, простые названия букв, звуковое написание и фонетический алфавит НАТО. Двунаправленная конвертация для руководств по произношению, изучения языка и четкого общения.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Генератор и Конвертер Фонетического Написания",
+        "content": "Конвертируйте текст в фонетическое написание и обратно с помощью нашего комплексного фонетического генератора. Поддержка нескольких форматов, включая Международный Фонетический Алфавит (IPA), простые названия букв, звуковое написание и фонетический алфавит НАТО. Идеально для руководств по произношению, изучения языка, логопедии и четкого общения в различных контекстах."
+      },
+      "features": {
+        "title": "Продвинутые Функции Фонетической Конвертации",
+        "items": [
+          { "title": "Несколько Фонетических Форматов", "description": "Выберите из IPA, простых названий букв, звукового написания и фонетического алфавита НАТО" },
+          { "title": "Двунаправленная Конвертация", "description": "Конвертируйте текст в фонетическое написание и фонетическое написание обратно в текст без проблем" },
+          { "title": "Автоопределение Формата", "description": "Автоматически определяйте фонетический формат во входном тексте для точной обратной конвертации" },
+          { "title": "Обработка в Реальном Времени", "description": "Мгновенная конвертация при вводе с живым предпросмотром и переключением форматов" },
+          { "title": "Поддержка Символов IPA", "description": "Полная поддержка Международного Фонетического Алфавита для точных руководств по произношению" },
+          { "title": "Интеграция с НАТО Фонетическим", "description": "Военный и авиационный стандарт фонетического алфавита для четкого общения" },
+          { "title": "Звуковое Написание", "description": "Упростите написание на основе фактических паттернов произношения" },
+          { "title": "Образовательная Ценность", "description": "Идеально для изучения языка, практики произношения и логопедии" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Конвертируйте целые документы с возможностями пакетной обработки" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Образования, Общения и Доступности",
+        "description": "Наш генератор фонетического написания служит множеству профессиональных и образовательных целей.",
+        "items": [
+          { "title": "Изучение Языка", "description": "Помогите студентам изучить правильное произношение с фонетическими руководствами" },
+          { "title": "Логопедия", "description": "Создавайте упражнения на произношение и терапевтические материалы" },
+          { "title": "Учебные Инструменты", "description": "Разрабатывайте образовательный контент с четкими руководствами по произношению" },
+          { "title": "Коммуникационные Средства", "description": "Помогайте людям с речевыми трудностями или нарушениями слуха" },
+          { "title": "Радиосвязь", "description": "Используйте фонетический алфавит НАТО для четкой голосовой связи" },
+          { "title": "Лингвистические Исследования", "description": "Анализируйте фонетические паттерны и вариации произношения" },
+          { "title": "Создание Словарей", "description": "Добавляйте фонетические произношения к словарным ресурсам" },
+          { "title": "Поддержка Иностранного Языка", "description": "Помогайте не носителям языка с руководствами по произношению" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор Фонетического Написания",
+        "description": "Следуйте этим простым шагам для конвертации между текстом и форматами фонетического написания.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Выберите Режим Конвертации",
+            "description": "Выберите, конвертировать ли текст в фонетическое написание или фонетическое написание обратно в текст, используя переключатель режима."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Фонетический Формат",
+            "description": "Выберите из IPA, простых названий букв, звукового написания или фонетического алфавита НАТО в зависимости от ваших потребностей."
+          },
+          {
+            "step": 3,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст, или загрузите файл. Наблюдайте конвертацию в реальном времени при вводе."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте Результаты",
+            "description": "Скопируйте конвертированный текст в буфер обмена или скачайте его как файл для будущего использования."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации Фонетического Написания",
+        "description": "Посмотрите, как разные фонетические форматы обрабатывают один и тот же текст для различных случаев использования.",
+        "items": [
+          { "title": "Простой Формат", "input": "привет мир", "output": "пи эр и вэ е тэ / эм и эр", "description": "Произношение названий букв" },
+          { "title": "НАТО Фонетический", "input": "помощь", "output": "Папа Осло Майк Осло Щука Юлия", "description": "Военный/авиационный стандарт" },
+          { "title": "IPA Формат", "input": "кот", "output": "kot", "description": "Международный Фонетический Алфавит" },
+          { "title": "Звуковое", "input": "телефон", "output": "тилифон", "description": "Упрощенное написание произношения" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Генератор Фонетического Написания",
+        "content": "Профессиональная фонетическая конвертация с поддержкой нескольких форматов и образовательными функциями.",
+        "items": [
+          "Поддержка нескольких фонетических форматов в одном инструменте",
+          "Возможности двунаправленной конвертации",
+          "Обработка в реальном времени с мгновенными результатами",
+          "Автоопределение фонетических форматов",
+          "Образовательная ценность для изучения языка",
+          "Поддержка доступности для коммуникационных средств",
+          "Профессиональная точность символов IPA",
+          "Мобильно-адаптивный дизайн интерфейса",
+          "Бесплатное неограниченное использование без регистрации",
+          "Обработка с приоритетом конфиденциальности - данные не сохраняются"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие фонетические форматы поддерживаются?",
+          "answer": "Наш инструмент поддерживает четыре основных формата: Международный Фонетический Алфавит (IPA) для точного произношения, простые названия букв (би, си, ди), звуковое написание (упрощенное произношение) и фонетический алфавит НАТО (Альфа, Браво, Чарли) для четкого общения."
+        },
+        {
+          "question": "Могу ли я конвертировать фонетическое написание обратно в обычный текст?",
+          "answer": "Да! Наш инструмент поддерживает двунаправленную конвертацию. Вы можете конвертировать обычный текст в фонетическое написание, а также конвертировать фонетическое написание обратно в обычный текст. Функция автоопределения помогает автоматически идентифицировать фонетический формат."
+        },
+        {
+          "question": "Подходит ли этот инструмент для изучения языка?",
+          "answer": "Абсолютно! Наш генератор фонетического написания идеально подходит для изучения языка, практики произношения, логопедии и обучения. Несколько вариантов форматов подходят для разных стилей обучения и образовательных потребностей."
+        },
+        {
+          "question": "Насколько точна конвертация IPA?",
+          "answer": "Наша конвертация IPA использует стандартные символы Международного Фонетического Алфавита и следует установленным паттернам произношения. Хотя это обеспечивает хорошие приближения для распространенных английских звуков, сложный фонетический анализ может потребовать специализированных лингвистических инструментов."
+        },
+        {
+          "question": "Могу ли я использовать это для профессионального общения?",
+          "answer": "Да, особенно формат фонетического алфавита НАТО, который является международным стандартом для радиосвязи в авиации, военной сфере и службах экстренного реагирования. Он обеспечивает четкое общение при плохом качестве звука."
+        },
+        {
+          "question": "Работает ли инструмент с загруженными файлами?",
+          "answer": "Да, вы можете загружать текстовые файлы в распространенных форматах (.txt, .md и т.д.) для пакетной конвертации. Это полезно для конвертации целых документов или образовательных материалов в фонетическое написание."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Общения и Языка",
+        "items": [
+          {
+            "name": "Фонетический Алфавит НАТО",
+            "description": "Конвертер и справочник военного и авиационного фонетического алфавита",
+            "href": "/tools/nato-phonetic"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Считайте символы, слова и анализируйте структуру текста",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Онлайн Блокнот",
+            "description": "Простой текстовый редактор для подготовки контента и заметок",
+            "href": "/tools/online-notepad"
+          },
+          {
+            "name": "Генератор ASCII Арт",
+            "description": "Создавайте визуальные текстовые рисунки и креативную типографику",
+            "href": "/tools/ascii-art-generator"
+          }
+        ]
+      }
+    }
+  }
+}

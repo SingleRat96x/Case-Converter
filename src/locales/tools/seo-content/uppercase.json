@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Free Online Uppercase Text Converter Tool",
+    "metaDescription": "Convert any text to uppercase letters instantly with our free online uppercase converter. Perfect for headings, emphasis, coding standards, and professional formatting needs.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Uppercase Text Converter Tool",
+        "content": "Transform any text to uppercase letters instantly with our powerful and free uppercase converter tool. Perfect for creating headings, emphasis text, meeting coding standards, or any formatting requirements that need ALL CAPS text."
+      },
+      "features": {
+        "title": "Powerful Uppercase Conversion Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time uppercase conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to uppercase" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Uppercase Text Conversion",
+        "description": "Uppercase text serves many important purposes across different contexts and industries.",
+        "items": [
+          { "title": "Headlines & Titles", "description": "Create impactful headers and attention-grabbing headlines" },
+          { "title": "Coding Standards", "description": "Convert constants, enums, and configuration values to uppercase" },
+          { "title": "Legal Documents", "description": "Format important sections and disclaimers in legal text" },
+          { "title": "Warning Messages", "description": "Make alerts and warnings more visible and urgent" },
+          { "title": "Brand Names", "description": "Format company names and acronyms consistently" },
+          { "title": "Database Fields", "description": "Standardize data entry and database column names" },
+          { "title": "Email Subjects", "description": "Create emphasis in email marketing campaigns" },
+          { "title": "Social Media", "description": "Add emphasis to social media posts and captions" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Text to Uppercase",
+        "description": "Follow these simple steps to convert your text to uppercase format.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Automatic Conversion",
+            "description": "Watch as your text is instantly converted to uppercase letters in real-time."
+          },
+          {
+            "step": 3,
+            "title": "Review Analytics",
+            "description": "Check the text statistics including character count, word count, and more."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the uppercase text to your clipboard or download it as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Uppercase Conversion Examples",
+        "description": "See how different types of text are converted to uppercase format.",
+        "items": [
+          { "title": "Simple Text", "input": "hello world", "output": "HELLO WORLD" },
+          { "title": "Mixed Case", "input": "ThIs Is MiXeD cAsE", "output": "THIS IS MIXED CASE" },
+          { "title": "With Numbers", "input": "version 2.5.1", "output": "VERSION 2.5.1" },
+          { "title": "Special Characters", "input": "hello@example.com", "output": "HELLO@EXAMPLE.COM" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Uppercase Converter",
+        "content": "Professional uppercase conversion with comprehensive features and analytics.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and characters"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is uppercase text conversion?",
+          "answer": "Uppercase conversion transforms all letters in your text to capital letters (A-Z). This is also known as ALL CAPS formatting, commonly used for emphasis, headings, and coding standards."
+        },
+        {
+          "question": "Does the tool work with non-English text?",
+          "answer": "Yes, our uppercase converter works with all languages and character sets, including accented characters, special symbols, and Unicode text from any language."
+        },
+        {
+          "question": "Can I convert entire files to uppercase?",
+          "answer": "Absolutely! You can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and convert their entire content to uppercase format."
+        },
+        {
+          "question": "Is my text data safe and private?",
+          "answer": "Yes, all text conversion happens locally in your browser. Your text is never uploaded to our servers or shared with anyone. Complete privacy guaranteed."
+        },
+        {
+          "question": "What file formats can I upload?",
+          "answer": "You can upload various text-based file formats including .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html and other plain text files."
+        },
+        {
+          "question": "Are numbers and special characters affected?",
+          "answer": "Numbers and special characters remain unchanged during uppercase conversion. Only alphabetic characters (letters) are converted to their uppercase equivalents."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Case Conversion Tools",
+        "items": [
+          {
+            "name": "Lowercase Converter",
+            "description": "Convert text to lowercase letters for consistency and formatting",
+            "href": "/tools/lowercase"
+          },
+          {
+            "name": "Title Case Converter",
+            "description": "Convert text to proper title case with capitalized first letters",
+            "href": "/tools/title-case"
+          },
+          {
+            "name": "Sentence Case Converter",
+            "description": "Convert text to sentence case with proper grammar formatting",
+            "href": "/tools/sentence-case"
+          },
+          {
+            "name": "Alternating Case Converter",
+            "description": "Create alternating case text for creative and stylistic purposes",
+            "href": "/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Конвертер Текста в Верхний Регистр",
+    "metaDescription": "Мгновенно конвертируйте любой текст в верхний регистр с помощью нашего бесплатного онлайн конвертера. Идеально для заголовков, выделения, стандартов кодирования и профессионального форматирования.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Конвертер Текста в Верхний Регистр",
+        "content": "Мгновенно преобразуйте любой текст в верхний регистр с помощью нашего мощного и бесплатного инструмента конвертации. Идеально для создания заголовков, выделения текста, соблюдения стандартов кодирования или любых требований форматирования, требующих текст ЗАГЛАВНЫМИ БУКВАМИ."
+      },
+      "features": {
+        "title": "Мощные Функции Конвертации в Верхний Регистр",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в верхний регистр в реальном времени при вводе или вставке текста" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в верхний регистр" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем конвертированном тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и специальными символами" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся конвертация происходит локально—данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Конвертацию в Верхний Регистр",
+        "description": "Текст в верхнем регистре служит многим важным целям в различных контекстах и отраслях.",
+        "items": [
+          { "title": "Заголовки и Титулы", "description": "Создавайте впечатляющие заголовки и привлекающие внимание headlines" },
+          { "title": "Стандарты Кодирования", "description": "Конвертируйте константы, перечисления и значения конфигурации в верхний регистр" },
+          { "title": "Юридические Документы", "description": "Форматируйте важные разделы и отказы от ответственности в юридическом тексте" },
+          { "title": "Предупреждающие Сообщения", "description": "Делайте оповещения и предупреждения более заметными и срочными" },
+          { "title": "Названия Брендов", "description": "Форматируйте названия компаний и аббревиатуры последовательно" },
+          { "title": "Поля Базы Данных", "description": "Стандартизируйте ввод данных и названия столбцов базы данных" },
+          { "title": "Темы Электронной Почты", "description": "Создавайте акценты в кампаниях email-маркетинга" },
+          { "title": "Социальные Сети", "description": "Добавляйте акценты к постам и подписям в социальных сетях" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Текст в Верхний Регистр",
+        "description": "Следуйте этим простым шагам, чтобы конвертировать ваш текст в формат верхнего регистра.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Автоматическая Конвертация",
+            "description": "Наблюдайте, как ваш текст мгновенно конвертируется в верхний регистр в реальном времени."
+          },
+          {
+            "step": 3,
+            "title": "Просмотр Аналитики",
+            "description": "Проверьте статистику текста, включая количество символов, слов и многое другое."
+          },
+          {
+            "step": 4,
+            "title": "Копирование или Скачивание",
+            "description": "Скопируйте текст в верхнем регистре в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации в Верхний Регистр",
+        "description": "Посмотрите, как различные типы текста конвертируются в формат верхнего регистра.",
+        "items": [
+          { "title": "Простой Текст", "input": "привет мир", "output": "ПРИВЕТ МИР" },
+          { "title": "Смешанный Регистр", "input": "ЭтО СмЕшАнНыЙ рЕгИсТр", "output": "ЭТО СМЕШАННЫЙ РЕГИСТР" },
+          { "title": "С Числами", "input": "версия 2.5.1", "output": "ВЕРСИЯ 2.5.1" },
+          { "title": "Специальные Символы", "input": "привет@example.com", "output": "ПРИВЕТ@EXAMPLE.COM" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конвертер в Верхний Регистр",
+        "content": "Профессиональная конвертация в верхний регистр с комплексными функциями и аналитикой.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени при вводе",
+          "Включена подробная аналитика текста",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Работает со всеми языками и символами"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое конвертация текста в верхний регистр?",
+          "answer": "Конвертация в верхний регистр преобразует все буквы в вашем тексте в заглавные буквы (А-Я). Это также известно как форматирование ЗАГЛАВНЫМИ БУКВАМИ, обычно используемое для выделения, заголовков и стандартов кодирования."
+        },
+        {
+          "question": "Работает ли инструмент с не-русским текстом?",
+          "answer": "Да, наш конвертер в верхний регистр работает со всеми языками и наборами символов, включая буквы с диакритическими знаками, специальные символы и Unicode текст любого языка."
+        },
+        {
+          "question": "Могу ли я конвертировать целые файлы в верхний регистр?",
+          "answer": "Абсолютно! Вы можете загружать текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и конвертировать их полное содержимое в формат верхнего регистра."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные и конфиденциальны?",
+          "answer": "Да, вся конвертация текста происходит локально в вашем браузере. Ваш текст никогда не загружается на наши серверы и не передается кому-либо. Полная конфиденциальность гарантирована."
+        },
+        {
+          "question": "Какие форматы файлов я могу загружать?",
+          "answer": "Вы можете загружать различные текстовые форматы файлов, включая .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие файлы с обычным текстом."
+        },
+        {
+          "question": "Влияют ли числа и специальные символы?",
+          "answer": "Числа и специальные символы остаются неизменными во время конвертации в верхний регистр. Только алфавитные символы (буквы) конвертируются в их эквиваленты в верхнем регистре."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Конвертации Регистра Текста",
+        "items": [
+          {
+            "name": "Конвертер в Нижний Регистр",
+            "description": "Конвертируйте текст в нижний регистр для последовательности и форматирования",
+            "href": "/ru/tools/lowercase"
+          },
+          {
+            "name": "Конвертер в Заглавный Регистр",
+            "description": "Конвертируйте текст в правильный заглавный регистр с заглавными первыми буквами",
+            "href": "/ru/tools/title-case"
+          },
+          {
+            "name": "Конвертер в Регистр Предложения",
+            "description": "Конвертируйте текст в регистр предложения с правильным грамматическим форматированием",
+            "href": "/ru/tools/sentence-case"
+          },
+          {
+            "name": "Конвертер в Чередующийся Регистр",
+            "description": "Создавайте текст в чередующемся регистре для творческих и стилистических целей",
+            "href": "/ru/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  }
+}

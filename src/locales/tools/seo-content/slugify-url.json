@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free URL Slug Generator - SEO-Friendly URL Creator Tool",
+    "metaDescription": "Generate SEO-friendly URL slugs from text instantly. Free online slug generator with customizable separators, length limits, and advanced options for clean, readable URLs.",
+    "sections": {
+      "intro": {
+        "title": "Free URL Slug Generator - SEO-Friendly URL Creator Tool",
+        "content": "Create clean, SEO-optimized URL slugs from any text with our comprehensive slug generator. Features customizable separators, length limits, stop word removal, and bidirectional conversion. Perfect for blog posts, product pages, and creating readable, search-engine-friendly URLs that improve your site's SEO performance."
+      },
+      "features": {
+        "title": "Advanced URL Slug Generation Features",
+        "items": [
+          {
+            "title": "Bidirectional Conversion",
+            "description": "Convert text to URL slugs and humanize existing slugs back to readable text with instant mode switching."
+          },
+          {
+            "title": "Customizable Separators",
+            "description": "Choose between hyphens (-), underscores (_), or dots (.) as separators to match your URL structure preferences."
+          },
+          {
+            "title": "Length Control",
+            "description": "Set maximum slug length (50-150 characters) with smart word boundary detection to prevent cutting words mid-way."
+          },
+          {
+            "title": "SEO Optimization",
+            "description": "Built-in SEO scoring system that evaluates slug quality based on length, word count, and character composition."
+          },
+          {
+            "title": "Advanced Processing",
+            "description": "Remove stop words, preserve numbers, handle special characters, and transliterate international text automatically."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Monitor input/output length, word count, compression ratio, separator usage, and SEO score in real-time."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for URL Slug Generation",
+        "description": "Create professional, SEO-friendly URLs for various web content and applications.",
+        "items": [
+          {
+            "title": "Blog Post URLs",
+            "description": "Generate clean, readable URLs for blog articles that improve SEO rankings and user experience."
+          },
+          {
+            "title": "Product Page URLs",
+            "description": "Create descriptive product URLs for e-commerce sites that include key product information and improve searchability."
+          },
+          {
+            "title": "Content Management",
+            "description": "Automatically generate URL-safe slugs for CMS content, ensuring consistent URL structure across your site."
+          },
+          {
+            "title": "API Endpoints",
+            "description": "Create clean, predictable API endpoint names and resource identifiers for RESTful web services."
+          },
+          {
+            "title": "File Organization",
+            "description": "Generate consistent file and folder names for web assets, documents, and media files."
+          },
+          {
+            "title": "Social Media",
+            "description": "Create shareable, readable URLs for social media posts and campaigns that look professional and trustworthy."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the URL Slug Generator",
+        "description": "Follow these simple steps to create perfect URL slugs for your content.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste the text you want to convert into a URL slug, such as a blog title or product name."
+          },
+          {
+            "step": 2,
+            "title": "Configure Options",
+            "description": "Choose your preferred separator, set maximum length, and enable processing options like stop word removal."
+          },
+          {
+            "step": 3,
+            "title": "Generate Slug",
+            "description": "The tool automatically creates an optimized URL slug with real-time SEO scoring and analytics."
+          },
+          {
+            "step": 4,
+            "title": "Copy & Use",
+            "description": "Copy the generated slug and use it in your URLs, or switch to humanize mode to convert slugs back to text."
+          }
+        ]
+      },
+      "examples": {
+        "title": "URL Slug Generation Examples",
+        "description": "See how different types of text are converted into clean, SEO-friendly URL slugs.",
+        "items": [
+          {
+            "title": "Blog Post Title",
+            "input": "How to Build a Modern Web Application in 2024",
+            "output": "how-to-build-modern-web-application-2024"
+          },
+          {
+            "title": "Product Name",
+            "input": "iPhone 15 Pro Max - 256GB Space Black",
+            "output": "iphone-15-pro-max-256gb-space-black"
+          },
+          {
+            "title": "Article with Special Characters",
+            "input": "The Ultimate Guide to SEO & Content Marketing!",
+            "output": "ultimate-guide-seo-content-marketing"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our URL Slug Generator",
+        "content": "Professional URL slug generation with advanced SEO optimization and customization options.",
+        "items": [
+          "Instant slug generation with real-time preview",
+          "Multiple separator options for different URL styles",
+          "Smart length control with word boundary detection",
+          "Built-in SEO scoring and optimization suggestions",
+          "Stop word removal for cleaner, shorter URLs",
+          "International character transliteration support",
+          "Bidirectional conversion (slug to text and back)",
+          "Privacy-focused - all processing happens locally"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What makes a good URL slug?",
+          "answer": "A good URL slug is 3-5 words long, uses hyphens as separators, contains relevant keywords, avoids stop words, and stays under 60 characters. Our tool automatically optimizes for these factors and provides an SEO score."
+        },
+        {
+          "question": "Should I use hyphens or underscores in URL slugs?",
+          "answer": "Hyphens (-) are recommended by Google and most SEO experts because search engines treat them as word separators. Underscores (_) are treated as word joiners, which can hurt SEO. Our tool defaults to hyphens for optimal SEO."
+        },
+        {
+          "question": "How long should a URL slug be?",
+          "answer": "Optimal URL slugs are 30-60 characters long with 3-5 words. Longer slugs may be truncated in search results and are harder to remember. Our tool provides length control and SEO scoring to help you find the perfect balance."
+        },
+        {
+          "question": "Can the tool handle international characters?",
+          "answer": "Yes! Our tool automatically transliterates international characters (like accented letters and Cyrillic text) into URL-safe ASCII characters while preserving readability and meaning."
+        },
+        {
+          "question": "What are stop words and should I remove them?",
+          "answer": "Stop words are common words like 'the', 'and', 'of' that don't add SEO value. Removing them creates shorter, more focused URLs. Our tool can automatically remove stop words while preserving important context."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related URL and Text Tools",
+        "items": [
+          {
+            "name": "URL Converter",
+            "description": "Encode and decode URLs with percent encoding",
+            "href": "/tools/url-converter"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text statistics",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Lowercase Converter",
+            "description": "Convert text to lowercase for consistent formatting",
+            "href": "/tools/lowercase"
+          },
+          {
+            "name": "Remove Text Formatting",
+            "description": "Clean and remove formatting from text",
+            "href": "/tools/remove-text-formatting"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Генератор URL Слагов - Инструмент Создания SEO-Дружественных URL",
+    "metaDescription": "Генерируйте SEO-дружественные URL слаги из текста мгновенно. Бесплатный онлайн генератор слагов с настраиваемыми разделителями, ограничениями длины и расширенными опциями для чистых, читаемых URL.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор URL Слагов - Инструмент Создания SEO-Дружественных URL",
+        "content": "Создавайте чистые, SEO-оптимизированные URL слаги из любого текста с нашим комплексным генератором слагов. Включает настраиваемые разделители, ограничения длины, удаление стоп-слов и двунаправленную конвертацию. Идеально для постов блога, страниц товаров и создания читаемых, дружественных к поисковым системам URL, которые улучшают SEO производительность вашего сайта."
+      },
+      "features": {
+        "title": "Расширенные Возможности Генерации URL Слагов",
+        "items": [
+          {
+            "title": "Двунаправленная Конвертация",
+            "description": "Конвертируйте текст в URL слаги и гуманизируйте существующие слаги обратно в читаемый текст с мгновенным переключением режимов."
+          },
+          {
+            "title": "Настраиваемые Разделители",
+            "description": "Выбирайте между дефисами (-), подчеркиваниями (_) или точками (.) в качестве разделителей для соответствия предпочтениям структуры URL."
+          },
+          {
+            "title": "Контроль Длины",
+            "description": "Устанавливайте максимальную длину слага (50-150 символов) с умным определением границ слов для предотвращения разрезания слов посередине."
+          },
+          {
+            "title": "SEO Оптимизация",
+            "description": "Встроенная система оценки SEO, которая оценивает качество слага на основе длины, количества слов и состава символов."
+          },
+          {
+            "title": "Расширенная Обработка",
+            "description": "Удаляйте стоп-слова, сохраняйте цифры, обрабатывайте специальные символы и автоматически транслитерируйте международный текст."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Отслеживайте длину ввода/вывода, количество слов, коэффициент сжатия, использование разделителей и SEO оценку в реальном времени."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения Генерации URL Слагов",
+        "description": "Создавайте профессиональные, SEO-дружественные URL для различного веб-контента и приложений.",
+        "items": [
+          {
+            "title": "URL Постов Блога",
+            "description": "Генерируйте чистые, читаемые URL для статей блога, которые улучшают SEO рейтинги и пользовательский опыт."
+          },
+          {
+            "title": "URL Страниц Товаров",
+            "description": "Создавайте описательные URL товаров для сайтов электронной коммерции, которые включают ключевую информацию о товаре и улучшают поисковость."
+          },
+          {
+            "title": "Управление Контентом",
+            "description": "Автоматически генерируйте URL-безопасные слаги для контента CMS, обеспечивая последовательную структуру URL по всему сайту."
+          },
+          {
+            "title": "API Эндпоинты",
+            "description": "Создавайте чистые, предсказуемые имена API эндпоинтов и идентификаторы ресурсов для RESTful веб-сервисов."
+          },
+          {
+            "title": "Организация Файлов",
+            "description": "Генерируйте последовательные имена файлов и папок для веб-ресурсов, документов и медиа файлов."
+          },
+          {
+            "title": "Социальные Медиа",
+            "description": "Создавайте делимые, читаемые URL для постов в социальных сетях и кампаний, которые выглядят профессионально и заслуживают доверия."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор URL Слагов",
+        "description": "Следуйте этим простым шагам для создания идеальных URL слагов для вашего контента.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Введите или вставьте текст, который вы хотите конвертировать в URL слаг, например заголовок блога или название товара."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции",
+            "description": "Выберите предпочитаемый разделитель, установите максимальную длину и включите опции обработки, такие как удаление стоп-слов."
+          },
+          {
+            "step": 3,
+            "title": "Генерируйте Слаг",
+            "description": "Инструмент автоматически создает оптимизированный URL слаг с оценкой SEO и аналитикой в реальном времени."
+          },
+          {
+            "step": 4,
+            "title": "Копируйте и Используйте",
+            "description": "Скопируйте сгенерированный слаг и используйте его в ваших URL, или переключитесь в режим гуманизации для конвертации слагов обратно в текст."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации URL Слагов",
+        "description": "Посмотрите, как различные типы текста конвертируются в чистые, SEO-дружественные URL слаги.",
+        "items": [
+          {
+            "title": "Заголовок Поста Блога",
+            "input": "Как Создать Современное Веб-Приложение в 2024",
+            "output": "kak-sozdat-sovremennoe-veb-prilozhenie-2024"
+          },
+          {
+            "title": "Название Товара",
+            "input": "iPhone 15 Pro Max - 256ГБ Космический Черный",
+            "output": "iphone-15-pro-max-256gb-kosmicheskiy-chernyy"
+          },
+          {
+            "title": "Статья со Специальными Символами",
+            "input": "Полное Руководство по SEO и Контент-Маркетингу!",
+            "output": "polnoe-rukovodstvo-seo-kontent-marketingu"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор URL Слагов",
+        "content": "Профессиональная генерация URL слагов с расширенной SEO оптимизацией и опциями настройки.",
+        "items": [
+          "Мгновенная генерация слагов с предварительным просмотром в реальном времени",
+          "Множественные опции разделителей для различных стилей URL",
+          "Умный контроль длины с определением границ слов",
+          "Встроенная оценка SEO и предложения по оптимизации",
+          "Удаление стоп-слов для более чистых, коротких URL",
+          "Поддержка транслитерации международных символов",
+          "Двунаправленная конвертация (слаг в текст и обратно)",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что делает хороший URL слаг?",
+          "answer": "Хороший URL слаг состоит из 3-5 слов, использует дефисы в качестве разделителей, содержит релевантные ключевые слова, избегает стоп-слов и остается под 60 символами. Наш инструмент автоматически оптимизирует для этих факторов и предоставляет SEO оценку."
+        },
+        {
+          "question": "Следует ли использовать дефисы или подчеркивания в URL слагах?",
+          "answer": "Дефисы (-) рекомендуются Google и большинством SEO экспертов, потому что поисковые системы рассматривают их как разделители слов. Подчеркивания (_) рассматриваются как соединители слов, что может навредить SEO. Наш инструмент по умолчанию использует дефисы для оптимального SEO."
+        },
+        {
+          "question": "Какой длины должен быть URL слаг?",
+          "answer": "Оптимальные URL слаги имеют длину 30-60 символов с 3-5 словами. Более длинные слаги могут быть обрезаны в результатах поиска и их труднее запомнить. Наш инструмент предоставляет контроль длины и SEO оценку, чтобы помочь найти идеальный баланс."
+        },
+        {
+          "question": "Может ли инструмент обрабатывать международные символы?",
+          "answer": "Да! Наш инструмент автоматически транслитерирует международные символы (такие как символы с диакритикой и кириллический текст) в URL-безопасные ASCII символы, сохраняя читаемость и смысл."
+        },
+        {
+          "question": "Что такое стоп-слова и следует ли их удалять?",
+          "answer": "Стоп-слова - это обычные слова, такие как 'the', 'and', 'of', которые не добавляют SEO ценности. Их удаление создает более короткие, более сфокусированные URL. Наш инструмент может автоматически удалять стоп-слова, сохраняя важный контекст."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные URL и Текстовые Инструменты",
+        "items": [
+          {
+            "name": "URL Конвертер",
+            "description": "Кодируйте и декодируйте URL с процентным кодированием",
+            "href": "/ru/tools/url-converter"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Считайте символы, слова и анализируйте статистику текста",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Конвертер в Нижний Регистр",
+            "description": "Конвертируйте текст в нижний регистр для последовательного форматирования",
+            "href": "/ru/tools/lowercase"
+          },
+          {
+            "name": "Удаление Форматирования Текста",
+            "description": "Очищайте и удаляйте форматирование из текста",
+            "href": "/ru/tools/remove-text-formatting"
+          }
+        ]
+      }
+    }
+  }
+}

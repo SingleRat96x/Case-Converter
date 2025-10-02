@@ -1,0 +1,268 @@
+{
+  "en": {
+    "title": "Invisible Text Generator Tool - Zero-Width Characters",
+    "metaDescription": "Generate invisible text using zero-width characters and Unicode. Create steganographic text, hidden messages, and whitespace characters for special formatting needs.",
+    "sections": {
+      "intro": {
+        "title": "Invisible Text Generator Tool",
+        "content": "Generate invisible text using zero-width characters and Unicode invisible characters. Perfect for steganography, hidden messages, special formatting, or creating text that appears empty but contains hidden data. Our tool supports multiple methods for creating truly invisible text."
+      },
+      "features": {
+        "title": "Invisible Text Generation Features",
+        "items": [
+          { "title": "Zero-Width Characters", "description": "Insert zero-width spaces, joiners, and non-joiners between text characters" },
+          { "title": "Unicode Invisible", "description": "Use function application and invisible operators from Unicode" },
+          { "title": "Character Statistics", "description": "Track visible, invisible, and total character counts in real-time" },
+          { "title": "Method Selection", "description": "Choose between zero-width and Unicode invisible character methods" },
+          { "title": "Real-time Preview", "description": "See character counts update as you type or change methods" },
+          { "title": "Direct Copy", "description": "Copy invisible text directly with one click" },
+          { "title": "File Upload", "description": "Process text files to add invisible characters" },
+          { "title": "Download Results", "description": "Save invisible text as files for later use" },
+          { "title": "Cross-Platform", "description": "Works across all platforms and text editors" }
+        ]
+      },
+      "useCases": {
+        "title": "Creative Uses for Invisible Text",
+        "description": "Invisible text has various legitimate applications in digital content and formatting.",
+        "items": [
+          { "title": "Steganography", "description": "Hide messages within seemingly normal text" },
+          { "title": "Text Formatting", "description": "Create precise spacing in web content and documents" },
+          { "title": "Data Analysis", "description": "Add invisible markers for tracking and analysis" },
+          { "title": "Unicode Testing", "description": "Test how systems handle invisible Unicode characters" },
+          { "title": "Typography", "description": "Fine-tune text layout with invisible spacers" },
+          { "title": "Web Development", "description": "Create invisible separators in HTML content" },
+          { "title": "Document Security", "description": "Add invisible watermarks to text documents" },
+          { "title": "Research", "description": "Study text processing and character handling systems" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Generate Invisible Text",
+        "description": "Follow these steps to create text with invisible characters.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input field, or upload a text file."
+          },
+          {
+            "step": 2,
+            "title": "Choose Method", 
+            "description": "Select between Zero-Width or Unicode invisible character methods."
+          },
+          {
+            "step": 3,
+            "title": "View Statistics",
+            "description": "Monitor visible, invisible, and total character counts in real-time."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the invisible text directly or download it as a file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Invisible Text Examples",
+        "description": "See how invisible characters work with different text types.",
+        "items": [
+          { "title": "Simple Text", "input": "Hello World", "output": "H‌e‍l‌l‍o W‌o‍r‌l‍d (with invisible chars)" },
+          { "title": "Numbers", "input": "12345", "output": "1‌2‍3‌4‍5 (with zero-width spaces)" },
+          { "title": "Email Address", "input": "user@example.com", "output": "Invisible characters between each letter" },
+          { "title": "Code Snippet", "input": "function()", "output": "Hidden characters for steganography" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Invisible Text Generator",
+        "content": "Professional invisible text generation with multiple methods and detailed analytics.",
+        "items": [
+          "Two different invisible character methods",
+          "Real-time character count statistics",
+          "Copy invisible text with one click",
+          "File upload and download support",
+          "Works with all Unicode text",
+          "No registration required - completely free"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What are zero-width characters?",
+          "answer": "Zero-width characters are Unicode characters that take up no visual space but are still present in text. They include zero-width space (U+200B), zero-width non-joiner (U+200C), and zero-width joiner (U+200D)."
+        },
+        {
+          "question": "Are invisible characters safe to use?",
+          "answer": "Yes, invisible characters are standard Unicode characters. However, be aware that some systems may filter them out or display them differently."
+        },
+        {
+          "question": "Can invisible text be detected?",
+          "answer": "Yes, invisible characters can be detected by examining the Unicode codepoints or using text analysis tools. They're not truly hidden, just visually invisible."
+        },
+        {
+          "question": "Will invisible text work in all applications?",
+          "answer": "Most modern applications and browsers support invisible Unicode characters, but behavior may vary. Some applications may filter or normalize these characters."
+        },
+        {
+          "question": "What's the difference between the two methods?",
+          "answer": "Zero-width method uses spaces and joiners, while Unicode method uses function application operators. Both create invisible text but with different character codes."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Generation Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text statistics",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Unicode Converter", 
+            "description": "Convert text to Unicode escape sequences",
+            "href": "/tools/unicode-converter"
+          },
+          {
+            "name": "Text Encoder",
+            "description": "Encode and decode text in various formats",
+            "href": "/tools/text-encoder"
+          },
+          {
+            "name": "Binary Translator",
+            "description": "Convert text to binary and back",
+            "href": "/tools/binary-code-translator"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Генератор Невидимого Текста - Символы Нулевой Ширины",
+    "metaDescription": "Генерируйте невидимый текст, используя символы нулевой ширины и Unicode. Создавайте стеганографический текст, скрытые сообщения и пробельные символы для специального форматирования.",
+    "sections": {
+      "intro": {
+        "title": "Генератор Невидимого Текста",
+        "content": "Генерируйте невидимый текст, используя символы нулевой ширины и невидимые символы Unicode. Идеально для стеганографии, скрытых сообщений, специального форматирования или создания текста, который выглядит пустым, но содержит скрытые данные."
+      },
+      "features": {
+        "title": "Функции Генерации Невидимого Текста",
+        "items": [
+          { "title": "Символы Нулевой Ширины", "description": "Вставляйте пробелы, соединители и разделители нулевой ширины между символами" },
+          { "title": "Unicode Невидимые", "description": "Используйте функциональные приложения и невидимые операторы из Unicode" },
+          { "title": "Статистика Символов", "description": "Отслеживайте видимые, невидимые и общие счетчики символов в реальном времени" },
+          { "title": "Выбор Метода", "description": "Выбирайте между методами нулевой ширины и невидимых символов Unicode" },
+          { "title": "Предварительный Просмотр", "description": "Видите обновления счетчиков при вводе или смене методов" },
+          { "title": "Прямое Копирование", "description": "Копируйте невидимый текст одним кликом" },
+          { "title": "Загрузка Файлов", "description": "Обрабатывайте текстовые файлы для добавления невидимых символов" },
+          { "title": "Скачивание Результатов", "description": "Сохраняйте невидимый текст в файлы для дальнейшего использования" },
+          { "title": "Кросс-Платформенность", "description": "Работает на всех платформах и текстовых редакторах" }
+        ]
+      },
+      "useCases": {
+        "title": "Творческое Использование Невидимого Текста",
+        "description": "Невидимый текст имеет различные законные применения в цифровом контенте и форматировании.",
+        "items": [
+          { "title": "Стеганография", "description": "Скрывайте сообщения в обычном на вид тексте" },
+          { "title": "Форматирование Текста", "description": "Создавайте точные интервалы в веб-контенте и документах" },
+          { "title": "Анализ Данных", "description": "Добавляйте невидимые маркеры для отслеживания и анализа" },
+          { "title": "Тестирование Unicode", "description": "Тестируйте, как системы обрабатывают невидимые символы Unicode" },
+          { "title": "Типография", "description": "Тонко настраивайте макет текста с невидимыми разделителями" },
+          { "title": "Веб-Разработка", "description": "Создавайте невидимые разделители в HTML-контенте" },
+          { "title": "Безопасность Документов", "description": "Добавляйте невидимые водяные знаки в текстовые документы" },
+          { "title": "Исследования", "description": "Изучайте обработку текста и системы обработки символов" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Генерировать Невидимый Текст",
+        "description": "Следуйте этим шагам для создания текста с невидимыми символами.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Наберите или вставьте ваш текст в поле ввода, или загрузите текстовый файл."
+          },
+          {
+            "step": 2,
+            "title": "Выберите Метод", 
+            "description": "Выберите между методами символов нулевой ширины или невидимых символов Unicode."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Статистику",
+            "description": "Отслеживайте количество видимых, невидимых и общих символов в реальном времени."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте невидимый текст напрямую или скачайте его как файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Невидимого Текста",
+        "description": "Посмотрите, как невидимые символы работают с разными типами текста.",
+        "items": [
+          { "title": "Простой Текст", "input": "Привет Мир", "output": "П‌р‍и‌в‍е‌т М‍и‌р (с невидимыми символами)" },
+          { "title": "Числа", "input": "12345", "output": "1‌2‍3‌4‍5 (с пробелами нулевой ширины)" },
+          { "title": "Email Адрес", "input": "user@example.com", "output": "Невидимые символы между каждой буквой" },
+          { "title": "Код", "input": "function()", "output": "Скрытые символы для стеганографии" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Генератор Невидимого Текста",
+        "content": "Профессиональная генерация невидимого текста с множественными методами и подробной аналитикой.",
+        "items": [
+          "Два разных метода невидимых символов",
+          "Статистика подсчета символов в реальном времени",
+          "Копирование невидимого текста одним кликом",
+          "Поддержка загрузки и скачивания файлов",
+          "Работает со всем Unicode текстом",
+          "Не требует регистрации - полностью бесплатно"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое символы нулевой ширины?",
+          "answer": "Символы нулевой ширины - это Unicode символы, которые не занимают визуального пространства, но все еще присутствуют в тексте. Они включают пробел нулевой ширины (U+200B), не-соединитель нулевой ширины (U+200C) и соединитель нулевой ширины (U+200D)."
+        },
+        {
+          "question": "Безопасно ли использовать невидимые символы?",
+          "answer": "Да, невидимые символы - это стандартные символы Unicode. Однако помните, что некоторые системы могут их фильтровать или отображать по-разному."
+        },
+        {
+          "question": "Можно ли обнаружить невидимый текст?",
+          "answer": "Да, невидимые символы можно обнаружить, проверив Unicode кодовые точки или используя инструменты анализа текста. Они не по-настоящему скрыты, а только визуально невидимы."
+        },
+        {
+          "question": "Будет ли невидимый текст работать во всех приложениях?",
+          "answer": "Большинство современных приложений и браузеров поддерживают невидимые символы Unicode, но поведение может отличаться. Некоторые приложения могут фильтровать или нормализовать эти символы."
+        },
+        {
+          "question": "В чем разница между двумя методами?",
+          "answer": "Метод нулевой ширины использует пробелы и соединители, в то время как метод Unicode использует операторы функциональных приложений. Оба создают невидимый текст, но с разными символьными кодами."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Генерации Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитывайте символы, слова и анализируйте статистику текста",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Конвертер Unicode", 
+            "description": "Конвертируйте текст в escape-последовательности Unicode",
+            "href": "/tools/unicode-converter"
+          },
+          {
+            "name": "Кодировщик Текста",
+            "description": "Кодируйте и декодируйте текст в различных форматах",
+            "href": "/tools/text-encoder"
+          },
+          {
+            "name": "Переводчик Двоичного Кода",
+            "description": "Конвертируйте текст в двоичный код и обратно",
+            "href": "/tools/binary-code-translator"
+          }
+        ]
+      }
+    }
+  }
+}

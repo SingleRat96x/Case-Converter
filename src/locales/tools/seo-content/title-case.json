@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Free Online Title Case Converter Tool - Proper Title Capitalization",
+    "metaDescription": "Convert any text to proper title case instantly with our free online title case converter. Perfect for headings, book titles, article headlines, and professional formatting needs.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Title Case Converter Tool - Proper Title Capitalization",
+        "content": "Transform any text to proper title case formatting instantly with our powerful and free title case converter tool. Perfect for creating professional headings, book titles, article headlines, or any content that requires proper capitalization standards."
+      },
+      "features": {
+        "title": "Powerful Title Case Conversion Features",
+        "items": [
+          { "title": "Instant Conversion", "description": "Real-time title case conversion as you type or paste text" },
+          { "title": "File Upload Support", "description": "Upload text files and convert entire documents to title case" },
+          { "title": "Copy & Download", "description": "Easily copy results or download as text files" },
+          { "title": "Text Analytics", "description": "Get detailed statistics about your converted text" },
+          { "title": "Unicode Support", "description": "Works with all languages and special characters" },
+          { "title": "Privacy-First", "description": "All conversion happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Title Case Conversion",
+        "description": "Title case formatting serves many important purposes across different content types and professional contexts.",
+        "items": [
+          { "title": "Article Headlines", "description": "Format blog post titles and news article headlines professionally" },
+          { "title": "Book & Movie Titles", "description": "Apply proper capitalization to book titles, movie names, and publications" },
+          { "title": "Marketing Materials", "description": "Create compelling headlines for advertisements and promotional content" },
+          { "title": "Website Headers", "description": "Format page titles, section headers, and navigation menus" },
+          { "title": "Academic Papers", "description": "Apply proper title formatting to research papers and citations" },
+          { "title": "Social Media Posts", "description": "Make social media content more engaging with proper title formatting" },
+          { "title": "Business Documents", "description": "Format report titles, presentation headers, and professional documents" },
+          { "title": "SEO Optimization", "description": "Create properly formatted meta titles and page headers for search engines" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Convert Text to Title Case",
+        "description": "Follow these simple steps to convert your text to proper title case format.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for conversion."
+          },
+          {
+            "step": 2,
+            "title": "Automatic Conversion",
+            "description": "Watch as your text is instantly converted to proper title case formatting in real-time."
+          },
+          {
+            "step": 3,
+            "title": "Review Analytics",
+            "description": "Check the text statistics including character count, word count, and more."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the title case text to your clipboard or download it as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Title Case Conversion Examples",
+        "description": "See how different types of text are converted to proper title case format.",
+        "items": [
+          { "title": "Simple Text", "input": "hello world", "output": "Hello World" },
+          { "title": "Article Title", "input": "the complete guide to web development", "output": "The Complete Guide To Web Development" },
+          { "title": "Mixed Case", "input": "tHiS iS mIxEd CaSe", "output": "This Is Mixed Case" },
+          { "title": "With Punctuation", "input": "welcome to our website!", "output": "Welcome To Our Website!" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Title Case Converter",
+        "content": "Professional title case conversion with comprehensive features and analytics.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Support for multiple file formats",
+          "Real-time conversion as you type",
+          "Detailed text analytics included",
+          "Mobile-optimized responsive design",
+          "Works with all languages and characters"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is title case formatting?",
+          "answer": "Title case is a capitalization style where the first letter of each major word is capitalized, while articles, prepositions, and conjunctions are typically lowercase (unless they're the first or last word). It's commonly used for titles, headlines, and headings."
+        },
+        {
+          "question": "Does the tool work with non-English text?",
+          "answer": "Yes, our title case converter works with all languages and character sets, including accented characters, special symbols, and Unicode text from any language."
+        },
+        {
+          "question": "Can I convert entire files to title case?",
+          "answer": "Absolutely! You can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and convert their entire content to title case format."
+        },
+        {
+          "question": "Is my text data safe and private?",
+          "answer": "Yes, all text conversion happens locally in your browser. Your text is never uploaded to our servers or shared with anyone. Complete privacy guaranteed."
+        },
+        {
+          "question": "What file formats can I upload?",
+          "answer": "You can upload various text-based file formats including .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html and other plain text files."
+        },
+        {
+          "question": "How does the tool handle articles and prepositions?",
+          "answer": "Our title case converter capitalizes the first letter of each word, which is the most common and widely accepted approach for digital content and web formatting."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Case Conversion Tools",
+        "items": [
+          {
+            "name": "Uppercase Converter",
+            "description": "Convert text to uppercase letters for headings and emphasis",
+            "href": "/tools/uppercase"
+          },
+          {
+            "name": "Lowercase Converter",
+            "description": "Convert text to lowercase letters for consistency and URLs",
+            "href": "/tools/lowercase"
+          },
+          {
+            "name": "Sentence Case Converter",
+            "description": "Convert text to sentence case with proper grammar formatting",
+            "href": "/tools/sentence-case"
+          },
+          {
+            "name": "Alternating Case Converter",
+            "description": "Create alternating case text for creative and stylistic purposes",
+            "href": "/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Конвертер в Заглавный Регистр - Правильная Капитализация Заголовков",
+    "metaDescription": "Мгновенно конвертируйте любой текст в правильный заглавный регистр с помощью нашего бесплатного онлайн конвертера. Идеально для заголовков, названий книг, заголовков статей и профессионального форматирования.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Конвертер в Заглавный Регистр - Правильная Капитализация Заголовков",
+        "content": "Мгновенно преобразуйте любой текст в правильный формат заглавного регистра с помощью нашего мощного и бесплатного инструмента конвертации заглавного регистра. Идеально для создания профессиональных заголовков, названий книг, заголовков статей или любого контента, требующего правильных стандартов капитализации."
+      },
+      "features": {
+        "title": "Мощные Функции Конвертации в Заглавный Регистр",
+        "items": [
+          { "title": "Мгновенная Конвертация", "description": "Конвертация в заглавный регистр в реальном времени при вводе или вставке текста" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и конвертируйте целые документы в заглавный регистр" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты или скачивайте как текстовые файлы" },
+          { "title": "Аналитика Текста", "description": "Получайте подробную статистику о вашем конвертированном тексте" },
+          { "title": "Поддержка Unicode", "description": "Работает со всеми языками и специальными символами" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся конвертация происходит локально—данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Конвертацию в Заглавный Регистр",
+        "description": "Форматирование заглавного регистра служит многим важным целям в различных типах контента и профессиональных контекстах.",
+        "items": [
+          { "title": "Заголовки Статей", "description": "Форматируйте заголовки блог-постов и заголовки новостных статей профессионально" },
+          { "title": "Названия Книг и Фильмов", "description": "Применяйте правильную капитализацию к названиям книг, фильмов и публикаций" },
+          { "title": "Маркетинговые Материалы", "description": "Создавайте убедительные заголовки для рекламы и промо-контента" },
+          { "title": "Заголовки Веб-сайтов", "description": "Форматируйте заголовки страниц, заголовки разделов и меню навигации" },
+          { "title": "Академические Работы", "description": "Применяйте правильное форматирование заголовков к исследовательским работам и цитатам" },
+          { "title": "Посты в Социальных Сетях", "description": "Делайте контент социальных сетей более привлекательным с правильным форматированием заголовков" },
+          { "title": "Деловые Документы", "description": "Форматируйте заголовки отчетов, заголовки презентаций и профессиональные документы" },
+          { "title": "SEO Оптимизация", "description": "Создавайте правильно отформатированные мета-заголовки и заголовки страниц для поисковых систем" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Конвертировать Текст в Заглавный Регистр",
+        "description": "Следуйте этим простым шагам, чтобы конвертировать ваш текст в правильный формат заглавного регистра.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Напечатайте или вставьте ваш текст в область ввода, или загрузите текстовый файл для конвертации."
+          },
+          {
+            "step": 2,
+            "title": "Автоматическая Конвертация",
+            "description": "Наблюдайте, как ваш текст мгновенно конвертируется в правильное форматирование заглавного регистра в реальном времени."
+          },
+          {
+            "step": 3,
+            "title": "Просмотр Аналитики",
+            "description": "Проверьте статистику текста, включая количество символов, слов и многое другое."
+          },
+          {
+            "step": 4,
+            "title": "Копирование или Скачивание",
+            "description": "Скопируйте текст в заглавном регистре в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Конвертации в Заглавный Регистр",
+        "description": "Посмотрите, как различные типы текста конвертируются в правильный формат заглавного регистра.",
+        "items": [
+          { "title": "Простой Текст", "input": "привет мир", "output": "Привет Мир" },
+          { "title": "Заголовок Статьи", "input": "полное руководство по веб-разработке", "output": "Полное Руководство По Веб-Разработке" },
+          { "title": "Смешанный Регистр", "input": "эТо СмЕшАнНыЙ рЕгИсТр", "output": "Это Смешанный Регистр" },
+          { "title": "С Пунктуацией", "input": "добро пожаловать на наш сайт!", "output": "Добро Пожаловать На Наш Сайт!" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Конвертер в Заглавный Регистр",
+        "content": "Профессиональная конвертация в заглавный регистр с комплексными функциями и аналитикой.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Поддержка множества форматов файлов",
+          "Конвертация в реальном времени при вводе",
+          "Включена подробная аналитика текста",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Работает со всеми языками и символами"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое форматирование заглавного регистра?",
+          "answer": "Заглавный регистр - это стиль капитализации, где первая буква каждого важного слова пишется с заглавной буквы, в то время как артикли, предлоги и союзы обычно строчные (если они не первые или последние слова). Обычно используется для заголовков, headlines и заголовков."
+        },
+        {
+          "question": "Работает ли инструмент с не-русским текстом?",
+          "answer": "Да, наш конвертер в заглавный регистр работает со всеми языками и наборами символов, включая буквы с диакритическими знаками, специальные символы и Unicode текст любого языка."
+        },
+        {
+          "question": "Могу ли я конвертировать целые файлы в заглавный регистр?",
+          "answer": "Абсолютно! Вы можете загружать текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и конвертировать их полное содержимое в формат заглавного регистра."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные и конфиденциальны?",
+          "answer": "Да, вся конвертация текста происходит локально в вашем браузере. Ваш текст никогда не загружается на наши серверы и не передается кому-либо. Полная конфиденциальность гарантирована."
+        },
+        {
+          "question": "Какие форматы файлов я могу загружать?",
+          "answer": "Вы можете загружать различные текстовые форматы файлов, включая .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие файлы с обычным текстом."
+        },
+        {
+          "question": "Как инструмент обрабатывает артикли и предлоги?",
+          "answer": "Наш конвертер заглавного регистра капитализирует первую букву каждого слова, что является наиболее распространенным и широко принятым подходом для цифрового контента и веб-форматирования."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Конвертации Регистра Текста",
+        "items": [
+          {
+            "name": "Конвертер в Верхний Регистр",
+            "description": "Конвертируйте текст в верхний регистр для заголовков и выделения",
+            "href": "/ru/tools/uppercase"
+          },
+          {
+            "name": "Конвертер в Нижний Регистр",
+            "description": "Конвертируйте текст в нижний регистр для последовательности и URL",
+            "href": "/ru/tools/lowercase"
+          },
+          {
+            "name": "Конвертер в Регистр Предложения",
+            "description": "Конвертируйте текст в регистр предложения с правильным грамматическим форматированием",
+            "href": "/ru/tools/sentence-case"
+          },
+          {
+            "name": "Конвертер в Чередующийся Регистр",
+            "description": "Создавайте текст в чередующемся регистре для творческих и стилистических целей",
+            "href": "/ru/tools/alternating-case"
+          }
+        ]
+      }
+    }
+  }
+}

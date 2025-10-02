@@ -1,0 +1,130 @@
+{
+  "en": {
+    "sections": {
+      "intro": {
+        "title": "JPG to WebP Converter",
+        "content": "Convert JPG/JPEG images to modern WebP for smaller files and faster pages. WebP helps improve Core Web Vitals by reducing image payload without noticeably affecting visual quality."
+      },
+      "features": {
+        "title": "Key Features",
+        "items": [
+          { "title": "High quality WebP output", "description": "Balance size and quality with adjustable quality presets." },
+          { "title": "Batch conversion", "description": "Drop multiple images and download a single ZIP." },
+          { "title": "Private and fast", "description": "Everything runs in your browser. No uploads to a server." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to convert JPG to WebP",
+        "description": "Follow these simple steps to convert your images.",
+        "steps": [
+          { "step": 1, "title": "Upload images", "description": "Drag & drop JPG files or click to choose from your device." },
+          { "step": 2, "title": "Choose quality", "description": "Pick a quality preset that fits your needs." },
+          { "step": 3, "title": "Download WebP", "description": "Download individual files or all results as a ZIP." }
+        ]
+      },
+      "examples": {
+        "title": "Examples",
+        "description": "Typical savings compared to JPG.",
+        "items": [
+          { "input": "1024×768 JPG (450 KB)", "output": "WebP (220 KB)", "description": "~50% size reduction." },
+          { "input": "1200×800 JPG (800 KB)", "output": "WebP (380 KB)", "description": "~52% size reduction." }
+        ]
+      },
+      "useCases": {
+        "title": "Use cases",
+        "description": "Where WebP makes a difference.",
+        "items": [
+          { "title": "Performance-focused websites", "description": "Speed up blogs, landing pages, and e‑commerce product galleries." },
+          { "title": "Email and messaging", "description": "Share high quality images with smaller attachments." }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "items": [
+          "Smaller files with great quality",
+          "Mobile-first experience",
+          "Works offline in the browser"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related tools",
+        "description": "You may also like these image tools.",
+        "items": [
+          { "name": "PNG to WebP", "description": "Convert PNG images to WebP for smaller sizes.", "href": "/tools/png-to-webp" },
+          { "name": "WebP to JPG", "description": "Convert WebP images back to JPG if needed.", "href": "/tools/webp-to-jpg" },
+          { "name": "WebP to PNG", "description": "Convert WebP to PNG with transparency support.", "href": "/tools/webp-to-png" },
+          { "name": "Image Resizer", "description": "Resize images to any dimensions while maintaining quality.", "href": "/tools/image-resizer" }
+        ]
+      },
+      "faqs": [
+        { "question": "Is WebP supported by major browsers?", "answer": "Yes, WebP is supported by all modern browsers." },
+        { "question": "Are my images uploaded?", "answer": "No, conversion happens locally in your browser." }
+      ]
+    }
+  },
+  "ru": {
+    "sections": {
+      "intro": {
+        "title": "Конвертер JPG в WebP",
+        "content": "Конвертируйте JPG/JPEG в современный WebP для меньших файлов и более быстрых страниц. WebP улучшает Core Web Vitals, уменьшая размер изображений без заметной потери качества."
+      },
+      "features": {
+        "title": "Ключевые возможности",
+        "items": [
+          { "title": "Высокое качество WebP", "description": "Баланс размера и качества с настраиваемыми пресетами." },
+          { "title": "Пакетное преобразование", "description": "Перетащите несколько изображений и скачайте одним ZIP." },
+          { "title": "Конфиденциально и быстро", "description": "Всё работает в вашем браузере. Без загрузки на сервер." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как конвертировать JPG в WebP",
+        "description": "Выполните эти простые шаги.",
+        "steps": [
+          { "step": 1, "title": "Загрузите изображения", "description": "Перетащите JPG файлы или выберите с устройства." },
+          { "step": 2, "title": "Выберите качество", "description": "Выберите пресет качества под задачу." },
+          { "step": 3, "title": "Скачайте WebP", "description": "Скачайте отдельные файлы или все результаты ZIP-архивом." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры",
+        "description": "Типичная экономия относительно JPG.",
+        "items": [
+          { "input": "1024×768 JPG (450 КБ)", "output": "WebP (220 КБ)", "description": "~50% уменьшение размера." },
+          { "input": "1200×800 JPG (800 КБ)", "output": "WebP (380 КБ)", "description": "~52% уменьшение размера." }
+        ]
+      },
+      "useCases": {
+        "title": "Сценарии использования",
+        "description": "Где WebP особенно полезен.",
+        "items": [
+          { "title": "Производительные сайты", "description": "Ускоряйте блоги, лендинги и каталоги товаров." },
+          { "title": "Почта и мессенджеры", "description": "Делитесь качественными изображениями с меньшими вложениями." }
+        ]
+      },
+      "benefits": {
+        "title": "Преимущества",
+        "items": [
+          "Меньше размер при хорошем качестве",
+          "Мобильный опыт в приоритете",
+          "Работает офлайн в браузере"
+        ]
+      },
+      "relatedTools": {
+        "title": "Похожие инструменты",
+        "description": "Также могут пригодиться.",
+        "items": [
+          { "name": "PNG to WebP", "description": "Конвертация PNG изображений в WebP.", "href": "/tools/png-to-webp" },
+          { "name": "WebP to JPG", "description": "Конвертация WebP обратно в JPG при необходимости.", "href": "/tools/webp-to-jpg" },
+          { "name": "WebP to PNG", "description": "Конвертация WebP в PNG с поддержкой прозрачности.", "href": "/tools/webp-to-png" },
+          { "name": "Изменение Размера Изображений", "description": "Изменяйте размер изображений до любых размеров сохраняя качество.", "href": "/tools/image-resizer" }
+        ]
+      },
+      "faqs": [
+        { "question": "Поддерживается ли WebP основными браузерами?", "answer": "Да, WebP поддерживается всеми современными браузерами." },
+        { "question": "Загружаются ли мои изображения?", "answer": "Нет, конвертация выполняется локально в вашем браузере." }
+      ]
+    }
+  }
+}
+
+

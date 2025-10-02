@@ -1,0 +1,272 @@
+{
+  "en": {
+    "title": "Text Analysis & Counter Tools - Advanced Text Analytics for Content Creation",
+    "metaDescription": "Professional text analysis and counter tools for writers, editors, and content creators. Count characters, words, sentences, analyze frequency patterns, and optimize your content. Free text analytics with detailed insights and statistics.",
+    "sections": {
+      "intro": {
+        "title": "Advanced Text Analysis & Counter Tools for Content Professionals",
+        "content": "Enhance your writing and content creation with our comprehensive suite of text analysis and counter tools. From basic character and word counting to advanced frequency analysis and sentence structure evaluation, these tools provide detailed insights into your text composition. Perfect for writers, editors, content creators, SEO specialists, and anyone who needs precise text analytics for professional or academic purposes."
+      },
+      "features": {
+        "title": "Comprehensive Text Analysis Capabilities",
+        "items": [
+          {
+            "title": "Character & Word Counting",
+            "description": "Accurate character, word, and line counting with support for various text formats and encoding"
+          },
+          {
+            "title": "Frequency Analysis",
+            "description": "Advanced word frequency analysis to identify patterns, repetition, and keyword density"
+          },
+          {
+            "title": "Sentence Analysis",
+            "description": "Detailed sentence counting and structure analysis for readability optimization"
+          },
+          {
+            "title": "Real-time Processing",
+            "description": "Instant analysis as you type with live updates and immediate feedback"
+          },
+          {
+            "title": "Export & Download",
+            "description": "Export analysis results in various formats for reporting and documentation"
+          },
+          {
+            "title": "Multi-language Support",
+            "description": "Accurate counting and analysis for texts in multiple languages and scripts"
+          },
+          {
+            "title": "Professional Insights",
+            "description": "Detailed statistics and metrics for content optimization and quality assessment"
+          },
+          {
+            "title": "Privacy Protection",
+            "description": "All text analysis performed locally in your browser with no data transmission"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Available Text Analysis Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "href": "/tools/text-counter",
+            "description": "Comprehensive character, word, and line counter with detailed statistics and formatting analysis"
+          },
+          {
+            "name": "Word Frequency Analyzer",
+            "href": "/tools/word-frequency",
+            "description": "Advanced word frequency analysis tool to identify patterns, repetition, and keyword density"
+          },
+          {
+            "name": "Sentence Counter",
+            "href": "/tools/sentence-counter",
+            "description": "Professional sentence counting tool with structure analysis and readability metrics"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Text Analysis Tools",
+        "items": [
+          {
+            "title": "Content Writing & Editing",
+            "description": "Optimize article length, check word counts for publications, and ensure proper text structure"
+          },
+          {
+            "title": "SEO Optimization",
+            "description": "Analyze keyword density, optimize content length, and improve search engine rankings"
+          },
+          {
+            "title": "Academic Writing",
+            "description": "Meet word count requirements, analyze writing patterns, and improve academic text quality"
+          },
+          {
+            "title": "Social Media Management",
+            "description": "Ensure posts meet platform character limits and optimize engagement through text analysis"
+          },
+          {
+            "title": "Translation & Localization",
+            "description": "Compare text lengths across languages and ensure consistent content structure"
+          },
+          {
+            "title": "Quality Assurance",
+            "description": "Verify content specifications, check for repetitive patterns, and maintain writing standards"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Choose Our Text Analysis Tools",
+        "items": [
+          "Professional-grade text analysis with 3 specialized tools covering all counting and analysis needs",
+          "Real-time character, word, and sentence counting with instant feedback and live updates",
+          "Advanced word frequency analysis to identify patterns, keyword density, and content optimization opportunities",
+          "Detailed sentence structure analysis for improved readability and writing quality assessment",
+          "Multi-language support with accurate counting for international content and diverse text formats",
+          "Export capabilities for analysis results, reports, and documentation in various file formats",
+          "Privacy-focused design with all processing performed locally without data transmission or storage",
+          "Mobile-responsive interface that works perfectly across all devices and screen sizes",
+          "Completely free with unlimited usage and no registration, subscriptions, or feature restrictions required"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Related Tool Categories",
+        "items": [
+          {
+            "name": "Text Modification & Formatting",
+            "href": "/category/text-modification-formatting",
+            "description": "Format and transform text content with styling and modification tools"
+          },
+          {
+            "name": "Social Media Text Generators",
+            "href": "/category/social-media-text-generators",
+            "description": "Create stylized text for social media platforms and online content"
+          },
+          {
+            "name": "Miscellaneous Tools",
+            "href": "/category/misc-tools",
+            "description": "Essential utilities and specialized tools for various professional needs"
+          },
+          {
+            "name": "Code & Data Translation",
+            "href": "/category/code-data-translation",
+            "description": "Convert between data formats and handle various encoding schemes"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструменты Анализа и Подсчета Текста - Продвинутая Аналитика Текста для Создания Контента",
+    "metaDescription": "Профессиональные инструменты анализа и подсчета текста для писателей, редакторов и создателей контента. Подсчет символов, слов, предложений, анализ частотных паттернов и оптимизация контента.",
+    "sections": {
+      "intro": {
+        "title": "Продвинутые Инструменты Анализа и Подсчета Текста для Профессионалов Контента",
+        "content": "Улучшите свое письмо и создание контента с помощью нашего комплексного набора инструментов анализа и подсчета текста. От базового подсчета символов и слов до продвинутого анализа частоты и оценки структуры предложений, эти инструменты предоставляют детальную информацию о составе вашего текста. Идеально для писателей, редакторов, создателей контента, SEO-специалистов и всех, кому нужна точная аналитика текста."
+      },
+      "features": {
+        "title": "Комплексные Возможности Анализа Текста",
+        "items": [
+          {
+            "title": "Подсчет Символов и Слов",
+            "description": "Точный подсчет символов, слов и строк с поддержкой различных текстовых форматов и кодировок"
+          },
+          {
+            "title": "Анализ Частоты",
+            "description": "Продвинутый анализ частоты слов для выявления паттернов, повторений и плотности ключевых слов"
+          },
+          {
+            "title": "Анализ Предложений",
+            "description": "Детальный подсчет предложений и анализ структуры для оптимизации читаемости"
+          },
+          {
+            "title": "Обработка в Реальном Времени",
+            "description": "Мгновенный анализ при вводе с живыми обновлениями и немедленной обратной связью"
+          },
+          {
+            "title": "Экспорт и Загрузка",
+            "description": "Экспорт результатов анализа в различных форматах для отчетности и документации"
+          },
+          {
+            "title": "Поддержка Многих Языков",
+            "description": "Точный подсчет и анализ текстов на множественных языках и письменностях"
+          },
+          {
+            "title": "Профессиональные Инсайты",
+            "description": "Детальная статистика и метрики для оптимизации контента и оценки качества"
+          },
+          {
+            "title": "Защита Приватности",
+            "description": "Весь анализ текста выполняется локально в вашем браузере без передачи данных"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Доступные Инструменты Анализа Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "href": "/ru/tools/text-counter",
+            "description": "Комплексный счетчик символов, слов и строк с детальной статистикой и анализом форматирования"
+          },
+          {
+            "name": "Анализатор Частоты Слов",
+            "href": "/ru/tools/word-frequency",
+            "description": "Продвинутый инструмент анализа частоты слов для выявления паттернов, повторений и плотности ключевых слов"
+          },
+          {
+            "name": "Счетчик Предложений",
+            "href": "/ru/tools/sentence-counter",
+            "description": "Профессиональный инструмент подсчета предложений с анализом структуры и метриками читаемости"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Инструментов Анализа Текста",
+        "items": [
+          {
+            "title": "Написание и Редактирование Контента",
+            "description": "Оптимизируйте длину статей, проверяйте количество слов для публикаций и обеспечивайте правильную структуру текста"
+          },
+          {
+            "title": "SEO Оптимизация",
+            "description": "Анализируйте плотность ключевых слов, оптимизируйте длину контента и улучшайте позиции в поисковых системах"
+          },
+          {
+            "title": "Академическое Письмо",
+            "description": "Соблюдайте требования по количеству слов, анализируйте паттерны письма и улучшайте качество академических текстов"
+          },
+          {
+            "title": "Управление Социальными Сетями",
+            "description": "Обеспечивайте соответствие постов лимитам символов платформ и оптимизируйте вовлеченность через анализ текста"
+          },
+          {
+            "title": "Перевод и Локализация",
+            "description": "Сравнивайте длину текстов на разных языках и обеспечивайте согласованную структуру контента"
+          },
+          {
+            "title": "Контроль Качества",
+            "description": "Проверяйте спецификации контента, выявляйте повторяющиеся паттерны и поддерживайте стандарты письма"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Выбрать Наши Инструменты Анализа Текста",
+        "items": [
+          "Профессиональный анализ текста с 3 специализированными инструментами, покрывающими все потребности подсчета и анализа",
+          "Подсчет символов, слов и предложений в реальном времени с мгновенной обратной связью и живыми обновлениями",
+          "Продвинутый анализ частоты слов для выявления паттернов, плотности ключевых слов и возможностей оптимизации контента",
+          "Детальный анализ структуры предложений для улучшения читаемости и оценки качества письма",
+          "Поддержка множественных языков с точным подсчетом для международного контента и разнообразных текстовых форматов",
+          "Возможности экспорта результатов анализа, отчетов и документации в различных файловых форматах",
+          "Фокус на приватности с выполнением всей обработки локально без передачи или хранения данных",
+          "Мобильно-адаптивный интерфейс, который идеально работает на всех устройствах и размерах экранов",
+          "Полностью бесплатно с неограниченным использованием и без регистрации, подписок или ограничений функций"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Связанные Категории Инструментов",
+        "items": [
+          {
+            "name": "Изменение и Форматирование Текста",
+            "href": "/ru/category/text-modification-formatting",
+            "description": "Форматируйте и преобразуйте текстовый контент с помощью инструментов стилизации и модификации"
+          },
+          {
+            "name": "Генераторы Текста для Социальных Сетей",
+            "href": "/ru/category/social-media-text-generators",
+            "description": "Создавайте стилизованный текст для социальных медиа платформ и онлайн контента"
+          },
+          {
+            "name": "Разные Инструменты",
+            "href": "/ru/category/misc-tools",
+            "description": "Основные утилиты и специализированные инструменты для различных профессиональных потребностей"
+          },
+          {
+            "name": "Перевод Кода и Данных",
+            "href": "/ru/category/code-data-translation",
+            "description": "Конвертируйте между форматами данных и обрабатывайте различные схемы кодирования"
+          }
+        ]
+      }
+    }
+  }
+}

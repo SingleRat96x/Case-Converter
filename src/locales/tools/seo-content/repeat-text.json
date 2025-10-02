@@ -1,0 +1,274 @@
+{
+  "en": {
+    "title": "Text Repeater Tool - Repeat Text Multiple Times with Custom Separators",
+    "metaDescription": "Repeat your text multiple times with customizable separators including newlines, spaces, and custom characters. Perfect for creating patterns, test data, and content generation with instant preview.",
+    "sections": {
+      "intro": {
+        "title": "Professional Text Repeater Tool",
+        "content": "Repeat any text multiple times with complete control over separators and formatting. Perfect for creating patterns, generating test data, filling content spaces, or creating repetitive text for various applications. Our tool offers real-time preview, customizable separators, and instant results."
+      },
+      "features": {
+        "title": "Text Repetition Features",
+        "items": [
+          { "title": "Flexible Repeat Count", "description": "Repeat text from 1 to 1000 times with easy increment/decrement controls" },
+          { "title": "Multiple Separator Options", "description": "Choose from newlines, spaces, none, or custom separators for precise formatting" },
+          { "title": "Quick Repeat Presets", "description": "One-click presets for common repetition counts: 2x, 5x, 10x, 25x, 50x, 100x" },
+          { "title": "Custom Separator Input", "description": "Add any custom text, symbols, or characters as separators between repetitions" },
+          { "title": "Real-time Preview", "description": "See results instantly as you adjust repeat count and separator options" },
+          { "title": "Keyboard Shortcuts", "description": "Use + and - keys to quickly adjust repeat count without clicking" },
+          { "title": "Performance Warning", "description": "Smart warnings for large outputs to prevent browser performance issues" },
+          { "title": "File Upload Support", "description": "Upload text files and repeat their contents with the same flexibility" },
+          { "title": "Instant Download", "description": "Save repeated text as files for use in other applications" }
+        ]
+      },
+      "useCases": {
+        "title": "Creative Uses for Text Repetition",
+        "description": "Text repetition has numerous practical applications across different fields and industries.",
+        "items": [
+          { "title": "Test Data Generation", "description": "Create sample data sets for testing applications and databases" },
+          { "title": "Pattern Creation", "description": "Generate repetitive patterns for design, ASCII art, or decorative text" },
+          { "title": "Content Filling", "description": "Fill spaces in layouts, templates, or placeholder content areas" },
+          { "title": "Code Generation", "description": "Create repetitive code structures, SQL inserts, or configuration files" },
+          { "title": "Educational Materials", "description": "Generate practice exercises, worksheets, or repetitive learning content" },
+          { "title": "Social Media Content", "description": "Create emphasis through repetition in posts, captions, or messages" },
+          { "title": "Data Entry Preparation", "description": "Prepare repetitive data for import into spreadsheets or databases" },
+          { "title": "Creative Writing", "description": "Use repetition as a literary device for emphasis or effect" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Text Repeater",
+        "description": "Follow these simple steps to repeat your text with custom formatting.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste the text you want to repeat into the input field, or upload a text file."
+          },
+          {
+            "step": 2,
+            "title": "Set Repeat Count",
+            "description": "Use the number input, +/- buttons, or quick preset buttons to set how many times to repeat."
+          },
+          {
+            "step": 3,
+            "title": "Choose Separator",
+            "description": "Select from newlines, spaces, none, or custom separators to control formatting between repetitions."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the repeated text directly or download it as a file for use in other applications."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Text Repetition Examples",
+        "description": "See how different separator options affect the output formatting.",
+        "items": [
+          { "title": "Newline Separator", "input": "Hello World", "output": "Hello World\\nHello World\\nHello World" },
+          { "title": "Space Separator", "input": "Test", "output": "Test Test Test Test Test" },
+          { "title": "Custom Separator", "input": "Item", "output": "Item | Item | Item | Item" },
+          { "title": "No Separator", "input": "ABC", "output": "ABCABCABCABC" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Text Repeater",
+        "content": "Professional text repetition with comprehensive controls and real-time feedback.",
+        "items": [
+          "Support for up to 1000 repetitions",
+          "Multiple separator options for perfect formatting",
+          "Quick preset buttons for common repeat counts",
+          "Custom separator input for unlimited flexibility",
+          "Real-time preview with instant results",
+          "Keyboard shortcuts for efficient operation",
+          "Performance warnings for large outputs",
+          "File upload and download support",
+          "Completely free with no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What's the maximum number of repetitions allowed?",
+          "answer": "You can repeat text up to 1000 times. The tool includes performance warnings when creating very large outputs to ensure smooth browser performance."
+        },
+        {
+          "question": "What separator options are available?",
+          "answer": "You can choose from newlines (line breaks), spaces, no separator (concatenation), or custom separators where you can input any text, symbols, or characters."
+        },
+        {
+          "question": "Can I use keyboard shortcuts?",
+          "answer": "Yes! Use the + or = keys to increase the repeat count and the - key to decrease it. This works when you're not actively typing in input fields."
+        },
+        {
+          "question": "How do I create patterns with custom separators?",
+          "answer": "Select 'Custom' as the separator option, then enter your desired separator text. You can use symbols like |, -, *, or any text to create patterns."
+        },
+        {
+          "question": "Can I repeat text from files?",
+          "answer": "Yes, you can upload text files (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) and the tool will repeat the file contents with your chosen settings."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Generation Tools",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count characters, words, and analyze text statistics",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Find and Replace",
+            "description": "Find and replace text with advanced options",
+            "href": "/tools/find-replace"
+          },
+          {
+            "name": "Text Case Converter",
+            "description": "Convert text between different case formats",
+            "href": "/tools/uppercase"
+          },
+          {
+            "name": "Word Frequency Analyzer",
+            "description": "Analyze word frequency and find common words",
+            "href": "/tools/word-frequency"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Повторитель Текста - Повторение Текста с Пользовательскими Разделителями",
+    "metaDescription": "Повторяйте ваш текст многократно с настраиваемыми разделителями включая переносы строк, пробелы и пользовательские символы. Идеально для создания шаблонов, тестовых данных и генерации контента с мгновенным предпросмотром.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Инструмент Повторения Текста",
+        "content": "Повторяйте любой текст многократно с полным контролем над разделителями и форматированием. Идеально для создания шаблонов, генерации тестовых данных, заполнения пространств контента или создания повторяющегося текста для различных применений."
+      },
+      "features": {
+        "title": "Функции Повторения Текста",
+        "items": [
+          { "title": "Гибкий Счетчик Повторений", "description": "Повторяйте текст от 1 до 1000 раз с удобными элементами управления увеличением/уменьшением" },
+          { "title": "Множественные Варианты Разделителей", "description": "Выбирайте из переносов строк, пробелов, отсутствия или пользовательских разделителей для точного форматирования" },
+          { "title": "Быстрые Предустановки Повторения", "description": "Предустановки одним кликом для общих счетчиков повторений: 2x, 5x, 10x, 25x, 50x, 100x" },
+          { "title": "Ввод Пользовательского Разделителя", "description": "Добавляйте любой пользовательский текст, символы или символы в качестве разделителей между повторениями" },
+          { "title": "Предварительный Просмотр в Реальном Времени", "description": "Видите результаты мгновенно при настройке счетчика повторений и вариантов разделителей" },
+          { "title": "Горячие Клавиши", "description": "Используйте клавиши + и - для быстрой настройки счетчика повторений без кликов" },
+          { "title": "Предупреждение о Производительности", "description": "Умные предупреждения для больших выводов для предотвращения проблем производительности браузера" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и повторяйте их содержимое с той же гибкостью" },
+          { "title": "Мгновенная Загрузка", "description": "Сохраняйте повторенный текст в виде файлов для использования в других приложениях" }
+        ]
+      },
+      "useCases": {
+        "title": "Творческие Применения Повторения Текста",
+        "description": "Повторение текста имеет множество практических применений в различных областях и отраслях.",
+        "items": [
+          { "title": "Генерация Тестовых Данных", "description": "Создавайте наборы образцов данных для тестирования приложений и баз данных" },
+          { "title": "Создание Шаблонов", "description": "Генерируйте повторяющиеся шаблоны для дизайна, ASCII-арта или декоративного текста" },
+          { "title": "Заполнение Контента", "description": "Заполняйте пространства в макетах, шаблонах или областях контента-заполнителя" },
+          { "title": "Генерация Кода", "description": "Создавайте повторяющиеся структуры кода, SQL-вставки или конфигурационные файлы" },
+          { "title": "Образовательные Материалы", "description": "Генерируйте практические упражнения, рабочие листы или повторяющийся учебный контент" },
+          { "title": "Контент Социальных Сетей", "description": "Создавайте акцент через повторение в постах, подписях или сообщениях" },
+          { "title": "Подготовка Ввода Данных", "description": "Подготавливайте повторяющиеся данные для импорта в электронные таблицы или базы данных" },
+          { "title": "Творческое Письмо", "description": "Используйте повторение как литературный прием для акцента или эффекта" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Повторитель Текста",
+        "description": "Следуйте этим простым шагам для повторения вашего текста с пользовательским форматированием.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Наберите или вставьте текст, который хотите повторить, в поле ввода или загрузите текстовый файл."
+          },
+          {
+            "step": 2,
+            "title": "Установите Счетчик Повторений",
+            "description": "Используйте числовой ввод, кнопки +/- или быстрые кнопки предустановок для установки количества повторений."
+          },
+          {
+            "step": 3,
+            "title": "Выберите Разделитель",
+            "description": "Выберите из переносов строк, пробелов, отсутствия или пользовательских разделителей для контроля форматирования между повторениями."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте повторенный текст напрямую или скачайте его как файл для использования в других приложениях."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Повторения Текста",
+        "description": "Посмотрите, как различные варианты разделителей влияют на форматирование вывода.",
+        "items": [
+          { "title": "Разделитель Переноса Строки", "input": "Привет Мир", "output": "Привет Мир\\nПривет Мир\\nПривет Мир" },
+          { "title": "Разделитель Пробел", "input": "Тест", "output": "Тест Тест Тест Тест Тест" },
+          { "title": "Пользовательский Разделитель", "input": "Элемент", "output": "Элемент | Элемент | Элемент | Элемент" },
+          { "title": "Без Разделителя", "input": "АБВ", "output": "АБВАБВАБВАБВ" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Повторитель Текста",
+        "content": "Профессиональное повторение текста с комплексными элементами управления и обратной связью в реальном времени.",
+        "items": [
+          "Поддержка до 1000 повторений",
+          "Множественные варианты разделителей для идеального форматирования",
+          "Быстрые кнопки предустановок для общих счетчиков повторений",
+          "Ввод пользовательского разделителя для неограниченной гибкости",
+          "Предварительный просмотр в реальном времени с мгновенными результатами",
+          "Горячие клавиши для эффективной работы",
+          "Предупреждения о производительности для больших выводов",
+          "Поддержка загрузки и скачивания файлов",
+          "Полностью бесплатно без необходимости регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какое максимальное количество повторений разрешено?",
+          "answer": "Вы можете повторить текст до 1000 раз. Инструмент включает предупреждения о производительности при создании очень больших выводов для обеспечения плавной производительности браузера."
+        },
+        {
+          "question": "Какие варианты разделителей доступны?",
+          "answer": "Вы можете выбрать из переносов строк (разрывы строк), пробелов, отсутствия разделителя (конкатенация) или пользовательских разделителей, где вы можете вводить любой текст, символы или символы."
+        },
+        {
+          "question": "Могу ли я использовать горячие клавиши?",
+          "answer": "Да! Используйте клавиши + или = для увеличения счетчика повторений и клавишу - для его уменьшения. Это работает, когда вы активно не печатаете в полях ввода."
+        },
+        {
+          "question": "Как создать шаблоны с пользовательскими разделителями?",
+          "answer": "Выберите 'Пользовательский' в качестве варианта разделителя, затем введите желаемый текст разделителя. Вы можете использовать символы как |, -, *, или любой текст для создания шаблонов."
+        },
+        {
+          "question": "Могу ли я повторить текст из файлов?",
+          "answer": "Да, вы можете загружать текстовые файлы (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) и инструмент будет повторять содержимое файла с вашими выбранными настройками."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Генерации Текста",
+        "items": [
+          {
+            "name": "Счетчик Текста",
+            "description": "Подсчитывайте символы, слова и анализируйте статистику текста",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Найти и Заменить",
+            "description": "Найдите и замените текст с расширенными опциями",
+            "href": "/tools/find-replace"
+          },
+          {
+            "name": "Конвертер Регистра Текста",
+            "description": "Конвертируйте текст между различными форматами регистра",
+            "href": "/tools/uppercase"
+          },
+          {
+            "name": "Анализатор Частоты Слов",
+            "description": "Анализируйте частоту слов и находите общие слова",
+            "href": "/tools/word-frequency"
+          }
+        ]
+      }
+    }
+  }
+}

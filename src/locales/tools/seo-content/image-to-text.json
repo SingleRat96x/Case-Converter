@@ -1,0 +1,356 @@
+{
+  "en": {
+    "title": "Free Image to Text OCR - Extract Text from Images Online",
+    "metaDescription": "Extract text from images using advanced OCR technology. Free online image to text converter supporting multiple languages with high accuracy text recognition from photos and documents.",
+    "sections": {
+      "intro": {
+        "title": "Free Image to Text OCR - Extract Text from Images Online",
+        "content": "Extract text from any image using our advanced OCR (Optical Character Recognition) technology. Support for multiple languages, high accuracy text recognition, and processing of photos, screenshots, scanned documents, and more. Perfect for digitizing documents, extracting quotes from images, and converting visual text to editable format."
+      },
+      "features": {
+        "title": "Advanced OCR Text Extraction Features",
+        "items": [
+          {
+            "title": "Multi-Language Support",
+            "description": "Extract text in English, Spanish, French, German, Russian, Chinese, Japanese, and Arabic with high accuracy recognition."
+          },
+          {
+            "title": "High Accuracy OCR",
+            "description": "Advanced Tesseract.js OCR engine with confidence scoring and customizable accuracy thresholds for reliable text extraction."
+          },
+          {
+            "title": "Format Preservation",
+            "description": "Maintain original text layout, spacing, and formatting when extracting text from structured documents and images."
+          },
+          {
+            "title": "Auto-Orientation Detection",
+            "description": "Automatically detect and correct image orientation for optimal text recognition, even with rotated or skewed images."
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "Monitor extraction progress with detailed analytics including confidence scores, text metrics, and processing efficiency."
+          },
+          {
+            "title": "Privacy-First Processing",
+            "description": "All OCR processing happens locally in your browser - your images and extracted text never leave your device."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Essential Uses for Image to Text OCR",
+        "description": "Convert visual text to editable format for various professional and personal applications.",
+        "items": [
+          {
+            "title": "Document Digitization",
+            "description": "Convert scanned documents, receipts, business cards, and handwritten notes into editable digital text."
+          },
+          {
+            "title": "Screenshot Text Extraction",
+            "description": "Extract text from screenshots, error messages, social media posts, and web content for easy copying and sharing."
+          },
+          {
+            "title": "Academic Research",
+            "description": "Digitize text from books, research papers, historical documents, and academic materials for analysis and citation."
+          },
+          {
+            "title": "Translation Workflow",
+            "description": "Extract text from foreign language images and documents for translation services and language learning."
+          },
+          {
+            "title": "Data Entry Automation",
+            "description": "Automate data entry from forms, invoices, certificates, and other structured documents into digital systems."
+          },
+          {
+            "title": "Accessibility Enhancement",
+            "description": "Convert image-based text into screen-reader friendly format for improved accessibility and content consumption."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Image to Text OCR",
+        "description": "Follow these simple steps to extract text from any image with high accuracy.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Upload Your Image",
+            "description": "Click to select or drag and drop your image file. Supports JPG, PNG, GIF, WebP, BMP, and TIFF formats up to 10MB."
+          },
+          {
+            "step": 2,
+            "title": "Configure OCR Settings",
+            "description": "Select the recognition language, adjust confidence threshold, and enable formatting preservation or orientation detection."
+          },
+          {
+            "step": 3,
+            "title": "Extract Text",
+            "description": "Click 'Extract Text' to process the image. The OCR engine will analyze the image and extract all readable text."
+          },
+          {
+            "step": 4,
+            "title": "Review & Export",
+            "description": "Review the extracted text with confidence analytics, then copy to clipboard or download as a text file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "OCR Text Extraction Examples",
+        "description": "See how our OCR technology extracts text from different types of images and documents.",
+        "items": [
+          {
+            "title": "Scanned Document",
+            "input": "PDF scan with typed text",
+            "output": "Clean, formatted text with preserved layout"
+          },
+          {
+            "title": "Screenshot Text",
+            "input": "Screenshot of website or app",
+            "output": "Extracted UI text and content"
+          },
+          {
+            "title": "Handwritten Note",
+            "input": "Photo of handwritten text",
+            "output": "Digitized text with high accuracy"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Image to Text OCR",
+        "content": "Professional-grade OCR technology with advanced features and privacy-focused processing.",
+        "items": [
+          "Support for 8+ languages with high accuracy recognition",
+          "Advanced Tesseract.js OCR engine with confidence scoring",
+          "Format preservation for structured documents",
+          "Auto-orientation detection for rotated images",
+          "Real-time processing with progress indicators",
+          "Detailed analytics and extraction metrics",
+          "Privacy-first - all processing happens locally",
+          "No registration required with unlimited usage"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What image formats are supported for OCR?",
+          "answer": "Our OCR tool supports JPG/JPEG, PNG, GIF, WebP, BMP, and TIFF formats. Images can be up to 10MB in size. For best results, use high-resolution images with clear, high-contrast text."
+        },
+        {
+          "question": "How accurate is the text extraction?",
+          "answer": "Our OCR uses advanced Tesseract.js technology with confidence scoring. Accuracy depends on image quality, text clarity, and language. Typical accuracy ranges from 85-99% for clear, typed text, and 70-90% for handwritten text."
+        },
+        {
+          "question": "Can it extract text from handwritten documents?",
+          "answer": "Yes, our OCR can extract text from handwritten documents, though accuracy may be lower than typed text. For best results with handwriting, use clear, legible writing with good contrast and lighting."
+        },
+        {
+          "question": "What languages are supported?",
+          "answer": "We support English, Spanish, French, German, Russian, Chinese (Simplified), Japanese, and Arabic. The tool automatically optimizes recognition based on your selected language for improved accuracy."
+        },
+        {
+          "question": "Is my data secure when using this tool?",
+          "answer": "Absolutely! All OCR processing happens locally in your browser using client-side technology. Your images and extracted text never leave your device or get uploaded to any servers."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Image and Text Tools",
+        "items": [
+          {
+            "name": "Image Cropper",
+            "description": "Crop and resize images for better OCR results",
+            "href": "/tools/image-cropper"
+          },
+          {
+            "name": "Text Counter",
+            "description": "Analyze extracted text statistics and word counts",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Remove Text Formatting",
+            "description": "Clean and format extracted text",
+            "href": "/tools/remove-text-formatting"
+          },
+          {
+            "name": "Image Resizer",
+            "description": "Optimize image size for better OCR processing",
+            "href": "/tools/image-resizer"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный OCR Изображение в Текст - Извлечение Текста из Изображений Онлайн",
+    "metaDescription": "Извлекайте текст из изображений, используя передовую OCR технологию. Бесплатный онлайн конвертер изображений в текст с поддержкой множества языков и высокой точностью распознавания текста.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный OCR Изображение в Текст - Извлечение Текста из Изображений Онлайн",
+        "content": "Извлекайте текст из любого изображения, используя нашу передовую OCR (Оптическое Распознавание Символов) технологию. Поддержка множества языков, высокая точность распознавания текста и обработка фотографий, скриншотов, отсканированных документов и многого другого. Идеально для оцифровки документов, извлечения цитат из изображений и конвертации визуального текста в редактируемый формат."
+      },
+      "features": {
+        "title": "Расширенные Возможности OCR Извлечения Текста",
+        "items": [
+          {
+            "title": "Поддержка Множества Языков",
+            "description": "Извлекайте текст на английском, испанском, французском, немецком, русском, китайском, японском и арабском языках с высокой точностью распознавания."
+          },
+          {
+            "title": "Высокоточный OCR",
+            "description": "Передовой OCR движок Tesseract.js с оценкой достоверности и настраиваемыми порогами точности для надежного извлечения текста."
+          },
+          {
+            "title": "Сохранение Форматирования",
+            "description": "Сохраняйте исходную разметку текста, интервалы и форматирование при извлечении текста из структурированных документов и изображений."
+          },
+          {
+            "title": "Авто-Определение Ориентации",
+            "description": "Автоматически определяйте и исправляйте ориентацию изображения для оптимального распознавания текста, даже с повернутыми или наклоненными изображениями."
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Отслеживайте прогресс извлечения с подробной аналитикой, включая оценки достоверности, метрики текста и эффективность обработки."
+          },
+          {
+            "title": "Обработка с Приоритетом Конфиденциальности",
+            "description": "Вся OCR обработка происходит локально в вашем браузере - ваши изображения и извлеченный текст никогда не покидают ваше устройство."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Применения OCR Изображение в Текст",
+        "description": "Конвертируйте визуальный текст в редактируемый формат для различных профессиональных и личных приложений.",
+        "items": [
+          {
+            "title": "Оцифровка Документов",
+            "description": "Конвертируйте отсканированные документы, чеки, визитные карточки и рукописные заметки в редактируемый цифровой текст."
+          },
+          {
+            "title": "Извлечение Текста из Скриншотов",
+            "description": "Извлекайте текст из скриншотов, сообщений об ошибках, постов в социальных сетях и веб-контента для легкого копирования и обмена."
+          },
+          {
+            "title": "Академические Исследования",
+            "description": "Оцифровывайте текст из книг, исследовательских работ, исторических документов и академических материалов для анализа и цитирования."
+          },
+          {
+            "title": "Рабочий Процесс Перевода",
+            "description": "Извлекайте текст из изображений и документов на иностранных языках для переводческих услуг и изучения языков."
+          },
+          {
+            "title": "Автоматизация Ввода Данных",
+            "description": "Автоматизируйте ввод данных из форм, счетов, сертификатов и других структурированных документов в цифровые системы."
+          },
+          {
+            "title": "Улучшение Доступности",
+            "description": "Конвертируйте текст на основе изображений в формат, дружественный к программам чтения с экрана, для улучшенной доступности и потребления контента."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать OCR Изображение в Текст",
+        "description": "Следуйте этим простым шагам для извлечения текста из любого изображения с высокой точностью.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Загрузите Ваше Изображение",
+            "description": "Нажмите для выбора или перетащите ваш файл изображения. Поддерживает форматы JPG, PNG, GIF, WebP, BMP и TIFF до 10МБ."
+          },
+          {
+            "step": 2,
+            "title": "Настройте OCR Параметры",
+            "description": "Выберите язык распознавания, отрегулируйте порог достоверности и включите сохранение форматирования или определение ориентации."
+          },
+          {
+            "step": 3,
+            "title": "Извлеките Текст",
+            "description": "Нажмите 'Извлечь Текст' для обработки изображения. OCR движок проанализирует изображение и извлечет весь читаемый текст."
+          },
+          {
+            "step": 4,
+            "title": "Просмотрите и Экспортируйте",
+            "description": "Просмотрите извлеченный текст с аналитикой достоверности, затем скопируйте в буфер обмена или скачайте как текстовый файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры OCR Извлечения Текста",
+        "description": "Посмотрите, как наша OCR технология извлекает текст из различных типов изображений и документов.",
+        "items": [
+          {
+            "title": "Отсканированный Документ",
+            "input": "PDF скан с печатным текстом",
+            "output": "Чистый, отформатированный текст с сохраненной разметкой"
+          },
+          {
+            "title": "Текст Скриншота",
+            "input": "Скриншот веб-сайта или приложения",
+            "output": "Извлеченный UI текст и контент"
+          },
+          {
+            "title": "Рукописная Заметка",
+            "input": "Фото рукописного текста",
+            "output": "Оцифрованный текст с высокой точностью"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш OCR Изображение в Текст",
+        "content": "Профессиональная OCR технология с расширенными функциями и обработкой с приоритетом конфиденциальности.",
+        "items": [
+          "Поддержка 8+ языков с высокой точностью распознавания",
+          "Передовой OCR движок Tesseract.js с оценкой достоверности",
+          "Сохранение форматирования для структурированных документов",
+          "Авто-определение ориентации для повернутых изображений",
+          "Обработка в реальном времени с индикаторами прогресса",
+          "Подробная аналитика и метрики извлечения",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "Не требует регистрации с неограниченным использованием"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы изображений поддерживаются для OCR?",
+          "answer": "Наш OCR инструмент поддерживает форматы JPG/JPEG, PNG, GIF, WebP, BMP и TIFF. Изображения могут быть размером до 10МБ. Для лучших результатов используйте изображения высокого разрешения с четким, контрастным текстом."
+        },
+        {
+          "question": "Насколько точно извлечение текста?",
+          "answer": "Наш OCR использует передовую технологию Tesseract.js с оценкой достоверности. Точность зависит от качества изображения, четкости текста и языка. Типичная точность составляет 85-99% для четкого, печатного текста и 70-90% для рукописного текста."
+        },
+        {
+          "question": "Может ли он извлекать текст из рукописных документов?",
+          "answer": "Да, наш OCR может извлекать текст из рукописных документов, хотя точность может быть ниже, чем для печатного текста. Для лучших результатов с рукописным текстом используйте четкое, разборчивое письмо с хорошим контрастом и освещением."
+        },
+        {
+          "question": "Какие языки поддерживаются?",
+          "answer": "Мы поддерживаем английский, испанский, французский, немецкий, русский, китайский (упрощенный), японский и арабский языки. Инструмент автоматически оптимизирует распознавание на основе выбранного вами языка для улучшенной точности."
+        },
+        {
+          "question": "Безопасны ли мои данные при использовании этого инструмента?",
+          "answer": "Абсолютно! Вся OCR обработка происходит локально в вашем браузере, используя клиентскую технологию. Ваши изображения и извлеченный текст никогда не покидают ваше устройство и не загружаются на какие-либо серверы."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты для Изображений и Текста",
+        "items": [
+          {
+            "name": "Обрезчик Изображений",
+            "description": "Обрезайте и изменяйте размер изображений для лучших OCR результатов",
+            "href": "/ru/tools/image-cropper"
+          },
+          {
+            "name": "Счетчик Текста",
+            "description": "Анализируйте статистику извлеченного текста и количество слов",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Удаление Форматирования Текста",
+            "description": "Очищайте и форматируйте извлеченный текст",
+            "href": "/ru/tools/remove-text-formatting"
+          },
+          {
+            "name": "Изменение Размера Изображений",
+            "description": "Оптимизируйте размер изображения для лучшей OCR обработки",
+            "href": "/ru/tools/image-resizer"
+          }
+        ]
+      }
+    }
+  }
+}

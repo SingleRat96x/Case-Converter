@@ -1,0 +1,44 @@
+{
+  "en": {
+    "title": "Contact Us",
+    "intro": {
+      "heading": "We’d love to hear from you",
+      "body": "Send feedback, report issues, or propose partnerships. We respond to most messages within a few business days."
+    },
+    "sections": {
+      "reasons": {
+        "heading": "Reasons to reach out",
+        "items": [
+          { "title": "Feedback & Ideas", "desc": "Feature requests and UX suggestions are welcome." },
+          { "title": "Bug Reports", "desc": "Tell us what broke and how to reproduce it." },
+          { "title": "Partnerships", "desc": "Let’s collaborate to bring value to users." }
+        ]
+      },
+      "methods": {
+        "heading": "How to contact",
+        "body": "Use the contact form on this page or email us. We’ll reply as soon as possible."
+      }
+    }
+  },
+  "ru": {
+    "title": "Связаться с нами",
+    "intro": {
+      "heading": "Мы рады вашей обратной связи",
+      "body": "Присылайте отзывы, отчёты об ошибках и предложения по партнёрству. Обычно отвечаем в течение нескольких рабочих дней."
+    },
+    "sections": {
+      "reasons": {
+        "heading": "Зачем обращаться",
+        "items": [
+          { "title": "Обратная связь и идеи", "desc": "Мы приветствуем предложения по улучшению и UX." },
+          { "title": "Сообщения об ошибках", "desc": "Опишите проблему и шаги для воспроизведения." },
+          { "title": "Партнёрства", "desc": "Давайте сотрудничать и приносить пользу пользователям." }
+        ]
+      },
+      "methods": {
+        "heading": "Как связаться",
+        "body": "Используйте форму на странице или отправьте нам письмо. Мы ответим как можно скорее."
+      }
+    }
+  }
+}

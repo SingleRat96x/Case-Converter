@@ -1,0 +1,368 @@
+{
+  "en": {
+    "title": "Free Online Notepad - Professional Web-Based Text Editor",
+    "metaDescription": "Professional online notepad with rich text formatting, auto-save, file support, and advanced editing features. Free web-based text editor for notes, documents, and writing.",
+    "sections": {
+      "intro": {
+        "title": "Professional Online Notepad & Text Editor",
+        "content": "Experience the power of a full-featured online text editor with our professional notepad tool. Create, edit, and format documents with rich text editing, auto-save functionality, file import/export, and advanced features like find & replace. Perfect for writers, students, professionals, and anyone who needs a reliable web-based text editor."
+      },
+      "features": {
+        "title": "Key Features of Our Online Notepad",
+        "items": [
+          {
+            "title": "Auto-Save Functionality",
+            "description": "Your notes are automatically saved to your browser's local storage, so you never lose your work."
+          },
+          {
+            "title": "Download Options",
+            "description": "Save your notes as TXT or Markdown files for offline access and sharing."
+          },
+          {
+            "title": "Mobile Optimized",
+            "description": "Fully responsive design that works perfectly on smartphones, tablets, and desktop computers."
+          },
+          {
+            "title": "Full-Screen Mode",
+            "description": "Distraction-free writing experience with our full-screen editing mode."
+          },
+          {
+            "title": "Word & Character Count",
+            "description": "Real-time statistics showing word count, character count, and line numbers."
+          },
+          {
+            "title": "Print Support",
+            "description": "Print your notes directly from the browser with properly formatted output."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the Online Notepad",
+        "description": "Using our online notepad is simple and intuitive:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Start Typing",
+            "description": "Click in the text area and start typing your notes. The notepad will automatically save your work as you type."
+          },
+          {
+            "step": 2,
+            "title": "Use Additional Features",
+            "description": "Access full-screen mode, preview, and download options using the toolbar buttons."
+          },
+          {
+            "step": 3,
+            "title": "Save Your Work",
+            "description": "Download your notes as TXT or Markdown files, or simply rely on auto-save for future sessions."
+          },
+          {
+            "step": 4,
+            "title": "Print or Share",
+            "description": "Use the print function to create a hard copy or copy your text to share elsewhere."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Online Notepad Use Cases",
+        "description": "Here are some examples of how you can use our online notepad:",
+        "items": [
+          {
+            "input": "Meeting Notes - Project Alpha",
+            "output": "• Discuss Q4 goals\n• Review budget allocation\n• Assign action items\n• Schedule follow-up meeting",
+            "description": "Perfect for taking structured meeting notes"
+          },
+          {
+            "input": "Shopping List",
+            "output": "Groceries:\n- Milk\n- Bread\n- Eggs\n- Apples\n\nHousehold:\n- Laundry detergent\n- Paper towels",
+            "description": "Create organized shopping and to-do lists"
+          },
+          {
+            "input": "Blog Draft",
+            "output": "# How to Stay Productive While Working from Home\n\nWorking from home can be challenging...\n\n## Tips for Success\n1. Create a dedicated workspace\n2. Establish a routine",
+            "description": "Draft blog posts and articles with Markdown formatting"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Who Uses Online Notepads?",
+        "description": "Our online notepad is perfect for various users and scenarios:",
+        "items": [
+          {
+            "title": "Students",
+            "description": "Take lecture notes, draft essays, and organize study materials without installing software on school computers."
+          },
+          {
+            "title": "Professionals",
+            "description": "Capture meeting notes, brainstorm ideas, and create quick drafts during busy workdays."
+          },
+          {
+            "title": "Writers",
+            "description": "Draft blog posts, articles, and stories with a distraction-free writing environment."
+          },
+          {
+            "title": "Developers",
+            "description": "Quickly jot down code snippets, debug logs, and technical notes while working."
+          },
+          {
+            "title": "Travelers",
+            "description": "Access your notes from any device without syncing issues or app installations."
+          },
+          {
+            "title": "Privacy-Conscious Users",
+            "description": "Keep notes locally in your browser without uploading to third-party cloud services."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits of Using Our Online Notepad",
+        "items": [
+          "No software installation required",
+          "Works on all devices and browsers",
+          "Automatic saving prevents data loss",
+          "Privacy-focused - notes stay in your browser",
+          "Clean, distraction-free interface",
+          "Multiple export formats available",
+          "Full-screen mode for focused writing",
+          "Real-time word and character counting",
+          "Print functionality built-in",
+          "Completely free to use"
+        ]
+      },
+      "relatedTools": {
+        "title": "Related Text Tools",
+        "description": "Enhance your text editing workflow with these complementary tools:",
+        "items": [
+          {
+            "name": "Text Counter",
+            "description": "Count words, characters, and analyze your text in detail",
+            "href": "/tools/text-counter"
+          },
+          {
+            "name": "Text Replace",
+            "description": "Find and replace text patterns across large documents",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Remove Line Breaks",
+            "description": "Clean up formatting by removing unwanted line breaks",
+            "href": "/tools/remove-line-breaks"
+          },
+          {
+            "name": "Plain Text Converter",
+            "description": "Strip formatting and convert to plain text",
+            "href": "/tools/plain-text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Is my data safe when using the online notepad?",
+          "answer": "Yes, your notes are stored locally in your browser's storage and are not transmitted to our servers. Your data remains private and secure on your device."
+        },
+        {
+          "question": "Can I access my notes from different devices?",
+          "answer": "Notes are stored locally in each browser, so they won't automatically sync between devices. However, you can download your notes and transfer them manually."
+        },
+        {
+          "question": "What file formats can I export to?",
+          "answer": "You can download your notes as plain text (.txt) files or Markdown (.md) files for use with other applications."
+        },
+        {
+          "question": "Does the notepad work offline?",
+          "answer": "Once loaded, the notepad works offline. Your existing notes will be available, and new notes will be saved locally."
+        },
+        {
+          "question": "Is there a limit to how much text I can write?",
+          "answer": "The limit depends on your browser's local storage capacity, which is typically several megabytes - more than enough for most text documents."
+        },
+        {
+          "question": "Can I print my notes?",
+          "answer": "Yes, use the print button to create a formatted printout of your notes with proper styling and pagination."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Онлайн Блокнот - Профессиональный Веб-Редактор Текста",
+    "metaDescription": "Профессиональный онлайн блокнот с форматированием текста, автосохранением, поддержкой файлов и расширенными функциями редактирования. Бесплатный веб-редактор для заметок, документов и письма.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный Онлайн Блокнот и Текстовый Редактор",
+        "content": "Испытайте мощь полнофункционального онлайн текстового редактора с нашим профессиональным инструментом блокнота. Создавайте, редактируйте и форматируйте документы с редактированием форматированного текста, функцией автосохранения, импортом/экспортом файлов и расширенными функциями, такими как поиск и замена. Идеально для писателей, студентов, профессионалов и всех, кому нужен надежный веб-редактор текста."
+      },
+      "features": {
+        "title": "Ключевые функции нашего онлайн блокнота",
+        "items": [
+          {
+            "title": "Функция автосохранения",
+            "description": "Ваши заметки автоматически сохраняются в локальном хранилище браузера, поэтому вы никогда не потеряете свою работу."
+          },
+          {
+            "title": "Варианты загрузки",
+            "description": "Сохраняйте заметки как TXT или Markdown файлы для офлайн доступа и обмена."
+          },
+          {
+            "title": "Оптимизация для мобильных устройств",
+            "description": "Полностью адаптивный дизайн, который отлично работает на смартфонах, планшетах и настольных компьютерах."
+          },
+          {
+            "title": "Полноэкранный режим",
+            "description": "Режим письма без отвлекающих элементов с нашим полноэкранным редактором."
+          },
+          {
+            "title": "Подсчет слов и символов",
+            "description": "Статистика в реальном времени, показывающая количество слов, символов и строк."
+          },
+          {
+            "title": "Поддержка печати",
+            "description": "Печатайте заметки прямо из браузера с правильно отформатированным выводом."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как использовать онлайн блокнот",
+        "description": "Использование нашего онлайн блокнота простое и интуитивное:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Начните печатать",
+            "description": "Нажмите в текстовой области и начните печатать заметки. Блокнот автоматически сохранит вашу работу во время печати."
+          },
+          {
+            "step": 2,
+            "title": "Используйте дополнительные функции",
+            "description": "Получите доступ к полноэкранному режиму, предварительному просмотру и параметрам загрузки, используя кнопки панели инструментов."
+          },
+          {
+            "step": 3,
+            "title": "Сохраните работу",
+            "description": "Загрузите заметки как TXT или Markdown файлы или просто полагайтесь на автосохранение для будущих сессий."
+          },
+          {
+            "step": 4,
+            "title": "Печать или обмен",
+            "description": "Используйте функцию печати для создания бумажной копии или скопируйте текст для обмена в другом месте."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры использования онлайн блокнота",
+        "description": "Вот несколько примеров того, как вы можете использовать наш онлайн блокнот:",
+        "items": [
+          {
+            "input": "Заметки совещания - Проект Альфа",
+            "output": "• Обсудить цели Q4\n• Проверить распределение бюджета\n• Назначить задачи\n• Запланировать последующее совещание",
+            "description": "Идеально для структурированных заметок совещаний"
+          },
+          {
+            "input": "Список покупок",
+            "output": "Продукты:\n- Молоко\n- Хлеб\n- Яйца\n- Яблоки\n\nДомашние товары:\n- Стиральный порошок\n- Бумажные полотенца",
+            "description": "Создавайте организованные списки покупок и дел"
+          },
+          {
+            "input": "Черновик блога",
+            "output": "# Как оставаться продуктивным при работе из дома\n\nРабота из дома может быть сложной...\n\n## Советы для успеха\n1. Создайте выделенное рабочее место\n2. Установите режим",
+            "description": "Создавайте черновики блогов и статей с форматированием Markdown"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Кто использует онлайн блокноты?",
+        "description": "Наш онлайн блокнот идеален для различных пользователей и сценариев:",
+        "items": [
+          {
+            "title": "Студенты",
+            "description": "Делайте лекционные заметки, создавайте черновики эссе и организуйте учебные материалы без установки программного обеспечения на школьных компьютерах."
+          },
+          {
+            "title": "Профессионалы",
+            "description": "Записывайте заметки совещаний, генерируйте идеи и создавайте быстрые черновики в напряженные рабочие дни."
+          },
+          {
+            "title": "Писатели",
+            "description": "Создавайте черновики блогов, статей и историй в среде письма без отвлекающих элементов."
+          },
+          {
+            "title": "Разработчики",
+            "description": "Быстро записывайте фрагменты кода, журналы отладки и технические заметки во время работы."
+          },
+          {
+            "title": "Путешественники",
+            "description": "Получайте доступ к заметкам с любого устройства без проблем синхронизации или установки приложений."
+          },
+          {
+            "title": "Пользователи, заботящиеся о конфиденциальности",
+            "description": "Ведите заметки локально в браузере без загрузки в сторонние облачные сервисы."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Преимущества использования нашего онлайн блокнота",
+        "items": [
+          "Не требует установки программного обеспечения",
+          "Работает на всех устройствах и браузерах",
+          "Автоматическое сохранение предотвращает потерю данных",
+          "Ориентированность на конфиденциальность - заметки остаются в браузере",
+          "Чистый интерфейс без отвлекающих элементов",
+          "Доступны множественные форматы экспорта",
+          "Полноэкранный режим для сосредоточенного письма",
+          "Подсчет слов и символов в реальном времени",
+          "Встроенная функция печати",
+          "Абсолютно бесплатно"
+        ]
+      },
+      "relatedTools": {
+        "title": "Связанные текстовые инструменты",
+        "description": "Улучшите свой рабочий процесс редактирования текста с помощью этих дополнительных инструментов:",
+        "items": [
+          {
+            "name": "Счетчик текста",
+            "description": "Подсчитывайте слова, символы и анализируйте текст подробно",
+            "href": "/ru/tools/text-counter"
+          },
+          {
+            "name": "Замена текста",
+            "description": "Найдите и замените текстовые шаблоны в больших документах",
+            "href": "/ru/tools/text-replace"
+          },
+          {
+            "name": "Удаление переводов строк",
+            "description": "Очистите форматирование, удалив нежелательные переводы строк",
+            "href": "/ru/tools/remove-line-breaks"
+          },
+          {
+            "name": "Конвертер простого текста",
+            "description": "Удалите форматирование и конвертируйте в простой текст",
+            "href": "/ru/tools/plain-text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Безопасны ли мои данные при использовании онлайн блокнота?",
+          "answer": "Да, ваши заметки хранятся локально в хранилище браузера и не передаются на наши серверы. Ваши данные остаются приватными и безопасными на вашем устройстве."
+        },
+        {
+          "question": "Могу ли я получить доступ к заметкам с разных устройств?",
+          "answer": "Заметки хранятся локально в каждом браузере, поэтому они не синхронизируются автоматически между устройствами. Однако вы можете загрузить заметки и перенести их вручную."
+        },
+        {
+          "question": "В какие форматы файлов я могу экспортировать?",
+          "answer": "Вы можете загрузить заметки как файлы простого текста (.txt) или файлы Markdown (.md) для использования с другими приложениями."
+        },
+        {
+          "question": "Работает ли блокнот офлайн?",
+          "answer": "После загрузки блокнот работает офлайн. Ваши существующие заметки будут доступны, а новые заметки будут сохраняться локально."
+        },
+        {
+          "question": "Есть ли ограничение на количество текста, которое я могу написать?",
+          "answer": "Ограничение зависит от емкости локального хранилища вашего браузера, которая обычно составляет несколько мегабайт - более чем достаточно для большинства текстовых документов."
+        },
+        {
+          "question": "Могу ли я печатать заметки?",
+          "answer": "Да, используйте кнопку печати для создания отформатированной распечатки ваших заметок с правильным стилем и разбиением на страницы."
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,106 @@
+{
+  "en": {
+    "main": {
+      "title": "Text Case Converter",
+      "description": "Transform your text into different cases with ease. Perfect for developers, writers, and content creators.",
+      "downloadFileName": "converted-text.txt"
+    },
+    "uppercase": {
+      "title": "Convert to UPPERCASE",
+      "description": "Transform any text to uppercase letters instantly. Perfect for headings, emphasis, or formatting requirements.",
+      "outputLabel": "Uppercase Text",
+      "copiedMessage": "Uppercase text copied to clipboard!",
+      "downloadFileName": "uppercase-text.txt",
+      "convertButton": "Convert to UPPERCASE",
+      "uploadDescription": ""
+    },
+    "lowercase": {
+      "title": "Convert to lowercase",
+      "description": "Transform any text to lowercase letters instantly. Perfect for consistency, URLs, or coding standards.",
+      "outputLabel": "Lowercase Text",
+      "copiedMessage": "Lowercase text copied to clipboard!",
+      "downloadFileName": "lowercase-text.txt",
+      "convertButton": "Convert to lowercase",
+      "uploadDescription": ""
+    },
+    "titleCase": {
+      "title": "Convert to Title Case",
+      "description": "Transform any text to Title Case where every word starts with a capital letter. Perfect for headings, titles, and proper formatting.",
+      "outputLabel": "Title Case Text",
+      "copiedMessage": "Title Case text copied to clipboard!",
+      "downloadFileName": "title-case-text.txt",
+      "convertButton": "Convert to Title Case",
+      "uploadDescription": ""
+    },
+    "sentenceCase": {
+      "title": "Convert to Sentence case",
+      "description": "Transform any text to sentence case where only the first letter of each sentence is capitalized. Perfect for natural writing and proper grammar.",
+      "outputLabel": "Sentence Case Text",
+      "copiedMessage": "Sentence case text copied to clipboard!",
+      "downloadFileName": "sentence-case-text.txt",
+      "convertButton": "Convert to Sentence case",
+      "uploadDescription": ""
+    },
+    "alternatingCase": {
+      "title": "Convert to aLtErNaTiNg case",
+      "description": "Transform any text to alternating case where letters alternate between lowercase and uppercase. Perfect for creative text, memes, or stylistic emphasis.",
+      "outputLabel": "Alternating Case Text",
+      "copiedMessage": "Alternating case text copied to clipboard!",
+      "downloadFileName": "alternating-case-text.txt",
+      "convertButton": "Convert to aLtErNaTiNg case",
+      "uploadDescription": ""
+    }
+  },
+  "ru": {
+    "main": {
+      "title": "Конвертер Регистра Текста",
+      "description": "Легко преобразуйте ваш текст в различные регистры. Идеально для разработчиков, писателей и создателей контента.",
+      "downloadFileName": "converted-text.txt"
+    },
+    "uppercase": {
+      "title": "Конвертировать в ВЕРХНИЙ РЕГИСТР",
+      "description": "Мгновенно преобразуйте любой текст в верхний регистр. Идеально для заголовков, выделения или требований форматирования.",
+      "outputLabel": "Текст в Верхнем Регистре",
+      "copiedMessage": "Текст в верхнем регистре скопирован в буфер обмена!",
+      "downloadFileName": "uppercase-text.txt",
+      "convertButton": "Конвертировать в ВЕРХНИЙ РЕГИСТР",
+      "uploadDescription": ""
+    },
+    "lowercase": {
+      "title": "Конвертировать в нижний регистр",
+      "description": "Мгновенно преобразуйте любой текст в нижний регистр. Идеально для единообразия, URL или стандартов кодирования.",
+      "outputLabel": "Текст в Нижнем Регистре",
+      "copiedMessage": "Текст в нижнем регистре скопирован в буфер обмена!",
+      "downloadFileName": "lowercase-text.txt",
+      "convertButton": "Конвертировать в нижний регистр",
+      "uploadDescription": ""
+    },
+    "titleCase": {
+      "title": "Конвертировать в Заглавный Регистр",
+      "description": "Преобразуйте любой текст в Заглавный Регистр, где каждое слово начинается с заглавной буквы. Идеально для заголовков, титулов и правильного форматирования.",
+      "outputLabel": "Текст в Заглавном Регистре",
+      "copiedMessage": "Текст в Заглавном Регистре скопирован в буфер обмена!",
+      "downloadFileName": "title-case-text.txt",
+      "convertButton": "Конвертировать в Заглавный Регистр",
+      "uploadDescription": ""
+    },
+    "sentenceCase": {
+      "title": "Конвертировать в Регистр предложения",
+      "description": "Преобразуйте любой текст в регистр предложения, где только первая буква каждого предложения пишется с заглавной. Идеально для естественного письма и правильной грамматики.",
+      "outputLabel": "Текст в Регистре Предложения",
+      "copiedMessage": "Текст в регистре предложения скопирован в буфер обмена!",
+      "downloadFileName": "sentence-case-text.txt",
+      "convertButton": "Конвертировать в Регистр предложения",
+      "uploadDescription": ""
+    },
+    "alternatingCase": {
+      "title": "Конвертировать в ЧеРеДуЮщИйСя регистр",
+      "description": "Преобразуйте любой текст в чередующийся регистр, где буквы чередуются между строчными и заглавными. Идеально для креативного текста, мемов или стилистического выделения.",
+      "outputLabel": "Текст в Чередующемся Регистре",
+      "copiedMessage": "Текст в чередующемся регистре скопирован в буфер обмена!",
+      "downloadFileName": "alternating-case-text.txt",
+      "convertButton": "Конвертировать в ЧеРеДуЮщИйСя регистр",
+      "uploadDescription": ""
+    }
+  }
+}
