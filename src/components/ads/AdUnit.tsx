@@ -130,7 +130,17 @@ export function AdUnit({
         const success = initializeAd(element);
         if (success) {
           setIsLoaded(true);
-          onLoad?.();
+          // Check if ad actually rendered content after a delay
+          setTimeout(() => {
+            const adContent = element.querySelector('iframe, [data-ad-status="filled"]');
+            if (adContent || element.offsetHeight > 50) {
+              onLoad?.();
+            } else {
+              const errorMsg = 'Ad loaded but no content rendered';
+              setError(errorMsg);
+              onError?.(errorMsg);
+            }
+          }, 2000);
         } else {
           const errorMsg = 'Failed to initialize ad unit';
           setError(errorMsg);
