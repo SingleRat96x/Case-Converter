@@ -133,10 +133,8 @@ export function BaseTextConverter({
         </p>
       </div>
 
-      {/* Simple responsive ad below description */}
-      <div className="my-6 min-h-[280px] flex items-center justify-center">
-        <EnhancedResponsiveAd format="auto" lazy={false} slot="9659974650" />
-      </div>
+      {/* Space for auto ads to insert */}
+      <div className="my-8"></div>
 
       {/* Feedback Message */}
       <FeedbackMessage feedback={feedback} />
