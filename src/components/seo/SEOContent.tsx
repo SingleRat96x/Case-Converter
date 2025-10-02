@@ -8,6 +8,7 @@ import { getLocaleFromPathname } from '@/lib/i18n';
 import { useCommonTranslations } from '@/lib/i18n/hooks';
 import { CheckCircle, ArrowRight, HelpCircle } from 'lucide-react';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
+import { SEOContentAd } from '@/components/ads/SEOContentAd';
 
 // Lazy load structured data component for better performance
 const AdvancedStructuredData = lazy(() => import('./AdvancedStructuredData'));
@@ -174,8 +175,8 @@ export function SEOContent({
         <p className="text-lg text-muted-foreground leading-relaxed">{content.sections.intro.content}</p>
       </section>
 
-      {/* Space for auto ads */}
-      <div className="my-12"></div>
+      {/* Test ad in top half */}
+      <SEOContentAd slot="4917772104" className="my-12" />
 
       {/* Features Section */}
       <section>
