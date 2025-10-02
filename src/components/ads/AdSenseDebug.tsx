@@ -61,7 +61,7 @@ export function AdSenseDebug() {
             </div>
             
             <div className="text-gray-500">
-              AdSense ID: {config.adsenseId ? '***' + config.adsenseId.slice(-4) : 'None'}
+              AdSense ID: {config.adsenseId ? '***' + (config.adsenseId || '').slice(-4) : 'None'}
             </div>
             
             <div className="text-gray-500">
