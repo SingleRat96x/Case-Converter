@@ -134,7 +134,7 @@ export function BaseTextConverter({
       </div>
 
       {/* Simple responsive ad below description */}
-      <EnhancedResponsiveAd className="my-6" format="auto" lazy={true} />
+      <EnhancedResponsiveAd className="my-6" format="auto" lazy={true} slot="9659974650" />
 
       {/* Feedback Message */}
       <FeedbackMessage feedback={feedback} />
