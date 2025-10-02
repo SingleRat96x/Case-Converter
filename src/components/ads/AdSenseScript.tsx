@@ -24,23 +24,7 @@ export function AdSenseScript({ onLoad, onError }: AdSenseScriptProps) {
   }
 
   const handleLoad = () => {
-    // Initialize auto ads if enabled
-    if (autoAdsEnabled && typeof window !== 'undefined' && window.adsbygoogle) {
-      try {
-        window.adsbygoogle.push({
-          google_ad_client: adsenseId,
-          enable_page_level_ads: true,
-          overlays: {
-            bottom: true
-          }
-        });
-        console.log('AdSense: Auto ads initialized');
-      } catch (error) {
-        console.error('AdSense: Auto ads initialization failed', error);
-        onError?.(error instanceof Error ? error : new Error('Auto ads initialization failed'));
-      }
-    }
-    
+    console.log('AdSense: Script loaded successfully');
     onLoad?.();
   };
 
@@ -50,33 +34,14 @@ export function AdSenseScript({ onLoad, onError }: AdSenseScriptProps) {
   };
 
   return (
-    <>
-      <Script
-        id="adsense-script"
-        src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
-        strategy="afterInteractive"
-        crossOrigin="anonymous"
-        onLoad={handleLoad}
-        onError={handleError}
-      />
-      
-      {/* Auto Ads Configuration Script */}
-      {autoAdsEnabled && (
-        <Script
-          id="adsense-auto-ads"
-          strategy="afterInteractive"
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.adsbygoogle = window.adsbygoogle || [];
-              (adsbygoogle = window.adsbygoogle).push({
-                google_ad_client: "${adsenseId}",
-                enable_page_level_ads: true
-              });
-            `
-          }}
-        />
-      )}
-    </>
+    <Script
+      id="adsense-script"
+      src={`https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${adsenseId}`}
+      strategy="afterInteractive"
+      crossOrigin="anonymous"
+      onLoad={handleLoad}
+      onError={handleError}
+    />
   );
 }
 
