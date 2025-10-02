@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { X, ChevronDown, ChevronRight, Globe, Sun, Moon, Monitor, Type, Palette, Code2, Image as ImageIcon, BarChart3, Settings } from 'lucide-react';
 import { useNavigationTranslations } from '@/lib/i18n/hooks';
+import { useMobileMenu } from '@/contexts/MobileMenuContext';
 
 interface MobileNavigationProps {
   locale: 'en' | 'ru';
@@ -12,7 +13,7 @@ interface MobileNavigationProps {
 }
 
 export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationProps) {
-  const [isOpen, setIsOpen] = useState(false);
+  const { isOpen, setIsOpen } = useMobileMenu();
   const [expandedCategory, setExpandedCategory] = useState<string | null>(null);
   const [currentTheme, setCurrentTheme] = useState<'light' | 'dark' | 'system'>('system');
   const { tSync: t } = useNavigationTranslations();

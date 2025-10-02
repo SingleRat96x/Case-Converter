@@ -2,6 +2,7 @@
 
 import { AdUnit } from './AdUnit';
 import { cn } from '@/lib/utils';
+import { useMobileMenu } from '@/contexts/MobileMenuContext';
 
 interface AdPlacementProps {
   className?: string;
@@ -134,18 +135,22 @@ export function CardSeparatorAd({ className, slot, index }: AdPlacementProps & {
 
 // Sticky bottom ad for mobile (like AdMob)
 export function StickyBottomAd({ className, slot }: AdPlacementProps) {
+  const { isOpen: isMobileMenuOpen } = useMobileMenu();
+  
   return (
     <div className={cn(
-      "fixed bottom-0 left-0 right-0 z-40 bg-background border-t shadow-lg md:hidden",
+      "fixed bottom-0 left-0 right-0 z-30 bg-background border-t shadow-sm md:hidden h-[60px]",
+      "transition-transform duration-300 ease-in-out",
+      isMobileMenuOpen && "translate-y-full", // Hide when menu is open
       className
     )}>
       <AdUnit
         format="banner"
         size="320x50"
-        slot={slot || "0123456789"}
-        responsive={true}
+        slot={slot || "9659974650"}
+        responsive={false} // Fixed size for mobile banner
         lazy={false} // Always load sticky ads
-        className="w-full"
+        className="w-full h-full flex items-center justify-center"
       />
     </div>
   );
