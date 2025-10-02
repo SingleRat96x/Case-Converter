@@ -68,11 +68,11 @@ export default function RootLayout({
         />
         
         {/* AdSense Script - Load early in head */}
-        <Script 
+        <script 
+          async
           src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905"
-          strategy="afterInteractive"
           crossOrigin="anonymous"
-        />
+        ></script>
         
         {/* Initialize scripts and AdSense array */}
         <Script id="initialize-scripts" strategy="afterInteractive">

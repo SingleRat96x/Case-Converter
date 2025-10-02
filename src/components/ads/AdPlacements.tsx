@@ -15,7 +15,7 @@ export function HeaderAd({ className, slot }: AdPlacementProps) {
     <div className={cn("w-full max-w-4xl mx-auto mb-6", className)}>
       <AdUnit
         format="leaderboard"
-        slot={slot}
+        slot={slot || "1234567890"}
         responsive={true}
         className="w-full"
       />
@@ -28,7 +28,7 @@ export function SidebarAd({ className, slot }: AdPlacementProps) {
     <div className={cn("hidden lg:block sticky top-20", className)}>
       <AdUnit
         format="skyscraper"
-        slot={slot}
+        slot={slot || "4567890123"}
         className="w-full"
         lazy={false} // Sidebar ads should load immediately
       />
@@ -41,7 +41,7 @@ export function InContentAd({ className, slot }: AdPlacementProps) {
     <div className={cn("my-8 w-full max-w-2xl mx-auto", className)}>
       <AdUnit
         format="rectangle"
-        slot={slot}
+        slot={slot || "2345678901"}
         responsive={true}
         className="w-full"
       />
@@ -54,7 +54,7 @@ export function FooterAd({ className, slot }: AdPlacementProps) {
     <div className={cn("w-full max-w-4xl mx-auto mt-8 mb-4", className)}>
       <AdUnit
         format="leaderboard"
-        slot={slot}
+        slot={slot || "5678901234"}
         responsive={true}
         className="w-full"
       />
@@ -68,7 +68,7 @@ export function MobileAd({ className, slot }: AdPlacementProps) {
       <AdUnit
         format="banner"
         size="320x50"
-        slot={slot}
+        slot={slot || "7890123456"}
         responsive={true}
         className="w-full"
       />
@@ -89,7 +89,7 @@ export function ToolSeparatorAd({ className, slot }: AdPlacementProps) {
         <div className="relative flex justify-center bg-background px-4">
           <AdUnit
             format="rectangle"
-            slot={slot}
+            slot={slot || "8901234567"}
             responsive={true}
             className="bg-background"
           />
@@ -105,7 +105,7 @@ export function ResponsiveAd({ className, slot }: AdPlacementProps) {
     <div className={cn("w-full my-6", className)}>
       <AdUnit
         format="auto"
-        slot={slot}
+        slot={slot || "3456789012"}
         responsive={true}
         className="w-full min-h-[250px] md:min-h-[300px]"
       />
@@ -124,7 +124,7 @@ export function CardSeparatorAd({ className, slot, index }: AdPlacementProps & {
     <div className={cn("w-full my-4 px-4", className)}>
       <AdUnit
         format="rectangle"
-        slot={slot}
+        slot={slot || "9012345678"}
         responsive={true}
         className="w-full max-w-sm mx-auto"
       />
@@ -142,7 +142,7 @@ export function StickyBottomAd({ className, slot }: AdPlacementProps) {
       <AdUnit
         format="banner"
         size="320x50"
-        slot={slot}
+        slot={slot || "0123456789"}
         responsive={true}
         lazy={false} // Always load sticky ads
         className="w-full"
@@ -157,7 +157,7 @@ export function HeroAd({ className, slot }: AdPlacementProps) {
     <div className={cn("w-full max-w-5xl mx-auto my-8", className)}>
       <AdUnit
         format="auto"
-        slot={slot}
+        slot={slot || "1122334455"}
         responsive={true}
         lazy={false} // Hero ads should load immediately
         className="w-full min-h-[200px] md:min-h-[250px]"

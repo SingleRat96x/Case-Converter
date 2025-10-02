@@ -181,7 +181,7 @@ function ResponsiveAdInner({
             minHeight: 250,
           }}
           data-ad-client={config.adsenseId}
-          data-ad-slot={slot}
+          data-ad-slot={slot || "6789012345"}
           data-ad-format={format === 'auto' ? 'auto' : undefined}
           data-full-width-responsive="true"
         />

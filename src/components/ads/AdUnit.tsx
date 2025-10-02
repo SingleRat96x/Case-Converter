@@ -36,8 +36,8 @@ interface AdUnitProps {
 }
 
 // Ad size mappings for responsive design
-const adSizeMap: Record<AdSize, { width: number; height: number }> = {
-  'responsive': { width: 0, height: 0 },
+const adSizeMap: Record<AdSize, { width: number | string; height: number | string }> = {
+  'responsive': { width: '100%', height: 'auto' },
   '300x250': { width: 300, height: 250 },
   '728x90': { width: 728, height: 90 },
   '320x50': { width: 320, height: 50 },
@@ -79,6 +79,11 @@ export function AdUnit({
   // Determine final size
   const finalSize = size || formatToSize[format];
   const { width, height } = adSizeMap[finalSize];
+  
+  // Calculate responsive dimensions
+  const isResponsiveSize = finalSize === 'responsive' || responsive;
+  const displayWidth = isResponsiveSize ? '100%' : width;
+  const displayHeight = isResponsiveSize ? 'auto' : height;
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -109,9 +114,20 @@ export function AdUnit({
       return;
     }
 
-    const timer = setTimeout(() => {
+    // Ensure the element has proper dimensions before initializing
+    const checkAndInitialize = () => {
+      const element = adRef.current;
+      if (!element) return;
+
+      const rect = element.getBoundingClientRect();
+      if (rect.width === 0) {
+        // Wait a bit more for layout to complete
+        setTimeout(checkAndInitialize, 50);
+        return;
+      }
+
       try {
-        const success = initializeAd(adRef.current);
+        const success = initializeAd(element);
         if (success) {
           setIsLoaded(true);
           onLoad?.();
@@ -125,8 +141,9 @@ export function AdUnit({
         setError(errorMsg);
         onError?.(errorMsg);
       }
-    }, 100); // Small delay to ensure DOM is ready
+    };
 
+    const timer = setTimeout(checkAndInitialize, 100);
     return () => clearTimeout(timer);
   }, [isVisible, adSenseLoaded, isLoaded, initializeAd, onLoad, onError]);
 
@@ -143,9 +160,9 @@ export function AdUnit({
         className
       )}
       style={{ 
-        width: responsive ? '100%' : width || 'auto', 
-        height: height || 250,
-        maxWidth: width || '100%'
+        width: displayWidth, 
+        height: typeof height === 'number' ? height : 250,
+        maxWidth: '100%'
       }}
     >
       <div className="text-center">
@@ -177,8 +194,9 @@ export function AdUnit({
     <div 
       className={cn("text-center", className)}
       style={{ 
-        minWidth: responsive ? 'auto' : width,
-        minHeight: height || 250
+        minWidth: isResponsiveSize ? '280px' : width,
+        minHeight: typeof height === 'number' ? height : 250,
+        width: '100%'
       }}
     >
       {isVisible && (
@@ -186,15 +204,16 @@ export function AdUnit({
           ref={adRef}
           className="adsbygoogle"
           style={{
-            display: responsive ? 'block' : 'inline-block',
-            width: responsive ? '100%' : width,
-            height: height || 'auto',
-            maxWidth: '100%'
+            display: 'block',
+            width: displayWidth,
+            height: displayHeight,
+            maxWidth: '100%',
+            minWidth: isResponsiveSize ? '280px' : width
           }}
           data-ad-client={config.adsenseId}
-          data-ad-slot={slot}
-          data-ad-format={responsive ? 'auto' : undefined}
-          data-full-width-responsive={responsive ? 'true' : undefined}
+          data-ad-slot={slot || 'default'}
+          data-ad-format={isResponsiveSize ? 'auto' : undefined}
+          data-full-width-responsive={isResponsiveSize ? 'true' : undefined}
           data-adtest={testMode ? 'on' : undefined}
         />
       )}
@@ -203,9 +222,10 @@ export function AdUnit({
         <div 
           className="bg-gray-100 dark:bg-gray-800 animate-pulse"
           style={{ 
-            width: responsive ? '100%' : width,
-            height: height || 250,
-            maxWidth: '100%'
+            width: displayWidth,
+            height: typeof height === 'number' ? height : 250,
+            maxWidth: '100%',
+            minWidth: isResponsiveSize ? '280px' : width
           }}
         />
       )}

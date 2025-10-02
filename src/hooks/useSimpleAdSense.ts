@@ -52,6 +52,9 @@ export function useSimpleAdSense() {
   useEffect(() => {
     if (!state.isClient) return;
 
+    let retryCount = 0;
+    const maxRetries = 50; // 5 seconds total
+
     const checkAdSenseReady = () => {
       if (typeof window !== 'undefined' && window.adsbygoogle) {
         setState(prev => ({
@@ -60,9 +63,16 @@ export function useSimpleAdSense() {
           isError: false,
           error: null,
         }));
-      } else {
-        // Retry after a short delay
+      } else if (retryCount < maxRetries) {
+        retryCount++;
         setTimeout(checkAdSenseReady, 100);
+      } else {
+        setState(prev => ({
+          ...prev,
+          isLoaded: false,
+          isError: true,
+          error: 'AdSense script failed to load',
+        }));
       }
     };
 
