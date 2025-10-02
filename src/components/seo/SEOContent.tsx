@@ -4,7 +4,6 @@ import React, { lazy, Suspense } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import { useSEOContent, type SEOContentItem } from '@/hooks/useSEOContent';
-import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
 import { getLocaleFromPathname } from '@/lib/i18n';
 import { useCommonTranslations } from '@/lib/i18n/hooks';
 import { CheckCircle, ArrowRight, HelpCircle } from 'lucide-react';
@@ -47,10 +46,6 @@ export function SEOContent({
     return null; // Gracefully fail without breaking the page
   }
 
-  const AdBreak = () => {
-    if (!enableAds) return null;
-    return <EnhancedResponsiveAd className="my-8" format="auto" lazy={true} />;
-  };
 
   const renderFeaturesList = (items: SEOContentItem[]) => (
     <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -167,7 +162,7 @@ export function SEOContent({
   );
 
   return (
-    <article className={`max-w-4xl mx-auto mt-16 space-y-12 ${className}`}>
+    <article className={`max-w-4xl mx-auto mt-16 space-y-16 ${className}`}>
       {/* Advanced Structured Data for SEO */}
       <Suspense fallback={null}>
         <AdvancedStructuredData toolSlug={toolName} />
@@ -179,8 +174,8 @@ export function SEOContent({
         <p className="text-lg text-muted-foreground leading-relaxed">{content.sections.intro.content}</p>
       </section>
 
-      {/* Ad Break after intro */}
-      <AdBreak />
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
 
       {/* Features Section */}
       <section>
@@ -188,8 +183,8 @@ export function SEOContent({
         {renderFeaturesList(content.sections.features.items as SEOContentItem[])}
       </section>
 
-      {/* Ad Break after features */}
-      {adDensity !== 'low' && <AdBreak />}
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
 
       {/* How to Use Section */}
       <section>
@@ -198,6 +193,9 @@ export function SEOContent({
         {renderHowToSteps(content.sections.howToUse.steps as SEOContentItem[])}
       </section>
 
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
+
       {/* Examples Section */}
       <section>
         <h2 className="text-3xl font-bold text-foreground mb-6">{content.sections.examples.title}</h2>
@@ -205,8 +203,8 @@ export function SEOContent({
         {renderExamples(content.sections.examples.items as SEOContentItem[])}
       </section>
 
-      {/* Ad Break in middle content */}
-      <AdBreak />
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
 
       {/* Use Cases Section */}
       <section>
@@ -214,6 +212,9 @@ export function SEOContent({
         <p className="text-muted-foreground mb-8">{content.sections.useCases.description}</p>
         {renderUseCases(content.sections.useCases.items as SEOContentItem[])}
       </section>
+
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
 
       {/* Benefits Section */}
       <section className="seo-benefits-section rounded-xl p-8">
@@ -228,6 +229,9 @@ export function SEOContent({
         </div>
       </section>
 
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
+
       {/* Related Tools Section */}
       <section>
         <h2 className="text-3xl font-bold text-foreground mb-6">{content.sections.relatedTools.title}</h2>
@@ -235,8 +239,8 @@ export function SEOContent({
         {renderRelatedTools(content.sections.relatedTools.items as SEOContentItem[])}
       </section>
 
-      {/* Final Ad Break */}
-      <AdBreak />
+      {/* Space for auto ads */}
+      <div className="my-12"></div>
 
       {/* FAQ Section */}
       <section>
@@ -244,8 +248,8 @@ export function SEOContent({
         {renderFAQs(content.sections.faqs)}
       </section>
 
-      {/* Bottom Ad */}
-      {enableAds && <EnhancedResponsiveAd className="mt-12" format="auto" lazy={true} />}
+      {/* Space for auto ads at bottom */}
+      <div className="mt-16"></div>
     </article>
   );
 }
