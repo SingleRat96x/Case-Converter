@@ -11,7 +11,6 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useDebounce } from '@/hooks/useDebounce';
-import { InContentAd } from '@/components/ads/AdPlacements';
 
 // Types
 interface Tool {
@@ -337,11 +336,8 @@ export function AllToolsPage({ categories }: AllToolsPageProps) {
       
       {/* Tools Grid */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 pb-12">
-        {/* Top Ad */}
-        <InContentAd 
-          slot="tools-page-top"
-          className="mb-8"
-        />
+        {/* Space for auto ads */}
+        <div className="my-8"></div>
         
         {filteredCategories.map((category, index) => (
           <React.Fragment key={category.id}>
@@ -351,12 +347,9 @@ export function AllToolsPage({ categories }: AllToolsPageProps) {
               searchQuery={debouncedSearchQuery}
             />
             
-            {/* Ad after every 2 categories */}
+            {/* Space for auto ads between categories */}
             {(index + 1) % 2 === 0 && index < filteredCategories.length - 1 && (
-              <InContentAd 
-                slot={`tools-page-mid-${index}`}
-                className="my-8"
-              />
+              <div className="my-12"></div>
             )}
           </React.Fragment>
         ))}
@@ -377,11 +370,8 @@ export function AllToolsPage({ categories }: AllToolsPageProps) {
           </div>
         )}
         
-        {/* Bottom Ad */}
-        <InContentAd 
-          slot="tools-page-bottom"
-          className="mt-8"
-        />
+        {/* Space for auto ads at bottom */}
+        <div className="mt-12"></div>
       </div>
     </Layout>
   );
