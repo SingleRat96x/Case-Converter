@@ -18,7 +18,7 @@ interface AdSenseState {
   isClient: boolean;
 }
 
-export function useAdSense() {
+export function useSimpleAdSense() {
   const [state, setState] = useState<AdSenseState>({
     isLoaded: false,
     isError: false,
@@ -48,38 +48,43 @@ export function useAdSense() {
     (config.autoAdsEnabled || config.manualAdsEnabled)
   );
 
-  // Handle script load success
-  const handleLoad = useCallback(() => {
-    setState(prev => ({
-      ...prev,
-      isLoaded: true,
-      isError: false,
-      error: null,
-    }));
-  }, []);
+  // Check if AdSense is ready
+  useEffect(() => {
+    if (!state.isClient) return;
 
-  // Handle script load error
-  const handleError = useCallback((error: Error) => {
-    setState(prev => ({
-      ...prev,
-      isLoaded: false,
-      isError: true,
-      error: error.message,
-    }));
-  }, []);
+    const checkAdSenseReady = () => {
+      if (typeof window !== 'undefined' && window.adsbygoogle) {
+        setState(prev => ({
+          ...prev,
+          isLoaded: true,
+          isError: false,
+          error: null,
+        }));
+      } else {
+        // Retry after a short delay
+        setTimeout(checkAdSenseReady, 100);
+      }
+    };
 
-  // Push ad to queue
-  const pushAd = useCallback((adConfig: Record<string, unknown>) => {
-    if (!state.isLoaded || !window.adsbygoogle) {
-      console.warn('AdSense: Script not loaded, cannot push ad');
+    checkAdSenseReady();
+  }, [state.isClient]);
+
+  // Initialize manual ad
+  const initializeAd = useCallback((element: HTMLElement | null) => {
+    if (!element || !state.isLoaded) {
+      return false;
+    }
+
+    if (typeof window === 'undefined' || !window.adsbygoogle) {
+      console.warn('AdSense: Script not loaded, cannot initialize ad');
       return false;
     }
 
     try {
-      window.adsbygoogle.push(adConfig);
+      window.adsbygoogle.push({});
       return true;
     } catch (error) {
-      console.error('AdSense: Failed to push ad', error);
+      console.error('AdSense: Failed to initialize ad', error);
       return false;
     }
   }, [state.isLoaded]);
@@ -106,21 +111,6 @@ export function useAdSense() {
     }
   }, [state.isLoaded]);
 
-  // Initialize manual ad
-  const initializeAd = useCallback((element: HTMLElement | null) => {
-    if (!element || !state.isLoaded) {
-      return false;
-    }
-
-    try {
-      window.adsbygoogle.push({});
-      return true;
-    } catch (error) {
-      console.error('AdSense: Failed to initialize ad', error);
-      return false;
-    }
-  }, [state.isLoaded]);
-
   // Debug information
   const debugInfo = {
     config,
@@ -131,11 +121,15 @@ export function useAdSense() {
   return {
     ...state,
     config,
-    handleLoad,
-    handleError,
-    pushAd,
-    refreshAds,
     initializeAd,
+    refreshAds,
     debugInfo,
   };
+}
+
+// Global type declaration for AdSense
+declare global {
+  interface Window {
+    adsbygoogle: Record<string, unknown>[];
+  }
 }

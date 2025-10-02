@@ -2,7 +2,6 @@ import React from 'react';
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { FooterAd, StickyBottomAd } from '@/components/ads/AdPlacements';
-import { AdSenseDebug } from '@/components/ads/AdSenseDebug';
 
 interface LayoutProps {
   children: React.ReactNode;
@@ -25,8 +24,6 @@ export function Layout({ children }: LayoutProps) {
       {/* Sticky bottom ad for mobile */}
       <StickyBottomAd />
       
-      {/* Debug panel for development */}
-      <AdSenseDebug />
     </div>
   );
 }

@@ -3,8 +3,6 @@ import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
 import { LanguageDetector } from "@/components/LanguageDetector";
-import { AdSenseProvider } from "@/contexts/AdSenseContext";
-import { AdSenseManager } from "@/components/ads/AdSenseManager";
 import { LanguageHtml } from "@/components/LanguageHtml";
 
 const geistSans = Geist({
@@ -62,29 +60,41 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        suppressHydrationWarning={true}
-      >
+      <head>
+        {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"
           strategy="afterInteractive"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        
+        {/* AdSense Script - Load early in head */}
+        <Script 
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8899111851490905"
+          strategy="afterInteractive"
+          crossOrigin="anonymous"
+        />
+        
+        {/* Initialize scripts and AdSense array */}
+        <Script id="initialize-scripts" strategy="afterInteractive">
           {`
+            // Initialize AdSense array before any components load
+            window.adsbygoogle = window.adsbygoogle || [];
+            
+            // Google Analytics
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
             gtag('config', 'G-1DT1KPX3XQ');
           `}
         </Script>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        suppressHydrationWarning={true}
+      >
         <LanguageHtml>
-          <AdSenseProvider>
-            <AdSenseManager>
-              <LanguageDetector />
-              {children}
-            </AdSenseManager>
-          </AdSenseProvider>
+          <LanguageDetector />
+          {children}
         </LanguageHtml>
       </body>
     </html>

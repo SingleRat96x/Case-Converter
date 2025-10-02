@@ -1,8 +1,7 @@
 'use client';
 
 import React, { useEffect, useRef, useState, useId } from 'react';
-import { useAdSenseContext } from '@/contexts/AdSenseContext';
-import { AdSenseErrorBoundary } from './AdSenseManager';
+import { useSimpleAdSense } from '@/hooks/useSimpleAdSense';
 import { cn } from '@/lib/utils';
 
 interface EnhancedResponsiveAdProps {
@@ -39,13 +38,9 @@ function ResponsiveAdInner({
 
   const {
     config,
-    scriptStatus,
-    isReady,
-    canLoadAds,
-    registerAd,
-    unregisterAd,
-    initializeManualAd,
-  } = useAdSenseContext();
+    isLoaded: adSenseLoaded,
+    initializeAd,
+  } = useSimpleAdSense();
 
   // Intersection Observer for lazy loading
   useEffect(() => {
@@ -71,21 +66,12 @@ function ResponsiveAdInner({
     return () => observer.disconnect();
   }, [lazy, isVisible, config.manualAdsEnabled]);
 
-  // Register ad with context
-  useEffect(() => {
-    if (config.manualAdsEnabled && isVisible) {
-      registerAd(adId);
-      return () => unregisterAd(adId);
-    }
-  }, [adId, isVisible, config.manualAdsEnabled, registerAd, unregisterAd]);
-
   // Initialize ad when ready
   useEffect(() => {
     if (
       !isVisible ||
       !config.manualAdsEnabled ||
-      !isReady() ||
-      !canLoadAds() ||
+      !adSenseLoaded ||
       !adRef.current ||
       isLoaded ||
       error
@@ -93,12 +79,9 @@ function ResponsiveAdInner({
       return;
     }
 
-    const initializeAd = async () => {
+    const timer = setTimeout(() => {
       try {
-        // Small delay to prevent race conditions
-        await new Promise(resolve => setTimeout(resolve, 100 * (retryCount + 1)));
-        
-        const success = await initializeManualAd(adRef.current!, adId);
+        const success = initializeAd(adRef.current);
         
         if (success) {
           setIsLoaded(true);
@@ -112,30 +95,26 @@ function ResponsiveAdInner({
         setError(errorMessage);
         onError?.(errorMessage);
 
-        // Retry logic
-        if (retryOnError && retryCount < config.retryAttempts) {
+        // Simple retry logic
+        if (retryOnError && retryCount < 3) {
           setTimeout(() => {
             setRetryCount(prev => prev + 1);
             setError(null);
-          }, config.retryDelay * (retryCount + 1));
+          }, 1000 * (retryCount + 1));
         }
       }
-    };
+    }, 100 * (retryCount + 1));
 
-    initializeAd();
+    return () => clearTimeout(timer);
   }, [
     isVisible,
     config.manualAdsEnabled,
-    config.retryAttempts,
-    config.retryDelay,
-    isReady,
-    canLoadAds,
+    adSenseLoaded,
     isLoaded,
     error,
     retryCount,
     retryOnError,
-    initializeManualAd,
-    adId,
+    initializeAd,
     onLoad,
     onError,
   ]);
@@ -164,7 +143,7 @@ function ResponsiveAdInner({
   }
 
   // Error state with retry option
-  if (error && (!retryOnError || retryCount >= config.retryAttempts)) {
+  if (error && (!retryOnError || retryCount >= 3)) {
     return (
       <div className={cn("text-center p-4 text-gray-500 text-sm", className)}>
         <div>Advertisement could not be loaded</div>
@@ -176,7 +155,7 @@ function ResponsiveAdInner({
   }
 
   // Loading state
-  if (scriptStatus === 'loading' || (isVisible && !isLoaded && !error)) {
+  if (!adSenseLoaded || (isVisible && !isLoaded && !error)) {
     return (
       <div className={cn("text-center p-4", className)}>
         {showPlaceholder && (
@@ -211,18 +190,14 @@ function ResponsiveAdInner({
       {/* Debug info in development */}
       {!config.isProduction && isVisible && (
         <div className="text-xs text-gray-400 mt-2 opacity-50">
-          Status: {scriptStatus} | Loaded: {isLoaded ? 'Yes' : 'No'} | Retry: {retryCount}
+          AdSense: {adSenseLoaded ? 'Ready' : 'Loading'} | Loaded: {isLoaded ? 'Yes' : 'No'} | Retry: {retryCount}
         </div>
       )}
     </div>
   );
 }
 
-// Export with error boundary
+// Export the simplified component
 export function EnhancedResponsiveAd(props: EnhancedResponsiveAdProps) {
-  return (
-    <AdSenseErrorBoundary>
-      <ResponsiveAdInner {...props} />
-    </AdSenseErrorBoundary>
-  );
+  return <ResponsiveAdInner {...props} />;
 }

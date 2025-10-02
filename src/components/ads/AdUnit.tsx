@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useRef, useState } from 'react';
-import { useAdSense } from '@/hooks/useAdSense';
+import { useSimpleAdSense } from '@/hooks/useSimpleAdSense';
 import { cn } from '@/lib/utils';
 
 export type AdFormat = 
@@ -74,7 +74,7 @@ export function AdUnit({
   const [isLoaded, setIsLoaded] = useState(false);
   const [error, setError] = useState<string | null>(null);
   
-  const { config, isLoaded: adSenseLoaded, initializeAd } = useAdSense();
+  const { config, isLoaded: adSenseLoaded, initializeAd } = useSimpleAdSense();
 
   // Determine final size
   const finalSize = size || formatToSize[format];
