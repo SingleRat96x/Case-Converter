@@ -4,6 +4,7 @@ import Script from "next/script";
 import "./globals.css";
 import { LanguageDetector } from "@/components/LanguageDetector";
 import { LanguageHtml } from "@/components/LanguageHtml";
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -93,6 +94,7 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <LanguageHtml>
+          <ScrollToTop />
           <LanguageDetector />
           {children}
         </LanguageHtml>
