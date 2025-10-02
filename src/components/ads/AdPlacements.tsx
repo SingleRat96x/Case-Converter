@@ -52,12 +52,15 @@ export function InContentAd({ className, slot }: AdPlacementProps) {
 export function FooterAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-4xl mx-auto mt-8 mb-4", className)}>
-      <AdUnit
-        format="auto"
-        slot={slot || "9659974650"}
-        responsive={true}
-        className="w-full"
-      />
+      <div className="min-h-[280px] flex items-center justify-center">
+        <AdUnit
+          format="auto"
+          slot={slot || "9659974650"}
+          responsive={true}
+          lazy={false}
+          className="w-full"
+        />
+      </div>
     </div>
   );
 }

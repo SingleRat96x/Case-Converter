@@ -157,11 +157,11 @@ function ResponsiveAdInner({
   // Loading state
   if (!adSenseLoaded || (isVisible && !isLoaded && !error)) {
     return (
-      <div className={cn("text-center p-4", className)}>
+      <div className={cn("text-center", className)}>
         {showPlaceholder && (
           <div 
             className="bg-gray-100 dark:bg-gray-800 animate-pulse rounded-lg"
-            style={{ minHeight: 250 }}
+            style={{ minHeight: 250, width: '100%' }}
           />
         )}
       </div>
@@ -170,7 +170,7 @@ function ResponsiveAdInner({
 
   // Render actual ad unit
   return (
-    <div className={cn("text-center", className)}>
+    <div className={cn("text-center w-full", className)}>
       {isVisible && (
         <ins
           ref={adRef}
@@ -179,6 +179,7 @@ function ResponsiveAdInner({
             display: 'block',
             width: '100%',
             minHeight: 250,
+            maxWidth: '100%'
           }}
           data-ad-client={config.adsenseId}
           data-ad-slot={slot || "6789012345"}

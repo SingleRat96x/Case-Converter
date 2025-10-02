@@ -179,6 +179,21 @@ export function AdUnit({
     return renderTestAd();
   }
 
+  // Don't render anything if not visible and lazy loading
+  if (lazy && !isVisible) {
+    return (
+      <div 
+        className="bg-gray-100 dark:bg-gray-800 animate-pulse"
+        style={{ 
+          width: displayWidth,
+          height: typeof height === 'number' ? height : 250,
+          maxWidth: '100%',
+          minWidth: isResponsiveSize ? '280px' : width
+        }}
+      />
+    );
+  }
+
   // Show error state
   if (error) {
     return (
