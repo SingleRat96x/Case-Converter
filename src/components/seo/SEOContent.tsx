@@ -197,6 +197,9 @@ export function SEOContent({
       {/* Space for auto ads */}
       <div className="my-12"></div>
 
+      {/* Ad before Examples section */}
+      <SEOContentAd slot="9659974650" className="my-12" />
+
       {/* Examples Section */}
       <section>
         <h2 className="text-3xl font-bold text-foreground mb-6">{content.sections.examples.title}</h2>
@@ -216,6 +219,9 @@ export function SEOContent({
 
       {/* Space for auto ads */}
       <div className="my-12"></div>
+
+      {/* Ad before Benefits section */}
+      <SEOContentAd slot="9659974650" className="my-12" />
 
       {/* Benefits Section */}
       <section className="seo-benefits-section rounded-xl p-8">

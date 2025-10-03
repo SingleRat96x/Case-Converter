@@ -17,7 +17,7 @@ export function HeaderAd({ className, slot }: AdPlacementProps) {
         format="leaderboard"
         slot={slot || "9659974650"}
         responsive={true}
-        className="w-full"
+        className="w-full min-h-[10px]"
       />
     </div>
   );
@@ -29,7 +29,7 @@ export function SidebarAd({ className, slot }: AdPlacementProps) {
       <AdUnit
         format="skyscraper"
         slot={slot || "9659974650"}
-        className="w-full"
+        className="w-full min-h-[10px]"
         lazy={false} // Sidebar ads should load immediately
       />
     </div>
@@ -45,7 +45,7 @@ export function InContentAd({ className, slot }: AdPlacementProps) {
           slot={slot || "9659974650"}
           responsive={true}
           lazy={false}
-          className="w-full"
+          className="w-full min-h-[10px]"
         />
       </div>
     </div>
@@ -61,7 +61,7 @@ export function FooterAd({ className, slot }: AdPlacementProps) {
           slot={slot || "9659974650"}
           responsive={true}
           lazy={false}
-          className="w-full"
+          className="w-full min-h-[10px]"
         />
       </div>
     </div>
@@ -76,7 +76,7 @@ export function MobileAd({ className, slot }: AdPlacementProps) {
         size="320x50"
         slot={slot || "9659974650"}
         responsive={true}
-        className="w-full"
+        className="w-full min-h-[10px]"
       />
     </div>
   );
@@ -113,7 +113,7 @@ export function ResponsiveAd({ className, slot }: AdPlacementProps) {
         format="auto"
         slot={slot || "9659974650"}
         responsive={true}
-        className="w-full min-h-[250px] md:min-h-[300px]"
+        className="w-full min-h-[10px]"
       />
     </div>
   );
@@ -147,7 +147,7 @@ export function ToolHeaderAd({ className, slot }: AdPlacementProps) {
         slot={slot || "4917772104"}
         responsive={true}
         lazy={false}
-        className="w-full"
+        className="w-full min-h-[10px]"
       />
     </div>
   );
@@ -163,7 +163,7 @@ export function WidePageAd({ className, slot }: AdPlacementProps) {
           slot={slot || "9659974650"}
           responsive={true}
           lazy={false}
-          className="w-full"
+          className="w-full min-h-[10px]"
         />
       </div>
     </div>
@@ -179,7 +179,7 @@ export function HeroAd({ className, slot }: AdPlacementProps) {
         slot={slot || "9659974650"}
         responsive={true}
         lazy={false} // Hero ads should load immediately
-        className="w-full min-h-[200px] md:min-h-[250px]"
+        className="w-full min-h-[10px]"
       />
     </div>
   );
