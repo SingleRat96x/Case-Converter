@@ -344,7 +344,7 @@ export function AllToolsPage({ categories }: AllToolsPageProps) {
           <React.Fragment key={category.id}>
             {/* Wide ads before specific sections */}
             {(index === 0 || index === 2 || index === 4 || index === 6) && (
-              <WidePageAd slot="4917772104" />
+              <WidePageAd slot="9659974650" />
             )}
             
             <CategorySection

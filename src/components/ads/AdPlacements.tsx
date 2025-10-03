@@ -38,13 +38,16 @@ export function SidebarAd({ className, slot }: AdPlacementProps) {
 
 export function InContentAd({ className, slot }: AdPlacementProps) {
   return (
-    <div className={cn("my-8 w-full max-w-2xl mx-auto", className)}>
-      <AdUnit
-        format="rectangle"
-        slot={slot || "4917772104"}
-        responsive={true}
-        className="w-full"
-      />
+    <div className={cn("w-full max-w-6xl mx-auto mt-8 mb-4", className)}>
+      <div className="min-h-[10px] flex items-center justify-center">
+        <AdUnit
+          format="auto"
+          slot={slot || "9659974650"}
+          responsive={true}
+          lazy={false}
+          className="w-full"
+        />
+      </div>
     </div>
   );
 }
@@ -153,14 +156,16 @@ export function ToolHeaderAd({ className, slot }: AdPlacementProps) {
 // Wide ad for full-width pages like /tools/
 export function WidePageAd({ className, slot }: AdPlacementProps) {
   return (
-    <div className={cn("w-full max-w-7xl mx-auto my-12", className)}>
-      <AdUnit
-        format="auto"
-        slot={slot || "9659974650"}
-        responsive={true}
-        lazy={true}
-        className="w-full"
-      />
+    <div className={cn("w-full max-w-6xl mx-auto mt-8 mb-4", className)}>
+      <div className="min-h-[10px] flex items-center justify-center">
+        <AdUnit
+          format="auto"
+          slot={slot || "9659974650"}
+          responsive={true}
+          lazy={false}
+          className="w-full"
+        />
+      </div>
     </div>
   );
 }
