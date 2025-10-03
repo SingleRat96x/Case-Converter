@@ -11,6 +11,7 @@ import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { useDebounce } from '@/hooks/useDebounce';
+import { WidePageAd } from '@/components/ads/AdPlacements';
 
 // Types
 interface Tool {
@@ -341,6 +342,11 @@ export function AllToolsPage({ categories }: AllToolsPageProps) {
         
         {filteredCategories.map((category, index) => (
           <React.Fragment key={category.id}>
+            {/* Wide ads before specific sections */}
+            {(index === 0 || index === 2 || index === 4 || index === 6) && (
+              <WidePageAd slot="4917772104" />
+            )}
+            
             <CategorySection
               category={category}
               locale={currentLocale}

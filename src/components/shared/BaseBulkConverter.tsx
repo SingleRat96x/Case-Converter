@@ -5,6 +5,7 @@ import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { ClearConfirmDialog } from './ClearConfirmDialog';
 import { DataStats, type DataStat } from './DataStats';
+import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
 import { 
   Upload, 
@@ -213,6 +214,8 @@ export function BaseBulkConverter({
         <p className="text-muted-foreground max-w-2xl mx-auto">{description}</p>
       </div>
 
+      {/* Tool Header Ad - below title and description */}
+      <ToolHeaderAd />
 
       {/* Upload Area */}
       {(!isBulkMode && !originalFile) || (isBulkMode && fileQueue.length === 0) ? (
@@ -558,7 +561,7 @@ export function BaseBulkConverter({
       {/* Ad Placement */}
       <div className="flex justify-center">
         <EnhancedResponsiveAd 
-          slot="tool-middle"
+          slot="4917772104"
           className="max-w-full"
         />
       </div>

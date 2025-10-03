@@ -22,8 +22,8 @@ interface SEOContentProps {
 
 export function SEOContent({ 
   toolName, 
-  enableAds = true, 
-  adDensity = 'medium',
+  enableAds: _enableAds = true, 
+  adDensity: _adDensity = 'medium',
   className = '' 
 }: SEOContentProps) {
   const { content, isLoading, error, hasContent } = useSEOContent(toolName);

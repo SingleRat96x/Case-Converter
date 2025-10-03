@@ -130,7 +130,7 @@ function ResponsiveAdInner({
       <div className={cn("text-center p-4", className)}>
         <div 
           className="border-2 border-dashed border-gray-300 bg-gray-50 dark:bg-gray-800 dark:border-gray-600 flex items-center justify-center text-gray-500 dark:text-gray-400 text-sm rounded-lg"
-          style={{ minHeight: 250 }}
+          style={{ minHeight: 10 }}
         >
           <div className="text-center">
             <div className="font-semibold mb-1">AdSense Ad ({format})</div>
@@ -161,7 +161,7 @@ function ResponsiveAdInner({
         {showPlaceholder && (
           <div 
             className="bg-gray-100 dark:bg-gray-800 animate-pulse rounded-lg"
-            style={{ minHeight: 250, width: '100%' }}
+            style={{ minHeight: 10, width: '100%' }}
           />
         )}
       </div>
@@ -178,11 +178,11 @@ function ResponsiveAdInner({
           style={{
             display: 'block',
             width: '100%',
-            minHeight: 250,
+            minHeight: 10,
             maxWidth: '100%'
           }}
           data-ad-client={config.adsenseId}
-          data-ad-slot={slot || "6789012345"}
+          data-ad-slot={slot || "9659974650"}
           data-ad-format={format === 'auto' ? 'auto' : undefined}
           data-full-width-responsive="true"
         />

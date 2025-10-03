@@ -1,7 +1,7 @@
 'use client';
 
 import React, { ReactNode } from 'react';
-import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
+import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 
 interface BasePasswordGeneratorProps {
   title: string;
@@ -29,16 +29,14 @@ export function BasePasswordGenerator({
         </p>
       </div>
 
-      {/* Ad Break */}
-      <EnhancedResponsiveAd className="my-6" format="auto" lazy={true} />
+      {/* Tool Header Ad - below title and description */}
+      <ToolHeaderAd />
 
       {/* Main Content */}
       <div className="space-y-6">
         {children}
       </div>
 
-      {/* Bottom Ad */}
-      <EnhancedResponsiveAd className="my-8" format="auto" lazy={true} />
     </div>
   );
 }

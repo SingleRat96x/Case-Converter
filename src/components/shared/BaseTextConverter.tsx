@@ -8,7 +8,7 @@ import { FeedbackMessage } from './FeedbackMessage';
 import { TextAnalytics } from './TextAnalytics';
 import { ClearConfirmDialog } from './ClearConfirmDialog';
 import { copyToClipboard, downloadTextAsFile, validateTextFile } from '@/lib/utils';
-import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
+import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 
 interface BaseTextConverterProps {
   title: string;
@@ -133,8 +133,8 @@ export function BaseTextConverter({
         </p>
       </div>
 
-      {/* Space for auto ads to insert */}
-      <div className="my-8"></div>
+      {/* Tool Header Ad - below title and description */}
+      <ToolHeaderAd />
 
       {/* Feedback Message */}
       <FeedbackMessage feedback={feedback} />

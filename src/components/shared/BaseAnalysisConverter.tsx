@@ -6,7 +6,7 @@ import { ActionButtons } from './ActionButtons';
 import { FeedbackMessage } from './FeedbackMessage';
 import { ClearConfirmDialog } from './ClearConfirmDialog';
 import { copyToClipboard, downloadTextAsFile, validateTextFile } from '@/lib/utils';
-import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
+import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 
 interface BaseAnalysisConverterProps {
   title: string;
@@ -124,6 +124,9 @@ export function BaseAnalysisConverter({
         </p>
       </div>
 
+      {/* Tool Header Ad - below title and description */}
+      <ToolHeaderAd />
+
       {/* Text Input Section */}
       <div className="space-y-4">
         <TextInput
@@ -167,12 +170,6 @@ export function BaseAnalysisConverter({
       {/* Children (Analytics/Results) */}
       {children}
 
-      {/* Strategic Ad Placement */}
-      <EnhancedResponsiveAd 
-        format="auto" 
-        className="my-8" 
-        lazy={true}
-      />
 
       {/* Hidden file input */}
       <input

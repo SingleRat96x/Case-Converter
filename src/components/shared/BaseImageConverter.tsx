@@ -7,7 +7,7 @@ import { ActionButtons } from './ActionButtons';
 import { FeedbackMessage } from './FeedbackMessage';
 import { ClearConfirmDialog } from './ClearConfirmDialog';
 import { DataStats, type DataStat } from './DataStats';
-import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
+import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 import { Upload, Download, Image as ImageIcon, AlertCircle, Trash2 } from 'lucide-react';
 import Image from 'next/image';
 
@@ -167,8 +167,8 @@ export function BaseImageConverter({
         />
       )}
 
-      {/* Ad Break */}
-      <EnhancedResponsiveAd className="my-8" format="auto" lazy={true} />
+      {/* Tool Header Ad - below title and description */}
+      <ToolHeaderAd />
 
       {/* Main Content */}
       <div className="grid lg:grid-cols-2 gap-6">
@@ -340,8 +340,6 @@ export function BaseImageConverter({
         />
       )}
 
-      {/* Ad Break */}
-      <EnhancedResponsiveAd className="my-8" format="auto" lazy={true} />
 
       {/* Hidden Elements */}
       <input

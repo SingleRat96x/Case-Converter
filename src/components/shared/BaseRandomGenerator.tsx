@@ -10,7 +10,7 @@ import { MonthAnalytics } from './MonthAnalytics';
 import { IPAnalytics } from './IPAnalytics';
 import { ClearConfirmDialog } from './ClearConfirmDialog';
 import { copyToClipboard, downloadTextAsFile } from '@/lib/utils';
-import { EnhancedResponsiveAd } from '@/components/ads/EnhancedResponsiveAd';
+import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { useCommonTranslations } from '@/lib/i18n/hooks';
@@ -141,6 +141,9 @@ export function BaseRandomGenerator({
         </p>
       </div>
 
+      {/* Tool Header Ad - below title and description */}
+      <ToolHeaderAd />
+
       {/* Main Content */}
       <div className="space-y-8">
         {/* Desktop: Side by side, Mobile: Stacked */}
@@ -226,8 +229,6 @@ export function BaseRandomGenerator({
           </div>
         )}
 
-        {/* Ad Break */}
-        <EnhancedResponsiveAd className="my-8" format="auto" lazy={true} />
 
         {/* Analytics Section - Outside and below generated content */}
         {showAnalytics && (alwaysShowAnalytics || hasContent) && (

@@ -130,17 +130,7 @@ export function AdUnit({
         const success = initializeAd(element);
         if (success) {
           setIsLoaded(true);
-          // Check if ad actually rendered content after a delay
-          setTimeout(() => {
-            const adContent = element.querySelector('iframe, [data-ad-status="filled"]');
-            if (adContent || element.offsetHeight > 50) {
-              onLoad?.();
-            } else {
-              const errorMsg = 'Ad loaded but no content rendered';
-              setError(errorMsg);
-              onError?.(errorMsg);
-            }
-          }, 2000);
+          onLoad?.();
         } else {
           const errorMsg = 'Failed to initialize ad unit';
           setError(errorMsg);
@@ -171,7 +161,7 @@ export function AdUnit({
       )}
       style={{ 
         width: displayWidth, 
-        height: typeof height === 'number' ? height : 250,
+        height: typeof height === 'number' ? height : 10,
         maxWidth: '100%'
       }}
     >
@@ -196,7 +186,7 @@ export function AdUnit({
         className="bg-gray-100 dark:bg-gray-800 animate-pulse"
         style={{ 
           width: displayWidth,
-          height: typeof height === 'number' ? height : 250,
+          height: typeof height === 'number' ? height : 10,
           maxWidth: '100%',
           minWidth: isResponsiveSize ? '280px' : width
         }}
@@ -220,7 +210,7 @@ export function AdUnit({
       className={cn("text-center", className)}
       style={{ 
         minWidth: isResponsiveSize ? '280px' : width,
-        minHeight: typeof height === 'number' ? height : 250,
+        minHeight: typeof height === 'number' ? height : 10,
         width: '100%'
       }}
     >
@@ -248,7 +238,7 @@ export function AdUnit({
           className="bg-gray-100 dark:bg-gray-800 animate-pulse"
           style={{ 
             width: displayWidth,
-            height: typeof height === 'number' ? height : 250,
+            height: typeof height === 'number' ? height : 10,
             maxWidth: '100%',
             minWidth: isResponsiveSize ? '280px' : width
           }}
