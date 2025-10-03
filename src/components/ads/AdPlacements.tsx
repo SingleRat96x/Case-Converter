@@ -170,6 +170,41 @@ export function WidePageAd({ className, slot }: AdPlacementProps) {
   );
 }
 
+// Sticky sidebar ads for text-based tool pages
+export function StickyLeftAd({ className, slot }: AdPlacementProps) {
+  return (
+    <div className={cn("hidden xl:block fixed left-4 top-24 w-32 z-10", className)}>
+      <div className="sticky top-24 h-fit max-h-[calc(100vh-200px)]">
+        <AdUnit
+          format="skyscraper"
+          size="120x600"
+          slot={slot || "9659974650"}
+          responsive={false}
+          lazy={true}
+          className="w-full min-h-[10px]"
+        />
+      </div>
+    </div>
+  );
+}
+
+export function StickyRightAd({ className, slot }: AdPlacementProps) {
+  return (
+    <div className={cn("hidden xl:block fixed right-4 top-24 w-32 z-10", className)}>
+      <div className="sticky top-24 h-fit max-h-[calc(100vh-200px)]">
+        <AdUnit
+          format="skyscraper"
+          size="120x600"
+          slot={slot || "9659974650"}
+          responsive={false}
+          lazy={true}
+          className="w-full min-h-[10px]"
+        />
+      </div>
+    </div>
+  );
+}
+
 // High-impact ad for above the fold content
 export function HeroAd({ className, slot }: AdPlacementProps) {
   return (

@@ -8,7 +8,7 @@ import { FeedbackMessage } from './FeedbackMessage';
 import { TextAnalytics } from './TextAnalytics';
 import { ClearConfirmDialog } from './ClearConfirmDialog';
 import { copyToClipboard, downloadTextAsFile, validateTextFile } from '@/lib/utils';
-import { ToolHeaderAd } from '@/components/ads/AdPlacements';
+import { ToolHeaderAd, StickyLeftAd, StickyRightAd } from '@/components/ads/AdPlacements';
 
 interface BaseTextConverterProps {
   title: string;
@@ -124,8 +124,13 @@ export function BaseTextConverter({
   };
 
   return (
-    <div className="w-full max-w-4xl mx-auto space-y-6">
-      {/* Main Heading */}
+    <>
+      {/* Sticky sidebar ads */}
+      <StickyLeftAd />
+      <StickyRightAd />
+      
+      <div className="w-full max-w-4xl mx-auto space-y-6">
+        {/* Main Heading */}
       <div className="text-center space-y-4">
         <h1 className="text-4xl font-bold text-foreground">{title}</h1>
         <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
@@ -228,5 +233,6 @@ export function BaseTextConverter({
         onConfirm={handleConfirmClear}
       />
     </div>
+    </>
   );
 }
