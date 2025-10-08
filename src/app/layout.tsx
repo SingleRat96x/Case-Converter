@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import "./globals.css";
+import "@/lib/polyfills";
 import { LanguageDetector } from "@/components/LanguageDetector";
 import { LanguageHtml } from "@/components/LanguageHtml";
 import { CriticalCSS, NonCriticalCSS } from "@/components/CriticalCSS";
@@ -9,9 +10,7 @@ import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistratio
 import dynamic from 'next/dynamic';
 
 // Lazy load non-critical components
-const ScrollToTop = dynamic(() => import("@/components/ScrollToTop").then(mod => ({ default: mod.ScrollToTop })), {
-  ssr: false,
-});
+const ScrollToTop = dynamic(() => import("@/components/ScrollToTop").then(mod => ({ default: mod.ScrollToTop })));
 
 const geistSans = Geist({
   variable: "--font-geist-sans",

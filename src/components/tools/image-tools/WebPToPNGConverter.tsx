@@ -6,7 +6,7 @@ import { BaseBulkConverter, type ProcessedFile, type BulkProcessingStats } from 
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { WebPToPNGAnalytics } from '@/components/shared/WebPToPNGAnalytics';
 import { Button } from '@/components/ui/button';
-import JSZip from 'jszip';
+// JSZip will be imported dynamically to avoid SSR issues
 import { 
   Settings, 
   Zap
@@ -264,6 +264,7 @@ export function WebPToPNGConverter() {
         document.body.removeChild(link);
         return;
       }
+      const JSZip = (await import('jszip')).default;
       const zip = new JSZip();
       for (const file of completedFiles) {
         if (file.processedBlob) {

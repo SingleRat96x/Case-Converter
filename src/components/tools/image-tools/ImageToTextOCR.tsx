@@ -22,7 +22,8 @@ import Image from 'next/image';
 
 // OCR library - we'll use Tesseract.js for client-side OCR
 // Note: You'll need to install it: npm install tesseract.js
-import { createWorker } from 'tesseract.js';
+// Import dynamically to avoid SSR issues with Web Workers
+let createWorker: typeof import('tesseract.js').createWorker | undefined;
 
 interface OCROptions {
   language: 'eng' | 'spa' | 'fra' | 'deu' | 'rus' | 'chi_sim' | 'jpn' | 'ara';
@@ -90,6 +91,11 @@ export function ImageToTextOCR() {
 
   const initializeOCRWorker = useCallback(async () => {
     if (!ocrWorkerRef.current) {
+      // Dynamically import Tesseract.js to avoid SSR issues
+      if (!createWorker) {
+        const tesseract = await import('tesseract.js');
+        createWorker = tesseract.createWorker;
+      }
       ocrWorkerRef.current = await createWorker(options.language);
     }
     return ocrWorkerRef.current;
