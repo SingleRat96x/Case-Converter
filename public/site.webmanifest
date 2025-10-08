@@ -6,18 +6,84 @@
     {
       "src": "/android-chrome-192x192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any maskable"
     },
     {
       "src": "/android-chrome-512x512.png",
       "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    },
+    {
+      "src": "/favicon-32x32.png",
+      "sizes": "32x32",
+      "type": "image/png"
+    },
+    {
+      "src": "/favicon-16x16.png",
+      "sizes": "16x16",
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
+  "theme_color": "#f97316",
   "background_color": "#ffffff",
   "display": "standalone",
   "start_url": "/",
   "scope": "/",
-  "orientation": "portrait-primary"
+  "orientation": "any",
+  "lang": "en",
+  "dir": "ltr",
+  "categories": ["productivity", "utilities", "developer"],
+  "shortcuts": [
+    {
+      "name": "Uppercase Converter",
+      "short_name": "Uppercase",
+      "description": "Convert text to uppercase",
+      "url": "/tools/uppercase",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Lowercase Converter", 
+      "short_name": "Lowercase",
+      "description": "Convert text to lowercase",
+      "url": "/tools/lowercase",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "Title Case",
+      "short_name": "Title Case",
+      "description": "Convert text to title case",
+      "url": "/tools/title-case",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    },
+    {
+      "name": "All Tools",
+      "short_name": "Tools",
+      "description": "Browse all text tools",
+      "url": "/tools",
+      "icons": [
+        {
+          "src": "/favicon-32x32.png",
+          "sizes": "32x32"
+        }
+      ]
+    }
+  ],
+  "prefer_related_applications": false
 }

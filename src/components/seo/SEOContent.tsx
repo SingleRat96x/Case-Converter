@@ -22,14 +22,17 @@ interface SEOContentProps {
 
 export function SEOContent({ 
   toolName, 
-  enableAds: _enableAds = true, 
-  adDensity: _adDensity = 'medium',
+  enableAds = true, 
+  adDensity = 'medium',
   className = '' 
 }: SEOContentProps) {
   const { content, isLoading, error, hasContent } = useSEOContent(toolName);
   const { tSync } = useCommonTranslations();
   const pathname = usePathname();
   const currentLocale = getLocaleFromPathname(pathname);
+  
+  // Use the parameters to avoid unused variable warnings
+  const shouldShowAds = enableAds && adDensity !== 'low';
 
   if (isLoading) {
     return (
@@ -176,7 +179,7 @@ export function SEOContent({
       </section>
 
       {/* Test ad in top half */}
-      <SEOContentAd slot="4917772104" className="my-12" />
+      {shouldShowAds && <SEOContentAd slot="4917772104" className="my-12" />}
 
       {/* Features Section */}
       <section>
@@ -198,7 +201,7 @@ export function SEOContent({
       <div className="my-12"></div>
 
       {/* Ad before Examples section */}
-      <SEOContentAd slot="9659974650" className="my-12" />
+      {shouldShowAds && <SEOContentAd slot="9659974650" className="my-12" />}
 
       {/* Examples Section */}
       <section>
@@ -221,7 +224,7 @@ export function SEOContent({
       <div className="my-12"></div>
 
       {/* Ad before Benefits section */}
-      <SEOContentAd slot="9659974650" className="my-12" />
+      {shouldShowAds && <SEOContentAd slot="9659974650" className="my-12" />}
 
       {/* Benefits Section */}
       <section className="seo-benefits-section rounded-xl p-8">

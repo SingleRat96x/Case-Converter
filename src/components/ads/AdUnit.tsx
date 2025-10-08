@@ -97,7 +97,8 @@ export function AdUnit({
         }
       },
       {
-        rootMargin: '100px', // Start loading 100px before ad comes into view
+        rootMargin: '50px', // Reduced from 100px for better performance
+        threshold: 0.1,     // Only trigger when 10% visible
       }
     );
 
@@ -121,8 +122,8 @@ export function AdUnit({
 
       const rect = element.getBoundingClientRect();
       if (rect.width === 0) {
-        // Wait a bit more for layout to complete
-        setTimeout(checkAndInitialize, 50);
+        // Reduced retry time for faster initialization
+        setTimeout(checkAndInitialize, 25);
         return;
       }
 
@@ -143,8 +144,16 @@ export function AdUnit({
       }
     };
 
-    const timer = setTimeout(checkAndInitialize, 100);
-    return () => clearTimeout(timer);
+    // Use requestIdleCallback for better performance when available
+    const scheduleInitialization = () => {
+      if ('requestIdleCallback' in window) {
+        requestIdleCallback(checkAndInitialize, { timeout: 100 });
+      } else {
+        setTimeout(checkAndInitialize, 50); // Reduced from 100ms
+      }
+    };
+
+    scheduleInitialization();
   }, [isVisible, adSenseLoaded, isLoaded, initializeAd, onLoad, onError]);
 
   // Don't render if ads are disabled
