@@ -24,6 +24,23 @@ const nextConfig: NextConfig = {
   
   // Webpack optimizations
   webpack: (config, { isServer, dev }) => {
+    // Handle self reference for server-side rendering
+    if (isServer) {
+      const originalEntry = config.entry;
+      config.entry = async () => {
+        const entries = await originalEntry();
+        
+        // Add polyfill to all server entries
+        Object.keys(entries).forEach((key) => {
+          if (Array.isArray(entries[key])) {
+            entries[key].unshift(require.resolve('./src/lib/polyfills.ts'));
+          }
+        });
+        
+        return entries;
+      };
+    }
+    
     // Production optimizations
     if (!dev) {
       // Reduce bundle size

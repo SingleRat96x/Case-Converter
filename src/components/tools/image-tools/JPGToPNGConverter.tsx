@@ -8,7 +8,7 @@ import { JPGToPNGAnalytics } from '@/components/shared/JPGToPNGAnalytics';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
 import { Settings, Palette, Zap } from 'lucide-react';
-import JSZip from 'jszip';
+// JSZip will be imported dynamically to avoid SSR issues
 
 interface ConversionOptions {
   quality: number;
@@ -419,6 +419,7 @@ export function JPGToPNGConverter() {
       }
 
       // Multiple files - create ZIP
+      const JSZip = (await import('jszip')).default;
       const zip = new JSZip();
       
       // Add each completed file to the ZIP

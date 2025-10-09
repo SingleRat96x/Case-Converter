@@ -6,7 +6,7 @@ import { BaseBulkConverter, type ProcessedFile, type BulkProcessingStats } from 
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { PNGToJPGAnalytics } from '@/components/shared/PNGToJPGAnalytics';
 import { Button } from '@/components/ui/button';
-import JSZip from 'jszip';
+// JSZip will be imported dynamically to avoid SSR issues
 import { 
   Settings, 
   Zap,
@@ -333,6 +333,7 @@ export function PNGToJPGConverter() {
       }
 
       // Multiple files - create ZIP
+      const JSZip = (await import('jszip')).default;
       const zip = new JSZip();
       
       // Add each completed file to the ZIP

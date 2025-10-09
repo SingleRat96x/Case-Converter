@@ -4,6 +4,8 @@ import { SEOContent } from '@/components/seo/SEOContent';
 import { generateToolMetadata } from '@/lib/metadata/metadataGenerator';
 import type { Metadata } from 'next';
 
+export const dynamic = 'force-dynamic';
+
 const toolConfig = {
   name: 'image-cropper',
   path: '/ru/tools/image-cropper'

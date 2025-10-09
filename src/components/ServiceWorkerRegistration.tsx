@@ -125,7 +125,7 @@ export const swUtils = {
 
   // Preload critical pages
   preloadCriticalPages: async () => {
-    if (!swUtils.isSupported()) return;
+    if (!swUtils.isSupported() || typeof window === 'undefined' || !('caches' in window)) return;
     
     const criticalPages = [
       '/tools/uppercase',
@@ -146,7 +146,7 @@ export const swUtils = {
 
   // Clear all caches
   clearCaches: async () => {
-    if (typeof window === 'undefined') return;
+    if (typeof window === 'undefined' || !('caches' in window)) return;
     
     const cacheNames = await caches.keys();
     await Promise.all(

@@ -2,10 +2,12 @@ import { Layout } from '@/components/layout/Layout';
 import { SEOContent } from '@/components/seo/SEOContent';
 import { generateToolMetadata } from '@/lib/metadata/metadataGenerator';
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import dynamicImport from 'next/dynamic';
+
+export const dynamic = 'force-dynamic';
 
 // Lazy load heavy OCR component (Tesseract.js is large)
-const ImageToTextOCR = dynamic(() => import('@/components/tools/image-tools/ImageToTextOCR').then(mod => ({ default: mod.ImageToTextOCR })), {
+const ImageToTextOCR = dynamicImport(() => import('@/components/tools/image-tools/ImageToTextOCR').then(mod => ({ default: mod.ImageToTextOCR })), {
   loading: () => (
     <div className="w-full max-w-4xl mx-auto p-6">
       <div className="space-y-6">
@@ -19,7 +21,6 @@ const ImageToTextOCR = dynamic(() => import('@/components/tools/image-tools/Imag
       </div>
     </div>
   ),
-  ssr: false,
 });
 
 const toolConfig = {

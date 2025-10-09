@@ -7,7 +7,7 @@ import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { JPGToWebPAnalytics } from '@/components/shared/JPGToWebPAnalytics';
 import { Switch } from '@/components/ui/switch';
 import { Button } from '@/components/ui/button';
-import JSZip from 'jszip';
+// JSZip will be imported dynamically to avoid SSR issues
 import { Settings, Zap, Globe } from 'lucide-react';
 
 interface ConversionOptions {
@@ -334,6 +334,7 @@ export function JPGToWebPConverter() {
         return;
       }
 
+      const JSZip = (await import('jszip')).default;
       const zip = new JSZip();
       for (const file of completedFiles) {
         if (file.processedBlob) {

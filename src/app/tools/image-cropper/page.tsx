@@ -2,10 +2,12 @@ import { Layout } from '@/components/layout/Layout';
 import { SEOContent } from '@/components/seo/SEOContent';
 import { generateToolMetadata } from '@/lib/metadata/metadataGenerator';
 import type { Metadata } from 'next';
-import dynamic from 'next/dynamic';
+import dynamicImport from 'next/dynamic';
+
+export const dynamic = 'force-dynamic';
 
 // Lazy load heavy image processing component
-const ImageCropper = dynamic(() => import('@/components/tools/image-tools/ImageCropper').then(mod => ({ default: mod.ImageCropper })), {
+const ImageCropper = dynamicImport(() => import('@/components/tools/image-tools/ImageCropper').then(mod => ({ default: mod.ImageCropper })), {
   loading: () => (
     <div className="w-full max-w-4xl mx-auto p-6">
       <div className="space-y-6">
@@ -18,7 +20,6 @@ const ImageCropper = dynamic(() => import('@/components/tools/image-tools/ImageC
       </div>
     </div>
   ),
-  ssr: false,
 });
 
 const toolConfig = {

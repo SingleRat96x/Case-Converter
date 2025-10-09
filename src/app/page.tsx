@@ -16,7 +16,6 @@ const OtherTools = dynamic(() => import('@/components/sections/OtherTools').then
       </div>
     </div>
   ),
-  ssr: false, // Don't server-side render for better initial load
 });
 
 export default function Home() {
