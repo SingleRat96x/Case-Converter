@@ -82,9 +82,11 @@ export function middleware(request: NextRequest) {
   // Check if path already has a locale
   const currentLocale = getLocaleFromPath(pathname);
   
-  // If path already has a locale, no redirection needed
+  // If path already has a locale, add pathname header and continue
   if (currentLocale) {
-    return NextResponse.next();
+    const response = NextResponse.next();
+    response.headers.set('x-pathname', pathname);
+    return response;
   }
 
   // Get browser's preferred language
@@ -99,7 +101,9 @@ export function middleware(request: NextRequest) {
 
   // If target locale is default (English), no redirection needed
   if (targetLocale === defaultLocale) {
-    return NextResponse.next();
+    const response = NextResponse.next();
+    response.headers.set('x-pathname', pathname);
+    return response;
   }
 
   // Redirect to localized version
@@ -113,6 +117,9 @@ export function middleware(request: NextRequest) {
 
   // Create redirect response with SEO-friendly 302 (temporary redirect)
   const response = NextResponse.redirect(redirectUrl, 302);
+  
+  // Add pathname header for the redirected URL
+  response.headers.set('x-pathname', localizedPath);
   
   // Set language preference cookie for future visits
   response.cookies.set('preferred-locale', targetLocale, {
