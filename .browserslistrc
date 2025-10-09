@@ -1,0 +1,21 @@
+# Modern browsers supporting ES2020+
+# This reduces bundle size by eliminating polyfills for older browsers
+
+# Production
+> 0.5%
+last 2 versions
+not dead
+not IE 11
+not op_mini all
+
+# Support modern browsers with ES2020+ features:
+# - Chrome 80+ (Feb 2020)
+# - Safari 14+ (Sep 2020)
+# - Firefox 72+ (Jan 2020)
+# - Edge 80+ (Feb 2020)
+
+# Development (same as production for consistency)
+[development]
+last 1 chrome version
+last 1 firefox version
+last 1 safari version
