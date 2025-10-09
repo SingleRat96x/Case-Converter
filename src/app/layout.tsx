@@ -74,6 +74,15 @@ export default async function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
         
+        {/* Preload critical fonts (Cyrillic subset for Russian pages) */}
+        <link 
+          rel="preload" 
+          href="/_next/static/media/8d697b304b401681-s.woff2" 
+          as="font" 
+          type="font/woff2" 
+          crossOrigin="anonymous" 
+        />
+        
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"
