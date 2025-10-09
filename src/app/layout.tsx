@@ -4,27 +4,16 @@ import Script from "next/script";
 import "./globals.css";
 import { LanguageDetector } from "@/components/LanguageDetector";
 import { LanguageHtml } from "@/components/LanguageHtml";
-import { CriticalCSS, NonCriticalCSS } from "@/components/CriticalCSS";
-import { ServiceWorkerRegistration } from "@/components/ServiceWorkerRegistration";
-import dynamic from 'next/dynamic';
-
-// Lazy load non-critical components
-const ScrollToTop = dynamic(() => import("@/components/ScrollToTop").then(mod => ({ default: mod.ScrollToTop })), {
-  ssr: false,
-});
+import { ScrollToTop } from "@/components/ScrollToTop";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
-  display: 'swap',
-  preload: true,
 });
 
 const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
-  display: 'swap',
-  preload: true,
 });
 
 export const metadata: Metadata = {
@@ -73,22 +62,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
-        {/* Critical CSS inlined for fastest rendering */}
-        <CriticalCSS />
-        
-        {/* Resource hints for performance */}
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
-        <link rel="dns-prefetch" href="//www.googletagmanager.com" />
-        <link rel="dns-prefetch" href="//pagead2.googlesyndication.com" />
-        <link rel="dns-prefetch" href="//fundingchoicesmessages.google.com" />
-        
-        {/* Preload critical images */}
-        <link rel="preload" as="image" href="/favicon-32x32.png" />
-        <link rel="preload" as="image" href="/images/og-default.jpg" media="(min-width: 768px)" />
-        
-        {/* Load non-critical CSS asynchronously */}
-        <NonCriticalCSS />
-        
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"
@@ -121,7 +94,6 @@ export default function RootLayout({
         suppressHydrationWarning={true}
       >
         <LanguageHtml>
-          <ServiceWorkerRegistration />
           <ScrollToTop />
           <LanguageDetector />
           {children}

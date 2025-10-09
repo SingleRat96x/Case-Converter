@@ -1,8 +1,6 @@
 11:39:11.432 
 npm error
 11:39:11.432 
-
-
 npm error Conflicting peer dependency: react@18.3.1
 11:39:11.432 
 npm error node_modules/react
