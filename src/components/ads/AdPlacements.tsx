@@ -13,12 +13,14 @@ interface AdPlacementProps {
 export function HeaderAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-4xl mx-auto mb-6", className)}>
-      <AdUnit
-        format="leaderboard"
-        slot={slot || "9659974650"}
-        responsive={true}
-        className="w-full min-h-[10px]"
-      />
+      <div className="w-full aspect-[728/90] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="leaderboard"
+          slot={slot || "9659974650"}
+          responsive={true}
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
@@ -26,12 +28,14 @@ export function HeaderAd({ className, slot }: AdPlacementProps) {
 export function SidebarAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("hidden lg:block sticky top-20", className)}>
-      <AdUnit
-        format="skyscraper"
-        slot={slot || "9659974650"}
-        className="w-full min-h-[10px]"
-        lazy={false} // Sidebar ads should load immediately
-      />
+      <div className="w-full min-h-[600px] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="skyscraper"
+          slot={slot || "9659974650"}
+          className="w-full h-full"
+          lazy={false} // Sidebar ads should load immediately
+        />
+      </div>
     </div>
   );
 }
@@ -39,13 +43,13 @@ export function SidebarAd({ className, slot }: AdPlacementProps) {
 export function InContentAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-6xl mx-auto mt-8 mb-4", className)}>
-      <div className="min-h-[10px] flex items-center justify-center">
+      <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
         <AdUnit
           format="auto"
           slot={slot || "9659974650"}
           responsive={true}
           lazy={false}
-          className="w-full min-h-[10px]"
+          className="w-full h-full"
         />
       </div>
     </div>
@@ -55,13 +59,13 @@ export function InContentAd({ className, slot }: AdPlacementProps) {
 export function FooterAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-4xl mx-auto mt-8 mb-4", className)}>
-      <div className="min-h-[10px] flex items-center justify-center">
+      <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
         <AdUnit
           format="auto"
           slot={slot || "9659974650"}
           responsive={true}
           lazy={false}
-          className="w-full min-h-[10px]"
+          className="w-full h-full"
         />
       </div>
     </div>
@@ -71,13 +75,15 @@ export function FooterAd({ className, slot }: AdPlacementProps) {
 export function MobileAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("block md:hidden w-full my-6", className)}>
-      <AdUnit
-        format="banner"
-        size="320x50"
-        slot={slot || "9659974650"}
-        responsive={true}
-        className="w-full min-h-[10px]"
-      />
+      <div className="w-full aspect-[320/50] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="banner"
+          size="320x50"
+          slot={slot || "9659974650"}
+          responsive={true}
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
@@ -93,12 +99,14 @@ export function ToolSeparatorAd({ className, slot }: AdPlacementProps) {
         
         {/* Ad in center */}
         <div className="relative flex justify-center bg-background px-4">
-          <AdUnit
-            format="rectangle"
-            slot={slot || "4917772104"}
-            responsive={true}
-            className="bg-background"
-          />
+          <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
+            <AdUnit
+              format="rectangle"
+              slot={slot || "4917772104"}
+              responsive={true}
+              className="w-full h-full"
+            />
+          </div>
         </div>
       </div>
     </div>
@@ -109,12 +117,14 @@ export function ToolSeparatorAd({ className, slot }: AdPlacementProps) {
 export function ResponsiveAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full my-6", className)}>
-      <AdUnit
-        format="auto"
-        slot={slot || "9659974650"}
-        responsive={true}
-        className="w-full min-h-[10px]"
-      />
+      <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="auto"
+          slot={slot || "9659974650"}
+          responsive={true}
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
@@ -128,12 +138,14 @@ export function CardSeparatorAd({ className, slot, index }: AdPlacementProps & {
 
   return (
     <div className={cn("w-full my-4 px-4", className)}>
-      <AdUnit
-        format="rectangle"
-        slot={slot || "4917772104"}
-        responsive={true}
-        className="w-full max-w-sm mx-auto"
-      />
+      <div className="w-full max-w-sm mx-auto aspect-[300/250] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="rectangle"
+          slot={slot || "4917772104"}
+          responsive={true}
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
@@ -142,13 +154,15 @@ export function CardSeparatorAd({ className, slot, index }: AdPlacementProps & {
 export function ToolHeaderAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-4xl mx-auto my-8", className)}>
-      <AdUnit
-        format="auto"
-        slot={slot || "4917772104"}
-        responsive={true}
-        lazy={false}
-        className="w-full min-h-[10px]"
-      />
+      <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="auto"
+          slot={slot || "4917772104"}
+          responsive={true}
+          lazy={false}
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
@@ -157,13 +171,13 @@ export function ToolHeaderAd({ className, slot }: AdPlacementProps) {
 export function WidePageAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-6xl mx-auto mt-8 mb-4", className)}>
-      <div className="min-h-[10px] flex items-center justify-center">
+      <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
         <AdUnit
           format="auto"
           slot={slot || "9659974650"}
           responsive={true}
           lazy={false}
-          className="w-full min-h-[10px]"
+          className="w-full h-full"
         />
       </div>
     </div>
@@ -174,13 +188,15 @@ export function WidePageAd({ className, slot }: AdPlacementProps) {
 export function HeroAd({ className, slot }: AdPlacementProps) {
   return (
     <div className={cn("w-full max-w-5xl mx-auto my-8", className)}>
-      <AdUnit
-        format="auto"
-        slot={slot || "9659974650"}
-        responsive={true}
-        lazy={false} // Hero ads should load immediately
-        className="w-full min-h-[10px]"
-      />
+      <div className="w-full aspect-[300/250] flex items-center justify-center bg-muted/10">
+        <AdUnit
+          format="auto"
+          slot={slot || "9659974650"}
+          responsive={true}
+          lazy={false} // Hero ads should load immediately
+          className="w-full h-full"
+        />
+      </div>
     </div>
   );
 }
