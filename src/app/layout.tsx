@@ -1,10 +1,12 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
+import { headers } from "next/headers";
 import "./globals.css";
 import { LanguageDetector } from "@/components/LanguageDetector";
 import { LanguageHtml } from "@/components/LanguageHtml";
 import { ScrollToTop } from "@/components/ScrollToTop";
+import { getLocaleFromPathname } from "@/lib/i18n";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -54,13 +56,19 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // Detect locale from pathname for server-side rendering
+  // The middleware sets x-pathname header with the current path
+  const headersList = await headers();
+  const pathname = headersList.get('x-pathname') || '';
+  const locale = getLocaleFromPathname(pathname);
+  
   return (
-    <html lang="en">
+    <html lang={locale}>
       <head>
         {/* Google Analytics */}
         <Script
