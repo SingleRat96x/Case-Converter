@@ -70,6 +70,10 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Preconnect to third-party domains for faster resource loading */}
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
+        
         {/* Google Analytics */}
         <Script
           src="https://www.googletagmanager.com/gtag/js?id=G-1DT1KPX3XQ"
