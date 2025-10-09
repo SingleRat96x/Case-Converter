@@ -70,6 +70,27 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Critical CSS - Inlined for immediate first paint */}
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            :root{--radius:.65rem;--background:oklch(1 0 0);--foreground:oklch(.141 .005 285.823);--primary:oklch(.705 .213 47.604);--primary-foreground:oklch(.98 .016 73.684);--border:oklch(.92 .004 286.32);--muted:oklch(.967 .001 286.375);--muted-foreground:oklch(.552 .016 285.938)}
+            .dark{--background:oklch(.141 .005 285.823);--foreground:oklch(.985 0 0);--primary:oklch(.646 .222 41.116);--primary-foreground:oklch(.98 .016 73.684);--border:oklch(1 0 0/10%);--muted:oklch(.274 .006 286.033);--muted-foreground:oklch(.705 .015 286.067)}
+            *,::before,::after{box-sizing:border-box;border-width:0;border-style:solid;border-color:var(--border)}
+            html{line-height:1.5;-webkit-text-size-adjust:100%;tab-size:4}
+            body{margin:0;font-family:var(--font-geist-sans),system-ui,-apple-system,sans-serif;line-height:inherit;background:var(--background);color:var(--foreground)}
+            .min-h-screen{min-height:100vh}.flex{display:flex}.hidden{display:none}.sticky{position:sticky}.top-0{top:0}.z-50{z-index:50}.w-full{width:100%}
+            .container{width:100%;max-width:80rem;margin-left:auto;margin-right:auto;padding-left:1rem;padding-right:1rem}
+            .mx-auto{margin-left:auto;margin-right:auto}.items-center{align-items:center}.justify-between{justify-content:space-between}
+            .space-x-4>:not([hidden])~:not([hidden]){margin-left:1rem}.px-4{padding-left:1rem;padding-right:1rem}.h-16{height:4rem}
+            .border-b{border-bottom-width:1px}.bg-background\\/95{background-color:color-mix(in oklch,var(--background) 95%,transparent)}.backdrop-blur{backdrop-filter:blur(8px)}
+            .text-xl{font-size:1.25rem;line-height:1.75rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-lg{font-size:1.125rem;line-height:1.75rem}
+            .font-bold{font-weight:700}.text-center{text-align:center}.text-foreground{color:var(--foreground)}.text-muted-foreground{color:var(--muted-foreground)}
+            .bg-background{background-color:var(--background)}.py-8{padding-top:2rem;padding-bottom:2rem}.mb-6{margin-bottom:1.5rem}
+            .space-y-4>:not([hidden])~:not([hidden]){margin-top:1rem}.space-y-6>:not([hidden])~:not([hidden]){margin-top:1.5rem}
+            .max-w-4xl{max-width:56rem}.max-w-2xl{max-width:42rem}.antialiased{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+          `
+        }} />
+        
         {/* Preconnect to third-party domains for faster resource loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
