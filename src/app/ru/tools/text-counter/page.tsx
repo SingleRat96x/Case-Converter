@@ -24,8 +24,8 @@ export default function TextCounterPageRu() {
           <TextCounter />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

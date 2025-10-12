@@ -24,8 +24,8 @@ export default function CaesarCipherPageRU() {
           <CaesarCipherEncoder />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

@@ -24,8 +24,8 @@ export default function AlternatingCasePage() {
           <AlternatingCaseConverter />
           <SEOContent 
             toolName="alternating-case" 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

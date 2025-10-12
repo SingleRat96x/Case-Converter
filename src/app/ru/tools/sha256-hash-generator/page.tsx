@@ -21,7 +21,7 @@ export default function SHAHashGeneratorPageRU() {
           <SHAHashGenerator />
         </div>
       </div>
-      <OtherTools currentTool="sha256-hash-generator" />
+      <OtherTools />
     </Layout>
   );
 }

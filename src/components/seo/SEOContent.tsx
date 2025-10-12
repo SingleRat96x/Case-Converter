@@ -15,15 +15,15 @@ const AdvancedStructuredData = lazy(() => import('./AdvancedStructuredData'));
 
 interface SEOContentProps {
   toolName: string;
-  enableAds?: boolean;
-  adDensity?: 'low' | 'medium' | 'high';
+  // enableAds?: boolean; // TODO: Implement ad integration
+  // adDensity?: 'low' | 'medium' | 'high'; // TODO: Implement ad density control
   className?: string;
 }
 
 export function SEOContent({ 
   toolName, 
-  enableAds: _enableAds = true, 
-  adDensity: _adDensity = 'medium',
+  // enableAds = true, 
+  // adDensity = 'medium',
   className = '' 
 }: SEOContentProps) {
   const { content, isLoading, error, hasContent } = useSEOContent(toolName);

@@ -24,8 +24,8 @@ export default function Base64Page() {
           <Base64EncoderDecoder />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

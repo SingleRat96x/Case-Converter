@@ -24,8 +24,8 @@ export default function BigTextPage() {
           <BigTextGenerator />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

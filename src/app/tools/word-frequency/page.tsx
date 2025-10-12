@@ -24,8 +24,8 @@ export default function WordFrequencyPage() {
           <WordFrequencyAnalyzer />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

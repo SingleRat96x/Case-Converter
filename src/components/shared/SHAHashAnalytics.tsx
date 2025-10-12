@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { 
@@ -14,9 +14,9 @@ import {
   Binary,
   FileText
 } from 'lucide-react';
-import { useToolTranslations } from '@/lib/i18n/hooks';
 import { getHashSecurityInfo, formatHashForDisplay, getCollisionProbability, HashResult } from '@/lib/shaHashUtils';
-import { ReportDownloadButton } from './ReportDownloadButton';
+import { usePathname } from 'next/navigation';
+import { getLocaleFromPathname } from '@/lib/i18n';
 
 interface SHAHashAnalyticsProps {
   hashResult: HashResult | null;
@@ -31,7 +31,29 @@ export function SHAHashAnalytics({
   hmacKey,
   encoding
 }: SHAHashAnalyticsProps) {
-  const { tool } = useToolTranslations('tools/seo-content/sha256-hash-generator');
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [translations, setTranslations] = useState<Record<string, any>>({});
+  
+  useEffect(() => {
+    // Load translations directly from the JSON file
+    import('@/locales/tools/seo-content/sha256-hash-generator.json')
+      .then(data => {
+        setTranslations(data[locale] || data.en);
+      })
+      .catch(err => console.error('Failed to load SHA translations:', err));
+  }, [locale]);
+  
+  const tool = (key: string) => {
+    const keys = key.split('.');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let value: any = translations;
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  };
   
   if (!hashResult) {
     return (
@@ -225,7 +247,24 @@ export function SHAHashAnalytics({
 
       {/* Download Report */}
       <div className="flex justify-end">
-        <ReportDownloadButton generateReport={generateReport} />
+        <Button
+          variant="outline"
+          onClick={() => {
+            const report = generateReport();
+            const blob = new Blob([report.content], { type: report.mimeType });
+            const url = URL.createObjectURL(blob);
+            const a = document.createElement('a');
+            a.href = url;
+            a.download = report.filename;
+            document.body.appendChild(a);
+            a.click();
+            document.body.removeChild(a);
+            URL.revokeObjectURL(url);
+          }}
+        >
+          <FileText className="mr-2 h-4 w-4" />
+          {tool('actions.downloadReport') || 'Download Report'}
+        </Button>
       </div>
     </div>
   );

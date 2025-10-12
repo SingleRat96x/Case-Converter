@@ -24,8 +24,8 @@ export default function DiscordFontPage() {
           <DiscordFontsGenerator />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

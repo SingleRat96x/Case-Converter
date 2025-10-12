@@ -24,8 +24,8 @@ export default function ImageToTextPageRU() {
           <ImageToTextOCR />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

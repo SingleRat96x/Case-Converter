@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useRef, useCallback } from 'react';
+import React, { useState, useRef, useCallback, useEffect } from 'react';
 import { Button } from '@/components/ui/button';
 import { Card } from '@/components/ui/card';
 import { Label } from '@/components/ui/label';
@@ -8,7 +8,9 @@ import { Switch } from '@/components/ui/switch';
 import { Separator } from '@/components/ui/separator';
 import { SHAHashAnalytics } from '@/components/shared/SHAHashAnalytics';
 import { ToolOptionsAccordion } from '@/components/shared/ToolOptionsAccordion';
-import { useToolTranslations } from '@/lib/i18n/hooks';
+import { useCommonTranslations } from '@/lib/i18n/hooks';
+import { usePathname } from 'next/navigation';
+import { getLocaleFromPathname } from '@/lib/i18n';
 import { 
   generateSHAHash, 
   generateSHAHashFromFile,
@@ -33,7 +35,31 @@ import {
 } from 'lucide-react';
 
 export function SHAHashGenerator() {
-  const { common, tool } = useToolTranslations('tools/seo-content/sha256-hash-generator');
+  const pathname = usePathname();
+  const locale = getLocaleFromPathname(pathname);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const [translations, setTranslations] = useState<Record<string, any>>({});
+  
+  useEffect(() => {
+    // Load translations directly from the JSON file
+    import('@/locales/tools/seo-content/sha256-hash-generator.json')
+      .then(data => {
+        setTranslations(data[locale] || data.en);
+      })
+      .catch(err => console.error('Failed to load SHA translations:', err));
+  }, [locale]);
+  
+  const tool = (key: string) => {
+    const keys = key.split('.');
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
+    let value: any = translations;
+    for (const k of keys) {
+      value = value?.[k];
+    }
+    return value || key;
+  };
+  
+  const { tSync: common } = useCommonTranslations();
   
   // State management
   const [inputText, setInputText] = useState('');
