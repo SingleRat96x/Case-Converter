@@ -1,0 +1,324 @@
+{
+  "en": {
+    "title": "SHA-256 Hash Generator",
+    "description": "Generate secure SHA hash values (SHA-1, SHA-256, SHA-384, SHA-512) for text and files. Free online cryptographic hash calculator with HMAC support.",
+    "labels": {
+      "inputText": "Text to Hash",
+      "outputHash": "Generated Hash",
+      "algorithm": "Hash Algorithm",
+      "encoding": "Output Encoding",
+      "hmacKey": "HMAC Secret Key",
+      "compareHash": "Compare with Hash"
+    },
+    "placeholders": {
+      "enterText": "Enter text to generate hash...",
+      "hashWillAppear": "Hash will appear here",
+      "enterHmacKey": "Enter secret key for HMAC",
+      "enterCompareHash": "Enter hash to compare"
+    },
+    "options": {
+      "algorithms": {
+        "sha1": "SHA-1 (160-bit)",
+        "sha256": "SHA-256 (256-bit)",
+        "sha384": "SHA-384 (384-bit)",
+        "sha512": "SHA-512 (512-bit)"
+      },
+      "encodings": {
+        "hex": "Hexadecimal",
+        "base64": "Base64",
+        "binary": "Binary"
+      }
+    },
+    "features": {
+      "uppercase": "Uppercase Output",
+      "hmacMode": "HMAC Mode",
+      "fileHashing": "Hash Files",
+      "batchMode": "Batch Processing",
+      "compareMode": "Compare Hashes"
+    },
+    "actions": {
+      "generateHash": "Generate Hash",
+      "uploadFile": "Upload File",
+      "copyHash": "Copy Hash",
+      "downloadResults": "Download Results",
+      "compareHashes": "Compare"
+    },
+    "warnings": {
+      "sha1Deprecated": "SHA-1 is cryptographically broken and should not be used for security applications. Use SHA-256 or SHA-512 instead."
+    },
+    "compare": {
+      "match": "✓ Hashes match!",
+      "noMatch": "✗ Hashes do not match"
+    },
+    "analytics": {
+      "title": "Hash Analysis",
+      "generatedHash": "Generated Hash",
+      "securityStatus": "Security Status",
+      "recommendedUse": "Recommended Use",
+      "algorithm": "Algorithm",
+      "hashLength": "Hash Length",
+      "chars": "characters",
+      "bits": "bits",
+      "processingTime": "Processing Time",
+      "encoding": "Encoding",
+      "hmacMode": "HMAC Mode",
+      "enabled": "Enabled",
+      "disabled": "Disabled",
+      "collisionRisk": "Collision Probability",
+      "technicalDetails": "Technical Details",
+      "inputLength": "Input Length",
+      "characters": "characters",
+      "outputFormat": "Output Format",
+      "timestamp": "Generated At",
+      "noHashGenerated": "Enter text or upload a file to generate hash"
+    },
+    "seo": {
+      "metaTitle": "SHA-256 Hash Generator - Free Online SHA Hash Calculator | Text Case Converter",
+      "metaDescription": "Generate SHA-256, SHA-512, SHA-384, and SHA-1 hashes online. Free cryptographic hash generator with HMAC support, file hashing, and batch processing.",
+      "keywords": "SHA-256 generator, SHA hash calculator, SHA-512 hash, cryptographic hash, HMAC generator, file hash calculator, online hash tool, SHA-1 deprecated, secure hash algorithm",
+      "ogTitle": "SHA Hash Generator - Create Secure Cryptographic Hashes Online",
+      "ogDescription": "Free online SHA hash generator supporting SHA-256, SHA-512, SHA-384, and SHA-1. Generate secure cryptographic hashes with HMAC support, file hashing, and batch processing.",
+      "structuredData": {
+        "name": "SHA-256 Hash Generator",
+        "description": "Online tool for generating SHA cryptographic hashes",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Any",
+        "permissions": "none",
+        "creator": "Text Case Converter"
+      }
+    },
+    "content": {
+      "whatIsTitle": "What is SHA-256?",
+      "whatIsContent": "SHA-256 (Secure Hash Algorithm 256-bit) is a cryptographic hash function that produces a fixed-size 256-bit (32-byte) hash. It's part of the SHA-2 family designed by the NSA and is widely used in security applications and protocols, including TLS, SSL, PGP, SSH, and IPsec.",
+      "howToUseTitle": "How to Use the SHA Hash Generator",
+      "howToUseSteps": [
+        "Enter your text in the input field or upload a file",
+        "Select your preferred SHA algorithm (SHA-256 recommended)",
+        "Choose the output encoding format (Hex, Base64, or Binary)",
+        "Optionally enable HMAC mode for keyed hashing",
+        "Copy or download the generated hash"
+      ],
+      "algorithmsTitle": "SHA Algorithm Comparison",
+      "algorithmsContent": {
+        "sha1": {
+          "name": "SHA-1",
+          "bits": "160 bits",
+          "security": "Deprecated - Vulnerable to collision attacks",
+          "use": "Legacy systems only"
+        },
+        "sha256": {
+          "name": "SHA-256",
+          "bits": "256 bits",
+          "security": "Currently secure",
+          "use": "Most applications, blockchain, certificates"
+        },
+        "sha384": {
+          "name": "SHA-384",
+          "bits": "384 bits",
+          "security": "Very secure",
+          "use": "High-security applications"
+        },
+        "sha512": {
+          "name": "SHA-512",
+          "bits": "512 bits",
+          "security": "Maximum security",
+          "use": "Critical security applications"
+        }
+      },
+      "useCasesTitle": "Common Use Cases",
+      "useCases": [
+        "Password storage (with salt)",
+        "File integrity verification",
+        "Digital signatures",
+        "Blockchain and cryptocurrencies",
+        "Certificate fingerprints",
+        "Data deduplication",
+        "Git commit hashes"
+      ],
+      "faqTitle": "Frequently Asked Questions",
+      "faq": [
+        {
+          "question": "Is SHA-256 secure?",
+          "answer": "Yes, SHA-256 is currently considered cryptographically secure and is recommended for most applications."
+        },
+        {
+          "question": "What's the difference between SHA and MD5?",
+          "answer": "SHA algorithms are more secure than MD5. MD5 is broken and should never be used for security purposes, while SHA-256 and SHA-512 are still secure."
+        },
+        {
+          "question": "What is HMAC?",
+          "answer": "HMAC (Hash-based Message Authentication Code) is a mechanism for message authentication using cryptographic hash functions along with a secret key."
+        },
+        {
+          "question": "Can I reverse a SHA hash?",
+          "answer": "No, SHA functions are one-way cryptographic functions. You cannot reverse or decrypt a SHA hash to get the original input."
+        },
+        {
+          "question": "Why is SHA-1 deprecated?",
+          "answer": "SHA-1 has been proven vulnerable to collision attacks, where two different inputs can produce the same hash. Google demonstrated a practical SHA-1 collision in 2017."
+        }
+      ]
+    }
+  },
+  "ru": {
+    "title": "Генератор SHA-256 хеша",
+    "description": "Генерируйте безопасные SHA хеши (SHA-1, SHA-256, SHA-384, SHA-512) для текста и файлов. Бесплатный онлайн криптографический хеш-калькулятор с поддержкой HMAC.",
+    "labels": {
+      "inputText": "Текст для хеширования",
+      "outputHash": "Сгенерированный хеш",
+      "algorithm": "Алгоритм хеширования",
+      "encoding": "Формат вывода",
+      "hmacKey": "Секретный ключ HMAC",
+      "compareHash": "Сравнить с хешем"
+    },
+    "placeholders": {
+      "enterText": "Введите текст для генерации хеша...",
+      "hashWillAppear": "Хеш появится здесь",
+      "enterHmacKey": "Введите секретный ключ для HMAC",
+      "enterCompareHash": "Введите хеш для сравнения"
+    },
+    "options": {
+      "algorithms": {
+        "sha1": "SHA-1 (160 бит)",
+        "sha256": "SHA-256 (256 бит)",
+        "sha384": "SHA-384 (384 бит)",
+        "sha512": "SHA-512 (512 бит)"
+      },
+      "encodings": {
+        "hex": "Шестнадцатеричный",
+        "base64": "Base64",
+        "binary": "Двоичный"
+      }
+    },
+    "features": {
+      "uppercase": "Верхний регистр",
+      "hmacMode": "Режим HMAC",
+      "fileHashing": "Хеширование файлов",
+      "batchMode": "Пакетная обработка",
+      "compareMode": "Сравнение хешей"
+    },
+    "actions": {
+      "generateHash": "Сгенерировать хеш",
+      "uploadFile": "Загрузить файл",
+      "copyHash": "Копировать хеш",
+      "downloadResults": "Скачать результаты",
+      "compareHashes": "Сравнить"
+    },
+    "warnings": {
+      "sha1Deprecated": "SHA-1 криптографически скомпрометирован и не должен использоваться для безопасности. Используйте SHA-256 или SHA-512."
+    },
+    "compare": {
+      "match": "✓ Хеши совпадают!",
+      "noMatch": "✗ Хеши не совпадают"
+    },
+    "analytics": {
+      "title": "Анализ хеша",
+      "generatedHash": "Сгенерированный хеш",
+      "securityStatus": "Статус безопасности",
+      "recommendedUse": "Рекомендуемое использование",
+      "algorithm": "Алгоритм",
+      "hashLength": "Длина хеша",
+      "chars": "символов",
+      "bits": "бит",
+      "processingTime": "Время обработки",
+      "encoding": "Кодировка",
+      "hmacMode": "Режим HMAC",
+      "enabled": "Включен",
+      "disabled": "Выключен",
+      "collisionRisk": "Вероятность коллизии",
+      "technicalDetails": "Технические детали",
+      "inputLength": "Длина ввода",
+      "characters": "символов",
+      "outputFormat": "Формат вывода",
+      "timestamp": "Создано",
+      "noHashGenerated": "Введите текст или загрузите файл для генерации хеша"
+    },
+    "seo": {
+      "metaTitle": "Генератор SHA-256 хеша - Бесплатный онлайн SHA калькулятор | Text Case Converter",
+      "metaDescription": "Генерируйте SHA-256, SHA-512, SHA-384 и SHA-1 хеши онлайн. Бесплатный криптографический генератор хешей с поддержкой HMAC, хешированием файлов и пакетной обработкой.",
+      "keywords": "SHA-256 генератор, SHA хеш калькулятор, SHA-512 хеш, криптографический хеш, HMAC генератор, хеш файла калькулятор, онлайн хеш инструмент",
+      "ogTitle": "Генератор SHA хешей - Создавайте безопасные криптографические хеши онлайн",
+      "ogDescription": "Бесплатный онлайн генератор SHA хешей с поддержкой SHA-256, SHA-512, SHA-384 и SHA-1. Генерируйте безопасные криптографические хеши с поддержкой HMAC.",
+      "structuredData": {
+        "name": "Генератор SHA-256 хеша",
+        "description": "Онлайн инструмент для генерации SHA криптографических хешей",
+        "applicationCategory": "SecurityApplication",
+        "operatingSystem": "Любая",
+        "permissions": "нет",
+        "creator": "Text Case Converter"
+      }
+    },
+    "content": {
+      "whatIsTitle": "Что такое SHA-256?",
+      "whatIsContent": "SHA-256 (Secure Hash Algorithm 256-bit) - это криптографическая хеш-функция, которая создает хеш фиксированного размера 256 бит (32 байта). Она является частью семейства SHA-2, разработанного АНБ, и широко используется в приложениях и протоколах безопасности.",
+      "howToUseTitle": "Как использовать генератор SHA хешей",
+      "howToUseSteps": [
+        "Введите текст в поле ввода или загрузите файл",
+        "Выберите предпочитаемый алгоритм SHA (рекомендуется SHA-256)",
+        "Выберите формат вывода (Hex, Base64 или двоичный)",
+        "При необходимости включите режим HMAC для хеширования с ключом",
+        "Скопируйте или скачайте сгенерированный хеш"
+      ],
+      "algorithmsTitle": "Сравнение алгоритмов SHA",
+      "algorithmsContent": {
+        "sha1": {
+          "name": "SHA-1",
+          "bits": "160 бит",
+          "security": "Устарел - Уязвим к атакам коллизий",
+          "use": "Только для устаревших систем"
+        },
+        "sha256": {
+          "name": "SHA-256",
+          "bits": "256 бит",
+          "security": "В настоящее время безопасен",
+          "use": "Большинство приложений, блокчейн, сертификаты"
+        },
+        "sha384": {
+          "name": "SHA-384",
+          "bits": "384 бит",
+          "security": "Очень безопасен",
+          "use": "Приложения с высокой безопасностью"
+        },
+        "sha512": {
+          "name": "SHA-512",
+          "bits": "512 бит",
+          "security": "Максимальная безопасность",
+          "use": "Критически важные приложения безопасности"
+        }
+      },
+      "useCasesTitle": "Распространенные случаи использования",
+      "useCases": [
+        "Хранение паролей (с солью)",
+        "Проверка целостности файлов",
+        "Цифровые подписи",
+        "Блокчейн и криптовалюты",
+        "Отпечатки сертификатов",
+        "Дедупликация данных",
+        "Хеши коммитов Git"
+      ],
+      "faqTitle": "Часто задаваемые вопросы",
+      "faq": [
+        {
+          "question": "Безопасен ли SHA-256?",
+          "answer": "Да, SHA-256 в настоящее время считается криптографически безопасным и рекомендуется для большинства приложений."
+        },
+        {
+          "question": "В чем разница между SHA и MD5?",
+          "answer": "Алгоритмы SHA более безопасны, чем MD5. MD5 скомпрометирован и никогда не должен использоваться для безопасности, в то время как SHA-256 и SHA-512 все еще безопасны."
+        },
+        {
+          "question": "Что такое HMAC?",
+          "answer": "HMAC (Hash-based Message Authentication Code) - это механизм аутентификации сообщений с использованием криптографических хеш-функций вместе с секретным ключом."
+        },
+        {
+          "question": "Можно ли обратить SHA хеш?",
+          "answer": "Нет, функции SHA являются односторонними криптографическими функциями. Вы не можете обратить или расшифровать SHA хеш, чтобы получить исходный ввод."
+        },
+        {
+          "question": "Почему SHA-1 устарел?",
+          "answer": "SHA-1 доказано уязвим к атакам коллизий, где два разных ввода могут производить одинаковый хеш. Google продемонстрировал практическую коллизию SHA-1 в 2017 году."
+        }
+      ]
+    }
+  }
+}
