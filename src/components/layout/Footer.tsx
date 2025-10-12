@@ -119,6 +119,10 @@ export function Footer() {
       href: currentLocale === 'en' ? '/tools/base64-encoder-decoder' : '/ru/tools/base64-encoder-decoder'
     },
     {
+      title: t('navigation.sha256HashGenerator'),
+      href: currentLocale === 'en' ? '/tools/sha256-hash-generator' : '/ru/tools/sha256-hash-generator'
+    },
+    {
       title: t('navigation.binaryCodeTranslator'),
       href: currentLocale === 'en' ? '/tools/binary-code-translator' : '/ru/tools/binary-code-translator'
     },
