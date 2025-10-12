@@ -24,8 +24,8 @@ export default function AsciiArtGeneratorPageRu() {
           <AsciiArtGenerator />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

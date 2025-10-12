@@ -24,8 +24,8 @@ export default function PhoneticSpellingPage() {
           <PhoneticSpellingGenerator />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

@@ -24,8 +24,8 @@ export default function WebPToJPGPage() {
           <WebPToJPGConverter />
           <SEOContent
             toolName={toolConfig.name}
-            enableAds={true}
-            adDensity="medium"
+           
+           
           />
         </div>
       </div>

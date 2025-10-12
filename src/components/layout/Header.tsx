@@ -106,6 +106,7 @@ export function Header() {
       icon: <Code2 className="h-4 w-4" />,
       items: [
         { titleKey: 'navigation.base64EncoderDecoder', href: '/tools/base64-encoder-decoder', isPopular: true },
+        { titleKey: 'navigation.sha256HashGenerator', href: '/tools/sha256-hash-generator', isPopular: true },
         { titleKey: 'navigation.binaryCodeTranslator', href: '/tools/binary-code-translator' },
         { titleKey: 'navigation.hexToText', href: '/tools/hex-to-text' },
         { titleKey: 'navigation.morseCode', href: '/tools/morse-code' },

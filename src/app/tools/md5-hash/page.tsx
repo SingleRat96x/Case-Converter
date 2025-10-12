@@ -24,8 +24,8 @@ export default function MD5HashPage() {
           <MD5HashGenerator />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

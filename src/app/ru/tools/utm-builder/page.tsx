@@ -24,8 +24,8 @@ export default function UTMBuilderPage() {
           <UTMParameterBuilder />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

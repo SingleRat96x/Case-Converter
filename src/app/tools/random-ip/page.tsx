@@ -24,8 +24,8 @@ export default function RandomIPPage() {
           <RandomIPGenerator />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

@@ -51,8 +51,9 @@ const toolCategories = [
     icon: <Code2 className="h-6 w-6" />,
     tools: [
       { id: 'base64-encoder-decoder', titleKey: 'navigation.base64EncoderDecoder', href: '/tools/base64-encoder-decoder', icon: '🔐', isPopular: true },
+      { id: 'sha256-hash-generator', titleKey: 'navigation.sha256HashGenerator', href: '/tools/sha256-hash-generator', icon: '🛡️', isPopular: true },
       { id: 'binary-code-translator', titleKey: 'navigation.binaryCodeTranslator', href: '/tools/binary-code-translator', icon: '01' },
-      { id: 'hex-to-text', titleKey: 'navigation.hexToText', href: '/tools/hex-to-text', icon: '#️⃣' },
+      { id: 'hex-to-text', titleKey: 'navigation.hexToText', href: '/tools/hex-to-text', icon: '🔢' },
       { id: 'morse-code', titleKey: 'navigation.morseCode', href: '/tools/morse-code', icon: '📟' },
       { id: 'caesar-cipher', titleKey: 'navigation.caesarCipher', href: '/tools/caesar-cipher', icon: '🔒' },
       { id: 'rot13', titleKey: 'navigation.rot13', href: '/tools/rot13', icon: '🔄' },

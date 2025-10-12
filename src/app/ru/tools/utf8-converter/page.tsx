@@ -24,8 +24,8 @@ export default function Utf8ConverterPageRU() {
           <Utf8Converter />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

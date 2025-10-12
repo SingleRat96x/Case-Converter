@@ -24,8 +24,8 @@ export default function ROT13PageRU() {
           <ROT13Encoder />
           <SEOContent 
             toolName={toolConfig.name} 
-            enableAds={true} 
-            adDensity="medium" 
+            
+            
           />
         </div>
       </div>

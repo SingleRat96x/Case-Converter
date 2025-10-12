@@ -301,6 +301,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
+          title: t('navigation.sha256HashGenerator'),
+          href: locale === 'en' ? '/tools/sha256-hash-generator' : '/ru/tools/sha256-hash-generator',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
           title: t('navigation.binaryCodeTranslator'),
           href: locale === 'en' ? '/tools/binary-code-translator' : '/ru/tools/binary-code-translator',
           icon: <ChevronRight className="h-4 w-4" />
