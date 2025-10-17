@@ -1,0 +1,74 @@
+[
+  {
+    "issue_id": 1,
+    "rule": "title_brand_consistent",
+    "evidence_example": "Missing \" | Text Case Converter\" or \" — Text Case Converter\" suffix",
+    "affected_urls_count": 63,
+    "sample_urls": [
+      "https://textcaseconverter.net/tools/webp-to-png/",
+      "https://textcaseconverter.net/tools/png-to-webp/",
+      "https://textcaseconverter.net/tools/random-month/",
+      "https://textcaseconverter.net/tools/remove-line-breaks/",
+      "https://textcaseconverter.net/tools/text-replace/",
+      "https://textcaseconverter.net/tools/text-counter/",
+      "https://textcaseconverter.net/tools/uuid-generator/",
+      "https://textcaseconverter.net/tools/slugify-url/",
+      "https://textcaseconverter.net/tools/roman-numeral-date/",
+      "https://textcaseconverter.net/tools/rot13/"
+    ]
+  },
+  {
+    "issue_id": 2,
+    "rule": "description_length",
+    "evidence_example": "Descriptions outside 120-160 character range",
+    "affected_urls_count": 20,
+    "sample_urls": [
+      "https://textcaseconverter.net/tools/webp-to-png/",
+      "https://textcaseconverter.net/tools/random-month/",
+      "https://textcaseconverter.net/tools/slugify-url/",
+      "https://textcaseconverter.net/tools/subscript-text/",
+      "https://textcaseconverter.net/tools/pig-latin/",
+      "https://textcaseconverter.net/tools/title-case/",
+      "https://textcaseconverter.net/tools/webp-to-jpg/",
+      "https://textcaseconverter.net/tools/random-letter/",
+      "https://textcaseconverter.net/tools/random-ip/",
+      "https://textcaseconverter.net/tools/invisible-text/"
+    ]
+  },
+  {
+    "issue_id": 3,
+    "rule": "canonical_self_referential",
+    "evidence_example": "Canonical URL not self-referential",
+    "affected_urls_count": 63,
+    "sample_urls": [
+      "https://textcaseconverter.net/tools/webp-to-png/",
+      "https://textcaseconverter.net/tools/png-to-webp/",
+      "https://textcaseconverter.net/tools/random-month/",
+      "https://textcaseconverter.net/tools/remove-line-breaks/",
+      "https://textcaseconverter.net/tools/text-replace/",
+      "https://textcaseconverter.net/tools/text-counter/",
+      "https://textcaseconverter.net/tools/uuid-generator/",
+      "https://textcaseconverter.net/tools/slugify-url/",
+      "https://textcaseconverter.net/tools/roman-numeral-date/",
+      "https://textcaseconverter.net/tools/rot13/"
+    ]
+  },
+  {
+    "issue_id": 4,
+    "rule": "og_title_present",
+    "evidence_example": "Missing or empty og:title",
+    "affected_urls_count": 63,
+    "sample_urls": [
+      "https://textcaseconverter.net/tools/webp-to-png/",
+      "https://textcaseconverter.net/tools/png-to-webp/",
+      "https://textcaseconverter.net/tools/random-month/",
+      "https://textcaseconverter.net/tools/remove-line-breaks/",
+      "https://textcaseconverter.net/tools/text-replace/",
+      "https://textcaseconverter.net/tools/text-counter/",
+      "https://textcaseconverter.net/tools/uuid-generator/",
+      "https://textcaseconverter.net/tools/slugify-url/",
+      "https://textcaseconverter.net/tools/roman-numeral-date/",
+      "https://textcaseconverter.net/tools/rot13/"
+    ]
+  }
+]
