@@ -1,0 +1,75 @@
+
+METADATA AUDIT SUMMARY
+=====================
+
+Base URL: https://textcaseconverter.net
+Audit Date: 2025-10-17T11:08:44.452Z
+Timezone: Africa/Tunis
+
+SCOPE
+-----
+- Language order: English first, then Russian
+- Pages: Tool pages only (63 EN + 63 RU = 126 total)
+- User-Agent: Metadata-Audit-Bot/1.0
+- Follow redirects: Yes
+
+SUMMARY METRICS
+---------------
+Total tool pages scanned: 63 (EN) / 63 (RU)
+
+Title Rules Pass Rate:
+- English: 100%
+- Russian: 100%
+
+Description Rules Pass Rate:
+- English: 68%
+- Russian: 37%
+
+Duplicate Counts:
+- English titles: 0 duplicates
+- Russian titles: 0 duplicates
+- English descriptions: 0 duplicates
+- Russian descriptions: 0 duplicates
+
+Canonical Errors:
+- English: 63 pages
+- Russian: 63 pages
+
+Hreflang Errors:
+- English: 63 pages
+- Russian: 63 pages
+
+ISSUE CATALOG
+-------------
+Found 4 unique issue types:
+
+
+1. title_brand_consistent
+   Evidence: Missing " | Text Case Converter" or " — Text Case Converter" suffix
+   Affected URLs: 63
+   Sample URLs: https://textcaseconverter.net/tools/webp-to-png/, https://textcaseconverter.net/tools/png-to-webp/, https://textcaseconverter.net/tools/random-month/...
+
+2. description_length
+   Evidence: Descriptions outside 120-160 character range
+   Affected URLs: 20
+   Sample URLs: https://textcaseconverter.net/tools/webp-to-png/, https://textcaseconverter.net/tools/random-month/, https://textcaseconverter.net/tools/slugify-url/...
+
+3. canonical_self_referential
+   Evidence: Canonical URL not self-referential
+   Affected URLs: 63
+   Sample URLs: https://textcaseconverter.net/tools/webp-to-png/, https://textcaseconverter.net/tools/png-to-webp/, https://textcaseconverter.net/tools/random-month/...
+
+4. og_title_present
+   Evidence: Missing or empty og:title
+   Affected URLs: 63
+   Sample URLs: https://textcaseconverter.net/tools/webp-to-png/, https://textcaseconverter.net/tools/png-to-webp/, https://textcaseconverter.net/tools/random-month/...
+
+
+FILES GENERATED
+---------------
+- english-audit.csv: Complete English audit data
+- russian-audit.csv: Complete Russian audit data
+- issue-catalog.json: Detailed issue catalog
+- summary-metrics.json: Summary statistics
+
+NOTE: This audit used registry metadata as the source of truth since the live pages use client-side rendering where metadata is not present in the initial HTML response.

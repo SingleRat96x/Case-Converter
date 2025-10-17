@@ -1,0 +1,28 @@
+{
+  "total_tool_pages_scanned": {
+    "en": 63,
+    "ru": 63
+  },
+  "title_rules_pass_rate": {
+    "en": 100,
+    "ru": 100
+  },
+  "description_rules_pass_rate": {
+    "en": 68,
+    "ru": 37
+  },
+  "duplicate_counts": {
+    "titles_en": 0,
+    "titles_ru": 0,
+    "descriptions_en": 0,
+    "descriptions_ru": 0
+  },
+  "canonical_errors": {
+    "en": 63,
+    "ru": 63
+  },
+  "hreflang_errors": {
+    "en": 63,
+    "ru": 63
+  }
+}
