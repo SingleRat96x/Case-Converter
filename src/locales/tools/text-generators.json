@@ -253,15 +253,13 @@
       "hideOptions": "Hide Options",
       "extractionMode": "Extraction Mode",
       "modes": {
-        "simple": "Simple",
-        "comprehensive": "Comprehensive", 
-        "strict": "Strict"
+        "default": "Default",
+        "custom": "Custom"
       },
       "modeTooltips": {
         "title": "Extraction Modes Explained",
-        "simple": "Basic pattern matching for common email formats",
-        "comprehensive": "Advanced patterns including international domains and special characters",
-        "strict": "RFC-compliant validation for maximum accuracy"
+        "default": "Smart extraction using optimized patterns for best results",
+        "custom": "Use your own regular expression pattern for email extraction"
       },
       "sections": {
         "extraction": "Extraction Configuration",
@@ -284,6 +282,18 @@
       "sortTooltip": "Choose how to sort the extracted email addresses",
       "duplicatesTooltip": "Remove duplicate email addresses from the results",
       "validationTooltip": "Perform RFC-compliant validation on extracted emails",
+      "filterEmails": "Filter Emails",
+      "domainFilter": "Domain Filter",
+      "domainFilterPlaceholder": "e.g. gmail.com",
+      "clearFilter": "Clear Filter",
+      "filterTypes": {
+        "contains": "Contains",
+        "notContains": "Does not contain",
+        "equals": "Equals"
+      },
+      "customRegex": "Custom Regex Pattern",
+      "customRegexPlaceholder": "Enter your regex pattern...",
+      "customRegexHint": "Use a valid JavaScript regular expression to match emails",
       "stats": {
         "totalFound": "Total Found",
         "unique": "Unique",
@@ -597,15 +607,13 @@
       "hideOptions": "Скрыть Параметры",
       "extractionMode": "Режим Извлечения",
       "modes": {
-        "simple": "Простой",
-        "comprehensive": "Расширенный", 
-        "strict": "Строгий"
+        "default": "По умолчанию",
+        "custom": "Пользовательский"
       },
       "modeTooltips": {
         "title": "Объяснение режимов извлечения",
-        "simple": "Базовое сопоставление шаблонов для обычных форматов email",
-        "comprehensive": "Расширенные шаблоны включая международные домены и специальные символы",
-        "strict": "RFC-совместимая проверка для максимальной точности"
+        "default": "Умное извлечение с использованием оптимизированных шаблонов для лучших результатов",
+        "custom": "Используйте свой собственный шаблон регулярного выражения для извлечения email"
       },
       "sections": {
         "extraction": "Конфигурация извлечения",
@@ -628,6 +636,18 @@
       "sortTooltip": "Выберите способ сортировки извлеченных email адресов",
       "duplicatesTooltip": "Удалить дублированные email адреса из результатов",
       "validationTooltip": "Выполнить RFC-совместимую проверку извлеченных email",
+      "filterEmails": "Фильтр Email",
+      "domainFilter": "Фильтр по домену",
+      "domainFilterPlaceholder": "например gmail.com",
+      "clearFilter": "Очистить фильтр",
+      "filterTypes": {
+        "contains": "Содержит",
+        "notContains": "Не содержит",
+        "equals": "Равно"
+      },
+      "customRegex": "Пользовательский Regex шаблон",
+      "customRegexPlaceholder": "Введите ваш regex шаблон...",
+      "customRegexHint": "Используйте валидное JavaScript регулярное выражение для поиска email",
       "stats": {
         "totalFound": "Всего найдено",
         "unique": "Уникальных",

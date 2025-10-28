@@ -5,7 +5,6 @@ import { useToolTranslations } from '@/lib/i18n/hooks';
 import { BaseTextConverter } from '@/components/shared/BaseTextConverter';
 import { 
   extractEmails, 
-  exportEmails, 
   analyzeEmailPatterns,
   type EmailExtractionOptions,
   type EmailExtractionResult
@@ -18,19 +17,17 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { 
   CheckCircle, 
   XCircle, 
-  Download, 
-  Copy, 
   Mail, 
   Globe,
   Search,
   Filter,
   HelpCircle,
   Target,
-  Shield,
   Percent,
-  AlertTriangle
+  AlertTriangle,
+  Code,
+  Wand2
 } from 'lucide-react';
-import { copyToClipboard, downloadTextAsFile } from '@/lib/utils';
 
 export function EmailExtractor() {
   const { common, tool } = useToolTranslations('tools/text-generators');
@@ -42,8 +39,13 @@ export function EmailExtractor() {
     sortOrder: 'asc',
     validateEmails: true
   });
-  const [isAccordionOpen, setIsAccordionOpen] = useState(true);
+  const [isAccordionOpen, setIsAccordionOpen] = useState(false); // Closed by default on mobile
   const [error, setError] = useState<string | null>(null);
+  const [extractionMode, setExtractionMode] = useState<'default' | 'custom'>('default');
+  const [customRegex, setCustomRegex] = useState('');
+  const [showFilters, setShowFilters] = useState(false);
+  const [domainFilter, setDomainFilter] = useState('');
+  const [filterType, setFilterType] = useState<'contains' | 'not-contains' | 'equals'>('contains');
 
   // Memoized email extraction result
   const extractionResult: EmailExtractionResult = useMemo(() => {
@@ -93,7 +95,7 @@ export function EmailExtractor() {
     return extractionResult.emails.map(e => e.email).join('\n');
   }, [extractionResult.emails, tool]);
 
-  // Handle responsive accordion behavior
+  // Handle responsive accordion behavior - closed by default on mobile
   React.useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 640) { // sm breakpoint
@@ -132,40 +134,57 @@ export function EmailExtractor() {
         mobileLayout="2x2"
       >
         <div className="space-y-3">
-          {/* Quick Actions */}
+          {/* Filter Button */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <div className="flex items-center gap-2">
-              <Button
-                onClick={() => updateExtractionOption('mode', 'simple')}
-                variant={extractionOptions.mode === 'simple' ? 'default' : 'outline'}
-                size="sm"
-                className="gap-1"
-              >
-                <Target className="h-3 w-3" />
-                {tool('extractEmails.modes.simple')}
-              </Button>
-              
-              <Button
-                onClick={() => updateExtractionOption('mode', 'comprehensive')}
-                variant={extractionOptions.mode === 'comprehensive' ? 'default' : 'outline'}
-                size="sm"
-                className="gap-1"
-              >
-                <Search className="h-3 w-3" />
-                {tool('extractEmails.modes.comprehensive')}
-              </Button>
-
-              <Button
-                onClick={() => updateExtractionOption('mode', 'strict')}
-                variant={extractionOptions.mode === 'strict' ? 'default' : 'outline'}
-                size="sm"
-                className="gap-1"
-              >
-                <Shield className="h-3 w-3" />
-                {tool('extractEmails.modes.strict')}
-              </Button>
-            </div>
+            <Button
+              onClick={() => setShowFilters(!showFilters)}
+              variant={showFilters ? 'default' : 'outline'}
+              size="sm"
+              className="gap-2"
+            >
+              <Filter className="h-4 w-4" />
+              {tool('extractEmails.filterEmails')}
+            </Button>
           </div>
+
+          {/* Domain Filter Section */}
+          {showFilters && (
+            <div className="p-4 bg-muted/50 rounded-lg border space-y-3">
+              <h4 className="text-sm font-medium flex items-center gap-2">
+                <Filter className="h-4 w-4" />
+                {tool('extractEmails.domainFilter')}
+              </h4>
+              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
+                <Select value={filterType} onValueChange={(value: 'contains' | 'not-contains' | 'equals') => setFilterType(value)}>
+                  <SelectTrigger>
+                    <SelectValue />
+                  </SelectTrigger>
+                  <SelectContent>
+                    <SelectItem value="contains">{tool('extractEmails.filterTypes.contains')}</SelectItem>
+                    <SelectItem value="not-contains">{tool('extractEmails.filterTypes.notContains')}</SelectItem>
+                    <SelectItem value="equals">{tool('extractEmails.filterTypes.equals')}</SelectItem>
+                  </SelectContent>
+                </Select>
+                <input
+                  type="text"
+                  placeholder={tool('extractEmails.domainFilterPlaceholder')}
+                  value={domainFilter}
+                  onChange={(e) => setDomainFilter(e.target.value)}
+                  className="px-3 py-2 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                />
+                <Button
+                  onClick={() => {
+                    setDomainFilter('');
+                    setFilterType('contains');
+                  }}
+                  variant="outline"
+                  size="sm"
+                >
+                  {tool('extractEmails.clearFilter')}
+                </Button>
+              </div>
+            </div>
+          )}
 
           {/* Email Extraction Options Accordion */}
           <Accordion className="w-full">
@@ -182,9 +201,9 @@ export function EmailExtractor() {
                     <h3 className="text-base font-semibold text-foreground">{tool('extractEmails.sections.extraction')}</h3>
                   </div>
                   
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                    {/* Extraction Mode with Tooltip */}
-                    <div className="space-y-2">
+                  <div className="space-y-4">
+                    {/* Extraction Mode - Default vs Custom */}
+                    <div className="space-y-3">
                       <div className="flex items-center gap-2">
                         <label className="text-sm font-medium">{tool('extractEmails.extractionMode')}</label>
                         <Tooltip>
@@ -194,28 +213,53 @@ export function EmailExtractor() {
                           <TooltipContent>
                             <div className="max-w-xs">
                               <p className="font-medium mb-1">{tool('extractEmails.modeTooltips.title')}</p>
-                              <p className="text-xs mb-2"><strong>Simple:</strong> {tool('extractEmails.modeTooltips.simple')}</p>
-                              <p className="text-xs mb-2"><strong>Comprehensive:</strong> {tool('extractEmails.modeTooltips.comprehensive')}</p>
-                              <p className="text-xs"><strong>Strict:</strong> {tool('extractEmails.modeTooltips.strict')}</p>
+                              <p className="text-xs mb-2"><strong>Default:</strong> {tool('extractEmails.modeTooltips.default')}</p>
+                              <p className="text-xs"><strong>Custom:</strong> {tool('extractEmails.modeTooltips.custom')}</p>
                             </div>
                           </TooltipContent>
                         </Tooltip>
                       </div>
-                      <Select
-                        value={extractionOptions.mode}
-                        onValueChange={(value: EmailExtractionOptions['mode']) => 
-                          updateExtractionOption('mode', value)
-                        }
-                      >
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="simple">{tool('extractEmails.modes.simple')}</SelectItem>
-                          <SelectItem value="comprehensive">{tool('extractEmails.modes.comprehensive')}</SelectItem>
-                          <SelectItem value="strict">{tool('extractEmails.modes.strict')}</SelectItem>
-                        </SelectContent>
-                      </Select>
+                      
+                      <div className="flex gap-2">
+                        <Button
+                          onClick={() => setExtractionMode('default')}
+                          variant={extractionMode === 'default' ? 'default' : 'outline'}
+                          size="sm"
+                          className="gap-2"
+                        >
+                          <Wand2 className="h-3 w-3" />
+                          {tool('extractEmails.modes.default')}
+                        </Button>
+                        
+                        <Button
+                          onClick={() => setExtractionMode('custom')}
+                          variant={extractionMode === 'custom' ? 'default' : 'outline'}
+                          size="sm"
+                          className="gap-2"
+                        >
+                          <Code className="h-3 w-3" />
+                          {tool('extractEmails.modes.custom')}
+                        </Button>
+                      </div>
+
+                      {/* Custom Regex Input */}
+                      {extractionMode === 'custom' && (
+                        <div className="space-y-2">
+                          <label className="text-xs font-medium text-muted-foreground">
+                            {tool('extractEmails.customRegex')}
+                          </label>
+                          <input
+                            type="text"
+                            placeholder={tool('extractEmails.customRegexPlaceholder')}
+                            value={customRegex}
+                            onChange={(e) => setCustomRegex(e.target.value)}
+                            className="w-full px-3 py-2 text-sm font-mono border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
+                          />
+                          <p className="text-xs text-muted-foreground">
+                            {tool('extractEmails.customRegexHint')}
+                          </p>
+                        </div>
+                      )}
                     </div>
 
                     {/* Sort By */}
@@ -396,62 +440,6 @@ export function EmailExtractor() {
             </div>
           )}
 
-          {/* Export Actions */}
-          {extractionResult.emails.length > 0 && (
-            <div className="flex flex-wrap gap-2 justify-center">
-              <Button
-                onClick={async () => {
-                  const emailList = extractionResult.emails.map(e => e.email).join('\n');
-                  await copyToClipboard(emailList);
-                }}
-                variant="default"
-                size="sm"
-                className="gap-1"
-              >
-                <Copy className="h-3 w-3" />
-                {tool('extractEmails.copyEmails')}
-              </Button>
-              
-              <Button
-                onClick={() => {
-                  const exportData = exportEmails(extractionResult.emails, 'txt');
-                  downloadTextAsFile(exportData, 'extracted-emails.txt');
-                }}
-                variant="outline"
-                size="sm"
-                className="gap-1"
-              >
-                <Download className="h-3 w-3" />
-                TXT
-              </Button>
-              
-              <Button
-                onClick={() => {
-                  const exportData = exportEmails(extractionResult.emails, 'csv');
-                  downloadTextAsFile(exportData, 'extracted-emails.csv');
-                }}
-                variant="outline"
-                size="sm"
-                className="gap-1"
-              >
-                <Download className="h-3 w-3" />
-                CSV
-              </Button>
-              
-              <Button
-                onClick={() => {
-                  const exportData = exportEmails(extractionResult.emails, 'json');
-                  downloadTextAsFile(exportData, 'extracted-emails.json');
-                }}
-                variant="outline"
-                size="sm"
-                className="gap-1"
-              >
-                <Download className="h-3 w-3" />
-                JSON
-              </Button>
-            </div>
-          )}
         </div>
       </BaseTextConverter>
     </TooltipProvider>
