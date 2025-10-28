@@ -9,7 +9,6 @@ import {
   type EmailExtractionOptions,
   type EmailExtractionResult
 } from '@/lib/emailUtils';
-import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
@@ -19,14 +18,11 @@ import {
   XCircle, 
   Mail, 
   Globe,
-  Search,
   Filter,
   HelpCircle,
   Target,
   Percent,
-  AlertTriangle,
-  Code,
-  Wand2
+  AlertTriangle
 } from 'lucide-react';
 
 export function EmailExtractor() {
@@ -41,11 +37,6 @@ export function EmailExtractor() {
   });
   const [isAccordionOpen, setIsAccordionOpen] = useState(false); // Closed by default on mobile
   const [error, setError] = useState<string | null>(null);
-  const [extractionMode, setExtractionMode] = useState<'default' | 'custom'>('default');
-  const [customRegex, setCustomRegex] = useState('');
-  const [showFilters, setShowFilters] = useState(false);
-  const [domainFilter, setDomainFilter] = useState('');
-  const [filterType, setFilterType] = useState<'contains' | 'not-contains' | 'equals'>('contains');
 
   // Memoized email extraction result
   const extractionResult: EmailExtractionResult = useMemo(() => {
@@ -134,57 +125,6 @@ export function EmailExtractor() {
         mobileLayout="2x2"
       >
         <div className="space-y-3">
-          {/* Filter Button */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
-            <Button
-              onClick={() => setShowFilters(!showFilters)}
-              variant={showFilters ? 'default' : 'outline'}
-              size="sm"
-              className="gap-2"
-            >
-              <Filter className="h-4 w-4" />
-              {tool('extractEmails.filterEmails')}
-            </Button>
-          </div>
-
-          {/* Domain Filter Section */}
-          {showFilters && (
-            <div className="p-4 bg-muted/50 rounded-lg border space-y-3">
-              <h4 className="text-sm font-medium flex items-center gap-2">
-                <Filter className="h-4 w-4" />
-                {tool('extractEmails.domainFilter')}
-              </h4>
-              <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
-                <Select value={filterType} onValueChange={(value: 'contains' | 'not-contains' | 'equals') => setFilterType(value)}>
-                  <SelectTrigger>
-                    <SelectValue />
-                  </SelectTrigger>
-                  <SelectContent>
-                    <SelectItem value="contains">{tool('extractEmails.filterTypes.contains')}</SelectItem>
-                    <SelectItem value="not-contains">{tool('extractEmails.filterTypes.notContains')}</SelectItem>
-                    <SelectItem value="equals">{tool('extractEmails.filterTypes.equals')}</SelectItem>
-                  </SelectContent>
-                </Select>
-                <input
-                  type="text"
-                  placeholder={tool('extractEmails.domainFilterPlaceholder')}
-                  value={domainFilter}
-                  onChange={(e) => setDomainFilter(e.target.value)}
-                  className="px-3 py-2 border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                />
-                <Button
-                  onClick={() => {
-                    setDomainFilter('');
-                    setFilterType('contains');
-                  }}
-                  variant="outline"
-                  size="sm"
-                >
-                  {tool('extractEmails.clearFilter')}
-                </Button>
-              </div>
-            </div>
-          )}
 
           {/* Email Extraction Options Accordion */}
           <Accordion className="w-full">
@@ -193,106 +133,36 @@ export function EmailExtractor() {
               defaultOpen={isAccordionOpen}
               className="w-full"
             >
-              <div className="space-y-6">
-                {/* Extraction Configuration Section */}
-                <div className="space-y-4">
-                  <div className="flex items-center gap-2 pb-2 border-b border-border/50">
-                    <Search className="h-4 w-4 text-primary" />
-                    <h3 className="text-base font-semibold text-foreground">{tool('extractEmails.sections.extraction')}</h3>
+              <div className="space-y-4">
+                {/* Sort By */}
+                <div className="space-y-2">
+                  <div className="flex items-center gap-2">
+                    <label className="text-sm font-medium">{tool('extractEmails.sortBy')}</label>
+                    <Tooltip>
+                      <TooltipTrigger>
+                        <HelpCircle className="h-3 w-3 text-muted-foreground" />
+                      </TooltipTrigger>
+                      <TooltipContent>
+                        <p className="max-w-xs text-xs">{tool('extractEmails.sortTooltip')}</p>
+                      </TooltipContent>
+                    </Tooltip>
                   </div>
-                  
-                  <div className="space-y-4">
-                    {/* Extraction Mode - Default vs Custom */}
-                    <div className="space-y-3">
-                      <div className="flex items-center gap-2">
-                        <label className="text-sm font-medium">{tool('extractEmails.extractionMode')}</label>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            <HelpCircle className="h-3 w-3 text-muted-foreground" />
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <div className="max-w-xs">
-                              <p className="font-medium mb-1">{tool('extractEmails.modeTooltips.title')}</p>
-                              <p className="text-xs mb-2"><strong>Default:</strong> {tool('extractEmails.modeTooltips.default')}</p>
-                              <p className="text-xs"><strong>Custom:</strong> {tool('extractEmails.modeTooltips.custom')}</p>
-                            </div>
-                          </TooltipContent>
-                        </Tooltip>
-                      </div>
-                      
-                      <div className="flex gap-2">
-                        <Button
-                          onClick={() => setExtractionMode('default')}
-                          variant={extractionMode === 'default' ? 'default' : 'outline'}
-                          size="sm"
-                          className="gap-2"
-                        >
-                          <Wand2 className="h-3 w-3" />
-                          {tool('extractEmails.modes.default')}
-                        </Button>
-                        
-                        <Button
-                          onClick={() => setExtractionMode('custom')}
-                          variant={extractionMode === 'custom' ? 'default' : 'outline'}
-                          size="sm"
-                          className="gap-2"
-                        >
-                          <Code className="h-3 w-3" />
-                          {tool('extractEmails.modes.custom')}
-                        </Button>
-                      </div>
-
-                      {/* Custom Regex Input */}
-                      {extractionMode === 'custom' && (
-                        <div className="space-y-2">
-                          <label className="text-xs font-medium text-muted-foreground">
-                            {tool('extractEmails.customRegex')}
-                          </label>
-                          <input
-                            type="text"
-                            placeholder={tool('extractEmails.customRegexPlaceholder')}
-                            value={customRegex}
-                            onChange={(e) => setCustomRegex(e.target.value)}
-                            className="w-full px-3 py-2 text-sm font-mono border border-border rounded-md bg-background text-foreground placeholder:text-muted-foreground focus:outline-none focus:ring-2 focus:ring-ring focus:ring-offset-2"
-                          />
-                          <p className="text-xs text-muted-foreground">
-                            {tool('extractEmails.customRegexHint')}
-                          </p>
-                        </div>
-                      )}
-                    </div>
-
-                    {/* Sort By */}
-                    <div className="space-y-2">
-                      <div className="flex items-center gap-2">
-                        <label className="text-sm font-medium">{tool('extractEmails.sortBy')}</label>
-                        <Tooltip>
-                          <TooltipTrigger>
-                            <HelpCircle className="h-3 w-3 text-muted-foreground" />
-                          </TooltipTrigger>
-                          <TooltipContent>
-                            <p className="max-w-xs text-xs">{tool('extractEmails.sortTooltip')}</p>
-                          </TooltipContent>
-                        </Tooltip>
-                      </div>
-                      <Select
-                        value={extractionOptions.sortBy}
-                        onValueChange={(value: EmailExtractionOptions['sortBy']) => 
-                          updateExtractionOption('sortBy', value)
-                        }
-                      >
-                        <SelectTrigger>
-                          <SelectValue />
-                        </SelectTrigger>
-                        <SelectContent>
-                          <SelectItem value="alphabetical">{tool('extractEmails.sortOptions.alphabetical')}</SelectItem>
-                          <SelectItem value="domain">{tool('extractEmails.sortOptions.domain')}</SelectItem>
-                          <SelectItem value="position">{tool('extractEmails.sortOptions.position')}</SelectItem>
-                          <SelectItem value="validity">{tool('extractEmails.sortOptions.validity')}</SelectItem>
-                        </SelectContent>
-                      </Select>
-                    </div>
-                  </div>
+                  <Select
+                    value={extractionOptions.sortBy}
+                    onValueChange={(value: EmailExtractionOptions['sortBy']) => 
+                      updateExtractionOption('sortBy', value)
+                    }
+                  >
+                    <SelectTrigger>
+                      <SelectValue />
+                    </SelectTrigger>
+                    <SelectContent>
+                      <SelectItem value="alphabetical">{tool('extractEmails.sortOptions.alphabetical')}</SelectItem>
+                      <SelectItem value="domain">{tool('extractEmails.sortOptions.domain')}</SelectItem>
+                      <SelectItem value="position">{tool('extractEmails.sortOptions.position')}</SelectItem>
+                      <SelectItem value="validity">{tool('extractEmails.sortOptions.validity')}</SelectItem>
+                    </SelectContent>
+                  </Select>
                 </div>
 
                 {/* Processing Options Section */}
