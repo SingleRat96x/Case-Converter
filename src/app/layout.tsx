@@ -70,6 +70,9 @@ export default async function RootLayout({
   return (
     <html lang={locale}>
       <head>
+        {/* Google Search Console Verification */}
+        <meta name="google-site-verification" content="q0_LZd87Qgf4wjcrK2xldnxXI6G6_4Z8MTfEiWmnctE" />
+        
         {/* Preconnect to third-party domains for faster resource loading */}
         <link rel="preconnect" href="https://www.googletagmanager.com" />
         <link rel="preconnect" href="https://pagead2.googlesyndication.com" />
