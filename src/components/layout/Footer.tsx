@@ -289,6 +289,10 @@ export function Footer() {
     {
       title: t('navigation.utmBuilder'),
       href: currentLocale === 'en' ? '/tools/utm-builder' : '/ru/tools/utm-builder'
+    },
+    {
+      title: t('navigation.extractEmailsFromPdf'),
+      href: currentLocale === 'en' ? '/tools/extract-emails-from-pdf' : '/ru/tools/extract-emails-from-pdf'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 

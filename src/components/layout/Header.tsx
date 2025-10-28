@@ -149,6 +149,7 @@ export function Header() {
         { titleKey: 'navigation.pigLatin', href: '/tools/pig-latin' },
         { titleKey: 'navigation.romanNumeralDate', href: '/tools/roman-numeral-date' },
         { titleKey: 'navigation.utmBuilder', href: '/tools/utm-builder' },
+        { titleKey: 'navigation.extractEmailsFromPdf', href: '/tools/extract-emails-from-pdf' },
       ]
     }
   ];

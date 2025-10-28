@@ -1492,6 +1492,26 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('extract-emails-from-text', ['Email extraction', 'Email validation', 'Multiple formats', 'Domain analysis', 'Duplicate removal'], 'Text Input', 'Extracted Emails', 4.6, 789),
     relatedTools: ['text-counter','text-replace','remove-text-formatting','duplicate-line-remover']
+  },
+  {
+    slug: 'extract-emails-from-pdf',
+    pathname: '/tools/extract-emails-from-pdf',
+    type: 'tool',
+    category: 'misc',
+    i18n: {
+      en: {
+        title: 'Extract Emails from PDF — Free PDF Email Extractor Tool',
+        description: 'Upload PDF files and extract email addresses with our free online tool. Process documents up to 10MB with advanced filtering, validation, and export options.',
+        shortDescription: 'Extract and validate emails from PDF files with advanced processing.',
+      },
+      ru: {
+        title: 'Извлечение Email из PDF — Бесплатный Экстрактор Email из PDF',
+        description: 'Загружайте PDF файлы и извлекайте email адреса с помощью нашего бесплатного онлайн инструмента. Обрабатывайте документы до 10МБ с расширенными возможностями фильтрации, проверки и экспорта.',
+        shortDescription: 'Извлекайте и проверяйте email из PDF файлов с расширенной обработкой.',
+      }
+    },
+    schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),
+    relatedTools: ['extract-emails-from-text','image-to-text','text-counter','remove-text-formatting']
   }
 ];
 
@@ -1504,7 +1524,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text'
+  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
 ];
 
 const CATEGORY_SLUGS: string[] = [
