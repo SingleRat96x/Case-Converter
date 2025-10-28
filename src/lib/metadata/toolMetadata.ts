@@ -1497,7 +1497,7 @@ const overrides: Array<ToolMetadataConfig> = [
     slug: 'extract-emails-from-pdf',
     pathname: '/tools/extract-emails-from-pdf',
     type: 'tool',
-    category: 'misc',
+    category: 'miscellaneous-tool',
     i18n: {
       en: {
         title: 'Extract Emails from PDF — Free PDF Email Extractor Tool',
