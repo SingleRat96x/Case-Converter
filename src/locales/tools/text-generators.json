@@ -257,6 +257,16 @@
         "comprehensive": "Comprehensive", 
         "strict": "Strict"
       },
+      "modeTooltips": {
+        "title": "Extraction Modes Explained",
+        "simple": "Basic pattern matching for common email formats",
+        "comprehensive": "Advanced patterns including international domains and special characters",
+        "strict": "RFC-compliant validation for maximum accuracy"
+      },
+      "sections": {
+        "extraction": "Extraction Configuration",
+        "processing": "Processing Options"
+      },
       "sortBy": "Sort By",
       "sortOptions": {
         "alphabetical": "Alphabetical",
@@ -271,6 +281,9 @@
       },
       "removeDuplicates": "Remove Duplicates",
       "validateEmails": "Validate Emails",
+      "sortTooltip": "Choose how to sort the extracted email addresses",
+      "duplicatesTooltip": "Remove duplicate email addresses from the results",
+      "validationTooltip": "Perform RFC-compliant validation on extracted emails",
       "stats": {
         "totalFound": "Total Found",
         "unique": "Unique",
@@ -285,6 +298,7 @@
       "topDomains": "Top Domains",
       "duplicatesFound": "Duplicates found",
       "duplicatesHint": "Enable 'Remove Duplicates' to filter them out",
+      "domainsHint": "Most common email domains found in the text",
       "analysis": "Analysis",
       "validityRate": "Validity Rate",
       "avgLocalLength": "Avg Local Length",
@@ -587,6 +601,16 @@
         "comprehensive": "Расширенный", 
         "strict": "Строгий"
       },
+      "modeTooltips": {
+        "title": "Объяснение режимов извлечения",
+        "simple": "Базовое сопоставление шаблонов для обычных форматов email",
+        "comprehensive": "Расширенные шаблоны включая международные домены и специальные символы",
+        "strict": "RFC-совместимая проверка для максимальной точности"
+      },
+      "sections": {
+        "extraction": "Конфигурация извлечения",
+        "processing": "Параметры обработки"
+      },
       "sortBy": "Сортировать по",
       "sortOptions": {
         "alphabetical": "По алфавиту",
@@ -601,6 +625,9 @@
       },
       "removeDuplicates": "Удалить дубликаты",
       "validateEmails": "Проверить Email",
+      "sortTooltip": "Выберите способ сортировки извлеченных email адресов",
+      "duplicatesTooltip": "Удалить дублированные email адреса из результатов",
+      "validationTooltip": "Выполнить RFC-совместимую проверку извлеченных email",
       "stats": {
         "totalFound": "Всего найдено",
         "unique": "Уникальных",
@@ -615,6 +642,7 @@
       "topDomains": "Топ доменов",
       "duplicatesFound": "Найдены дубликаты",
       "duplicatesHint": "Включите 'Удалить дубликаты' чтобы их отфильтровать",
+      "domainsHint": "Наиболее распространенные email домены найденные в тексте",
       "analysis": "Анализ",
       "validityRate": "Процент валидности",
       "avgLocalLength": "Средняя длина локальной части",
