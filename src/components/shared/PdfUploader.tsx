@@ -182,16 +182,16 @@ export function PdfUploader({
             </div>
             
             {/* Action Buttons */}
-            <div className="flex items-center gap-2 ml-4">
+            <div className="flex items-center gap-2 ml-2 sm:ml-4">
               <Button
                 onClick={triggerFileUpload}
                 variant="outline"
                 size="sm"
-                className="gap-1"
+                className="gap-1 sm:gap-1 bg-blue-50 hover:bg-blue-100 border-blue-200 text-blue-700 hover:text-blue-800 dark:bg-blue-950/30 dark:hover:bg-blue-950/50 dark:border-blue-800 dark:text-blue-300"
                 disabled={isUploading || isProcessing}
               >
-                <Upload className="h-3 w-3" />
-                {replaceText}
+                <Upload className="h-3 w-3 sm:h-3 sm:w-3" />
+                <span className="hidden sm:inline">{replaceText}</span>
               </Button>
               
               {onClear && (
@@ -199,11 +199,11 @@ export function PdfUploader({
                   onClick={handleClear}
                   variant="outline"
                   size="sm"
-                  className="gap-1"
+                  className="gap-1 sm:gap-1 bg-red-50 hover:bg-red-100 border-red-200 text-red-700 hover:text-red-800 dark:bg-red-950/30 dark:hover:bg-red-950/50 dark:border-red-800 dark:text-red-300"
                   disabled={isUploading || isProcessing}
                 >
-                  <X className="h-3 w-3" />
-                  {clearText}
+                  <X className="h-3 w-3 sm:h-3 sm:w-3" />
+                  <span className="hidden sm:inline">{clearText}</span>
                 </Button>
               )}
             </div>

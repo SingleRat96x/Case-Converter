@@ -32,6 +32,7 @@ import {
   FileText,
   Clock,
   Copy,
+  Check,
   Download
 } from 'lucide-react';
 import { copyToClipboard, downloadTextAsFile } from '@/lib/utils';
@@ -47,6 +48,7 @@ export function PdfEmailExtractor() {
   const [extractionResult, setExtractionResult] = useState<PdfEmailExtractionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [isAccordionOpen, setIsAccordionOpen] = useState(false);
+  const [copyState, setCopyState] = useState<'idle' | 'copying' | 'copied'>('idle');
   
   // Extraction options
   const [extractionOptions, setExtractionOptions] = useState<EmailExtractionOptions>({
@@ -128,8 +130,20 @@ export function PdfEmailExtractor() {
   // Handle copy emails
   const handleCopyEmails = useCallback(async () => {
     if (extractionResult?.emails) {
-      const emailList = extractionResult.emails.map(e => e.email).join('\n');
-      await copyToClipboard(emailList);
+      try {
+        const emailList = extractionResult.emails.map(e => e.email).join('\n');
+        const success = await copyToClipboard(emailList);
+        
+        if (success) {
+          setCopyState('copied');
+          // Show "Copied" state for 2 seconds, then revert to normal
+          setTimeout(() => {
+            setCopyState('idle');
+          }, 2000);
+        }
+      } catch {
+        // If copy fails, don't show copied state
+      }
     }
   }, [extractionResult?.emails]);
 
@@ -209,11 +223,19 @@ export function PdfEmailExtractor() {
                 onClick={handleCopyEmails}
                 variant="default"
                 size="sm"
-                className="gap-2"
+                className={`gap-2 transition-all duration-300 ease-in-out ${
+                  copyState === 'copied'
+                    ? 'bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700 text-white'
+                    : ''
+                }`}
                 disabled={extractionResult.emails.length === 0}
               >
-                <Copy className="h-4 w-4" />
-                {common('buttons.copy')}
+                <span className="transition-all duration-200">
+                  {copyState === 'copied' ? <Check className="h-4 w-4" /> : <Copy className="h-4 w-4" />}
+                </span>
+                <span className="transition-all duration-200">
+                  {copyState === 'copied' ? 'Copied!' : common('buttons.copy')}
+                </span>
               </Button>
               
               <Button
@@ -346,123 +368,57 @@ export function PdfEmailExtractor() {
           </AccordionItem>
         </Accordion>
 
-        {/* Analytics Cards */}
-        {state === 'completed' && extractionResult && (
-          <div className="space-y-4">
-            {/* Email Analytics */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-3">
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <Mail className="h-4 w-4 mb-1 text-blue-600 dark:text-blue-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {extractionResult.totalCount.toLocaleString()}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.stats.totalFound')}</span>
+        {/* Top Domains Analysis - Redesigned */}
+        {state === 'completed' && extractionResult && patternAnalysis && patternAnalysis.topDomains.length > 0 && (
+          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+            <div className="flex items-center gap-3 mb-4">
+              <div className="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg">
+                <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
               </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <Target className="h-4 w-4 mb-1 text-green-600 dark:text-green-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {extractionResult.uniqueCount.toLocaleString()}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.stats.unique')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <CheckCircle className="h-4 w-4 mb-1 text-emerald-600 dark:text-emerald-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {extractionResult.validCount.toLocaleString()}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.stats.valid')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <AlertTriangle className="h-4 w-4 mb-1 text-red-600 dark:text-red-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {extractionResult.invalidCount.toLocaleString()}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.stats.invalid')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <Globe className="h-4 w-4 mb-1 text-purple-600 dark:text-purple-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {Object.keys(extractionResult.domains).length.toLocaleString()}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.uniqueDomains')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <Percent className="h-4 w-4 mb-1 text-orange-600 dark:text-orange-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {patternAnalysis?.validityRate || 0}%
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.validityRate')}</span>
+              <div>
+                <h4 className="text-lg font-semibold text-foreground">{tool('pdfEmailExtractor.topDomains')}</h4>
+                <p className="text-sm text-muted-foreground">Most common email domains found in your PDF</p>
               </div>
             </div>
-
-            {/* PDF Info */}
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <FileText className="h-4 w-4 mb-1 text-indigo-600 dark:text-indigo-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {extractionResult.pdfInfo.pageCount}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.pages')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <FileText className="h-4 w-4 mb-1 text-cyan-600 dark:text-cyan-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {formatFileSize(extractionResult.pdfInfo.fileSize)}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.fileSize')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <Clock className="h-4 w-4 mb-1 text-amber-600 dark:text-amber-400" />
-                <span className="text-sm font-medium text-foreground">
-                  {formatProcessingTime(extractionResult.pdfInfo.processingTime)}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.processingTime')}</span>
-              </div>
-
-              <div className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow">
-                <FileText className="h-4 w-4 mb-1 text-teal-600 dark:text-teal-400" />
-                <span className="text-sm font-medium text-foreground truncate max-w-full">
-                  {extractionResult.pdfInfo.filename}
-                </span>
-                <span className="text-xs text-muted-foreground text-center">{tool('pdfEmailExtractor.filename')}</span>
-              </div>
-            </div>
-
-            {/* Top Domains Analysis */}
-            {patternAnalysis && patternAnalysis.topDomains.length > 0 && (
-              <div className="space-y-2 p-2 bg-muted/50 rounded-md border border-border">
-                <h4 className="text-xs font-medium text-muted-foreground flex items-center gap-1">
-                  <Globe className="h-3 w-3" />
-                  {tool('pdfEmailExtractor.topDomains')}
-                </h4>
-                <div className="flex flex-wrap gap-1">
-                  {patternAnalysis.topDomains.slice(0, 8).map((domain, index) => (
-                    <span key={index} className="px-2 py-1 bg-card border rounded text-xs font-mono">
-                      {domain.domain}: {domain.count} ({domain.percentage}%)
-                    </span>
-                  ))}
+            
+            <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+              {patternAnalysis.topDomains.slice(0, 6).map((domain, index) => (
+                <div key={index} className="bg-white dark:bg-gray-900/50 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all">
+                  <div className="flex items-center justify-between">
+                    <div className="flex-1 min-w-0">
+                      <p className="font-mono text-sm font-medium text-foreground truncate">
+                        {domain.domain}
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-1">
+                        {domain.count} email{domain.count !== 1 ? 's' : ''}
+                      </p>
+                    </div>
+                    <div className="ml-3 flex-shrink-0">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+                        {domain.percentage}%
+                      </span>
+                    </div>
+                  </div>
                 </div>
-                <p className="text-xs text-muted-foreground opacity-75">{tool('pdfEmailExtractor.domainsHint')}</p>
-              </div>
+              ))}
+            </div>
+            
+            {patternAnalysis.topDomains.length > 6 && (
+              <p className="text-xs text-muted-foreground mt-4 text-center">
+                Showing top 6 domains • {patternAnalysis.topDomains.length - 6} more found
+              </p>
             )}
+          </div>
+        )}
 
-            {/* Duplicates Warning */}
-            {extractionResult.duplicates.length > 0 && !extractionOptions.removeDuplicates && (
-              <div className="space-y-2 p-2 bg-yellow-50 dark:bg-yellow-950/20 rounded-md border border-yellow-200 dark:border-yellow-800">
-                <h4 className="text-xs font-medium text-yellow-800 dark:text-yellow-200 flex items-center gap-1">
-                  <AlertTriangle className="h-3 w-3" />
-                  {tool('pdfEmailExtractor.duplicatesFound')}: {extractionResult.duplicates.length}
-                </h4>
-                <p className="text-xs text-yellow-700 dark:text-yellow-300 opacity-75">{tool('pdfEmailExtractor.duplicatesHint')}</p>
-              </div>
-            )}
+        {/* Duplicates Warning */}
+        {state === 'completed' && extractionResult && extractionResult.duplicates.length > 0 && !extractionOptions.removeDuplicates && (
+          <div className="space-y-2 p-4 bg-yellow-50 dark:bg-yellow-950/20 rounded-lg border border-yellow-200 dark:border-yellow-800">
+            <h4 className="text-sm font-medium text-yellow-800 dark:text-yellow-200 flex items-center gap-2">
+              <AlertTriangle className="h-4 w-4" />
+              {tool('pdfEmailExtractor.duplicatesFound')}: {extractionResult.duplicates.length}
+            </h4>
+            <p className="text-sm text-yellow-700 dark:text-yellow-300">{tool('pdfEmailExtractor.duplicatesHint')}</p>
           </div>
         )}
       </div>
