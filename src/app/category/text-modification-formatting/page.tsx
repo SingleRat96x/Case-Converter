@@ -108,6 +108,13 @@ const textModificationTools = [
     description: 'Strip all formatting and convert text to plain format',
     icon: '📄',
     href: '/tools/plain-text'
+  },
+  {
+    id: 'extract-emails-from-text',
+    title: 'Extract Emails from Text',
+    description: 'Extract and validate email addresses from any text with advanced filtering',
+    icon: '📧',
+    href: '/tools/extract-emails-from-text'
   }
 ];
 

@@ -1472,6 +1472,26 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('cursed-text', ['Unicode text', 'Stylish fonts', 'Social media ready', 'Creative styling'], 'Text Input', 'Cursed Text', 4.3, 389),
     relatedTools: ['bold-text','italic-text','big-text']
+  },
+  {
+    slug: 'extract-emails-from-text',
+    pathname: '/tools/extract-emails-from-text',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Extract Emails from Text — Free Email Extractor Tool',
+        description: 'Extract and validate email addresses from any text with our free online tool. Find emails in documents, web pages, and text blocks with advanced filtering options.',
+        shortDescription: 'Extract and validate emails from text with advanced options.',
+      },
+      ru: {
+        title: 'Извлечение Email из Текста — Бесплатный Экстрактор Email',
+        description: 'Извлекайте и проверяйте email адреса из любого текста с помощью нашего бесплатного онлайн инструмента. Находите email в документах, веб-страницах и текстовых блоках.',
+        shortDescription: 'Извлекайте и проверяйте email из текста с расширенными опциями.',
+      }
+    },
+    schema: createAdvancedSchema('extract-emails-from-text', ['Email extraction', 'Email validation', 'Multiple formats', 'Domain analysis', 'Duplicate removal'], 'Text Input', 'Extracted Emails', 4.6, 789),
+    relatedTools: ['text-counter','text-replace','remove-text-formatting','duplicate-line-remover']
   }
 ];
 
@@ -1484,7 +1504,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling'
+  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text'
 ];
 
 const CATEGORY_SLUGS: string[] = [

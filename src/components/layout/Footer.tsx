@@ -110,6 +110,10 @@ export function Footer() {
     {
       title: t('navigation.plainText'),
       href: currentLocale === 'en' ? '/tools/plain-text' : '/ru/tools/plain-text'
+    },
+    {
+      title: t('navigation.extractEmailsFromText'),
+      href: currentLocale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 

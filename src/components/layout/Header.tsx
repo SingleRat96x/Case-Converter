@@ -83,6 +83,7 @@ export function Header() {
         { titleKey: 'navigation.duplicateLineRemover', href: '/tools/duplicate-line-remover' },
         { titleKey: 'navigation.sortWords', href: '/tools/sort-words' },
         { titleKey: 'navigation.plainText', href: '/tools/plain-text' },
+        { titleKey: 'navigation.extractEmailsFromText', href: '/tools/extract-emails-from-text' },
       ]
     },
     {

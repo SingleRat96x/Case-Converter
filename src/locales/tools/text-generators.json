@@ -238,6 +238,59 @@
         "withoutSpaces": "Without Spaces"
       }
     },
+    "extractEmails": {
+      "title": "Extract Emails from Text",
+      "description": "Extract and validate email addresses from any text. Find emails in documents, web pages, or large text blocks with advanced filtering and export options.",
+      "outputLabel": "Extracted Emails",
+      "inputPlaceholder": "Paste your text here to extract email addresses...",
+      "copiedMessage": "Extracted emails copied to clipboard!",
+      "downloadFileName": "extracted-emails.txt",
+      "convertButton": "Extract Emails",
+      "uploadDescription": "Upload a text file to extract emails from",
+      "noEmailsFound": "No email addresses found in the text.",
+      "extractionOptions": "Extraction Options",
+      "showOptions": "Show Options",
+      "hideOptions": "Hide Options",
+      "extractionMode": "Extraction Mode",
+      "modes": {
+        "simple": "Simple",
+        "comprehensive": "Comprehensive", 
+        "strict": "Strict"
+      },
+      "sortBy": "Sort By",
+      "sortOptions": {
+        "alphabetical": "Alphabetical",
+        "domain": "Domain",
+        "position": "Position",
+        "validity": "Validity"
+      },
+      "sortOrder": "Sort Order",
+      "sortOrderOptions": {
+        "ascending": "Ascending",
+        "descending": "Descending"
+      },
+      "removeDuplicates": "Remove Duplicates",
+      "validateEmails": "Validate Emails",
+      "stats": {
+        "totalFound": "Total Found",
+        "unique": "Unique",
+        "valid": "Valid",
+        "invalid": "Invalid"
+      },
+      "copyEmails": "Copy Emails",
+      "exportTxt": "Export TXT",
+      "exportCsv": "Export CSV",
+      "exportJson": "Export JSON",
+      "extractedEmails": "Extracted Emails",
+      "topDomains": "Top Domains",
+      "duplicatesFound": "Duplicates found",
+      "duplicatesHint": "Enable 'Remove Duplicates' to filter them out",
+      "analysis": "Analysis",
+      "validityRate": "Validity Rate",
+      "avgLocalLength": "Avg Local Length",
+      "avgDomainLength": "Avg Domain Length",
+      "uniqueDomains": "Unique Domains"
+    },
     "removeTextFormatting": {
       "title": "Remove Text Formatting Tool",
       "description": "Remove HTML tags, Markdown formatting, URLs, emails, and special characters from text. Clean and strip formatting from copied content with our advanced text cleaning tool.",
@@ -514,6 +567,59 @@
         "withSpaces": "С Пробелами",
         "withoutSpaces": "Без Пробелов"
       }
+    },
+    "extractEmails": {
+      "title": "Извлечение Email из Текста",
+      "description": "Извлекайте и проверяйте email адреса из любого текста. Находите email в документах, веб-страницах или больших текстовых блоках с расширенными возможностями фильтрации и экспорта.",
+      "outputLabel": "Извлеченные Email",
+      "inputPlaceholder": "Вставьте ваш текст сюда для извлечения email адресов...",
+      "copiedMessage": "Извлеченные email скопированы в буфер обмена!",
+      "downloadFileName": "извлеченные-email.txt",
+      "convertButton": "Извлечь Email",
+      "uploadDescription": "Загрузите текстовый файл для извлечения email",
+      "noEmailsFound": "Email адреса не найдены в тексте.",
+      "extractionOptions": "Параметры Извлечения",
+      "showOptions": "Показать Параметры",
+      "hideOptions": "Скрыть Параметры",
+      "extractionMode": "Режим Извлечения",
+      "modes": {
+        "simple": "Простой",
+        "comprehensive": "Расширенный", 
+        "strict": "Строгий"
+      },
+      "sortBy": "Сортировать по",
+      "sortOptions": {
+        "alphabetical": "По алфавиту",
+        "domain": "По домену",
+        "position": "По позиции",
+        "validity": "По валидности"
+      },
+      "sortOrder": "Порядок сортировки",
+      "sortOrderOptions": {
+        "ascending": "По возрастанию",
+        "descending": "По убыванию"
+      },
+      "removeDuplicates": "Удалить дубликаты",
+      "validateEmails": "Проверить Email",
+      "stats": {
+        "totalFound": "Всего найдено",
+        "unique": "Уникальных",
+        "valid": "Валидных",
+        "invalid": "Невалидных"
+      },
+      "copyEmails": "Копировать Email",
+      "exportTxt": "Экспорт TXT",
+      "exportCsv": "Экспорт CSV",
+      "exportJson": "Экспорт JSON",
+      "extractedEmails": "Извлеченные Email",
+      "topDomains": "Топ доменов",
+      "duplicatesFound": "Найдены дубликаты",
+      "duplicatesHint": "Включите 'Удалить дубликаты' чтобы их отфильтровать",
+      "analysis": "Анализ",
+      "validityRate": "Процент валидности",
+      "avgLocalLength": "Средняя длина локальной части",
+      "avgDomainLength": "Средняя длина домена",
+      "uniqueDomains": "Уникальных доменов"
     },
     "removeTextFormatting": {
       "title": "Инструмент Удаления Форматирования Текста",
