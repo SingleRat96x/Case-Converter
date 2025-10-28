@@ -1,4 +1,10 @@
 import { extractEmails, type EmailExtractionOptions, type EmailExtractionResult } from './emailUtils';
+import * as pdfjsLib from 'pdfjs-dist';
+
+// Configure PDF.js worker
+if (typeof window !== 'undefined') {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
+}
 
 export interface PdfProcessingResult {
   text: string;
@@ -76,7 +82,7 @@ export function validatePdfFile(file: File): PdfValidationResult {
 }
 
 /**
- * Extract text content from PDF file
+ * Extract text content from PDF file using PDF.js
  */
 export async function extractTextFromPdf(file: File): Promise<PdfProcessingResult> {
   const startTime = Date.now();
@@ -88,59 +94,75 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
       throw new Error(validation.error);
     }
 
-    // For now, we'll use a client-side approach that works reliably
-    // Future enhancement: integrate with a PDF.js based solution
+    // Convert file to ArrayBuffer for PDF.js
     const arrayBuffer = await file.arrayBuffer();
     
-    // Try to extract text using a simple approach
-    // This is a fallback until we can properly integrate PDF parsing
-    let extractedText = '';
+    // Load PDF document using PDF.js
+    const loadingTask = pdfjsLib.getDocument({
+      data: arrayBuffer,
+      useSystemFonts: true,
+      standardFontDataUrl: '/standard_fonts/',
+    });
     
-    try {
-      // Convert to text representation for basic email extraction
-      const uint8Array = new Uint8Array(arrayBuffer);
-      const textDecoder = new TextDecoder('utf-8', { ignoreBOM: true, fatal: false });
-      const rawText = textDecoder.decode(uint8Array);
+    const pdf = await loadingTask.promise;
+    
+    let fullText = '';
+    const pageCount = pdf.numPages;
+    
+    // Extract text from all pages
+    for (let pageNum = 1; pageNum <= pageCount; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      const textContent = await page.getTextContent();
       
-      // Extract readable text from PDF stream (basic approach)
-      // This will catch emails that are stored as plain text in the PDF
-      const textMatches = rawText.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g);
-      if (textMatches) {
-        extractedText = textMatches.join('\n');
-      }
+      // Combine all text items from the page
+      const pageText = textContent.items
+        .map((item) => {
+          // PDF.js TextItem has a 'str' property
+          return 'str' in item ? item.str : '';
+        })
+        .join(' ');
       
-      // If no emails found in raw text, provide a helpful message
-      if (!extractedText) {
-        extractedText = `No emails found in this PDF file.
+      fullText += pageText + '\n';
+    }
+    
+    // Clean up the extracted text
+    fullText = fullText
+      .replace(/\s+/g, ' ') // Replace multiple whitespace with single space
+      .replace(/\n\s*\n/g, '\n') // Remove empty lines
+      .trim();
+    
+    // If no text was extracted, provide a helpful message
+    if (!fullText) {
+      fullText = `No text content found in this PDF file.
 
 This could be because:
-- The PDF contains scanned images rather than text
-- The emails are embedded in complex layouts
-- The PDF uses non-standard encoding
+- The PDF contains only images or scanned content
+- The PDF is password protected
+- The PDF uses unsupported encoding
+- The PDF file is corrupted
 
-Please try a different PDF file or ensure your PDF contains searchable text.`;
-      }
-    } catch (error) {
-      extractedText = `Error processing PDF: ${error instanceof Error ? error.message : 'Unknown error'}
-
-Please ensure you've uploaded a valid PDF file.`;
+Please try a different PDF file with searchable text content.`;
     }
     
     const processingTime = Date.now() - startTime;
     
+    // Get PDF metadata
+    const metadata = await pdf.getMetadata();
+    const info = metadata.info as Record<string, string> | null;
+    
     return {
-      text: extractedText,
-      pageCount: 1, // Fallback since we can't determine actual page count
+      text: fullText,
+      pageCount,
       fileSize: file.size,
       processingTime,
       metadata: {
-        title: file.name,
-        author: 'Unknown',
-        subject: 'PDF Email Extraction',
-        creator: 'PDF Email Extractor Tool',
-        producer: 'Basic PDF Parser',
-        creationDate: new Date().toISOString(),
-        modificationDate: new Date().toISOString(),
+        title: info?.Title || file.name,
+        author: info?.Author || 'Unknown',
+        subject: info?.Subject || '',
+        creator: info?.Creator || '',
+        producer: info?.Producer || '',
+        creationDate: info?.CreationDate || new Date().toISOString(),
+        modificationDate: info?.ModDate || new Date().toISOString(),
       }
     };
   } catch (error) {
@@ -218,18 +240,30 @@ export async function getPdfInfo(file: File): Promise<{
       throw new Error(validation.error);
     }
 
-    // Basic PDF info extraction (fallback approach)
+    // Convert file to ArrayBuffer for PDF.js
+    const arrayBuffer = await file.arrayBuffer();
+    
+    // Load PDF document using PDF.js (just for info)
+    const loadingTask = pdfjsLib.getDocument({
+      data: arrayBuffer,
+      useSystemFonts: true,
+    });
+    
+    const pdf = await loadingTask.promise;
+    const metadata = await pdf.getMetadata();
+    const info = metadata.info as Record<string, string> | null;
+    
     return {
-      pageCount: 1, // Fallback since we can't determine actual page count
+      pageCount: pdf.numPages,
       fileSize: file.size,
       metadata: {
-        title: file.name,
-        author: 'Unknown',
-        subject: 'PDF Email Extraction',
-        creator: 'PDF Email Extractor Tool',
-        producer: 'Basic PDF Parser',
-        creationDate: new Date().toISOString(),
-        modificationDate: new Date().toISOString(),
+        title: info?.Title || file.name,
+        author: info?.Author || 'Unknown',
+        subject: info?.Subject || '',
+        creator: info?.Creator || '',
+        producer: info?.Producer || '',
+        creationDate: info?.CreationDate || new Date().toISOString(),
+        modificationDate: info?.ModDate || new Date().toISOString(),
       }
     };
   } catch (error) {
