@@ -1,9 +1,5 @@
 import { extractEmails, type EmailExtractionOptions, type EmailExtractionResult } from './emailUtils';
 
-// Note: This is a simplified implementation for demonstration purposes
-// In production, you would integrate with a PDF processing library
-// that is compatible with Next.js and serverless environments
-
 export interface PdfProcessingResult {
   text: string;
   pageCount: number;
@@ -92,49 +88,57 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
       throw new Error(validation.error);
     }
 
-    // Simulate processing delay
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    // For now, we'll use a client-side approach that works reliably
+    // Future enhancement: integrate with a PDF.js based solution
+    const arrayBuffer = await file.arrayBuffer();
+    
+    // Try to extract text using a simple approach
+    // This is a fallback until we can properly integrate PDF parsing
+    let extractedText = '';
+    
+    try {
+      // Convert to text representation for basic email extraction
+      const uint8Array = new Uint8Array(arrayBuffer);
+      const textDecoder = new TextDecoder('utf-8', { ignoreBOM: true, fatal: false });
+      const rawText = textDecoder.decode(uint8Array);
+      
+      // Extract readable text from PDF stream (basic approach)
+      // This will catch emails that are stored as plain text in the PDF
+      const textMatches = rawText.match(/[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}/g);
+      if (textMatches) {
+        extractedText = textMatches.join('\n');
+      }
+      
+      // If no emails found in raw text, provide a helpful message
+      if (!extractedText) {
+        extractedText = `No emails found in this PDF file.
+
+This could be because:
+- The PDF contains scanned images rather than text
+- The emails are embedded in complex layouts
+- The PDF uses non-standard encoding
+
+Please try a different PDF file or ensure your PDF contains searchable text.`;
+      }
+    } catch (error) {
+      extractedText = `Error processing PDF: ${error instanceof Error ? error.message : 'Unknown error'}
+
+Please ensure you've uploaded a valid PDF file.`;
+    }
     
     const processingTime = Date.now() - startTime;
     
-    // Mock extracted text with sample email addresses for demonstration
-    const mockText = `
-      Sample PDF Document
-      
-      Contact Information:
-      For support, please email support@example.com or reach out to our sales team at sales@company.org.
-      
-      Team Members:
-      - John Doe: john.doe@example.com
-      - Jane Smith: jane.smith@company.org  
-      - Bob Johnson: bob.johnson+work@gmail.com
-      - Alice Brown: alice@subdomain.example.co.uk
-      
-      Additional contacts:
-      admin@test-site.net
-      info@demo.com
-      contact@sample-website.org
-      
-      Invalid entries (should be filtered):
-      not-an-email
-      @missing.com
-      test@
-      
-      This is a demonstration of the PDF email extraction tool.
-      In production, this would use a proper PDF parsing library.
-    `;
-    
     return {
-      text: mockText.trim(),
-      pageCount: 2,
+      text: extractedText,
+      pageCount: 1, // Fallback since we can't determine actual page count
       fileSize: file.size,
       processingTime,
       metadata: {
-        title: 'Sample PDF Document',
-        author: 'Demo User',
-        subject: 'Email Extraction Demo',
+        title: file.name,
+        author: 'Unknown',
+        subject: 'PDF Email Extraction',
         creator: 'PDF Email Extractor Tool',
-        producer: 'Demo PDF Generator',
+        producer: 'Basic PDF Parser',
         creationDate: new Date().toISOString(),
         modificationDate: new Date().toISOString(),
       }
@@ -214,16 +218,16 @@ export async function getPdfInfo(file: File): Promise<{
       throw new Error(validation.error);
     }
 
-    // Mock PDF info for demonstration
+    // Basic PDF info extraction (fallback approach)
     return {
-      pageCount: 2,
+      pageCount: 1, // Fallback since we can't determine actual page count
       fileSize: file.size,
       metadata: {
-        title: 'Sample PDF Document',
-        author: 'Demo User',
-        subject: 'Email Extraction Demo',
+        title: file.name,
+        author: 'Unknown',
+        subject: 'PDF Email Extraction',
         creator: 'PDF Email Extractor Tool',
-        producer: 'Demo PDF Generator',
+        producer: 'Basic PDF Parser',
         creationDate: new Date().toISOString(),
         modificationDate: new Date().toISOString(),
       }

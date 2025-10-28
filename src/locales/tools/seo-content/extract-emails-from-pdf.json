@@ -104,20 +104,29 @@
         ]
       },
       "examples": {
-        "title": "Examples",
+        "title": "PDF Email Extraction Examples",
+        "description": "See how different types of PDF documents are processed to extract email addresses.",
         "items": [
-      {
-        "title": "Business Report Processing",
-        "description": "Upload a quarterly business report PDF containing contact information and extract all email addresses for follow-up communications."
-      },
-      {
-        "title": "Conference Proceedings",
-        "description": "Process academic conference proceedings to extract author email addresses for research collaboration."
-      },
-      {
-        "title": "Marketing Materials",
-        "description": "Extract contact information from PDF brochures and marketing materials to build targeted email lists."
-      }
+          {
+            "title": "Business Report Processing",
+            "input": "Quarterly-Report-Q3-2024.pdf (Contains: Contact: sales@company.com, Support: help@business.org)",
+            "output": "sales@company.com\nhelp@business.org"
+          },
+          {
+            "title": "Conference Proceedings",
+            "input": "Academic-Conference-2024.pdf (Contains: Dr. Smith (john.smith@university.edu), Prof. Johnson (m.johnson@research.ac.uk))",
+            "output": "john.smith@university.edu\nm.johnson@research.ac.uk"
+          },
+          {
+            "title": "Marketing Materials",
+            "input": "Product-Brochure.pdf (Contains: Info: info@startup.com, Sales: contact@newcompany.io, Support: help@service.net)",
+            "output": "info@startup.com\ncontact@newcompany.io\nhelp@service.net"
+          },
+          {
+            "title": "Contact Directory",
+            "input": "Employee-Directory.pdf (Contains multiple departments with various email formats)",
+            "output": "admin@company.com\nhr@company.com\nfinance@company.com\nit.support@company.com"
+          }
         ]
       },
       "benefits": {
@@ -295,20 +304,29 @@
         ]
       },
       "examples": {
-        "title": "Примеры",
+        "title": "Примеры Извлечения Email из PDF",
+        "description": "Посмотрите, как различные типы PDF документов обрабатываются для извлечения email адресов.",
         "items": [
-      {
-        "title": "Обработка бизнес-отчетов",
-        "description": "Загрузите PDF квартального бизнес-отчета с контактной информацией и извлеките все email адреса для последующих коммуникаций."
-      },
-      {
-        "title": "Материалы конференций",
-        "description": "Обработайте материалы академических конференций для извлечения email адресов авторов для исследовательского сотрудничества."
-      },
-      {
-        "title": "Маркетинговые материалы",
-        "description": "Извлекайте контактную информацию из PDF брошюр и маркетинговых материалов для создания целевых списков email."
-      }
+          {
+            "title": "Обработка Бизнес-Отчетов",
+            "input": "Квартальный-Отчет-Q3-2024.pdf (Содержит: Контакт: sales@company.com, Поддержка: help@business.org)",
+            "output": "sales@company.com\nhelp@business.org"
+          },
+          {
+            "title": "Материалы Конференций",
+            "input": "Академическая-Конференция-2024.pdf (Содержит: Др. Смит (john.smith@university.edu), Проф. Джонсон (m.johnson@research.ac.uk))",
+            "output": "john.smith@university.edu\nm.johnson@research.ac.uk"
+          },
+          {
+            "title": "Маркетинговые Материалы",
+            "input": "Продуктовая-Брошюра.pdf (Содержит: Инфо: info@startup.com, Продажи: contact@newcompany.io, Поддержка: help@service.net)",
+            "output": "info@startup.com\ncontact@newcompany.io\nhelp@service.net"
+          },
+          {
+            "title": "Справочник Контактов",
+            "input": "Справочник-Сотрудников.pdf (Содержит несколько отделов с различными форматами email)",
+            "output": "admin@company.com\nhr@company.com\nfinance@company.com\nit.support@company.com"
+          }
         ]
       },
       "benefits": {
