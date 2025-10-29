@@ -1521,12 +1521,12 @@ const overrides: Array<ToolMetadataConfig> = [
     i18n: {
       en: {
         title: 'Remove Punctuation from Text – Free Online Punctuation Remover',
-        description: 'Paste your text and instantly remove punctuation marks (.,!?;:–—"' …) while keeping words intact. Options to keep selected symbols, numbers, and line breaks.',
+        description: 'Paste your text and instantly remove punctuation marks (.,!?;:–—"\'…) while keeping words intact. Options to keep selected symbols, numbers, and line breaks.',
         shortDescription: 'Remove punctuation with selective preservation options.',
       },
       ru: {
         title: 'Удаление Пунктуации из Текста – Бесплатный Онлайн Инструмент',
-        description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"' …), сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
+        description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"\'…), сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
         shortDescription: 'Удаление пунктуации с опциями селективного сохранения.',
       }
     },

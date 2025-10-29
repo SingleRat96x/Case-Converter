@@ -509,7 +509,7 @@ export function removePunctuation(text: string, options: RemovePunctuationOption
   }
 
   // Build the list of characters to keep
-  let keepChars = new Set<string>();
+  const keepChars = new Set<string>();
   
   // Always keep letters and spaces
   const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
