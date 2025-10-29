@@ -1,0 +1,426 @@
+{
+  "en": {
+    "title": "Remove Punctuation from Text – Free Online Punctuation Remover",
+    "metaDescription": "Paste your text and instantly remove punctuation marks (.,!?;:–—\"' …). Keep emails/URLs, numbers, and line breaks. Free online punctuation removal tool.",
+    "sections": {
+      "intro": {
+        "title": "Remove Punctuation from Text with Smart Options",
+        "content": "Clean your text by removing punctuation marks while preserving important content like emails, URLs, and contractions. Our intelligent punctuation remover gives you full control over what to keep and what to remove, making it perfect for data cleaning, content preparation, and text processing tasks."
+      },
+      "features": {
+        "title": "Advanced Punctuation Removal Features",
+        "items": [
+          {
+            "title": "Smart Keep Options",
+            "description": "Preserve apostrophes in contractions, hyphens in compound words, and punctuation in emails/URLs"
+          },
+          {
+            "title": "Unicode Support",
+            "description": "Remove all Unicode punctuation categories including international quotes, dashes, and symbols"
+          },
+          {
+            "title": "Custom Keep List",
+            "description": "Specify exactly which punctuation characters to preserve with a custom whitelist"
+          },
+          {
+            "title": "Content Protection",
+            "description": "Automatically detect and protect email addresses and web URLs from punctuation removal"
+          },
+          {
+            "title": "Formatting Control",
+            "description": "Choose whether to preserve line breaks, numbers, and text structure during processing"
+          },
+          {
+            "title": "Real-time Analytics",
+            "description": "See detailed statistics about removed punctuation and protected content elements"
+          },
+          {
+            "title": "Bulk Processing",
+            "description": "Handle large amounts of text efficiently with file upload support and instant processing"
+          },
+          {
+            "title": "Copy & Download",
+            "description": "Easily copy cleaned text to clipboard or download as a text file for further use"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Punctuation Removal",
+        "description": "Remove punctuation for various text processing and data cleaning applications.",
+        "items": [
+          {
+            "title": "Data Cleaning",
+            "description": "Clean datasets by removing punctuation while preserving important identifiers and structured data"
+          },
+          {
+            "title": "Text Analysis",
+            "description": "Prepare text for natural language processing, word frequency analysis, and machine learning"
+          },
+          {
+            "title": "Search Optimization",
+            "description": "Create clean search terms and keywords by removing distracting punctuation marks"
+          },
+          {
+            "title": "Content Migration",
+            "description": "Clean text when migrating content between systems that handle punctuation differently"
+          },
+          {
+            "title": "Social Media",
+            "description": "Prepare clean text for platforms with character limits or punctuation restrictions"
+          },
+          {
+            "title": "Database Import",
+            "description": "Clean text data before importing into databases to avoid parsing errors and conflicts"
+          },
+          {
+            "title": "Translation Prep",
+            "description": "Remove unnecessary punctuation before sending text to translation services for better accuracy"
+          },
+          {
+            "title": "Academic Research",
+            "description": "Process research texts and documents for linguistic analysis and corpus preparation"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Remove Punctuation from Text",
+        "description": "Follow these simple steps to clean your text by removing unwanted punctuation marks.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Paste or type your text into the input area, or upload a text file containing the content you want to clean."
+          },
+          {
+            "step": 2,
+            "title": "Configure Options",
+            "description": "Choose smart keep options like preserving contractions, emails, URLs, and numbers. Add custom characters to keep if needed."
+          },
+          {
+            "step": 3,
+            "title": "Review Results",
+            "description": "See the cleaned text instantly with real-time analytics showing what punctuation was removed and what was protected."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the punctuation-free text to your clipboard or download it as a .txt file for use in other applications."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Punctuation Removal Examples",
+        "description": "See how different types of text are cleaned by removing punctuation marks.",
+        "items": [
+          {
+            "title": "Basic Punctuation Removal",
+            "input": "Hello, world! How are you today? I'm fine, thanks.",
+            "output": "Hello world How are you today I'm fine thanks"
+          },
+          {
+            "title": "Email & URL Protection",
+            "input": "Contact us at support@example.com or visit https://example.com for more info!",
+            "output": "Contact us at support@example.com or visit https://example.com for more info"
+          },
+          {
+            "title": "Smart Contraction Handling",
+            "input": "Don't worry, we'll handle it. It's not a problem.",
+            "output": "Don't worry we'll handle it It's not a problem"
+          },
+          {
+            "title": "Custom Keep List",
+            "input": "Price: $29.99 (20% off!) Use code: SAVE@20",
+            "output": "Price $29.99 20% off Use code SAVE@20"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Punctuation Remover",
+        "content": "Professional punctuation removal with intelligent content protection and customizable options.",
+        "items": [
+          "Smart detection preserves important punctuation in emails, URLs, and contractions",
+          "Support for all Unicode punctuation categories and international text",
+          "Customizable options let you control exactly what gets removed or preserved",
+          "Real-time processing with instant preview and detailed analytics",
+          "Bulk processing capabilities for large documents and datasets",
+          "Privacy-focused - all processing happens locally in your browser",
+          "Mobile-optimized interface that works perfectly on all devices",
+          "Completely free with unlimited usage and no registration required"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What types of punctuation does this tool remove?",
+          "answer": "The tool removes all Unicode punctuation categories (General Category P*) including periods, commas, quotes, dashes, brackets, and international punctuation marks. You can customize which characters to keep using the smart options or custom keep list."
+        },
+        {
+          "question": "Will it break email addresses and URLs?",
+          "answer": "No, when the 'Keep email/URL punctuation' option is enabled (default), the tool automatically detects and protects email addresses and web URLs, preserving their essential punctuation marks like @ . : / and _"
+        },
+        {
+          "question": "How does the contraction protection work?",
+          "answer": "The tool uses pattern matching to identify contractions like don't, can't, it's and possessives like John's, cats'. When 'Keep apostrophes in contractions' is enabled, these apostrophes are preserved while other apostrophes are removed."
+        },
+        {
+          "question": "Can I specify custom characters to keep?",
+          "answer": "Yes, use the 'Custom keep list' field to enter any characters you want to preserve. For example, entering '@#&%/' will keep those specific punctuation marks while removing all others."
+        },
+        {
+          "question": "Does it work with non-English text?",
+          "answer": "Absolutely! The tool supports Unicode and works with international punctuation marks including curly quotes, em dashes, ellipses, and punctuation from various languages and writing systems."
+        },
+        {
+          "question": "Is my text data secure?",
+          "answer": "Yes, all text processing happens locally in your browser. Your content is never sent to external servers, ensuring complete privacy and security of your data."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          {
+            "name": "Plain Text Converter",
+            "description": "Remove HTML, Markdown, and formatting to get clean plain text",
+            "href": "/tools/plain-text"
+          },
+          {
+            "name": "Remove Line Breaks",
+            "description": "Clean unwanted line breaks while preserving paragraph structure",
+            "href": "/tools/remove-line-breaks"
+          },
+          {
+            "name": "Remove Text Formatting",
+            "description": "Strip HTML tags, Markdown, URLs, and special characters from text",
+            "href": "/tools/remove-text-formatting"
+          },
+          {
+            "name": "Find and Replace Text",
+            "description": "Find and replace text patterns with advanced options and regex support",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Duplicate Line Remover",
+            "description": "Remove duplicate lines and clean up repetitive text content",
+            "href": "/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Word Sorter",
+            "description": "Sort words alphabetically or by length with customizable options",
+            "href": "/tools/sort-words"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Удалить Пунктуацию из Текста – Бесплатный Онлайн Инструмент",
+    "metaDescription": "Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—\"' …). Сохраняйте email/URL, числа и переносы строк. Бесплатный инструмент удаления пунктуации.",
+    "sections": {
+      "intro": {
+        "title": "Удаление Пунктуации из Текста с Умными Опциями",
+        "content": "Очищайте текст, удаляя знаки пунктуации, сохраняя при этом важный контент, такой как email, URL и сокращения. Наш интеллектуальный инструмент удаления пунктуации дает вам полный контроль над тем, что сохранить, а что удалить, что делает его идеальным для очистки данных, подготовки контента и задач обработки текста."
+      },
+      "features": {
+        "title": "Продвинутые Возможности Удаления Пунктуации",
+        "items": [
+          {
+            "title": "Умные Опции Сохранения",
+            "description": "Сохраняйте апострофы в сокращениях, дефисы в составных словах и пунктуацию в email/URL"
+          },
+          {
+            "title": "Поддержка Unicode",
+            "description": "Удаляйте все категории пунктуации Unicode, включая международные кавычки, тире и символы"
+          },
+          {
+            "title": "Пользовательский Список Сохранения",
+            "description": "Точно укажите, какие знаки пунктуации сохранить с помощью пользовательского белого списка"
+          },
+          {
+            "title": "Защита Контента",
+            "description": "Автоматически обнаруживайте и защищайте адреса электронной почты и веб-URL от удаления пунктуации"
+          },
+          {
+            "title": "Контроль Форматирования",
+            "description": "Выбирайте, сохранять ли переносы строк, числа и структуру текста во время обработки"
+          },
+          {
+            "title": "Аналитика в Реальном Времени",
+            "description": "Просматривайте подробную статистику об удаленной пунктуации и защищенных элементах контента"
+          },
+          {
+            "title": "Массовая Обработка",
+            "description": "Эффективно обрабатывайте большие объемы текста с поддержкой загрузки файлов и мгновенной обработкой"
+          },
+          {
+            "title": "Копирование и Скачивание",
+            "description": "Легко копируйте очищенный текст в буфер обмена или скачивайте как текстовый файл для дальнейшего использования"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Основные Случаи Использования Удаления Пунктуации",
+        "description": "Удаляйте пунктуацию для различных задач обработки текста и очистки данных.",
+        "items": [
+          {
+            "title": "Очистка Данных",
+            "description": "Очищайте наборы данных, удаляя пунктуацию, сохраняя при этом важные идентификаторы и структурированные данные"
+          },
+          {
+            "title": "Анализ Текста",
+            "description": "Подготавливайте текст для обработки естественного языка, анализа частоты слов и машинного обучения"
+          },
+          {
+            "title": "Оптимизация Поиска",
+            "description": "Создавайте чистые поисковые термины и ключевые слова, удаляя отвлекающие знаки пунктуации"
+          },
+          {
+            "title": "Миграция Контента",
+            "description": "Очищайте текст при миграции контента между системами, которые по-разному обрабатывают пунктуацию"
+          },
+          {
+            "title": "Социальные Сети",
+            "description": "Подготавливайте чистый текст для платформ с ограничениями по символам или ограничениями пунктуации"
+          },
+          {
+            "title": "Импорт в Базу Данных",
+            "description": "Очищайте текстовые данные перед импортом в базы данных, чтобы избежать ошибок парсинга и конфликтов"
+          },
+          {
+            "title": "Подготовка к Переводу",
+            "description": "Удаляйте ненужную пунктуацию перед отправкой текста в службы перевода для лучшей точности"
+          },
+          {
+            "title": "Академические Исследования",
+            "description": "Обрабатывайте исследовательские тексты и документы для лингвистического анализа и подготовки корпуса"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Удалить Пунктуацию из Текста",
+        "description": "Следуйте этим простым шагам, чтобы очистить текст, удалив нежелательные знаки пунктуации.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Ваш Текст",
+            "description": "Вставьте или введите текст в область ввода, или загрузите текстовый файл с контентом, который хотите очистить."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции",
+            "description": "Выберите умные опции сохранения, такие как сохранение сокращений, email, URL и чисел. При необходимости добавьте пользовательские символы для сохранения."
+          },
+          {
+            "step": 3,
+            "title": "Просмотрите Результаты",
+            "description": "Видите очищенный текст мгновенно с аналитикой в реальном времени, показывающей, какая пунктуация была удалена, а что было защищено."
+          },
+          {
+            "step": 4,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте текст без пунктуации в буфер обмена или скачайте его как .txt файл для использования в других приложениях."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Удаления Пунктуации",
+        "description": "Посмотрите, как различные типы текста очищаются путем удаления знаков пунктуации.",
+        "items": [
+          {
+            "title": "Базовое Удаление Пунктуации",
+            "input": "Привет, мир! Как дела сегодня? У меня всё хорошо, спасибо.",
+            "output": "Привет мир Как дела сегодня У меня всё хорошо спасибо"
+          },
+          {
+            "title": "Защита Email и URL",
+            "input": "Свяжитесь с нами по support@example.com или посетите https://example.com для получения информации!",
+            "output": "Свяжитесь с нами по support@example.com или посетите https://example.com для получения информации"
+          },
+          {
+            "title": "Умная Обработка Сокращений",
+            "input": "Не волнуйтесь, мы справимся. Это не проблема.",
+            "output": "Не волнуйтесь мы справимся Это не проблема"
+          },
+          {
+            "title": "Пользовательский Список Сохранения",
+            "input": "Цена: $29.99 (скидка 20%!) Используйте код: SAVE@20",
+            "output": "Цена $29.99 скидка 20% Используйте код SAVE@20"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент Удаления Пунктуации",
+        "content": "Профессиональное удаление пунктуации с интеллектуальной защитой контента и настраиваемыми опциями.",
+        "items": [
+          "Умное обнаружение сохраняет важную пунктуацию в email, URL и сокращениях",
+          "Поддержка всех категорий пунктуации Unicode и международного текста",
+          "Настраиваемые опции позволяют контролировать, что именно удаляется или сохраняется",
+          "Обработка в реальном времени с мгновенным предпросмотром и подробной аналитикой",
+          "Возможности массовой обработки для больших документов и наборов данных",
+          "Ориентированность на конфиденциальность - вся обработка происходит локально в браузере",
+          "Мобильно-оптимизированный интерфейс, который идеально работает на всех устройствах",
+          "Полностью бесплатно с неограниченным использованием и без требования регистрации"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие типы пунктуации удаляет этот инструмент?",
+          "answer": "Инструмент удаляет все категории пунктуации Unicode (General Category P*), включая точки, запятые, кавычки, тире, скобки и международные знаки пунктуации. Вы можете настроить, какие символы сохранить, используя умные опции или пользовательский список сохранения."
+        },
+        {
+          "question": "Сломает ли он адреса электронной почты и URL?",
+          "answer": "Нет, когда опция 'Сохранять пунктуацию email/URL' включена (по умолчанию), инструмент автоматически обнаруживает и защищает адреса электронной почты и веб-URL, сохраняя их основные знаки пунктуации, такие как @ . : / и _"
+        },
+        {
+          "question": "Как работает защита сокращений?",
+          "answer": "Инструмент использует сопоставление шаблонов для идентификации сокращений и притяжательных форм. Когда включена опция 'Сохранять апострофы в сокращениях', эти апострофы сохраняются, в то время как другие апострофы удаляются."
+        },
+        {
+          "question": "Могу ли я указать пользовательские символы для сохранения?",
+          "answer": "Да, используйте поле 'Пользовательский список сохранения', чтобы ввести любые символы, которые хотите сохранить. Например, ввод '@#&%/' сохранит эти конкретные знаки пунктуации, удаляя все остальные."
+        },
+        {
+          "question": "Работает ли он с текстом не на английском языке?",
+          "answer": "Абсолютно! Инструмент поддерживает Unicode и работает с международными знаками пунктуации, включая фигурные кавычки, длинные тире, многоточия и пунктуацию из различных языков и систем письма."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные?",
+          "answer": "Да, вся обработка текста происходит локально в вашем браузере. Ваш контент никогда не отправляется на внешние серверы, обеспечивая полную конфиденциальность и безопасность ваших данных."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          {
+            "name": "Конвертер в Обычный Текст",
+            "description": "Удаляйте HTML, Markdown и форматирование для получения чистого обычного текста",
+            "href": "/ru/tools/plain-text"
+          },
+          {
+            "name": "Удаление Переносов Строк",
+            "description": "Очищайте нежелательные переносы строк, сохраняя структуру абзацев",
+            "href": "/ru/tools/remove-line-breaks"
+          },
+          {
+            "name": "Удаление Форматирования Текста",
+            "description": "Убирайте HTML теги, Markdown, URL и специальные символы из текста",
+            "href": "/ru/tools/remove-text-formatting"
+          },
+          {
+            "name": "Найти и Заменить Текст",
+            "description": "Находите и заменяйте текстовые шаблоны с расширенными опциями и поддержкой regex",
+            "href": "/ru/tools/text-replace"
+          },
+          {
+            "name": "Удаление Дублирующихся Строк",
+            "description": "Удаляйте дублирующиеся строки и очищайте повторяющийся текстовый контент",
+            "href": "/ru/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Сортировщик Слов",
+            "description": "Сортируйте слова по алфавиту или длине с настраиваемыми опциями",
+            "href": "/ru/tools/sort-words"
+          }
+        ]
+      }
+    }
+  }
+}
