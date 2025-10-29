@@ -66,6 +66,13 @@ const miscTools = [
     description: 'Build UTM parameters for marketing campaigns and track traffic sources effectively',
     icon: '📈',
     href: '/tools/utm-builder'
+  },
+  {
+    id: 'extract-emails-from-pdf',
+    title: 'Extract Emails from PDF',
+    description: 'Upload PDF files and extract email addresses with advanced filtering and validation',
+    icon: '📄',
+    href: '/tools/extract-emails-from-pdf'
   }
 ];
 

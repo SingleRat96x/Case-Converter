@@ -390,6 +390,54 @@ export interface RandomGeneratorsTranslations {
 }
 
 /**
+ * PDF tools translations structure
+ */
+export interface PdfToolsTranslations {
+  pdfEmailExtractor: {
+    title: string;
+    description: string;
+    uploadArea: string;
+    dragDrop: string;
+    supportedFormats: string;
+    replace: string;
+    clear: string;
+    processing: string;
+    results: string;
+    noEmailsFound: string;
+    settings: string;
+    sortBy: string;
+    sortTooltip: string;
+    sortOptions: {
+      alphabetical: string;
+      domain: string;
+      position: string;
+      validity: string;
+    };
+    processingOptions: string;
+    removeDuplicates: string;
+    validateEmails: string;
+    duplicatesTooltip: string;
+    validationTooltip: string;
+    stats: {
+      totalFound: string;
+      unique: string;
+      valid: string;
+      invalid: string;
+    };
+    uniqueDomains: string;
+    validityRate: string;
+    pages: string;
+    fileSize: string;
+    processingTime: string;
+    filename: string;
+    topDomains: string;
+    domainsHint: string;
+    duplicatesFound: string;
+    duplicatesHint: string;
+  };
+}
+
+/**
  * Miscellaneous tools translations structure
  */
 export interface MiscToolsTranslations {
@@ -461,6 +509,7 @@ export interface TranslationNamespaces {
   'tools/random-generators': RandomGeneratorsTranslations;
   'tools/miscellaneous': MiscellaneousTranslations;
   'tools/misc-tools': MiscToolsTranslations;
+  'tools/pdf-tools': PdfToolsTranslations;
 }
 
 /**

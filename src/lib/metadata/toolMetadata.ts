@@ -1472,6 +1472,46 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('cursed-text', ['Unicode text', 'Stylish fonts', 'Social media ready', 'Creative styling'], 'Text Input', 'Cursed Text', 4.3, 389),
     relatedTools: ['bold-text','italic-text','big-text']
+  },
+  {
+    slug: 'extract-emails-from-text',
+    pathname: '/tools/extract-emails-from-text',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Extract Emails from Text — Free Email Extractor Tool',
+        description: 'Extract and validate email addresses from any text with our free online tool. Find emails in documents, web pages, and text blocks with advanced filtering options.',
+        shortDescription: 'Extract and validate emails from text with advanced options.',
+      },
+      ru: {
+        title: 'Извлечение Email из Текста — Бесплатный Экстрактор Email',
+        description: 'Извлекайте и проверяйте email адреса из любого текста с помощью нашего бесплатного онлайн инструмента. Находите email в документах, веб-страницах и текстовых блоках.',
+        shortDescription: 'Извлекайте и проверяйте email из текста с расширенными опциями.',
+      }
+    },
+    schema: createAdvancedSchema('extract-emails-from-text', ['Email extraction', 'Email validation', 'Multiple formats', 'Domain analysis', 'Duplicate removal'], 'Text Input', 'Extracted Emails', 4.6, 789),
+    relatedTools: ['text-counter','text-replace','remove-text-formatting','duplicate-line-remover']
+  },
+  {
+    slug: 'extract-emails-from-pdf',
+    pathname: '/tools/extract-emails-from-pdf',
+    type: 'tool',
+    category: 'miscellaneous-tool',
+    i18n: {
+      en: {
+        title: 'Extract Emails from PDF — Free PDF Email Extractor Tool',
+        description: 'Upload PDF files and extract email addresses with our free online tool. Process documents up to 10MB with advanced filtering, validation, and export options.',
+        shortDescription: 'Extract and validate emails from PDF files with advanced processing.',
+      },
+      ru: {
+        title: 'Извлечение Email из PDF — Бесплатный Экстрактор Email из PDF',
+        description: 'Загружайте PDF файлы и извлекайте email адреса с помощью нашего бесплатного онлайн инструмента. Обрабатывайте документы до 10МБ с расширенными возможностями фильтрации, проверки и экспорта.',
+        shortDescription: 'Извлекайте и проверяйте email из PDF файлов с расширенной обработкой.',
+      }
+    },
+    schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),
+    relatedTools: ['extract-emails-from-text','image-to-text','text-counter','remove-text-formatting']
   }
 ];
 
@@ -1484,7 +1524,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling'
+  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
 ];
 
 const CATEGORY_SLUGS: string[] = [

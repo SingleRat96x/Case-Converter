@@ -1,0 +1,90 @@
+{
+  "en": {
+    "pdfEmailExtractor": {
+      "title": "Extract Emails from PDF",
+      "description": "Upload a PDF file and extract email addresses with advanced filtering and validation options. Supports documents up to 10MB.",
+      "uploadArea": "Upload PDF File",
+      "dragDrop": "Drag and drop your PDF file here or click to browse",
+      "supportedFormats": "Supports PDF files up to 10MB",
+      "replace": "Replace",
+      "clear": "Clear",
+      "processing": "Processing PDF...",
+      "results": "Extracted Emails",
+      "noEmailsFound": "No email addresses found in the PDF file.",
+      "settings": "Extraction Settings",
+      "sortBy": "Sort By",
+      "sortTooltip": "Choose how to sort the extracted email addresses",
+      "sortOptions": {
+        "alphabetical": "Alphabetical",
+        "domain": "Domain",
+        "position": "Position",
+        "validity": "Validity"
+      },
+      "processingOptions": "Processing Options",
+      "removeDuplicates": "Remove Duplicates",
+      "validateEmails": "Validate Emails",
+      "duplicatesTooltip": "Remove duplicate email addresses from the results",
+      "validationTooltip": "Perform RFC-compliant validation on extracted emails",
+      "stats": {
+        "totalFound": "Total Found",
+        "unique": "Unique",
+        "valid": "Valid",
+        "invalid": "Invalid"
+      },
+      "uniqueDomains": "Unique Domains",
+      "validityRate": "Validity Rate",
+      "pages": "Pages",
+      "fileSize": "File Size",
+      "processingTime": "Processing Time",
+      "filename": "Filename",
+      "topDomains": "Top Domains",
+      "domainsHint": "Most common email domains found in the PDF",
+      "duplicatesFound": "Duplicates Found",
+      "duplicatesHint": "Enable 'Remove Duplicates' to filter out duplicate email addresses."
+    }
+  },
+  "ru": {
+    "pdfEmailExtractor": {
+      "title": "Извлечение Email из PDF",
+      "description": "Загрузите PDF файл и извлеките email адреса с расширенными возможностями фильтрации и проверки. Поддерживает документы до 10МБ.",
+      "uploadArea": "Загрузить PDF файл",
+      "dragDrop": "Перетащите ваш PDF файл сюда или нажмите для выбора",
+      "supportedFormats": "Поддерживает PDF файлы до 10МБ",
+      "replace": "Заменить",
+      "clear": "Очистить",
+      "processing": "Обработка PDF...",
+      "results": "Извлеченные Email",
+      "noEmailsFound": "Email адреса не найдены в PDF файле.",
+      "settings": "Настройки извлечения",
+      "sortBy": "Сортировать по",
+      "sortTooltip": "Выберите способ сортировки извлеченных email адресов",
+      "sortOptions": {
+        "alphabetical": "По алфавиту",
+        "domain": "По домену",
+        "position": "По позиции",
+        "validity": "По валидности"
+      },
+      "processingOptions": "Параметры обработки",
+      "removeDuplicates": "Удалить дубликаты",
+      "validateEmails": "Проверить Email",
+      "duplicatesTooltip": "Удалить дублированные email адреса из результатов",
+      "validationTooltip": "Выполнить RFC-совместимую проверку извлеченных email",
+      "stats": {
+        "totalFound": "Всего найдено",
+        "unique": "Уникальных",
+        "valid": "Валидных",
+        "invalid": "Невалидных"
+      },
+      "uniqueDomains": "Уникальных доменов",
+      "validityRate": "Процент валидности",
+      "pages": "Страниц",
+      "fileSize": "Размер файла",
+      "processingTime": "Время обработки",
+      "filename": "Имя файла",
+      "topDomains": "Топ доменов",
+      "domainsHint": "Наиболее распространенные email домены найденные в PDF",
+      "duplicatesFound": "Найдены дубликаты",
+      "duplicatesHint": "Включите 'Удалить дубликаты' чтобы отфильтровать дублированные email адреса."
+    }
+  }
+}

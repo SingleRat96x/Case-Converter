@@ -1,0 +1,402 @@
+{
+  "en": {
+    "title": "Extract Emails from PDF Files",
+    "metaDescription": "Upload PDF files and extract email addresses with our free online tool. Process documents up to 10MB with advanced filtering, validation, and export options.",
+    "sections": {
+      "intro": {
+        "title": "Professional PDF Email Extraction Tool",
+        "content": "Our PDF email extractor is a powerful online tool designed to help you quickly and efficiently extract email addresses from PDF documents. Whether you're processing business reports, contact lists, or research papers, our tool can handle PDF files up to 10MB and extract all email addresses with high accuracy."
+      },
+      "advanced": {
+        "title": "Advanced PDF Processing Features",
+        "content": "Unlike simple text-based extractors, our PDF tool can handle complex document layouts, multiple pages, and various PDF formats. The tool uses advanced PDF parsing technology to extract text content while preserving the context and structure of email addresses within the document."
+      },
+      "features": {
+        "title": "Key Features",
+        "items": [
+      {
+        "title": "Drag & Drop PDF Upload",
+        "description": "Simply drag and drop your PDF file or click to browse and select your document"
+      },
+      {
+        "title": "Large File Support",
+        "description": "Process PDF files up to 10MB in size with fast processing speeds"
+      },
+      {
+        "title": "Multi-Page Processing",
+        "description": "Extract emails from all pages of your PDF document automatically"
+      },
+      {
+        "title": "Email Validation",
+        "description": "Built-in RFC-compliant email validation to ensure accuracy"
+      },
+      {
+        "title": "Duplicate Removal",
+        "description": "Automatically remove duplicate email addresses from results"
+      },
+      {
+        "title": "Multiple Export Formats",
+        "description": "Export results as TXT, CSV, or JSON formats for easy integration"
+      },
+      {
+        "title": "Domain Analysis",
+        "description": "Get insights into email domains and distribution patterns"
+      },
+      {
+        "title": "Processing Statistics",
+        "description": "View detailed statistics about file size, processing time, and results"
+      }
+        ]
+      },
+      "useCases": {
+        "title": "Use Cases",
+        "items": [
+      {
+        "title": "Business Contact Extraction",
+        "description": "Extract contact information from business reports, proposals, and presentations"
+      },
+      {
+        "title": "Research Data Processing",
+        "description": "Process academic papers and research documents to extract author and contact information"
+      },
+      {
+        "title": "Marketing List Building",
+        "description": "Build email lists from PDF brochures, catalogs, and marketing materials"
+      },
+      {
+        "title": "Document Digitization",
+        "description": "Convert printed contact lists and directories into digital format"
+      },
+      {
+        "title": "Data Migration",
+        "description": "Extract email data from legacy PDF documents for system migration"
+      }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use",
+        "steps": [
+      {
+        "step": 1,
+        "title": "Upload Your PDF File",
+        "description": "Drag and drop your PDF file onto the upload area or click to browse and select your document. Files up to 10MB are supported."
+      },
+      {
+        "step": 2,
+        "title": "Configure Settings",
+        "description": "Adjust extraction settings such as duplicate removal, email validation, and sorting preferences in the settings panel."
+      },
+      {
+        "step": 3,
+        "title": "Process the Document",
+        "description": "The tool will automatically process your PDF, extract text content, and identify all email addresses within the document."
+      },
+      {
+        "step": 4,
+        "title": "Review Results",
+        "description": "View the extracted email addresses in the results area, along with statistics about the processing and validation results."
+      },
+      {
+        "step": 5,
+        "title": "Export or Copy",
+        "description": "Copy the results to your clipboard or export them in TXT, CSV, or JSON format for use in other applications."
+      }
+        ]
+      },
+      "examples": {
+        "title": "PDF Email Extraction Examples",
+        "description": "See how different types of PDF documents are processed to extract email addresses.",
+        "items": [
+          {
+            "title": "Business Report Processing",
+            "input": "Quarterly-Report-Q3-2024.pdf (Contains: Contact: sales@company.com, Support: help@business.org)",
+            "output": "sales@company.com\nhelp@business.org"
+          },
+          {
+            "title": "Conference Proceedings",
+            "input": "Academic-Conference-2024.pdf (Contains: Dr. Smith (john.smith@university.edu), Prof. Johnson (m.johnson@research.ac.uk))",
+            "output": "john.smith@university.edu\nm.johnson@research.ac.uk"
+          },
+          {
+            "title": "Marketing Materials",
+            "input": "Product-Brochure.pdf (Contains: Info: info@startup.com, Sales: contact@newcompany.io, Support: help@service.net)",
+            "output": "info@startup.com\ncontact@newcompany.io\nhelp@service.net"
+          },
+          {
+            "title": "Contact Directory",
+            "input": "Employee-Directory.pdf (Contains multiple departments with various email formats)",
+            "output": "admin@company.com\nhr@company.com\nfinance@company.com\nit.support@company.com"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Benefits",
+        "content": "Professional PDF email extraction with comprehensive features and universal compatibility.",
+        "items": [
+          "Time-saving automation - eliminate manual copying and typing of email addresses",
+          "High accuracy - advanced PDF parsing ensures accurate extraction from complex layouts",
+          "Batch processing - process multi-page documents and extract all emails in one operation",
+          "Data quality - built-in validation and duplicate removal ensure clean results",
+          "Privacy protection - all processing done client-side in your browser",
+          "No software installation - works directly in your web browser"
+        ]
+      },
+      "faqs": [
+      {
+        "question": "What is the maximum PDF file size supported?",
+        "answer": "Our tool supports PDF files up to 10MB in size. This is sufficient for most business documents, reports, and presentations while ensuring fast processing speeds."
+      },
+      {
+        "question": "Does the tool work with password-protected PDFs?",
+        "answer": "Currently, the tool works with standard PDF files that are not password-protected. If you have a password-protected PDF, you'll need to remove the password protection first."
+      },
+      {
+        "question": "How accurate is the email extraction?",
+        "answer": "Our tool uses advanced PDF parsing and email detection algorithms to achieve high accuracy. It can handle various email formats and complex document layouts while minimizing false positives."
+      },
+      {
+        "question": "Can I process multiple PDF files at once?",
+        "answer": "Currently, the tool processes one PDF file at a time. However, you can quickly process multiple files by uploading them sequentially."
+      },
+      {
+        "question": "What happens to my uploaded PDF files?",
+        "answer": "All PDF processing is done locally in your browser. Your files are not uploaded to our servers, ensuring complete privacy and security of your documents."
+      },
+      {
+        "question": "Can I export the extracted emails?",
+        "answer": "Yes, you can export the extracted email addresses in multiple formats including plain text (TXT), comma-separated values (CSV), and JSON format for easy integration with other tools."
+      },
+      {
+        "question": "Does the tool remove duplicate email addresses?",
+        "answer": "Yes, the tool includes an option to automatically remove duplicate email addresses from the results. You can enable or disable this feature in the settings panel."
+      },
+      {
+        "question": "What types of PDF documents work best?",
+        "answer": "The tool works best with text-based PDF documents such as business reports, academic papers, and presentations. Scanned PDFs or image-based documents may not yield optimal results."
+      }
+      ],
+      "relatedTools": {
+        "title": "Related Tools",
+        "description": "Explore other useful text processing and extraction tools to enhance your workflow.",
+        "items": [
+      {
+        "name": "Extract Emails from Text",
+        "description": "Extract email addresses from plain text content with advanced filtering options"
+      },
+      {
+        "name": "Image to Text OCR",
+        "description": "Convert images containing text into editable text format"
+      },
+      {
+        "name": "Text Counter",
+        "description": "Count characters, words, sentences, and paragraphs in your text"
+      },
+      {
+        "name": "Remove Text Formatting",
+        "description": "Clean and remove formatting from copied text content"
+      }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Извлечение Email из PDF файлов",
+    "metaDescription": "Загружайте PDF файлы и извлекайте email адреса с помощью нашего бесплатного онлайн инструмента. Обрабатывайте документы до 10МБ с расширенными возможностями фильтрации, проверки и экспорта.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональный инструмент извлечения Email из PDF",
+        "content": "Наш экстрактор email из PDF - это мощный онлайн инструмент, предназначенный для быстрого и эффективного извлечения email адресов из PDF документов. Независимо от того, обрабатываете ли вы бизнес-отчеты, списки контактов или исследовательские работы, наш инструмент может обрабатывать PDF файлы до 10МБ и извлекать все email адреса с высокой точностью."
+      },
+      "advanced": {
+        "title": "Расширенные возможности обработки PDF",
+        "content": "В отличие от простых текстовых экстракторов, наш PDF инструмент может обрабатывать сложные макеты документов, несколько страниц и различные форматы PDF. Инструмент использует передовую технологию парсинга PDF для извлечения текстового содержимого с сохранением контекста и структуры email адресов в документе."
+      },
+      "features": {
+        "title": "Ключевые Возможности",
+        "items": [
+      {
+        "title": "Загрузка PDF перетаскиванием",
+        "description": "Просто перетащите ваш PDF файл или нажмите для выбора документа"
+      },
+      {
+        "title": "Поддержка больших файлов",
+        "description": "Обрабатывайте PDF файлы размером до 10МБ с высокой скоростью обработки"
+      },
+      {
+        "title": "Обработка многостраничных документов",
+        "description": "Автоматически извлекайте email со всех страниц вашего PDF документа"
+      },
+      {
+        "title": "Проверка email адресов",
+        "description": "Встроенная RFC-совместимая проверка email для обеспечения точности"
+      },
+      {
+        "title": "Удаление дубликатов",
+        "description": "Автоматическое удаление дублированных email адресов из результатов"
+      },
+      {
+        "title": "Множественные форматы экспорта",
+        "description": "Экспорт результатов в форматах TXT, CSV или JSON для легкой интеграции"
+      },
+      {
+        "title": "Анализ доменов",
+        "description": "Получайте информацию о доменах email и паттернах распределения"
+      },
+      {
+        "title": "Статистика обработки",
+        "description": "Просматривайте детальную статистику о размере файла, времени обработки и результатах"
+      }
+        ]
+      },
+      "useCases": {
+        "title": "Случаи Использования",
+        "items": [
+      {
+        "title": "Извлечение бизнес-контактов",
+        "description": "Извлекайте контактную информацию из бизнес-отчетов, предложений и презентаций"
+      },
+      {
+        "title": "Обработка исследовательских данных",
+        "description": "Обрабатывайте академические работы и исследовательские документы для извлечения информации об авторах и контактах"
+      },
+      {
+        "title": "Создание маркетинговых списков",
+        "description": "Создавайте списки email из PDF брошюр, каталогов и маркетинговых материалов"
+      },
+      {
+        "title": "Оцифровка документов",
+        "description": "Конвертируйте печатные списки контактов и справочники в цифровой формат"
+      },
+      {
+        "title": "Миграция данных",
+        "description": "Извлекайте email данные из устаревших PDF документов для миграции системы"
+      }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать",
+        "steps": [
+      {
+        "step": 1,
+        "title": "Загрузите ваш PDF файл",
+        "description": "Перетащите ваш PDF файл в область загрузки или нажмите для выбора документа. Поддерживаются файлы до 10МБ."
+      },
+      {
+        "step": 2,
+        "title": "Настройте параметры",
+        "description": "Настройте параметры извлечения, такие как удаление дубликатов, проверка email и предпочтения сортировки в панели настроек."
+      },
+      {
+        "step": 3,
+        "title": "Обработайте документ",
+        "description": "Инструмент автоматически обработает ваш PDF, извлечет текстовое содержимое и определит все email адреса в документе."
+      },
+      {
+        "step": 4,
+        "title": "Просмотрите результаты",
+        "description": "Просмотрите извлеченные email адреса в области результатов вместе со статистикой обработки и проверки."
+      },
+      {
+        "step": 5,
+        "title": "Экспортируйте или скопируйте",
+        "description": "Скопируйте результаты в буфер обмена или экспортируйте их в форматах TXT, CSV или JSON для использования в других приложениях."
+      }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Извлечения Email из PDF",
+        "description": "Посмотрите, как различные типы PDF документов обрабатываются для извлечения email адресов.",
+        "items": [
+          {
+            "title": "Обработка Бизнес-Отчетов",
+            "input": "Квартальный-Отчет-Q3-2024.pdf (Содержит: Контакт: sales@company.com, Поддержка: help@business.org)",
+            "output": "sales@company.com\nhelp@business.org"
+          },
+          {
+            "title": "Материалы Конференций",
+            "input": "Академическая-Конференция-2024.pdf (Содержит: Др. Смит (john.smith@university.edu), Проф. Джонсон (m.johnson@research.ac.uk))",
+            "output": "john.smith@university.edu\nm.johnson@research.ac.uk"
+          },
+          {
+            "title": "Маркетинговые Материалы",
+            "input": "Продуктовая-Брошюра.pdf (Содержит: Инфо: info@startup.com, Продажи: contact@newcompany.io, Поддержка: help@service.net)",
+            "output": "info@startup.com\ncontact@newcompany.io\nhelp@service.net"
+          },
+          {
+            "title": "Справочник Контактов",
+            "input": "Справочник-Сотрудников.pdf (Содержит несколько отделов с различными форматами email)",
+            "output": "admin@company.com\nhr@company.com\nfinance@company.com\nit.support@company.com"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Преимущества",
+        "content": "Профессиональное извлечение email из PDF с комплексными функциями и универсальной совместимостью.",
+        "items": [
+          "Экономия времени через автоматизацию - исключите ручное копирование и ввод email адресов",
+          "Высокая точность - продвинутый парсинг PDF обеспечивает точное извлечение из сложных макетов",
+          "Пакетная обработка - обрабатывайте многостраничные документы и извлекайте все email за одну операцию",
+          "Качество данных - встроенная проверка и удаление дубликатов обеспечивают чистые результаты",
+          "Защита конфиденциальности - вся обработка происходит локально в вашем браузере",
+          "Без установки ПО - работает прямо в веб-браузере без загрузки программного обеспечения"
+        ]
+      },
+      "faqs": [
+      {
+        "question": "Какой максимальный размер PDF файла поддерживается?",
+        "answer": "Наш инструмент поддерживает PDF файлы размером до 10МБ. Этого достаточно для большинства бизнес-документов, отчетов и презентаций, обеспечивая при этом быструю скорость обработки."
+      },
+      {
+        "question": "Работает ли инструмент с защищенными паролем PDF?",
+        "answer": "В настоящее время инструмент работает со стандартными PDF файлами, которые не защищены паролем. Если у вас есть защищенный паролем PDF, вам нужно сначала снять защиту паролем."
+      },
+      {
+        "question": "Насколько точно извлечение email?",
+        "answer": "Наш инструмент использует продвинутые алгоритмы парсинга PDF и обнаружения email для достижения высокой точности. Он может обрабатывать различные форматы email и сложные макеты документов, минимизируя ложные срабатывания."
+      },
+      {
+        "question": "Могу ли я обработать несколько PDF файлов одновременно?",
+        "answer": "В настоящее время инструмент обрабатывает по одному PDF файлу за раз. Однако вы можете быстро обработать несколько файлов, загружая их последовательно."
+      },
+      {
+        "question": "Что происходит с моими загруженными PDF файлами?",
+        "answer": "Вся обработка PDF происходит локально в вашем браузере. Ваши файлы не загружаются на наши серверы, обеспечивая полную конфиденциальность и безопасность ваших документов."
+      },
+      {
+        "question": "Могу ли я экспортировать извлеченные email?",
+        "answer": "Да, вы можете экспортировать извлеченные email адреса в нескольких форматах, включая простой текст (TXT), значения, разделенные запятыми (CSV), и формат JSON для легкой интеграции с другими инструментами."
+      },
+      {
+        "question": "Удаляет ли инструмент дублированные email адреса?",
+        "answer": "Да, инструмент включает опцию автоматического удаления дублированных email адресов из результатов. Вы можете включить или отключить эту функцию в панели настроек."
+      },
+      {
+        "question": "Какие типы PDF документов работают лучше всего?",
+        "answer": "Инструмент лучше всего работает с текстовыми PDF документами, такими как бизнес-отчеты, академические работы и презентации. Отсканированные PDF или документы на основе изображений могут не дать оптимальных результатов."
+      }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты",
+        "description": "Изучите другие полезные инструменты обработки и извлечения текста для улучшения вашего рабочего процесса.",
+        "items": [
+      {
+        "name": "Извлечение Email из Текста",
+        "description": "Извлекайте email адреса из простого текстового содержимого с расширенными возможностями фильтрации"
+      },
+      {
+        "name": "Извлечение Текста из Изображений OCR",
+        "description": "Конвертируйте изображения с текстом в редактируемый текстовый формат"
+      },
+      {
+        "name": "Счетчик Текста",
+        "description": "Подсчитывайте символы, слова, предложения и абзацы в вашем тексте"
+      },
+      {
+        "name": "Удаление Форматирования Текста",
+        "description": "Очищайте и удаляйте форматирование из скопированного текстового содержимого"
+      }
+        ]
+      }
+    }
+  }
+}

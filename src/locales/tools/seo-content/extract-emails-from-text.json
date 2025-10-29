@@ -1,0 +1,220 @@
+{
+  "en": {
+    "title": "Free Email Extractor - Extract Emails from Text Online",
+    "metaDescription": "Extract and validate email addresses from any text with our free online tool. Find emails in documents, web pages, and text blocks with advanced filtering options.",
+    "sections": {
+      "intro": {
+        "title": "Free Email Extractor - Extract Emails from Text Online",
+        "content": "Quickly extract and validate email addresses from any text with our powerful online email extraction tool. Perfect for data mining, lead generation, contact list building, and cleaning up text documents. Extract emails from web pages, documents, or large text blocks with advanced filtering and validation options."
+      },
+      "features": {
+        "title": "Powerful Email Extraction Features",
+        "items": [
+          { "title": "Multiple Extraction Modes", "description": "Choose from Simple, Comprehensive, or Strict extraction modes for different accuracy levels" },
+          { "title": "Email Validation", "description": "Automatically validate extracted emails to identify valid and invalid addresses" },
+          { "title": "Duplicate Removal", "description": "Remove duplicate email addresses with case-insensitive matching" },
+          { "title": "Advanced Sorting", "description": "Sort emails alphabetically, by domain, position, or validation status" },
+          { "title": "Domain Analysis", "description": "Get detailed statistics about email domains and providers" },
+          { "title": "Multiple Export Formats", "description": "Export results as TXT, CSV, or JSON with detailed information" },
+          { "title": "File Upload Support", "description": "Upload text files to extract emails from large documents" },
+          { "title": "Real-time Processing", "description": "Extract emails instantly as you type or paste text" },
+          { "title": "Privacy-First", "description": "All processing happens locally in your browser - no data is uploaded" }
+        ]
+      },
+      "useCases": {
+        "title": "Popular Use Cases for Email Extraction",
+        "description": "Extract emails efficiently for various business and personal needs.",
+        "items": [
+          { "title": "Lead Generation", "description": "Extract potential customer emails from web pages, articles, and business directories." },
+          { "title": "Contact List Building", "description": "Build comprehensive contact lists from various text sources and documents." },
+          { "title": "Data Mining", "description": "Extract email addresses from large datasets, reports, and research documents." },
+          { "title": "Email Marketing", "description": "Collect email addresses for newsletter subscriptions and marketing campaigns." },
+          { "title": "Research & Analysis", "description": "Analyze email patterns and domains for market research and competitive analysis." },
+          { "title": "Document Cleanup", "description": "Extract and organize email addresses from messy or unstructured text documents." },
+          { "title": "CRM Integration", "description": "Prepare email lists for import into CRM systems and marketing platforms." },
+          { "title": "Compliance & Verification", "description": "Validate email addresses for compliance and data quality purposes." }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Extract Emails from Text",
+        "description": "Follow these simple steps to extract and validate email addresses from any text.",
+        "steps": [
+          { "step": 1, "title": "Input Your Text", "description": "Paste your text into the input area or upload a text file containing the content you want to process." },
+          { "step": 2, "title": "Configure Options", "description": "Choose extraction mode (Simple, Comprehensive, or Strict), sorting preferences, and validation settings." },
+          { "step": 3, "title": "View Results", "description": "See extracted emails with validation status, domain analysis, and detailed statistics." },
+          { "step": 4, "title": "Export or Copy", "description": "Copy the email list to clipboard or export as TXT, CSV, or JSON format for further use." }
+        ]
+      },
+      "examples": {
+        "title": "Email Extraction Examples",
+        "description": "See how different types of text are processed to extract email addresses.",
+        "items": [
+          { 
+            "title": "Business Contact Text", 
+            "input": "Contact us at info@company.com or support@business.org for assistance. Our sales team can be reached at sales@company.com.", 
+            "output": "info@company.com\nsupport@business.org\nsales@company.com",
+            "description": "Extracts all valid email addresses from business contact information."
+          },
+          { 
+            "title": "Mixed Content", 
+            "input": "Email john.doe@gmail.com or call (555) 123-4567. Also try admin@website.co.uk for technical issues.", 
+            "output": "john.doe@gmail.com\nadmin@website.co.uk",
+            "description": "Filters out phone numbers and extracts only email addresses from mixed content."
+          },
+          { 
+            "title": "Web Page Content", 
+            "input": "Subscribe to newsletter@example.com. Follow us on social media or contact press@example.com for media inquiries.", 
+            "output": "newsletter@example.com\npress@example.com",
+            "description": "Extracts emails from typical web page content with multiple contact points."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Email Extraction Tool",
+        "content": "Professional email extraction with advanced features and comprehensive validation.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Multiple extraction modes for different needs",
+          "Advanced email validation and verification",
+          "Duplicate detection and removal",
+          "Domain analysis and statistics",
+          "Multiple export formats (TXT, CSV, JSON)",
+          "File upload support for large documents",
+          "Real-time extraction as you type",
+          "Mobile-optimized responsive design",
+          "Works with all languages and character sets"
+        ]
+      },
+      "faqs": [
+        { "question": "What extraction modes are available?", "answer": "We offer three modes: Simple (basic pattern matching), Comprehensive (advanced patterns for better accuracy), and Strict (follows RFC standards closely for maximum precision)." },
+        { "question": "How does email validation work?", "answer": "Our validation checks email format, character validity, domain structure, and common patterns to identify potentially invalid addresses." },
+        { "question": "Can I extract emails from files?", "answer": "Yes! Upload text files (.txt, .md, .csv, etc.) and the tool will extract emails from the entire document content." },
+        { "question": "Is my data safe and private?", "answer": "Absolutely. All email extraction and processing happens locally in your browser. No text or emails are uploaded to our servers." },
+        { "question": "What export formats are supported?", "answer": "You can export extracted emails as plain text (TXT), comma-separated values (CSV) with headers, or structured JSON format." },
+        { "question": "How are duplicates handled?", "answer": "The tool can automatically detect and remove duplicate email addresses using case-insensitive matching. You can enable or disable this feature." },
+        { "question": "Can I sort the extracted emails?", "answer": "Yes, you can sort emails alphabetically, by domain name, by position in the original text, or by validation status (valid emails first)." }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "description": "Explore other useful tools for text processing and data extraction.",
+        "items": [
+          { "name": "Text Counter", "description": "Count characters, words, lines, and analyze text statistics", "href": "/tools/text-counter" },
+          { "name": "Find and Replace Text", "description": "Find and replace text with advanced pattern matching options", "href": "/tools/text-replace" },
+          { "name": "Remove Text Formatting", "description": "Clean and strip formatting from text documents", "href": "/tools/remove-text-formatting" },
+          { "name": "Remove Duplicate Lines", "description": "Remove duplicate lines and clean up text content", "href": "/tools/duplicate-line-remover" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Бесплатный Экстрактор Email - Извлечение Email из Текста Онлайн",
+    "metaDescription": "Извлекайте и проверяйте email адреса из любого текста с помощью нашего бесплатного онлайн инструмента. Находите email в документах, веб-страницах и текстовых блоках.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Экстрактор Email - Извлечение Email из Текста Онлайн",
+        "content": "Быстро извлекайте и проверяйте email адреса из любого текста с помощью нашего мощного онлайн инструмента извлечения email. Идеально для анализа данных, генерации лидов, создания списков контактов и очистки текстовых документов. Извлекайте email из веб-страниц, документов или больших текстовых блоков с расширенными возможностями фильтрации и проверки."
+      },
+      "features": {
+        "title": "Мощные Возможности Извлечения Email",
+        "items": [
+          { "title": "Несколько Режимов Извлечения", "description": "Выбирайте из Простого, Расширенного или Строгого режимов для разных уровней точности" },
+          { "title": "Проверка Email", "description": "Автоматически проверяйте извлеченные email для определения валидных и невалидных адресов" },
+          { "title": "Удаление Дубликатов", "description": "Удаляйте дублирующиеся email адреса с учетом регистра" },
+          { "title": "Расширенная Сортировка", "description": "Сортируйте email по алфавиту, домену, позиции или статусу проверки" },
+          { "title": "Анализ Доменов", "description": "Получайте детальную статистику о доменах email и провайдерах" },
+          { "title": "Множество Форматов Экспорта", "description": "Экспортируйте результаты как TXT, CSV или JSON с детальной информацией" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы для извлечения email из больших документов" },
+          { "title": "Обработка в Реальном Времени", "description": "Извлекайте email мгновенно при вводе или вставке текста" },
+          { "title": "Конфиденциальность", "description": "Вся обработка происходит локально в браузере - данные не загружаются" }
+        ]
+      },
+      "useCases": {
+        "title": "Популярные Сценарии Использования Извлечения Email",
+        "description": "Эффективно извлекайте email для различных бизнес и личных нужд.",
+        "items": [
+          { "title": "Генерация Лидов", "description": "Извлекайте email потенциальных клиентов из веб-страниц, статей и бизнес-каталогов." },
+          { "title": "Создание Списков Контактов", "description": "Создавайте полные списки контактов из различных текстовых источников и документов." },
+          { "title": "Анализ Данных", "description": "Извлекайте email адреса из больших наборов данных, отчетов и исследовательских документов." },
+          { "title": "Email Маркетинг", "description": "Собирайте email адреса для подписок на рассылки и маркетинговых кампаний." },
+          { "title": "Исследования и Анализ", "description": "Анализируйте паттерны email и домены для маркетинговых исследований и конкурентного анализа." },
+          { "title": "Очистка Документов", "description": "Извлекайте и организуйте email адреса из неструктурированных текстовых документов." },
+          { "title": "Интеграция с CRM", "description": "Подготавливайте списки email для импорта в CRM системы и маркетинговые платформы." },
+          { "title": "Соответствие и Проверка", "description": "Проверяйте email адреса для соответствия требованиям и качества данных." }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Извлечь Email из Текста",
+        "description": "Следуйте простым шагам для извлечения и проверки email адресов из любого текста.",
+        "steps": [
+          { "step": 1, "title": "Введите Текст", "description": "Вставьте текст в поле ввода или загрузите текстовый файл с содержимым для обработки." },
+          { "step": 2, "title": "Настройте Параметры", "description": "Выберите режим извлечения (Простой, Расширенный или Строгий), настройки сортировки и проверки." },
+          { "step": 3, "title": "Просмотрите Результаты", "description": "Посмотрите извлеченные email со статусом проверки, анализом доменов и детальной статистикой." },
+          { "step": 4, "title": "Экспортируйте или Скопируйте", "description": "Скопируйте список email в буфер обмена или экспортируйте в формате TXT, CSV или JSON." }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Извлечения Email",
+        "description": "Посмотрите, как различные типы текста обрабатываются для извлечения email адресов.",
+        "items": [
+          { 
+            "title": "Бизнес Контактный Текст", 
+            "input": "Свяжитесь с нами по адресу info@company.com или support@business.org для помощи. Наш отдел продаж доступен по sales@company.com.", 
+            "output": "info@company.com\nsupport@business.org\nsales@company.com",
+            "description": "Извлекает все валидные email адреса из бизнес контактной информации."
+          },
+          { 
+            "title": "Смешанный Контент", 
+            "input": "Email john.doe@gmail.com или звоните (555) 123-4567. Также попробуйте admin@website.co.uk для технических вопросов.", 
+            "output": "john.doe@gmail.com\nadmin@website.co.uk",
+            "description": "Отфильтровывает номера телефонов и извлекает только email адреса из смешанного контента."
+          },
+          { 
+            "title": "Контент Веб-Страницы", 
+            "input": "Подпишитесь на newsletter@example.com. Следите за нами в соцсетях или свяжитесь с press@example.com для медиа запросов.", 
+            "output": "newsletter@example.com\npress@example.com",
+            "description": "Извлекает email из типичного контента веб-страницы с несколькими точками контакта."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Инструмент Извлечения Email",
+        "content": "Профессиональное извлечение email с расширенными функциями и комплексной проверкой.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Регистрация или аккаунт не требуется",
+          "Конфиденциальность - вся обработка происходит локально",
+          "Несколько режимов извлечения для разных потребностей",
+          "Расширенная проверка и валидация email",
+          "Обнаружение и удаление дубликатов",
+          "Анализ доменов и статистика",
+          "Множество форматов экспорта (TXT, CSV, JSON)",
+          "Поддержка загрузки файлов для больших документов",
+          "Извлечение в реальном времени при вводе",
+          "Адаптивный дизайн для мобильных устройств",
+          "Работает со всеми языками и наборами символов"
+        ]
+      },
+      "faqs": [
+        { "question": "Какие режимы извлечения доступны?", "answer": "Мы предлагаем три режима: Простой (базовое сопоставление паттернов), Расширенный (продвинутые паттерны для лучшей точности) и Строгий (близко следует стандартам RFC для максимальной точности)." },
+        { "question": "Как работает проверка email?", "answer": "Наша проверка анализирует формат email, валидность символов, структуру домена и общие паттерны для выявления потенциально невалидных адресов." },
+        { "question": "Могу ли я извлекать email из файлов?", "answer": "Да! Загружайте текстовые файлы (.txt, .md, .csv и др.) и инструмент извлечет email из всего содержимого документа." },
+        { "question": "Безопасны ли мои данные?", "answer": "Абсолютно. Все извлечение и обработка email происходит локально в вашем браузере. Никакой текст или email не загружается на наши серверы." },
+        { "question": "Какие форматы экспорта поддерживаются?", "answer": "Вы можете экспортировать извлеченные email как простой текст (TXT), значения разделенные запятыми (CSV) с заголовками, или структурированный JSON формат." },
+        { "question": "Как обрабатываются дубликаты?", "answer": "Инструмент может автоматически обнаруживать и удалять дублирующиеся email адреса используя сопоставление без учета регистра. Вы можете включить или отключить эту функцию." },
+        { "question": "Могу ли я сортировать извлеченные email?", "answer": "Да, вы можете сортировать email по алфавиту, по имени домена, по позиции в исходном тексте или по статусу проверки (валидные email первыми)." }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "description": "Изучите другие полезные инструменты для обработки текста и извлечения данных.",
+        "items": [
+          { "name": "Счетчик Текста", "description": "Считайте символы, слова, строки и анализируйте статистику текста", "href": "/ru/tools/text-counter" },
+          { "name": "Найти и Заменить Текст", "description": "Находите и заменяйте текст с расширенными опциями сопоставления", "href": "/ru/tools/text-replace" },
+          { "name": "Удалить Форматирование Текста", "description": "Очищайте и убирайте форматирование из текстовых документов", "href": "/ru/tools/remove-text-formatting" },
+          { "name": "Удалить Дублирующиеся Строки", "description": "Удаляйте дублирующиеся строки и очищайте текстовый контент", "href": "/ru/tools/duplicate-line-remover" }
+        ]
+      }
+    }
+  }
+}

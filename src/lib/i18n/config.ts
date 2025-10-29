@@ -60,7 +60,8 @@ export const namespaces = {
   imageTools: 'tools/image-tools',
   randomGenerators: 'tools/random-generators',
   miscellaneous: 'tools/miscellaneous',
-  miscTools: 'tools/misc-tools'
+  miscTools: 'tools/misc-tools',
+  pdfTools: 'tools/pdf-tools'
 } as const;
 
 export type Namespace = typeof namespaces[keyof typeof namespaces];

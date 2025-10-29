@@ -110,6 +110,10 @@ export function Footer() {
     {
       title: t('navigation.plainText'),
       href: currentLocale === 'en' ? '/tools/plain-text' : '/ru/tools/plain-text'
+    },
+    {
+      title: t('navigation.extractEmailsFromText'),
+      href: currentLocale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
@@ -285,6 +289,10 @@ export function Footer() {
     {
       title: t('navigation.utmBuilder'),
       href: currentLocale === 'en' ? '/tools/utm-builder' : '/ru/tools/utm-builder'
+    },
+    {
+      title: t('navigation.extractEmailsFromPdf'),
+      href: currentLocale === 'en' ? '/tools/extract-emails-from-pdf' : '/ru/tools/extract-emails-from-pdf'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
