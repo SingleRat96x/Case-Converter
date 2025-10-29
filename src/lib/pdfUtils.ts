@@ -1,8 +1,10 @@
 import { extractEmails, type EmailExtractionOptions, type EmailExtractionResult } from './emailUtils';
+import * as pdfjsLib from 'pdfjs-dist';
 
-// Note: This is a simplified implementation for demonstration purposes
-// In production, you would integrate with a PDF processing library
-// that is compatible with Next.js and serverless environments
+// Configure PDF.js worker
+if (typeof window !== 'undefined') {
+  pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
+}
 
 export interface PdfProcessingResult {
   text: string;
@@ -80,7 +82,7 @@ export function validatePdfFile(file: File): PdfValidationResult {
 }
 
 /**
- * Extract text content from PDF file
+ * Extract text content from PDF file using PDF.js
  */
 export async function extractTextFromPdf(file: File): Promise<PdfProcessingResult> {
   const startTime = Date.now();
@@ -92,51 +94,75 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
       throw new Error(validation.error);
     }
 
-    // Simulate processing delay
-    await new Promise(resolve => setTimeout(resolve, 1000 + Math.random() * 2000));
+    // Convert file to ArrayBuffer for PDF.js
+    const arrayBuffer = await file.arrayBuffer();
+    
+    // Load PDF document using PDF.js
+    const loadingTask = pdfjsLib.getDocument({
+      data: arrayBuffer,
+      useSystemFonts: true,
+      standardFontDataUrl: '/standard_fonts/',
+    });
+    
+    const pdf = await loadingTask.promise;
+    
+    let fullText = '';
+    const pageCount = pdf.numPages;
+    
+    // Extract text from all pages
+    for (let pageNum = 1; pageNum <= pageCount; pageNum++) {
+      const page = await pdf.getPage(pageNum);
+      const textContent = await page.getTextContent();
+      
+      // Combine all text items from the page
+      const pageText = textContent.items
+        .map((item) => {
+          // PDF.js TextItem has a 'str' property
+          return 'str' in item ? item.str : '';
+        })
+        .join(' ');
+      
+      fullText += pageText + '\n';
+    }
+    
+    // Clean up the extracted text
+    fullText = fullText
+      .replace(/\s+/g, ' ') // Replace multiple whitespace with single space
+      .replace(/\n\s*\n/g, '\n') // Remove empty lines
+      .trim();
+    
+    // If no text was extracted, provide a helpful message
+    if (!fullText) {
+      fullText = `No text content found in this PDF file.
+
+This could be because:
+- The PDF contains only images or scanned content
+- The PDF is password protected
+- The PDF uses unsupported encoding
+- The PDF file is corrupted
+
+Please try a different PDF file with searchable text content.`;
+    }
     
     const processingTime = Date.now() - startTime;
     
-    // Mock extracted text with sample email addresses for demonstration
-    const mockText = `
-      Sample PDF Document
-      
-      Contact Information:
-      For support, please email support@example.com or reach out to our sales team at sales@company.org.
-      
-      Team Members:
-      - John Doe: john.doe@example.com
-      - Jane Smith: jane.smith@company.org  
-      - Bob Johnson: bob.johnson+work@gmail.com
-      - Alice Brown: alice@subdomain.example.co.uk
-      
-      Additional contacts:
-      admin@test-site.net
-      info@demo.com
-      contact@sample-website.org
-      
-      Invalid entries (should be filtered):
-      not-an-email
-      @missing.com
-      test@
-      
-      This is a demonstration of the PDF email extraction tool.
-      In production, this would use a proper PDF parsing library.
-    `;
+    // Get PDF metadata
+    const metadata = await pdf.getMetadata();
+    const info = metadata.info as Record<string, string> | null;
     
     return {
-      text: mockText.trim(),
-      pageCount: 2,
+      text: fullText,
+      pageCount,
       fileSize: file.size,
       processingTime,
       metadata: {
-        title: 'Sample PDF Document',
-        author: 'Demo User',
-        subject: 'Email Extraction Demo',
-        creator: 'PDF Email Extractor Tool',
-        producer: 'Demo PDF Generator',
-        creationDate: new Date().toISOString(),
-        modificationDate: new Date().toISOString(),
+        title: info?.Title || file.name,
+        author: info?.Author || 'Unknown',
+        subject: info?.Subject || '',
+        creator: info?.Creator || '',
+        producer: info?.Producer || '',
+        creationDate: info?.CreationDate || new Date().toISOString(),
+        modificationDate: info?.ModDate || new Date().toISOString(),
       }
     };
   } catch (error) {
@@ -214,18 +240,30 @@ export async function getPdfInfo(file: File): Promise<{
       throw new Error(validation.error);
     }
 
-    // Mock PDF info for demonstration
+    // Convert file to ArrayBuffer for PDF.js
+    const arrayBuffer = await file.arrayBuffer();
+    
+    // Load PDF document using PDF.js (just for info)
+    const loadingTask = pdfjsLib.getDocument({
+      data: arrayBuffer,
+      useSystemFonts: true,
+    });
+    
+    const pdf = await loadingTask.promise;
+    const metadata = await pdf.getMetadata();
+    const info = metadata.info as Record<string, string> | null;
+    
     return {
-      pageCount: 2,
+      pageCount: pdf.numPages,
       fileSize: file.size,
       metadata: {
-        title: 'Sample PDF Document',
-        author: 'Demo User',
-        subject: 'Email Extraction Demo',
-        creator: 'PDF Email Extractor Tool',
-        producer: 'Demo PDF Generator',
-        creationDate: new Date().toISOString(),
-        modificationDate: new Date().toISOString(),
+        title: info?.Title || file.name,
+        author: info?.Author || 'Unknown',
+        subject: info?.Subject || '',
+        creator: info?.Creator || '',
+        producer: info?.Producer || '',
+        creationDate: info?.CreationDate || new Date().toISOString(),
+        modificationDate: info?.ModDate || new Date().toISOString(),
       }
     };
   } catch (error) {

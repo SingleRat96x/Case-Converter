@@ -153,11 +153,11 @@ export function PdfUploader({
       ) : (
         /* File Info Display */
         <Card className="p-4">
-          <div className="flex items-start justify-between">
-            <div className="flex items-start gap-3 flex-1">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div className="flex items-start gap-3 flex-1 min-w-0">
               <FileText className="h-8 w-8 text-red-600 mt-1 flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-medium text-foreground truncate">
+                <h3 className="text-sm font-medium text-foreground break-words sm:truncate">
                   {uploadedFile.name}
                 </h3>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -182,16 +182,16 @@ export function PdfUploader({
             </div>
             
             {/* Action Buttons */}
-            <div className="flex items-center gap-2 ml-4">
+            <div className="flex items-center gap-2 flex-shrink-0">
               <Button
                 onClick={triggerFileUpload}
                 variant="outline"
                 size="sm"
-                className="gap-1"
+                className="gap-1 sm:gap-1 border-primary/20 bg-primary/5 hover:bg-primary/10 text-primary hover:text-primary"
                 disabled={isUploading || isProcessing}
               >
-                <Upload className="h-3 w-3" />
-                {replaceText}
+                <Upload className="h-3 w-3 sm:h-3 sm:w-3" />
+                <span className="hidden sm:inline">{replaceText}</span>
               </Button>
               
               {onClear && (
@@ -199,11 +199,11 @@ export function PdfUploader({
                   onClick={handleClear}
                   variant="outline"
                   size="sm"
-                  className="gap-1"
+                  className="gap-1 sm:gap-1 border-destructive/20 bg-destructive/5 hover:bg-destructive/10 text-destructive hover:text-destructive"
                   disabled={isUploading || isProcessing}
                 >
-                  <X className="h-3 w-3" />
-                  {clearText}
+                  <X className="h-3 w-3 sm:h-3 sm:w-3" />
+                  <span className="hidden sm:inline">{clearText}</span>
                 </Button>
               )}
             </div>
