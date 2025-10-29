@@ -153,11 +153,11 @@ export function PdfUploader({
       ) : (
         /* File Info Display */
         <Card className="p-4">
-          <div className="flex items-start justify-between">
-            <div className="flex items-start gap-3 flex-1">
+          <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-4">
+            <div className="flex items-start gap-3 flex-1 min-w-0">
               <FileText className="h-8 w-8 text-red-600 mt-1 flex-shrink-0" />
               <div className="flex-1 min-w-0">
-                <h3 className="text-sm font-medium text-foreground truncate">
+                <h3 className="text-sm font-medium text-foreground break-words sm:truncate">
                   {uploadedFile.name}
                 </h3>
                 <p className="text-xs text-muted-foreground mt-1">
@@ -182,12 +182,12 @@ export function PdfUploader({
             </div>
             
             {/* Action Buttons */}
-            <div className="flex items-center gap-2 ml-2 sm:ml-4">
+            <div className="flex items-center gap-2 flex-shrink-0">
               <Button
                 onClick={triggerFileUpload}
                 variant="outline"
                 size="sm"
-                className="gap-1 sm:gap-1 bg-blue-50 hover:bg-blue-100 border-blue-200 text-blue-700 hover:text-blue-800 dark:bg-blue-950/30 dark:hover:bg-blue-950/50 dark:border-blue-800 dark:text-blue-300"
+                className="gap-1 sm:gap-1 border-primary/20 bg-primary/5 hover:bg-primary/10 text-primary hover:text-primary"
                 disabled={isUploading || isProcessing}
               >
                 <Upload className="h-3 w-3 sm:h-3 sm:w-3" />
@@ -199,7 +199,7 @@ export function PdfUploader({
                   onClick={handleClear}
                   variant="outline"
                   size="sm"
-                  className="gap-1 sm:gap-1 bg-red-50 hover:bg-red-100 border-red-200 text-red-700 hover:text-red-800 dark:bg-red-950/30 dark:hover:bg-red-950/50 dark:border-red-800 dark:text-red-300"
+                  className="gap-1 sm:gap-1 border-destructive/20 bg-destructive/5 hover:bg-destructive/10 text-destructive hover:text-destructive"
                   disabled={isUploading || isProcessing}
                 >
                   <X className="h-3 w-3 sm:h-3 sm:w-3" />

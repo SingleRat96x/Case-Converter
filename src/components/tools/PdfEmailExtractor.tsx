@@ -370,10 +370,10 @@ export function PdfEmailExtractor() {
 
         {/* Top Domains Analysis - Redesigned */}
         {state === 'completed' && extractionResult && patternAnalysis && patternAnalysis.topDomains.length > 0 && (
-          <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-xl p-6 border border-blue-200 dark:border-blue-800">
+          <div className="bg-gradient-to-r from-primary/5 to-secondary/5 rounded-xl p-6 border border-border">
             <div className="flex items-center gap-3 mb-4">
-              <div className="p-2 bg-blue-100 dark:bg-blue-900/50 rounded-lg">
-                <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+              <div className="p-2 bg-primary/10 rounded-lg">
+                <Globe className="h-5 w-5 text-primary" />
               </div>
               <div>
                 <h4 className="text-lg font-semibold text-foreground">{tool('pdfEmailExtractor.topDomains')}</h4>
@@ -383,7 +383,7 @@ export function PdfEmailExtractor() {
             
             <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
               {patternAnalysis.topDomains.slice(0, 6).map((domain, index) => (
-                <div key={index} className="bg-white dark:bg-gray-900/50 rounded-lg p-4 border border-gray-200 dark:border-gray-700 hover:shadow-md transition-all">
+                <div key={index} className="bg-card rounded-lg p-4 border border-border hover:shadow-md transition-all hover:border-primary/20">
                   <div className="flex items-center justify-between">
                     <div className="flex-1 min-w-0">
                       <p className="font-mono text-sm font-medium text-foreground truncate">
@@ -394,7 +394,7 @@ export function PdfEmailExtractor() {
                       </p>
                     </div>
                     <div className="ml-3 flex-shrink-0">
-                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-800 dark:bg-blue-900/50 dark:text-blue-300">
+                      <span className="inline-flex items-center px-2.5 py-1 rounded-full text-xs font-medium bg-primary/10 text-primary border border-primary/20">
                         {domain.percentage}%
                       </span>
                     </div>
