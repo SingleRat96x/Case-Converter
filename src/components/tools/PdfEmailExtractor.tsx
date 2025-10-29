@@ -37,7 +37,6 @@ export function PdfEmailExtractor() {
   
   // State management
   const [state, setState] = useState<ProcessingState>('idle');
-  const [isClient, setIsClient] = useState(false);
   const [uploadedFile, setUploadedFile] = useState<PdfFile | null>(null);
   const [extractionResult, setExtractionResult] = useState<PdfEmailExtractionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -85,7 +84,7 @@ export function PdfEmailExtractor() {
       setUploadedFile(pdfFile);
       setState('processing');
       
-      // Extract emails from PDF
+      // Extract emails from PDF (PDF.js will be loaded on first use)
       const result = await extractEmailsFromPdf(file, extractionOptions);
       setExtractionResult(result);
       setState('completed');
@@ -150,15 +149,8 @@ export function PdfEmailExtractor() {
     }
   }, [extractionResult?.emails]);
 
-  // Handle client-side hydration
-  useEffect(() => {
-    setIsClient(true);
-  }, []);
-
   // Handle responsive accordion behavior
   useEffect(() => {
-    if (!isClient) return;
-    
     const handleResize = () => {
       if (window.innerWidth >= 640) { // sm breakpoint
         setIsAccordionOpen(true);
@@ -170,26 +162,7 @@ export function PdfEmailExtractor() {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, [isClient]);
-
-  // Show loading state during hydration
-  if (!isClient) {
-    return (
-      <div className="space-y-6">
-        <div className="text-center space-y-2">
-          <h1 className="text-2xl md:text-3xl font-bold text-foreground">
-            {tool('pdfEmailExtractor.title')}
-          </h1>
-          <p className="text-muted-foreground max-w-2xl mx-auto">
-            {tool('pdfEmailExtractor.description')}
-          </p>
-        </div>
-        <div className="flex items-center justify-center p-8">
-          <div className="animate-spin h-8 w-8 border-2 border-primary border-t-transparent rounded-full"></div>
-        </div>
-      </div>
-    );
-  }
+  }, []);
 
   return (
     <TooltipProvider>

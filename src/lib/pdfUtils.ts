@@ -1,15 +1,35 @@
 import { extractEmails, type EmailExtractionOptions, type EmailExtractionResult } from './emailUtils';
 
-// Dynamic import for PDF.js to avoid SSR issues
+// Dynamic import for PDF.js - only loaded when needed
 let pdfjsLib: typeof import('pdfjs-dist') | null = null;
+let isLoading = false;
 
-// Initialize PDF.js only on client side
-const initPdfJs = async () => {
-  if (typeof window !== 'undefined' && !pdfjsLib) {
+// Initialize PDF.js only when actually needed (on file upload)
+const initPdfJs = async (): Promise<typeof import('pdfjs-dist')> => {
+  if (pdfjsLib) {
+    return pdfjsLib;
+  }
+  
+  if (isLoading) {
+    // Wait for existing loading to complete
+    while (isLoading) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    if (pdfjsLib) return pdfjsLib;
+  }
+  
+  if (typeof window === 'undefined') {
+    throw new Error('PDF.js can only be loaded in the browser');
+  }
+  
+  isLoading = true;
+  try {
     pdfjsLib = await import('pdfjs-dist');
     pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
+    return pdfjsLib;
+  } finally {
+    isLoading = false;
   }
-  return pdfjsLib;
 };
 
 export interface PdfProcessingResult {
@@ -94,11 +114,8 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
   const startTime = Date.now();
   
   try {
-    // Initialize PDF.js
+    // Initialize PDF.js (loads library on first use)
     const pdfjs = await initPdfJs();
-    if (!pdfjs) {
-      throw new Error('PDF.js failed to initialize');
-    }
 
     // Validate file first
     const validation = validatePdfFile(file);
@@ -247,11 +264,8 @@ export async function getPdfInfo(file: File): Promise<{
   metadata?: PdfProcessingResult['metadata'];
 }> {
   try {
-    // Initialize PDF.js
+    // Initialize PDF.js (loads library on first use)
     const pdfjs = await initPdfJs();
-    if (!pdfjs) {
-      throw new Error('PDF.js failed to initialize');
-    }
 
     const validation = validatePdfFile(file);
     if (!validation.isValid) {

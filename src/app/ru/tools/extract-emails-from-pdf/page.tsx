@@ -1,4 +1,4 @@
-import { PdfEmailExtractor } from '@/components/tools/PdfEmailExtractorClient';
+import { PdfEmailExtractor } from '@/components/tools/PdfEmailExtractor';
 import { Layout } from '@/components/layout/Layout';
 import { SEOContent } from '@/components/seo/SEOContent';
 import { generateToolMetadata } from '@/lib/metadata/metadataGenerator';
