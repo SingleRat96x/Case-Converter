@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { PdfUploader, type PdfFile } from '@/components/shared/PdfUploader';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
@@ -11,8 +11,6 @@ import { Button } from '@/components/ui/button';
 import { 
   extractEmailsFromPdf, 
   validatePdfFile, 
-  formatFileSize, 
-  formatProcessingTime,
   type PdfEmailExtractionResult 
 } from '@/lib/pdfUtils';
 import { 
@@ -21,16 +19,11 @@ import {
   type EmailExtractionOptions 
 } from '@/lib/emailUtils';
 import { 
-  CheckCircle, 
   Mail, 
   Globe,
   Filter,
   HelpCircle,
-  Target,
-  Percent,
   AlertTriangle,
-  FileText,
-  Clock,
   Copy,
   Check,
   Download
@@ -44,6 +37,7 @@ export function PdfEmailExtractor() {
   
   // State management
   const [state, setState] = useState<ProcessingState>('idle');
+  const [isClient, setIsClient] = useState(false);
   const [uploadedFile, setUploadedFile] = useState<PdfFile | null>(null);
   const [extractionResult, setExtractionResult] = useState<PdfEmailExtractionResult | null>(null);
   const [error, setError] = useState<string | null>(null);
@@ -156,8 +150,15 @@ export function PdfEmailExtractor() {
     }
   }, [extractionResult?.emails]);
 
+  // Handle client-side hydration
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   // Handle responsive accordion behavior
-  React.useEffect(() => {
+  useEffect(() => {
+    if (!isClient) return;
+    
     const handleResize = () => {
       if (window.innerWidth >= 640) { // sm breakpoint
         setIsAccordionOpen(true);
@@ -169,7 +170,26 @@ export function PdfEmailExtractor() {
     handleResize();
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
-  }, []);
+  }, [isClient]);
+
+  // Show loading state during hydration
+  if (!isClient) {
+    return (
+      <div className="space-y-6">
+        <div className="text-center space-y-2">
+          <h1 className="text-2xl md:text-3xl font-bold text-foreground">
+            {tool('pdfEmailExtractor.title')}
+          </h1>
+          <p className="text-muted-foreground max-w-2xl mx-auto">
+            {tool('pdfEmailExtractor.description')}
+          </p>
+        </div>
+        <div className="flex items-center justify-center p-8">
+          <div className="animate-spin h-8 w-8 border-2 border-primary border-t-transparent rounded-full"></div>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <TooltipProvider>

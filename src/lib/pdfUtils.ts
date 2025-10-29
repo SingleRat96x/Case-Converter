@@ -1,10 +1,16 @@
 import { extractEmails, type EmailExtractionOptions, type EmailExtractionResult } from './emailUtils';
-import * as pdfjsLib from 'pdfjs-dist';
 
-// Configure PDF.js worker
-if (typeof window !== 'undefined') {
-  pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
-}
+// Dynamic import for PDF.js to avoid SSR issues
+let pdfjsLib: typeof import('pdfjs-dist') | null = null;
+
+// Initialize PDF.js only on client side
+const initPdfJs = async () => {
+  if (typeof window !== 'undefined' && !pdfjsLib) {
+    pdfjsLib = await import('pdfjs-dist');
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
+  }
+  return pdfjsLib;
+};
 
 export interface PdfProcessingResult {
   text: string;
@@ -88,6 +94,12 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
   const startTime = Date.now();
   
   try {
+    // Initialize PDF.js
+    const pdfjs = await initPdfJs();
+    if (!pdfjs) {
+      throw new Error('PDF.js failed to initialize');
+    }
+
     // Validate file first
     const validation = validatePdfFile(file);
     if (!validation.isValid) {
@@ -98,7 +110,7 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
     const arrayBuffer = await file.arrayBuffer();
     
     // Load PDF document using PDF.js
-    const loadingTask = pdfjsLib.getDocument({
+    const loadingTask = pdfjs.getDocument({
       data: arrayBuffer,
       useSystemFonts: true,
       standardFontDataUrl: '/standard_fonts/',
@@ -235,6 +247,12 @@ export async function getPdfInfo(file: File): Promise<{
   metadata?: PdfProcessingResult['metadata'];
 }> {
   try {
+    // Initialize PDF.js
+    const pdfjs = await initPdfJs();
+    if (!pdfjs) {
+      throw new Error('PDF.js failed to initialize');
+    }
+
     const validation = validatePdfFile(file);
     if (!validation.isValid) {
       throw new Error(validation.error);
@@ -244,7 +262,7 @@ export async function getPdfInfo(file: File): Promise<{
     const arrayBuffer = await file.arrayBuffer();
     
     // Load PDF document using PDF.js (just for info)
-    const loadingTask = pdfjsLib.getDocument({
+    const loadingTask = pdfjs.getDocument({
       data: arrayBuffer,
       useSystemFonts: true,
     });
