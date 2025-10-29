@@ -493,6 +493,133 @@ function convertWordToPigLatin(word: string): string {
   return result;
 }
 
+// Remove punctuation transformation
+export interface RemovePunctuationOptions {
+  keepApostrophes: boolean;
+  keepHyphens: boolean;
+  keepEmailUrls: boolean;
+  keepNumbers: boolean;
+  keepLineBreaks: boolean;
+  customKeepList: string;
+}
+
+export function removePunctuation(text: string, options: RemovePunctuationOptions): string {
+  if (!text || text.trim().length === 0) {
+    return text;
+  }
+
+  // Build the list of characters to keep
+  let keepChars = new Set<string>();
+  
+  // Always keep letters and spaces
+  const letters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+  for (const char of letters) {
+    keepChars.add(char);
+  }
+  keepChars.add(' ');
+  
+  // Keep numbers if requested
+  if (options.keepNumbers) {
+    const numbers = '0123456789';
+    for (const char of numbers) {
+      keepChars.add(char);
+    }
+  }
+  
+  // Keep line breaks if requested
+  if (options.keepLineBreaks) {
+    keepChars.add('\n');
+    keepChars.add('\r');
+  }
+  
+  // Keep apostrophes in contractions if requested
+  if (options.keepApostrophes) {
+    keepChars.add("'");
+    keepChars.add("'"); // Smart apostrophe
+    keepChars.add("`"); // Backtick apostrophe
+  }
+  
+  // Keep hyphens and underscores if requested
+  if (options.keepHyphens) {
+    keepChars.add('-');
+    keepChars.add('_');
+    keepChars.add('–'); // En dash
+    keepChars.add('—'); // Em dash
+  }
+  
+  // Add custom keep list characters
+  if (options.customKeepList && options.customKeepList.trim()) {
+    for (const char of options.customKeepList) {
+      keepChars.add(char);
+    }
+  }
+  
+  let result = '';
+  
+  if (options.keepEmailUrls) {
+    // More complex processing to preserve email/URL punctuation
+    result = processTextWithEmailUrls(text, keepChars);
+  } else {
+    // Simple character-by-character filtering
+    result = text
+      .split('')
+      .filter(char => keepChars.has(char))
+      .join('');
+  }
+  
+  // Clean up extra spaces
+  result = result.replace(/\s+/g, ' ').trim();
+  
+  return result;
+}
+
+function processTextWithEmailUrls(text: string, keepChars: Set<string>): string {
+  // Email regex pattern
+  const emailPattern = /\b[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Z|a-z]{2,}\b/g;
+  
+  // URL regex pattern
+  const urlPattern = /https?:\/\/[^\s]+/g;
+  
+  // Find all emails and URLs
+  const emails = Array.from(text.matchAll(emailPattern));
+  const urls = Array.from(text.matchAll(urlPattern));
+  
+  // Combine and sort by position
+  const preserveRanges = [...emails, ...urls]
+    .map(match => ({
+      start: match.index!,
+      end: match.index! + match[0].length,
+      text: match[0]
+    }))
+    .sort((a, b) => a.start - b.start);
+  
+  let result = '';
+  let lastIndex = 0;
+  
+  for (const range of preserveRanges) {
+    // Process text before this email/URL
+    const beforeText = text.slice(lastIndex, range.start);
+    result += beforeText
+      .split('')
+      .filter(char => keepChars.has(char))
+      .join('');
+    
+    // Add the email/URL as-is
+    result += range.text;
+    
+    lastIndex = range.end;
+  }
+  
+  // Process remaining text after last email/URL
+  const remainingText = text.slice(lastIndex);
+  result += remainingText
+    .split('')
+    .filter(char => keepChars.has(char))
+    .join('');
+  
+  return result;
+}
+
 // Check if character has transformation available
 export function hasTransformation(char: string, type: 'bold' | 'italic' | 'subscript' | 'big' | 'bubble'): boolean {
   const maps = {

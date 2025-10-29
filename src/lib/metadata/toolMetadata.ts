@@ -1512,6 +1512,26 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),
     relatedTools: ['extract-emails-from-text','image-to-text','text-counter','remove-text-formatting']
+  },
+  {
+    slug: 'remove-punctuation',
+    pathname: '/tools/remove-punctuation',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Remove Punctuation from Text – Free Online Punctuation Remover',
+        description: 'Paste your text and instantly remove punctuation marks (.,!?;:–—"' …) while keeping words intact. Options to keep selected symbols, numbers, and line breaks.',
+        shortDescription: 'Remove punctuation with selective preservation options.',
+      },
+      ru: {
+        title: 'Удаление Пунктуации из Текста – Бесплатный Онлайн Инструмент',
+        description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"' …), сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
+        shortDescription: 'Удаление пунктуации с опциями селективного сохранения.',
+      }
+    },
+    schema: createAdvancedSchema('remove-punctuation', ['Selective removal', 'Custom options', 'Text cleaning', 'Email/URL preservation'], 'Text Input', 'Clean Text', 4.5, 567),
+    relatedTools: ['remove-text-formatting', 'plain-text', 'text-replace', 'remove-line-breaks']
   }
 ];
 
@@ -1519,7 +1539,7 @@ const overrides: Array<ToolMetadataConfig> = [
 const TOOL_SLUGS: string[] = [
   'webp-to-png','png-to-webp','random-month','remove-line-breaks','text-replace','text-counter','uuid-generator','slugify-url',
   'roman-numeral-date','rot13','random-number','url-converter','utm-builder','subscript-text','sentence-case','repeat-text',
-  'pig-latin','title-case','sentence-counter','remove-text-formatting','webp-to-jpg','utf8-converter','random-letter','plain-text',
+  'pig-latin','title-case','sentence-counter','remove-text-formatting','remove-punctuation','webp-to-jpg','utf8-converter','random-letter','plain-text',
   'random-choice','word-frequency','sort-words','uppercase','png-to-jpg','random-ip','random-date','jpg-to-png','invisible-text',
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',

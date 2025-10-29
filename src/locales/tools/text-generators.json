@@ -351,6 +351,26 @@
         "numbers": "Numbers",
         "none": "None Active"
       }
+    },
+    "removePunctuation": {
+      "title": "Remove Punctuation from Text",
+      "description": "Clean, copy-ready text—no periods, commas, quotes, or symbols",
+      "outputLabel": "Clean Text",
+      "inputPlaceholder": "Enter text to remove punctuation...",
+      "copiedMessage": "Clean text copied to clipboard!",
+      "downloadFileName": "clean-text.txt",
+      "convertButton": "Remove punctuation",
+      "uploadDescription": "Upload a text file to remove punctuation",
+      "helperText": "Paste text on the left. Choose what to keep. Click \"Remove punctuation.\"",
+      "options": {
+        "keepApostrophes": "Keep apostrophes in contractions (e.g., don't → don't)",
+        "keepHyphens": "Keep hyphens/underscores (for slugs)",
+        "keepEmailUrls": "Keep email/URL punctuation (don't break addresses)",
+        "keepNumbers": "Keep numbers",
+        "keepLineBreaks": "Keep line breaks",
+        "customKeepList": "Custom keep list:",
+        "customKeepListPlaceholder": "e.g., @#&%/"
+      }
     }
   },
   "ru": {
@@ -704,6 +724,26 @@
         "specialChars": "Спец. Символы",
         "numbers": "Числа",
         "none": "Нет Активных"
+      }
+    },
+    "removePunctuation": {
+      "title": "Удаление Пунктуации из Текста",
+      "description": "Чистый, готовый к копированию текст—без точек, запятых, кавычек и символов",
+      "outputLabel": "Чистый Текст",
+      "inputPlaceholder": "Введите текст для удаления пунктуации...",
+      "copiedMessage": "Чистый текст скопирован в буфер обмена!",
+      "downloadFileName": "чистый-текст.txt",
+      "convertButton": "Удалить пунктуацию",
+      "uploadDescription": "Загрузите текстовый файл для удаления пунктуации",
+      "helperText": "Вставьте текст слева. Выберите, что сохранить. Нажмите \"Удалить пунктуацию.\"",
+      "options": {
+        "keepApostrophes": "Сохранить апострофы в сокращениях (например, don't → don't)",
+        "keepHyphens": "Сохранить дефисы/подчеркивания (для слагов)",
+        "keepEmailUrls": "Сохранить пунктуацию email/URL (не ломать адреса)",
+        "keepNumbers": "Сохранить числа",
+        "keepLineBreaks": "Сохранить переводы строк",
+        "customKeepList": "Пользовательский список сохранения:",
+        "customKeepListPlaceholder": "например, @#&%/"
       }
     }
   }
