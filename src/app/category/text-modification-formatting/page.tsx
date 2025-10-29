@@ -89,6 +89,13 @@ const textModificationTools = [
     href: '/tools/remove-text-formatting'
   },
   {
+    id: 'remove-punctuation',
+    title: 'Remove Punctuation',
+    description: 'Remove punctuation marks while preserving selected symbols and formatting',
+    icon: '✂️',
+    href: '/tools/remove-punctuation'
+  },
+  {
     id: 'duplicate-line-remover',
     title: 'Remove Duplicate Lines',
     description: 'Eliminate duplicate lines and clean up text content',

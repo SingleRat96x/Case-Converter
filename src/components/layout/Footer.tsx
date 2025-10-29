@@ -72,6 +72,10 @@ export function Footer() {
       href: currentLocale === 'en' ? '/tools/remove-text-formatting' : '/ru/tools/remove-text-formatting'
     },
     {
+      title: t('navigation.removePunctuation'),
+      href: currentLocale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation'
+    },
+    {
       title: t('navigation.duplicateLineRemover'),
       href: currentLocale === 'en' ? '/tools/duplicate-line-remover' : '/ru/tools/duplicate-line-remover'
     },

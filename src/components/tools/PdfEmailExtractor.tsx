@@ -10,9 +10,7 @@ import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/comp
 import { Button } from '@/components/ui/button';
 import { 
   extractEmailsFromPdf, 
-  validatePdfFile, 
-  formatFileSize, 
-  formatProcessingTime,
+  validatePdfFile,
   type PdfEmailExtractionResult 
 } from '@/lib/pdfUtils';
 import { 
@@ -21,16 +19,11 @@ import {
   type EmailExtractionOptions 
 } from '@/lib/emailUtils';
 import { 
-  CheckCircle, 
   Mail, 
   Globe,
   Filter,
   HelpCircle,
-  Target,
-  Percent,
   AlertTriangle,
-  FileText,
-  Clock,
   Copy,
   Check,
   Download
