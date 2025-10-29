@@ -1,10 +1,36 @@
 import { extractEmails, type EmailExtractionOptions, type EmailExtractionResult } from './emailUtils';
-import * as pdfjsLib from 'pdfjs-dist';
 
-// Configure PDF.js worker
-if (typeof window !== 'undefined') {
-  pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
-}
+// Dynamic import for PDF.js - only loaded when needed
+let pdfjsLib: typeof import('pdfjs-dist') | null = null;
+let isLoading = false;
+
+// Initialize PDF.js only when actually needed (on file upload)
+const initPdfJs = async (): Promise<typeof import('pdfjs-dist')> => {
+  if (pdfjsLib) {
+    return pdfjsLib;
+  }
+  
+  if (isLoading) {
+    // Wait for existing loading to complete
+    while (isLoading) {
+      await new Promise(resolve => setTimeout(resolve, 100));
+    }
+    if (pdfjsLib) return pdfjsLib;
+  }
+  
+  if (typeof window === 'undefined') {
+    throw new Error('PDF.js can only be loaded in the browser');
+  }
+  
+  isLoading = true;
+  try {
+    pdfjsLib = await import('pdfjs-dist');
+    pdfjsLib.GlobalWorkerOptions.workerSrc = '/pdf.worker.mjs';
+    return pdfjsLib;
+  } finally {
+    isLoading = false;
+  }
+};
 
 export interface PdfProcessingResult {
   text: string;
@@ -88,6 +114,9 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
   const startTime = Date.now();
   
   try {
+    // Initialize PDF.js (loads library on first use)
+    const pdfjs = await initPdfJs();
+
     // Validate file first
     const validation = validatePdfFile(file);
     if (!validation.isValid) {
@@ -98,7 +127,7 @@ export async function extractTextFromPdf(file: File): Promise<PdfProcessingResul
     const arrayBuffer = await file.arrayBuffer();
     
     // Load PDF document using PDF.js
-    const loadingTask = pdfjsLib.getDocument({
+    const loadingTask = pdfjs.getDocument({
       data: arrayBuffer,
       useSystemFonts: true,
       standardFontDataUrl: '/standard_fonts/',
@@ -235,6 +264,9 @@ export async function getPdfInfo(file: File): Promise<{
   metadata?: PdfProcessingResult['metadata'];
 }> {
   try {
+    // Initialize PDF.js (loads library on first use)
+    const pdfjs = await initPdfJs();
+
     const validation = validatePdfFile(file);
     if (!validation.isValid) {
       throw new Error(validation.error);
@@ -244,7 +276,7 @@ export async function getPdfInfo(file: File): Promise<{
     const arrayBuffer = await file.arrayBuffer();
     
     // Load PDF document using PDF.js (just for info)
-    const loadingTask = pdfjsLib.getDocument({
+    const loadingTask = pdfjs.getDocument({
       data: arrayBuffer,
       useSystemFonts: true,
     });

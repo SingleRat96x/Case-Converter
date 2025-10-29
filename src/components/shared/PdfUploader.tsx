@@ -131,7 +131,7 @@ export function PdfUploader({
                   {isProcessing ? processingText : 'Uploading...'}
                 </h3>
                 <p className="text-sm text-muted-foreground">
-                  Please wait while we process your PDF file
+                  {isProcessing ? 'Loading PDF processor and extracting text...' : 'Please wait while we process your PDF file'}
                 </p>
               </>
             ) : (
@@ -215,7 +215,7 @@ export function PdfUploader({
               <div className="flex items-center gap-2">
                 <div className="animate-spin h-4 w-4 border-2 border-primary border-t-transparent rounded-full"></div>
                 <span className="text-sm text-muted-foreground">
-                  {isProcessing ? processingText : 'Uploading file...'}
+                  {isProcessing ? 'Loading PDF processor and extracting text...' : 'Uploading file...'}
                 </span>
               </div>
             </div>

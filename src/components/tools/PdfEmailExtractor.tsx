@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useMemo } from 'react';
+import React, { useState, useCallback, useMemo, useEffect } from 'react';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { PdfUploader, type PdfFile } from '@/components/shared/PdfUploader';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
@@ -11,8 +11,6 @@ import { Button } from '@/components/ui/button';
 import { 
   extractEmailsFromPdf, 
   validatePdfFile, 
-  formatFileSize, 
-  formatProcessingTime,
   type PdfEmailExtractionResult 
 } from '@/lib/pdfUtils';
 import { 
@@ -21,16 +19,11 @@ import {
   type EmailExtractionOptions 
 } from '@/lib/emailUtils';
 import { 
-  CheckCircle, 
   Mail, 
   Globe,
   Filter,
   HelpCircle,
-  Target,
-  Percent,
   AlertTriangle,
-  FileText,
-  Clock,
   Copy,
   Check,
   Download
@@ -91,7 +84,7 @@ export function PdfEmailExtractor() {
       setUploadedFile(pdfFile);
       setState('processing');
       
-      // Extract emails from PDF
+      // Extract emails from PDF (PDF.js will be loaded on first use)
       const result = await extractEmailsFromPdf(file, extractionOptions);
       setExtractionResult(result);
       setState('completed');
@@ -157,7 +150,7 @@ export function PdfEmailExtractor() {
   }, [extractionResult?.emails]);
 
   // Handle responsive accordion behavior
-  React.useEffect(() => {
+  useEffect(() => {
     const handleResize = () => {
       if (window.innerWidth >= 640) { // sm breakpoint
         setIsAccordionOpen(true);
