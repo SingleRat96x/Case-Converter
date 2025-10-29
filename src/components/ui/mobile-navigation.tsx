@@ -239,6 +239,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           title: t('navigation.plainText'),
           href: locale === 'en' ? '/tools/plain-text' : '/ru/tools/plain-text',
           icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.extractEmailsFromText'),
+          href: locale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text',
+          icon: <ChevronRight className="h-4 w-4" />
         }
       ]
     },
@@ -452,6 +457,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
         {
           title: t('navigation.utmBuilder'),
           href: locale === 'en' ? '/tools/utm-builder' : '/ru/tools/utm-builder',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.extractEmailsFromPdf'),
+          href: locale === 'en' ? '/tools/extract-emails-from-pdf' : '/ru/tools/extract-emails-from-pdf',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
