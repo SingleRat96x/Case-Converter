@@ -10,7 +10,7 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Settings, Sparkles, Check, AlertCircle, Loader2 } from 'lucide-react';
+import { Settings, Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code } from 'lucide-react';
 import { 
   convertTextToCamelCase, 
   convertJsonKeys, 
@@ -200,16 +200,7 @@ export function CamelCaseConverter() {
   }, []);
 
   return (
-    <>
-      {/* Hero Paragraph */}
-      <div className="max-w-4xl mx-auto mb-8 text-center">
-        <p className="text-base text-muted-foreground leading-relaxed">
-          {tool('camelCase.heroParagraph') || 
-            'A fast, privacy-first camel case converter for developers and data people. Paste text, identifiers, or JSON and convert everything to camelCase—including deeply-nested JSON keys. Preserve acronyms, switch to PascalCase, or reverse back to snake_case when needed.'}
-        </p>
-      </div>
-
-      <BaseTextConverter
+    <BaseTextConverter
         title={tool('camelCase.title')}
         description={tool('camelCase.description')}
         inputLabel={common('labels.inputText')}
@@ -341,32 +332,36 @@ export function CamelCaseConverter() {
                       variant={mode === 'snake-to-camel' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setMode('snake-to-camel')}
-                      className="justify-start"
+                      className="justify-start gap-2"
                     >
+                      <Code className="h-4 w-4" />
                       {tool('camelCase.modeSnake') || 'snake_case → camelCase'}
                     </Button>
                     <Button
                       variant={mode === 'kebab-to-camel' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setMode('kebab-to-camel')}
-                      className="justify-start"
+                      className="justify-start gap-2"
                     >
+                      <ArrowRight className="h-4 w-4" />
                       {tool('camelCase.modeKebab') || 'kebab-case → camelCase'}
                     </Button>
                     <Button
                       variant={mode === 'title-to-camel' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setMode('title-to-camel')}
-                      className="justify-start"
+                      className="justify-start gap-2"
                     >
+                      <Type className="h-4 w-4" />
                       {tool('camelCase.modeTitle') || 'Title Case → camelCase'}
                     </Button>
                     <Button
                       variant={mode === 'reverse' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setMode('reverse')}
-                      className="justify-start"
+                      className="justify-start gap-2"
                     >
+                      <ArrowLeftRight className="h-4 w-4" />
                       {tool('camelCase.modeReverse') || 'camelCase → snake_case'}
                     </Button>
                   </div>
@@ -382,14 +377,18 @@ export function CamelCaseConverter() {
                       variant={caseStyle === 'camelCase' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setCaseStyle('camelCase')}
+                      className="gap-2"
                     >
+                      <Code className="h-4 w-4" />
                       {tool('camelCase.styleCamel') || 'camelCase'}
                     </Button>
                     <Button
                       variant={caseStyle === 'PascalCase' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setCaseStyle('PascalCase')}
+                      className="gap-2"
                     >
+                      <Type className="h-4 w-4" />
                       {tool('camelCase.stylePascal') || 'PascalCase'}
                     </Button>
                   </div>
@@ -403,7 +402,7 @@ export function CamelCaseConverter() {
                   
                   <div className="space-y-3">
                     {/* Preserve Acronyms */}
-                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                    <div className="flex items-center justify-between">
                       <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                         {tool('camelCase.preserveAcronyms') || 'Preserve acronyms (e.g., userID)'}
                       </label>
@@ -415,7 +414,7 @@ export function CamelCaseConverter() {
                     </div>
 
                     {/* Safe Characters Only */}
-                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                    <div className="flex items-center justify-between">
                       <label htmlFor="safe-chars" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                         {tool('camelCase.safeCharsOnly') || 'Safe characters only (strip non-ASCII)'}
                       </label>
@@ -428,7 +427,7 @@ export function CamelCaseConverter() {
 
                     {/* Trim Whitespace */}
                     {inputType === 'text' && (
-                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center justify-between">
                         <label htmlFor="trim-whitespace" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                           {tool('camelCase.trimWhitespace') || 'Trim & collapse whitespace'}
                         </label>
@@ -451,7 +450,7 @@ export function CamelCaseConverter() {
                     
                     <div className="space-y-3">
                       {/* Convert Keys Only */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center justify-between">
                         <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                           {tool('camelCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
                         </label>
@@ -463,7 +462,7 @@ export function CamelCaseConverter() {
                       </div>
 
                       {/* Pretty Print */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center justify-between">
                         <label htmlFor="pretty-print" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                           {tool('camelCase.prettyPrint') || 'Pretty-print output'}
                         </label>
@@ -507,6 +506,5 @@ export function CamelCaseConverter() {
           )}
         </div>
       </BaseTextConverter>
-    </>
   );
 }
