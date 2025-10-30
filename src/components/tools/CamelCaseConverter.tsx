@@ -37,7 +37,7 @@ export function CamelCaseConverter() {
   } | null>(null);
   
   // Options state
-  const [mode, setMode] = useState<ConversionMode | null>(null);
+  const [mode, setMode] = useState<ConversionMode | null>('title-to-camel');
   const [caseStyle, setCaseStyle] = useState<CaseStyle>('camelCase');
   const [preserveAcronyms, setPreserveAcronyms] = useState(true);
   const [safeCharsOnly, setSafeCharsOnly] = useState(false);
@@ -289,7 +289,7 @@ export function CamelCaseConverter() {
                   ? 'bg-red-600 hover:bg-red-700 dark:bg-red-600 dark:hover:bg-red-700'
                   : ''
               }`}
-              disabled={!text || !mode || isProcessing || !!validationError}
+              disabled={!text || isProcessing || !!validationError}
             >
               {isProcessing ? (
                 <>
