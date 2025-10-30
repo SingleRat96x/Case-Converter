@@ -68,6 +68,10 @@ export function Footer() {
       href: currentLocale === 'en' ? '/tools/remove-line-breaks' : '/ru/tools/remove-line-breaks'
     },
     {
+      title: t('navigation.removePunctuation'),
+      href: currentLocale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation'
+    },
+    {
       title: t('navigation.removeTextFormatting'),
       href: currentLocale === 'en' ? '/tools/remove-text-formatting' : '/ru/tools/remove-text-formatting'
     },

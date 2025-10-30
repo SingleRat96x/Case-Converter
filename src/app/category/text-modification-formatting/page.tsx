@@ -82,6 +82,13 @@ const textModificationTools = [
     href: '/tools/remove-line-breaks'
   },
   {
+    id: 'remove-punctuation',
+    title: 'Remove Punctuation',
+    description: 'Strip punctuation marks while preserving words and custom symbols',
+    icon: '🧼',
+    href: '/tools/remove-punctuation'
+  },
+  {
     id: 'remove-text-formatting',
     title: 'Remove Text Formatting',
     description: 'Convert formatted text to plain text, removing all styling',

@@ -315,6 +315,24 @@
       "avgDomainLength": "Avg Domain Length",
       "uniqueDomains": "Unique Domains"
     },
+    "removePunctuation": {
+      "title": "Remove Punctuation from Text",
+      "description": "Clean, copy-ready text—no periods, commas, quotes, or symbols",
+      "outputLabel": "Cleaned Text",
+      "inputPlaceholder": "Paste your text here...",
+      "helperText": "Paste text on the left. Choose what to keep. Click 'Remove punctuation'.",
+      "copyCleanedText": "Copy cleaned text",
+      "downloadFileName": "text-without-punctuation.txt",
+      "optionsTitle": "Options: Choose what to keep",
+      "keepApostrophes": "Keep apostrophes in contractions (e.g., don't → don't)",
+      "keepHyphens": "Keep hyphens/underscores (for slugs)",
+      "keepEmailURL": "Keep email/URL punctuation (don't break addresses)",
+      "keepNumbers": "Keep numbers",
+      "keepLineBreaks": "Keep line breaks",
+      "customKeepLabel": "Custom keep list:",
+      "customKeepPlaceholder": "@#&%/",
+      "customKeepHint": "Enter any additional characters you want to preserve"
+    },
     "removeTextFormatting": {
       "title": "Remove Text Formatting Tool",
       "description": "Remove HTML tags, Markdown formatting, URLs, emails, and special characters from text. Clean and strip formatting from copied content with our advanced text cleaning tool.",
@@ -668,6 +686,24 @@
       "avgLocalLength": "Средняя длина локальной части",
       "avgDomainLength": "Средняя длина домена",
       "uniqueDomains": "Уникальных доменов"
+    },
+    "removePunctuation": {
+      "title": "Удалить Пунктуацию из Текста",
+      "description": "Чистый, готовый к копированию текст — без точек, запятых, кавычек и символов",
+      "outputLabel": "Очищенный Текст",
+      "inputPlaceholder": "Вставьте текст сюда...",
+      "helperText": "Вставьте текст слева. Выберите что сохранить. Нажмите 'Удалить пунктуацию'.",
+      "copyCleanedText": "Копировать очищенный текст",
+      "downloadFileName": "текст-без-пунктуации.txt",
+      "optionsTitle": "Опции: Выберите что сохранить",
+      "keepApostrophes": "Сохранить апострофы в сокращениях (например, don't → don't)",
+      "keepHyphens": "Сохранить дефисы/подчеркивания (для URL)",
+      "keepEmailURL": "Сохранить пунктуацию email/URL (не разбивать адреса)",
+      "keepNumbers": "Сохранить цифры",
+      "keepLineBreaks": "Сохранить переносы строк",
+      "customKeepLabel": "Пользовательский список сохранения:",
+      "customKeepPlaceholder": "@#&%/",
+      "customKeepHint": "Введите любые дополнительные символы для сохранения"
     },
     "removeTextFormatting": {
       "title": "Инструмент Удаления Форматирования Текста",

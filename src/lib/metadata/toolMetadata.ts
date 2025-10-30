@@ -1273,6 +1273,26 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['plain-text','remove-text-formatting','text-replace']
   },
   {
+    slug: 'remove-punctuation',
+    pathname: '/tools/remove-punctuation',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Remove Punctuation from Text – Free Online Punctuation Remover',
+        description: 'Paste your text and instantly remove punctuation marks (.,!?;:–—"\' …) while keeping words intact. Options to keep selected symbols, numbers, and line breaks.',
+        shortDescription: 'Remove punctuation marks with selective preservation options.',
+      },
+      ru: {
+        title: 'Удалить Пунктуацию из Текста – Бесплатный Онлайн Инструмент',
+        description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"\' …) сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
+        shortDescription: 'Удаление знаков пунктуации с выборочным сохранением.',
+      }
+    },
+    schema: createAdvancedSchema('remove-punctuation', ['Selective removal', 'Custom keep list', 'Email/URL protection'], 'Text Input', 'Clean Text', 4.5, 567),
+    relatedTools: ['remove-line-breaks', 'remove-text-formatting', 'plain-text', 'text-replace']
+  },
+  {
     slug: 'duplicate-line-remover',
     pathname: '/tools/duplicate-line-remover',
     type: 'tool',
@@ -1517,7 +1537,7 @@ const overrides: Array<ToolMetadataConfig> = [
 
 // Explicitly declare ALL tool and category slugs so the registry is complete and maintainable
 const TOOL_SLUGS: string[] = [
-  'webp-to-png','png-to-webp','random-month','remove-line-breaks','text-replace','text-counter','uuid-generator','slugify-url',
+  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','text-replace','text-counter','uuid-generator','slugify-url',
   'roman-numeral-date','rot13','random-number','url-converter','utm-builder','subscript-text','sentence-case','repeat-text',
   'pig-latin','title-case','sentence-counter','remove-text-formatting','webp-to-jpg','utf8-converter','random-letter','plain-text',
   'random-choice','word-frequency','sort-words','uppercase','png-to-jpg','random-ip','random-date','jpg-to-png','invisible-text',
