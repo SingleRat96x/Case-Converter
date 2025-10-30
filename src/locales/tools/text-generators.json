@@ -371,6 +371,32 @@
         "numbers": "Numbers",
         "none": "None Active"
       }
+    },
+    "extractNumbers": {
+      "title": "Extract Numbers from Text",
+      "description": "Pull every number out of messy text—then copy, export, or calculate",
+      "outputLabel": "Extracted Numbers",
+      "inputPlaceholder": "Paste your text here...",
+      "helperText": "Paste text on the left. Choose what to keep (decimals, %, currency). Click 'Extract numbers'.",
+      "extractButton": "Extract numbers",
+      "copyList": "Copy list",
+      "downloadCSV": "Download CSV",
+      "optionsTitle": "Extraction Options",
+      "numberFormatTitle": "Number Format Options",
+      "keepDecimals": "Keep decimals (e.g., 123.45)",
+      "keepNegatives": "Keep negatives (e.g., -42)",
+      "thousandsSeparators": "Respect thousands separators (, or .)",
+      "scientificNotation": "Accept scientific notation (1.2e6)",
+      "uniqueOnly": "Output unique only",
+      "phoneNumbersMode": "Phone numbers mode (E.164 normalized)",
+      "percentageHandling": "Percentages:",
+      "keepPercent": "Keep %",
+      "stripPercent": "Strip %",
+      "convertDecimal": "→ Decimal",
+      "currencyLabel": "Keep currency symbols:",
+      "outputFormat": "Output Format:",
+      "onePerLine": "One per line",
+      "csvFormat": "CSV"
     }
   },
   "ru": {
@@ -745,6 +771,32 @@
         "numbers": "Числа",
         "none": "Нет Активных"
       }
+    },
+    "extractNumbers": {
+      "title": "Извлечь Числа из Текста",
+      "description": "Извлекайте все числа из текста—затем копируйте, экспортируйте или вычисляйте",
+      "outputLabel": "Извлечённые Числа",
+      "inputPlaceholder": "Вставьте текст сюда...",
+      "helperText": "Вставьте текст слева. Выберите что сохранить (десятичные, %, валюту). Нажмите 'Извлечь числа'.",
+      "extractButton": "Извлечь числа",
+      "copyList": "Копировать список",
+      "downloadCSV": "Скачать CSV",
+      "optionsTitle": "Опции Извлечения",
+      "numberFormatTitle": "Опции Формата Чисел",
+      "keepDecimals": "Сохранить десятичные (например, 123.45)",
+      "keepNegatives": "Сохранить отрицательные (например, -42)",
+      "thousandsSeparators": "Учитывать разделители тысяч (, или .)",
+      "scientificNotation": "Принять научную нотацию (1.2e6)",
+      "uniqueOnly": "Только уникальные",
+      "phoneNumbersMode": "Режим телефонных номеров (E.164 нормализованный)",
+      "percentageHandling": "Проценты:",
+      "keepPercent": "Оставить %",
+      "stripPercent": "Убрать %",
+      "convertDecimal": "→ Десятичная",
+      "currencyLabel": "Сохранить символы валют:",
+      "outputFormat": "Формат Вывода:",
+      "onePerLine": "По одному в строке",
+      "csvFormat": "CSV"
     }
   }
 }

@@ -1532,12 +1532,32 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),
     relatedTools: ['extract-emails-from-text','image-to-text','text-counter','remove-text-formatting']
+  },
+  {
+    slug: 'extract-numbers',
+    pathname: '/tools/extract-numbers',
+    type: 'tool',
+    category: 'text-analysis',
+    i18n: {
+      en: {
+        title: 'Extract Numbers from Text – Free Online Number Extractor',
+        description: 'Paste text and instantly extract numbers (integers, decimals, negatives, currency, percentages). Options for unique values, CSV export, sum/average, and phone-number extraction.',
+        shortDescription: 'Extract numbers from text with advanced options and statistics.',
+      },
+      ru: {
+        title: 'Извлечь Числа из Текста – Бесплатный Онлайн Экстрактор Чисел',
+        description: 'Вставьте текст и мгновенно извлеките числа (целые, десятичные, отрицательные, валюту, проценты). Опции для уникальных значений, CSV экспорта, суммы/среднего и извлечения телефонных номеров.',
+        shortDescription: 'Извлечение чисел из текста с расширенными опциями и статистикой.',
+      }
+    },
+    schema: createAdvancedSchema('extract-numbers', ['Number extraction', 'Phone detection', 'Currency handling', 'Statistics', 'CSV export'], 'Text Input', 'Extracted Numbers', 4.6, 678),
+    relatedTools: ['text-counter', 'word-frequency', 'sentence-counter', 'text-replace']
   }
 ];
 
 // Explicitly declare ALL tool and category slugs so the registry is complete and maintainable
 const TOOL_SLUGS: string[] = [
-  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','text-replace','text-counter','uuid-generator','slugify-url',
+  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','extract-numbers','text-replace','text-counter','uuid-generator','slugify-url',
   'roman-numeral-date','rot13','random-number','url-converter','utm-builder','subscript-text','sentence-case','repeat-text',
   'pig-latin','title-case','sentence-counter','remove-text-formatting','webp-to-jpg','utf8-converter','random-letter','plain-text',
   'random-choice','word-frequency','sort-words','uppercase','png-to-jpg','random-ip','random-date','jpg-to-png','invisible-text',

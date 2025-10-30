@@ -43,6 +43,7 @@ export function Header() {
         { titleKey: 'navigation.textCounter', href: '/tools/text-counter', isPopular: true },
         { titleKey: 'navigation.sentenceCounter', href: '/tools/sentence-counter' },
         { titleKey: 'navigation.wordFrequency', href: '/tools/word-frequency' },
+        { titleKey: 'navigation.extractNumbers', href: '/tools/extract-numbers' },
       ]
     },
     {

@@ -47,6 +47,10 @@ export function Footer() {
     {
       title: t('navigation.wordFrequency'),
       href: currentLocale === 'en' ? '/tools/word-frequency' : '/ru/tools/word-frequency'
+    },
+    {
+      title: t('navigation.extractNumbers'),
+      href: currentLocale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
