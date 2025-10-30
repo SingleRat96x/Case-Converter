@@ -76,6 +76,10 @@ export function Footer() {
       href: currentLocale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation'
     },
     {
+      title: t('navigation.camelCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter'
+    },
+    {
       title: t('navigation.removeTextFormatting'),
       href: currentLocale === 'en' ? '/tools/remove-text-formatting' : '/ru/tools/remove-text-formatting'
     },

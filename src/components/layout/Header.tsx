@@ -67,6 +67,7 @@ export function Header() {
         { titleKey: 'navigation.titleCase', href: '/tools/title-case', isPopular: true },
         { titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case' },
         { titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case' },
+        { titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter' },
         // Text formatting
         { titleKey: 'navigation.boldText', href: '/tools/bold-text' },
         { titleKey: 'navigation.italicText', href: '/tools/italic-text' },
