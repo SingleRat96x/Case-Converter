@@ -9,8 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
-import { Tabs, TabsList, TabsTrigger } from '@/components/ui/tabs';
-import { Settings, Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code } from 'lucide-react';
+import { Settings, Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code, FileJson, FileText, Table } from 'lucide-react';
 import { 
   convertTextToCamelCase, 
   convertJsonKeys, 
@@ -223,14 +222,34 @@ export function CamelCaseConverter() {
       >
         <div className="space-y-4">
           {/* Input Type Tabs */}
-          <div className="w-full">
-            <Tabs defaultValue="text" value={inputType} onValueChange={handleTabChange}>
-              <TabsList className="w-full grid grid-cols-3" aria-label={tool('camelCase.inputTypeLabel') || 'Input Type'}>
-                <TabsTrigger value="text">{tool('camelCase.tabText') || 'Text / Identifiers'}</TabsTrigger>
-                <TabsTrigger value="json">{tool('camelCase.tabJson') || 'JSON'}</TabsTrigger>
-                <TabsTrigger value="csv">{tool('camelCase.tabCsv') || 'CSV Headers'}</TabsTrigger>
-              </TabsList>
-            </Tabs>
+          <div className="flex flex-col sm:flex-row gap-2 justify-center">
+            <Button
+              variant={inputType === 'text' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => handleTabChange('text')}
+              className="w-full sm:w-auto gap-2"
+            >
+              <FileText className="h-4 w-4" />
+              {tool('camelCase.tabText') || 'Text / Identifiers'}
+            </Button>
+            <Button
+              variant={inputType === 'json' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => handleTabChange('json')}
+              className="w-full sm:w-auto gap-2"
+            >
+              <FileJson className="h-4 w-4" />
+              {tool('camelCase.tabJson') || 'JSON'}
+            </Button>
+            <Button
+              variant={inputType === 'csv' ? 'default' : 'outline'}
+              size="sm"
+              onClick={() => handleTabChange('csv')}
+              className="w-full sm:w-auto gap-2"
+            >
+              <Table className="h-4 w-4" />
+              {tool('camelCase.tabCsv') || 'CSV Headers'}
+            </Button>
           </div>
 
           {/* Validation Error Display */}
@@ -402,7 +421,7 @@ export function CamelCaseConverter() {
                   
                   <div className="space-y-3">
                     {/* Preserve Acronyms */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                         {tool('camelCase.preserveAcronyms') || 'Preserve acronyms (e.g., userID)'}
                       </label>
@@ -414,7 +433,7 @@ export function CamelCaseConverter() {
                     </div>
 
                     {/* Safe Characters Only */}
-                    <div className="flex items-center justify-between">
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="safe-chars" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                         {tool('camelCase.safeCharsOnly') || 'Safe characters only (strip non-ASCII)'}
                       </label>
@@ -427,7 +446,7 @@ export function CamelCaseConverter() {
 
                     {/* Trim Whitespace */}
                     {inputType === 'text' && (
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                         <label htmlFor="trim-whitespace" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                           {tool('camelCase.trimWhitespace') || 'Trim & collapse whitespace'}
                         </label>
@@ -450,7 +469,7 @@ export function CamelCaseConverter() {
                     
                     <div className="space-y-3">
                       {/* Convert Keys Only */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                         <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                           {tool('camelCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
                         </label>
@@ -462,7 +481,7 @@ export function CamelCaseConverter() {
                       </div>
 
                       {/* Pretty Print */}
-                      <div className="flex items-center justify-between">
+                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                         <label htmlFor="pretty-print" className="text-sm font-medium cursor-pointer flex-1 pr-2">
                           {tool('camelCase.prettyPrint') || 'Pretty-print output'}
                         </label>
