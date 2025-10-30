@@ -80,6 +80,7 @@ export function Header() {
         { titleKey: 'navigation.textReplace', href: '/tools/text-replace' },
         { titleKey: 'navigation.removeLineBreaks', href: '/tools/remove-line-breaks' },
         { titleKey: 'navigation.removeTextFormatting', href: '/tools/remove-text-formatting' },
+        { titleKey: 'navigation.removePunctuation', href: '/tools/remove-punctuation' },
         { titleKey: 'navigation.duplicateLineRemover', href: '/tools/duplicate-line-remover' },
         { titleKey: 'navigation.sortWords', href: '/tools/sort-words' },
         { titleKey: 'navigation.plainText', href: '/tools/plain-text' },

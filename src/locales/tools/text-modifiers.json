@@ -247,6 +247,44 @@
         "urlsRemoved": "URLs Removed",
         "emailsRemoved": "Emails Removed"
       }
+    },
+    "removePunctuation": {
+      "title": "Remove Punctuation from Text",
+      "description": "Clean, copy-ready text—instantly strip commas, periods, quotes, dashes, and symbols.",
+      "outputLabel": "Text Without Punctuation",
+      "inputPlaceholder": "Enter or paste text to remove punctuation...",
+      "optionsTitle": "Punctuation Removal Options",
+      "smartKeepOptions": "Smart Keep Options",
+      "contentFormattingOptions": "Content & Formatting",
+      "customKeepList": "Custom Keep List",
+      "customKeepListPlaceholder": "e.g., @#&%/",
+      "customKeepListHint": "Enter characters you want to keep (they won't be removed as punctuation)",
+      "warning": "Some options may remove important content. Review the results carefully.",
+      "options": {
+        "keepApostrophes": "Keep apostrophes in contractions",
+        "keepApostrophesDesc": "Preserves apostrophes in words like don't, can't, it's",
+        "keepHyphens": "Keep hyphens/underscores",
+        "keepHyphensDesc": "Preserves hyphens in compound words and underscores in identifiers",
+        "keepEmailUrl": "Keep email/URL punctuation",
+        "keepEmailUrlDesc": "Preserves @ . : / _ in email addresses and web URLs",
+        "keepNumbers": "Keep numbers",
+        "keepNumbersDesc": "Preserves numeric digits (0-9) in the text",
+        "keepLineBreaks": "Keep line breaks",
+        "keepLineBreaksDesc": "Preserves paragraph structure and line formatting"
+      },
+      "analytics": {
+        "title": "Punctuation Removal Analysis",
+        "originalLength": "Original Length",
+        "charactersRemoved": "Removed",
+        "reductionPercentage": "Reduction",
+        "uniquePunctuation": "Unique Marks",
+        "protectedElements": "Protected Elements",
+        "emails": "emails",
+        "urls": "URLs",
+        "contractions": "contractions",
+        "hyphens": "hyphens",
+        "punctuationFound": "Punctuation Found in Text"
+      }
     }
   },
   "ru": {
@@ -496,6 +534,44 @@
         "markdownElements": "Markdown Элементы",
         "urlsRemoved": "URL Удалено",
         "emailsRemoved": "Email Удалено"
+      }
+    },
+    "removePunctuation": {
+      "title": "Удаление Пунктуации из Текста",
+      "description": "Чистый, готовый к копированию текст — мгновенно удаляйте запятые, точки, кавычки, тире и символы.",
+      "outputLabel": "Текст Без Пунктуации",
+      "inputPlaceholder": "Введите или вставьте текст для удаления пунктуации...",
+      "optionsTitle": "Параметры Удаления Пунктуации",
+      "smartKeepOptions": "Умные Параметры Сохранения",
+      "contentFormattingOptions": "Контент и Форматирование",
+      "customKeepList": "Пользовательский Список Сохранения",
+      "customKeepListPlaceholder": "например, @#&%/",
+      "customKeepListHint": "Введите символы, которые хотите сохранить (они не будут удалены как пунктуация)",
+      "warning": "Некоторые параметры могут удалить важный контент. Внимательно проверьте результаты.",
+      "options": {
+        "keepApostrophes": "Сохранять апострофы в сокращениях",
+        "keepApostrophesDesc": "Сохраняет апострофы в словах типа don't, can't, it's",
+        "keepHyphens": "Сохранять дефисы/подчеркивания",
+        "keepHyphensDesc": "Сохраняет дефисы в составных словах и подчеркивания в идентификаторах",
+        "keepEmailUrl": "Сохранять пунктуацию email/URL",
+        "keepEmailUrlDesc": "Сохраняет @ . : / _ в адресах электронной почты и веб-URL",
+        "keepNumbers": "Сохранять числа",
+        "keepNumbersDesc": "Сохраняет цифры (0-9) в тексте",
+        "keepLineBreaks": "Сохранять переносы строк",
+        "keepLineBreaksDesc": "Сохраняет структуру абзацев и форматирование строк"
+      },
+      "analytics": {
+        "title": "Анализ Удаления Пунктуации",
+        "originalLength": "Исходная Длина",
+        "charactersRemoved": "Удалено",
+        "reductionPercentage": "Сокращение",
+        "uniquePunctuation": "Уникальных Знаков",
+        "protectedElements": "Защищенные Элементы",
+        "emails": "email",
+        "urls": "URL",
+        "contractions": "сокращения",
+        "hyphens": "дефисы",
+        "punctuationFound": "Пунктуация в Тексте"
       }
     }
   }

@@ -39,6 +39,7 @@ const toolCategories = [
       { id: 'text-replace', titleKey: 'navigation.textReplace', href: '/tools/text-replace', icon: '🔄' },
       { id: 'remove-line-breaks', titleKey: 'navigation.removeLineBreaks', href: '/tools/remove-line-breaks', icon: '📄' },
       { id: 'remove-text-formatting', titleKey: 'navigation.removeTextFormatting', href: '/tools/remove-text-formatting', icon: '🧹' },
+      { id: 'remove-punctuation', titleKey: 'navigation.removePunctuation', href: '/tools/remove-punctuation', icon: '🔤' },
       { id: 'duplicate-line-remover', titleKey: 'navigation.duplicateLineRemover', href: '/tools/duplicate-line-remover', icon: '🔍' },
       { id: 'sort-words', titleKey: 'navigation.sortWords', href: '/tools/sort-words', icon: '📊' },
       { id: 'plain-text', titleKey: 'navigation.plainText', href: '/tools/plain-text', icon: '📃' },
