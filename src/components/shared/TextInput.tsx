@@ -9,6 +9,7 @@ interface TextInputProps {
   onChange: (value: string) => void;
   placeholder: string;
   className?: string;
+  customLabelComponent?: React.ReactNode;
 }
 
 export function TextInput({ 
@@ -17,15 +18,18 @@ export function TextInput({
   value, 
   onChange, 
   placeholder, 
-  className = "" 
+  className = "",
+  customLabelComponent
 }: TextInputProps) {
   return (
     <div className={`flex-1 ${className}`}>
-      {label && label.trim().length > 0 && (
+      {customLabelComponent ? (
+        customLabelComponent
+      ) : label && label.trim().length > 0 ? (
         <label htmlFor={id} className="block text-sm font-medium text-foreground mb-2">
           {label}
         </label>
-      )}
+      ) : null}
       <textarea
         id={id}
         value={value}

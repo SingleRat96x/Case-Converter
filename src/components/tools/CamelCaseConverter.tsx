@@ -9,6 +9,7 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Settings, Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code, FileJson, FileText, Table } from 'lucide-react';
 import { 
   convertTextToCamelCase, 
@@ -198,11 +199,45 @@ export function CamelCaseConverter() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
+  // Custom label with input type selector
+  const customInputLabel = (
+    <div className="flex items-center gap-2 mb-2">
+      <label htmlFor="text-input" className="text-sm font-medium text-foreground">
+        Input:
+      </label>
+      <Select value={inputType} onValueChange={handleTabChange}>
+        <SelectTrigger className="w-[180px] h-8 text-xs">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="text" className="text-xs">
+            <div className="flex items-center gap-2">
+              <FileText className="h-3 w-3" />
+              Text / Identifiers
+            </div>
+          </SelectItem>
+          <SelectItem value="json" className="text-xs">
+            <div className="flex items-center gap-2">
+              <FileJson className="h-3 w-3" />
+              JSON
+            </div>
+          </SelectItem>
+          <SelectItem value="csv" className="text-xs">
+            <div className="flex items-center gap-2">
+              <Table className="h-3 w-3" />
+              CSV Headers
+            </div>
+          </SelectItem>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+
   return (
     <BaseTextConverter
         title={tool('camelCase.title')}
         description={tool('camelCase.description')}
-        inputLabel={common('labels.inputText')}
+        inputLabel=""
         outputLabel={tool('camelCase.outputLabel')}
         inputPlaceholder={tool('camelCase.inputPlaceholder')}
         copyText={common('buttons.copy')}
@@ -219,39 +254,9 @@ export function CamelCaseConverter() {
         showAnalytics={false}
         mobileLayout="2x2"
         onDownloadPrimary={handleDownloadPrimary}
+        customInputLabel={customInputLabel}
       >
         <div className="space-y-4">
-          {/* Input Type Tabs */}
-          <div className="flex flex-col sm:flex-row gap-2 justify-center">
-            <Button
-              variant={inputType === 'text' ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => handleTabChange('text')}
-              className="w-full sm:w-auto gap-2"
-            >
-              <FileText className="h-4 w-4" />
-              {tool('camelCase.tabText') || 'Text / Identifiers'}
-            </Button>
-            <Button
-              variant={inputType === 'json' ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => handleTabChange('json')}
-              className="w-full sm:w-auto gap-2"
-            >
-              <FileJson className="h-4 w-4" />
-              {tool('camelCase.tabJson') || 'JSON'}
-            </Button>
-            <Button
-              variant={inputType === 'csv' ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => handleTabChange('csv')}
-              className="w-full sm:w-auto gap-2"
-            >
-              <Table className="h-4 w-4" />
-              {tool('camelCase.tabCsv') || 'CSV Headers'}
-            </Button>
-          </div>
-
           {/* Validation Error Display */}
           {validationError && (
             <div className="rounded-md bg-red-50 dark:bg-red-900/20 p-4 border border-red-200 dark:border-red-800">
@@ -419,7 +424,7 @@ export function CamelCaseConverter() {
                     {tool('camelCase.generalOptions') || 'General Options'}
                   </Label>
                   
-                  <div className="space-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     {/* Preserve Acronyms */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer flex-1 pr-2">
