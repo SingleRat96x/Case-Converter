@@ -215,7 +215,11 @@ export function ExtractNumbersTool() {
 
   const handleDownloadText = useCallback(() => {
     if (!extractedNumbers) return;
-    downloadTextAsFile(extractedNumbers, 'extracted-numbers.txt');
+    const brandedContent = `Downloaded from TextCaseConverter.net
+=====================================
+
+${extractedNumbers}`;
+    downloadTextAsFile(brandedContent, 'extracted-numbers.txt');
   }, [extractedNumbers]);
 
   const toggleCurrency = (symbol: string) => {
