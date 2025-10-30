@@ -24,6 +24,13 @@ const analysisCounterTools = [
     description: 'Professional sentence counting tool with structure analysis and readability metrics',
     icon: '📝',
     href: '/tools/sentence-counter'
+  },
+  {
+    id: 'extract-numbers',
+    title: 'Extract Numbers from Text',
+    description: 'Extract all numbers from text with advanced options for decimals, currency, percentages, and statistics',
+    icon: '🔢',
+    href: '/tools/extract-numbers'
   }
 ];
 

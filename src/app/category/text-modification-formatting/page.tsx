@@ -82,6 +82,13 @@ const textModificationTools = [
     href: '/tools/remove-line-breaks'
   },
   {
+    id: 'remove-punctuation',
+    title: 'Remove Punctuation',
+    description: 'Strip punctuation marks while preserving words and custom symbols',
+    icon: '🧼',
+    href: '/tools/remove-punctuation'
+  },
+  {
     id: 'remove-text-formatting',
     title: 'Remove Text Formatting',
     description: 'Convert formatted text to plain text, removing all styling',
@@ -115,6 +122,13 @@ const textModificationTools = [
     description: 'Extract and validate email addresses from any text with advanced filtering',
     icon: '📧',
     href: '/tools/extract-emails-from-text'
+  },
+  {
+    id: 'camel-case-converter',
+    title: 'Camel Case Converter',
+    description: 'Convert text, identifiers, and JSON keys to camelCase with advanced options',
+    icon: '🐫',
+    href: '/tools/camel-case-converter'
   }
 ];
 

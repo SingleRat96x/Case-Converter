@@ -1273,6 +1273,26 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['plain-text','remove-text-formatting','text-replace']
   },
   {
+    slug: 'remove-punctuation',
+    pathname: '/tools/remove-punctuation',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Remove Punctuation from Text – Free Online Punctuation Remover',
+        description: 'Paste your text and instantly remove punctuation marks (.,!?;:–—"\' …) while keeping words intact. Options to keep selected symbols, numbers, and line breaks.',
+        shortDescription: 'Remove punctuation marks with selective preservation options.',
+      },
+      ru: {
+        title: 'Удалить Пунктуацию из Текста – Бесплатный Онлайн Инструмент',
+        description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"\' …) сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
+        shortDescription: 'Удаление знаков пунктуации с выборочным сохранением.',
+      }
+    },
+    schema: createAdvancedSchema('remove-punctuation', ['Selective removal', 'Custom keep list', 'Email/URL protection'], 'Text Input', 'Clean Text', 4.5, 567),
+    relatedTools: ['remove-line-breaks', 'remove-text-formatting', 'plain-text', 'text-replace']
+  },
+  {
     slug: 'duplicate-line-remover',
     pathname: '/tools/duplicate-line-remover',
     type: 'tool',
@@ -1512,12 +1532,52 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),
     relatedTools: ['extract-emails-from-text','image-to-text','text-counter','remove-text-formatting']
+  },
+  {
+    slug: 'extract-numbers',
+    pathname: '/tools/extract-numbers',
+    type: 'tool',
+    category: 'text-analysis',
+    i18n: {
+      en: {
+        title: 'Extract Numbers from Text – Free Online Number Extractor',
+        description: 'Paste text and instantly extract numbers (integers, decimals, negatives, currency, percentages). Options for unique values, CSV export, sum/average, and phone-number extraction.',
+        shortDescription: 'Extract numbers from text with advanced options and statistics.',
+      },
+      ru: {
+        title: 'Извлечь Числа из Текста – Бесплатный Онлайн Экстрактор Чисел',
+        description: 'Вставьте текст и мгновенно извлеките числа (целые, десятичные, отрицательные, валюту, проценты). Опции для уникальных значений, CSV экспорта, суммы/среднего и извлечения телефонных номеров.',
+        shortDescription: 'Извлечение чисел из текста с расширенными опциями и статистикой.',
+      }
+    },
+    schema: createAdvancedSchema('extract-numbers', ['Number extraction', 'Phone detection', 'Currency handling', 'Statistics', 'CSV export'], 'Text Input', 'Extracted Numbers', 4.6, 678),
+    relatedTools: ['text-counter', 'word-frequency', 'sentence-counter', 'text-replace']
+  },
+  {
+    slug: 'camel-case-converter',
+    pathname: '/tools/camel-case-converter',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Camel Case Converter – Text & JSON Keys (Snake → camelCase Online)',
+        description: 'Convert text, identifiers, and JSON keys to camelCase online. Paste text or JSON, handle nested objects/arrays, keep acronyms, and switch between snake_case, kebab-case, PascalCase, and camelCase.',
+        shortDescription: 'Convert text and JSON keys to camelCase with advanced options.',
+      },
+      ru: {
+        title: 'Конвертер CamelCase – Текст и Ключи JSON (Snake → camelCase Онлайн)',
+        description: 'Преобразуйте текст, идентификаторы и ключи JSON в camelCase онлайн. Вставьте текст или JSON, обрабатывайте вложенные объекты/массивы, сохраняйте акронимы и переключайтесь между snake_case, kebab-case, PascalCase и camelCase.',
+        shortDescription: 'Преобразование текста и ключей JSON в camelCase с расширенными опциями.',
+      }
+    },
+    schema: createAdvancedSchema('camel-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'Multiple case styles'], 'Text/JSON Input', 'camelCase Output', 4.7, 892),
+    relatedTools: ['remove-punctuation', 'slugify-url', 'text-replace', 'plain-text']
   }
 ];
 
 // Explicitly declare ALL tool and category slugs so the registry is complete and maintainable
 const TOOL_SLUGS: string[] = [
-  'webp-to-png','png-to-webp','random-month','remove-line-breaks','text-replace','text-counter','uuid-generator','slugify-url',
+  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','extract-numbers','camel-case-converter','text-replace','text-counter','uuid-generator','slugify-url',
   'roman-numeral-date','rot13','random-number','url-converter','utm-builder','subscript-text','sentence-case','repeat-text',
   'pig-latin','title-case','sentence-counter','remove-text-formatting','webp-to-jpg','utf8-converter','random-letter','plain-text',
   'random-choice','word-frequency','sort-words','uppercase','png-to-jpg','random-ip','random-date','jpg-to-png','invisible-text',

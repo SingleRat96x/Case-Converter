@@ -33,6 +33,15 @@ interface BaseTextConverterProps {
   onFileUploaded?: (content: string) => void;
   actionButtonsPosition?: 'after-children' | 'before-children';
   mobileLayout?: 'row' | '2x2';
+  // Optional second download button (e.g., for CSV vs TXT)
+  onDownloadSecondary?: () => void;
+  downloadSecondaryText?: string;
+  downloadSecondaryFileName?: string;
+  showSecondaryDownload?: boolean;
+  // Optional custom download handler (overrides default)
+  onDownloadPrimary?: () => void;
+  // Optional custom label component for input
+  customInputLabel?: ReactNode;
 }
 
 export function BaseTextConverter({
@@ -57,7 +66,13 @@ export function BaseTextConverter({
   onConvertedTextUpdate,
   onFileUploaded,
   actionButtonsPosition = 'after-children',
-  mobileLayout = 'row'
+  mobileLayout = 'row',
+  onDownloadSecondary,
+  downloadSecondaryText,
+  downloadSecondaryFileName,
+  showSecondaryDownload = false,
+  onDownloadPrimary,
+  customInputLabel
 }: BaseTextConverterProps) {
   const [feedback, setFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -82,8 +97,18 @@ export function BaseTextConverter({
   };
 
   const handleDownload = () => {
-    if (convertedText) {
+    if (onDownloadPrimary) {
+      onDownloadPrimary();
+    } else if (convertedText) {
       downloadTextAsFile(convertedText, downloadFileName);
+    }
+  };
+
+  const handleDownloadSecondary = () => {
+    if (onDownloadSecondary) {
+      onDownloadSecondary();
+    } else if (convertedText && downloadSecondaryFileName) {
+      downloadTextAsFile(convertedText, downloadSecondaryFileName);
     }
   };
 
@@ -148,6 +173,7 @@ export function BaseTextConverter({
             value={text}
             onChange={onTextChange}
             placeholder={inputPlaceholder}
+            customLabelComponent={customInputLabel}
           />
           
           <TextOutput
@@ -172,6 +198,9 @@ export function BaseTextConverter({
             isUploading={isUploading}
             hasContent={!!convertedText}
             mobileLayout={mobileLayout}
+            onDownloadReport={showSecondaryDownload ? handleDownloadSecondary : undefined}
+            reportText={downloadSecondaryText}
+            showReport={showSecondaryDownload}
           />
         )}
 
@@ -192,6 +221,9 @@ export function BaseTextConverter({
             isUploading={isUploading}
             hasContent={!!convertedText}
             mobileLayout={mobileLayout}
+            onDownloadReport={showSecondaryDownload ? handleDownloadSecondary : undefined}
+            reportText={downloadSecondaryText}
+            showReport={showSecondaryDownload}
           />
         )}
 
