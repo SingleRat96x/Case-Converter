@@ -114,12 +114,7 @@ export function RemovePunctuationConverter() {
     return result;
   }, []);
 
-  const handleTextChange = (newText: string) => {
-    setText(newText);
-    updateConvertedText(newText);
-  };
-
-  const updateConvertedText = (inputText: string = text) => {
+  const updateConvertedText = React.useCallback((inputText: string = text) => {
     const result = removePunctuation(inputText, {
       keepApostrophes,
       keepHyphens,
@@ -129,6 +124,11 @@ export function RemovePunctuationConverter() {
       customKeepList,
     });
     setConvertedText(result);
+  }, [text, keepApostrophes, keepHyphens, keepEmailURL, keepNumbers, keepLineBreaks, customKeepList, removePunctuation]);
+
+  const handleTextChange = (newText: string) => {
+    setText(newText);
+    updateConvertedText(newText);
   };
 
   // Update whenever options change
@@ -136,7 +136,7 @@ export function RemovePunctuationConverter() {
     if (text) {
       updateConvertedText();
     }
-  }, [keepApostrophes, keepHyphens, keepEmailURL, keepNumbers, keepLineBreaks, customKeepList]);
+  }, [text, updateConvertedText]);
 
   const handleFileUploaded = (content: string) => {
     updateConvertedText(content);
