@@ -32,6 +32,10 @@ export function Footer() {
     {
       title: t('navigation.alternatingCase'),
       href: currentLocale === 'en' ? '/tools/alternating-case' : '/ru/tools/alternating-case'
+    },
+    {
+      title: t('navigation.camelCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
@@ -74,10 +78,6 @@ export function Footer() {
     {
       title: t('navigation.removePunctuation'),
       href: currentLocale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation'
-    },
-    {
-      title: t('navigation.camelCaseConverter'),
-      href: currentLocale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter'
     },
     {
       title: t('navigation.removeTextFormatting'),

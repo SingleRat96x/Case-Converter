@@ -36,6 +36,19 @@ export function Header() {
   // Define navigation structure for mega menu
   const navigationCategories: ToolCategory[] = [
     {
+      id: 'convert-case-tools',
+      titleKey: 'navigation.convertCaseTools',
+      icon: <Type className="h-4 w-4" />,
+      items: [
+        { titleKey: 'navigation.uppercase', href: '/tools/uppercase', isPopular: true },
+        { titleKey: 'navigation.lowercase', href: '/tools/lowercase', isPopular: true },
+        { titleKey: 'navigation.titleCase', href: '/tools/title-case', isPopular: true },
+        { titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case' },
+        { titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case' },
+        { titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter' },
+      ]
+    },
+    {
       id: 'analysis-counter-tools',
       titleKey: 'navigation.analysisCounterTools',
       icon: <BarChart3 className="h-4 w-4" />,
@@ -59,15 +72,8 @@ export function Header() {
     {
       id: 'text-modification-formatting',
       titleKey: 'navigation.textModificationFormatting',
-      icon: <Type className="h-4 w-4" />,
+      icon: <Settings className="h-4 w-4" />,
       items: [
-        // Case converters
-        { titleKey: 'navigation.uppercase', href: '/tools/uppercase', isPopular: true },
-        { titleKey: 'navigation.lowercase', href: '/tools/lowercase', isPopular: true },
-        { titleKey: 'navigation.titleCase', href: '/tools/title-case', isPopular: true },
-        { titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case' },
-        { titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case' },
-        { titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter' },
         // Text formatting
         { titleKey: 'navigation.boldText', href: '/tools/bold-text' },
         { titleKey: 'navigation.italicText', href: '/tools/italic-text' },
