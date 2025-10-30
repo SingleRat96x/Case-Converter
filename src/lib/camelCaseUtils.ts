@@ -7,7 +7,7 @@ export type ConversionMode = 'snake-to-camel' | 'kebab-to-camel' | 'title-to-cam
 export type CaseStyle = 'camelCase' | 'PascalCase';
 
 export interface CamelCaseOptions {
-  mode: ConversionMode;
+  mode: ConversionMode | null;
   caseStyle: CaseStyle;
   preserveAcronyms: boolean;
   safeCharsOnly: boolean;
@@ -107,7 +107,7 @@ function camelToSnake(text: string): string {
  * Main text conversion function
  */
 export function convertTextToCamelCase(text: string, options: CamelCaseOptions): string {
-  if (!text) return text;
+  if (!text || !options.mode) return text;
   
   let result = text;
   

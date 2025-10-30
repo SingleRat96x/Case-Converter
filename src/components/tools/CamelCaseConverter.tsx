@@ -37,7 +37,7 @@ export function CamelCaseConverter() {
   } | null>(null);
   
   // Options state
-  const [mode, setMode] = useState<ConversionMode>('snake-to-camel');
+  const [mode, setMode] = useState<ConversionMode | null>(null);
   const [caseStyle, setCaseStyle] = useState<CaseStyle>('camelCase');
   const [preserveAcronyms, setPreserveAcronyms] = useState(true);
   const [safeCharsOnly, setSafeCharsOnly] = useState(false);
@@ -289,7 +289,7 @@ export function CamelCaseConverter() {
                   ? 'bg-red-600 hover:bg-red-700 dark:bg-red-600 dark:hover:bg-red-700'
                   : ''
               }`}
-              disabled={!text || isProcessing || !!validationError}
+              disabled={!text || !mode || isProcessing || !!validationError}
             >
               {isProcessing ? (
                 <>
@@ -347,8 +347,11 @@ export function CamelCaseConverter() {
                   <div className="flex items-center gap-2 pb-2 border-b border-border/50">
                     <Settings className="h-4 w-4 text-primary" />
                     <h3 className="text-base font-semibold text-foreground">
-                      {tool('camelCase.modeTitle') || 'Conversion Mode'}
+                      {tool('camelCase.sourceFormatTitle') || 'Source Format'}
                     </h3>
+                    <span className="text-xs text-muted-foreground">
+                      ({tool('camelCase.sourceFormatHint') || 'How is your input formatted?'})
+                    </span>
                   </div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
@@ -359,7 +362,7 @@ export function CamelCaseConverter() {
                       className="justify-start gap-2"
                     >
                       <Code className="h-4 w-4" />
-                      {tool('camelCase.modeSnake') || 'snake_case → camelCase'}
+                      {tool('camelCase.modeSnake') || 'snake_case'}
                     </Button>
                     <Button
                       variant={mode === 'kebab-to-camel' ? 'default' : 'outline'}
@@ -368,7 +371,7 @@ export function CamelCaseConverter() {
                       className="justify-start gap-2"
                     >
                       <ArrowRight className="h-4 w-4" />
-                      {tool('camelCase.modeKebab') || 'kebab-case → camelCase'}
+                      {tool('camelCase.modeKebab') || 'kebab-case'}
                     </Button>
                     <Button
                       variant={mode === 'title-to-camel' ? 'default' : 'outline'}
@@ -377,7 +380,7 @@ export function CamelCaseConverter() {
                       className="justify-start gap-2"
                     >
                       <Type className="h-4 w-4" />
-                      {tool('camelCase.modeTitle') || 'Title Case → camelCase'}
+                      {tool('camelCase.modeTitleCase') || 'Title Case / Spaces'}
                     </Button>
                     <Button
                       variant={mode === 'reverse' ? 'default' : 'outline'}
@@ -386,7 +389,7 @@ export function CamelCaseConverter() {
                       className="justify-start gap-2"
                     >
                       <ArrowLeftRight className="h-4 w-4" />
-                      {tool('camelCase.modeReverse') || 'camelCase → snake_case'}
+                      {tool('camelCase.modeReverse') || 'Reverse (camelCase → snake_case)'}
                     </Button>
                   </div>
                 </div>
