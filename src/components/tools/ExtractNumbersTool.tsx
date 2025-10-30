@@ -7,7 +7,8 @@ import { useToolTranslations } from '@/lib/i18n/hooks';
 import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
-import { Settings, Sparkles, Download, Copy } from 'lucide-react';
+import { Settings, Sparkles, Check } from 'lucide-react';
+import { downloadTextAsFile } from '@/lib/utils';
 
 interface ExtractionOptions {
   keepDecimals: boolean;
@@ -26,6 +27,7 @@ export function ExtractNumbersTool() {
   const [text, setText] = useState('');
   const [extractedNumbers, setExtractedNumbers] = useState('');
   const [isAccordionOpen, setIsAccordionOpen] = useState(true);
+  const [ctaButtonState, setCtaButtonState] = useState<'idle' | 'success' | 'no-results'>('idle');
   
   // Options state
   const [options, setOptions] = useState<ExtractionOptions>({
@@ -187,6 +189,15 @@ export function ExtractNumbersTool() {
     } else {
       setExtractedNumbers(numbers.join('\n'));
     }
+
+    // Show feedback
+    if (numbers.length > 0) {
+      setCtaButtonState('success');
+      setTimeout(() => setCtaButtonState('idle'), 2000);
+    } else {
+      setCtaButtonState('no-results');
+      setTimeout(() => setCtaButtonState('idle'), 2000);
+    }
   }, [text, options, extractNumbers]);
 
   const handleFileUploaded = (content: string) => {
@@ -194,26 +205,17 @@ export function ExtractNumbersTool() {
     setExtractedNumbers(numbers.join('\n'));
   };
 
-  const handleCopyList = useCallback(() => {
-    if (extractedNumbers) {
-      navigator.clipboard.writeText(extractedNumbers);
-    }
-  }, [extractedNumbers]);
-
   const handleDownloadCSV = useCallback(() => {
     if (!extractedNumbers) return;
     
     const numbers = extractedNumbers.split(/[\n,]+/).map(n => n.trim()).filter(n => n);
     const csvContent = 'number\n' + numbers.join('\n');
-    const blob = new Blob([csvContent], { type: 'text/csv;charset=utf-8;' });
-    const link = document.createElement('a');
-    const url = URL.createObjectURL(blob);
-    link.setAttribute('href', url);
-    link.setAttribute('download', 'extracted-numbers.csv');
-    link.style.visibility = 'hidden';
-    document.body.appendChild(link);
-    link.click();
-    document.body.removeChild(link);
+    downloadTextAsFile(csvContent, 'extracted-numbers.csv');
+  }, [extractedNumbers]);
+
+  const handleDownloadText = useCallback(() => {
+    if (!extractedNumbers) return;
+    downloadTextAsFile(extractedNumbers, 'extracted-numbers.txt');
   }, [extractedNumbers]);
 
   const toggleCurrency = (symbol: string) => {
@@ -247,12 +249,12 @@ export function ExtractNumbersTool() {
       inputLabel={common('labels.inputText')}
       outputLabel={tool('extractNumbers.outputLabel')}
       inputPlaceholder={tool('extractNumbers.inputPlaceholder')}
-      copyText={common('buttons.copy')}
+      copyText={tool('extractNumbers.copyList')}
       clearText={common('buttons.clear')}
-      downloadText={common('buttons.download')}
+      downloadText={tool('extractNumbers.downloadCSV')}
       uploadText={common('buttons.upload')}
       uploadDescription=""
-      downloadFileName="extracted-numbers.txt"
+      downloadFileName="extracted-numbers.csv"
       onTextChange={handleTextChange}
       text={text}
       convertedText={extractedNumbers}
@@ -260,6 +262,10 @@ export function ExtractNumbersTool() {
       onFileUploaded={handleFileUploaded}
       showAnalytics={false}
       mobileLayout="2x2"
+      onDownloadPrimary={handleDownloadCSV}
+      onDownloadSecondary={handleDownloadText}
+      downloadSecondaryText="Download TXT"
+      showSecondaryDownload={true}
     >
       <div className="space-y-3">
         {/* Primary CTA Button */}
@@ -268,11 +274,31 @@ export function ExtractNumbersTool() {
             onClick={handleExtractNumbers}
             variant="default"
             size="lg"
-            className="gap-2"
+            className={`gap-2 transition-all duration-300 ${
+              ctaButtonState === 'success'
+                ? 'bg-green-600 hover:bg-green-700 dark:bg-green-600 dark:hover:bg-green-700'
+                : ctaButtonState === 'no-results'
+                ? 'bg-orange-600 hover:bg-orange-700 dark:bg-orange-600 dark:hover:bg-orange-700'
+                : ''
+            }`}
             disabled={!text}
           >
-            <Sparkles className="h-4 w-4" />
-            {tool('extractNumbers.extractButton')}
+            {ctaButtonState === 'success' ? (
+              <>
+                <Check className="h-4 w-4" />
+                {tool('extractNumbers.numbersExtracted') || 'Numbers extracted!'}
+              </>
+            ) : ctaButtonState === 'no-results' ? (
+              <>
+                <Sparkles className="h-4 w-4" />
+                {tool('extractNumbers.noNumbersFound') || 'No numbers found'}
+              </>
+            ) : (
+              <>
+                <Sparkles className="h-4 w-4" />
+                {tool('extractNumbers.extractButton')}
+              </>
+            )}
           </Button>
         </div>
 
@@ -451,30 +477,6 @@ export function ExtractNumbersTool() {
             </div>
           </AccordionItem>
         </Accordion>
-
-        {/* Secondary Actions */}
-        {extractedNumbers && (
-          <div className="flex flex-wrap justify-center gap-2">
-            <Button
-              onClick={handleCopyList}
-              variant="outline"
-              size="sm"
-              className="gap-2"
-            >
-              <Copy className="h-3 w-3" />
-              {tool('extractNumbers.copyList')}
-            </Button>
-            <Button
-              onClick={handleDownloadCSV}
-              variant="outline"
-              size="sm"
-              className="gap-2"
-            >
-              <Download className="h-3 w-3" />
-              {tool('extractNumbers.downloadCSV')}
-            </Button>
-          </div>
-        )}
 
         {/* Number Statistics */}
         {extractedNumbers && (

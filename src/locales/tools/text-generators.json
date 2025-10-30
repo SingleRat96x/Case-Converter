@@ -396,7 +396,9 @@
       "currencyLabel": "Keep currency symbols:",
       "outputFormat": "Output Format:",
       "onePerLine": "One per line",
-      "csvFormat": "CSV"
+      "csvFormat": "CSV",
+      "numbersExtracted": "Numbers extracted!",
+      "noNumbersFound": "No numbers found"
     }
   },
   "ru": {
@@ -796,7 +798,9 @@
       "currencyLabel": "Сохранить символы валют:",
       "outputFormat": "Формат Вывода:",
       "onePerLine": "По одному в строке",
-      "csvFormat": "CSV"
+      "csvFormat": "CSV",
+      "numbersExtracted": "Числа извлечены!",
+      "noNumbersFound": "Числа не найдены"
     }
   }
 }
