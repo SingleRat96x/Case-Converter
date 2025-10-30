@@ -6,11 +6,15 @@ import { TextAnalytics } from '@/components/shared/TextAnalytics';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
+import { Switch } from '@/components/ui/switch';
+import { Accordion, AccordionItem } from '@/components/ui/accordion';
+import { Settings, Sparkles } from 'lucide-react';
 
 export function RemovePunctuationConverter() {
   const { common, tool } = useToolTranslations('tools/text-generators');
   const [text, setText] = useState('');
   const [convertedText, setConvertedText] = useState('');
+  const [isAccordionOpen, setIsAccordionOpen] = useState(true);
   
   // Options state
   const [keepApostrophes, setKeepApostrophes] = useState(true);
@@ -114,8 +118,12 @@ export function RemovePunctuationConverter() {
     return result;
   }, []);
 
-  const updateConvertedText = React.useCallback((inputText: string = text) => {
-    const result = removePunctuation(inputText, {
+  const handleTextChange = (newText: string) => {
+    setText(newText);
+  };
+
+  const handleRemovePunctuation = useCallback(() => {
+    const result = removePunctuation(text, {
       keepApostrophes,
       keepHyphens,
       keepEmailURL,
@@ -126,21 +134,35 @@ export function RemovePunctuationConverter() {
     setConvertedText(result);
   }, [text, keepApostrophes, keepHyphens, keepEmailURL, keepNumbers, keepLineBreaks, customKeepList, removePunctuation]);
 
-  const handleTextChange = (newText: string) => {
-    setText(newText);
-    updateConvertedText(newText);
-  };
-
-  // Update whenever options change
-  React.useEffect(() => {
-    if (text) {
-      updateConvertedText();
-    }
-  }, [text, updateConvertedText]);
-
   const handleFileUploaded = (content: string) => {
-    updateConvertedText(content);
+    const result = removePunctuation(content, {
+      keepApostrophes,
+      keepHyphens,
+      keepEmailURL,
+      keepNumbers,
+      keepLineBreaks,
+      customKeepList,
+    });
+    setConvertedText(result);
   };
+
+  // Handle responsive accordion behavior
+  React.useEffect(() => {
+    const handleResize = () => {
+      if (window.innerWidth >= 640) { // sm breakpoint
+        setIsAccordionOpen(true);
+      } else {
+        setIsAccordionOpen(false);
+      }
+    };
+
+    // Set initial state
+    handleResize();
+
+    // Add event listener
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   return (
     <BaseTextConverter
@@ -163,142 +185,146 @@ export function RemovePunctuationConverter() {
       showAnalytics={false}
       mobileLayout="2x2"
     >
-      <div className="space-y-4">
+      <div className="space-y-3">
+        {/* Primary CTA Button */}
+        <div className="flex justify-center">
+          <Button
+            onClick={handleRemovePunctuation}
+            variant="default"
+            size="lg"
+            className="gap-2"
+            disabled={!text}
+          >
+            <Sparkles className="h-4 w-4" />
+            {tool('removePunctuation.removeButton')}
+          </Button>
+        </div>
+
         {/* Helper Text */}
         <div className="text-center text-sm text-muted-foreground">
           {tool('removePunctuation.helperText')}
         </div>
 
-        {/* Options Grid */}
-        <div className="border rounded-lg p-4 bg-card space-y-3">
-          <h3 className="text-sm font-semibold text-foreground mb-3 text-center">
-            {tool('removePunctuation.optionsTitle') || 'Options: Choose what to keep'}
-          </h3>
-          
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-            {/* Keep Apostrophes */}
-            <Button
-              variant={keepApostrophes ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setKeepApostrophes(!keepApostrophes)}
-              className="justify-start gap-2 h-auto py-3"
-            >
-              <div className={`h-4 w-4 rounded border flex-shrink-0 ${keepApostrophes ? 'bg-primary border-primary' : 'border-input'}`}>
-                {keepApostrophes && (
-                  <svg viewBox="0 0 16 16" className="w-full h-full text-primary-foreground">
-                    <path
-                      fill="currentColor"
-                      d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
-                    />
-                  </svg>
-                )}
-              </div>
-              <span className="text-left text-xs flex-1">{tool('removePunctuation.keepApostrophes')}</span>
-            </Button>
+        {/* Options Accordion */}
+        <Accordion className="w-full">
+          <AccordionItem 
+            title={tool('removePunctuation.optionsTitle')}
+            defaultOpen={isAccordionOpen}
+            className="w-full"
+          >
+            <div className="space-y-6">
+              {/* Options Section */}
+              <div className="space-y-4">
+                <div className="flex items-center gap-2 pb-2 border-b border-border/50">
+                  <Settings className="h-4 w-4 text-primary" />
+                  <h3 className="text-base font-semibold text-foreground">{tool('removePunctuation.preserveTitle') || 'Preservation Options'}</h3>
+                </div>
+                
+                <div className="space-y-4">
+                  {/* Toggle Options Grid */}
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    {/* Keep Apostrophes */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label 
+                        htmlFor="keep-apostrophes" 
+                        className="text-sm font-medium cursor-pointer flex-1 pr-2"
+                      >
+                        {tool('removePunctuation.keepApostrophes')}
+                      </label>
+                      <Switch
+                        id="keep-apostrophes"
+                        checked={keepApostrophes}
+                        onCheckedChange={setKeepApostrophes}
+                      />
+                    </div>
 
-            {/* Keep Hyphens */}
-            <Button
-              variant={keepHyphens ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setKeepHyphens(!keepHyphens)}
-              className="justify-start gap-2 h-auto py-3"
-            >
-              <div className={`h-4 w-4 rounded border flex-shrink-0 ${keepHyphens ? 'bg-primary border-primary' : 'border-input'}`}>
-                {keepHyphens && (
-                  <svg viewBox="0 0 16 16" className="w-full h-full text-primary-foreground">
-                    <path
-                      fill="currentColor"
-                      d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
-                    />
-                  </svg>
-                )}
-              </div>
-              <span className="text-left text-xs flex-1">{tool('removePunctuation.keepHyphens')}</span>
-            </Button>
+                    {/* Keep Hyphens */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label 
+                        htmlFor="keep-hyphens" 
+                        className="text-sm font-medium cursor-pointer flex-1 pr-2"
+                      >
+                        {tool('removePunctuation.keepHyphens')}
+                      </label>
+                      <Switch
+                        id="keep-hyphens"
+                        checked={keepHyphens}
+                        onCheckedChange={setKeepHyphens}
+                      />
+                    </div>
 
-            {/* Keep Email/URL */}
-            <Button
-              variant={keepEmailURL ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setKeepEmailURL(!keepEmailURL)}
-              className="justify-start gap-2 h-auto py-3"
-            >
-              <div className={`h-4 w-4 rounded border flex-shrink-0 ${keepEmailURL ? 'bg-primary border-primary' : 'border-input'}`}>
-                {keepEmailURL && (
-                  <svg viewBox="0 0 16 16" className="w-full h-full text-primary-foreground">
-                    <path
-                      fill="currentColor"
-                      d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
-                    />
-                  </svg>
-                )}
-              </div>
-              <span className="text-left text-xs flex-1">{tool('removePunctuation.keepEmailURL')}</span>
-            </Button>
+                    {/* Keep Email/URL */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label 
+                        htmlFor="keep-email-url" 
+                        className="text-sm font-medium cursor-pointer flex-1 pr-2"
+                      >
+                        {tool('removePunctuation.keepEmailURL')}
+                      </label>
+                      <Switch
+                        id="keep-email-url"
+                        checked={keepEmailURL}
+                        onCheckedChange={setKeepEmailURL}
+                      />
+                    </div>
 
-            {/* Keep Numbers */}
-            <Button
-              variant={keepNumbers ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setKeepNumbers(!keepNumbers)}
-              className="justify-start gap-2 h-auto py-3"
-            >
-              <div className={`h-4 w-4 rounded border flex-shrink-0 ${keepNumbers ? 'bg-primary border-primary' : 'border-input'}`}>
-                {keepNumbers && (
-                  <svg viewBox="0 0 16 16" className="w-full h-full text-primary-foreground">
-                    <path
-                      fill="currentColor"
-                      d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
-                    />
-                  </svg>
-                )}
-              </div>
-              <span className="text-left text-xs flex-1">{tool('removePunctuation.keepNumbers')}</span>
-            </Button>
+                    {/* Keep Numbers */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label 
+                        htmlFor="keep-numbers" 
+                        className="text-sm font-medium cursor-pointer flex-1 pr-2"
+                      >
+                        {tool('removePunctuation.keepNumbers')}
+                      </label>
+                      <Switch
+                        id="keep-numbers"
+                        checked={keepNumbers}
+                        onCheckedChange={setKeepNumbers}
+                      />
+                    </div>
 
-            {/* Keep Line Breaks */}
-            <Button
-              variant={keepLineBreaks ? 'default' : 'outline'}
-              size="sm"
-              onClick={() => setKeepLineBreaks(!keepLineBreaks)}
-              className="justify-start gap-2 h-auto py-3 sm:col-span-2"
-            >
-              <div className={`h-4 w-4 rounded border flex-shrink-0 ${keepLineBreaks ? 'bg-primary border-primary' : 'border-input'}`}>
-                {keepLineBreaks && (
-                  <svg viewBox="0 0 16 16" className="w-full h-full text-primary-foreground">
-                    <path
-                      fill="currentColor"
-                      d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
-                    />
-                  </svg>
-                )}
-              </div>
-              <span className="text-left text-xs flex-1">{tool('removePunctuation.keepLineBreaks')}</span>
-            </Button>
-          </div>
+                    {/* Keep Line Breaks */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow sm:col-span-2">
+                      <label 
+                        htmlFor="keep-line-breaks" 
+                        className="text-sm font-medium cursor-pointer flex-1 pr-2"
+                      >
+                        {tool('removePunctuation.keepLineBreaks')}
+                      </label>
+                      <Switch
+                        id="keep-line-breaks"
+                        checked={keepLineBreaks}
+                        onCheckedChange={setKeepLineBreaks}
+                      />
+                    </div>
+                  </div>
 
-          {/* Custom Keep List */}
-          <div className="pt-2 space-y-2">
-            <label className="text-sm font-medium text-foreground">
-              {tool('removePunctuation.customKeepLabel')}
-            </label>
-            <Input
-              type="text"
-              placeholder={tool('removePunctuation.customKeepPlaceholder')}
-              value={customKeepList}
-              onChange={(e) => setCustomKeepList(e.target.value)}
-              className="text-sm"
-            />
-            <p className="text-xs text-muted-foreground">
-              {tool('removePunctuation.customKeepHint') || 'Enter any additional characters you want to preserve'}
-            </p>
-          </div>
-        </div>
+                  {/* Custom Keep List */}
+                  <div className="pt-2 space-y-2">
+                    <label className="text-sm font-medium text-foreground">
+                      {tool('removePunctuation.customKeepLabel')}
+                    </label>
+                    <Input
+                      type="text"
+                      placeholder={tool('removePunctuation.customKeepPlaceholder')}
+                      value={customKeepList}
+                      onChange={(e) => setCustomKeepList(e.target.value)}
+                      className="text-sm"
+                    />
+                    <p className="text-xs text-muted-foreground">
+                      {tool('removePunctuation.customKeepHint')}
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </AccordionItem>
+        </Accordion>
 
         {/* Analytics */}
-        {text && (
+        {convertedText && (
           <TextAnalytics
-            text={convertedText || text}
+            text={convertedText}
             variant="compact"
             showTitle={false}
           />
