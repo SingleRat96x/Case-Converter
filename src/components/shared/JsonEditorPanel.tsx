@@ -7,14 +7,14 @@
 
 'use client';
 
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
 import { EditorView } from '@codemirror/view';
 import { linter, Diagnostic } from '@codemirror/lint';
+import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
 import { parseJSONWithError, type ValidationError } from '@/lib/jsonFormatterUtils';
 import { Upload, AlertCircle } from 'lucide-react';
-import { useTheme } from 'next-themes';
 
 export interface JsonEditorPanelProps {
   value: string;
@@ -41,8 +41,26 @@ export function JsonEditorPanel({
   showFileUpload = false,
   className = ''
 }: JsonEditorPanelProps) {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
+  // Detect theme from document class
+  const [isDark, setIsDark] = useState(false);
+
+  useEffect(() => {
+    // Initial theme detection
+    const checkTheme = () => {
+      setIsDark(document.documentElement.classList.contains('dark'));
+    };
+    
+    checkTheme();
+
+    // Watch for theme changes using MutationObserver
+    const observer = new MutationObserver(checkTheme);
+    observer.observe(document.documentElement, {
+      attributes: true,
+      attributeFilter: ['class']
+    });
+
+    return () => observer.disconnect();
+  }, []);
 
   /**
    * Handle file drop
@@ -163,86 +181,12 @@ export function JsonEditorPanel({
   );
 
   /**
-   * CodeMirror extensions
+   * CodeMirror extensions and theme
    */
   const extensions = useMemo(() => {
     const exts = [
       json(),
-      EditorView.lineWrapping,
-      EditorView.theme({
-        '&': {
-          fontSize: '14px',
-          border: '1px solid hsl(var(--border))',
-          borderRadius: '8px',
-          backgroundColor: isDark ? 'hsl(var(--background))' : 'hsl(var(--background))',
-          color: isDark ? 'hsl(var(--foreground))' : 'hsl(var(--foreground))'
-        },
-        '.cm-scroller': {
-          overflow: 'auto',
-          fontFamily: '"Fira Code", "Consolas", "Monaco", monospace',
-          backgroundColor: isDark ? 'hsl(var(--background))' : 'hsl(var(--background))'
-        },
-        '.cm-content': {
-          padding: '12px 0',
-          caretColor: isDark ? 'hsl(var(--foreground))' : 'hsl(var(--foreground))'
-        },
-        '.cm-line': {
-          padding: '0 12px',
-          color: isDark ? 'hsl(var(--foreground))' : 'hsl(var(--foreground))'
-        },
-        '.cm-gutters': {
-          backgroundColor: isDark ? 'hsl(var(--muted) / 0.3)' : 'hsl(var(--muted))',
-          border: 'none',
-          borderRight: '1px solid hsl(var(--border))',
-          color: isDark ? 'hsl(var(--muted-foreground))' : 'hsl(var(--muted-foreground))'
-        },
-        '.cm-activeLineGutter': {
-          backgroundColor: isDark ? 'hsl(var(--accent) / 0.5)' : 'hsl(var(--accent))'
-        },
-        '.cm-activeLine': {
-          backgroundColor: isDark ? 'hsl(var(--accent) / 0.1)' : 'hsl(var(--accent) / 0.1)'
-        },
-        '.cm-selectionBackground, ::selection': {
-          backgroundColor: isDark ? 'hsl(var(--primary) / 0.3)' : 'hsl(var(--primary) / 0.2)'
-        },
-        '&.cm-focused .cm-selectionBackground, &.cm-focused ::selection': {
-          backgroundColor: isDark ? 'hsl(var(--primary) / 0.3)' : 'hsl(var(--primary) / 0.2)'
-        },
-        '.cm-cursor': {
-          borderLeftColor: isDark ? 'hsl(var(--foreground))' : 'hsl(var(--foreground))'
-        },
-        // JSON syntax highlighting
-        '.cm-property': {
-          color: isDark ? '#79c0ff' : '#0550ae'
-        },
-        '.cm-string': {
-          color: isDark ? '#a5d6ff' : '#0a3069'
-        },
-        '.cm-number': {
-          color: isDark ? '#79c0ff' : '#0550ae'
-        },
-        '.cm-keyword': {
-          color: isDark ? '#ff7b72' : '#cf222e'
-        },
-        '.cm-atom': {
-          color: isDark ? '#ffa657' : '#953800'
-        },
-        '.cm-punctuation': {
-          color: isDark ? 'hsl(var(--muted-foreground))' : 'hsl(var(--muted-foreground))'
-        },
-        // Placeholder text
-        '.cm-placeholder': {
-          color: isDark ? 'hsl(var(--muted-foreground) / 0.6)' : 'hsl(var(--muted-foreground) / 0.6)'
-        },
-        // Error styling
-        '.cm-lintRange-error': {
-          backgroundImage: isDark 
-            ? 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'6\' height=\'3\'%3E%3Cpath d=\'m0 3 l3 -3 l3 3\' stroke=\'%23f85149\' fill=\'none\' stroke-width=\'.7\'/%3E%3C/svg%3E")' 
-            : 'url("data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'6\' height=\'3\'%3E%3Cpath d=\'m0 3 l3 -3 l3 3\' stroke=\'%23cf222e\' fill=\'none\' stroke-width=\'.7\'/%3E%3C/svg%3E")',
-          backgroundRepeat: 'repeat-x',
-          backgroundPosition: 'bottom left'
-        }
-      }, { dark: isDark })
+      EditorView.lineWrapping
     ];
 
     // Add linter only if not readOnly
@@ -251,7 +195,12 @@ export function JsonEditorPanel({
     }
 
     return exts;
-  }, [readOnly, jsonLinter, isDark]);
+  }, [readOnly, jsonLinter]);
+
+  // Select theme based on dark mode
+  const theme = useMemo(() => {
+    return isDark ? githubDark : githubLight;
+  }, [isDark]);
 
   return (
     <div className={`space-y-2 ${className}`}>
@@ -292,6 +241,7 @@ export function JsonEditorPanel({
           value={value}
           height={height}
           extensions={extensions}
+          theme={theme}
           onChange={onChange}
           readOnly={readOnly}
           placeholder={placeholder}

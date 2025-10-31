@@ -12,7 +12,6 @@ import 'react-json-view-lite/dist/index.css';
 import { Search, Copy, Check, ChevronRight } from 'lucide-react';
 import { Input } from '@/components/ui/input';
 import { Button } from '@/components/ui/button';
-import { useTheme } from 'next-themes';
 
 export interface JsonTreeViewProps {
   json: string;
@@ -25,8 +24,6 @@ export function JsonTreeView({
   height = '400px',
   className = ''
 }: JsonTreeViewProps) {
-  const { theme } = useTheme();
-  const isDark = theme === 'dark';
   const [searchTerm, setSearchTerm] = useState('');
   const [copiedPath, setCopiedPath] = useState<string | null>(null);
   const [selectedPath, setSelectedPath] = useState<string[]>([]);
@@ -194,14 +191,14 @@ export function JsonTreeView({
               style={{
                 ...defaultStyles,
                 container: 'json-view-container',
-                label: isDark ? 'json-view-label-dark' : 'json-view-label',
-                nullValue: isDark ? 'json-view-null-dark' : 'json-view-null',
-                undefinedValue: isDark ? 'json-view-undefined-dark' : 'json-view-undefined',
-                stringValue: isDark ? 'json-view-string-dark' : 'json-view-string',
-                booleanValue: isDark ? 'json-view-boolean-dark' : 'json-view-boolean',
-                numberValue: isDark ? 'json-view-number-dark' : 'json-view-number',
-                otherValue: isDark ? 'json-view-other-dark' : 'json-view-other',
-                punctuation: isDark ? 'json-view-punctuation-dark' : 'json-view-punctuation',
+                label: 'json-view-label',
+                nullValue: 'json-view-null',
+                undefinedValue: 'json-view-undefined',
+                stringValue: 'json-view-string',
+                booleanValue: 'json-view-boolean',
+                numberValue: 'json-view-number',
+                otherValue: 'json-view-other',
+                punctuation: 'json-view-punctuation',
                 collapseIcon: 'json-view-collapse-icon',
                 expandIcon: 'json-view-expand-icon',
                 collapsedContent: 'json-view-collapsed-content'
