@@ -19,11 +19,13 @@ const toolCategories = [
     titleKey: 'navigation.convertCaseTools',
     icon: <Type className="h-6 w-6" />,
     tools: [
-      { id: 'uppercase', titleKey: 'navigation.uppercase', href: '/tools/uppercase', icon: '🔤', isPopular: true },
-      { id: 'lowercase', titleKey: 'navigation.lowercase', href: '/tools/lowercase', icon: '🔡', isPopular: true },
-      { id: 'title-case', titleKey: 'navigation.titleCase', href: '/tools/title-case', icon: '📐', isPopular: true },
-      { id: 'sentence-case', titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case', icon: '📝' },
+      { id: 'alternating-case', titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case', icon: '🔄' },
       { id: 'camel-case-converter', titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter', icon: '🐫' },
+      { id: 'lowercase', titleKey: 'navigation.lowercase', href: '/tools/lowercase', icon: '🔡', isPopular: true },
+      { id: 'sentence-case', titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case', icon: '📝' },
+      { id: 'snake-case-converter', titleKey: 'navigation.snakeCaseConverter', href: '/tools/snake-case-converter', icon: '🐍' },
+      { id: 'title-case', titleKey: 'navigation.titleCase', href: '/tools/title-case', icon: '📐', isPopular: true },
+      { id: 'uppercase', titleKey: 'navigation.uppercase', href: '/tools/uppercase', icon: '🔤', isPopular: true },
     ]
   },
   {
@@ -34,10 +36,22 @@ const toolCategories = [
     tools: [
       // Text formatting
       { id: 'bold-text', titleKey: 'navigation.boldText', href: '/tools/bold-text', icon: '𝐁' },
+      { id: 'italic-text', titleKey: 'navigation.italicText', href: '/tools/italic-text', icon: '𝘐' },
+      { id: 'subscript-text', titleKey: 'navigation.subscriptText', href: '/tools/subscript-text', icon: 'X₂' },
+      { id: 'big-text', titleKey: 'navigation.bigText', href: '/tools/big-text', icon: '🔤' },
+      { id: 'bubble-text', titleKey: 'navigation.bubbleText', href: '/tools/bubble-text', icon: '🫧' },
+      { id: 'cursed-text', titleKey: 'navigation.cursedText', href: '/tools/cursed-text', icon: '👾' },
+      { id: 'mirror-text', titleKey: 'navigation.mirrorText', href: '/tools/mirror-text', icon: '🪞' },
       { id: 'invisible-text', titleKey: 'navigation.invisibleText', href: '/tools/invisible-text', icon: '👻' },
       { id: 'repeat-text', titleKey: 'navigation.repeatText', href: '/tools/repeat-text', icon: '🔁' },
       { id: 'text-replace', titleKey: 'navigation.textReplace', href: '/tools/text-replace', icon: '🔄' },
+      { id: 'remove-line-breaks', titleKey: 'navigation.removeLineBreaks', href: '/tools/remove-line-breaks', icon: '📄' },
+      { id: 'remove-text-formatting', titleKey: 'navigation.removeTextFormatting', href: '/tools/remove-text-formatting', icon: '🧹' },
+      { id: 'duplicate-line-remover', titleKey: 'navigation.duplicateLineRemover', href: '/tools/duplicate-line-remover', icon: '🔍' },
+      { id: 'sort-words', titleKey: 'navigation.sortWords', href: '/tools/sort-words', icon: '📊' },
+      { id: 'plain-text', titleKey: 'navigation.plainText', href: '/tools/plain-text', icon: '📃' },
       { id: 'remove-punctuation', titleKey: 'navigation.removePunctuation', href: '/tools/remove-punctuation', icon: '🧼' },
+      { id: 'extract-emails-from-text', titleKey: 'navigation.extractEmailsFromText', href: '/tools/extract-emails-from-text', icon: '📧' },
     ]
   },
   {

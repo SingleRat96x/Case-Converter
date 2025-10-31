@@ -1,0 +1,102 @@
+{
+  "en": {
+    "title": "Convert Case Tools - Change Text Case Online",
+    "metaDescription": "Free online text case converters: UPPERCASE, lowercase, Title Case, Sentence case, camelCase, snake_case, and aLtErNaTiNg case. Convert text instantly with professional formatting tools.",
+    "sections": {
+      "intro": {
+        "title": "Professional Text Case Conversion Tools",
+        "content": "Transform text between different case styles instantly with our comprehensive collection of case conversion tools. Whether you need to convert text to UPPERCASE for emphasis, lowercase for consistency, Title Case for headings, or specialized formats like camelCase and snake_case for programming, our tools make it effortless. All processing happens in your browser for complete privacy and speed."
+      },
+      "toolsList": {
+        "title": "Available Case Conversion Tools",
+        "items": [
+          {
+            "name": "UPPERCASE Converter",
+            "href": "/tools/uppercase",
+            "description": "Convert all text to UPPERCASE format instantly - perfect for headers, emphasis, and standardization"
+          },
+          {
+            "name": "lowercase Converter",
+            "href": "/tools/lowercase",
+            "description": "Transform all text to lowercase format - ideal for normalizing text and creating consistent output"
+          },
+          {
+            "name": "Title Case Converter",
+            "href": "/tools/title-case",
+            "description": "Convert text to proper Title Case format with intelligent word capitalization for headlines and titles"
+          },
+          {
+            "name": "Sentence case Converter",
+            "href": "/tools/sentence-case",
+            "description": "Convert text to proper sentence case with first letter capitalized - perfect for natural text formatting"
+          },
+          {
+            "name": "aLtErNaTiNg case Converter",
+            "href": "/tools/alternating-case",
+            "description": "Create alternating case text for creative effects and social media - alternates between upper and lowercase"
+          },
+          {
+            "name": "Camel Case Converter",
+            "href": "/tools/camel-case-converter",
+            "description": "Convert text and JSON keys to camelCase or PascalCase - essential for JavaScript and programming"
+          },
+          {
+            "name": "Snake Case Converter",
+            "href": "/tools/snake-case-converter",
+            "description": "Transform text to snake_case or UPPER_SNAKE_CASE - perfect for Python, databases, and constants"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Инструменты Конвертации Регистра - Изменение Регистра Текста Онлайн",
+    "metaDescription": "Бесплатные онлайн конвертеры регистра текста: ВЕРХНИЙ РЕГИСТР, нижний регистр, Заглавный Регистр, Регистр предложения, camelCase, snake_case и ЧеРеДуЮщИйСя регистр. Конвертируйте текст мгновенно.",
+    "sections": {
+      "intro": {
+        "title": "Профессиональные Инструменты Конвертации Регистра Текста",
+        "content": "Преобразуйте текст между различными стилями регистра мгновенно с нашей полной коллекцией инструментов конвертации регистра. Нужно ли вам конвертировать текст в ВЕРХНИЙ РЕГИСТР для выделения, нижний регистр для согласованности, Заглавный Регистр для заголовков или специализированные форматы как camelCase и snake_case для программирования - наши инструменты делают это легко. Вся обработка происходит в вашем браузере для полной конфиденциальности и скорости."
+      },
+      "toolsList": {
+        "title": "Доступные Инструменты Конвертации Регистра",
+        "items": [
+          {
+            "name": "Конвертер ВЕРХНЕГО РЕГИСТРА",
+            "href": "/ru/tools/uppercase",
+            "description": "Конвертируйте весь текст в ВЕРХНИЙ РЕГИСТР мгновенно - идеально для заголовков, выделения и стандартизации"
+          },
+          {
+            "name": "Конвертер нижнего регистра",
+            "href": "/ru/tools/lowercase",
+            "description": "Преобразуйте весь текст в нижний регистр - идеально для нормализации текста и создания единообразного вывода"
+          },
+          {
+            "name": "Конвертер Заглавного Регистра",
+            "href": "/ru/tools/title-case",
+            "description": "Преобразуйте текст в правильный Заглавный Регистр с интеллектуальной капитализацией слов для заголовков"
+          },
+          {
+            "name": "Конвертер Регистра предложения",
+            "href": "/ru/tools/sentence-case",
+            "description": "Преобразуйте текст в правильный регистр предложения с заглавной первой буквой - идеально для естественного форматирования"
+          },
+          {
+            "name": "Конвертер ЧеРеДуЮщЕгОсЯ регистра",
+            "href": "/ru/tools/alternating-case",
+            "description": "Создавайте чередующийся текст для творческих эффектов и социальных сетей - чередование верхнего и нижнего регистра"
+          },
+          {
+            "name": "Конвертер CamelCase",
+            "href": "/ru/tools/camel-case-converter",
+            "description": "Преобразуйте текст и ключи JSON в camelCase или PascalCase - необходимо для JavaScript и программирования"
+          },
+          {
+            "name": "Конвертер Snake Case",
+            "href": "/ru/tools/snake-case-converter",
+            "description": "Преобразуйте текст в snake_case или UPPER_SNAKE_CASE - идеально для Python, баз данных и констант"
+          }
+        ]
+      }
+    }
+  }
+}
