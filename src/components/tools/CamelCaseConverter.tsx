@@ -233,12 +233,40 @@ export function CamelCaseConverter() {
     </div>
   );
 
+  // Custom label with case style selector
+  const customOutputLabel = (
+    <div className="flex items-center gap-2 mb-2">
+      <label htmlFor="text-output" className="text-sm font-medium text-foreground">
+        {tool('camelCase.outputLabel')}:
+      </label>
+      <Select value={caseStyle} onValueChange={(value) => setCaseStyle(value as CaseStyle)}>
+        <SelectTrigger className="w-[180px] h-8 text-xs">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="camelCase" className="text-xs">
+            <div className="flex items-center gap-2">
+              <Code className="h-3 w-3" />
+              {tool('camelCase.styleCamel') || 'camelCase'}
+            </div>
+          </SelectItem>
+          <SelectItem value="PascalCase" className="text-xs">
+            <div className="flex items-center gap-2">
+              <Type className="h-3 w-3" />
+              {tool('camelCase.stylePascal') || 'PascalCase'}
+            </div>
+          </SelectItem>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+
   return (
     <BaseTextConverter
         title={tool('camelCase.title')}
         description={tool('camelCase.description')}
         inputLabel=""
-        outputLabel={tool('camelCase.outputLabel')}
+        outputLabel=""
         inputPlaceholder={tool('camelCase.inputPlaceholder')}
         copyText={common('buttons.copy')}
         clearText={common('buttons.clear')}
@@ -255,6 +283,7 @@ export function CamelCaseConverter() {
         mobileLayout="2x2"
         onDownloadPrimary={handleDownloadPrimary}
         customInputLabel={customInputLabel}
+        customOutputLabel={customOutputLabel}
       >
         <div className="space-y-4">
           {/* Validation Error Display */}
@@ -390,33 +419,6 @@ export function CamelCaseConverter() {
                     >
                       <ArrowLeftRight className="h-4 w-4" />
                       {tool('camelCase.modeReverse') || 'Reverse (camelCase → snake_case)'}
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Case Style Selection */}
-                <div className="space-y-3">
-                  <Label className="text-sm font-medium">
-                    {tool('camelCase.caseStyleLabel') || 'Case Style'}
-                  </Label>
-                  <div className="grid grid-cols-2 gap-2">
-                    <Button
-                      variant={caseStyle === 'camelCase' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setCaseStyle('camelCase')}
-                      className="gap-2"
-                    >
-                      <Code className="h-4 w-4" />
-                      {tool('camelCase.styleCamel') || 'camelCase'}
-                    </Button>
-                    <Button
-                      variant={caseStyle === 'PascalCase' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setCaseStyle('PascalCase')}
-                      className="gap-2"
-                    >
-                      <Type className="h-4 w-4" />
-                      {tool('camelCase.stylePascal') || 'PascalCase'}
                     </Button>
                   </div>
                 </div>

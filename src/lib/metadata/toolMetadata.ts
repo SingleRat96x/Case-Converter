@@ -1572,12 +1572,32 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('camel-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'Multiple case styles'], 'Text/JSON Input', 'camelCase Output', 4.7, 892),
     relatedTools: ['remove-punctuation', 'slugify-url', 'text-replace', 'plain-text']
+  },
+  {
+    slug: 'snake-case-converter',
+    pathname: '/tools/snake-case-converter',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Snake Case Converter – camelCase & Text to snake_case (Online)',
+        description: 'Convert text, identifiers, and JSON keys to snake_case online. Paste text or JSON, handle nested objects, preserve acronyms, and optionally reverse back to camelCase or UPPER_SNAKE_CASE.',
+        shortDescription: 'Convert text and JSON keys to snake_case with advanced options.',
+      },
+      ru: {
+        title: 'Конвертер Snake Case – camelCase и Текст в snake_case (Онлайн)',
+        description: 'Конвертируйте текст, идентификаторы и ключи JSON в snake_case онлайн. Вставьте текст или JSON, обрабатывайте вложенные объекты, сохраняйте акронимы и опционально конвертируйте обратно в camelCase или UPPER_SNAKE_CASE.',
+        shortDescription: 'Преобразование текста и ключей JSON в snake_case с расширенными опциями.',
+      }
+    },
+    schema: createAdvancedSchema('snake-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'UPPER_SNAKE_CASE support'], 'Text/JSON Input', 'snake_case Output', 4.7, 856),
+    relatedTools: ['camel-case-converter', 'slugify-url', 'text-replace', 'plain-text']
   }
 ];
 
 // Explicitly declare ALL tool and category slugs so the registry is complete and maintainable
 const TOOL_SLUGS: string[] = [
-  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','extract-numbers','camel-case-converter','text-replace','text-counter','uuid-generator','slugify-url',
+  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','extract-numbers','camel-case-converter','snake-case-converter','text-replace','text-counter','uuid-generator','slugify-url',
   'roman-numeral-date','rot13','random-number','url-converter','utm-builder','subscript-text','sentence-case','repeat-text',
   'pig-latin','title-case','sentence-counter','remove-text-formatting','webp-to-jpg','utf8-converter','random-letter','plain-text',
   'random-choice','word-frequency','sort-words','uppercase','png-to-jpg','random-ip','random-date','jpg-to-png','invisible-text',
