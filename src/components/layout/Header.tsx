@@ -46,6 +46,7 @@ export function Header() {
         { titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case' },
         { titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case' },
         { titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter' },
+        { titleKey: 'navigation.snakeCaseConverter', href: '/tools/snake-case-converter' },
       ]
     },
     {

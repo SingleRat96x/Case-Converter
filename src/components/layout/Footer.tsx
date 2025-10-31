@@ -36,6 +36,10 @@ export function Footer() {
     {
       title: t('navigation.camelCaseConverter'),
       href: currentLocale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter'
+    },
+    {
+      title: t('navigation.snakeCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/snake-case-converter' : '/ru/tools/snake-case-converter'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
