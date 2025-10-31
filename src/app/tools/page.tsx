@@ -66,6 +66,7 @@ const toolCategories = [
       { id: 'rot13', titleKey: 'navigation.rot13', href: '/tools/rot13', icon: '🔄' },
       { id: 'csv-to-json', titleKey: 'navigation.csvToJson', href: '/tools/csv-to-json', icon: '📊' },
       { id: 'json-stringify', titleKey: 'navigation.jsonStringify', href: '/tools/json-stringify', icon: '{ }', isPopular: true },
+      { id: 'json-formatter', titleKey: 'navigation.jsonFormatter', href: '/tools/json-formatter', icon: '✨', isPopular: true },
       { id: 'url-converter', titleKey: 'navigation.urlConverter', href: '/tools/url-converter', icon: '🔗' },
       { id: 'utf8-converter', titleKey: 'navigation.utf8Converter', href: '/tools/utf8-converter', icon: '🌐' },
       { id: 'slugify-url', titleKey: 'navigation.slugifyUrl', href: '/tools/slugify-url', icon: '🔗' },

@@ -735,6 +735,32 @@
         "outputLength": "Output Length",
         "wordCount": "Word Count"
       }
+    },
+    "jsonFormatter": {
+      "title": "Online JSON Formatter & Validator",
+      "intro": "Format, validate, and explore JSON in seconds. Paste raw JSON—or drop a .json or .txt file—and we'll pretty-print it with syntax highlighting. Toggle indent size, collapse levels, minify for production, or unescape strings for readability. Everything happens locally in your browser.",
+      "formatButton": "Format & Validate",
+      "minifyButton": "Minify",
+      "processing": "Processing...",
+      "inputLabel": "Input",
+      "outputLabel": "Output",
+      "inputPlaceholder": "Paste or type JSON here...",
+      "outputPlaceholder": "Formatted JSON will appear here...",
+      "helperText": "Paste JSON or drop a JSON/TXT file. We'll pretty-print and validate in your browser. Press Ctrl/Cmd+Enter to format.",
+      "optionsTitle": "Formatting Options",
+      "indentSizeLabel": "Indent Size",
+      "sortKeys": "Sort keys alphabetically",
+      "unescapeStrings": "Unescape JSON strings",
+      "ndjsonMode": "NDJSON mode (line-by-line)",
+      "viewModeLabel": "View Mode",
+      "viewCode": "Code",
+      "viewTree": "Tree",
+      "errors": {
+        "invalidJson": "Invalid JSON",
+        "emptyInput": "Input is empty",
+        "parsingError": "Failed to parse JSON",
+        "formattingError": "Failed to format JSON"
+      }
     }
   },
   "ru": {
@@ -1472,6 +1498,32 @@
         "inputLength": "Длина Ввода",
         "outputLength": "Длина Вывода",
         "wordCount": "Количество Слов"
+      }
+    },
+    "jsonFormatter": {
+      "title": "Онлайн JSON Форматировщик и Валидатор",
+      "intro": "Форматируйте, валидируйте и исследуйте JSON за секунды. Вставьте сырой JSON—или перетащите файл .json или .txt—и мы его красиво отформатируем с подсветкой синтаксиса. Настройте размер отступа, сворачивайте уровни, минифицируйте для продакшена или разэкранируйте строки для читаемости. Всё происходит локально в вашем браузере.",
+      "formatButton": "Форматировать и Валидировать",
+      "minifyButton": "Минифицировать",
+      "processing": "Обработка...",
+      "inputLabel": "Ввод",
+      "outputLabel": "Вывод",
+      "inputPlaceholder": "Вставьте или введите JSON здесь...",
+      "outputPlaceholder": "Отформатированный JSON появится здесь...",
+      "helperText": "Вставьте JSON или перетащите JSON/TXT файл. Мы красиво отформатируем и валидируем в вашем браузере. Нажмите Ctrl/Cmd+Enter для форматирования.",
+      "optionsTitle": "Опции Форматирования",
+      "indentSizeLabel": "Размер Отступа",
+      "sortKeys": "Сортировать ключи алфавитно",
+      "unescapeStrings": "Разэкранировать JSON строки",
+      "ndjsonMode": "Режим NDJSON (построчно)",
+      "viewModeLabel": "Режим Просмотра",
+      "viewCode": "Код",
+      "viewTree": "Дерево",
+      "errors": {
+        "invalidJson": "Неверный JSON",
+        "emptyInput": "Ввод пуст",
+        "parsingError": "Не удалось разобрать JSON",
+        "formattingError": "Не удалось отформатировать JSON"
       }
     }
   }

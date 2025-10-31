@@ -1011,6 +1011,26 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['csv-to-json','url-converter','base64-encoder-decoder']
   },
   {
+    slug: 'json-formatter',
+    pathname: '/tools/json-formatter',
+    type: 'tool',
+    category: 'code-data-tools',
+    i18n: {
+      en: {
+        title: 'JSON Formatter & Validator — Free Online JSON Viewer',
+        description: 'Format, validate, and explore JSON with syntax highlighting. Tree view, minify, sort keys, NDJSON support. Paste or upload files up to 10MB. Everything runs locally in your browser.',
+        shortDescription: 'Format, validate, and explore JSON online.',
+      },
+      ru: {
+        title: 'JSON Форматировщик и Валидатор — Бесплатный Онлайн JSON Просмотрщик',
+        description: 'Форматируйте, валидируйте и исследуйте JSON с подсветкой синтаксиса. Режим древа, минификация, сортировка ключей, поддержка NDJSON. Вставляйте или загружайте файлы до 10МБ. Всё работает локально в браузере.',
+        shortDescription: 'Форматирование, валидация и исследование JSON онлайн.',
+      }
+    },
+    schema: createAdvancedSchema('json-formatter', ['Format', 'Validate', 'Tree view', 'Syntax highlighting', 'NDJSON'], 'JSON Input', 'Formatted JSON', 4.9, 1567),
+    relatedTools: ['json-stringify','csv-to-json','base64-encoder-decoder','url-converter']
+  },
+  {
     slug: 'png-to-webp',
     pathname: '/tools/png-to-webp',
     type: 'tool',

@@ -171,6 +171,10 @@ export function Footer() {
       href: currentLocale === 'en' ? '/tools/json-stringify' : '/ru/tools/json-stringify'
     },
     {
+      title: t('navigation.jsonFormatter'),
+      href: currentLocale === 'en' ? '/tools/json-formatter' : '/ru/tools/json-formatter'
+    },
+    {
       title: t('navigation.urlConverter'),
       href: currentLocale === 'en' ? '/tools/url-converter' : '/ru/tools/url-converter'
     },
