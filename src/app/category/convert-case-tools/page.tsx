@@ -40,13 +40,6 @@ const convertCaseTools = [
     href: '/tools/alternating-case'
   },
   {
-    id: 'alternating-case',
-    title: 'aLtErNaTiNg case Converter',
-    description: 'Create alternating case text for creative effects and social media - alternates between upper and lowercase',
-    icon: '🔄',
-    href: '/tools/alternating-case'
-  },
-  {
     id: 'camel-case-converter',
     title: 'Camel Case Converter',
     description: 'Convert text and JSON keys to camelCase or PascalCase - essential for JavaScript and programming',
