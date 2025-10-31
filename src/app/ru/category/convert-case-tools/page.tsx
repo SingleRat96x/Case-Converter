@@ -47,6 +47,13 @@ const convertCaseTools = [
     href: '/ru/tools/camel-case-converter'
   },
   {
+    id: 'kebab-case-converter',
+    title: 'Конвертер Kebab Case',
+    description: 'Конвертируйте между kebab-case, camelCase и snake_case - идеально для URL, CSS и имён файлов',
+    icon: '🔗',
+    href: '/ru/tools/kebab-case-converter'
+  },
+  {
     id: 'snake-case-converter',
     title: 'Конвертер Snake Case',
     description: 'Преобразуйте текст в snake_case или UPPER_SNAKE_CASE - идеально для Python, баз данных и констант',

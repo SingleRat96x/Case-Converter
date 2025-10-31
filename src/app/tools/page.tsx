@@ -21,11 +21,9 @@ const toolCategories = [
     tools: [
       { id: 'alternating-case', titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case', icon: '🔄' },
       { id: 'camel-case-converter', titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter', icon: '🐫' },
+      { id: 'kebab-case-converter', titleKey: 'navigation.kebabCaseConverter', href: '/tools/kebab-case-converter', icon: '🔗' },
       { id: 'lowercase', titleKey: 'navigation.lowercase', href: '/tools/lowercase', icon: '🔡', isPopular: true },
       { id: 'sentence-case', titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case', icon: '📝' },
-      { id: 'snake-case-converter', titleKey: 'navigation.snakeCaseConverter', href: '/tools/snake-case-converter', icon: '🐍' },
-      { id: 'title-case', titleKey: 'navigation.titleCase', href: '/tools/title-case', icon: '📐', isPopular: true },
-      { id: 'uppercase', titleKey: 'navigation.uppercase', href: '/tools/uppercase', icon: '🔤', isPopular: true },
     ]
   },
   {

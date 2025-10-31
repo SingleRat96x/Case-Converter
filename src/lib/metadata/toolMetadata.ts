@@ -649,7 +649,7 @@ const overrides: Array<ToolMetadataConfig> = [
         shortDescription: 'Конвертация регистра текста: верхний, нижний, заголовочный.',
       }
     },
-    schema: createCategorySchema('convert-case-tools', 7, 'Convert Case Tools')
+    schema: createCategorySchema('convert-case-tools', 8, 'Convert Case Tools')
   },
   {
     slug: 'misc-tools',
@@ -1610,12 +1610,48 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('snake-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'UPPER_SNAKE_CASE support'], 'Text/JSON Input', 'snake_case Output', 4.7, 856),
     relatedTools: ['camel-case-converter', 'slugify-url', 'text-replace', 'plain-text']
+  },
+  {
+    slug: 'kebab-case-converter',
+    pathname: '/tools/kebab-case-converter',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Kebab Case Converter – Convert camelCase/snake_case ↔ kebab-case (Text & JSON)',
+        description: 'Free online kebab case converter for text and JSON keys. Convert camelCase, snake_case, and kebab-case in both directions. Paste text or JSON, choose target case, export instantly.',
+        shortDescription: 'Convert between kebab-case, camelCase, and snake_case with JSON support.',
+      },
+      ru: {
+        title: 'Конвертер Kebab Case – Конвертация camelCase/snake_case ↔ kebab-case',
+        description: 'Бесплатный онлайн конвертер kebab case для текста и ключей JSON. Конвертируйте camelCase, snake_case и kebab-case в обоих направлениях. Вставьте текст или JSON, выберите целевой регистр.',
+        shortDescription: 'Конвертация между kebab-case, camelCase и snake_case с поддержкой JSON.',
+      }
+    },
+    schema: createAdvancedSchema(
+      'kebab-case-converter',
+      [
+        'Bidirectional case conversion',
+        'JSON key transformation',
+        'Nested object support',
+        'CSV header conversion',
+        'Shortcut buttons',
+        'File upload support',
+        'Acronym preservation',
+        'Digit boundary detection'
+      ],
+      'Text/JSON/CSV Input',
+      'kebab-case/camelCase/snake_case Output',
+      4.7,
+      621
+    ),
+    relatedTools: ['camel-case-converter', 'snake-case-converter', 'slugify-url', 'lowercase', 'uppercase']
   }
 ];
 
 // Explicitly declare ALL tool and category slugs so the registry is complete and maintainable
 const TOOL_SLUGS: string[] = [
-  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','extract-numbers','camel-case-converter','snake-case-converter','text-replace','text-counter','uuid-generator','slugify-url',
+  'webp-to-png','png-to-webp','random-month','remove-line-breaks','remove-punctuation','extract-numbers','camel-case-converter','snake-case-converter','kebab-case-converter','text-replace','text-counter','uuid-generator','slugify-url',
   'roman-numeral-date','rot13','random-number','url-converter','utm-builder','subscript-text','sentence-case','repeat-text',
   'pig-latin','title-case','sentence-counter','remove-text-formatting','webp-to-jpg','utf8-converter','random-letter','plain-text',
   'random-choice','word-frequency','sort-words','uppercase','png-to-jpg','random-ip','random-date','jpg-to-png','invisible-text',

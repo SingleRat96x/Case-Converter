@@ -47,6 +47,7 @@ export function Header() {
         { titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case' },
         { titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter' },
         { titleKey: 'navigation.snakeCaseConverter', href: '/tools/snake-case-converter' },
+        { titleKey: 'navigation.kebabCaseConverter', href: '/tools/kebab-case-converter' },
       ]
     },
     {

@@ -40,6 +40,10 @@ export function Footer() {
     {
       title: t('navigation.snakeCaseConverter'),
       href: currentLocale === 'en' ? '/tools/snake-case-converter' : '/ru/tools/snake-case-converter'
+    },
+    {
+      title: t('navigation.kebabCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/kebab-case-converter' : '/ru/tools/kebab-case-converter'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
