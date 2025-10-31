@@ -1,26 +1,22 @@
 {
   "en": {
-    "title": "Kebab Case Converter – Convert camelCase/snake_case ↔ kebab-case (Text & JSON)",
-    "metaDescription": "Free online kebab case converter for text and JSON keys. Convert camelCase, snake_case, and kebab-case in both directions. Paste text or JSON, choose target case, export.",
+    "title": "Kebab Case Converter – Convert Text & JSON to kebab-case Online",
+    "metaDescription": "Free online kebab case converter for text and JSON keys. Convert camelCase, snake_case, PascalCase, and Title Case to kebab-case format. Paste text or JSON, convert instantly.",
     "sections": {
       "intro": {
         "title": "Free Online Kebab Case Converter",
-        "content": "Convert between kebab-case, camelCase, and snake_case instantly with our bidirectional conversion tool. Perfect for URL slugs, CSS class names, HTML attributes, file naming conventions, and code identifiers. Handle deeply-nested JSON objects and arrays, switch between multiple naming formats, or batch process CSV headers. All processing happens locally in your browser for complete privacy."
+        "content": "Convert any text to kebab-case instantly with our smart auto-detection tool. Perfect for URL slugs, CSS class names, HTML attributes, file naming conventions, and code identifiers. Automatically detects camelCase, snake_case, PascalCase, and Title Case inputs. Handle deeply-nested JSON objects and arrays, or batch process CSV headers. All processing happens locally in your browser for complete privacy."
       },
       "features": {
         "title": "Advanced Kebab Case Conversion Features",
         "items": [
           {
-            "title": "Bidirectional Conversion",
-            "description": "Convert between kebab-case, camelCase, and snake_case in any direction with intelligent format detection."
+            "title": "Smart Auto-Detection",
+            "description": "Automatically detects input format (camelCase, snake_case, PascalCase, Title Case) and converts to kebab-case."
           },
           {
             "title": "Multiple Input Types",
             "description": "Convert plain text identifiers, JSON with nested keys, or CSV headers all in one tool with tabbed interface."
-          },
-          {
-            "title": "Quick Shortcut Buttons",
-            "description": "One-click conversion shortcuts for common patterns: Camel→Kebab, Snake→Kebab, Kebab→Camel, and Kebab→Snake."
           },
           {
             "title": "Deep JSON Processing",
@@ -53,7 +49,7 @@
           { "title": "HTML Data Attributes", "description": "Convert data attribute names to HTML5-compliant kebab-case format" },
           { "title": "File Naming", "description": "Generate consistent kebab-case file names for scripts, components, and assets" },
           { "title": "API Endpoints", "description": "Convert REST API endpoint names to kebab-case convention" },
-          { "title": "Configuration Keys", "description": "Transform config property names between different case formats" },
+          { "title": "Configuration Keys", "description": "Transform config property names to kebab-case format" },
           { "title": "Git Branch Names", "description": "Generate kebab-case branch names from feature descriptions" },
           { "title": "NPM Package Names", "description": "Convert module names to NPM-compatible kebab-case format" }
         ]
@@ -69,34 +65,24 @@
           },
           {
             "step": 2,
-            "title": "Select Target Case",
-            "description": "Choose your desired output format: kebab-case (default), camelCase, or snake_case."
+            "title": "Paste or Upload Data",
+            "description": "Paste text directly or upload a .txt/.json file. The tool auto-detects your input format and validates JSON syntax automatically."
           },
           {
             "step": 3,
-            "title": "Paste or Upload Data",
-            "description": "Paste text directly or upload a .txt/.json file. The tool validates JSON syntax automatically."
-          },
-          {
-            "step": 4,
-            "title": "Use Shortcuts (Optional)",
-            "description": "Click quick conversion buttons for instant transformation: Camel→Kebab, Snake→Kebab, etc."
-          },
-          {
-            "step": 5,
             "title": "Configure Options",
             "description": "Toggle options like acronym preservation, digit boundaries, and JSON-specific settings as needed."
           },
           {
-            "step": 6,
+            "step": 4,
             "title": "Convert & Download",
-            "description": "Click 'Convert to [target]' or press Ctrl/Cmd+Enter. Copy result or download as file."
+            "description": "Click 'Convert to kebab-case' or press Ctrl/Cmd+Enter. Copy result or download as file."
           }
         ]
       },
       "examples": {
         "title": "Kebab Case Conversion Examples",
-        "description": "See how different naming conventions convert to and from kebab-case with various options.",
+        "description": "See how different naming conventions convert to kebab-case with various options.",
         "items": [
           { 
             "title": "camelCase → kebab-case",
@@ -119,16 +105,6 @@
             "output": "{\n  \"user-profile\": {\n    \"first-name\": \"John\",\n    \"last-name\": \"Doe\",\n    \"email-address\": \"john@example.com\"\n  }\n}"
           },
           { 
-            "title": "kebab-case → camelCase",
-            "input": "user-name\napi-endpoint\nmax-file-size\nget-user-data",
-            "output": "userName\napiEndpoint\nmaxFileSize\ngetUserData"
-          },
-          { 
-            "title": "kebab-case → snake_case",
-            "input": "user-profile\napi-response\nmax-retry-count\nget-all-users",
-            "output": "user_profile\napi_response\nmax_retry_count\nget_all_users"
-          },
-          { 
             "title": "Title Case → kebab-case",
             "input": "User Profile Settings\nAPI Response Handler\nMax File Size Limit\nGet Active Users",
             "output": "user-profile-settings\napi-response-handler\nmax-file-size-limit\nget-active-users"
@@ -142,17 +118,15 @@
       },
       "benefits": {
         "title": "Why Use Our Kebab Case Converter",
-        "content": "Professional-grade kebab case conversion with bidirectional support and advanced features for developers, saving time on manual formatting and ensuring consistent naming conventions.",
+        "content": "Professional-grade kebab case conversion with smart auto-detection and advanced features for developers, saving time on manual formatting and ensuring consistent naming conventions.",
         "items": [
-          "Bidirectional conversion between all major naming conventions (kebab, camel, snake)",
+          "Smart auto-detection of input format (camelCase, snake_case, PascalCase, Title Case)",
           "Advanced JSON processing with deep nested object support and path exclusions",
-          "Quick shortcut buttons for common conversion patterns save time",
           "File upload support for batch processing of .txt and .json files",
           "Intelligent acronym preservation and digit boundary detection",
           "CSV header conversion for data file preparation",
           "Real-time JSON validation with detailed error messages and line numbers",
           "Context-aware downloads with proper file extensions (.txt, .json, .csv)",
-          "Auto-detect source format eliminates guesswork",
           "Completely free, browser-based processing, no server uploads",
           "Mobile-optimized interface with keyboard shortcuts for desktop users"
         ]
@@ -164,15 +138,11 @@
         },
         {
           "question": "Can I convert from kebab-case to other formats?",
-          "answer": "Yes! The tool supports bidirectional conversion. Select your desired target format from the dropdown menu: kebab-case, camelCase, or snake_case. The source format is auto-detected, or you can specify it manually."
+          "answer": "This tool converts TO kebab-case format. It automatically detects whether your input is camelCase, snake_case, PascalCase, or Title Case and converts it to kebab-case. If you need to convert kebab-case to other formats, check out our Camel Case or Snake Case converters."
         },
         {
           "question": "How does the auto-detect feature work?",
-          "answer": "The tool analyzes your input to detect hyphens (kebab-case), underscores (snake_case), mixed case (camelCase/PascalCase), or spaces (Title Case). You can override auto-detection by manually selecting the source format."
-        },
-        {
-          "question": "What are the shortcut buttons for?",
-          "answer": "Shortcut buttons provide quick one-click conversions for common patterns. They automatically set both the source format and target case, then immediately convert your input. This is faster than manually selecting options for frequent conversions."
+          "answer": "The tool analyzes your input to detect underscores (snake_case), mixed case (camelCase/PascalCase), or spaces (Title Case), then automatically converts it to kebab-case format. No manual format selection needed."
         },
         {
           "question": "How does digit boundary detection work?",
@@ -204,7 +174,7 @@
         },
         {
           "question": "Can I use this for API response transformation?",
-          "answer": "Absolutely! Many APIs use different naming conventions. Use this tool to convert API responses from kebab-case or snake_case to camelCase for JavaScript, or vice versa when sending data to APIs."
+          "answer": "Absolutely! Many APIs require kebab-case for endpoints or parameters. Use this tool to convert camelCase or snake_case identifiers to kebab-case format for API requests. For reverse conversion (kebab-case to other formats), check our Camel Case or Snake Case converters."
         }
       ],
       "relatedTools": {
@@ -245,27 +215,23 @@
     }
   },
   "ru": {
-    "title": "Конвертер Kebab Case – Конвертация camelCase/snake_case ↔ kebab-case",
-    "metaDescription": "Бесплатный онлайн конвертер kebab case для текста и ключей JSON. Конвертируйте camelCase, snake_case и kebab-case в обоих направлениях. Вставьте текст или JSON, выберите целевой регистр.",
+    "title": "Конвертер Kebab Case – Конвертация в kebab-case Онлайн",
+    "metaDescription": "Бесплатный онлайн конвертер kebab case для текста и ключей JSON. Конвертируйте camelCase, snake_case, PascalCase и Title Case в формат kebab-case. Вставьте текст или JSON.",
     "sections": {
       "intro": {
         "title": "Бесплатный Онлайн Конвертер Kebab Case",
-        "content": "Конвертируйте между kebab-case, camelCase и snake_case мгновенно с нашим инструментом двунаправленной конвертации. Идеально для URL-адресов, CSS-классов, HTML-атрибутов, именования файлов и кодовых идентификаторов. Обрабатывайте глубоко вложенные JSON-объекты и массивы, переключайтесь между несколькими форматами именования или пакетно обрабатывайте заголовки CSV. Вся обработка происходит локально в вашем браузере для полной конфиденциальности."
+        "content": "Конвертируйте любой текст в kebab-case мгновенно с нашим инструментом интеллектуального автоопределения. Идеально для URL-адресов, CSS-классов, HTML-атрибутов, именования файлов и кодовых идентификаторов. Автоматически определяет входные форматы camelCase, snake_case, PascalCase и Title Case. Обрабатывайте глубоко вложенные JSON-объекты и массивы или пакетно обрабатывайте заголовки CSV. Вся обработка происходит локально в вашем браузере для полной конфиденциальности."
       },
       "features": {
         "title": "Расширенные Возможности Конвертации Kebab Case",
         "items": [
           {
-            "title": "Двунаправленная Конвертация",
-            "description": "Конвертируйте между kebab-case, camelCase и snake_case в любом направлении с интеллектуальным определением формата."
+            "title": "Интеллектуальное Автоопределение",
+            "description": "Автоматически определяет формат ввода (camelCase, snake_case, PascalCase, Title Case) и конвертирует в kebab-case."
           },
           {
             "title": "Множественные Типы Ввода",
             "description": "Конвертируйте простые текстовые идентификаторы, JSON с вложенными ключами или заголовки CSV в одном инструменте с вкладками."
-          },
-          {
-            "title": "Быстрые Кнопки Ярлыков",
-            "description": "Однокликовые ярлыки конвертации для общих шаблонов: Camel→Kebab, Snake→Kebab, Kebab→Camel и Kebab→Snake."
           },
           {
             "title": "Глубокая Обработка JSON",
@@ -298,7 +264,7 @@
           { "title": "HTML Data-атрибуты", "description": "Конвертируйте названия data-атрибутов в HTML5-совместимый формат kebab-case" },
           { "title": "Именование Файлов", "description": "Генерируйте согласованные kebab-case имена файлов для скриптов, компонентов и ресурсов" },
           { "title": "API Эндпоинты", "description": "Конвертируйте названия REST API эндпоинтов в конвенцию kebab-case" },
-          { "title": "Ключи Конфигурации", "description": "Преобразуйте названия свойств конфигурации между различными форматами регистра" },
+          { "title": "Ключи Конфигурации", "description": "Преобразуйте названия свойств конфигурации в формат kebab-case" },
           { "title": "Названия Git Веток", "description": "Генерируйте kebab-case названия веток из описаний функций" },
           { "title": "NPM Пакеты", "description": "Конвертируйте названия модулей в NPM-совместимый формат kebab-case" }
         ]
@@ -314,34 +280,24 @@
           },
           {
             "step": 2,
-            "title": "Выберите Целевой Регистр",
-            "description": "Выберите желаемый формат вывода: kebab-case (по умолчанию), camelCase или snake_case."
+            "title": "Вставьте или Загрузите Данные",
+            "description": "Вставьте текст напрямую или загрузите файл .txt/.json. Инструмент автоматически определяет формат ввода и проверяет синтаксис JSON."
           },
           {
             "step": 3,
-            "title": "Вставьте или Загрузите Данные",
-            "description": "Вставьте текст напрямую или загрузите файл .txt/.json. Инструмент автоматически проверяет синтаксис JSON."
-          },
-          {
-            "step": 4,
-            "title": "Используйте Ярлыки (Опционально)",
-            "description": "Кликните кнопки быстрой конвертации для мгновенного преобразования: Camel→Kebab, Snake→Kebab и др."
-          },
-          {
-            "step": 5,
             "title": "Настройте Опции",
             "description": "Переключайте опции, такие как сохранение акронимов, границы цифр и специфичные для JSON настройки по необходимости."
           },
           {
-            "step": 6,
+            "step": 4,
             "title": "Конвертируйте и Скачайте",
-            "description": "Нажмите 'Конвертировать в [цель]' или нажмите Ctrl/Cmd+Enter. Скопируйте результат или скачайте как файл."
+            "description": "Нажмите 'Конвертировать в kebab-case' или нажмите Ctrl/Cmd+Enter. Скопируйте результат или скачайте как файл."
           }
         ]
       },
       "examples": {
         "title": "Примеры Конвертации Kebab Case",
-        "description": "Посмотрите, как различные конвенции именования конвертируются в kebab-case и из него с различными опциями.",
+        "description": "Посмотрите, как различные конвенции именования конвертируются в kebab-case с различными опциями.",
         "items": [
           { 
             "title": "camelCase → kebab-case",
@@ -364,16 +320,6 @@
             "output": "{\n  \"user-profile\": {\n    \"first-name\": \"Иван\",\n    \"last-name\": \"Иванов\",\n    \"email-address\": \"ivan@example.com\"\n  }\n}"
           },
           { 
-            "title": "kebab-case → camelCase",
-            "input": "user-name\napi-endpoint\nmax-file-size\nget-user-data",
-            "output": "userName\napiEndpoint\nmaxFileSize\ngetUserData"
-          },
-          { 
-            "title": "kebab-case → snake_case",
-            "input": "user-profile\napi-response\nmax-retry-count\nget-all-users",
-            "output": "user_profile\napi_response\nmax_retry_count\nget_all_users"
-          },
-          { 
             "title": "Title Case → kebab-case",
             "input": "User Profile Settings\nAPI Response Handler\nMax File Size Limit\nGet Active Users",
             "output": "user-profile-settings\napi-response-handler\nmax-file-size-limit\nget-active-users"
@@ -386,70 +332,64 @@
         ]
       },
       "benefits": {
-        "title": "Why Use Our Kebab Case Converter",
-        "content": "Professional-grade kebab case conversion with bidirectional support and advanced features for developers, saving time on manual formatting and ensuring consistent naming conventions.",
+        "title": "Почему Стоит Использовать Наш Конвертер Kebab Case",
+        "content": "Профессиональная конвертация kebab case с интеллектуальным автоопределением и расширенными функциями для разработчиков, экономя время на ручном форматировании и обеспечивая последовательные соглашения об именовании.",
         "items": [
-          "Bidirectional conversion between all major naming conventions (kebab, camel, snake)",
-          "Advanced JSON processing with deep nested object support and path exclusions",
-          "Quick shortcut buttons for common conversion patterns save time",
-          "File upload support for batch processing of .txt and .json files",
-          "Intelligent acronym preservation and digit boundary detection",
-          "CSV header conversion for data file preparation",
-          "Real-time JSON validation with detailed error messages and line numbers",
-          "Context-aware downloads with proper file extensions (.txt, .json, .csv)",
-          "Auto-detect source format eliminates guesswork",
-          "Completely free, browser-based processing, no server uploads",
-          "Mobile-optimized interface with keyboard shortcuts for desktop users"
+          "Интеллектуальное автоопределение формата ввода (camelCase, snake_case, PascalCase, Title Case)",
+          "Расширенная обработка JSON с поддержкой глубоко вложенных объектов и исключением путей",
+          "Поддержка загрузки файлов для пакетной обработки .txt и .json файлов",
+          "Интеллектуальное сохранение акронимов и определение границ цифр",
+          "Конвертация заголовков CSV для подготовки файлов данных",
+          "Валидация JSON в реальном времени с подробными сообщениями об ошибках и номерами строк",
+          "Контекстно-зависимые загрузки с правильными расширениями файлов (.txt, .json, .csv)",
+          "Полностью бесплатно, обработка в браузере, без загрузки на сервер",
+          "Мобильно-оптимизированный интерфейс с клавиатурными сочетаниями для пользователей настольных компьютеров"
         ]
       },
       "faqs": [
         {
-          "question": "What is kebab-case and when should I use it?",
-          "answer": "Kebab-case (also called dash-case or hyphen-case) uses hyphens to separate words in lowercase, like 'user-profile-settings'. It's commonly used for URL slugs, CSS class names, HTML data attributes, file names, and API endpoints. It's particularly popular in web development because hyphens are URL-safe and CSS-compatible."
+          "question": "Что такое kebab-case и когда его использовать?",
+          "answer": "Kebab-case (также называемый dash-case или hyphen-case) использует дефисы для разделения слов в нижнем регистре, например 'user-profile-settings'. Он обычно используется для URL-адресов, CSS-классов, HTML data-атрибутов, имен файлов и API эндпоинтов. Он особенно популярен в веб-разработке, потому что дефисы безопасны для URL и совместимы с CSS."
         },
         {
-          "question": "Can I convert from kebab-case to other formats?",
-          "answer": "Yes! The tool supports bidirectional conversion. Select your desired target format from the dropdown menu: kebab-case, camelCase, or snake_case. The source format is auto-detected, or you can specify it manually."
+          "question": "Могу ли я конвертировать из kebab-case в другие форматы?",
+          "answer": "Этот инструмент конвертирует В формат kebab-case. Он автоматически определяет, является ли ваш ввод camelCase, snake_case, PascalCase или Title Case и конвертирует его в kebab-case. Если вам нужно конвертировать kebab-case в другие форматы, ознакомьтесь с нашими конвертерами Camel Case или Snake Case."
         },
         {
-          "question": "How does the auto-detect feature work?",
-          "answer": "The tool analyzes your input to detect hyphens (kebab-case), underscores (snake_case), mixed case (camelCase/PascalCase), or spaces (Title Case). You can override auto-detection by manually selecting the source format."
+          "question": "Как работает функция автоопределения?",
+          "answer": "Инструмент анализирует ваш ввод для определения подчеркиваний (snake_case), смешанного регистра (camelCase/PascalCase) или пробелов (Title Case), затем автоматически конвертирует его в формат kebab-case. Ручной выбор формата не требуется."
         },
         {
-          "question": "What are the shortcut buttons for?",
-          "answer": "Shortcut buttons provide quick one-click conversions for common patterns. They automatically set both the source format and target case, then immediately convert your input. This is faster than manually selecting options for frequent conversions."
+          "question": "Как работает определение границ цифр?",
+          "answer": "Включите 'Считать цифры границами слов' для правильной обработки чисел. Например, 'api2Response' становится 'api-2-response' вместо 'api2-response'. Это полезно для номеров версий, ID и пронумерованных идентификаторов."
         },
         {
-          "question": "How does digit boundary detection work?",
-          "answer": "Enable 'Treat digits as word boundaries' to properly handle numbers. For example, 'api2Response' becomes 'api-2-response' instead of 'api2-response'. This is useful for version numbers, IDs, and numbered identifiers."
+          "question": "Работает ли с вложенными JSON объектами?",
+          "answer": "Да. Включите 'Глубокое преобразование вложенных объектов' для рекурсивной конвертации всех ключей во вложенных объектах и массивах. Значения ваших данных остаются неизменными — конвертируются только ключи."
         },
         {
-          "question": "Does it work with nested JSON objects?",
-          "answer": "Yes. Enable 'Deep transform nested objects' to recursively convert all keys in nested objects and arrays. Your data values remain unchanged—only the keys are converted."
+          "question": "Могу ли я исключить определенные пути JSON из конвертации?",
+          "answer": "Да. Используйте опцию 'Исключить шаблоны JSONPath' с нотацией JSONPath. Например, '$.config.urls,$.meta.*' пропустит конвертацию для этих конкретных путей, конвертируя все остальное."
         },
         {
-          "question": "Can I exclude certain JSON paths from conversion?",
-          "answer": "Yes. Use the 'Exclude JSONPath patterns' option with JSONPath notation. For example, '$.config.urls,$.meta.*' will skip conversion for those specific paths while converting everything else."
+          "question": "Как загрузить файл?",
+          "answer": "Нажмите кнопку 'Загрузить' в области ввода или перетащите файл .txt или .json. Инструмент поддерживает файлы до 10МБ. Содержимое вашего файла заполнит поле ввода и будет готово к конвертации."
         },
         {
-          "question": "How do I upload a file?",
-          "answer": "Click the 'Upload' button in the input area or drag and drop a .txt or .json file. The tool supports files up to 10MB. Your file content will populate the input field and be ready for conversion."
+          "question": "Отправляются ли мои данные на сервер?",
+          "answer": "Нет. Вся конвертация происходит локально в вашем браузере с использованием JavaScript. Ваши данные никогда не покидают ваше устройство, обеспечивая полную конфиденциальность и безопасность."
         },
         {
-          "question": "Is my data sent to a server?",
-          "answer": "No. All conversion happens locally in your browser using JavaScript. Your data never leaves your device, ensuring complete privacy and security."
+          "question": "Могу ли я обрабатывать CSV файлы?",
+          "answer": "Да. Переключитесь на вкладку 'Заголовки CSV' для конвертации первой строки вашего CSV файла. Это полезно для нормализации названий столбцов при импорте/экспорте данных между системами."
         },
         {
-          "question": "Can I process CSV files?",
-          "answer": "Yes. Switch to the 'CSV Headers' tab to convert the first row of your CSV file. This is useful for normalizing column names when importing/exporting data between systems."
+          "question": "Какие форматы файлов я могу скачать?",
+          "answer": "Инструмент автоматически устанавливает правильное расширение файла в зависимости от типа ввода: .txt для текстового режима, .json для JSON режима и .csv для CSV режима. Все загрузки включают ваше конвертированное содержимое."
         },
         {
-          "question": "What file formats can I download?",
-          "answer": "The tool automatically sets the correct file extension based on your input type: .txt for text mode, .json for JSON mode, and .csv for CSV mode. All downloads include your converted content."
-        },
-        {
-          "question": "Can I use this for API response transformation?",
-          "answer": "Absolutely! Many APIs use different naming conventions. Use this tool to convert API responses from kebab-case or snake_case to camelCase for JavaScript, or vice versa when sending data to APIs."
+          "question": "Могу ли я использовать это для преобразования API-запросов?",
+          "answer": "Абсолютно! Многие API требуют kebab-case для эндпоинтов или параметров. Используйте этот инструмент для конвертации camelCase или snake_case идентификаторов в формат kebab-case для API-запросов. Для обратной конвертации (kebab-case в другие форматы) ознакомьтесь с нашими конвертерами Camel Case или Snake Case."
         }
       ],
       "relatedTools": {
