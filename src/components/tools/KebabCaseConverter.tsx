@@ -10,14 +10,13 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code, FileJson, FileText, Table, Zap } from 'lucide-react';
+import { Sparkles, Check, AlertCircle, Loader2, Settings2, Shield, Hash, Braces, FileJson, FileText, Table, Code2 } from 'lucide-react';
 import { 
   convertText, 
   convertJsonKeys, 
   convertCsvHeaders,
   validateAndParseJson,
   shouldUseWorker,
-  type TargetCase,
   type SourceFormat,
   type KebabCaseOptions 
 } from '@/lib/kebabCaseUtils';
@@ -36,9 +35,8 @@ export function KebabCaseConverter() {
     column?: number 
   } | null>(null);
   
-  // Options state
-  const [targetCase, setTargetCase] = useState<TargetCase>('kebab-case');
-  const [sourceFormat, setSourceFormat] = useState<SourceFormat>('auto');
+  // Options state - Always auto-detect source format
+  const sourceFormat: SourceFormat = 'auto';
   const [preserveAcronyms, setPreserveAcronyms] = useState(true);
   const [treatDigitsAsBoundaries, setTreatDigitsAsBoundaries] = useState(false);
   const [lowercaseOutput, setLowercaseOutput] = useState(true);
@@ -57,7 +55,7 @@ export function KebabCaseConverter() {
 
   // Build options object with useMemo to prevent recreation on every render
   const options: KebabCaseOptions = useMemo(() => ({
-    targetCase,
+    targetCase: 'kebab-case',
     sourceFormat,
     preserveAcronyms,
     treatDigitsAsBoundaries,
@@ -66,7 +64,7 @@ export function KebabCaseConverter() {
     deepTransform: inputType === 'json' ? deepTransform : undefined,
     excludePaths: inputType === 'json' && excludePaths ? excludePaths.split(',').map(p => p.trim()) : undefined,
     prettyPrint: inputType === 'json' ? prettyPrint : undefined
-  }), [targetCase, sourceFormat, preserveAcronyms, treatDigitsAsBoundaries, lowercaseOutput, inputType, convertKeysOnly, deepTransform, excludePaths, prettyPrint]);
+  }), [sourceFormat, preserveAcronyms, treatDigitsAsBoundaries, lowercaseOutput, inputType, convertKeysOnly, deepTransform, excludePaths, prettyPrint]);
 
   // Validate JSON when in JSON mode
   const validateInput = useCallback((inputText: string) => {
@@ -170,16 +168,6 @@ export function KebabCaseConverter() {
     downloadTextAsFile(brandedContent, `kebab-case-output.${ext}`);
   }, [convertedText, inputType]);
 
-  // Shortcut button handlers
-  const handleShortcut = useCallback((fromFormat: SourceFormat, toCase: TargetCase) => {
-    setSourceFormat(fromFormat);
-    setTargetCase(toCase);
-    // Auto-convert if there's text
-    if (text) {
-      setTimeout(() => handleConvert(), 100);
-    }
-  }, [text, handleConvert]);
-
   // Keyboard shortcuts
   useEffect(() => {
     const handleKeyPress = (e: KeyboardEvent) => {
@@ -228,54 +216,19 @@ export function KebabCaseConverter() {
     </div>
   );
 
-  // Custom label with target case selector
+  // Simple static output label
   const customOutputLabel = (
     <div className="flex items-center gap-2 mb-2">
       <label htmlFor="text-output" className="text-sm font-medium text-foreground">
-        {tool('kebabCase.outputLabel') || 'Output'}:
+        kebab-case output:
       </label>
-      <Select value={targetCase} onValueChange={(value) => setTargetCase(value as TargetCase)}>
-        <SelectTrigger className="w-[180px] h-8 text-xs">
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="kebab-case" className="text-xs">
-            <div className="flex items-center gap-2">
-              <Code className="h-3 w-3" />
-              {tool('kebabCase.targetKebab') || 'kebab-case'}
-            </div>
-          </SelectItem>
-          <SelectItem value="camelCase" className="text-xs">
-            <div className="flex items-center gap-2">
-              <Type className="h-3 w-3" />
-              {tool('kebabCase.targetCamel') || 'camelCase'}
-            </div>
-          </SelectItem>
-          <SelectItem value="snake_case" className="text-xs">
-            <div className="flex items-center gap-2">
-              <Code className="h-3 w-3" />
-              {tool('kebabCase.targetSnake') || 'snake_case'}
-            </div>
-          </SelectItem>
-        </SelectContent>
-      </Select>
     </div>
   );
-
-  // Get dynamic button text based on target case
-  const getConvertButtonText = () => {
-    const targets = {
-      'kebab-case': tool('kebabCase.targetKebab') || 'kebab-case',
-      'camelCase': tool('kebabCase.targetCamel') || 'camelCase',
-      'snake_case': tool('kebabCase.targetSnake') || 'snake_case'
-    };
-    return tool('kebabCase.convertButton')?.replace('{targetCase}', targets[targetCase]) || `Convert to ${targets[targetCase]}`;
-  };
 
   return (
     <BaseTextConverter
         title={tool('kebabCase.title') || 'Kebab Case Converter (Text & JSON Keys)'}
-        description={tool('kebabCase.description') || 'Convert between kebab-case, camelCase, and snake_case'}
+        description={tool('kebabCase.description') || 'Convert to kebab-case format'}
         inputLabel=""
         outputLabel=""
         inputPlaceholder={tool('kebabCase.inputPlaceholder') || 'Paste text, JSON, or CSV here...'}
@@ -316,54 +269,6 @@ export function KebabCaseConverter() {
             </div>
           )}
 
-          {/* Shortcut Buttons */}
-          <div className="bg-muted/30 rounded-lg p-4 border border-border">
-            <div className="flex items-center gap-2 mb-3">
-              <Zap className="h-4 w-4 text-primary" />
-              <h3 className="text-sm font-semibold text-foreground">
-                {tool('kebabCase.shortcutsTitle') || 'Quick Conversions'}
-              </h3>
-            </div>
-            <div className="flex flex-wrap gap-2">
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handleShortcut('camelCase', 'kebab-case')}
-                className="gap-1.5"
-              >
-                <ArrowRight className="h-3 w-3" />
-                {tool('kebabCase.shortcutCamelToKebab') || 'Camel → Kebab'}
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handleShortcut('snake_case', 'kebab-case')}
-                className="gap-1.5"
-              >
-                <ArrowRight className="h-3 w-3" />
-                {tool('kebabCase.shortcutSnakeToKebab') || 'Snake → Kebab'}
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handleShortcut('kebab-case', 'camelCase')}
-                className="gap-1.5"
-              >
-                <ArrowLeftRight className="h-3 w-3" />
-                {tool('kebabCase.shortcutKebabToCamel') || 'Kebab → Camel'}
-              </Button>
-              <Button
-                variant="outline"
-                size="sm"
-                onClick={() => handleShortcut('kebab-case', 'snake_case')}
-                className="gap-1.5"
-              >
-                <ArrowLeftRight className="h-3 w-3" />
-                {tool('kebabCase.shortcutKebabToSnake') || 'Kebab → Snake'}
-              </Button>
-            </div>
-          </div>
-
           {/* Primary CTA Button */}
           <div className="flex justify-center">
             <Button
@@ -397,7 +302,7 @@ export function KebabCaseConverter() {
               ) : (
                 <>
                   <Sparkles className="h-4 w-4" />
-                  {getConvertButtonText()}
+                  {tool('kebabCase.convertButton') || 'Convert to kebab-case'}
                 </>
               )}
             </Button>
@@ -405,9 +310,10 @@ export function KebabCaseConverter() {
 
           {/* Helper Text */}
           <div className="text-center text-sm text-muted-foreground">
-            {tool('kebabCase.helperText') || 'Choose input type and target case, paste your data, then convert.'} 
-            <br />
-            <span className="text-xs">(Ctrl/Cmd + Enter)</span>
+            {tool('kebabCase.helperText') || 'Choose input type, paste your data, then convert.'}
+            <span className="text-xs ml-2 opacity-70">
+              (Ctrl/Cmd + Enter)
+            </span>
           </div>
 
           {/* Status message for screen readers */}
@@ -424,40 +330,23 @@ export function KebabCaseConverter() {
               defaultOpen={true}
             >
               <div className="space-y-6">
-                  {/* Source Format Selection */}
-                  <div className="space-y-3">
-                    <Label className="text-sm font-semibold">
-                      {tool('kebabCase.sourceFormatLabel') || 'Source Format'}
-                    </Label>
-                    <Select value={sourceFormat} onValueChange={(value) => setSourceFormat(value as SourceFormat)}>
-                      <SelectTrigger className="w-full">
-                        <SelectValue />
-                      </SelectTrigger>
-                      <SelectContent>
-                        <SelectItem value="auto">{tool('kebabCase.sourceAuto') || 'Auto-detect'}</SelectItem>
-                        <SelectItem value="camelCase">{tool('kebabCase.sourceCamel') || 'camelCase'}</SelectItem>
-                        <SelectItem value="snake_case">{tool('kebabCase.sourceSnake') || 'snake_case'}</SelectItem>
-                        <SelectItem value="kebab-case">{tool('kebabCase.sourceKebab') || 'kebab-case'}</SelectItem>
-                        <SelectItem value="PascalCase">{tool('kebabCase.sourcePascal') || 'PascalCase'}</SelectItem>
-                        <SelectItem value="Title Case">{tool('kebabCase.sourceTitle') || 'Title Case'}</SelectItem>
-                      </SelectContent>
-                    </Select>
+                {/* General Options */}
+                <div className="space-y-4">
+                  <div className="flex items-center gap-2 pb-2 border-b border-border/50">
+                    <Settings2 className="h-4 w-4 text-primary" />
+                    <h3 className="text-base font-semibold text-foreground">
+                      {tool('kebabCase.generalOptions') || 'Conversion Options'}
+                    </h3>
                   </div>
-
-                  {/* General Options */}
-                  <div className="space-y-3">
-                    <Label className="text-sm font-semibold">
-                      {tool('kebabCase.generalOptions') || 'General Options'}
-                    </Label>
-                    
-                    <div className="flex items-center justify-between">
-                      <div className="space-y-0.5">
-                        <Label htmlFor="preserve-acronyms" className="text-sm">
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                    {/* Preserve Acronyms */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center gap-2 flex-1">
+                        <Shield className="h-4 w-4 text-muted-foreground" />
+                        <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer">
                           {tool('kebabCase.preserveAcronyms') || 'Preserve acronyms'}
-                        </Label>
-                        <p className="text-xs text-muted-foreground">
-                          {tool('kebabCase.preserveAcronymsHint') || 'Keep API, URL intact'}
-                        </p>
+                        </label>
                       </div>
                       <Switch
                         id="preserve-acronyms"
@@ -466,14 +355,13 @@ export function KebabCaseConverter() {
                       />
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="space-y-0.5">
-                        <Label htmlFor="digit-boundaries" className="text-sm">
-                          {tool('kebabCase.treatDigitsAsBoundaries') || 'Treat digits as word boundaries'}
-                        </Label>
-                        <p className="text-xs text-muted-foreground">
-                          {tool('kebabCase.treatDigitsAsBoundariesHint') || 'Separate numbers with hyphens'}
-                        </p>
+                    {/* Treat Digits as Boundaries */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center gap-2 flex-1">
+                        <Hash className="h-4 w-4 text-muted-foreground" />
+                        <label htmlFor="digit-boundaries" className="text-sm font-medium cursor-pointer">
+                          {tool('kebabCase.treatDigitsAsBoundaries') || 'Digit boundaries'}
+                        </label>
                       </div>
                       <Switch
                         id="digit-boundaries"
@@ -482,14 +370,13 @@ export function KebabCaseConverter() {
                       />
                     </div>
 
-                    <div className="flex items-center justify-between">
-                      <div className="space-y-0.5">
-                        <Label htmlFor="lowercase-output" className="text-sm">
+                    {/* Lowercase Output */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center gap-2 flex-1">
+                        <Code2 className="h-4 w-4 text-muted-foreground" />
+                        <label htmlFor="lowercase-output" className="text-sm font-medium cursor-pointer">
                           {tool('kebabCase.lowercaseOutput') || 'Lowercase output'}
-                        </Label>
-                        <p className="text-xs text-muted-foreground">
-                          {tool('kebabCase.lowercaseOutputHint') || 'Standard kebab-case'}
-                        </p>
+                        </label>
                       </div>
                       <Switch
                         id="lowercase-output"
@@ -498,66 +385,73 @@ export function KebabCaseConverter() {
                       />
                     </div>
                   </div>
-
-                  {/* JSON-Specific Options */}
-                  {inputType === 'json' && (
-                    <div className="space-y-3 pt-3 border-t">
-                      <Label className="text-sm font-semibold">
-                        {tool('kebabCase.jsonOptions') || 'JSON Options'}
-                      </Label>
-
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="convert-keys-only" className="text-sm">
-                          {tool('kebabCase.convertKeysOnly') || 'Convert keys only'}
-                        </Label>
-                        <Switch
-                          id="convert-keys-only"
-                          checked={convertKeysOnly}
-                          onCheckedChange={setConvertKeysOnly}
-                        />
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="deep-transform" className="text-sm">
-                          {tool('kebabCase.deepTransform') || 'Deep transform nested objects'}
-                        </Label>
-                        <Switch
-                          id="deep-transform"
-                          checked={deepTransform}
-                          onCheckedChange={setDeepTransform}
-                        />
-                      </div>
-
-                      <div className="flex items-center justify-between">
-                        <Label htmlFor="pretty-print" className="text-sm">
-                          {tool('kebabCase.prettyPrint') || 'Pretty print'}
-                        </Label>
-                        <Switch
-                          id="pretty-print"
-                          checked={prettyPrint}
-                          onCheckedChange={setPrettyPrint}
-                        />
-                      </div>
-
-                      <div className="space-y-2">
-                        <Label htmlFor="exclude-paths" className="text-sm">
-                          {tool('kebabCase.excludePaths') || 'Exclude JSONPath patterns'}
-                        </Label>
-                        <Input
-                          id="exclude-paths"
-                          type="text"
-                          value={excludePaths}
-                          onChange={(e) => setExcludePaths(e.target.value)}
-                          placeholder="$.config.urls,$.meta.*"
-                          className="text-sm"
-                        />
-                        <p className="text-xs text-muted-foreground">
-                          {tool('kebabCase.excludePathsHint') || 'Comma-separated paths'}
-                        </p>
-                      </div>
-                    </div>
-                  )}
                 </div>
+
+                {/* JSON-Specific Options - Always Visible */}
+                <div className="space-y-4 pt-4 border-t border-border">
+                  <div className="flex items-center gap-2">
+                    <Braces className="h-4 w-4 text-primary" />
+                    <Label className="text-sm font-medium text-primary">
+                      {tool('kebabCase.jsonOptions') || 'JSON-Specific Options'}
+                    </Label>
+                  </div>
+                  
+                  <div className="space-y-3">
+                    {/* Convert Keys Only */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
+                        {tool('kebabCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
+                      </label>
+                      <Switch
+                        id="convert-keys-only"
+                        checked={convertKeysOnly}
+                        onCheckedChange={setConvertKeysOnly}
+                      />
+                    </div>
+
+                    {/* Deep Transform */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label htmlFor="deep-transform" className="text-sm font-medium cursor-pointer flex-1 pr-2">
+                        {tool('kebabCase.deepTransform') || 'Deep transform nested objects'}
+                      </label>
+                      <Switch
+                        id="deep-transform"
+                        checked={deepTransform}
+                        onCheckedChange={setDeepTransform}
+                      />
+                    </div>
+
+                    {/* Pretty Print */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label htmlFor="pretty-print" className="text-sm font-medium cursor-pointer flex-1 pr-2">
+                        {tool('kebabCase.prettyPrint') || 'Pretty-print output'}
+                      </label>
+                      <Switch
+                        id="pretty-print"
+                        checked={prettyPrint}
+                        onCheckedChange={setPrettyPrint}
+                      />
+                    </div>
+
+                    {/* Exclude Paths */}
+                    <div className="space-y-2">
+                      <Label htmlFor="exclude-paths" className="text-sm font-medium">
+                        {tool('kebabCase.excludePaths') || 'Exclude paths (comma-separated)'}
+                      </Label>
+                      <Input
+                        id="exclude-paths"
+                        value={excludePaths}
+                        onChange={(e) => setExcludePaths(e.target.value)}
+                        placeholder="$.data.items[*].url, $.metadata.timestamp"
+                        className="font-mono text-xs"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        {tool('kebabCase.excludePathsHint') || 'Use JSONPath notation. Wildcards (*) supported.'}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </AccordionItem>
           </Accordion>
 
