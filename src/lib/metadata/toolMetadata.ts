@@ -595,7 +595,7 @@ const overrides: Array<ToolMetadataConfig> = [
         shortDescription: 'Размер, обрезка, конвертер JPG/PNG/WebP.',
       }
     },
-    schema: createCategorySchema('image-tools', 8, 'Image Tools')
+    schema: createCategorySchema('image-tools', 9, 'Image Tools')
   },
   {
     slug: 'analysis-counter-tools',
@@ -631,7 +631,25 @@ const overrides: Array<ToolMetadataConfig> = [
         shortDescription: 'Стильный текст для соцсетей.',
       }
     },
-    schema: createCategorySchema('social-media-text-generators', 4, 'Social Media Text Generators')
+    schema: createCategorySchema('social-media-text-generators', 3, 'Social Media Text Generators')
+  },
+  {
+    slug: 'convert-case-tools',
+    pathname: '/category/convert-case-tools',
+    type: 'category',
+    i18n: {
+      en: {
+        title: 'Convert Case Tools — UPPER, lower, Title, snake_case, camelCase',
+        description: 'Convert text case online: UPPERCASE, lowercase, Title Case, Sentence case, snake_case, camelCase, aLtErNaTiNg. Free, fast, no limits.',
+        shortDescription: 'Convert text case: upper, lower, title, snake, camel.',
+      },
+      ru: {
+        title: 'Инструменты Конвертации Регистра — ВЕРХНИЙ, нижний, snake_case',
+        description: 'Конвертируйте регистр текста онлайн: ВЕРХНИЙ РЕГИСТР, нижний регистр, Title Case, Sentence case, snake_case, camelCase. Бесплатно, быстро, без ограничений.',
+        shortDescription: 'Конвертация регистра текста: верхний, нижний, заголовочный.',
+      }
+    },
+    schema: createCategorySchema('convert-case-tools', 7, 'Convert Case Tools')
   },
   {
     slug: 'misc-tools',
@@ -1608,7 +1626,7 @@ const TOOL_SLUGS: string[] = [
 ];
 
 const CATEGORY_SLUGS: string[] = [
-  'misc-tools','random-generators','code-data-translation','text-modification-formatting','analysis-counter-tools','image-tools','social-media-text-generators'
+  'misc-tools','random-generators','code-data-translation','text-modification-formatting','analysis-counter-tools','image-tools','social-media-text-generators','convert-case-tools'
 ];
 
 function buildDefaultI18n(slug: string): Record<SupportedLocale, LocalizedMetadataFields> {
