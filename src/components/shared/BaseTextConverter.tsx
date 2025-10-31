@@ -42,6 +42,8 @@ interface BaseTextConverterProps {
   onDownloadPrimary?: () => void;
   // Optional custom label component for input
   customInputLabel?: ReactNode;
+  // Optional custom label component for output
+  customOutputLabel?: ReactNode;
 }
 
 export function BaseTextConverter({
@@ -72,7 +74,8 @@ export function BaseTextConverter({
   downloadSecondaryFileName,
   showSecondaryDownload = false,
   onDownloadPrimary,
-  customInputLabel
+  customInputLabel,
+  customOutputLabel
 }: BaseTextConverterProps) {
   const [feedback, setFeedback] = useState<{ type: 'success' | 'error'; message: string } | null>(null);
   const [isUploading, setIsUploading] = useState(false);
@@ -181,6 +184,7 @@ export function BaseTextConverter({
             label={outputLabel}
             value={convertedText}
             useMonoFont={useMonoFont}
+            customLabelComponent={customOutputLabel}
           />
         </div>
 

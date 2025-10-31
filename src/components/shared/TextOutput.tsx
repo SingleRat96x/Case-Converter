@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { ReactNode } from 'react';
 
 interface TextOutputProps {
   id: string;
@@ -8,6 +8,7 @@ interface TextOutputProps {
   value: string;
   className?: string;
   useMonoFont?: boolean;
+  customLabelComponent?: ReactNode;
 }
 
 export function TextOutput({ 
@@ -15,13 +16,16 @@ export function TextOutput({
   label, 
   value, 
   className = "",
-  useMonoFont = false 
+  useMonoFont = false,
+  customLabelComponent
 }: TextOutputProps) {
   return (
     <div className={`flex-1 ${className}`}>
-      <label htmlFor={id} className="block text-sm font-medium text-foreground mb-2">
-        {label}
-      </label>
+      {customLabelComponent || (
+        <label htmlFor={id} className="block text-sm font-medium text-foreground mb-2">
+          {label}
+        </label>
+      )}
       <textarea
         id={id}
         value={value}

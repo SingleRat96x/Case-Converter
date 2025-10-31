@@ -1,42 +1,20 @@
 /**
- * Camel Case Conversion Utilities
+ * Snake Case Conversion Utilities
  * Handles text, JSON, and CSV conversions with advanced options
  */
 
-export type ConversionMode = 'snake-to-camel' | 'kebab-to-camel' | 'title-to-camel' | 'reverse';
-export type CaseStyle = 'camelCase' | 'PascalCase';
+export type ConversionMode = 'camel-to-snake' | 'pascal-to-snake' | 'kebab-to-snake' | 'title-to-snake' | 'reverse';
+export type OutputStyle = 'lower_snake_case' | 'UPPER_SNAKE_CASE';
 
-export interface CamelCaseOptions {
+export interface SnakeCaseOptions {
   mode: ConversionMode | null;
-  caseStyle: CaseStyle;
+  outputStyle: OutputStyle;
   preserveAcronyms: boolean;
   safeCharsOnly: boolean;
   trimWhitespace: boolean;
   convertKeysOnly?: boolean;
   excludePaths?: string[];
   prettyPrint?: boolean;
-}
-
-/**
- * Detect if a word is an acronym (2+ consecutive uppercase letters)
- */
-function isAcronym(word: string): boolean {
-  return /^[A-Z]{2,}$/.test(word);
-}
-
-/**
- * Preserve acronyms by keeping them uppercase but adjusting first letter for camelCase
- */
-function handleAcronym(word: string, isFirst: boolean, caseStyle: CaseStyle): string {
-  if (word.length === 0) return word;
-  
-  if (caseStyle === 'PascalCase' || !isFirst) {
-    // Keep acronym as-is or with first letter uppercase
-    return word.charAt(0).toUpperCase() + word.slice(1).toUpperCase();
-  } else {
-    // camelCase: first acronym should be lowercase
-    return word.toLowerCase();
-  }
 }
 
 /**
@@ -50,63 +28,84 @@ function safeCharactersOnly(text: string): string {
 }
 
 /**
- * Convert a single word/identifier to camelCase or PascalCase
+ * Convert camelCase to snake_case
+ * Examples: userName → user_name, userID → user_id, XMLHttpRequest → xml_http_request
  */
-function convertWord(word: string, isFirst: boolean, options: CamelCaseOptions): string {
-  if (!word) return word;
+function camelToSnake(text: string, options: SnakeCaseOptions): string {
+  if (!text) return text;
   
-  // Handle acronyms
-  if (options.preserveAcronyms && isAcronym(word)) {
-    return handleAcronym(word, isFirst, options.caseStyle);
+  let result = text;
+  
+  // Handle acronyms: XMLHttp → XML_Http
+  result = result.replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2');
+  
+  // Handle normal case: userName → user_Name
+  result = result.replace(/([a-z\d])([A-Z])/g, '$1_$2');
+  
+  // Convert to appropriate case
+  if (options.outputStyle === 'UPPER_SNAKE_CASE') {
+    result = result.toUpperCase();
+  } else {
+    result = result.toLowerCase();
   }
   
-  // Standard word conversion
-  const lower = word.toLowerCase();
-  if (isFirst && options.caseStyle === 'camelCase') {
-    return lower;
+  return result;
+}
+
+/**
+ * Convert PascalCase to snake_case
+ * Examples: UserName → user_name, OrderTotal → order_total
+ */
+function pascalToSnake(text: string, options: SnakeCaseOptions): string {
+  // PascalCase is essentially camelCase with uppercase first letter
+  return camelToSnake(text, options);
+}
+
+/**
+ * Convert kebab-case to snake_case
+ * Examples: user-name → user_name, order-total → order_total
+ */
+function kebabToSnake(text: string, options: SnakeCaseOptions): string {
+  const result = text.replace(/-/g, '_');
+  
+  if (options.outputStyle === 'UPPER_SNAKE_CASE') {
+    return result.toUpperCase();
   }
-  return lower.charAt(0).toUpperCase() + lower.slice(1);
+  return result.toLowerCase();
 }
 
 /**
- * Convert snake_case to camelCase
+ * Convert Title Case or spaces to snake_case
+ * Examples: "User Name" → user_name, "Display Name" → display_name
  */
-function snakeToCamel(text: string, options: CamelCaseOptions): string {
-  const words = text.split('_').filter(w => w.length > 0);
-  return words.map((word, idx) => convertWord(word, idx === 0, options)).join('');
+function titleToSnake(text: string, options: SnakeCaseOptions): string {
+  // Replace spaces with underscores and convert
+  let result = text.replace(/\s+/g, '_');
+  
+  // Handle any camelCase within the text
+  result = result.replace(/([a-z])([A-Z])/g, '$1_$2');
+  
+  // Clean up multiple underscores
+  result = result.replace(/_+/g, '_');
+  
+  if (options.outputStyle === 'UPPER_SNAKE_CASE') {
+    return result.toUpperCase();
+  }
+  return result.toLowerCase();
 }
 
 /**
- * Convert kebab-case to camelCase
+ * Reverse: snake_case to camelCase
+ * Examples: user_name → userName, api_key → apiKey
  */
-function kebabToCamel(text: string, options: CamelCaseOptions): string {
-  const words = text.split('-').filter(w => w.length > 0);
-  return words.map((word, idx) => convertWord(word, idx === 0, options)).join('');
-}
-
-/**
- * Convert Title Case or spaces to camelCase
- */
-function titleToCamel(text: string, options: CamelCaseOptions): string {
-  // Split on whitespace
-  const words = text.split(/\s+/).filter(w => w.length > 0);
-  return words.map((word, idx) => convertWord(word, idx === 0, options)).join('');
-}
-
-/**
- * Reverse: camelCase to snake_case
- */
-function camelToSnake(text: string): string {
-  return text
-    .replace(/([A-Z]+)([A-Z][a-z])/g, '$1_$2') // Handle acronyms: XMLHttp -> XML_Http
-    .replace(/([a-z\d])([A-Z])/g, '$1_$2') // Handle normal case: userName -> user_Name
-    .toLowerCase();
+function snakeToCamel(text: string): string {
+  return text.replace(/_([a-z])/g, (_, letter) => letter.toUpperCase());
 }
 
 /**
  * Main text conversion function
  */
-export function convertTextToCamelCase(text: string, options: CamelCaseOptions): string {
+export function convertTextToSnakeCase(text: string, options: SnakeCaseOptions): string {
   if (!text || !options.mode) return text;
   
   let result = text;
@@ -123,17 +122,20 @@ export function convertTextToCamelCase(text: string, options: CamelCaseOptions):
   
   // Apply conversion based on mode
   switch (options.mode) {
-    case 'snake-to-camel':
-      result = snakeToCamel(result, options);
+    case 'camel-to-snake':
+      result = camelToSnake(result, options);
       break;
-    case 'kebab-to-camel':
-      result = kebabToCamel(result, options);
+    case 'pascal-to-snake':
+      result = pascalToSnake(result, options);
       break;
-    case 'title-to-camel':
-      result = titleToCamel(result, options);
+    case 'kebab-to-snake':
+      result = kebabToSnake(result, options);
+      break;
+    case 'title-to-snake':
+      result = titleToSnake(result, options);
       break;
     case 'reverse':
-      result = camelToSnake(result);
+      result = snakeToCamel(result);
       break;
   }
   
@@ -156,11 +158,11 @@ function shouldExcludePath(path: string, excludePaths: string[]): boolean {
 }
 
 /**
- * Recursively convert JSON object keys to camelCase
+ * Recursively convert JSON object keys to snake_case
  */
 export function convertJsonKeys(
   obj: unknown,
-  options: CamelCaseOptions,
+  options: SnakeCaseOptions,
   currentPath = '$'
 ): unknown {
   if (obj === null || obj === undefined) {
@@ -186,10 +188,23 @@ export function convertJsonKeys(
         shouldExcludePath(newPath, options.excludePaths);
       
       // Convert key or keep original
-      const newKey = shouldExclude ? key : convertTextToCamelCase(key, {
-        ...options,
-        mode: options.mode === 'reverse' ? 'reverse' : 'snake-to-camel' // Auto-detect for JSON
-      });
+      let newKey = key;
+      if (!shouldExclude) {
+        // Auto-detect the format and convert
+        if (key.includes('_')) {
+          // Already snake_case
+          newKey = options.outputStyle === 'UPPER_SNAKE_CASE' ? key.toUpperCase() : key.toLowerCase();
+        } else if (key.includes('-')) {
+          // kebab-case
+          newKey = convertTextToSnakeCase(key, { ...options, mode: 'kebab-to-snake' });
+        } else if (/[A-Z]/.test(key)) {
+          // Likely camelCase or PascalCase
+          newKey = convertTextToSnakeCase(key, { ...options, mode: 'camel-to-snake' });
+        } else {
+          // All lowercase or other format
+          newKey = key;
+        }
+      }
       
       // Recursively process value (or keep as-is if convertKeysOnly)
       if (options.convertKeysOnly) {
@@ -205,25 +220,20 @@ export function convertJsonKeys(
     return result;
   }
   
-  // Primitive values - return as-is unless we're converting values too
-  if (!options.convertKeysOnly && typeof obj === 'string') {
-    // Could optionally convert string values here
-    return obj;
-  }
-  
+  // Primitive values - return as-is
   return obj;
 }
 
 /**
- * Convert CSV headers to camelCase
+ * Convert CSV headers to snake_case
  */
-export function convertCsvHeaders(csv: string, options: CamelCaseOptions): string {
+export function convertCsvHeaders(csv: string, options: SnakeCaseOptions): string {
   const lines = csv.split('\n');
   if (lines.length === 0) return csv;
   
   // Process header row
   const headers = lines[0].split(',').map(header => 
-    convertTextToCamelCase(header.trim(), options)
+    convertTextToSnakeCase(header.trim(), options)
   );
   
   // Reconstruct CSV
@@ -240,17 +250,6 @@ export function parseValidationError(error: unknown): {
   column?: number; 
 } {
   const errorMessage = error instanceof Error ? error.message : String(error);
-  
-  // Try to extract position from JSON parse errors
-  const positionMatch = errorMessage.match(/position (\d+)/i);
-  if (positionMatch && error instanceof Error && error.stack) {
-    // This is a simplified version - actual implementation would need the source text
-    return {
-      message: errorMessage,
-      line: undefined,
-      column: undefined
-    };
-  }
   
   // Try to extract line and column from error message
   const lineColMatch = errorMessage.match(/line (\d+).*column (\d+)/i);
@@ -296,8 +295,8 @@ export function validateAndParseJson(text: string): {
     // Try to get position for better error reporting
     const positionMatch = error instanceof Error && error.message?.match(/position (\d+)/);
     if (positionMatch) {
-      const pos = parseInt(positionMatch[1]);
-      const { line, column } = getLineColumnFromPosition(text, pos);
+      const position = parseInt(positionMatch[1]);
+      const { line, column } = getLineColumnFromPosition(text, position);
       errorInfo.line = line;
       errorInfo.column = column;
     }
@@ -313,5 +312,5 @@ export function validateAndParseJson(text: string): {
  * Estimate if input is large enough to warrant worker processing
  */
 export function shouldUseWorker(text: string): boolean {
-  return text.length > 10000; // 10KB threshold
+  return text.length > 200000; // 200KB threshold
 }

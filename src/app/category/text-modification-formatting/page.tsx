@@ -122,13 +122,6 @@ const textModificationTools = [
     description: 'Extract and validate email addresses from any text with advanced filtering',
     icon: '📧',
     href: '/tools/extract-emails-from-text'
-  },
-  {
-    id: 'camel-case-converter',
-    title: 'Camel Case Converter',
-    description: 'Convert text, identifiers, and JSON keys to camelCase with advanced options',
-    icon: '🐫',
-    href: '/tools/camel-case-converter'
   }
 ];
 

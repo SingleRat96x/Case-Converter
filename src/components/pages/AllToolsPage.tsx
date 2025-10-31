@@ -123,7 +123,7 @@ const CategorySection: React.FC<{
   
   // Show only first 5 tools, unless searching
   const displayedTools = searchQuery ? filteredTools : filteredTools.slice(0, 5);
-  const remainingCount = filteredTools.length - 5;
+  const remainingCount = category.tools.length - 5;
   const hasMore = !searchQuery && remainingCount > 0;
   
   return (
@@ -147,7 +147,7 @@ const CategorySection: React.FC<{
             </div>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <span>
-                {t('navigation.toolsAvailableShort').replace('{{count}}', filteredTools.length.toString())}
+                {t('navigation.toolsAvailableShort').replace('{{count}}', category.tools.length.toString())}
               </span>
               <span className="hidden sm:inline">•</span>
               <Link 

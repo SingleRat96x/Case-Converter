@@ -10,20 +10,19 @@ import { Label } from '@/components/ui/label';
 import { Switch } from '@/components/ui/switch';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Settings, Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code, FileJson, FileText, Table } from 'lucide-react';
+import { Sparkles, Check, AlertCircle, Loader2, Settings2, Shield, Hash, Braces, FileJson, FileText, Table, Code2 } from 'lucide-react';
 import { 
-  convertTextToCamelCase, 
+  convertText, 
   convertJsonKeys, 
   convertCsvHeaders,
   validateAndParseJson,
   shouldUseWorker,
-  type ConversionMode,
-  type CaseStyle,
-  type CamelCaseOptions 
-} from '@/lib/camelCaseUtils';
+  type SourceFormat,
+  type KebabCaseOptions 
+} from '@/lib/kebabCaseUtils';
 import { downloadTextAsFile } from '@/lib/utils';
 
-export function CamelCaseConverter() {
+export function KebabCaseConverter() {
   const { common, tool } = useToolTranslations('tools/text-generators');
   
   // Main state
@@ -36,13 +35,13 @@ export function CamelCaseConverter() {
     column?: number 
   } | null>(null);
   
-  // Options state
-  const [mode, setMode] = useState<ConversionMode | null>('title-to-camel');
-  const [caseStyle, setCaseStyle] = useState<CaseStyle>('camelCase');
+  // Options state - Always auto-detect source format
+  const sourceFormat: SourceFormat = 'auto';
   const [preserveAcronyms, setPreserveAcronyms] = useState(true);
-  const [safeCharsOnly, setSafeCharsOnly] = useState(false);
-  const [trimWhitespace, setTrimWhitespace] = useState(true);
+  const [treatDigitsAsBoundaries, setTreatDigitsAsBoundaries] = useState(false);
+  const [lowercaseOutput, setLowercaseOutput] = useState(true);
   const [convertKeysOnly, setConvertKeysOnly] = useState(true);
+  const [deepTransform, setDeepTransform] = useState(true);
   const [excludePaths, setExcludePaths] = useState('');
   const [prettyPrint, setPrettyPrint] = useState(true);
   
@@ -50,22 +49,22 @@ export function CamelCaseConverter() {
   const [isProcessing, setIsProcessing] = useState(false);
   const [statusMessage, setStatusMessage] = useState('');
   const [ctaButtonState, setCtaButtonState] = useState<'idle' | 'success' | 'error'>('idle');
-  const [isAccordionOpen, setIsAccordionOpen] = useState(true);
   
   // Status message for screen readers
   const statusRef = useRef<HTMLDivElement>(null);
 
   // Build options object with useMemo to prevent recreation on every render
-  const options: CamelCaseOptions = useMemo(() => ({
-    mode,
-    caseStyle,
+  const options: KebabCaseOptions = useMemo(() => ({
+    targetCase: 'kebab-case',
+    sourceFormat,
     preserveAcronyms,
-    safeCharsOnly,
-    trimWhitespace,
+    treatDigitsAsBoundaries,
+    lowercaseOutput,
     convertKeysOnly: inputType === 'json' ? convertKeysOnly : undefined,
+    deepTransform: inputType === 'json' ? deepTransform : undefined,
     excludePaths: inputType === 'json' && excludePaths ? excludePaths.split(',').map(p => p.trim()) : undefined,
     prettyPrint: inputType === 'json' ? prettyPrint : undefined
-  }), [mode, caseStyle, preserveAcronyms, safeCharsOnly, trimWhitespace, inputType, convertKeysOnly, excludePaths, prettyPrint]);
+  }), [sourceFormat, preserveAcronyms, treatDigitsAsBoundaries, lowercaseOutput, inputType, convertKeysOnly, deepTransform, excludePaths, prettyPrint]);
 
   // Validate JSON when in JSON mode
   const validateInput = useCallback((inputText: string) => {
@@ -87,13 +86,13 @@ export function CamelCaseConverter() {
     // Validate first
     if (!validateInput(text)) {
       setCtaButtonState('error');
-      setStatusMessage(tool('camelCase.errorInvalidInput') || 'Invalid input');
+      setStatusMessage(tool('kebabCase.errorInvalidInput') || 'Invalid input');
       setTimeout(() => setCtaButtonState('idle'), 2000);
       return;
     }
     
     setIsProcessing(true);
-    setStatusMessage(tool('camelCase.processing') || 'Processing...');
+    setStatusMessage(tool('kebabCase.processing') || 'Processing...');
     
     try {
       let result: string;
@@ -101,7 +100,6 @@ export function CamelCaseConverter() {
       // Check if we should use worker for large inputs
       if (shouldUseWorker(text)) {
         // For now, process on main thread with timeout
-        // TODO: Implement worker in next phase
         await new Promise(resolve => setTimeout(resolve, 100));
       }
       
@@ -116,12 +114,12 @@ export function CamelCaseConverter() {
       } else {
         // Text mode - process line by line
         const lines = text.split('\n');
-        result = lines.map(line => convertTextToCamelCase(line, options)).join('\n');
+        result = lines.map(line => convertText(line, options)).join('\n');
       }
       
       setConvertedText(result);
       setCtaButtonState('success');
-      setStatusMessage(tool('camelCase.converted') || 'Converted!');
+      setStatusMessage(tool('kebabCase.converted') || 'Converted!');
       setTimeout(() => {
         setCtaButtonState('idle');
         setStatusMessage('');
@@ -129,7 +127,7 @@ export function CamelCaseConverter() {
     } catch (error) {
       setCtaButtonState('error');
       const errorMsg = error instanceof Error ? error.message : String(error);
-      setStatusMessage(tool('camelCase.errorConversion') || `Error: ${errorMsg}`);
+      setStatusMessage(tool('kebabCase.errorConversion') || `Error: ${errorMsg}`);
       setTimeout(() => {
         setCtaButtonState('idle');
         setStatusMessage('');
@@ -165,39 +163,24 @@ export function CamelCaseConverter() {
     if (!convertedText) return;
     const ext = inputType === 'json' ? 'json' : inputType === 'csv' ? 'csv' : 'txt';
     const brandedContent = inputType === 'json' || inputType === 'csv' 
-      ? convertedText // Don't brand JSON/CSV
+      ? convertedText
       : `Downloaded from TextCaseConverter.net\n=====================================\n\n${convertedText}`;
-    downloadTextAsFile(brandedContent, `camelCase-output.${ext}`);
+    downloadTextAsFile(brandedContent, `kebab-case-output.${ext}`);
   }, [convertedText, inputType]);
 
   // Keyboard shortcuts
   useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
+    const handleKeyPress = (e: KeyboardEvent) => {
       // Ctrl/Cmd + Enter to convert
       if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
         e.preventDefault();
         handleConvert();
       }
     };
-    
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [handleConvert]);
 
-  // Responsive accordion behavior
-  useEffect(() => {
-    const handleResize = () => {
-      if (window.innerWidth >= 640) {
-        setIsAccordionOpen(true);
-      } else {
-        setIsAccordionOpen(false);
-      }
-    };
-    
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
+    window.addEventListener('keydown', handleKeyPress);
+    return () => window.removeEventListener('keydown', handleKeyPress);
+  }, [handleConvert]);
 
   // Custom label with input type selector
   const customInputLabel = (
@@ -233,47 +216,28 @@ export function CamelCaseConverter() {
     </div>
   );
 
-  // Custom label with case style selector
+  // Simple static output label
   const customOutputLabel = (
     <div className="flex items-center gap-2 mb-2">
       <label htmlFor="text-output" className="text-sm font-medium text-foreground">
-        {tool('camelCase.outputLabel')}:
+        kebab-case output:
       </label>
-      <Select value={caseStyle} onValueChange={(value) => setCaseStyle(value as CaseStyle)}>
-        <SelectTrigger className="w-[180px] h-8 text-xs">
-          <SelectValue />
-        </SelectTrigger>
-        <SelectContent>
-          <SelectItem value="camelCase" className="text-xs">
-            <div className="flex items-center gap-2">
-              <Code className="h-3 w-3" />
-              {tool('camelCase.styleCamel') || 'camelCase'}
-            </div>
-          </SelectItem>
-          <SelectItem value="PascalCase" className="text-xs">
-            <div className="flex items-center gap-2">
-              <Type className="h-3 w-3" />
-              {tool('camelCase.stylePascal') || 'PascalCase'}
-            </div>
-          </SelectItem>
-        </SelectContent>
-      </Select>
     </div>
   );
 
   return (
     <BaseTextConverter
-        title={tool('camelCase.title')}
-        description={tool('camelCase.description')}
+        title={tool('kebabCase.title') || 'Kebab Case Converter (Text & JSON Keys)'}
+        description={tool('kebabCase.description') || 'Convert to kebab-case format'}
         inputLabel=""
         outputLabel=""
-        inputPlaceholder={tool('camelCase.inputPlaceholder')}
+        inputPlaceholder={tool('kebabCase.inputPlaceholder') || 'Paste text, JSON, or CSV here...'}
         copyText={common('buttons.copy')}
         clearText={common('buttons.clear')}
         downloadText={common('buttons.download')}
         uploadText={common('buttons.upload')}
         uploadDescription=""
-        downloadFileName={`camelCase-output.${inputType === 'json' ? 'json' : inputType === 'csv' ? 'csv' : 'txt'}`}
+        downloadFileName={`kebab-case-output.${inputType === 'json' ? 'json' : inputType === 'csv' ? 'csv' : 'txt'}`}
         onTextChange={handleTextChange}
         text={text}
         convertedText={convertedText}
@@ -323,22 +287,22 @@ export function CamelCaseConverter() {
               {isProcessing ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  {tool('camelCase.processing') || 'Processing...'}
+                  {tool('kebabCase.processing') || 'Processing...'}
                 </>
               ) : ctaButtonState === 'success' ? (
                 <>
                   <Check className="h-4 w-4" />
-                  {tool('camelCase.converted') || 'Converted!'}
+                  {tool('kebabCase.converted') || 'Converted!'}
                 </>
               ) : ctaButtonState === 'error' ? (
                 <>
                   <AlertCircle className="h-4 w-4" />
-                  {tool('camelCase.error') || 'Error'}
+                  {tool('kebabCase.error') || 'Error'}
                 </>
               ) : (
                 <>
                   <Sparkles className="h-4 w-4" />
-                  {tool('camelCase.convertButton') || 'Convert to camelCase'}
+                  {tool('kebabCase.convertButton') || 'Convert to kebab-case'}
                 </>
               )}
             </Button>
@@ -346,95 +310,44 @@ export function CamelCaseConverter() {
 
           {/* Helper Text */}
           <div className="text-center text-sm text-muted-foreground">
-            {tool('camelCase.helperText') || 'Choose input type and options, paste your data, then convert.'} 
+            {tool('kebabCase.helperText') || 'Choose input type, paste your data, then convert.'}
             <span className="text-xs ml-2 opacity-70">
               (Ctrl/Cmd + Enter)
             </span>
           </div>
 
-          {/* ARIA Live Region for Status */}
-          <div 
-            ref={statusRef}
-            role="status" 
-            aria-live="polite" 
-            aria-atomic="true"
-            className="sr-only"
-          >
-            {statusMessage}
-          </div>
+          {/* Status message for screen readers */}
+          {statusMessage && (
+            <div ref={statusRef} className="sr-only" role="status" aria-live="polite">
+              {statusMessage}
+            </div>
+          )}
 
           {/* Options Accordion */}
           <Accordion className="w-full">
-            <AccordionItem
-              title={tool('camelCase.optionsTitle') || 'Conversion Options'}
-              defaultOpen={isAccordionOpen}
-              className="w-full"
+            <AccordionItem 
+              title={tool('kebabCase.optionsTitle') || 'Conversion Options'}
+              defaultOpen={true}
             >
               <div className="space-y-6">
-                {/* Mode Selection */}
-                <div className="space-y-3">
-                  <div className="flex items-center gap-2 pb-2 border-b border-border/50">
-                    <Settings className="h-4 w-4 text-primary" />
-                    <h3 className="text-base font-semibold text-foreground">
-                      {tool('camelCase.sourceFormatTitle') || 'Source Format'}
-                    </h3>
-                    <span className="text-xs text-muted-foreground">
-                      ({tool('camelCase.sourceFormatHint') || 'How is your input formatted?'})
-                    </span>
-                  </div>
-                  
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <Button
-                      variant={mode === 'snake-to-camel' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setMode('snake-to-camel')}
-                      className="justify-start gap-2"
-                    >
-                      <Code className="h-4 w-4" />
-                      {tool('camelCase.modeSnake') || 'snake_case'}
-                    </Button>
-                    <Button
-                      variant={mode === 'kebab-to-camel' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setMode('kebab-to-camel')}
-                      className="justify-start gap-2"
-                    >
-                      <ArrowRight className="h-4 w-4" />
-                      {tool('camelCase.modeKebab') || 'kebab-case'}
-                    </Button>
-                    <Button
-                      variant={mode === 'title-to-camel' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setMode('title-to-camel')}
-                      className="justify-start gap-2"
-                    >
-                      <Type className="h-4 w-4" />
-                      {tool('camelCase.modeTitleCase') || 'Title Case / Spaces'}
-                    </Button>
-                    <Button
-                      variant={mode === 'reverse' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setMode('reverse')}
-                      className="justify-start gap-2"
-                    >
-                      <ArrowLeftRight className="h-4 w-4" />
-                      {tool('camelCase.modeReverse') || 'Reverse (camelCase → snake_case)'}
-                    </Button>
-                  </div>
-                </div>
-
                 {/* General Options */}
                 <div className="space-y-4">
-                  <Label className="text-sm font-medium">
-                    {tool('camelCase.generalOptions') || 'General Options'}
-                  </Label>
+                  <div className="flex items-center gap-2 pb-2 border-b border-border/50">
+                    <Settings2 className="h-4 w-4 text-primary" />
+                    <h3 className="text-base font-semibold text-foreground">
+                      {tool('kebabCase.generalOptions') || 'Conversion Options'}
+                    </h3>
+                  </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {/* Preserve Acronyms */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
-                      <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                        {tool('camelCase.preserveAcronyms') || 'Preserve acronyms (e.g., userID)'}
-                      </label>
+                      <div className="flex items-center gap-2 flex-1">
+                        <Shield className="h-4 w-4 text-muted-foreground" />
+                        <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer">
+                          {tool('kebabCase.preserveAcronyms') || 'Preserve acronyms'}
+                        </label>
+                      </div>
                       <Switch
                         id="preserve-acronyms"
                         checked={preserveAcronyms}
@@ -442,96 +355,111 @@ export function CamelCaseConverter() {
                       />
                     </div>
 
-                    {/* Safe Characters Only */}
+                    {/* Treat Digits as Boundaries */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
-                      <label htmlFor="safe-chars" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                        {tool('camelCase.safeCharsOnly') || 'Safe characters only (strip non-ASCII)'}
-                      </label>
+                      <div className="flex items-center gap-2 flex-1">
+                        <Hash className="h-4 w-4 text-muted-foreground" />
+                        <label htmlFor="digit-boundaries" className="text-sm font-medium cursor-pointer">
+                          {tool('kebabCase.treatDigitsAsBoundaries') || 'Digit boundaries'}
+                        </label>
+                      </div>
                       <Switch
-                        id="safe-chars"
-                        checked={safeCharsOnly}
-                        onCheckedChange={setSafeCharsOnly}
+                        id="digit-boundaries"
+                        checked={treatDigitsAsBoundaries}
+                        onCheckedChange={setTreatDigitsAsBoundaries}
                       />
                     </div>
 
-                    {/* Trim Whitespace */}
-                    {inputType === 'text' && (
-                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
-                        <label htmlFor="trim-whitespace" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                          {tool('camelCase.trimWhitespace') || 'Trim & collapse whitespace'}
+                    {/* Lowercase Output */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <div className="flex items-center gap-2 flex-1">
+                        <Code2 className="h-4 w-4 text-muted-foreground" />
+                        <label htmlFor="lowercase-output" className="text-sm font-medium cursor-pointer">
+                          {tool('kebabCase.lowercaseOutput') || 'Lowercase output'}
                         </label>
-                        <Switch
-                          id="trim-whitespace"
-                          checked={trimWhitespace}
-                          onCheckedChange={setTrimWhitespace}
-                        />
                       </div>
-                    )}
+                      <Switch
+                        id="lowercase-output"
+                        checked={lowercaseOutput}
+                        onCheckedChange={setLowercaseOutput}
+                      />
+                    </div>
                   </div>
                 </div>
 
-                {/* JSON-Specific Options */}
-                {inputType === 'json' && (
-                  <div className="space-y-4 pt-4 border-t border-border">
+                {/* JSON-Specific Options - Always Visible */}
+                <div className="space-y-4 pt-4 border-t border-border">
+                  <div className="flex items-center gap-2">
+                    <Braces className="h-4 w-4 text-primary" />
                     <Label className="text-sm font-medium text-primary">
-                      {tool('camelCase.jsonOptions') || 'JSON-Specific Options'}
+                      {tool('kebabCase.jsonOptions') || 'JSON-Specific Options'}
                     </Label>
-                    
-                    <div className="space-y-3">
-                      {/* Convert Keys Only */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
-                        <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                          {tool('camelCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
-                        </label>
-                        <Switch
-                          id="convert-keys-only"
-                          checked={convertKeysOnly}
-                          onCheckedChange={setConvertKeysOnly}
-                        />
-                      </div>
+                  </div>
+                  
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    {/* Convert Keys Only */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
+                        {tool('kebabCase.convertKeysOnly') || "Convert keys only"}
+                      </label>
+                      <Switch
+                        id="convert-keys-only"
+                        checked={convertKeysOnly}
+                        onCheckedChange={setConvertKeysOnly}
+                      />
+                    </div>
 
-                      {/* Pretty Print */}
-                      <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
-                        <label htmlFor="pretty-print" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                          {tool('camelCase.prettyPrint') || 'Pretty-print output'}
-                        </label>
-                        <Switch
-                          id="pretty-print"
-                          checked={prettyPrint}
-                          onCheckedChange={setPrettyPrint}
-                        />
-                      </div>
+                    {/* Deep Transform */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label htmlFor="deep-transform" className="text-sm font-medium cursor-pointer flex-1 pr-2">
+                        {tool('kebabCase.deepTransform') || 'Deep transform'}
+                      </label>
+                      <Switch
+                        id="deep-transform"
+                        checked={deepTransform}
+                        onCheckedChange={setDeepTransform}
+                      />
+                    </div>
 
-                      {/* Exclude Paths */}
-                      <div className="space-y-2">
-                        <Label htmlFor="exclude-paths" className="text-sm font-medium">
-                          {tool('camelCase.excludePaths') || 'Exclude paths (comma-separated)'}
-                        </Label>
-                        <Input
-                          id="exclude-paths"
-                          value={excludePaths}
-                          onChange={(e) => setExcludePaths(e.target.value)}
-                          placeholder="$.data.items[*].url, $.metadata.timestamp"
-                          className="font-mono text-xs"
-                        />
-                        <p className="text-xs text-muted-foreground">
-                          {tool('camelCase.excludePathsHint') || 'Use JSONPath notation. Wildcards (*) supported.'}
-                        </p>
-                      </div>
+                    {/* Pretty Print */}
+                    <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
+                      <label htmlFor="pretty-print" className="text-sm font-medium cursor-pointer flex-1 pr-2">
+                        {tool('kebabCase.prettyPrint') || 'Pretty-print output'}
+                      </label>
+                      <Switch
+                        id="pretty-print"
+                        checked={prettyPrint}
+                        onCheckedChange={setPrettyPrint}
+                      />
+                    </div>
+
+                    {/* Exclude Paths */}
+                    <div className="flex flex-col gap-2 p-3 rounded-lg border bg-card">
+                      <Label htmlFor="exclude-paths" className="text-sm font-medium">
+                        {tool('kebabCase.excludePaths') || 'Exclude paths'}
+                      </Label>
+                      <Input
+                        id="exclude-paths"
+                        value={excludePaths}
+                        onChange={(e) => setExcludePaths(e.target.value)}
+                        placeholder="$.data.items[*].url"
+                        className="font-mono text-xs h-9"
+                      />
+                      <p className="text-xs text-muted-foreground">
+                        {tool('kebabCase.excludePathsHint') || 'Comma-separated JSONPath'}
+                      </p>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
             </AccordionItem>
           </Accordion>
 
-          {/* Analytics */}
+          {/* Analytics Display */}
           {convertedText && (
-            <TextAnalytics
-              text={convertedText}
-              variant="compact"
-              showTitle={false}
-            />
+            <div className="mt-6">
+              <TextAnalytics text={convertedText} variant="compact" />
+            </div>
           )}
         </div>
       </BaseTextConverter>
