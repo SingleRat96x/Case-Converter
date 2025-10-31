@@ -142,6 +142,7 @@
       },
       "benefits": {
         "title": "Why Use Our Kebab Case Converter",
+        "content": "Professional-grade kebab case conversion with bidirectional support and advanced features for developers, saving time on manual formatting and ensuring consistent naming conventions.",
         "items": [
           "Bidirectional conversion between all major naming conventions (kebab, camel, snake)",
           "Advanced JSON processing with deep nested object support and path exclusions",
@@ -156,59 +157,56 @@
           "Mobile-optimized interface with keyboard shortcuts for desktop users"
         ]
       },
-      "faqs": {
-        "title": "Frequently Asked Questions",
-        "items": [
-          {
-            "question": "What is kebab-case and when should I use it?",
-            "answer": "Kebab-case (also called dash-case or hyphen-case) uses hyphens to separate words in lowercase, like 'user-profile-settings'. It's commonly used for URL slugs, CSS class names, HTML data attributes, file names, and API endpoints. It's particularly popular in web development because hyphens are URL-safe and CSS-compatible."
-          },
-          {
-            "question": "Can I convert from kebab-case to other formats?",
-            "answer": "Yes! The tool supports bidirectional conversion. Select your desired target format from the dropdown menu: kebab-case, camelCase, or snake_case. The source format is auto-detected, or you can specify it manually."
-          },
-          {
-            "question": "How does the auto-detect feature work?",
-            "answer": "The tool analyzes your input to detect hyphens (kebab-case), underscores (snake_case), mixed case (camelCase/PascalCase), or spaces (Title Case). You can override auto-detection by manually selecting the source format."
-          },
-          {
-            "question": "What are the shortcut buttons for?",
-            "answer": "Shortcut buttons provide quick one-click conversions for common patterns. They automatically set both the source format and target case, then immediately convert your input. This is faster than manually selecting options for frequent conversions."
-          },
-          {
-            "question": "How does digit boundary detection work?",
-            "answer": "Enable 'Treat digits as word boundaries' to properly handle numbers. For example, 'api2Response' becomes 'api-2-response' instead of 'api2-response'. This is useful for version numbers, IDs, and numbered identifiers."
-          },
-          {
-            "question": "Does it work with nested JSON objects?",
-            "answer": "Yes. Enable 'Deep transform nested objects' to recursively convert all keys in nested objects and arrays. Your data values remain unchanged—only the keys are converted."
-          },
-          {
-            "question": "Can I exclude certain JSON paths from conversion?",
-            "answer": "Yes. Use the 'Exclude JSONPath patterns' option with JSONPath notation. For example, '$.config.urls,$.meta.*' will skip conversion for those specific paths while converting everything else."
-          },
-          {
-            "question": "How do I upload a file?",
-            "answer": "Click the 'Upload' button in the input area or drag and drop a .txt or .json file. The tool supports files up to 10MB. Your file content will populate the input field and be ready for conversion."
-          },
-          {
-            "question": "Is my data sent to a server?",
-            "answer": "No. All conversion happens locally in your browser using JavaScript. Your data never leaves your device, ensuring complete privacy and security."
-          },
-          {
-            "question": "Can I process CSV files?",
-            "answer": "Yes. Switch to the 'CSV Headers' tab to convert the first row of your CSV file. This is useful for normalizing column names when importing/exporting data between systems."
-          },
-          {
-            "question": "What file formats can I download?",
-            "answer": "The tool automatically sets the correct file extension based on your input type: .txt for text mode, .json for JSON mode, and .csv for CSV mode. All downloads include your converted content."
-          },
-          {
-            "question": "Can I use this for API response transformation?",
-            "answer": "Absolutely! Many APIs use different naming conventions. Use this tool to convert API responses from kebab-case or snake_case to camelCase for JavaScript, or vice versa when sending data to APIs."
-          }
-        ]
-      },
+      "faqs": [
+        {
+          "question": "What is kebab-case and when should I use it?",
+          "answer": "Kebab-case (also called dash-case or hyphen-case) uses hyphens to separate words in lowercase, like 'user-profile-settings'. It's commonly used for URL slugs, CSS class names, HTML data attributes, file names, and API endpoints. It's particularly popular in web development because hyphens are URL-safe and CSS-compatible."
+        },
+        {
+          "question": "Can I convert from kebab-case to other formats?",
+          "answer": "Yes! The tool supports bidirectional conversion. Select your desired target format from the dropdown menu: kebab-case, camelCase, or snake_case. The source format is auto-detected, or you can specify it manually."
+        },
+        {
+          "question": "How does the auto-detect feature work?",
+          "answer": "The tool analyzes your input to detect hyphens (kebab-case), underscores (snake_case), mixed case (camelCase/PascalCase), or spaces (Title Case). You can override auto-detection by manually selecting the source format."
+        },
+        {
+          "question": "What are the shortcut buttons for?",
+          "answer": "Shortcut buttons provide quick one-click conversions for common patterns. They automatically set both the source format and target case, then immediately convert your input. This is faster than manually selecting options for frequent conversions."
+        },
+        {
+          "question": "How does digit boundary detection work?",
+          "answer": "Enable 'Treat digits as word boundaries' to properly handle numbers. For example, 'api2Response' becomes 'api-2-response' instead of 'api2-response'. This is useful for version numbers, IDs, and numbered identifiers."
+        },
+        {
+          "question": "Does it work with nested JSON objects?",
+          "answer": "Yes. Enable 'Deep transform nested objects' to recursively convert all keys in nested objects and arrays. Your data values remain unchanged—only the keys are converted."
+        },
+        {
+          "question": "Can I exclude certain JSON paths from conversion?",
+          "answer": "Yes. Use the 'Exclude JSONPath patterns' option with JSONPath notation. For example, '$.config.urls,$.meta.*' will skip conversion for those specific paths while converting everything else."
+        },
+        {
+          "question": "How do I upload a file?",
+          "answer": "Click the 'Upload' button in the input area or drag and drop a .txt or .json file. The tool supports files up to 10MB. Your file content will populate the input field and be ready for conversion."
+        },
+        {
+          "question": "Is my data sent to a server?",
+          "answer": "No. All conversion happens locally in your browser using JavaScript. Your data never leaves your device, ensuring complete privacy and security."
+        },
+        {
+          "question": "Can I process CSV files?",
+          "answer": "Yes. Switch to the 'CSV Headers' tab to convert the first row of your CSV file. This is useful for normalizing column names when importing/exporting data between systems."
+        },
+        {
+          "question": "What file formats can I download?",
+          "answer": "The tool automatically sets the correct file extension based on your input type: .txt for text mode, .json for JSON mode, and .csv for CSV mode. All downloads include your converted content."
+        },
+        {
+          "question": "Can I use this for API response transformation?",
+          "answer": "Absolutely! Many APIs use different naming conventions. Use this tool to convert API responses from kebab-case or snake_case to camelCase for JavaScript, or vice versa when sending data to APIs."
+        }
+      ],
       "relatedTools": {
         "title": "Related Case Conversion Tools",
         "items": [
@@ -388,74 +386,72 @@
         ]
       },
       "benefits": {
-        "title": "Почему Стоит Использовать Наш Конвертер Kebab Case",
+        "title": "Why Use Our Kebab Case Converter",
+        "content": "Professional-grade kebab case conversion with bidirectional support and advanced features for developers, saving time on manual formatting and ensuring consistent naming conventions.",
         "items": [
-          "Двунаправленная конвертация между всеми основными конвенциями именования (kebab, camel, snake)",
-          "Расширенная обработка JSON с поддержкой глубоко вложенных объектов и исключением путей",
-          "Быстрые кнопки ярлыков для общих шаблонов конвертации экономят время",
-          "Поддержка загрузки файлов для пакетной обработки .txt и .json файлов",
-          "Интеллектуальное сохранение акронимов и определение границ цифр",
-          "Конвертация заголовков CSV для подготовки файлов данных",
-          "Валидация JSON в реальном времени с подробными сообщениями об ошибках и номерами строк",
-          "Контекстно-зависимые загрузки с правильными расширениями файлов (.txt, .json, .csv)",
-          "Автоопределение исходного формата устраняет догадки",
-          "Полностью бесплатно, обработка в браузере, без загрузки на сервер",
-          "Мобильно-оптимизированный интерфейс с клавиатурными сочетаниями для пользователей настольных компьютеров"
+          "Bidirectional conversion between all major naming conventions (kebab, camel, snake)",
+          "Advanced JSON processing with deep nested object support and path exclusions",
+          "Quick shortcut buttons for common conversion patterns save time",
+          "File upload support for batch processing of .txt and .json files",
+          "Intelligent acronym preservation and digit boundary detection",
+          "CSV header conversion for data file preparation",
+          "Real-time JSON validation with detailed error messages and line numbers",
+          "Context-aware downloads with proper file extensions (.txt, .json, .csv)",
+          "Auto-detect source format eliminates guesswork",
+          "Completely free, browser-based processing, no server uploads",
+          "Mobile-optimized interface with keyboard shortcuts for desktop users"
         ]
       },
-      "faqs": {
-        "title": "Часто Задаваемые Вопросы",
-        "items": [
-          {
-            "question": "Что такое kebab-case и когда его использовать?",
-            "answer": "Kebab-case (также называемый dash-case или hyphen-case) использует дефисы для разделения слов в нижнем регистре, например 'user-profile-settings'. Он обычно используется для URL-адресов, CSS-классов, HTML data-атрибутов, имен файлов и API эндпоинтов. Он особенно популярен в веб-разработке, потому что дефисы безопасны для URL и совместимы с CSS."
-          },
-          {
-            "question": "Могу ли я конвертировать из kebab-case в другие форматы?",
-            "answer": "Да! Инструмент поддерживает двунаправленную конвертацию. Выберите желаемый целевой формат из выпадающего меню: kebab-case, camelCase или snake_case. Исходный формат определяется автоматически, или вы можете указать его вручную."
-          },
-          {
-            "question": "Как работает функция автоопределения?",
-            "answer": "Инструмент анализирует ваш ввод для определения дефисов (kebab-case), подчеркиваний (snake_case), смешанного регистра (camelCase/PascalCase) или пробелов (Title Case). Вы можете переопределить автоопределение, вручную выбрав исходный формат."
-          },
-          {
-            "question": "Для чего нужны кнопки ярлыков?",
-            "answer": "Кнопки ярлыков обеспечивают быстрые однокликовые конвертации для общих шаблонов. Они автоматически устанавливают и исходный формат, и целевой регистр, затем немедленно конвертируют ваш ввод. Это быстрее, чем вручную выбирать опции для частых конвертаций."
-          },
-          {
-            "question": "Как работает определение границ цифр?",
-            "answer": "Включите 'Считать цифры границами слов' для правильной обработки чисел. Например, 'api2Response' становится 'api-2-response' вместо 'api2-response'. Это полезно для номеров версий, ID и пронумерованных идентификаторов."
-          },
-          {
-            "question": "Работает ли с вложенными JSON объектами?",
-            "answer": "Да. Включите 'Глубокое преобразование вложенных объектов' для рекурсивной конвертации всех ключей во вложенных объектах и массивах. Значения ваших данных остаются неизменными — конвертируются только ключи."
-          },
-          {
-            "question": "Могу ли я исключить определенные пути JSON из конвертации?",
-            "answer": "Да. Используйте опцию 'Исключить шаблоны JSONPath' с нотацией JSONPath. Например, '$.config.urls,$.meta.*' пропустит конвертацию для этих конкретных путей, конвертируя все остальное."
-          },
-          {
-            "question": "Как загрузить файл?",
-            "answer": "Нажмите кнопку 'Загрузить' в области ввода или перетащите файл .txt или .json. Инструмент поддерживает файлы до 10МБ. Содержимое вашего файла заполнит поле ввода и будет готово к конвертации."
-          },
-          {
-            "question": "Отправляются ли мои данные на сервер?",
-            "answer": "Нет. Вся конвертация происходит локально в вашем браузере с использованием JavaScript. Ваши данные никогда не покидают ваше устройство, обеспечивая полную конфиденциальность и безопасность."
-          },
-          {
-            "question": "Могу ли я обрабатывать CSV файлы?",
-            "answer": "Да. Переключитесь на вкладку 'Заголовки CSV' для конвертации первой строки вашего CSV файла. Это полезно для нормализации названий столбцов при импорте/экспорте данных между системами."
-          },
-          {
-            "question": "Какие форматы файлов я могу скачать?",
-            "answer": "Инструмент автоматически устанавливает правильное расширение файла в зависимости от типа ввода: .txt для текстового режима, .json для JSON режима и .csv для CSV режима. Все загрузки включают ваше конвертированное содержимое."
-          },
-          {
-            "question": "Могу ли я использовать это для преобразования API-ответов?",
-            "answer": "Абсолютно! Многие API используют различные конвенции именования. Используйте этот инструмент для конвертации API-ответов из kebab-case или snake_case в camelCase для JavaScript, или наоборот при отправке данных в API."
-          }
-        ]
-      },
+      "faqs": [
+        {
+          "question": "What is kebab-case and when should I use it?",
+          "answer": "Kebab-case (also called dash-case or hyphen-case) uses hyphens to separate words in lowercase, like 'user-profile-settings'. It's commonly used for URL slugs, CSS class names, HTML data attributes, file names, and API endpoints. It's particularly popular in web development because hyphens are URL-safe and CSS-compatible."
+        },
+        {
+          "question": "Can I convert from kebab-case to other formats?",
+          "answer": "Yes! The tool supports bidirectional conversion. Select your desired target format from the dropdown menu: kebab-case, camelCase, or snake_case. The source format is auto-detected, or you can specify it manually."
+        },
+        {
+          "question": "How does the auto-detect feature work?",
+          "answer": "The tool analyzes your input to detect hyphens (kebab-case), underscores (snake_case), mixed case (camelCase/PascalCase), or spaces (Title Case). You can override auto-detection by manually selecting the source format."
+        },
+        {
+          "question": "What are the shortcut buttons for?",
+          "answer": "Shortcut buttons provide quick one-click conversions for common patterns. They automatically set both the source format and target case, then immediately convert your input. This is faster than manually selecting options for frequent conversions."
+        },
+        {
+          "question": "How does digit boundary detection work?",
+          "answer": "Enable 'Treat digits as word boundaries' to properly handle numbers. For example, 'api2Response' becomes 'api-2-response' instead of 'api2-response'. This is useful for version numbers, IDs, and numbered identifiers."
+        },
+        {
+          "question": "Does it work with nested JSON objects?",
+          "answer": "Yes. Enable 'Deep transform nested objects' to recursively convert all keys in nested objects and arrays. Your data values remain unchanged—only the keys are converted."
+        },
+        {
+          "question": "Can I exclude certain JSON paths from conversion?",
+          "answer": "Yes. Use the 'Exclude JSONPath patterns' option with JSONPath notation. For example, '$.config.urls,$.meta.*' will skip conversion for those specific paths while converting everything else."
+        },
+        {
+          "question": "How do I upload a file?",
+          "answer": "Click the 'Upload' button in the input area or drag and drop a .txt or .json file. The tool supports files up to 10MB. Your file content will populate the input field and be ready for conversion."
+        },
+        {
+          "question": "Is my data sent to a server?",
+          "answer": "No. All conversion happens locally in your browser using JavaScript. Your data never leaves your device, ensuring complete privacy and security."
+        },
+        {
+          "question": "Can I process CSV files?",
+          "answer": "Yes. Switch to the 'CSV Headers' tab to convert the first row of your CSV file. This is useful for normalizing column names when importing/exporting data between systems."
+        },
+        {
+          "question": "What file formats can I download?",
+          "answer": "The tool automatically sets the correct file extension based on your input type: .txt for text mode, .json for JSON mode, and .csv for CSV mode. All downloads include your converted content."
+        },
+        {
+          "question": "Can I use this for API response transformation?",
+          "answer": "Absolutely! Many APIs use different naming conventions. Use this tool to convert API responses from kebab-case or snake_case to camelCase for JavaScript, or vice versa when sending data to APIs."
+        }
+      ],
       "relatedTools": {
         "title": "Связанные Инструменты Конвертации Регистра",
         "items": [
