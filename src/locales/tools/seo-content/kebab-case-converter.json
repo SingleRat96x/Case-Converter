@@ -33,10 +33,6 @@
           {
             "title": "Digit Boundary Detection",
             "description": "Treat numbers as word boundaries for proper kebab-case formatting (e.g., api-2-response)."
-          },
-          {
-            "title": "JSONPath Exclusions",
-            "description": "Exclude specific JSON paths from conversion using JSONPath notation with wildcard support."
           }
         ]
       },
@@ -191,16 +187,6 @@
             "description": "Convert to snake_case or UPPER_SNAKE_CASE for Python and databases"
           },
           {
-            "name": "UPPERCASE Converter",
-            "href": "/tools/uppercase",
-            "description": "Convert all text to UPPERCASE format"
-          },
-          {
-            "name": "lowercase Converter",
-            "href": "/tools/lowercase",
-            "description": "Transform text to all lowercase"
-          },
-          {
             "name": "Title Case Converter",
             "href": "/tools/title-case",
             "description": "Convert to proper Title Case for headlines"
@@ -248,10 +234,6 @@
           {
             "title": "Определение Границ Цифр",
             "description": "Считайте числа границами слов для правильного форматирования kebab-case (например, api-2-response)."
-          },
-          {
-            "title": "Исключения JSONPath",
-            "description": "Исключайте конкретные пути JSON из конвертации, используя нотацию JSONPath с поддержкой подстановочных знаков."
           }
         ]
       },
@@ -404,16 +386,6 @@
             "name": "Конвертер Snake Case",
             "href": "/ru/tools/snake-case-converter",
             "description": "Конвертируйте в snake_case или UPPER_SNAKE_CASE для Python и баз данных"
-          },
-          {
-            "name": "Конвертер ВЕРХНЕГО РЕГИСТРА",
-            "href": "/ru/tools/uppercase",
-            "description": "Конвертируйте весь текст в ВЕРХНИЙ РЕГИСТР"
-          },
-          {
-            "name": "Конвертер нижнего регистра",
-            "href": "/ru/tools/lowercase",
-            "description": "Преобразуйте текст в нижний регистр"
           },
           {
             "name": "Конвертер Заглавного Регистра",

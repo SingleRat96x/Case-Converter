@@ -339,7 +339,7 @@ export function KebabCaseConverter() {
                     </h3>
                   </div>
                   
-                  <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {/* Preserve Acronyms */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <div className="flex items-center gap-2 flex-1">
@@ -396,11 +396,11 @@ export function KebabCaseConverter() {
                     </Label>
                   </div>
                   
-                  <div className="space-y-3">
+                  <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                     {/* Convert Keys Only */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                        {tool('kebabCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
+                        {tool('kebabCase.convertKeysOnly') || "Convert keys only"}
                       </label>
                       <Switch
                         id="convert-keys-only"
@@ -412,7 +412,7 @@ export function KebabCaseConverter() {
                     {/* Deep Transform */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="deep-transform" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                        {tool('kebabCase.deepTransform') || 'Deep transform nested objects'}
+                        {tool('kebabCase.deepTransform') || 'Deep transform'}
                       </label>
                       <Switch
                         id="deep-transform"
@@ -434,19 +434,19 @@ export function KebabCaseConverter() {
                     </div>
 
                     {/* Exclude Paths */}
-                    <div className="space-y-2">
+                    <div className="flex flex-col gap-2 p-3 rounded-lg border bg-card">
                       <Label htmlFor="exclude-paths" className="text-sm font-medium">
-                        {tool('kebabCase.excludePaths') || 'Exclude paths (comma-separated)'}
+                        {tool('kebabCase.excludePaths') || 'Exclude paths'}
                       </Label>
                       <Input
                         id="exclude-paths"
                         value={excludePaths}
                         onChange={(e) => setExcludePaths(e.target.value)}
-                        placeholder="$.data.items[*].url, $.metadata.timestamp"
-                        className="font-mono text-xs"
+                        placeholder="$.data.items[*].url"
+                        className="font-mono text-xs h-9"
                       />
                       <p className="text-xs text-muted-foreground">
-                        {tool('kebabCase.excludePathsHint') || 'Use JSONPath notation. Wildcards (*) supported.'}
+                        {tool('kebabCase.excludePathsHint') || 'Comma-separated JSONPath'}
                       </p>
                     </div>
                   </div>
