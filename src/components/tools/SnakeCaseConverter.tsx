@@ -37,7 +37,7 @@ export function SnakeCaseConverter() {
   } | null>(null);
   
   // Options state
-  const [mode, setMode] = useState<ConversionMode | null>('camel-to-snake');
+  const [mode, setMode] = useState<ConversionMode | null>('title-to-snake');
   const [outputStyle, setOutputStyle] = useState<OutputStyle>('lower_snake_case');
   const [preserveAcronyms, setPreserveAcronyms] = useState(true);
   const [safeCharsOnly, setSafeCharsOnly] = useState(false);
@@ -233,12 +233,40 @@ export function SnakeCaseConverter() {
     </div>
   );
 
+  // Custom label with output style selector
+  const customOutputLabel = (
+    <div className="flex items-center gap-2 mb-2">
+      <label htmlFor="text-output" className="text-sm font-medium text-foreground">
+        {tool('snakeCase.outputLabel')}:
+      </label>
+      <Select value={outputStyle} onValueChange={(value) => setOutputStyle(value as OutputStyle)}>
+        <SelectTrigger className="w-[200px] h-8 text-xs">
+          <SelectValue />
+        </SelectTrigger>
+        <SelectContent>
+          <SelectItem value="lower_snake_case" className="text-xs">
+            <div className="flex items-center gap-2">
+              <Code className="h-3 w-3" />
+              {tool('snakeCase.styleLowerSnake') || 'lower_snake_case'}
+            </div>
+          </SelectItem>
+          <SelectItem value="UPPER_SNAKE_CASE" className="text-xs">
+            <div className="flex items-center gap-2">
+              <Type className="h-3 w-3" />
+              {tool('snakeCase.styleUpperSnake') || 'UPPER_SNAKE_CASE'}
+            </div>
+          </SelectItem>
+        </SelectContent>
+      </Select>
+    </div>
+  );
+
   return (
     <BaseTextConverter
         title={tool('snakeCase.title')}
         description={tool('snakeCase.description')}
         inputLabel=""
-        outputLabel={tool('snakeCase.outputLabel')}
+        outputLabel=""
         inputPlaceholder={tool('snakeCase.inputPlaceholder')}
         copyText={common('buttons.copy')}
         clearText={common('buttons.clear')}
@@ -255,6 +283,7 @@ export function SnakeCaseConverter() {
         mobileLayout="2x2"
         onDownloadPrimary={handleDownloadPrimary}
         customInputLabel={customInputLabel}
+        customOutputLabel={customOutputLabel}
       >
         <div className="space-y-4">
           {/* Validation Error Display */}
@@ -399,33 +428,6 @@ export function SnakeCaseConverter() {
                     >
                       <ArrowLeftRight className="h-4 w-4" />
                       {tool('snakeCase.modeReverse') || 'Reverse (snake_case → camelCase)'}
-                    </Button>
-                  </div>
-                </div>
-
-                {/* Output Style Selection */}
-                <div className="space-y-3">
-                  <Label className="text-sm font-medium">
-                    {tool('snakeCase.outputStyleLabel') || 'Output Style'}
-                  </Label>
-                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
-                    <Button
-                      variant={outputStyle === 'lower_snake_case' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setOutputStyle('lower_snake_case')}
-                      className="gap-2"
-                    >
-                      <Code className="h-4 w-4" />
-                      {tool('snakeCase.styleLowerSnake') || 'lower_snake_case'}
-                    </Button>
-                    <Button
-                      variant={outputStyle === 'UPPER_SNAKE_CASE' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setOutputStyle('UPPER_SNAKE_CASE')}
-                      className="gap-2"
-                    >
-                      <Type className="h-4 w-4" />
-                      {tool('snakeCase.styleUpperSnake') || 'UPPER_SNAKE_CASE'}
                     </Button>
                   </div>
                 </div>
