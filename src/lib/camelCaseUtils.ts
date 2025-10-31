@@ -244,7 +244,6 @@ export function parseValidationError(error: unknown): {
   // Try to extract position from JSON parse errors
   const positionMatch = errorMessage.match(/position (\d+)/i);
   if (positionMatch && error instanceof Error && error.stack) {
-    const position = parseInt(positionMatch[1]);
     // This is a simplified version - actual implementation would need the source text
     return {
       message: errorMessage,
@@ -297,8 +296,8 @@ export function validateAndParseJson(text: string): {
     // Try to get position for better error reporting
     const positionMatch = error instanceof Error && error.message?.match(/position (\d+)/);
     if (positionMatch) {
-      const position = parseInt(positionMatch[1]);
-      const { line, column } = getLineColumnFromPosition(text, position);
+      const pos = parseInt(positionMatch[1]);
+      const { line, column } = getLineColumnFromPosition(text, pos);
       errorInfo.line = line;
       errorInfo.column = column;
     }

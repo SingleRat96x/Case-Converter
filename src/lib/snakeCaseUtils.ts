@@ -18,28 +18,6 @@ export interface SnakeCaseOptions {
 }
 
 /**
- * Detect if a word is an acronym (2+ consecutive uppercase letters)
- */
-function isAcronym(word: string): boolean {
-  return /^[A-Z]{2,}$/.test(word);
-}
-
-/**
- * Handle acronym conversion for snake_case
- */
-function handleAcronym(word: string, outputStyle: OutputStyle, preserveAcronyms: boolean): string {
-  if (word.length === 0) return word;
-  
-  if (preserveAcronyms) {
-    // Keep acronym together: HTTP → http or HTTP
-    return outputStyle === 'UPPER_SNAKE_CASE' ? word.toUpperCase() : word.toLowerCase();
-  } else {
-    // Standard conversion
-    return outputStyle === 'UPPER_SNAKE_CASE' ? word.toUpperCase() : word.toLowerCase();
-  }
-}
-
-/**
  * Normalize diacritics and remove non-ASCII characters
  */
 function safeCharactersOnly(text: string): string {

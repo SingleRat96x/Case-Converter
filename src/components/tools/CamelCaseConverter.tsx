@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useRef, useMemo } from 'react';
 import { BaseTextConverter } from '@/components/shared/BaseTextConverter';
 import { TextAnalytics } from '@/components/shared/TextAnalytics';
 import { useToolTranslations } from '@/lib/i18n/hooks';
@@ -55,8 +55,8 @@ export function CamelCaseConverter() {
   // Status message for screen readers
   const statusRef = useRef<HTMLDivElement>(null);
 
-  // Build options object
-  const options: CamelCaseOptions = {
+  // Build options object with useMemo to prevent recreation on every render
+  const options: CamelCaseOptions = useMemo(() => ({
     mode,
     caseStyle,
     preserveAcronyms,
@@ -65,7 +65,7 @@ export function CamelCaseConverter() {
     convertKeysOnly: inputType === 'json' ? convertKeysOnly : undefined,
     excludePaths: inputType === 'json' && excludePaths ? excludePaths.split(',').map(p => p.trim()) : undefined,
     prettyPrint: inputType === 'json' ? prettyPrint : undefined
-  };
+  }), [mode, caseStyle, preserveAcronyms, safeCharsOnly, trimWhitespace, inputType, convertKeysOnly, excludePaths, prettyPrint]);
 
   // Validate JSON when in JSON mode
   const validateInput = useCallback((inputText: string) => {
