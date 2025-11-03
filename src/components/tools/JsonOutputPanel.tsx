@@ -3,8 +3,7 @@
 import React from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
 import { JsonTreeView } from '@/components/shared/JsonTreeView';
-import { JsonOutputMenu } from './JsonOutputMenu';
-import { Copy, Download, Code2, TreePine, Check, Printer } from 'lucide-react';
+import { Copy, Download, Code2, TreePine, Check, Printer, AlertCircle } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { downloadTextAsFile } from '@/lib/utils';
@@ -93,48 +92,6 @@ export function JsonOutputPanel({
     }
   };
 
-  const handleMenuAction = (actionId: string) => {
-    switch (actionId) {
-      case 'file-save-json':
-      case 'file-save-ndjson':
-        handleDownload();
-        break;
-      case 'file-print':
-        handlePrint();
-        break;
-      case 'edit-copy':
-        handleCopy();
-        break;
-      case 'edit-select-all':
-        document.execCommand('selectAll');
-        break;
-      case 'edit-find':
-        // Find is handled by browser or CodeMirror internally
-        break;
-      case 'view-code':
-        onViewModeChange('code');
-        break;
-      case 'view-tree':
-        onViewModeChange('tree');
-        break;
-      case 'view-word-wrap':
-      case 'view-line-numbers':
-      case 'view-fold-all':
-      case 'view-unfold-all':
-        // Visual options - would need CodeMirror extension config changes
-        break;
-      case 'help-keyboard-shortcuts':
-        alert('Keyboard Shortcuts:\n\nCtrl+C - Copy\nCtrl+A - Select All\nCtrl+F - Find\nCtrl+P - Print\nCtrl+S - Save');
-        break;
-      case 'help-json-spec':
-        window.open('https://www.json.org/', '_blank');
-        break;
-      case 'help-about':
-        alert('JSON Formatter & Validator\n\nA powerful tool for formatting, validating, and working with JSON data.\n\nFeatures:\n• Format & beautify JSON\n• Validate JSON syntax\n• Minify JSON\n• Sort object keys\n• NDJSON support\n• Tree view\n• Syntax highlighting\n• Error detection');
-        break;
-    }
-  };
-
   const formatSize = (bytes: number) => {
     if (bytes < 1024) return `${bytes} B`;
     if (bytes < 1024 * 1024) return `${(bytes / 1024).toFixed(1)} KB`;
@@ -143,9 +100,6 @@ export function JsonOutputPanel({
 
   return (
     <div className={`flex flex-col border border-border rounded-lg bg-background overflow-hidden ${className}`}>
-      {/* Menu Bar */}
-      <JsonOutputMenu onMenuAction={handleMenuAction} />
-
       {/* Toolbar */}
       <div className="flex items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
         <div className="flex items-center gap-2 min-w-max">
@@ -235,6 +189,26 @@ export function JsonOutputPanel({
         </Button>
         </div>
       </div>
+
+      {/* Validation Error Banner */}
+      {validationError && value && (
+        <div className="px-3 py-2 bg-red-50 dark:bg-red-950/20 border-b border-red-200 dark:border-red-900">
+          <div className="flex items-start gap-2 text-sm">
+            <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+            <div className="flex-1 min-w-0">
+              <p className="font-medium text-red-800 dark:text-red-300">Validation Error</p>
+              <p className="text-red-700 dark:text-red-400 text-xs mt-0.5 break-words">
+                {validationError.message}
+                {validationError.line && validationError.column && (
+                  <span className="ml-1 font-mono">
+                    (Line {validationError.line}, Column {validationError.column})
+                  </span>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
 
       {/* CodeMirror Editor or Tree View */}
       <div ref={editorRef} className="flex-1 relative">

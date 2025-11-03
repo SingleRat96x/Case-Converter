@@ -2,9 +2,8 @@
 
 import React, { useEffect, useRef } from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
-import { JsonInputMenu } from './JsonInputMenu';
 import { 
-  Upload, AlertCircle, CheckCircle, Sparkles, Minimize2, Trash2, Loader2
+  Upload, AlertCircle, Sparkles, Minimize2, Trash2, Loader2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -104,69 +103,6 @@ export function JsonInputPanel({
     e.target.value = '';
   };
 
-  const handleMenuAction = (actionId: string) => {
-    switch (actionId) {
-      case 'file-new':
-        onClear();
-        break;
-      case 'file-open':
-        handleFileClick();
-        break;
-      case 'file-save-json':
-      case 'file-save-ndjson':
-      case 'file-print':
-        // These will be handled by output panel
-        break;
-      case 'edit-undo':
-        document.execCommand('undo');
-        break;
-      case 'edit-redo':
-        document.execCommand('redo');
-        break;
-      case 'edit-cut':
-        document.execCommand('cut');
-        break;
-      case 'edit-copy':
-        document.execCommand('copy');
-        break;
-      case 'edit-paste':
-        document.execCommand('paste');
-        break;
-      case 'edit-select-all':
-        document.execCommand('selectAll');
-        break;
-      case 'edit-find':
-        // Search panel is available via Ctrl+F due to CodeMirror search extension
-        break;
-      case 'insert-sample-object':
-        onChange('{\n  "name": "John Doe",\n  "age": 30,\n  "email": "john@example.com",\n  "isActive": true,\n  "address": {\n    "street": "123 Main St",\n    "city": "New York",\n    "country": "USA"\n  }\n}');
-        break;
-      case 'insert-sample-array':
-        onChange('[\n  {\n    "id": 1,\n    "name": "Item 1"\n  },\n  {\n    "id": 2,\n    "name": "Item 2"\n  },\n  {\n    "id": 3,\n    "name": "Item 3"\n  }\n]');
-        break;
-      case 'insert-empty-object':
-        onChange('{}');
-        break;
-      case 'insert-empty-array':
-        onChange('[]');
-        break;
-      case 'view-word-wrap':
-      case 'view-line-numbers':
-      case 'view-fold-all':
-      case 'view-unfold-all':
-        // Visual options - would need CodeMirror extension config changes
-        break;
-      case 'help-keyboard-shortcuts':
-        alert('Keyboard Shortcuts:\n\nCtrl+Enter - Format & Validate\nCtrl+K - Clear\nCtrl+Z - Undo\nCtrl+Y - Redo\nCtrl+F - Find\nCtrl+A - Select All\nCtrl+X - Cut\nCtrl+C - Copy\nCtrl+V - Paste');
-        break;
-      case 'help-json-spec':
-        window.open('https://www.json.org/', '_blank');
-        break;
-      case 'help-about':
-        alert('JSON Formatter & Validator\n\nA powerful tool for formatting, validating, and working with JSON data.\n\nFeatures:\n? Format & beautify JSON\n? Validate JSON syntax\n? Minify JSON\n? Sort object keys\n? NDJSON support\n? Tree view\n? Syntax highlighting\n? Error detection');
-        break;
-    }
-  };
 
   const handleIndentChange = (val: string) => {
     if (val === 'custom') {
@@ -197,13 +133,10 @@ export function JsonInputPanel({
 
   return (
     <div className={`flex flex-col border border-border rounded-lg bg-background overflow-hidden ${className}`}>
-      {/* Menu Bar */}
-      <JsonInputMenu onMenuAction={handleMenuAction} />
-
       {/* Toolbar */}
       <div className="flex items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
         <div className="flex items-center gap-2 min-w-max">
-        {/* Primary Actions */}
+          {/* Primary Actions */}
         <Button
           onClick={() => {
             onFormat();
@@ -355,6 +288,26 @@ export function JsonInputPanel({
         </div>
       </div>
 
+      {/* Validation Error Banner */}
+      {validationError && (
+        <div className="px-3 py-2 bg-red-50 dark:bg-red-950/20 border-b border-red-200 dark:border-red-900">
+          <div className="flex items-start gap-2 text-sm">
+            <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
+            <div className="flex-1 min-w-0">
+              <p className="font-medium text-red-800 dark:text-red-300">Invalid JSON</p>
+              <p className="text-red-700 dark:text-red-400 text-xs mt-0.5 break-words">
+                {validationError.message}
+                {validationError.line && validationError.column && (
+                  <span className="ml-1 font-mono">
+                    (Line {validationError.line}, Column {validationError.column})
+                  </span>
+                )}
+              </p>
+            </div>
+          </div>
+        </div>
+      )}
+
       {/* CodeMirror Editor */}
       <div className="flex-1 relative">
         <JsonEditorPanel
@@ -375,20 +328,6 @@ export function JsonInputPanel({
           <span>Characters: {chars.toLocaleString()}</span>
           <span>?</span>
           <span>Words: {words}</span>
-        </div>
-        
-        <div className="flex items-center gap-2">
-          {validationError ? (
-            <div className="flex items-center gap-1.5 text-red-600 dark:text-red-400">
-              <AlertCircle className="h-3 w-3" />
-              <span className="font-medium">Invalid JSON</span>
-            </div>
-          ) : value && (
-            <div className="flex items-center gap-1.5 text-green-600 dark:text-green-400">
-              <CheckCircle className="h-3 w-3" />
-              <span className="font-medium">Valid JSON</span>
-            </div>
-          )}
         </div>
       </div>
     </div>
