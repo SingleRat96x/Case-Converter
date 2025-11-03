@@ -3,35 +3,26 @@
  * 
  * Main tool component for JSON Formatter & Validator
  * Features: Format, validate, minify, tree view, NDJSON support
+ * 
+ * Refactored to use modular components:
+ * - JsonFormatterToolbar: Action buttons and helper text
+ * - JsonFormatterPanel: Input/output editor panels with stats
+ * - JsonFormatterStatusBar: Bottom status bar with format settings
  */
 
 'use client';
 
-import React, { useCallback, useMemo } from 'react';
+import React, { useCallback, useMemo, useEffect } from 'react';
 import { useJsonFormatter } from '@/hooks/useJsonFormatter';
-import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
-import { JsonTreeView } from '@/components/shared/JsonTreeView';
+import { JsonFormatterToolbar } from './JsonFormatterToolbar';
+import { JsonFormatterPanel } from './JsonFormatterPanel';
+import { JsonFormatterStatusBar } from './JsonFormatterStatusBar';
 import { useToolTranslations } from '@/lib/i18n/hooks';
-import { Button } from '@/components/ui/button';
 import { Switch } from '@/components/ui/switch';
-import { Label } from '@/components/ui/label';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Input } from '@/components/ui/input';
 import { Accordion, AccordionItem } from '@/components/ui/accordion';
-import { 
-  Sparkles, 
-  Minimize2, 
-  Copy, 
-  Download, 
-  Trash2, 
-  Check, 
-  Loader2,
-  Code2,
-  TreePine,
-  Settings2,
-  FileJson,
-  Info
-} from 'lucide-react';
+import { Settings2, FileJson, Code2 } from 'lucide-react';
 import { downloadTextAsFile } from '@/lib/utils';
 
 export function JsonFormatterTool() {
@@ -63,6 +54,27 @@ export function JsonFormatterTool() {
   }, [state.output, state.ndjsonMode]);
 
   /**
+   * Keyboard shortcuts
+   */
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      // Ctrl/Cmd + Enter to format
+      if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && state.input && !state.isProcessing) {
+        e.preventDefault();
+        actions.format();
+      }
+      // Ctrl/Cmd + K to clear
+      if ((e.ctrlKey || e.metaKey) && e.key === 'k' && (state.input || state.output)) {
+        e.preventDefault();
+        actions.clear();
+      }
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [state.input, state.output, state.isProcessing, actions]);
+
+  /**
    * Handle custom indent input
    */
   const [customIndent, setCustomIndent] = React.useState('');
@@ -90,37 +102,48 @@ export function JsonFormatterTool() {
   }, [actions]);
 
   /**
-   * Format button state
+   * Calculate input stats for status bar
    */
-  const formatButtonText = useMemo(() => {
-    if (state.isProcessing) return tool('jsonFormatter.processing') || 'Processing...';
-    return tool('jsonFormatter.formatButton') || 'Format & Validate';
-  }, [state.isProcessing, tool]);
+  const inputStats = useMemo(() => {
+    if (!state.input) return null;
+    
+    try {
+      const parsed = JSON.parse(state.input);
+      const stats = {
+        objects: 0,
+        arrays: 0,
+        keys: 0,
+        primitives: 0,
+        size: new Blob([state.input]).size
+      };
 
-  /**
-   * Stats display
-   */
-  const statsDisplay = useMemo(() => {
-    if (!state.stats) return null;
-    return (
-      <div className="flex items-center gap-4 text-xs text-muted-foreground">
-        <span>{state.stats.objects} objects</span>
-        <span>•</span>
-        <span>{state.stats.arrays} arrays</span>
-        <span>•</span>
-        <span>{state.stats.keys} keys</span>
-        <span>•</span>
-        <span>{state.stats.primitives} values</span>
-        <span>•</span>
-        <span>{(state.stats.size / 1024).toFixed(1)} KB</span>
-      </div>
-    );
-  }, [state.stats]);
+      const traverse = (obj: any) => {
+        if (obj === null || typeof obj !== 'object') {
+          stats.primitives++;
+          return;
+        }
+
+        if (Array.isArray(obj)) {
+          stats.arrays++;
+          obj.forEach(traverse);
+        } else {
+          stats.objects++;
+          stats.keys += Object.keys(obj).length;
+          Object.values(obj).forEach(traverse);
+        }
+      };
+
+      traverse(parsed);
+      return stats;
+    } catch {
+      return null;
+    }
+  }, [state.input]);
 
   return (
     <div className="space-y-6">
       {/* Title and Description */}
-      <div className="space-y-2">
+      <div className="text-center space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">
           {tool('jsonFormatter.title') || 'Online JSON Formatter & Validator'}
         </h1>
@@ -129,167 +152,59 @@ export function JsonFormatterTool() {
         </p>
       </div>
 
-      {/* Tool Options Bar */}
-      <div className="bg-muted/30 rounded-lg p-4 border border-border space-y-4">
-        {/* Primary Actions */}
-        <div className="flex flex-wrap items-center gap-3">
-          <Button
-            onClick={actions.format}
-            disabled={!state.input || state.isProcessing}
-            size="lg"
-            className="gap-2"
-          >
-            {state.isProcessing ? (
-              <>
-                <Loader2 className="h-4 w-4 animate-spin" />
-                {formatButtonText}
-              </>
-            ) : (
-              <>
-                <Sparkles className="h-4 w-4" />
-                {formatButtonText}
-              </>
-            )}
-          </Button>
-
-          <Button
-            onClick={actions.minify}
-            disabled={!state.input || state.isProcessing}
-            size="lg"
-            variant="outline"
-            className="gap-2"
-          >
-            <Minimize2 className="h-4 w-4" />
-            {tool('jsonFormatter.minifyButton') || 'Minify'}
-          </Button>
-
-          <Button
-            onClick={handleCopy}
-            disabled={!state.output}
-            size="lg"
-            variant="outline"
-            className="gap-2"
-          >
-            {copySuccess ? (
-              <>
-                <Check className="h-4 w-4" />
-                {common('buttons.copied') || 'Copied!'}
-              </>
-            ) : (
-              <>
-                <Copy className="h-4 w-4" />
-                {common('buttons.copy') || 'Copy'}
-              </>
-            )}
-          </Button>
-
-          <Button
-            onClick={handleDownload}
-            disabled={!state.output}
-            size="lg"
-            variant="outline"
-            className="gap-2"
-          >
-            {downloadSuccess ? (
-              <>
-                <Check className="h-4 w-4" />
-                {common('buttons.downloaded') || 'Downloaded!'}
-              </>
-            ) : (
-              <>
-                <Download className="h-4 w-4" />
-                {common('buttons.download') || 'Download'}
-              </>
-            )}
-          </Button>
-
-          <Button
-            onClick={actions.clear}
-            disabled={!state.input && !state.output}
-            size="lg"
-            variant="ghost"
-            className="gap-2 ml-auto"
-          >
-            <Trash2 className="h-4 w-4" />
-            {common('buttons.clear') || 'Clear'}
-          </Button>
-        </div>
-
-        {/* Helper Text */}
-        <div className="flex items-start gap-2 text-sm text-muted-foreground">
-          <Info className="h-4 w-4 mt-0.5 flex-shrink-0" />
-          <p>
-            {tool('jsonFormatter.helperText') || 'Paste JSON or drop a JSON/TXT file. We\'ll pretty-print and validate in your browser. Press Ctrl/Cmd+Enter to format.'}
-          </p>
-        </div>
-      </div>
+      {/* Toolbar */}
+      <JsonFormatterToolbar
+        onFormat={actions.format}
+        onMinify={actions.minify}
+        onCopy={handleCopy}
+        onDownload={handleDownload}
+        onClear={actions.clear}
+        isProcessing={state.isProcessing}
+        hasInput={!!state.input}
+        hasOutput={!!state.output}
+        copySuccess={copySuccess}
+        downloadSuccess={downloadSuccess}
+      />
 
       {/* Editor Panels */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Input Panel */}
-        <JsonEditorPanel
+        <JsonFormatterPanel
+          label={tool('jsonFormatter.inputLabel') || 'Input'}
           value={state.input}
           onChange={actions.setInput}
           onFileUpload={actions.handleFileUpload}
           placeholder={tool('jsonFormatter.inputPlaceholder') || 'Paste or type JSON here...'}
-          label={tool('jsonFormatter.inputLabel') || 'Input'}
           validationError={state.validationError}
           height="500px"
           showFileUpload={true}
+          showStats={true}
+          stats={inputStats}
         />
 
         {/* Output Panel */}
-        <div className="space-y-2">
-          <div className="flex items-center justify-between">
-            <Label className="text-sm font-medium text-foreground">
-              {tool('jsonFormatter.outputLabel') || 'Output'}
-            </Label>
-            {state.output && (
-              <div className="flex items-center gap-2">
-                <Button
-                  variant={state.viewMode === 'code' ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => actions.setViewMode('code')}
-                  className="gap-1.5 h-8"
-                >
-                  <Code2 className="h-3 w-3" />
-                  Code
-                </Button>
-                <Button
-                  variant={state.viewMode === 'tree' ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => actions.setViewMode('tree')}
-                  className="gap-1.5 h-8"
-                >
-                  <TreePine className="h-3 w-3" />
-                  Tree
-                </Button>
-              </div>
-            )}
-          </div>
-
-          {state.viewMode === 'code' ? (
-            <JsonEditorPanel
-              value={state.output}
-              readOnly={true}
-              placeholder={tool('jsonFormatter.outputPlaceholder') || 'Formatted JSON will appear here...'}
-              height="500px"
-            />
-          ) : (
-            <JsonTreeView
-              json={state.output}
-              height="500px"
-            />
-          )}
-
-          {/* Stats Display */}
-          {statsDisplay && (
-            <div className="flex items-center justify-end pt-2">
-              {statsDisplay}
-            </div>
-          )}
-        </div>
+        <JsonFormatterPanel
+          label={tool('jsonFormatter.outputLabel') || 'Output'}
+          value={state.output}
+          readOnly={true}
+          placeholder={tool('jsonFormatter.outputPlaceholder') || 'Formatted JSON will appear here...'}
+          height="500px"
+          showStats={true}
+          stats={state.stats}
+          viewMode={state.viewMode}
+          onViewModeChange={actions.setViewMode}
+        />
       </div>
+
+      {/* Status Bar */}
+      <JsonFormatterStatusBar
+        inputStats={inputStats}
+        outputStats={state.stats}
+        indentSize={state.indentSize}
+        sortKeys={state.sortKeys}
+        ndjsonMode={state.ndjsonMode}
+        unescapeStrings={state.unescapeStrings}
+      />
 
       {/* Options Accordion */}
       <Accordion className="w-full">
