@@ -46,6 +46,8 @@ export function Header() {
         { titleKey: 'navigation.sentenceCase', href: '/tools/sentence-case' },
         { titleKey: 'navigation.alternatingCase', href: '/tools/alternating-case' },
         { titleKey: 'navigation.camelCaseConverter', href: '/tools/camel-case-converter' },
+        { titleKey: 'navigation.snakeCaseConverter', href: '/tools/snake-case-converter' },
+        { titleKey: 'navigation.kebabCaseConverter', href: '/tools/kebab-case-converter' },
       ]
     },
     {
@@ -123,6 +125,7 @@ export function Header() {
         { titleKey: 'navigation.rot13', href: '/tools/rot13' },
         { titleKey: 'navigation.csvToJson', href: '/tools/csv-to-json' },
         { titleKey: 'navigation.jsonStringify', href: '/tools/json-stringify', isPopular: true },
+        { titleKey: 'navigation.jsonFormatter', href: '/tools/json-formatter', isPopular: true },
         { titleKey: 'navigation.urlConverter', href: '/tools/url-converter' },
         { titleKey: 'navigation.utf8Converter', href: '/tools/utf8-converter' },
         { titleKey: 'navigation.slugifyUrl', href: '/tools/slugify-url' },

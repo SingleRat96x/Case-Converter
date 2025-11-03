@@ -12,18 +12,18 @@ import { Accordion, AccordionItem } from '@/components/ui/accordion';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
 import { Settings, Sparkles, Check, AlertCircle, Loader2, ArrowRight, ArrowLeftRight, Type, Code, FileJson, FileText, Table } from 'lucide-react';
 import { 
-  convertTextToCamelCase, 
+  convertTextToSnakeCase, 
   convertJsonKeys, 
   convertCsvHeaders,
   validateAndParseJson,
   shouldUseWorker,
   type ConversionMode,
-  type CaseStyle,
-  type CamelCaseOptions 
-} from '@/lib/camelCaseUtils';
+  type OutputStyle,
+  type SnakeCaseOptions 
+} from '@/lib/snakeCaseUtils';
 import { downloadTextAsFile } from '@/lib/utils';
 
-export function CamelCaseConverter() {
+export function SnakeCaseConverter() {
   const { common, tool } = useToolTranslations('tools/text-generators');
   
   // Main state
@@ -37,8 +37,8 @@ export function CamelCaseConverter() {
   } | null>(null);
   
   // Options state
-  const [mode, setMode] = useState<ConversionMode | null>('title-to-camel');
-  const [caseStyle, setCaseStyle] = useState<CaseStyle>('camelCase');
+  const [mode, setMode] = useState<ConversionMode | null>('title-to-snake');
+  const [outputStyle, setOutputStyle] = useState<OutputStyle>('lower_snake_case');
   const [preserveAcronyms, setPreserveAcronyms] = useState(true);
   const [safeCharsOnly, setSafeCharsOnly] = useState(false);
   const [trimWhitespace, setTrimWhitespace] = useState(true);
@@ -56,16 +56,16 @@ export function CamelCaseConverter() {
   const statusRef = useRef<HTMLDivElement>(null);
 
   // Build options object with useMemo to prevent recreation on every render
-  const options: CamelCaseOptions = useMemo(() => ({
+  const options: SnakeCaseOptions = useMemo(() => ({
     mode,
-    caseStyle,
+    outputStyle,
     preserveAcronyms,
     safeCharsOnly,
     trimWhitespace,
     convertKeysOnly: inputType === 'json' ? convertKeysOnly : undefined,
     excludePaths: inputType === 'json' && excludePaths ? excludePaths.split(',').map(p => p.trim()) : undefined,
     prettyPrint: inputType === 'json' ? prettyPrint : undefined
-  }), [mode, caseStyle, preserveAcronyms, safeCharsOnly, trimWhitespace, inputType, convertKeysOnly, excludePaths, prettyPrint]);
+  }), [mode, outputStyle, preserveAcronyms, safeCharsOnly, trimWhitespace, inputType, convertKeysOnly, excludePaths, prettyPrint]);
 
   // Validate JSON when in JSON mode
   const validateInput = useCallback((inputText: string) => {
@@ -87,13 +87,13 @@ export function CamelCaseConverter() {
     // Validate first
     if (!validateInput(text)) {
       setCtaButtonState('error');
-      setStatusMessage(tool('camelCase.errorInvalidInput') || 'Invalid input');
+      setStatusMessage(tool('snakeCase.errorInvalidInput') || 'Invalid input');
       setTimeout(() => setCtaButtonState('idle'), 2000);
       return;
     }
     
     setIsProcessing(true);
-    setStatusMessage(tool('camelCase.processing') || 'Processing...');
+    setStatusMessage(tool('snakeCase.processing') || 'Processing...');
     
     try {
       let result: string;
@@ -116,12 +116,12 @@ export function CamelCaseConverter() {
       } else {
         // Text mode - process line by line
         const lines = text.split('\n');
-        result = lines.map(line => convertTextToCamelCase(line, options)).join('\n');
+        result = lines.map(line => convertTextToSnakeCase(line, options)).join('\n');
       }
       
       setConvertedText(result);
       setCtaButtonState('success');
-      setStatusMessage(tool('camelCase.converted') || 'Converted!');
+      setStatusMessage(tool('snakeCase.converted') || 'Converted!');
       setTimeout(() => {
         setCtaButtonState('idle');
         setStatusMessage('');
@@ -129,7 +129,7 @@ export function CamelCaseConverter() {
     } catch (error) {
       setCtaButtonState('error');
       const errorMsg = error instanceof Error ? error.message : String(error);
-      setStatusMessage(tool('camelCase.errorConversion') || `Error: ${errorMsg}`);
+      setStatusMessage(tool('snakeCase.errorConversion') || `Error: ${errorMsg}`);
       setTimeout(() => {
         setCtaButtonState('idle');
         setStatusMessage('');
@@ -167,7 +167,7 @@ export function CamelCaseConverter() {
     const brandedContent = inputType === 'json' || inputType === 'csv' 
       ? convertedText // Don't brand JSON/CSV
       : `Downloaded from TextCaseConverter.net\n=====================================\n\n${convertedText}`;
-    downloadTextAsFile(brandedContent, `camelCase-output.${ext}`);
+    downloadTextAsFile(brandedContent, `snake-case-output.${ext}`);
   }, [convertedText, inputType]);
 
   // Keyboard shortcuts
@@ -233,27 +233,27 @@ export function CamelCaseConverter() {
     </div>
   );
 
-  // Custom label with case style selector
+  // Custom label with output style selector
   const customOutputLabel = (
     <div className="flex items-center gap-2 mb-2">
       <label htmlFor="text-output" className="text-sm font-medium text-foreground">
-        {tool('camelCase.outputLabel')}:
+        {tool('snakeCase.outputLabel')}:
       </label>
-      <Select value={caseStyle} onValueChange={(value) => setCaseStyle(value as CaseStyle)}>
-        <SelectTrigger className="w-[180px] h-8 text-xs">
+      <Select value={outputStyle} onValueChange={(value) => setOutputStyle(value as OutputStyle)}>
+        <SelectTrigger className="w-[200px] h-8 text-xs">
           <SelectValue />
         </SelectTrigger>
         <SelectContent>
-          <SelectItem value="camelCase" className="text-xs">
+          <SelectItem value="lower_snake_case" className="text-xs">
             <div className="flex items-center gap-2">
               <Code className="h-3 w-3" />
-              {tool('camelCase.styleCamel') || 'camelCase'}
+              {tool('snakeCase.styleLowerSnake') || 'lower_snake_case'}
             </div>
           </SelectItem>
-          <SelectItem value="PascalCase" className="text-xs">
+          <SelectItem value="UPPER_SNAKE_CASE" className="text-xs">
             <div className="flex items-center gap-2">
               <Type className="h-3 w-3" />
-              {tool('camelCase.stylePascal') || 'PascalCase'}
+              {tool('snakeCase.styleUpperSnake') || 'UPPER_SNAKE_CASE'}
             </div>
           </SelectItem>
         </SelectContent>
@@ -263,17 +263,17 @@ export function CamelCaseConverter() {
 
   return (
     <BaseTextConverter
-        title={tool('camelCase.title')}
-        description={tool('camelCase.description')}
+        title={tool('snakeCase.title')}
+        description={tool('snakeCase.description')}
         inputLabel=""
         outputLabel=""
-        inputPlaceholder={tool('camelCase.inputPlaceholder')}
+        inputPlaceholder={tool('snakeCase.inputPlaceholder')}
         copyText={common('buttons.copy')}
         clearText={common('buttons.clear')}
         downloadText={common('buttons.download')}
         uploadText={common('buttons.upload')}
         uploadDescription=""
-        downloadFileName={`camelCase-output.${inputType === 'json' ? 'json' : inputType === 'csv' ? 'csv' : 'txt'}`}
+        downloadFileName={`snake-case-output.${inputType === 'json' ? 'json' : inputType === 'csv' ? 'csv' : 'txt'}`}
         onTextChange={handleTextChange}
         text={text}
         convertedText={convertedText}
@@ -323,22 +323,22 @@ export function CamelCaseConverter() {
               {isProcessing ? (
                 <>
                   <Loader2 className="h-4 w-4 animate-spin" />
-                  {tool('camelCase.processing') || 'Processing...'}
+                  {tool('snakeCase.processing') || 'Processing...'}
                 </>
               ) : ctaButtonState === 'success' ? (
                 <>
                   <Check className="h-4 w-4" />
-                  {tool('camelCase.converted') || 'Converted!'}
+                  {tool('snakeCase.converted') || 'Converted!'}
                 </>
               ) : ctaButtonState === 'error' ? (
                 <>
                   <AlertCircle className="h-4 w-4" />
-                  {tool('camelCase.error') || 'Error'}
+                  {tool('snakeCase.error') || 'Error'}
                 </>
               ) : (
                 <>
                   <Sparkles className="h-4 w-4" />
-                  {tool('camelCase.convertButton') || 'Convert to camelCase'}
+                  {tool('snakeCase.convertButton') || 'Convert to snake_case'}
                 </>
               )}
             </Button>
@@ -346,7 +346,7 @@ export function CamelCaseConverter() {
 
           {/* Helper Text */}
           <div className="text-center text-sm text-muted-foreground">
-            {tool('camelCase.helperText') || 'Choose input type and options, paste your data, then convert.'} 
+            {tool('snakeCase.helperText') || 'Choose input type and options, paste your data, then convert.'} 
             <span className="text-xs ml-2 opacity-70">
               (Ctrl/Cmd + Enter)
             </span>
@@ -366,7 +366,7 @@ export function CamelCaseConverter() {
           {/* Options Accordion */}
           <Accordion className="w-full">
             <AccordionItem
-              title={tool('camelCase.optionsTitle') || 'Conversion Options'}
+              title={tool('snakeCase.optionsTitle') || 'Conversion Options'}
               defaultOpen={isAccordionOpen}
               className="w-full"
             >
@@ -376,49 +376,58 @@ export function CamelCaseConverter() {
                   <div className="flex items-center gap-2 pb-2 border-b border-border/50">
                     <Settings className="h-4 w-4 text-primary" />
                     <h3 className="text-base font-semibold text-foreground">
-                      {tool('camelCase.sourceFormatTitle') || 'Source Format'}
+                      {tool('snakeCase.sourceFormatTitle') || 'Source Format'}
                     </h3>
                     <span className="text-xs text-muted-foreground">
-                      ({tool('camelCase.sourceFormatHint') || 'How is your input formatted?'})
+                      ({tool('snakeCase.sourceFormatHint') || 'How is your input formatted?'})
                     </span>
                   </div>
                   
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     <Button
-                      variant={mode === 'snake-to-camel' ? 'default' : 'outline'}
+                      variant={mode === 'camel-to-snake' ? 'default' : 'outline'}
                       size="sm"
-                      onClick={() => setMode('snake-to-camel')}
+                      onClick={() => setMode('camel-to-snake')}
                       className="justify-start gap-2"
                     >
                       <Code className="h-4 w-4" />
-                      {tool('camelCase.modeSnake') || 'snake_case'}
+                      {tool('snakeCase.modeCamel') || 'camelCase'}
                     </Button>
                     <Button
-                      variant={mode === 'kebab-to-camel' ? 'default' : 'outline'}
+                      variant={mode === 'pascal-to-snake' ? 'default' : 'outline'}
                       size="sm"
-                      onClick={() => setMode('kebab-to-camel')}
-                      className="justify-start gap-2"
-                    >
-                      <ArrowRight className="h-4 w-4" />
-                      {tool('camelCase.modeKebab') || 'kebab-case'}
-                    </Button>
-                    <Button
-                      variant={mode === 'title-to-camel' ? 'default' : 'outline'}
-                      size="sm"
-                      onClick={() => setMode('title-to-camel')}
+                      onClick={() => setMode('pascal-to-snake')}
                       className="justify-start gap-2"
                     >
                       <Type className="h-4 w-4" />
-                      {tool('camelCase.modeTitleCase') || 'Title Case / Spaces'}
+                      {tool('snakeCase.modePascal') || 'PascalCase'}
+                    </Button>
+                    <Button
+                      variant={mode === 'kebab-to-snake' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setMode('kebab-to-snake')}
+                      className="justify-start gap-2"
+                    >
+                      <ArrowRight className="h-4 w-4" />
+                      {tool('snakeCase.modeKebab') || 'kebab-case'}
+                    </Button>
+                    <Button
+                      variant={mode === 'title-to-snake' ? 'default' : 'outline'}
+                      size="sm"
+                      onClick={() => setMode('title-to-snake')}
+                      className="justify-start gap-2"
+                    >
+                      <Type className="h-4 w-4" />
+                      {tool('snakeCase.modeTitle') || 'Title Case / Spaces'}
                     </Button>
                     <Button
                       variant={mode === 'reverse' ? 'default' : 'outline'}
                       size="sm"
                       onClick={() => setMode('reverse')}
-                      className="justify-start gap-2"
+                      className="justify-start gap-2 sm:col-span-2"
                     >
                       <ArrowLeftRight className="h-4 w-4" />
-                      {tool('camelCase.modeReverse') || 'Reverse (camelCase → snake_case)'}
+                      {tool('snakeCase.modeReverse') || 'Reverse (snake_case → camelCase)'}
                     </Button>
                   </div>
                 </div>
@@ -426,14 +435,14 @@ export function CamelCaseConverter() {
                 {/* General Options */}
                 <div className="space-y-4">
                   <Label className="text-sm font-medium">
-                    {tool('camelCase.generalOptions') || 'General Options'}
+                    {tool('snakeCase.generalOptions') || 'General Options'}
                   </Label>
                   
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-3">
                     {/* Preserve Acronyms */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="preserve-acronyms" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                        {tool('camelCase.preserveAcronyms') || 'Preserve acronyms (e.g., userID)'}
+                        {tool('snakeCase.preserveAcronyms') || 'Preserve acronyms'}
                       </label>
                       <Switch
                         id="preserve-acronyms"
@@ -445,7 +454,7 @@ export function CamelCaseConverter() {
                     {/* Safe Characters Only */}
                     <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                       <label htmlFor="safe-chars" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                        {tool('camelCase.safeCharsOnly') || 'Safe characters only (strip non-ASCII)'}
+                        {tool('snakeCase.safeCharsOnly') || 'Safe characters only'}
                       </label>
                       <Switch
                         id="safe-chars"
@@ -458,7 +467,7 @@ export function CamelCaseConverter() {
                     {inputType === 'text' && (
                       <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                         <label htmlFor="trim-whitespace" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                          {tool('camelCase.trimWhitespace') || 'Trim & collapse whitespace'}
+                          {tool('snakeCase.trimWhitespace') || 'Trim & collapse whitespace'}
                         </label>
                         <Switch
                           id="trim-whitespace"
@@ -474,14 +483,14 @@ export function CamelCaseConverter() {
                 {inputType === 'json' && (
                   <div className="space-y-4 pt-4 border-t border-border">
                     <Label className="text-sm font-medium text-primary">
-                      {tool('camelCase.jsonOptions') || 'JSON-Specific Options'}
+                      {tool('snakeCase.jsonOptions') || 'JSON-Specific Options'}
                     </Label>
                     
                     <div className="space-y-3">
                       {/* Convert Keys Only */}
                       <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                         <label htmlFor="convert-keys-only" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                          {tool('camelCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
+                          {tool('snakeCase.convertKeysOnly') || "Convert keys only (don't touch values)"}
                         </label>
                         <Switch
                           id="convert-keys-only"
@@ -493,7 +502,7 @@ export function CamelCaseConverter() {
                       {/* Pretty Print */}
                       <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:shadow-sm transition-shadow">
                         <label htmlFor="pretty-print" className="text-sm font-medium cursor-pointer flex-1 pr-2">
-                          {tool('camelCase.prettyPrint') || 'Pretty-print output'}
+                          {tool('snakeCase.prettyPrint') || 'Pretty-print output'}
                         </label>
                         <Switch
                           id="pretty-print"
@@ -505,7 +514,7 @@ export function CamelCaseConverter() {
                       {/* Exclude Paths */}
                       <div className="space-y-2">
                         <Label htmlFor="exclude-paths" className="text-sm font-medium">
-                          {tool('camelCase.excludePaths') || 'Exclude paths (comma-separated)'}
+                          {tool('snakeCase.excludePaths') || 'Exclude paths (comma-separated)'}
                         </Label>
                         <Input
                           id="exclude-paths"
@@ -515,7 +524,7 @@ export function CamelCaseConverter() {
                           className="font-mono text-xs"
                         />
                         <p className="text-xs text-muted-foreground">
-                          {tool('camelCase.excludePathsHint') || 'Use JSONPath notation. Wildcards (*) supported.'}
+                          {tool('snakeCase.excludePathsHint') || 'Use JSONPath notation. Wildcards (*) supported.'}
                         </p>
                       </div>
                     </div>

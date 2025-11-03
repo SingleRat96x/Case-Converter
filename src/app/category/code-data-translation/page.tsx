@@ -61,6 +61,13 @@ const codeDataTranslationTools = [
     href: '/tools/json-stringify'
   },
   {
+    id: 'json-formatter',
+    title: 'JSON Formatter & Validator',
+    description: 'Format, validate, and explore JSON with syntax highlighting and tree view',
+    icon: '✨',
+    href: '/tools/json-formatter'
+  },
+  {
     id: 'utf8-converter',
     title: 'UTF-8 Converter',
     description: 'Encode and decode UTF-8 text with support for special characters',

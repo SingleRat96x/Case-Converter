@@ -1,0 +1,435 @@
+{
+  "en": {
+    "title": "JSON Formatter & Validator – Free Online JSON Viewer",
+    "metaDescription": "Paste or upload JSON/TXT and instantly format, validate, and color-preview it. Choose indent size, collapse/expand nodes, minify, unescape strings, and download the result.",
+    "sections": {
+      "intro": {
+        "title": "Online JSON Formatter & Validator",
+        "content": "Professional dual-panel JSON editor with instant formatting, validation, and error highlighting. Paste JSON or upload files up to 10MB—see formatted output with syntax highlighting in real-time. Auto-format on option change, highlight multiple errors visually, toggle between code and tree view. All processing happens locally in your browser."
+      },
+      "features": {
+        "title": "Professional JSON Formatting Features",
+        "items": [
+          {
+            "title": "Dual-Panel Editor",
+            "description": "Separate input and output panels with dedicated toolbars, status bars, and formatting controls for professional workflow."
+          },
+          {
+            "title": "Visual Error Highlighting",
+            "description": "Multiple errors highlighted with red background directly in code, plus error banner with exact line and column numbers."
+          },
+          {
+            "title": "Auto-Format on Change",
+            "description": "Automatically reformats JSON when you change indent size, toggle sort keys, or modify any formatting option—no button click needed."
+          },
+          {
+            "title": "Success State Animation",
+            "description": "Format button smoothly transitions to green 'Formatted!' state on success, providing instant visual feedback."
+          },
+          {
+            "title": "Code & Tree View Modes",
+            "description": "Toggle between syntax-highlighted code editor and collapsible tree view to explore nested JSON structures."
+          },
+          {
+            "title": "NDJSON & Batch Processing",
+            "description": "Validate and format newline-delimited JSON (NDJSON) with line-by-line processing and error detection."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for JSON Formatting",
+        "description": "JSON formatting is essential for API development, debugging, data validation, and configuration management.",
+        "items": [
+          { "title": "API Response Debugging", "description": "Pretty-print minified API responses to inspect data structure and values" },
+          { "title": "Configuration File Formatting", "description": "Format config.json, package.json, and settings files with consistent indentation" },
+          { "title": "JSON Validation", "description": "Validate JSON syntax and identify errors with precise line and column numbers" },
+          { "title": "Data Export Preparation", "description": "Format JSON exports from databases or APIs before importing to other systems" },
+          { "title": "Code Documentation", "description": "Create readable JSON examples for API documentation and tutorials" },
+          { "title": "Log File Analysis", "description": "Parse and format JSON log files for easier troubleshooting" },
+          { "title": "NDJSON Processing", "description": "Validate and format newline-delimited JSON streams from logs or data pipelines" },
+          { "title": "JSON Minification", "description": "Compress JSON for production use to reduce file size and bandwidth" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Format and Validate JSON",
+        "description": "Follow these simple steps to format, validate, and beautify your JSON data.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Paste or Upload JSON",
+            "description": "Paste JSON directly into the input panel or drag & drop a .json or .txt file. Files up to 10MB supported."
+          },
+          {
+            "step": 2,
+            "title": "Configure Formatting Options",
+            "description": "Choose indent size (2, 4, 8 spaces or custom), enable sort keys, unescape strings, or NDJSON mode as needed."
+          },
+          {
+            "step": 3,
+            "title": "Format & Validate",
+            "description": "Click 'Format & Validate' or press Ctrl/Cmd+Enter. Button shows green 'Formatted!' success state. Multiple errors highlighted in red with banner display."
+          },
+          {
+            "step": 4,
+            "title": "Auto-Format on Options Change",
+            "description": "Change indent size, toggle sort keys, or modify any option—JSON auto-formats instantly without re-clicking the format button."
+          },
+          {
+            "step": 5,
+            "title": "Explore & Export",
+            "description": "Switch to tree view for collapsible structure, copy to clipboard, download as .json, or minify for production use."
+          }
+        ]
+      },
+      "examples": {
+        "title": "JSON Formatting Examples",
+        "description": "See how different JSON structures are formatted with various indent options.",
+        "items": [
+          {
+            "title": "Minified → Pretty (2 spaces)",
+            "input": "{\"name\":\"John\",\"age\":30,\"city\":\"NYC\"}",
+            "output": "{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"NYC\"\n}"
+          },
+          {
+            "title": "Nested Objects (4 spaces)",
+            "input": "{\"user\":{\"profile\":{\"firstName\":\"Jane\",\"lastName\":\"Doe\"}}}",
+            "output": "{\n    \"user\": {\n        \"profile\": {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\"\n        }\n    }\n}"
+          },
+          {
+            "title": "Arrays with Objects",
+            "input": "{\"users\":[{\"id\":1,\"name\":\"Alice\"},{\"id\":2,\"name\":\"Bob\"}]}",
+            "output": "{\n  \"users\": [\n    {\"id\": 1, \"name\": \"Alice\"},\n    {\"id\": 2, \"name\": \"Bob\"}\n  ]\n}"
+          },
+          {
+            "title": "Sort Keys Alphabetically",
+            "input": "{\"zebra\":1,\"apple\":2,\"mango\":3}",
+            "output": "{\n  \"apple\": 2,\n  \"mango\": 3,\n  \"zebra\": 1\n}"
+          },
+          {
+            "title": "Unescape Strings",
+            "input": "{\"message\":\"Line 1\\nLine 2\\tTabbed\"}",
+            "output": "{\n  \"message\": \"Line 1\nLine 2\tTabbed\"\n}"
+          },
+          {
+            "title": "NDJSON Format",
+            "input": "{\"id\":1,\"name\":\"Alice\"}\n{\"id\":2,\"name\":\"Bob\"}",
+            "output": "{\n  \"id\": 1,\n  \"name\": \"Alice\"\n}\n{\n  \"id\": 2,\n  \"name\": \"Bob\"\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our JSON Formatter",
+        "content": "Professional-grade JSON formatting with real-time validation, syntax highlighting, and advanced features for developers.",
+        "items": [
+          "Dual-panel design with separate input and output editors",
+          "Visual error highlighting with red background on all errors",
+          "Error banner below toolbar showing precise line and column numbers",
+          "Auto-format on option change (no re-clicking needed)",
+          "Success animation - button turns green showing 'Formatted!'",
+          "Multiple error detection and highlighting in single pass",
+          "Code editor and tree view toggle for different perspectives",
+          "Dedicated toolbars for input (format, minify, clear) and output (copy, download, print)",
+          "Status bars showing lines, characters, words, objects, arrays, keys",
+          "Completely free with no limits or registration required",
+          "Real-time syntax highlighting powered by CodeMirror",
+          "Sort keys alphabetically with auto-refresh",
+          "NDJSON support for log files and streaming data",
+          "Handle large files up to 10MB efficiently",
+          "Privacy-first - all processing in browser locally",
+          "Keyboard shortcuts (Ctrl+Enter format, Ctrl+K clear, Ctrl+F search)",
+          "Theme-aware design (light/dark mode support)"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is JSON formatting and why do I need it?",
+          "answer": "JSON formatting (also called pretty-printing or beautifying) adds proper indentation, line breaks, and spacing to make JSON human-readable. Minified JSON is hard to read—formatting makes it easy to understand structure, find values, and debug issues."
+        },
+        {
+          "question": "How does the validator work?",
+          "answer": "Our validator detects ALL syntax errors in your JSON, not just the first one. Errors are highlighted with red background directly in the code, and an error banner appears below the toolbar showing the error message with exact line and column numbers. This makes it easy to spot and fix multiple issues at once."
+        },
+        {
+          "question": "What is NDJSON mode?",
+          "answer": "NDJSON (Newline Delimited JSON) is a format where each line contains a separate, valid JSON object. It's commonly used for log files, streaming data, and bulk data processing. Our NDJSON mode validates and formats each line independently."
+        },
+        {
+          "question": "What does 'Unescape strings' do?",
+          "answer": "JSON escape sequences like \\n (newline), \\t (tab), and \\\" (quote) are converted to their actual characters. This makes string values more readable by showing the actual formatted text instead of escape codes."
+        },
+        {
+          "question": "Can I sort JSON keys alphabetically?",
+          "answer": "Yes! Enable 'Sort keys alphabetically' to recursively sort all object keys in your JSON. This is useful for comparing JSON files, generating consistent output, or organizing configuration files."
+        },
+        {
+          "question": "What's the difference between Format and Minify?",
+          "answer": "Format adds indentation and line breaks for readability (pretty-printing). Minify removes all whitespace to create the smallest possible file size—ideal for production use, API responses, or reducing bandwidth."
+        },
+        {
+          "question": "What is tree view mode?",
+          "answer": "Tree view displays JSON as a collapsible tree structure where you can expand/collapse nested objects and arrays. It's perfect for exploring deeply nested data, finding specific keys, and understanding complex JSON hierarchies."
+        },
+        {
+          "question": "Can I upload large JSON files?",
+          "answer": "Yes! The tool handles files up to 10MB. For very large files, we recommend using the minify feature first to reduce size, or working with smaller chunks of data for optimal performance."
+        },
+        {
+          "question": "Is my JSON data sent to a server?",
+          "answer": "No. All formatting, validation, and processing happens entirely in your browser using JavaScript. Your JSON data never leaves your device, ensuring complete privacy for sensitive configuration files or API data."
+        },
+        {
+          "question": "Can I share a formatted JSON with specific settings?",
+          "answer": "Yes! Your formatting options (indent size, sort keys, etc.) are saved in the URL. Simply share the URL, and anyone who opens it will see the tool pre-configured with your settings."
+        },
+        {
+          "question": "What keyboard shortcuts are available?",
+          "answer": "Press Ctrl+Enter (Cmd+Enter on Mac) to format JSON—button shows green 'Formatted!' on success. Ctrl+K clears input. Editor supports Ctrl+F for search, Ctrl+A to select all, Ctrl+Z for undo. Auto-format triggers when you change any formatting option."
+        },
+        {
+          "question": "What happens when I click Format & Validate?",
+          "answer": "The button shows 'Processing...' with spinner, then validates your JSON. If valid, it formats the output and the button smoothly transitions to green showing 'Formatted!' for 2 seconds before returning to normal. If invalid, errors are highlighted in red with a banner showing exact locations."
+        },
+        {
+          "question": "Why do errors appear in multiple places?",
+          "answer": "For maximum visibility, validation errors are shown in three ways: (1) Red background highlighting directly on error locations in code, (2) Error banner below toolbar with detailed message and line/column numbers, (3) Multiple errors highlighted simultaneously so you can see all issues at once."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Code & Data Tools",
+        "items": [
+          {
+            "name": "JSON Stringify Tool",
+            "href": "/tools/json-stringify",
+            "description": "Convert JavaScript objects to JSON strings"
+          },
+          {
+            "name": "CSV to JSON Converter",
+            "href": "/tools/csv-to-json",
+            "description": "Transform CSV data into JSON format"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "href": "/tools/base64-encoder-decoder",
+            "description": "Encode and decode Base64 data"
+          },
+          {
+            "name": "URL Encoder/Decoder",
+            "href": "/tools/url-converter",
+            "description": "Encode and decode URL parameters"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "JSON Форматировщик и Валидатор – Бесплатный Онлайн JSON Просмотрщик",
+    "metaDescription": "Вставьте или загрузите JSON/TXT и мгновенно форматируйте, валидируйте и просматривайте с цветом. Выбирайте размер отступа, сворачивайте/разворачивайте узлы, минифицируйте, разэкранируйте строки.",
+    "sections": {
+      "intro": {
+        "title": "Онлайн JSON Форматировщик и Валидатор",
+        "content": "Профессиональный двухпанельный JSON редактор с мгновенным форматированием, валидацией и подсветкой ошибок. Вставьте JSON или загрузите файлы до 10МБ—увидьте отформатированный вывод с подсветкой синтаксиса в реальном времени. Авто-форматирование при изменении опций, визуальная подсветка множественных ошибок, переключение между кодом и древом. Вся обработка локально в вашем браузере."
+      },
+      "features": {
+        "title": "Профессиональные Возможности Форматирования JSON",
+        "items": [
+          {
+            "title": "Валидация в Реальном Времени",
+            "description": "Мгновенная валидация JSON с точным указанием строки и столбца ошибки во время ввода."
+          },
+          {
+            "title": "Подсветка Синтаксиса",
+            "description": "Цветная подсветка синтаксиса JSON для ключей, значений, строк, чисел и скобок."
+          },
+          {
+            "title": "Режим Древа",
+            "description": "Переключитесь в режим древа для исследования вложенных структур с раскрывающимися/сворачивающимися узлами."
+          },
+          {
+            "title": "Множественные Опции Отступов",
+            "description": "Форматируйте с 2, 4 или 8 пробелами, или установите пользовательский размер отступа от 1 до 16 пробелов."
+          },
+          {
+            "title": "Алфавитная Сортировка Ключей",
+            "description": "Рекурсивно сортируйте все ключи объектов в алфавитном порядке для последовательного форматирования."
+          },
+          {
+            "title": "Поддержка NDJSON",
+            "description": "Валидируйте и форматируйте JSON с разделителями новой строки (NDJSON) с построчной обработкой."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Общие Случаи Использования Форматирования JSON",
+        "description": "Форматирование JSON необходимо для разработки API, отладки, валидации данных и управления конфигурацией.",
+        "items": [
+          { "title": "Отладка API Ответов", "description": "Красиво форматируйте минифицированные API ответы для инспекции структуры данных и значений" },
+          { "title": "Форматирование Конфигурационных Файлов", "description": "Форматируйте config.json, package.json и файлы настроек с последовательными отступами" },
+          { "title": "Валидация JSON", "description": "Валидируйте синтаксис JSON и идентифицируйте ошибки с точными номерами строк и столбцов" },
+          { "title": "Подготовка Экспорта Данных", "description": "Форматируйте JSON экспорты из баз данных или API перед импортом в другие системы" },
+          { "title": "Документация Кода", "description": "Создавайте читаемые JSON примеры для документации API и учебников" },
+          { "title": "Анализ Лог Файлов", "description": "Разбирайте и форматируйте JSON лог файлы для более легкого устранения неполадок" },
+          { "title": "Обработка NDJSON", "description": "Валидируйте и форматируйте JSON с разделителями новой строки из логов или конвейеров данных" },
+          { "title": "Минификация JSON", "description": "Сжимайте JSON для продакшена чтобы уменьшить размер файла и трафик" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Форматировать и Валидировать JSON",
+        "description": "Следуйте этим простым шагам для форматирования, валидации и украшения ваших JSON данных.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Вставьте или Загрузите JSON",
+            "description": "Вставьте JSON напрямую в панель ввода или перетащите файл .json или .txt. Поддерживаются файлы до 10МБ."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции Форматирования",
+            "description": "Выберите размер отступа (2, 4, 8 пробелов или пользовательский), включите сортировку ключей, разэкранирование строк или режим NDJSON по необходимости."
+          },
+          {
+            "step": 3,
+            "title": "Форматируйте и Валидируйте",
+            "description": "Нажмите 'Форматировать и Валидировать' или нажмите Ctrl/Cmd+Enter. Просмотрите синтаксические ошибки с точными номерами строк и столбцов."
+          },
+          {
+            "step": 4,
+            "title": "Исследуйте с Режимом Древа",
+            "description": "Переключитесь в режим древа для сворачивания/разворачивания вложенных объектов и массивов для более легкой навигации."
+          },
+          {
+            "step": 5,
+            "title": "Скопируйте или Скачайте",
+            "description": "Скопируйте отформатированный JSON в буфер обмена или скачайте как файл .json. Используйте кнопку Минифицировать для компактного вывода."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Форматирования JSON",
+        "description": "Посмотрите, как различные JSON структуры форматируются с различными опциями отступов.",
+        "items": [
+          {
+            "title": "Минифицированный → Красивый (2 пробела)",
+            "input": "{\"name\":\"Иван\",\"age\":30,\"city\":\"Москва\"}",
+            "output": "{\n  \"name\": \"Иван\",\n  \"age\": 30,\n  \"city\": \"Москва\"\n}"
+          },
+          {
+            "title": "Вложенные Объекты (4 пробела)",
+            "input": "{\"user\":{\"profile\":{\"firstName\":\"Мария\",\"lastName\":\"Иванова\"}}}",
+            "output": "{\n    \"user\": {\n        \"profile\": {\n            \"firstName\": \"Мария\",\n            \"lastName\": \"Иванова\"\n        }\n    }\n}"
+          },
+          {
+            "title": "Массивы с Объектами",
+            "input": "{\"users\":[{\"id\":1,\"name\":\"Алиса\"},{\"id\":2,\"name\":\"Боб\"}]}",
+            "output": "{\n  \"users\": [\n    {\"id\": 1, \"name\": \"Алиса\"},\n    {\"id\": 2, \"name\": \"Боб\"}\n  ]\n}"
+          },
+          {
+            "title": "Сортировка Ключей Алфавитно",
+            "input": "{\"яблоко\":1,\"ананас\":2,\"манго\":3}",
+            "output": "{\n  \"ананас\": 2,\n  \"манго\": 3,\n  \"яблоко\": 1\n}"
+          },
+          {
+            "title": "Разэкранирование Строк",
+            "input": "{\"message\":\"Строка 1\\nСтрока 2\\tС табуляцией\"}",
+            "output": "{\n  \"message\": \"Строка 1\nСтрока 2\tС табуляцией\"\n}"
+          },
+          {
+            "title": "Формат NDJSON",
+            "input": "{\"id\":1,\"name\":\"Алиса\"}\n{\"id\":2,\"name\":\"Боб\"}",
+            "output": "{\n  \"id\": 1,\n  \"name\": \"Алиса\"\n}\n{\n  \"id\": 2,\n  \"name\": \"Боб\"\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш JSON Форматировщик",
+        "content": "Профессиональное форматирование JSON с валидацией в реальном времени, подсветкой синтаксиса и расширенными функциями для разработчиков.",
+        "items": [
+          "Полностью бесплатно без лимитов или регистрации",
+          "Валидация в реальном времени с точным указанием строки и столбца ошибки",
+          "Подсветка синтаксиса для легкого визуального разбора",
+          "Режим древа для исследования сложных вложенных структур",
+          "Множественные опции отступов (2, 4, 8 пробелов или пользовательский)",
+          "Алфавитная сортировка ключей для последовательного форматирования",
+          "Поддержка NDJSON для лог файлов и потоковых данных",
+          "Разэкранирование строк для просмотра фактических символов",
+          "Минификация JSON для продакшена",
+          "Эффективная обработка больших файлов до 10МБ",
+          "Загрузка файлов через перетаскивание или выбор файла",
+          "Приоритет конфиденциальности - вся обработка в браузере",
+          "Клавиатурные сокращения для быстрого рабочего процесса (Ctrl/Cmd+Enter)",
+          "Скачивание отформатированного вывода как файл .json"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое форматирование JSON и зачем оно нужно?",
+          "answer": "Форматирование JSON (также называемое pretty-printing или beautifying) добавляет правильные отступы, переносы строк и пробелы, чтобы сделать JSON читаемым для человека. Минифицированный JSON трудно читать—форматирование делает легким понимание структуры, поиск значений и отладку проблем."
+        },
+        {
+          "question": "Как работает валидатор?",
+          "answer": "Наш валидатор использует встроенный JSON парсер JavaScript для обнаружения синтаксических ошибок. Когда найден неверный JSON, мы извлекаем точный номер строки и столбца из сообщения об ошибке и подсвечиваем его в редакторе, что упрощает локализацию и исправление проблемы."
+        },
+        {
+          "question": "Что такое режим NDJSON?",
+          "answer": "NDJSON (Newline Delimited JSON) - это формат, где каждая строка содержит отдельный валидный JSON объект. Он обычно используется для лог файлов, потоковых данных и массовой обработки данных. Наш режим NDJSON валидирует и форматирует каждую строку независимо."
+        },
+        {
+          "question": "Что делает 'Разэкранировать строки'?",
+          "answer": "JSON escape последовательности как \\n (новая строка), \\t (табуляция) и \\\" (кавычка) конвертируются в их фактические символы. Это делает строковые значения более читаемыми, показывая фактический форматированный текст вместо escape кодов."
+        },
+        {
+          "question": "Могу ли я сортировать JSON ключи алфавитно?",
+          "answer": "Да! Включите 'Сортировать ключи алфавитно' для рекурсивной сортировки всех ключей объектов в вашем JSON. Это полезно для сравнения JSON файлов, генерации последовательного вывода или организации конфигурационных файлов."
+        },
+        {
+          "question": "В чем разница между Форматировать и Минифицировать?",
+          "answer": "Форматировать добавляет отступы и переносы строк для читаемости (pretty-printing). Минифицировать удаляет все пробелы для создания минимально возможного размера файла—идеально для продакшена, API ответов или уменьшения трафика."
+        },
+        {
+          "question": "Что такое режим древа?",
+          "answer": "Режим древа отображает JSON как сворачиваемую древовидную структуру, где вы можете разворачивать/сворачивать вложенные объекты и массивы. Он идеален для исследования глубоко вложенных данных, поиска конкретных ключей и понимания сложных JSON иерархий."
+        },
+        {
+          "question": "Могу ли я загружать большие JSON файлы?",
+          "answer": "Да! Инструмент обрабатывает файлы до 10МБ. Для очень больших файлов мы рекомендуем сначала использовать функцию минификации для уменьшения размера, или работать с меньшими частями данных для оптимальной производительности."
+        },
+        {
+          "question": "Отправляются ли мои JSON данные на сервер?",
+          "answer": "Нет. Всё форматирование, валидация и обработка происходят полностью в вашем браузере с использованием JavaScript. Ваши JSON данные никогда не покидают ваше устройство, обеспечивая полную конфиденциальность для чувствительных конфигурационных файлов или API данных."
+        },
+        {
+          "question": "Могу ли я поделиться отформатированным JSON с конкретными настройками?",
+          "answer": "Да! Ваши опции форматирования (размер отступа, сортировка ключей и т.д.) сохраняются в URL. Просто поделитесь URL, и любой, кто его откроет, увидит инструмент предварительно настроенным с вашими параметрами."
+        },
+        {
+          "question": "Какие клавиатурные сокращения доступны?",
+          "answer": "Нажмите Ctrl+Enter (или Cmd+Enter на Mac) для быстрого форматирования JSON. Редактор также поддерживает стандартные сокращения как Ctrl+F для поиска, Ctrl+A для выделения всего и Ctrl+Z для отмены."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Кода и Данных",
+        "items": [
+          {
+            "name": "JSON Stringify Инструмент",
+            "href": "/ru/tools/json-stringify",
+            "description": "Конвертируйте JavaScript объекты в JSON строки"
+          },
+          {
+            "name": "Конвертер CSV в JSON",
+            "href": "/ru/tools/csv-to-json",
+            "description": "Преобразуйте CSV данные в формат JSON"
+          },
+          {
+            "name": "Base64 Кодировщик/Декодировщик",
+            "href": "/ru/tools/base64-encoder-decoder",
+            "description": "Кодируйте и декодируйте Base64 данные"
+          },
+          {
+            "name": "URL Кодировщик/Декодировщик",
+            "href": "/ru/tools/url-converter",
+            "description": "Кодируйте и декодируйте URL параметры"
+          }
+        ]
+      }
+    }
+  }
+}
