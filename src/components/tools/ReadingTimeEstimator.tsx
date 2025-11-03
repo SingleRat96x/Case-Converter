@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useMemo, useEffect } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
 import { EditorView, lineNumbers } from '@codemirror/view';
@@ -11,16 +11,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { InteractiveSlider } from '@/components/shared/InteractiveSlider';
-import { FileText, FileJson, Upload, Trash2, Download, Copy, BookOpen, Clock } from 'lucide-react';
+import { FileText, Upload, Trash2, BookOpen } from 'lucide-react';
 import {
   calculateReadingTime,
   extractWordCountFromText,
   extractWordCountFromJSON,
   parseJSONKeys,
   validateJSON,
-  type ReadingTimeResult,
 } from '@/lib/readingTimeUtils';
-import { copyToClipboard, downloadTextAsFile } from '@/lib/utils';
 import { ReadingTimeAnalytics } from './ReadingTimeAnalytics';
 import { ToolHeaderAd } from '@/components/ads/AdPlacements';
 import { SEOContent } from '@/components/seo/SEOContent';
@@ -54,8 +52,8 @@ export function ReadingTimeEstimator() {
   const [aloudSpeed, setAloudSpeed] = useState(ALOUD_SPEEDS.average);
   
   // Results state
-  const [silentResults, setSilentResults] = useState<ReadingTimeResult | null>(null);
-  const [aloudResults, setAloudResults] = useState<ReadingTimeResult | null>(null);
+  const [wordCount, setWordCount] = useState(0);
+  const [characterCount, setCharacterCount] = useState(0);
   const [jsonError, setJsonError] = useState<string | null>(null);
 
   const fileInputRef = React.useRef<HTMLInputElement>(null);
@@ -76,74 +74,72 @@ export function ReadingTimeEstimator() {
     return () => observer.disconnect();
   }, []);
 
-  // Calculate reading time for both speeds
-  const calculateResults = useCallback((textInput: string, mode: InputMode) => {
-    let wordCount = 0;
-    setJsonError(null);
-
-    if (!textInput || textInput.trim().length === 0) {
-      setSilentResults(null);
-      setAloudResults(null);
+  // Calculate word and character count (memoized to prevent excessive recalculations)
+  useEffect(() => {
+    if (!text || text.trim().length === 0) {
+      setWordCount(0);
+      setCharacterCount(0);
+      setJsonError(null);
       return;
     }
 
+    let words = 0;
+    let error = null;
+
     // Extract word count based on input mode
-    if (mode === 'text') {
-      wordCount = extractWordCountFromText(textInput);
-    } else if (mode === 'json') {
+    if (inputMode === 'text') {
+      words = extractWordCountFromText(text);
+    } else if (inputMode === 'json') {
       // Validate JSON first
-      const validation = validateJSON(textInput);
+      const validation = validateJSON(text);
       if (!validation.valid) {
-        setJsonError(validation.error || 'Invalid JSON');
-        setSilentResults(null);
-        setAloudResults(null);
+        error = validation.error || 'Invalid JSON';
+        setWordCount(0);
+        setCharacterCount(text.length);
+        setJsonError(error);
         return;
       }
 
       // Parse keys
       const keys = parseJSONKeys(jsonKeys);
-      const result = extractWordCountFromJSON(textInput, keys || undefined);
+      const result = extractWordCountFromJSON(text, keys || undefined);
       
       if (result.error) {
-        setJsonError(result.error);
+        error = result.error;
         if (result.wordCount === 0) {
-          setSilentResults(null);
-          setAloudResults(null);
+          setWordCount(0);
+          setCharacterCount(text.length);
+          setJsonError(error);
           return;
         }
       }
       
-      wordCount = result.wordCount;
+      words = result.wordCount;
     }
 
-    if (wordCount === 0) {
-      setSilentResults(null);
-      setAloudResults(null);
-      return;
-    }
+    setWordCount(words);
+    setCharacterCount(text.length);
+    setJsonError(error);
+  }, [text, inputMode, jsonKeys]);
 
-    // Calculate results for both speeds
-    const silentResult = calculateReadingTime(wordCount, silentSpeed);
-    const aloudResult = calculateReadingTime(wordCount, aloudSpeed);
-    
-    setSilentResults(silentResult);
-    setAloudResults(aloudResult);
-  }, [jsonKeys, silentSpeed, aloudSpeed]);
+  // Calculate reading times (memoized)
+  const silentTime = useMemo(() => {
+    if (wordCount === 0) return null;
+    return calculateReadingTime(wordCount, silentSpeed);
+  }, [wordCount, silentSpeed]);
 
-  // Auto-calculate when inputs change
-  useEffect(() => {
-    calculateResults(text, inputMode);
-  }, [text, inputMode, jsonKeys, silentSpeed, aloudSpeed, calculateResults]);
+  const aloudTime = useMemo(() => {
+    if (wordCount === 0) return null;
+    return calculateReadingTime(wordCount, aloudSpeed);
+  }, [wordCount, aloudSpeed]);
 
   // Handle input mode change
-  const handleInputModeChange = (mode: string) => {
+  const handleInputModeChange = useCallback((mode: string) => {
     setInputMode(mode as InputMode);
-    setSilentResults(null);
-    setAloudResults(null);
     setJsonError(null);
-  };
+  }, []);
 
-  const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleFileUpload = useCallback((e: React.ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 
@@ -154,24 +150,12 @@ export function ReadingTimeEstimator() {
     };
     reader.readAsText(file);
     e.target.value = '';
-  };
+  }, []);
 
-  const handleClear = () => {
+  const handleClear = useCallback(() => {
     setText('');
-    setSilentResults(null);
-    setAloudResults(null);
     setJsonError(null);
-  };
-
-  const handleDownload = () => {
-    if (!text) return;
-    downloadTextAsFile(text, tool('readingTimeEstimator.downloadFileName') || 'text.txt');
-  };
-
-  const handleCopy = async () => {
-    if (!text) return;
-    await copyToClipboard(text);
-  };
+  }, []);
 
   return (
     <div className="space-y-8">
@@ -195,7 +179,7 @@ export function ReadingTimeEstimator() {
             {tool('readingTimeEstimator.inputModeText') || 'Text'}
           </TabsTrigger>
           <TabsTrigger value="json" className="flex items-center gap-2">
-            <FileJson className="h-4 w-4" />
+            <BookOpen className="h-4 w-4" />
             {tool('readingTimeEstimator.inputModeJSON') || 'JSON'}
           </TabsTrigger>
         </TabsList>
@@ -243,6 +227,15 @@ export function ReadingTimeEstimator() {
               <Upload className="h-4 w-4 mr-2" />
               {common('buttons.upload') || 'Upload'}
             </Button>
+            <Button
+              variant="outline"
+              size="sm"
+              onClick={handleClear}
+              disabled={!text}
+            >
+              <Trash2 className="h-4 w-4 mr-2" />
+              {common('buttons.clear') || 'Clear'}
+            </Button>
             <input
               ref={fileInputRef}
               type="file"
@@ -255,7 +248,7 @@ export function ReadingTimeEstimator() {
 
         <CodeMirror
           value={text}
-          onChange={(value) => setText(value)}
+          onChange={setText}
           height="400px"
           theme={isDark ? githubDark : githubLight}
           extensions={[
@@ -275,37 +268,6 @@ export function ReadingTimeEstimator() {
             foldGutter: true,
           }}
         />
-
-        {/* Action buttons */}
-        <div className="flex flex-wrap gap-2">
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleCopy}
-            disabled={!text}
-          >
-            <Copy className="h-4 w-4 mr-2" />
-            {common('buttons.copy') || 'Copy'}
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleDownload}
-            disabled={!text}
-          >
-            <Download className="h-4 w-4 mr-2" />
-            {common('buttons.download') || 'Download'}
-          </Button>
-          <Button
-            variant="outline"
-            size="sm"
-            onClick={handleClear}
-            disabled={!text}
-          >
-            <Trash2 className="h-4 w-4 mr-2" />
-            {common('buttons.clear') || 'Clear'}
-          </Button>
-        </div>
       </div>
 
       {/* JSON Error Display */}
@@ -317,11 +279,6 @@ export function ReadingTimeEstimator() {
 
       {/* Reading Speed Controls */}
       <div className="space-y-6 bg-muted/30 rounded-lg p-6 border">
-        <div className="flex items-center gap-2 pb-2 border-b">
-          <Clock className="h-5 w-5 text-primary" />
-          <h2 className="text-lg font-semibold">Reading Speed Settings</h2>
-        </div>
-
         {/* Silent Reading Speed Slider */}
         <div className="space-y-2">
           <div className="flex items-center gap-2">
@@ -395,32 +352,14 @@ export function ReadingTimeEstimator() {
         </div>
       </div>
 
-      {/* Analytics - Two columns side by side on desktop, stacked on mobile */}
-      {(silentResults || aloudResults) && (
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
-          {silentResults && (
-            <ReadingTimeAnalytics
-              results={silentResults}
-              currentWpm={silentSpeed}
-              speedPreset="silent"
-              title="Silent Reading Time"
-              icon={FileText}
-              showTitle={true}
-              variant="compact"
-            />
-          )}
-          {aloudResults && (
-            <ReadingTimeAnalytics
-              results={aloudResults}
-              currentWpm={aloudSpeed}
-              speedPreset="aloud"
-              title="Read Aloud Time"
-              icon={BookOpen}
-              showTitle={true}
-              variant="compact"
-            />
-          )}
-        </div>
+      {/* Single Analytics Display */}
+      {wordCount > 0 && silentTime && aloudTime && (
+        <ReadingTimeAnalytics
+          silentTime={silentTime}
+          aloudTime={aloudTime}
+          wordCount={wordCount}
+          characterCount={characterCount}
+        />
       )}
 
       {/* SEO Content */}
