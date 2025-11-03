@@ -1,0 +1,374 @@
+{
+  "en": {
+    "title": "Extract Numbers from Text – Free Online Number Extractor",
+    "metaDescription": "Paste text and instantly extract numbers (integers, decimals, negatives, currency, percentages). Options for unique values, CSV export, sum/average, and phone-number extraction.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Number Extractor Tool",
+        "content": "Extract numbers from any text instantly with our powerful number extraction tool. Whether you need to pull data from documents, analyze numerical content, extract phone numbers, process currency values, or calculate statistics, our tool provides flexible options to extract and format numbers exactly how you need them."
+      },
+      "features": {
+        "title": "Advanced Number Extraction Features",
+        "items": [
+          {
+            "title": "Smart Number Detection",
+            "description": "Automatically detect and extract integers, decimals, negative numbers, percentages, currency values, and scientific notation."
+          },
+          {
+            "title": "Phone Number Extraction",
+            "description": "Specialized phone number mode to detect E.164, US, UK, EU, and international phone number formats with normalization."
+          },
+          {
+            "title": "Currency Symbol Support",
+            "description": "Extract numbers with currency symbols including $, €, £, ¥, ₹, ₽, TND, and more with optional symbol preservation."
+          },
+          {
+            "title": "Percentage Handling",
+            "description": "Choose to keep percentage symbols, strip them, or convert percentages to decimal format (e.g., 25% to 0.25)."
+          },
+          {
+            "title": "Statistical Analysis",
+            "description": "Get instant statistics including sum, average, minimum, maximum, count, and range of extracted numbers."
+          },
+          {
+            "title": "Multiple Export Formats",
+            "description": "Export extracted numbers as simple lists (one per line) or CSV format for spreadsheet import."
+          },
+          {
+            "title": "Unique Values Option",
+            "description": "Optionally remove duplicate numbers to get only unique values from your text."
+          },
+          {
+            "title": "Thousands Separator Support",
+            "description": "Respect thousands separators in both US (1,234.56) and EU (1.234,56) formats for accurate extraction."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Common Use Cases for Number Extraction",
+        "description": "Number extraction has practical applications across data analysis, finance, research, and content processing tasks.",
+        "items": [
+          { "title": "Data Mining & Analysis", "description": "Extract numerical data from reports, articles, and documents for analysis and visualization" },
+          { "title": "Financial Document Processing", "description": "Pull prices, amounts, and currency values from invoices, receipts, and financial statements" },
+          { "title": "Phone Number Extraction", "description": "Extract and normalize phone numbers from contact lists, directories, and business documents" },
+          { "title": "Statistical Research", "description": "Gather numerical data from research papers, surveys, and study results for calculations" },
+          { "title": "Price Comparison", "description": "Extract prices from product listings, catalogs, and comparison documents" },
+          { "title": "Spreadsheet Data Preparation", "description": "Extract numbers from text to import into Excel, Google Sheets, or other spreadsheet tools" },
+          { "title": "Scientific Data Extraction", "description": "Pull numerical values and measurements from scientific papers and technical documents" },
+          { "title": "Web Scraping Data", "description": "Extract numbers from scraped web content for database import and analysis" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Extract Numbers from Text",
+        "description": "Follow these simple steps to extract numbers from your text and get instant statistics.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Paste or type your text in the input area, or upload a text file containing numbers you want to extract."
+          },
+          {
+            "step": 2,
+            "title": "Configure Extraction Options",
+            "description": "Choose what types of numbers to keep: decimals, negatives, percentages, currency values, and scientific notation. Set percentage and output format preferences."
+          },
+          {
+            "step": 3,
+            "title": "Click Extract Numbers",
+            "description": "Click the 'Extract numbers' button to process your text and pull out all matching numbers based on your selected options."
+          },
+          {
+            "step": 4,
+            "title": "View Statistics & Export",
+            "description": "Review the extracted numbers, view automatic statistics (sum, average, min, max), then copy the list or download as CSV."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Number Extraction Examples",
+        "description": "See how different types of numbers are extracted from various text formats.",
+        "items": [
+          { 
+            "title": "Basic Numbers",
+            "input": "The report shows 42 users, 123 sessions, and 7 conversions.",
+            "output": "42\n123\n7"
+          },
+          { 
+            "title": "With Decimals & Negatives",
+            "input": "Temperature: -5.5°C, Growth: 12.8%, Decline: -3.2%",
+            "output": "-5.5\n12.8\n-3.2"
+          },
+          { 
+            "title": "Currency Values",
+            "input": "Price: $49.99, Tax: $4.50, Total: $54.49",
+            "output": "49.99\n4.50\n54.49"
+          },
+          { 
+            "title": "Phone Numbers",
+            "input": "Call (555) 123-4567 or +1-800-555-0199 for support.",
+            "output": "+15551234567\n+18005550199"
+          },
+          { 
+            "title": "Scientific Notation",
+            "input": "Distance: 1.496e8 km, Mass: 5.972e24 kg",
+            "output": "1.496e8\n5.972e24"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Number Extractor",
+        "content": "Professional number extraction with comprehensive options, instant statistics, and multiple export formats for any data processing task.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally in your browser",
+          "Support for multiple number formats and notations",
+          "Instant statistical calculations (sum, average, min, max)",
+          "Phone number detection and normalization",
+          "Currency and percentage handling options",
+          "CSV export for spreadsheet compatibility",
+          "Unique values filtering",
+          "Mobile-optimized responsive design"
+        ]
+      },
+      "faqs": [
+        { 
+          "question": "What types of numbers can be extracted?", 
+          "answer": "The tool can extract integers (42), decimals (123.45), negative numbers (-17), percentages (25%), currency values ($49.99), scientific notation (1.2e6), numbers with thousands separators (1,234), and phone numbers in various formats."
+        },
+        { 
+          "question": "How does phone numbers mode work?", 
+          "answer": "When phone numbers mode is enabled, the tool specifically looks for phone number patterns including E.164 format (+15551234567), US formats like (555) 123-4567, and international formats. Numbers are normalized to E.164 format in the output."
+        },
+        { 
+          "question": "Can I extract only unique numbers?", 
+          "answer": "Yes! Enable the 'Output unique only' option to automatically remove duplicate numbers from the results, keeping only the first occurrence of each unique value."
+        },
+        { 
+          "question": "How are percentages handled?", 
+          "answer": "You have three options: (1) Keep % symbol - outputs as 25%, (2) Strip % symbol - outputs as 25, (3) Convert to decimal - outputs as 0.25. Choose based on how you need to use the data."
+        },
+        { 
+          "question": "What currency symbols are supported?", 
+          "answer": "The tool supports major currency symbols including $ (Dollar), € (Euro), £ (Pound), ¥ (Yen), ₹ (Rupee), ₽ (Ruble), TND (Tunisian Dinar), and د.ت (Arabic Dinar). Select which ones to recognize when extracting."
+        },
+        { 
+          "question": "What statistics are calculated?", 
+          "answer": "After extraction, you get automatic statistics: Sum (total of all numbers), Average (mean value), Minimum (smallest number), Maximum (largest number), Count (how many numbers), and Range (difference between min and max)."
+        },
+        { 
+          "question": "How do I export to CSV?", 
+          "answer": "Click the 'Download CSV' button after extraction. The CSV file will contain one number per row with a header, making it easy to import into Excel, Google Sheets, or other spreadsheet applications."
+        },
+        { 
+          "question": "What are thousands separators?", 
+          "answer": "Thousands separators are commas or periods used to group digits (e.g., 1,234.56 or 1.234,56). When this option is enabled, the tool correctly interprets these as single numbers rather than multiple separate numbers."
+        },
+        { 
+          "question": "Does it work with scientific notation?", 
+          "answer": "Yes! Enable 'Accept scientific notation' to extract numbers in exponential format like 1.2e6 (1,200,000) or 3.5E-4 (0.00035). This is useful for scientific and engineering documents."
+        },
+        { 
+          "question": "Is my data stored anywhere?", 
+          "answer": "No. All text processing and number extraction happens locally in your browser using JavaScript. Your text is never uploaded to our servers or stored anywhere."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Analysis & Data Tools",
+        "description": "Explore more tools for text analysis, data extraction, and content processing.",
+        "items": [
+          { "name": "Text Counter", "description": "Count characters, words, lines, sentences with detailed statistics", "href": "/tools/text-counter" },
+          { "name": "Word Frequency Analyzer", "description": "Analyze word frequency and identify patterns in text", "href": "/tools/word-frequency" },
+          { "name": "Sentence Counter", "description": "Count sentences with structure analysis and metrics", "href": "/tools/sentence-counter" },
+          { "name": "Extract Emails from Text", "description": "Extract and validate email addresses from any text", "href": "/tools/extract-emails-from-text" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Извлечь Числа из Текста – Бесплатный Онлайн Экстрактор Чисел",
+    "metaDescription": "Вставьте текст и мгновенно извлеките числа (целые, десятичные, отрицательные, валюту, проценты). Опции для уникальных значений, CSV экспорта, суммы/среднего и извлечения телефонных номеров.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Инструмент Извлечения Чисел",
+        "content": "Мгновенно извлекайте числа из любого текста с помощью нашего мощного инструмента извлечения чисел. Будь то извлечение данных из документов, анализ числового контента, извлечение телефонных номеров, обработка значений валют или вычисление статистики — наш инструмент предоставляет гибкие опции для извлечения и форматирования чисел именно так, как вам нужно."
+      },
+      "features": {
+        "title": "Расширенные Функции Извлечения Чисел",
+        "items": [
+          {
+            "title": "Умное Обнаружение Чисел",
+            "description": "Автоматически обнаруживайте и извлекайте целые числа, десятичные, отрицательные числа, проценты, значения валют и научную нотацию."
+          },
+          {
+            "title": "Извлечение Телефонных Номеров",
+            "description": "Специализированный режим телефонных номеров для обнаружения форматов E.164, US, UK, EU и международных с нормализацией."
+          },
+          {
+            "title": "Поддержка Символов Валют",
+            "description": "Извлекайте числа с символами валют включая $, €, £, ¥, ₹, ₽, TND и другими с опциональным сохранением символов."
+          },
+          {
+            "title": "Обработка Процентов",
+            "description": "Выберите сохранение символа процента, его удаление или конвертацию процентов в десятичный формат (например, 25% в 0.25)."
+          },
+          {
+            "title": "Статистический Анализ",
+            "description": "Получайте мгновенную статистику включая сумму, среднее, минимум, максимум, количество и диапазон извлеченных чисел."
+          },
+          {
+            "title": "Множественные Форматы Экспорта",
+            "description": "Экспортируйте извлеченные числа как простые списки (по одному в строке) или в формате CSV для импорта в таблицы."
+          },
+          {
+            "title": "Опция Уникальных Значений",
+            "description": "Опционально удаляйте дублирующиеся числа чтобы получить только уникальные значения из текста."
+          },
+          {
+            "title": "Поддержка Разделителей Тысяч",
+            "description": "Учитывайте разделители тысяч в форматах US (1,234.56) и EU (1.234,56) для точного извлечения."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Распространенные Случаи Использования Извлечения Чисел",
+        "description": "Извлечение чисел имеет практическое применение в анализе данных, финансах, исследованиях и обработке контента.",
+        "items": [
+          { "title": "Майнинг и Анализ Данных", "description": "Извлекайте числовые данные из отчетов, статей и документов для анализа и визуализации" },
+          { "title": "Обработка Финансовых Документов", "description": "Извлекайте цены, суммы и значения валют из счетов, чеков и финансовых отчетов" },
+          { "title": "Извлечение Телефонных Номеров", "description": "Извлекайте и нормализуйте телефонные номера из контактных списков, справочников и бизнес-документов" },
+          { "title": "Статистические Исследования", "description": "Собирайте числовые данные из научных работ, опросов и результатов исследований для вычислений" },
+          { "title": "Сравнение Цен", "description": "Извлекайте цены из товарных списков, каталогов и сравнительных документов" },
+          { "title": "Подготовка Данных для Таблиц", "description": "Извлекайте числа из текста для импорта в Excel, Google Sheets или другие табличные инструменты" },
+          { "title": "Извлечение Научных Данных", "description": "Извлекайте числовые значения и измерения из научных статей и технических документов" },
+          { "title": "Данные Веб-Скрапинга", "description": "Извлекайте числа из веб-контента для импорта в базы данных и анализа" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Извлечь Числа из Текста",
+        "description": "Следуйте этим простым шагам чтобы извлечь числа из текста и получить мгновенную статистику.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Текст",
+            "description": "Вставьте или введите текст в область ввода, или загрузите текстовый файл содержащий числа для извлечения."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции Извлечения",
+            "description": "Выберите какие типы чисел сохранить: десятичные, отрицательные, проценты, значения валют и научную нотацию. Установите предпочтения для процентов и формата вывода."
+          },
+          {
+            "step": 3,
+            "title": "Нажмите Извлечь Числа",
+            "description": "Нажмите кнопку 'Извлечь числа' чтобы обработать текст и извлечь все соответствующие числа на основе выбранных опций."
+          },
+          {
+            "step": 4,
+            "title": "Просмотр Статистики и Экспорт",
+            "description": "Просмотрите извлеченные числа, посмотрите автоматическую статистику (сумма, среднее, мин, макс), затем скопируйте список или скачайте как CSV."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Извлечения Чисел",
+        "description": "Посмотрите как различные типы чисел извлекаются из разных текстовых форматов.",
+        "items": [
+          { 
+            "title": "Базовые Числа",
+            "input": "Отчет показывает 42 пользователя, 123 сессии и 7 конверсий.",
+            "output": "42\n123\n7"
+          },
+          { 
+            "title": "С Десятичными и Отрицательными",
+            "input": "Температура: -5.5°C, Рост: 12.8%, Спад: -3.2%",
+            "output": "-5.5\n12.8\n-3.2"
+          },
+          { 
+            "title": "Значения Валют",
+            "input": "Цена: $49.99, Налог: $4.50, Всего: $54.49",
+            "output": "49.99\n4.50\n54.49"
+          },
+          { 
+            "title": "Телефонные Номера",
+            "input": "Звоните (555) 123-4567 или +1-800-555-0199 для поддержки.",
+            "output": "+15551234567\n+18005550199"
+          },
+          { 
+            "title": "Научная Нотация",
+            "input": "Расстояние: 1.496e8 км, Масса: 5.972e24 кг",
+            "output": "1.496e8\n5.972e24"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Использовать Наш Экстрактор Чисел",
+        "content": "Профессиональное извлечение чисел с комплексными опциями, мгновенной статистикой и множественными форматами экспорта для любых задач обработки данных.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Регистрация или аккаунт не требуются",
+          "Приоритет конфиденциальности - вся обработка локально в браузере",
+          "Поддержка множественных форматов и нотаций чисел",
+          "Мгновенные статистические вычисления (сумма, среднее, мин, макс)",
+          "Обнаружение и нормализация телефонных номеров",
+          "Опции обработки валют и процентов",
+          "CSV экспорт для совместимости с таблицами",
+          "Фильтрация уникальных значений",
+          "Мобильно-оптимизированный адаптивный дизайн"
+        ]
+      },
+      "faqs": [
+        { 
+          "question": "Какие типы чисел можно извлечь?", 
+          "answer": "Инструмент может извлекать целые числа (42), десятичные (123.45), отрицательные числа (-17), проценты (25%), значения валют ($49.99), научную нотацию (1.2e6), числа с разделителями тысяч (1,234) и телефонные номера в различных форматах."
+        },
+        { 
+          "question": "Как работает режим телефонных номеров?", 
+          "answer": "Когда режим телефонных номеров включен, инструмент специально ищет паттерны телефонных номеров включая формат E.164 (+15551234567), US форматы как (555) 123-4567 и международные форматы. Номера нормализуются в формат E.164 в выводе."
+        },
+        { 
+          "question": "Могу ли я извлечь только уникальные числа?", 
+          "answer": "Да! Включите опцию 'Только уникальные' чтобы автоматически удалить дублирующиеся числа из результатов, сохраняя только первое вхождение каждого уникального значения."
+        },
+        { 
+          "question": "Как обрабатываются проценты?", 
+          "answer": "У вас есть три опции: (1) Оставить % символ - вывод как 25%, (2) Убрать % символ - вывод как 25, (3) Конвертировать в десятичную - вывод как 0.25. Выберите в зависимости от того как вам нужно использовать данные."
+        },
+        { 
+          "question": "Какие символы валют поддерживаются?", 
+          "answer": "Инструмент поддерживает основные символы валют включая $ (Доллар), € (Евро), £ (Фунт), ¥ (Йена), ₹ (Рупия), ₽ (Рубль), TND (Тунисский динар) и д.т (Арабский динар). Выберите какие распознавать при извлечении."
+        },
+        { 
+          "question": "Какая статистика вычисляется?", 
+          "answer": "После извлечения вы получаете автоматическую статистику: Сумма (итого всех чисел), Среднее (среднее значение), Минимум (наименьшее число), Максимум (наибольшее число), Количество (сколько чисел) и Диапазон (разница между мин и макс)."
+        },
+        { 
+          "question": "Как экспортировать в CSV?", 
+          "answer": "Нажмите кнопку 'Скачать CSV' после извлечения. CSV файл будет содержать одно число в строке с заголовком, что упрощает импорт в Excel, Google Sheets или другие табличные приложения."
+        },
+        { 
+          "question": "Что такое разделители тысяч?", 
+          "answer": "Разделители тысяч это запятые или точки используемые для группировки цифр (например, 1,234.56 или 1.234,56). Когда эта опция включена, инструмент правильно интерпретирует их как одно число а не несколько отдельных чисел."
+        },
+        { 
+          "question": "Работает ли это с научной нотацией?", 
+          "answer": "Да! Включите 'Принять научную нотацию' чтобы извлечь числа в экспоненциальном формате как 1.2e6 (1,200,000) или 3.5E-4 (0.00035). Это полезно для научных и инженерных документов."
+        },
+        { 
+          "question": "Сохраняются ли мои данные где-либо?", 
+          "answer": "Нет. Вся обработка текста и извлечение чисел происходит локально в вашем браузере используя JavaScript. Ваш текст никогда не загружается на наши серверы и нигде не сохраняется."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Анализа и Данных",
+        "description": "Исследуйте больше инструментов для анализа текста, извлечения данных и обработки контента.",
+        "items": [
+          { "name": "Счётчик Текста", "description": "Считайте символы, слова, строки, предложения с детальной статистикой", "href": "/ru/tools/text-counter" },
+          { "name": "Анализатор Частоты Слов", "description": "Анализируйте частоту слов и выявляйте паттерны в тексте", "href": "/ru/tools/word-frequency" },
+          { "name": "Счётчик Предложений", "description": "Считайте предложения с анализом структуры и метриками", "href": "/ru/tools/sentence-counter" },
+          { "name": "Извлечение Email из Текста", "description": "Извлекайте и проверяйте email адреса из любого текста", "href": "/ru/tools/extract-emails-from-text" }
+        ]
+      }
+    }
+  }
+}

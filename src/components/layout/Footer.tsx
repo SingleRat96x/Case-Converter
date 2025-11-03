@@ -32,6 +32,18 @@ export function Footer() {
     {
       title: t('navigation.alternatingCase'),
       href: currentLocale === 'en' ? '/tools/alternating-case' : '/ru/tools/alternating-case'
+    },
+    {
+      title: t('navigation.camelCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter'
+    },
+    {
+      title: t('navigation.snakeCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/snake-case-converter' : '/ru/tools/snake-case-converter'
+    },
+    {
+      title: t('navigation.kebabCaseConverter'),
+      href: currentLocale === 'en' ? '/tools/kebab-case-converter' : '/ru/tools/kebab-case-converter'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
@@ -47,6 +59,10 @@ export function Footer() {
     {
       title: t('navigation.wordFrequency'),
       href: currentLocale === 'en' ? '/tools/word-frequency' : '/ru/tools/word-frequency'
+    },
+    {
+      title: t('navigation.extractNumbers'),
+      href: currentLocale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
@@ -66,6 +82,10 @@ export function Footer() {
     {
       title: t('navigation.removeLineBreaks'),
       href: currentLocale === 'en' ? '/tools/remove-line-breaks' : '/ru/tools/remove-line-breaks'
+    },
+    {
+      title: t('navigation.removePunctuation'),
+      href: currentLocale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation'
     },
     {
       title: t('navigation.removeTextFormatting'),
@@ -149,6 +169,10 @@ export function Footer() {
     {
       title: t('navigation.jsonStringify'),
       href: currentLocale === 'en' ? '/tools/json-stringify' : '/ru/tools/json-stringify'
+    },
+    {
+      title: t('navigation.jsonFormatter'),
+      href: currentLocale === 'en' ? '/tools/json-formatter' : '/ru/tools/json-formatter'
     },
     {
       title: t('navigation.urlConverter'),

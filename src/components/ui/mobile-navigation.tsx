@@ -113,6 +113,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           title: t('navigation.alternatingCase'),
           href: locale === 'en' ? '/tools/alternating-case' : '/ru/tools/alternating-case',
           icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.camelCaseConverter'),
+          href: locale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter',
+          icon: <ChevronRight className="h-4 w-4" />
         }
       ]
     },
@@ -134,6 +139,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
         {
           title: t('navigation.wordFrequency'),
           href: locale === 'en' ? '/tools/word-frequency' : '/ru/tools/word-frequency',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.extractNumbers'),
+          href: locale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
