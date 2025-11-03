@@ -1,22 +1,18 @@
 'use client';
 
-import React, { useState, useCallback, useEffect, useMemo } from 'react';
+import React, { useState, useCallback, useEffect, useMemo, useRef } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
 import { EditorView, lineNumbers } from '@codemirror/view';
 import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { Button } from '@/components/ui/button';
-import { Input } from '@/components/ui/input';
-import { Label } from '@/components/ui/label';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { InteractiveSlider } from '@/components/shared/InteractiveSlider';
-import { FileText, Upload, Trash2, BookOpen } from 'lucide-react';
+import { FileText, FileJson, Upload, Trash2 } from 'lucide-react';
 import {
   calculateReadingTime,
   extractWordCountFromText,
   extractWordCountFromJSON,
-  parseJSONKeys,
   validateJSON,
 } from '@/lib/readingTimeUtils';
 import { ReadingTimeAnalytics } from './ReadingTimeAnalytics';
@@ -26,17 +22,17 @@ import { SEOContent } from '@/components/seo/SEOContent';
 type InputMode = 'text' | 'json';
 
 // Speed presets for sliders
-const SILENT_SPEEDS = {
-  slow: 150,
-  average: 200,
-  fast: 250
-};
+const SILENT_SPEEDS = [
+  { label: 'Slow', wpm: 150 },
+  { label: 'Average', wpm: 200 },
+  { label: 'Fast', wpm: 250 }
+];
 
-const ALOUD_SPEEDS = {
-  slow: 100,
-  average: 120,
-  fast: 150
-};
+const ALOUD_SPEEDS = [
+  { label: 'Slow', wpm: 100 },
+  { label: 'Average', wpm: 120 },
+  { label: 'Fast', wpm: 150 }
+];
 
 export function ReadingTimeEstimator() {
   const { common, tool } = useToolTranslations('tools/misc-tools');
@@ -44,12 +40,11 @@ export function ReadingTimeEstimator() {
   // Input state
   const [inputMode, setInputMode] = useState<InputMode>('text');
   const [text, setText] = useState('');
-  const [jsonKeys, setJsonKeys] = useState('');
   const [isDark, setIsDark] = useState(false);
   
   // Speed state - both sliders independently adjustable
-  const [silentSpeed, setSilentSpeed] = useState(SILENT_SPEEDS.average);
-  const [aloudSpeed, setAloudSpeed] = useState(ALOUD_SPEEDS.average);
+  const [silentSpeed, setSilentSpeed] = useState(200);
+  const [aloudSpeed, setAloudSpeed] = useState(120);
   
   // Results state
   const [wordCount, setWordCount] = useState(0);
@@ -74,7 +69,7 @@ export function ReadingTimeEstimator() {
     return () => observer.disconnect();
   }, []);
 
-  // Calculate word and character count (memoized to prevent excessive recalculations)
+  // Calculate word and character count
   useEffect(() => {
     if (!text || text.trim().length === 0) {
       setWordCount(0);
@@ -100,9 +95,8 @@ export function ReadingTimeEstimator() {
         return;
       }
 
-      // Parse keys
-      const keys = parseJSONKeys(jsonKeys);
-      const result = extractWordCountFromJSON(text, keys || undefined);
+      // Auto-detect keys
+      const result = extractWordCountFromJSON(text, undefined);
       
       if (result.error) {
         error = result.error;
@@ -120,9 +114,9 @@ export function ReadingTimeEstimator() {
     setWordCount(words);
     setCharacterCount(text.length);
     setJsonError(error);
-  }, [text, inputMode, jsonKeys]);
+  }, [text, inputMode]);
 
-  // Calculate reading times (memoized)
+  // Calculate reading times (memoized to prevent lag)
   const silentTime = useMemo(() => {
     if (wordCount === 0) return null;
     return calculateReadingTime(wordCount, silentSpeed);
@@ -165,52 +159,47 @@ export function ReadingTimeEstimator() {
           {tool('readingTimeEstimator.title') || 'Reading Time Estimator'}
         </h1>
         <p className="text-muted-foreground max-w-2xl mx-auto">
-          {tool('readingTimeEstimator.description') || 'Free read time calculator for text, word count, and JSON payloads.'}
+          {tool('readingTimeEstimator.description') || 'Free read time calculator for text and JSON payloads.'}
         </p>
       </div>
 
       <ToolHeaderAd />
 
-      {/* Tabs for input mode selection */}
-      <Tabs value={inputMode} defaultValue="text" onValueChange={handleInputModeChange}>
-        <TabsList className="grid w-full max-w-md mx-auto grid-cols-2">
-          <TabsTrigger value="text" className="flex items-center gap-2">
-            <FileText className="h-4 w-4" />
-            {tool('readingTimeEstimator.inputModeText') || 'Text'}
-          </TabsTrigger>
-          <TabsTrigger value="json" className="flex items-center gap-2">
-            <BookOpen className="h-4 w-4" />
-            {tool('readingTimeEstimator.inputModeJSON') || 'JSON'}
-          </TabsTrigger>
-        </TabsList>
-
-        <TabsContent value="text" className="space-y-2 mt-4">
-          <p className="text-sm text-muted-foreground text-center">
-            Paste your article, blog post, or any text to analyze reading time
-          </p>
-        </TabsContent>
-
-        <TabsContent value="json" className="space-y-3 mt-4">
-          <p className="text-sm text-muted-foreground text-center">
-            Paste JSON data to extract and analyze text content
-          </p>
-          <div className="max-w-md mx-auto">
-            <Label htmlFor="json-keys" className="text-xs">
-              {tool('readingTimeEstimator.jsonKeysLabel') || 'Key(s) to include (optional)'}
-            </Label>
-            <Input
-              id="json-keys"
-              value={jsonKeys}
-              onChange={(e) => setJsonKeys(e.target.value)}
-              placeholder='["content","body"] or leave empty for auto-detect'
-              className="font-mono text-xs mt-1"
-            />
-            <p className="text-xs text-muted-foreground mt-1">
-              Leave empty to automatically find text content
-            </p>
+      {/* Centered Tabs with professional styling */}
+      <div className="flex justify-center">
+        <Tabs value={inputMode} defaultValue="text" onValueChange={handleInputModeChange} className="w-full max-w-4xl">
+          <div className="flex justify-center mb-4">
+            <TabsList className="inline-flex h-11 items-center justify-center rounded-lg bg-muted p-1 shadow-sm">
+              <TabsTrigger 
+                value="text" 
+                className="flex items-center gap-2 px-6 data-[state=active]:bg-background data-[state=active]:shadow-md transition-all"
+              >
+                <FileText className="h-4 w-4" />
+                <span className="font-medium">{tool('readingTimeEstimator.inputModeText') || 'Text'}</span>
+              </TabsTrigger>
+              <TabsTrigger 
+                value="json" 
+                className="flex items-center gap-2 px-6 data-[state=active]:bg-background data-[state=active]:shadow-md transition-all"
+              >
+                <FileJson className="h-4 w-4" />
+                <span className="font-medium">{tool('readingTimeEstimator.inputModeJSON') || 'JSON'}</span>
+              </TabsTrigger>
+            </TabsList>
           </div>
-        </TabsContent>
-      </Tabs>
+
+          <TabsContent value="text" className="mt-0">
+            <p className="text-sm text-muted-foreground text-center mb-4">
+              Paste your article, blog post, or any text to analyze reading time
+            </p>
+          </TabsContent>
+
+          <TabsContent value="json" className="mt-0">
+            <p className="text-sm text-muted-foreground text-center mb-4">
+              Paste JSON data to automatically extract and analyze text content
+            </p>
+          </TabsContent>
+        </Tabs>
+      </div>
 
       {/* CodeMirror Editor with line numbers */}
       <div className="space-y-3">
@@ -265,7 +254,7 @@ export function ReadingTimeEstimator() {
             lineNumbers: true,
             highlightActiveLineGutter: true,
             highlightActiveLine: true,
-            foldGutter: true,
+            foldGutter: inputMode === 'json',
           }}
         />
       </div>
@@ -277,79 +266,26 @@ export function ReadingTimeEstimator() {
         </div>
       )}
 
-      {/* Reading Speed Controls */}
+      {/* Reading Speed Controls - Clean, no duplication */}
       <div className="space-y-6 bg-muted/30 rounded-lg p-6 border">
         {/* Silent Reading Speed Slider */}
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <FileText className="h-4 w-4 text-muted-foreground" />
-            <h3 className="text-sm font-medium text-muted-foreground">Silent Reading</h3>
-          </div>
-          <InteractiveSlider
-            value={silentSpeed}
-            min={SILENT_SPEEDS.slow}
-            max={SILENT_SPEEDS.fast}
-            step={10}
-            label={`Silent Reading Speed: ${silentSpeed} WPM`}
-            onChange={setSilentSpeed}
-          />
-          <div className="flex justify-between text-xs text-muted-foreground px-1">
-            <button
-              onClick={() => setSilentSpeed(SILENT_SPEEDS.slow)}
-              className={`hover:text-foreground transition-colors ${silentSpeed === SILENT_SPEEDS.slow ? 'text-primary font-semibold' : ''}`}
-            >
-              Slow ({SILENT_SPEEDS.slow})
-            </button>
-            <button
-              onClick={() => setSilentSpeed(SILENT_SPEEDS.average)}
-              className={`hover:text-foreground transition-colors ${silentSpeed === SILENT_SPEEDS.average ? 'text-primary font-semibold' : ''}`}
-            >
-              Average ({SILENT_SPEEDS.average})
-            </button>
-            <button
-              onClick={() => setSilentSpeed(SILENT_SPEEDS.fast)}
-              className={`hover:text-foreground transition-colors ${silentSpeed === SILENT_SPEEDS.fast ? 'text-primary font-semibold' : ''}`}
-            >
-              Fast ({SILENT_SPEEDS.fast})
-            </button>
-          </div>
-        </div>
+        <CustomSlider
+          value={silentSpeed}
+          onChange={setSilentSpeed}
+          speeds={SILENT_SPEEDS}
+          title="Silent Reading Speed"
+        />
+
+        {/* Divider */}
+        <div className="border-t" />
 
         {/* Read Aloud Speed Slider */}
-        <div className="space-y-2">
-          <div className="flex items-center gap-2">
-            <BookOpen className="h-4 w-4 text-muted-foreground" />
-            <h3 className="text-sm font-medium text-muted-foreground">Read Aloud</h3>
-          </div>
-          <InteractiveSlider
-            value={aloudSpeed}
-            min={ALOUD_SPEEDS.slow}
-            max={ALOUD_SPEEDS.fast}
-            step={5}
-            label={`Read Aloud Speed: ${aloudSpeed} WPM`}
-            onChange={setAloudSpeed}
-          />
-          <div className="flex justify-between text-xs text-muted-foreground px-1">
-            <button
-              onClick={() => setAloudSpeed(ALOUD_SPEEDS.slow)}
-              className={`hover:text-foreground transition-colors ${aloudSpeed === ALOUD_SPEEDS.slow ? 'text-primary font-semibold' : ''}`}
-            >
-              Slow ({ALOUD_SPEEDS.slow})
-            </button>
-            <button
-              onClick={() => setAloudSpeed(ALOUD_SPEEDS.average)}
-              className={`hover:text-foreground transition-colors ${aloudSpeed === ALOUD_SPEEDS.average ? 'text-primary font-semibold' : ''}`}
-            >
-              Average ({ALOUD_SPEEDS.average})
-            </button>
-            <button
-              onClick={() => setAloudSpeed(ALOUD_SPEEDS.fast)}
-              className={`hover:text-foreground transition-colors ${aloudSpeed === ALOUD_SPEEDS.fast ? 'text-primary font-semibold' : ''}`}
-            >
-              Fast ({ALOUD_SPEEDS.fast})
-            </button>
-          </div>
-        </div>
+        <CustomSlider
+          value={aloudSpeed}
+          onChange={setAloudSpeed}
+          speeds={ALOUD_SPEEDS}
+          title="Read Aloud Speed"
+        />
       </div>
 
       {/* Single Analytics Display */}
@@ -368,6 +304,150 @@ export function ReadingTimeEstimator() {
         enableAds={true}
         adDensity="medium"
       />
+    </div>
+  );
+}
+
+// Custom slider component with proper preset positioning
+function CustomSlider({ 
+  value, 
+  onChange, 
+  speeds, 
+  title 
+}: { 
+  value: number; 
+  onChange: (v: number) => void; 
+  speeds: typeof SILENT_SPEEDS;
+  title: string;
+}) {
+  const [isDragging, setIsDragging] = useState(false);
+  const sliderRef = useRef<HTMLDivElement>(null);
+  
+  const min = speeds[0].wpm;
+  const max = speeds[speeds.length - 1].wpm;
+  const percentage = ((value - min) / (max - min)) * 100;
+
+  const handleSliderInteraction = useCallback((clientX: number) => {
+    const rect = sliderRef.current?.getBoundingClientRect();
+    if (!rect) return;
+    
+    const position = (clientX - rect.left) / rect.width;
+    const clampedPosition = Math.max(0, Math.min(1, position));
+    const rawValue = min + clampedPosition * (max - min);
+    
+    // Snap to nearest preset
+    let closestSpeed = speeds[0].wpm;
+    let minDiff = Math.abs(rawValue - closestSpeed);
+    
+    speeds.forEach(speed => {
+      const diff = Math.abs(rawValue - speed.wpm);
+      if (diff < minDiff) {
+        minDiff = diff;
+        closestSpeed = speed.wpm;
+      }
+    });
+    
+    if (closestSpeed !== value) {
+      onChange(closestSpeed);
+    }
+  }, [min, max, speeds, value, onChange]);
+
+  const handleMouseDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+    handleSliderInteraction(e.clientX);
+  }, [handleSliderInteraction]);
+
+  const handleMouseMove = useCallback((e: MouseEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    handleSliderInteraction(e.clientX);
+  }, [isDragging, handleSliderInteraction]);
+
+  const handleMouseUp = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  const handleTouchStart = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
+    e.preventDefault();
+    setIsDragging(true);
+    if (e.touches[0]) {
+      handleSliderInteraction(e.touches[0].clientX);
+    }
+  }, [handleSliderInteraction]);
+
+  const handleTouchMove = useCallback((e: TouchEvent) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    if (e.touches[0]) {
+      handleSliderInteraction(e.touches[0].clientX);
+    }
+  }, [isDragging, handleSliderInteraction]);
+
+  const handleTouchEnd = useCallback(() => {
+    setIsDragging(false);
+  }, []);
+
+  useEffect(() => {
+    if (isDragging) {
+      document.addEventListener('mousemove', handleMouseMove);
+      document.addEventListener('mouseup', handleMouseUp);
+      document.addEventListener('touchmove', handleTouchMove, { passive: false });
+      document.addEventListener('touchend', handleTouchEnd);
+      return () => {
+        document.removeEventListener('mousemove', handleMouseMove);
+        document.removeEventListener('mouseup', handleMouseUp);
+        document.removeEventListener('touchmove', handleTouchMove);
+        document.removeEventListener('touchend', handleTouchEnd);
+      };
+    }
+  }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove, handleTouchEnd]);
+
+  return (
+    <div className="space-y-3">
+      {/* Title with bold WPM - no icon, no duplication */}
+      <div className="text-sm text-muted-foreground">
+        {title}: <span className="text-base font-bold text-foreground">{value} WPM</span>
+      </div>
+
+      {/* Slider Track - smooth and responsive */}
+      <div
+        ref={sliderRef}
+        className="h-3 bg-muted rounded-full cursor-pointer relative select-none transition-all"
+        onMouseDown={handleMouseDown}
+        onTouchStart={handleTouchStart}
+      >
+        {/* Progress Fill */}
+        <div
+          className="h-full bg-primary rounded-full transition-all duration-200 ease-out"
+          style={{ width: `${percentage}%` }}
+        />
+        
+        {/* Thumb */}
+        <div
+          className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-background border-2 border-primary rounded-full shadow-md cursor-grab transition-all duration-150 ${
+            isDragging ? 'scale-125 shadow-lg ring-4 ring-primary/20' : 'hover:scale-110'
+          }`}
+          style={{ left: `calc(${percentage}% - 10px)` }}
+        />
+      </div>
+
+      {/* Preset buttons - properly positioned under slider track */}
+      <div className="flex justify-between items-center">
+        {speeds.map((speed) => (
+          <button
+            key={speed.wpm}
+            onClick={() => onChange(speed.wpm)}
+            className={`text-xs px-2 py-1 rounded transition-all ${
+              value === speed.wpm
+                ? 'text-primary font-bold bg-primary/10'
+                : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+            }`}
+          >
+            {speed.label}
+          </button>
+        ))}
+      </div>
     </div>
   );
 }
