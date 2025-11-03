@@ -4,10 +4,7 @@ import React from 'react';
 import { 
   Sparkles, 
   Minimize2, 
-  Copy, 
-  Download, 
   Trash2, 
-  Check, 
   Loader2,
   Info
 } from 'lucide-react';
@@ -17,28 +14,20 @@ import { useToolTranslations } from '@/lib/i18n/hooks';
 interface JsonFormatterToolbarProps {
   onFormat: () => void;
   onMinify: () => void;
-  onCopy: () => void;
-  onDownload: () => void;
   onClear: () => void;
   isProcessing: boolean;
   hasInput: boolean;
   hasOutput: boolean;
-  copySuccess: boolean;
-  downloadSuccess: boolean;
   className?: string;
 }
 
 export function JsonFormatterToolbar({
   onFormat,
   onMinify,
-  onCopy,
-  onDownload,
   onClear,
   isProcessing,
   hasInput,
   hasOutput,
-  copySuccess,
-  downloadSuccess,
   className = ''
 }: JsonFormatterToolbarProps) {
   const { common, tool } = useToolTranslations('tools/code-data');
@@ -81,48 +70,6 @@ export function JsonFormatterToolbar({
         >
           <Minimize2 className="h-4 w-4" />
           {tool('jsonFormatter.minifyButton') || 'Minify'}
-        </Button>
-
-        <Button
-          onClick={onCopy}
-          disabled={!hasOutput}
-          size="lg"
-          variant="outline"
-          className="gap-2"
-          title="Copy output to clipboard (Ctrl+C)"
-        >
-          {copySuccess ? (
-            <>
-              <Check className="h-4 w-4" />
-              {common('buttons.copied') || 'Copied!'}
-            </>
-          ) : (
-            <>
-              <Copy className="h-4 w-4" />
-              {common('buttons.copy') || 'Copy'}
-            </>
-          )}
-        </Button>
-
-        <Button
-          onClick={onDownload}
-          disabled={!hasOutput}
-          size="lg"
-          variant="outline"
-          className="gap-2"
-          title="Download formatted JSON as file"
-        >
-          {downloadSuccess ? (
-            <>
-              <Check className="h-4 w-4" />
-              {common('buttons.downloaded') || 'Downloaded!'}
-            </>
-          ) : (
-            <>
-              <Download className="h-4 w-4" />
-              {common('buttons.download') || 'Download'}
-            </>
-          )}
         </Button>
 
         <Button

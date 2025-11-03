@@ -15,7 +15,8 @@
 import React, { useCallback, useMemo, useEffect } from 'react';
 import { useJsonFormatter } from '@/hooks/useJsonFormatter';
 import { JsonFormatterToolbar } from './JsonFormatterToolbar';
-import { JsonFormatterPanel } from './JsonFormatterPanel';
+import { JsonInputPanel } from './JsonInputPanel';
+import { JsonOutputPanel } from './JsonOutputPanel';
 import { JsonFormatterStatusBar } from './JsonFormatterStatusBar';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { Switch } from '@/components/ui/switch';
@@ -156,43 +157,34 @@ export function JsonFormatterTool() {
       <JsonFormatterToolbar
         onFormat={actions.format}
         onMinify={actions.minify}
-        onCopy={handleCopy}
-        onDownload={handleDownload}
         onClear={actions.clear}
         isProcessing={state.isProcessing}
         hasInput={!!state.input}
         hasOutput={!!state.output}
-        copySuccess={copySuccess}
-        downloadSuccess={downloadSuccess}
       />
 
       {/* Editor Panels */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {/* Input Panel */}
-        <JsonFormatterPanel
-          label={tool('jsonFormatter.inputLabel') || 'Input'}
+        <JsonInputPanel
           value={state.input}
           onChange={actions.setInput}
           onFileUpload={actions.handleFileUpload}
-          placeholder={tool('jsonFormatter.inputPlaceholder') || 'Paste or type JSON here...'}
           validationError={state.validationError}
           height="500px"
-          showFileUpload={true}
-          showStats={true}
-          stats={inputStats}
         />
 
         {/* Output Panel */}
-        <JsonFormatterPanel
-          label={tool('jsonFormatter.outputLabel') || 'Output'}
+        <JsonOutputPanel
           value={state.output}
-          readOnly={true}
-          placeholder={tool('jsonFormatter.outputPlaceholder') || 'Formatted JSON will appear here...'}
-          height="500px"
-          showStats={true}
           stats={state.stats}
           viewMode={state.viewMode}
           onViewModeChange={actions.setViewMode}
+          onCopy={handleCopy}
+          onDownload={handleDownload}
+          copySuccess={copySuccess}
+          downloadSuccess={downloadSuccess}
+          height="500px"
         />
       </div>
 
