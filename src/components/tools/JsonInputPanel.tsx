@@ -152,7 +152,8 @@ export function JsonInputPanel({
       <JsonInputMenu onMenuAction={handleMenuAction} />
 
       {/* Toolbar */}
-      <div className="flex flex-wrap items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
+      <div className="flex items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
+        <div className="flex items-center gap-2 min-w-max">
         {/* Primary Actions */}
         <Button
           onClick={onFormat}
@@ -296,6 +297,7 @@ export function JsonInputPanel({
             NDJSON
           </label>
         </div>
+        </div>
       </div>
 
       {/* CodeMirror Editor */}
@@ -314,9 +316,9 @@ export function JsonInputPanel({
       <div className="flex items-center justify-between px-3 py-1.5 border-t border-border bg-muted/30 text-xs">
         <div className="flex items-center gap-3 text-muted-foreground">
           <span>Lines: {lines}</span>
-          <span>•</span>
+          <span>?</span>
           <span>Characters: {chars.toLocaleString()}</span>
-          <span>•</span>
+          <span>?</span>
           <span>Words: {words}</span>
         </div>
         

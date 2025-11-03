@@ -122,7 +122,8 @@ export function JsonOutputPanel({
       <JsonOutputMenu onMenuAction={handleMenuAction} />
 
       {/* Toolbar */}
-      <div className="flex flex-wrap items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
+      <div className="flex items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
+        <div className="flex items-center gap-2 min-w-max">
         {/* View Mode Toggle */}
         {value && (
           <>
@@ -207,6 +208,7 @@ export function JsonOutputPanel({
           <Printer className="h-3 w-3" />
           <span className="text-xs">Print</span>
         </Button>
+        </div>
       </div>
 
       {/* CodeMirror Editor or Tree View */}

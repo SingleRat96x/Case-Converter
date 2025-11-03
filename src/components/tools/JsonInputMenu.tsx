@@ -1,7 +1,13 @@
 'use client';
 
 import React, { useState } from 'react';
-import { ChevronDown } from 'lucide-react';
+import { 
+  FileText, FolderOpen, Save, Printer, FileJson,
+  Undo, Redo, Scissors, Copy, Clipboard, Search, TextSelect,
+  PlusCircle, Layers, Braces, Brackets,
+  Eye, WrapText, ListOrdered, ChevronDown as FoldIcon, ChevronUp as UnfoldIcon,
+  Keyboard, BookOpen, Info
+} from 'lucide-react';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 
 interface JsonInputMenuProps {
@@ -12,7 +18,7 @@ interface JsonInputMenuProps {
 interface MenuItem {
   id: string;
   label: string;
-  items: { id: string; label: string; shortcut?: string; separator?: boolean }[];
+  items: { id: string; label: string; shortcut?: string; separator?: boolean; icon?: React.ReactNode }[];
 }
 
 export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuProps) {
@@ -24,56 +30,56 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
       id: 'file',
       label: 'File',
       items: [
-        { id: 'file-new', label: 'New', shortcut: 'Ctrl+N' },
-        { id: 'file-open', label: 'Open File...', shortcut: 'Ctrl+O' },
-        { id: 'file-save-json', label: 'Save as JSON', shortcut: 'Ctrl+S' },
-        { id: 'file-save-ndjson', label: 'Save as NDJSON' },
+        { id: 'file-new', label: 'New', shortcut: 'Ctrl+N', icon: <FileText className="h-4 w-4" /> },
+        { id: 'file-open', label: 'Open File...', shortcut: 'Ctrl+O', icon: <FolderOpen className="h-4 w-4" /> },
+        { id: 'file-save-json', label: 'Save as JSON', shortcut: 'Ctrl+S', icon: <Save className="h-4 w-4" /> },
+        { id: 'file-save-ndjson', label: 'Save as NDJSON', icon: <FileJson className="h-4 w-4" /> },
         { id: 'file-separator-1', label: '', separator: true },
-        { id: 'file-print', label: 'Print', shortcut: 'Ctrl+P' },
+        { id: 'file-print', label: 'Print', shortcut: 'Ctrl+P', icon: <Printer className="h-4 w-4" /> },
       ]
     },
     {
       id: 'edit',
       label: 'Edit',
       items: [
-        { id: 'edit-undo', label: 'Undo', shortcut: 'Ctrl+Z' },
-        { id: 'edit-redo', label: 'Redo', shortcut: 'Ctrl+Y' },
+        { id: 'edit-undo', label: 'Undo', shortcut: 'Ctrl+Z', icon: <Undo className="h-4 w-4" /> },
+        { id: 'edit-redo', label: 'Redo', shortcut: 'Ctrl+Y', icon: <Redo className="h-4 w-4" /> },
         { id: 'edit-separator-1', label: '', separator: true },
-        { id: 'edit-cut', label: 'Cut', shortcut: 'Ctrl+X' },
-        { id: 'edit-copy', label: 'Copy', shortcut: 'Ctrl+C' },
-        { id: 'edit-paste', label: 'Paste', shortcut: 'Ctrl+V' },
+        { id: 'edit-cut', label: 'Cut', shortcut: 'Ctrl+X', icon: <Scissors className="h-4 w-4" /> },
+        { id: 'edit-copy', label: 'Copy', shortcut: 'Ctrl+C', icon: <Copy className="h-4 w-4" /> },
+        { id: 'edit-paste', label: 'Paste', shortcut: 'Ctrl+V', icon: <Clipboard className="h-4 w-4" /> },
         { id: 'edit-separator-2', label: '', separator: true },
-        { id: 'edit-select-all', label: 'Select All', shortcut: 'Ctrl+A' },
-        { id: 'edit-find', label: 'Find', shortcut: 'Ctrl+F' },
+        { id: 'edit-select-all', label: 'Select All', shortcut: 'Ctrl+A', icon: <TextSelect className="h-4 w-4" /> },
+        { id: 'edit-find', label: 'Find', shortcut: 'Ctrl+F', icon: <Search className="h-4 w-4" /> },
       ]
     },
     {
       id: 'insert',
       label: 'Insert',
       items: [
-        { id: 'insert-sample-object', label: 'Sample Object' },
-        { id: 'insert-sample-array', label: 'Sample Array' },
-        { id: 'insert-empty-object', label: 'Empty Object {}' },
-        { id: 'insert-empty-array', label: 'Empty Array []' },
+        { id: 'insert-sample-object', label: 'Sample Object', icon: <Braces className="h-4 w-4" /> },
+        { id: 'insert-sample-array', label: 'Sample Array', icon: <Brackets className="h-4 w-4" /> },
+        { id: 'insert-empty-object', label: 'Empty Object {}', icon: <Braces className="h-4 w-4" /> },
+        { id: 'insert-empty-array', label: 'Empty Array []', icon: <Brackets className="h-4 w-4" /> },
       ]
     },
     {
       id: 'view',
       label: 'View',
       items: [
-        { id: 'view-word-wrap', label: 'Word Wrap' },
-        { id: 'view-line-numbers', label: 'Line Numbers' },
-        { id: 'view-fold-all', label: 'Fold All' },
-        { id: 'view-unfold-all', label: 'Unfold All' },
+        { id: 'view-word-wrap', label: 'Word Wrap', icon: <WrapText className="h-4 w-4" /> },
+        { id: 'view-line-numbers', label: 'Line Numbers', icon: <ListOrdered className="h-4 w-4" /> },
+        { id: 'view-fold-all', label: 'Fold All', icon: <FoldIcon className="h-4 w-4" /> },
+        { id: 'view-unfold-all', label: 'Unfold All', icon: <UnfoldIcon className="h-4 w-4" /> },
       ]
     },
     {
       id: 'help',
       label: 'Help',
       items: [
-        { id: 'help-keyboard-shortcuts', label: 'Keyboard Shortcuts', shortcut: 'Ctrl+?' },
-        { id: 'help-json-spec', label: 'JSON Specification' },
-        { id: 'help-about', label: 'About JSON Formatter' },
+        { id: 'help-keyboard-shortcuts', label: 'Keyboard Shortcuts', shortcut: 'Ctrl+?', icon: <Keyboard className="h-4 w-4" /> },
+        { id: 'help-json-spec', label: 'JSON Specification', icon: <BookOpen className="h-4 w-4" /> },
+        { id: 'help-about', label: 'About JSON Formatter', icon: <Info className="h-4 w-4" /> },
       ]
     }
   ];
@@ -119,11 +125,14 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
                     <button
                       key={item.id}
                       onClick={() => handleItemClick(item.id)}
-                      className="w-full px-3 py-1.5 text-sm text-left text-foreground hover:bg-accent flex items-center justify-between"
+                      className="w-full px-3 py-1.5 text-sm text-left text-foreground hover:bg-accent flex items-center justify-between gap-3"
                     >
-                      <span>{item.label}</span>
+                      <div className="flex items-center gap-2">
+                        {item.icon && <span className="text-muted-foreground">{item.icon}</span>}
+                        <span>{item.label}</span>
+                      </div>
                       {item.shortcut && (
-                        <span className="text-xs text-muted-foreground ml-4">{item.shortcut}</span>
+                        <span className="text-xs text-muted-foreground">{item.shortcut}</span>
                       )}
                     </button>
                   );
