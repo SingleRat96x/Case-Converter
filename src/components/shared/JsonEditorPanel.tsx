@@ -13,6 +13,8 @@ import { json } from '@codemirror/lang-json';
 import { EditorView, Decoration, DecorationSet, ViewPlugin, ViewUpdate } from '@codemirror/view';
 import { StateField, StateEffect } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
+import { search, highlightSelectionMatches } from '@codemirror/search';
+import { history } from '@codemirror/commands';
 import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
 import { parseJSONWithError, findAllJSONErrors, type ValidationError } from '@/lib/jsonFormatterUtils';
 import { Upload, AlertCircle } from 'lucide-react';
@@ -247,7 +249,10 @@ export function JsonEditorPanel({
   const extensions = useMemo(() => {
     const exts = [
       json(),
-      EditorView.lineWrapping
+      EditorView.lineWrapping,
+      search({ top: true }),
+      highlightSelectionMatches(),
+      history()
     ];
 
     // Add linter only if not readOnly

@@ -1,6 +1,6 @@
 'use client';
 
-import React from 'react';
+import React, { useEffect, useRef } from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
 import { JsonInputMenu } from './JsonInputMenu';
 import { 
@@ -59,8 +59,26 @@ export function JsonInputPanel({
   className = ''
 }: JsonInputPanelProps) {
   const { tool, common } = useToolTranslations('tools/code-data');
-  const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const fileInputRef = useRef<HTMLInputElement>(null);
+  const editorRef = useRef<HTMLDivElement>(null);
   const [customIndent, setCustomIndent] = React.useState('');
+  const isInitialMount = useRef(true);
+
+  /**
+   * Auto-format when formatting options change
+   */
+  useEffect(() => {
+    // Skip on initial mount
+    if (isInitialMount.current) {
+      isInitialMount.current = false;
+      return;
+    }
+    
+    // Auto-format if we have valid input and not already processing
+    if (value && !isProcessing && !validationError) {
+      onFormat();
+    }
+  }, [indentSize, sortKeys, unescapeStrings, ndjsonMode]);
 
   const handleFileClick = () => {
     fileInputRef.current?.click();
@@ -88,6 +106,12 @@ export function JsonInputPanel({
   };
 
   const handleMenuAction = (actionId: string) => {
+    // Get CodeMirror editor view
+    const getEditorView = () => {
+      const cmEditor = editorRef.current?.querySelector('.cm-editor') as any;
+      return cmEditor?.view;
+    };
+
     switch (actionId) {
       case 'file-new':
         onClear();
@@ -97,22 +121,75 @@ export function JsonInputPanel({
         break;
       case 'file-save-json':
       case 'file-save-ndjson':
+      case 'file-print':
         // These will be handled by output panel
         break;
-      case 'edit-select-all':
-        // CodeMirror handles this natively
+      case 'edit-undo': {
+        const view = getEditorView();
+        if (view) {
+          import('@codemirror/commands').then(({ undo }) => undo(view));
+        }
         break;
+      }
+      case 'edit-redo': {
+        const view = getEditorView();
+        if (view) {
+          import('@codemirror/commands').then(({ redo }) => redo(view));
+        }
+        break;
+      }
+      case 'edit-cut': {
+        document.execCommand('cut');
+        break;
+      }
+      case 'edit-copy': {
+        document.execCommand('copy');
+        break;
+      }
+      case 'edit-paste': {
+        document.execCommand('paste');
+        break;
+      }
+      case 'edit-select-all': {
+        const view = getEditorView();
+        if (view) {
+          import('@codemirror/commands').then(({ selectAll }) => selectAll(view));
+        }
+        break;
+      }
+      case 'edit-find': {
+        const view = getEditorView();
+        if (view) {
+          import('@codemirror/search').then(({ openSearchPanel }) => openSearchPanel(view));
+        }
+        break;
+      }
       case 'insert-sample-object':
-        onChange('{\n  "name": "John Doe",\n  "age": 30,\n  "email": "john@example.com"\n}');
+        onChange('{\n  "name": "John Doe",\n  "age": 30,\n  "email": "john@example.com",\n  "isActive": true,\n  "address": {\n    "street": "123 Main St",\n    "city": "New York",\n    "country": "USA"\n  }\n}');
         break;
       case 'insert-sample-array':
-        onChange('[1, 2, 3, 4, 5]');
+        onChange('[\n  {\n    "id": 1,\n    "name": "Item 1"\n  },\n  {\n    "id": 2,\n    "name": "Item 2"\n  },\n  {\n    "id": 3,\n    "name": "Item 3"\n  }\n]');
         break;
       case 'insert-empty-object':
         onChange('{}');
         break;
       case 'insert-empty-array':
         onChange('[]');
+        break;
+      case 'view-word-wrap':
+      case 'view-line-numbers':
+      case 'view-fold-all':
+      case 'view-unfold-all':
+        // Visual options - would need CodeMirror extension config changes
+        break;
+      case 'help-keyboard-shortcuts':
+        alert('Keyboard Shortcuts:\n\nCtrl+Enter - Format & Validate\nCtrl+K - Clear\nCtrl+Z - Undo\nCtrl+Y - Redo\nCtrl+F - Find\nCtrl+A - Select All\nCtrl+X - Cut\nCtrl+C - Copy\nCtrl+V - Paste');
+        break;
+      case 'help-json-spec':
+        window.open('https://www.json.org/', '_blank');
+        break;
+      case 'help-about':
+        alert('JSON Formatter & Validator\n\nA powerful tool for formatting, validating, and working with JSON data.\n\nFeatures:\n? Format & beautify JSON\n? Validate JSON syntax\n? Minify JSON\n? Sort object keys\n? NDJSON support\n? Tree view\n? Syntax highlighting\n? Error detection');
         break;
     }
   };

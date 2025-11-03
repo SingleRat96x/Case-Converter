@@ -42,6 +42,7 @@ export function JsonOutputPanel({
   const { tool, common } = useToolTranslations('tools/code-data');
   const [copySuccess, setCopySuccess] = React.useState(false);
   const [downloadSuccess, setDownloadSuccess] = React.useState(false);
+  const editorRef = React.useRef<HTMLDivElement>(null);
 
   const handleCopy = () => {
     if (!value) return;
@@ -93,6 +94,12 @@ export function JsonOutputPanel({
   };
 
   const handleMenuAction = (actionId: string) => {
+    // Get CodeMirror editor view
+    const getEditorView = () => {
+      const cmEditor = editorRef.current?.querySelector('.cm-editor') as any;
+      return cmEditor?.view;
+    };
+
     switch (actionId) {
       case 'file-save-json':
       case 'file-save-ndjson':
@@ -104,11 +111,40 @@ export function JsonOutputPanel({
       case 'edit-copy':
         handleCopy();
         break;
+      case 'edit-select-all': {
+        const view = getEditorView();
+        if (view) {
+          import('@codemirror/commands').then(({ selectAll }) => selectAll(view));
+        }
+        break;
+      }
+      case 'edit-find': {
+        const view = getEditorView();
+        if (view) {
+          import('@codemirror/search').then(({ openSearchPanel }) => openSearchPanel(view));
+        }
+        break;
+      }
       case 'view-code':
         onViewModeChange('code');
         break;
       case 'view-tree':
         onViewModeChange('tree');
+        break;
+      case 'view-word-wrap':
+      case 'view-line-numbers':
+      case 'view-fold-all':
+      case 'view-unfold-all':
+        // Visual options - would need CodeMirror extension config changes
+        break;
+      case 'help-keyboard-shortcuts':
+        alert('Keyboard Shortcuts:\n\nCtrl+C - Copy\nCtrl+A - Select All\nCtrl+F - Find\nCtrl+P - Print\nCtrl+S - Save');
+        break;
+      case 'help-json-spec':
+        window.open('https://www.json.org/', '_blank');
+        break;
+      case 'help-about':
+        alert('JSON Formatter & Validator\n\nA powerful tool for formatting, validating, and working with JSON data.\n\nFeatures:\n• Format & beautify JSON\n• Validate JSON syntax\n• Minify JSON\n• Sort object keys\n• NDJSON support\n• Tree view\n• Syntax highlighting\n• Error detection');
         break;
     }
   };
@@ -215,7 +251,7 @@ export function JsonOutputPanel({
       </div>
 
       {/* CodeMirror Editor or Tree View */}
-      <div className="flex-1 relative">
+      <div ref={editorRef} className="flex-1 relative">
         {viewMode === 'code' ? (
           <JsonEditorPanel
             value={value}
