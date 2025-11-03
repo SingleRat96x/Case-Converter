@@ -315,6 +315,104 @@ export function minifyJSON(jsonString: string): FormatResult {
 }
 
 /**
+ * Find all JSON errors in the input
+ * Returns array of errors with their positions
+ */
+export function findAllJSONErrors(jsonString: string): ValidationError[] {
+  const errors: ValidationError[] = [];
+  
+  if (!jsonString || jsonString.trim() === '') {
+    return [{
+      message: 'Input is empty',
+      line: 1,
+      column: 1
+    }];
+  }
+
+  // First check if it's valid
+  const mainResult = parseJSONWithError(jsonString);
+  if (mainResult.valid) {
+    return [];
+  }
+
+  // Add the main parsing error
+  if (mainResult.error) {
+    errors.push(mainResult.error);
+  }
+
+  // Look for additional common errors using pattern matching
+  const lines = jsonString.split('\n');
+  
+  lines.forEach((line, lineIndex) => {
+    const lineNum = lineIndex + 1;
+    
+    // Find trailing commas before } or ]
+    const trailingCommaMatch = line.match(/,\s*([}\]])/);
+    if (trailingCommaMatch && trailingCommaMatch.index !== undefined) {
+      errors.push({
+        message: 'Trailing comma',
+        line: lineNum,
+        column: trailingCommaMatch.index + 1
+      });
+    }
+    
+    // Find missing commas between array/object elements
+    const missingCommaMatch = line.match(/["'\d\]}]\s+["'{[\d]/);
+    if (missingCommaMatch && missingCommaMatch.index !== undefined) {
+      errors.push({
+        message: 'Missing comma between elements',
+        line: lineNum,
+        column: missingCommaMatch.index + 1
+      });
+    }
+    
+    // Find unquoted keys (common mistake)
+    const unquotedKeyMatch = line.match(/\s+([a-zA-Z_$][a-zA-Z0-9_$]*)\s*:/);
+    if (unquotedKeyMatch && unquotedKeyMatch.index !== undefined) {
+      // Check if it's not already quoted
+      const before = line.substring(0, unquotedKeyMatch.index);
+      if (!before.endsWith('"') && !before.endsWith("'")) {
+        errors.push({
+          message: 'Unquoted key',
+          line: lineNum,
+          column: unquotedKeyMatch.index + 1
+        });
+      }
+    }
+    
+    // Find single quotes instead of double quotes
+    const singleQuoteMatch = line.match(/'([^']*)'/);
+    if (singleQuoteMatch && singleQuoteMatch.index !== undefined) {
+      errors.push({
+        message: 'Single quotes not allowed in JSON (use double quotes)',
+        line: lineNum,
+        column: singleQuoteMatch.index + 1
+      });
+    }
+    
+    // Find missing closing brackets/braces
+    const openCount = (line.match(/[{[]/g) || []).length;
+    const closeCount = (line.match(/[}\]]/g) || []).length;
+    if (openCount > closeCount && lineIndex === lines.length - 1) {
+      errors.push({
+        message: 'Missing closing bracket or brace',
+        line: lineNum,
+        column: line.length
+      });
+    }
+  });
+
+  // Remove duplicate errors at same position
+  const unique = errors.filter((error, index, self) =>
+    index === self.findIndex(e => 
+      e.line === error.line && e.column === error.column
+    )
+  );
+
+  return unique;
+}
+
+/**
  * Check if input is valid JSON
  */
 export function isValidJSON(jsonString: string): boolean {

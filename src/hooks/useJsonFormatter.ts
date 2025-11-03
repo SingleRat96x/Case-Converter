@@ -125,7 +125,8 @@ export function useJsonFormatter() {
             if (firstError && firstError.error) {
               setValidationError(firstError.error);
             }
-            setOutput('');
+            // Show input in output so user can see the error location
+            setOutput(input);
             setStats(null);
           }
         } else {
@@ -138,7 +139,8 @@ export function useJsonFormatter() {
             setStats(result.stats || null);
           } else if (result.error) {
             setValidationError(result.error);
-            setOutput('');
+            // Show input in output so user can see the error location
+            setOutput(input);
             setStats(null);
           }
         }
@@ -146,7 +148,8 @@ export function useJsonFormatter() {
         setValidationError({
           message: err instanceof Error ? err.message : 'Unknown error occurred'
         });
-        setOutput('');
+        // Show input in output so user can see the error location
+        setOutput(input);
         setStats(null);
       } finally {
         setIsProcessing(false);
@@ -177,14 +180,16 @@ export function useJsonFormatter() {
           setStats(result.stats || null);
         } else if (result.error) {
           setValidationError(result.error);
-          setOutput('');
+          // Show input in output so user can see the error location
+          setOutput(input);
           setStats(null);
         }
       } catch (err) {
         setValidationError({
           message: err instanceof Error ? err.message : 'Minification error'
         });
-        setOutput('');
+        // Show input in output so user can see the error location
+        setOutput(input);
         setStats(null);
       } finally {
         setIsProcessing(false);

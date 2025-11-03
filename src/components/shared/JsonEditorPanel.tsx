@@ -10,10 +10,13 @@
 import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
-import { EditorView } from '@codemirror/view';
+import { EditorView, Decoration, DecorationSet } from '@codemirror/view';
+import { StateField } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
+import { search, highlightSelectionMatches } from '@codemirror/search';
+import { history } from '@codemirror/commands';
 import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
-import { parseJSONWithError, type ValidationError } from '@/lib/jsonFormatterUtils';
+import { parseJSONWithError, findAllJSONErrors, type ValidationError } from '@/lib/jsonFormatterUtils';
 import { Upload, AlertCircle } from 'lucide-react';
 
 export interface JsonEditorPanelProps {
@@ -181,12 +184,76 @@ export function JsonEditorPanel({
   );
 
   /**
+   * Error highlighting decoration
+   */
+  const errorHighlightMark = Decoration.mark({
+    class: 'cm-error-highlight'
+  });
+
+  const errorHighlightField = useMemo(() => {
+    const mark = errorHighlightMark;
+    return StateField.define<DecorationSet>({
+      create() {
+        return Decoration.none;
+      },
+      update(decorations, tr) {
+        // Check if we have validation error and are in readOnly mode
+        if (readOnly && validationError) {
+          const doc = tr.state.doc;
+          const content = doc.toString();
+          
+          // Find all errors in the JSON
+          const allErrors = findAllJSONErrors(content);
+          
+          if (allErrors.length > 0) {
+            const marks: Array<{ from: number; to: number }> = [];
+            const lines = content.split('\n');
+            
+            // Create highlights for all errors
+            allErrors.forEach(error => {
+              if (error.line && error.column && error.line <= lines.length) {
+                let pos = 0;
+                // Calculate position up to the error line
+                for (let i = 0; i < error.line - 1; i++) {
+                  pos += lines[i].length + 1; // +1 for newline
+                }
+                // Add column offset
+                pos += error.column - 1;
+                
+                // Highlight 10 characters from error position or until end of line
+                const from = Math.max(0, pos);
+                const lineEnd = pos + (lines[error.line - 1].length - (error.column - 1));
+                const to = Math.min(doc.length, from + Math.min(10, lineEnd - pos));
+                
+                if (from < to) {
+                  marks.push({ from, to });
+                }
+              }
+            });
+            
+            // Sort marks by position and create decorations
+            marks.sort((a, b) => a.from - b.from);
+            const decorations = marks.map(m => mark.range(m.from, m.to));
+            
+            return Decoration.set(decorations);
+          }
+        }
+        return Decoration.none;
+      },
+      provide: f => EditorView.decorations.from(f)
+    });
+  }, [readOnly, validationError, errorHighlightMark]);
+
+  /**
    * CodeMirror extensions and theme
    */
   const extensions = useMemo(() => {
     const exts = [
       json(),
-      EditorView.lineWrapping
+      EditorView.lineWrapping,
+      search({ top: true }),
+      highlightSelectionMatches(),
+      history()
     ];
 
     // Add linter only if not readOnly
@@ -194,8 +261,13 @@ export function JsonEditorPanel({
       exts.push(jsonLinter);
     }
 
+    // Add error highlighting for readOnly mode with errors
+    if (readOnly && validationError) {
+      exts.push(errorHighlightField);
+    }
+
     return exts;
-  }, [readOnly, jsonLinter]);
+  }, [readOnly, jsonLinter, validationError, errorHighlightField]);
 
   // Select theme based on dark mode
   const theme = useMemo(() => {
@@ -204,6 +276,17 @@ export function JsonEditorPanel({
 
   return (
     <div className={`space-y-2 ${className}`}>
+      <style jsx global>{`
+        .cm-error-highlight {
+          background-color: rgba(239, 68, 68, 0.2);
+          border-bottom: 2px solid rgb(239, 68, 68);
+          border-radius: 2px;
+        }
+        .dark .cm-error-highlight {
+          background-color: rgba(248, 113, 113, 0.2);
+          border-bottom: 2px solid rgb(248, 113, 113);
+        }
+      `}</style>
       {/* Label and File Upload */}
       {(label || showFileUpload) && (
         <div className="flex items-center justify-between">
