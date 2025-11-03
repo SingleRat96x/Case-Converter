@@ -1,6 +1,6 @@
 'use client';
 
-import React, { useState, useCallback, useEffect, useMemo, useRef } from 'react';
+import React, { useState, useCallback, useEffect, useMemo } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
 import { EditorView, lineNumbers } from '@codemirror/view';
@@ -9,6 +9,7 @@ import { useToolTranslations } from '@/lib/i18n/hooks';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
 import { FileText, FileJson, Upload, Trash2 } from 'lucide-react';
+import { InteractiveSlider } from '@/components/shared/InteractiveSlider';
 import {
   calculateReadingTime,
   extractWordCountFromText,
@@ -266,26 +267,70 @@ export function ReadingTimeEstimator() {
         </div>
       )}
 
-      {/* Reading Speed Controls - Clean, no duplication */}
+      {/* Reading Speed Controls with InteractiveSlider */}
       <div className="space-y-6 bg-muted/30 rounded-lg p-6 border">
-        {/* Silent Reading Speed Slider */}
-        <CustomSlider
-          value={silentSpeed}
-          onChange={setSilentSpeed}
-          speeds={SILENT_SPEEDS}
-          title="Silent Reading Speed"
-        />
+        <div className="space-y-4">
+          {/* Silent Reading Speed Slider */}
+          <InteractiveSlider
+            value={silentSpeed}
+            min={SILENT_SPEEDS[0].wpm}
+            max={SILENT_SPEEDS[SILENT_SPEEDS.length - 1].wpm}
+            step={1}
+            label="Silent Reading Speed"
+            unit="WPM"
+            onChange={setSilentSpeed}
+          />
+          
+          {/* Preset buttons positioned under slider */}
+          <div className="flex justify-between items-center px-1">
+            {SILENT_SPEEDS.map((speed) => (
+              <button
+                key={speed.wpm}
+                onClick={() => setSilentSpeed(speed.wpm)}
+                className={`text-xs px-2 py-1 rounded transition-all ${
+                  silentSpeed === speed.wpm
+                    ? 'text-primary font-bold bg-primary/10'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                }`}
+              >
+                {speed.label}
+              </button>
+            ))}
+          </div>
+        </div>
 
         {/* Divider */}
         <div className="border-t" />
 
-        {/* Read Aloud Speed Slider */}
-        <CustomSlider
-          value={aloudSpeed}
-          onChange={setAloudSpeed}
-          speeds={ALOUD_SPEEDS}
-          title="Read Aloud Speed"
-        />
+        <div className="space-y-4">
+          {/* Read Aloud Speed Slider */}
+          <InteractiveSlider
+            value={aloudSpeed}
+            min={ALOUD_SPEEDS[0].wpm}
+            max={ALOUD_SPEEDS[ALOUD_SPEEDS.length - 1].wpm}
+            step={1}
+            label="Read Aloud Speed"
+            unit="WPM"
+            onChange={setAloudSpeed}
+          />
+          
+          {/* Preset buttons positioned under slider */}
+          <div className="flex justify-between items-center px-1">
+            {ALOUD_SPEEDS.map((speed) => (
+              <button
+                key={speed.wpm}
+                onClick={() => setAloudSpeed(speed.wpm)}
+                className={`text-xs px-2 py-1 rounded transition-all ${
+                  aloudSpeed === speed.wpm
+                    ? 'text-primary font-bold bg-primary/10'
+                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                }`}
+              >
+                {speed.label}
+              </button>
+            ))}
+          </div>
+        </div>
       </div>
 
       {/* Single Analytics Display */}
@@ -304,150 +349,6 @@ export function ReadingTimeEstimator() {
         enableAds={true}
         adDensity="medium"
       />
-    </div>
-  );
-}
-
-// Custom slider component with proper preset positioning
-function CustomSlider({ 
-  value, 
-  onChange, 
-  speeds, 
-  title 
-}: { 
-  value: number; 
-  onChange: (v: number) => void; 
-  speeds: typeof SILENT_SPEEDS;
-  title: string;
-}) {
-  const [isDragging, setIsDragging] = useState(false);
-  const sliderRef = useRef<HTMLDivElement>(null);
-  
-  const min = speeds[0].wpm;
-  const max = speeds[speeds.length - 1].wpm;
-  const percentage = ((value - min) / (max - min)) * 100;
-
-  const handleSliderInteraction = useCallback((clientX: number) => {
-    const rect = sliderRef.current?.getBoundingClientRect();
-    if (!rect) return;
-    
-    const position = (clientX - rect.left) / rect.width;
-    const clampedPosition = Math.max(0, Math.min(1, position));
-    const rawValue = min + clampedPosition * (max - min);
-    
-    // Snap to nearest preset
-    let closestSpeed = speeds[0].wpm;
-    let minDiff = Math.abs(rawValue - closestSpeed);
-    
-    speeds.forEach(speed => {
-      const diff = Math.abs(rawValue - speed.wpm);
-      if (diff < minDiff) {
-        minDiff = diff;
-        closestSpeed = speed.wpm;
-      }
-    });
-    
-    if (closestSpeed !== value) {
-      onChange(closestSpeed);
-    }
-  }, [min, max, speeds, value, onChange]);
-
-  const handleMouseDown = useCallback((e: React.MouseEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragging(true);
-    handleSliderInteraction(e.clientX);
-  }, [handleSliderInteraction]);
-
-  const handleMouseMove = useCallback((e: MouseEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    handleSliderInteraction(e.clientX);
-  }, [isDragging, handleSliderInteraction]);
-
-  const handleMouseUp = useCallback(() => {
-    setIsDragging(false);
-  }, []);
-
-  const handleTouchStart = useCallback((e: React.TouchEvent<HTMLDivElement>) => {
-    e.preventDefault();
-    setIsDragging(true);
-    if (e.touches[0]) {
-      handleSliderInteraction(e.touches[0].clientX);
-    }
-  }, [handleSliderInteraction]);
-
-  const handleTouchMove = useCallback((e: TouchEvent) => {
-    if (!isDragging) return;
-    e.preventDefault();
-    if (e.touches[0]) {
-      handleSliderInteraction(e.touches[0].clientX);
-    }
-  }, [isDragging, handleSliderInteraction]);
-
-  const handleTouchEnd = useCallback(() => {
-    setIsDragging(false);
-  }, []);
-
-  useEffect(() => {
-    if (isDragging) {
-      document.addEventListener('mousemove', handleMouseMove);
-      document.addEventListener('mouseup', handleMouseUp);
-      document.addEventListener('touchmove', handleTouchMove, { passive: false });
-      document.addEventListener('touchend', handleTouchEnd);
-      return () => {
-        document.removeEventListener('mousemove', handleMouseMove);
-        document.removeEventListener('mouseup', handleMouseUp);
-        document.removeEventListener('touchmove', handleTouchMove);
-        document.removeEventListener('touchend', handleTouchEnd);
-      };
-    }
-  }, [isDragging, handleMouseMove, handleMouseUp, handleTouchMove, handleTouchEnd]);
-
-  return (
-    <div className="space-y-3">
-      {/* Title with bold WPM - no icon, no duplication */}
-      <div className="text-sm text-muted-foreground">
-        {title}: <span className="text-base font-bold text-foreground">{value} WPM</span>
-      </div>
-
-      {/* Slider Track - smooth and responsive */}
-      <div
-        ref={sliderRef}
-        className="h-3 bg-muted rounded-full cursor-pointer relative select-none transition-all"
-        onMouseDown={handleMouseDown}
-        onTouchStart={handleTouchStart}
-      >
-        {/* Progress Fill */}
-        <div
-          className="h-full bg-primary rounded-full transition-all duration-200 ease-out"
-          style={{ width: `${percentage}%` }}
-        />
-        
-        {/* Thumb */}
-        <div
-          className={`absolute top-1/2 -translate-y-1/2 w-5 h-5 bg-background border-2 border-primary rounded-full shadow-md cursor-grab transition-all duration-150 ${
-            isDragging ? 'scale-125 shadow-lg ring-4 ring-primary/20' : 'hover:scale-110'
-          }`}
-          style={{ left: `calc(${percentage}% - 10px)` }}
-        />
-      </div>
-
-      {/* Preset buttons - properly positioned under slider track */}
-      <div className="flex justify-between items-center">
-        {speeds.map((speed) => (
-          <button
-            key={speed.wpm}
-            onClick={() => onChange(speed.wpm)}
-            className={`text-xs px-2 py-1 rounded transition-all ${
-              value === speed.wpm
-                ? 'text-primary font-bold bg-primary/10'
-                : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-            }`}
-          >
-            {speed.label}
-          </button>
-        ))}
-      </div>
     </div>
   );
 }

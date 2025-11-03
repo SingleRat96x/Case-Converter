@@ -12,6 +12,7 @@ interface InteractiveSliderProps {
   label: string;
   onChange: (value: number) => void;
   className?: string;
+  unit?: string;
 }
 
 export function InteractiveSlider({
@@ -21,7 +22,8 @@ export function InteractiveSlider({
   step = 1,
   label,
   onChange,
-  className = ''
+  className = '',
+  unit = ''
 }: InteractiveSliderProps) {
   const [isDragging, setIsDragging] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -148,7 +150,7 @@ export function InteractiveSlider({
       <div className="hidden sm:flex sm:items-center sm:justify-between sm:gap-4">
         {/* Label */}
         <span className="text-sm text-muted-foreground flex-shrink-0">
-          {label.replace(/:\s*\d+$/, '')}: <span className="text-lg font-bold text-foreground">{value}</span>
+          {label.replace(/:\s*\d+.*$/, '')}: <span className="text-lg font-bold text-foreground">{value}{unit ? ` ${unit}` : ''}</span>
         </span>
 
         {/* Controls */}
@@ -216,7 +218,7 @@ export function InteractiveSlider({
         {/* Centered Label with emphasized number */}
         <div className="text-center">
           <span className="text-sm text-muted-foreground">
-            {label.replace(/:\s*\d+$/, '')}: <span className="text-lg font-bold text-foreground">{value}</span>
+            {label.replace(/:\s*\d+.*$/, '')}: <span className="text-lg font-bold text-foreground">{value}{unit ? ` ${unit}` : ''}</span>
           </span>
         </div>
 
