@@ -195,10 +195,6 @@ export function JsonInputPanel({
   const chars = value.length;
   const words = value ? value.trim().split(/\s+/).filter(Boolean).length : 0;
 
-  const formatButtonText = isProcessing 
-    ? tool('jsonFormatter.processing') || 'Processing...' 
-    : tool('jsonFormatter.formatButton') || 'Format';
-
   return (
     <div className={`flex flex-col border border-border rounded-lg bg-background overflow-hidden ${className}`}>
       {/* Menu Bar */}
@@ -218,18 +214,18 @@ export function JsonInputPanel({
           }}
           disabled={!value || isProcessing}
           size="sm"
-          className="gap-1.5 h-8"
+          className="gap-1.5 h-8 min-w-[140px]"
           title="Format and validate JSON (Ctrl+Enter)"
         >
           {isProcessing ? (
             <>
               <Loader2 className="h-3 w-3 animate-spin" />
-              <span className="text-xs">{formatButtonText}</span>
+              <span className="text-xs">Processing...</span>
             </>
           ) : (
             <>
               <Sparkles className="h-3 w-3" />
-              <span className="text-xs">{formatButtonText}</span>
+              <span className="text-xs">Format & Validate</span>
             </>
           )}
         </Button>
