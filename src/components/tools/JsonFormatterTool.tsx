@@ -117,7 +117,7 @@ export function JsonFormatterTool() {
         size: new Blob([state.input]).size
       };
 
-      const traverse = (obj: any) => {
+      const traverse = (obj: unknown): void => {
         if (obj === null || typeof obj !== 'object') {
           stats.primitives++;
           return;

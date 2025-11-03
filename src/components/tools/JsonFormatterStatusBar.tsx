@@ -2,7 +2,6 @@
 
 import React from 'react';
 import { FileJson, Hash, Layers, Key, HardDrive, Settings2 } from 'lucide-react';
-import { useToolTranslations } from '@/lib/i18n/hooks';
 
 interface JsonStats {
   objects: number;
@@ -31,8 +30,6 @@ export function JsonFormatterStatusBar({
   unescapeStrings,
   className = ''
 }: JsonFormatterStatusBarProps) {
-  const { tool } = useToolTranslations('tools/code-data');
-  
   const StatusItem = ({ 
     icon, 
     label, 
