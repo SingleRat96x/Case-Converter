@@ -3,7 +3,7 @@
 import React, { useEffect, useRef } from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
 import { 
-  Upload, AlertCircle, Sparkles, Minimize2, Trash2, Loader2
+  Upload, AlertCircle, Sparkles, Minimize2, Trash2, Loader2, CheckCircle
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -59,6 +59,7 @@ export function JsonInputPanel({
   const { tool } = useToolTranslations('tools/code-data');
   const fileInputRef = useRef<HTMLInputElement>(null);
   const [customIndent, setCustomIndent] = React.useState('');
+  const [formatSuccess, setFormatSuccess] = React.useState(false);
   const isInitialMount = useRef(true);
 
   /**
@@ -140,20 +141,31 @@ export function JsonInputPanel({
         <Button
           onClick={() => {
             onFormat();
-            // Scroll to output on mobile after a short delay
+            // Show success state if no validation error
             setTimeout(() => {
+              if (!validationError) {
+                setFormatSuccess(true);
+                setTimeout(() => setFormatSuccess(false), 2000);
+              }
               onFormatComplete?.();
             }, 100);
           }}
           disabled={!value || isProcessing}
           size="sm"
-          className="gap-1.5 h-8 min-w-[140px]"
+          className={`gap-1.5 h-8 min-w-[140px] transition-all duration-300 ${
+            formatSuccess ? 'bg-green-600 hover:bg-green-600 dark:bg-green-600' : ''
+          }`}
           title="Format and validate JSON (Ctrl+Enter)"
         >
           {isProcessing ? (
             <>
               <Loader2 className="h-3 w-3 animate-spin" />
               <span className="text-xs">Processing...</span>
+            </>
+          ) : formatSuccess ? (
+            <>
+              <CheckCircle className="h-3 w-3" />
+              <span className="text-xs">Formatted!</span>
             </>
           ) : (
             <>

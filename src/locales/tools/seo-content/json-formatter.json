@@ -5,34 +5,34 @@
     "sections": {
       "intro": {
         "title": "Online JSON Formatter & Validator",
-        "content": "Format, validate, and explore JSON in seconds. Paste raw JSON—or drop a .json or .txt file—and we'll pretty-print it with syntax highlighting. Toggle indent size, collapse levels, minify for production, or unescape strings for readability. Everything happens locally in your browser."
+        "content": "Professional dual-panel JSON editor with instant formatting, validation, and error highlighting. Paste JSON or upload files up to 10MB—see formatted output with syntax highlighting in real-time. Auto-format on option change, highlight multiple errors visually, toggle between code and tree view. All processing happens locally in your browser."
       },
       "features": {
         "title": "Professional JSON Formatting Features",
         "items": [
           {
-            "title": "Real-Time Validation",
-            "description": "Instant JSON validation with precise line and column error reporting as you type."
+            "title": "Dual-Panel Editor",
+            "description": "Separate input and output panels with dedicated toolbars, status bars, and formatting controls for professional workflow."
           },
           {
-            "title": "Syntax Highlighting",
-            "description": "Color-coded JSON syntax highlighting for keys, values, strings, numbers, and brackets."
+            "title": "Visual Error Highlighting",
+            "description": "Multiple errors highlighted with red background directly in code, plus error banner with exact line and column numbers."
           },
           {
-            "title": "Tree View Mode",
-            "description": "Switch to collapsible tree view to explore nested structures with expandable/collapsible nodes."
+            "title": "Auto-Format on Change",
+            "description": "Automatically reformats JSON when you change indent size, toggle sort keys, or modify any formatting option—no button click needed."
           },
           {
-            "title": "Multiple Indent Options",
-            "description": "Format with 2, 4, or 8 spaces, or set custom indent size from 1-16 spaces."
+            "title": "Success State Animation",
+            "description": "Format button smoothly transitions to green 'Formatted!' state on success, providing instant visual feedback."
           },
           {
-            "title": "Sort Keys Alphabetically",
-            "description": "Recursively sort all object keys in alphabetical order for consistent formatting."
+            "title": "Code & Tree View Modes",
+            "description": "Toggle between syntax-highlighted code editor and collapsible tree view to explore nested JSON structures."
           },
           {
-            "title": "NDJSON Support",
-            "description": "Validate and format newline-delimited JSON (NDJSON) with line-by-line processing."
+            "title": "NDJSON & Batch Processing",
+            "description": "Validate and format newline-delimited JSON (NDJSON) with line-by-line processing and error detection."
           }
         ]
       },
@@ -67,17 +67,17 @@
           {
             "step": 3,
             "title": "Format & Validate",
-            "description": "Click 'Format & Validate' or press Ctrl/Cmd+Enter. View syntax errors with exact line and column numbers."
+            "description": "Click 'Format & Validate' or press Ctrl/Cmd+Enter. Button shows green 'Formatted!' success state. Multiple errors highlighted in red with banner display."
           },
           {
             "step": 4,
-            "title": "Explore with Tree View",
-            "description": "Toggle to tree view mode to collapse/expand nested objects and arrays for easier navigation."
+            "title": "Auto-Format on Options Change",
+            "description": "Change indent size, toggle sort keys, or modify any option—JSON auto-formats instantly without re-clicking the format button."
           },
           {
             "step": 5,
-            "title": "Copy or Download",
-            "description": "Copy formatted JSON to clipboard or download as .json file. Use Minify button for compact output."
+            "title": "Explore & Export",
+            "description": "Switch to tree view for collapsible structure, copy to clipboard, download as .json, or minify for production use."
           }
         ]
       },
@@ -121,20 +121,23 @@
         "title": "Why Use Our JSON Formatter",
         "content": "Professional-grade JSON formatting with real-time validation, syntax highlighting, and advanced features for developers.",
         "items": [
+          "Dual-panel design with separate input and output editors",
+          "Visual error highlighting with red background on all errors",
+          "Error banner below toolbar showing precise line and column numbers",
+          "Auto-format on option change (no re-clicking needed)",
+          "Success animation - button turns green showing 'Formatted!'",
+          "Multiple error detection and highlighting in single pass",
+          "Code editor and tree view toggle for different perspectives",
+          "Dedicated toolbars for input (format, minify, clear) and output (copy, download, print)",
+          "Status bars showing lines, characters, words, objects, arrays, keys",
           "Completely free with no limits or registration required",
-          "Real-time validation with precise line and column error reporting",
-          "Syntax highlighting for easy visual parsing",
-          "Tree view mode for exploring complex nested structures",
-          "Multiple indent options (2, 4, 8 spaces, or custom)",
-          "Sort keys alphabetically for consistent formatting",
+          "Real-time syntax highlighting powered by CodeMirror",
+          "Sort keys alphabetically with auto-refresh",
           "NDJSON support for log files and streaming data",
-          "Unescape strings to view actual characters",
-          "Minify JSON for production use",
           "Handle large files up to 10MB efficiently",
-          "File upload via drag & drop or file picker",
-          "Privacy-first - all processing in browser",
-          "Keyboard shortcuts for fast workflow (Ctrl/Cmd+Enter)",
-          "Download formatted output as .json file"
+          "Privacy-first - all processing in browser locally",
+          "Keyboard shortcuts (Ctrl+Enter format, Ctrl+K clear, Ctrl+F search)",
+          "Theme-aware design (light/dark mode support)"
         ]
       },
       "faqs": [
@@ -144,7 +147,7 @@
         },
         {
           "question": "How does the validator work?",
-          "answer": "Our validator uses JavaScript's native JSON parser to detect syntax errors. When invalid JSON is found, we extract the exact line and column number from the error message and highlight it in the editor, making it easy to locate and fix the problem."
+          "answer": "Our validator detects ALL syntax errors in your JSON, not just the first one. Errors are highlighted with red background directly in the code, and an error banner appears below the toolbar showing the error message with exact line and column numbers. This makes it easy to spot and fix multiple issues at once."
         },
         {
           "question": "What is NDJSON mode?",
@@ -180,7 +183,15 @@
         },
         {
           "question": "What keyboard shortcuts are available?",
-          "answer": "Press Ctrl+Enter (or Cmd+Enter on Mac) to quickly format JSON. The editor also supports standard shortcuts like Ctrl+F for search, Ctrl+A to select all, and Ctrl+Z for undo."
+          "answer": "Press Ctrl+Enter (Cmd+Enter on Mac) to format JSON—button shows green 'Formatted!' on success. Ctrl+K clears input. Editor supports Ctrl+F for search, Ctrl+A to select all, Ctrl+Z for undo. Auto-format triggers when you change any formatting option."
+        },
+        {
+          "question": "What happens when I click Format & Validate?",
+          "answer": "The button shows 'Processing...' with spinner, then validates your JSON. If valid, it formats the output and the button smoothly transitions to green showing 'Formatted!' for 2 seconds before returning to normal. If invalid, errors are highlighted in red with a banner showing exact locations."
+        },
+        {
+          "question": "Why do errors appear in multiple places?",
+          "answer": "For maximum visibility, validation errors are shown in three ways: (1) Red background highlighting directly on error locations in code, (2) Error banner below toolbar with detailed message and line/column numbers, (3) Multiple errors highlighted simultaneously so you can see all issues at once."
         }
       ],
       "relatedTools": {
@@ -216,7 +227,7 @@
     "sections": {
       "intro": {
         "title": "Онлайн JSON Форматировщик и Валидатор",
-        "content": "Форматируйте, валидируйте и исследуйте JSON за секунды. Вставьте сырой JSON—или перетащите файл .json или .txt—и мы его красиво отформатируем с подсветкой синтаксиса. Настройте размер отступа, сворачивайте уровни, минифицируйте для продакшена или разэкранируйте строки для читаемости. Всё происходит локально в вашем браузере."
+        "content": "Профессиональный двухпанельный JSON редактор с мгновенным форматированием, валидацией и подсветкой ошибок. Вставьте JSON или загрузите файлы до 10МБ—увидьте отформатированный вывод с подсветкой синтаксиса в реальном времени. Авто-форматирование при изменении опций, визуальная подсветка множественных ошибок, переключение между кодом и древом. Вся обработка локально в вашем браузере."
       },
       "features": {
         "title": "Профессиональные Возможности Форматирования JSON",
