@@ -22,6 +22,20 @@ import { useToolTranslations } from '@/lib/i18n/hooks';
 export function JsonFormatterTool() {
   const { tool } = useToolTranslations('tools/code-data');
   const { state, actions } = useJsonFormatter();
+  const outputPanelRef = React.useRef<HTMLDivElement>(null);
+
+  /**
+   * Scroll to output on mobile
+   */
+  const handleFormatComplete = useCallback(() => {
+    if (outputPanelRef.current && window.innerWidth < 1024) {
+      outputPanelRef.current.scrollIntoView({ 
+        behavior: 'smooth', 
+        block: 'start',
+        inline: 'nearest'
+      });
+    }
+  }, []);
 
   /**
    * Keyboard shortcuts
@@ -32,6 +46,8 @@ export function JsonFormatterTool() {
       if ((e.ctrlKey || e.metaKey) && e.key === 'Enter' && state.input && !state.isProcessing) {
         e.preventDefault();
         actions.format();
+        // Scroll to output on mobile
+        setTimeout(handleFormatComplete, 100);
       }
       // Ctrl/Cmd + K to clear
       if ((e.ctrlKey || e.metaKey) && e.key === 'k' && (state.input || state.output)) {
@@ -42,7 +58,7 @@ export function JsonFormatterTool() {
 
     window.addEventListener('keydown', handleKeyDown);
     return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [state.input, state.output, state.isProcessing, actions]);
+  }, [state.input, state.output, state.isProcessing, actions, handleFormatComplete]);
 
 
   /**
@@ -116,18 +132,22 @@ export function JsonFormatterTool() {
           onUnescapeStringsChange={actions.setUnescapeStrings}
           ndjsonMode={state.ndjsonMode}
           onNdjsonModeChange={actions.setNdjsonMode}
+          onFormatComplete={handleFormatComplete}
           height="500px"
         />
 
         {/* Output Panel */}
-        <JsonOutputPanel
-          value={state.output}
-          stats={state.stats}
-          viewMode={state.viewMode}
-          onViewModeChange={actions.setViewMode}
-          ndjsonMode={state.ndjsonMode}
-          height="500px"
-        />
+        <div ref={outputPanelRef}>
+          <JsonOutputPanel
+            value={state.output}
+            stats={state.stats}
+            viewMode={state.viewMode}
+            onViewModeChange={actions.setViewMode}
+            ndjsonMode={state.ndjsonMode}
+            validationError={state.validationError}
+            height="500px"
+          />
+        </div>
       </div>
 
       {/* Global Status Bar */}

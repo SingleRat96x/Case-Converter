@@ -8,6 +8,7 @@ import { Copy, Download, Code2, TreePine, FileJson, Check, Printer, ZoomIn, Zoom
 import { Button } from '@/components/ui/button';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { downloadTextAsFile } from '@/lib/utils';
+import type { ValidationError } from '@/lib/jsonFormatterUtils';
 
 interface JsonStats {
   objects: number;
@@ -23,6 +24,7 @@ interface JsonOutputPanelProps {
   viewMode: 'code' | 'tree';
   onViewModeChange: (mode: 'code' | 'tree') => void;
   ndjsonMode: boolean;
+  validationError?: ValidationError | null;
   height?: string;
   className?: string;
 }
@@ -33,6 +35,7 @@ export function JsonOutputPanel({
   viewMode,
   onViewModeChange,
   ndjsonMode,
+  validationError,
   height = '500px',
   className = ''
 }: JsonOutputPanelProps) {
@@ -218,6 +221,7 @@ export function JsonOutputPanel({
             value={value}
             readOnly={true}
             placeholder={tool('jsonFormatter.outputPlaceholder') || 'Formatted JSON will appear here...'}
+            validationError={validationError}
             height={height}
           />
         ) : (

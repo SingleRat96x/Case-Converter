@@ -32,6 +32,7 @@ interface JsonInputPanelProps {
   onUnescapeStringsChange: (value: boolean) => void;
   ndjsonMode: boolean;
   onNdjsonModeChange: (value: boolean) => void;
+  onFormatComplete?: () => void;
   height?: string;
   className?: string;
 }
@@ -53,6 +54,7 @@ export function JsonInputPanel({
   onUnescapeStringsChange,
   ndjsonMode,
   onNdjsonModeChange,
+  onFormatComplete,
   height = '500px',
   className = ''
 }: JsonInputPanelProps) {
@@ -156,7 +158,13 @@ export function JsonInputPanel({
         <div className="flex items-center gap-2 min-w-max">
         {/* Primary Actions */}
         <Button
-          onClick={onFormat}
+          onClick={() => {
+            onFormat();
+            // Scroll to output on mobile after a short delay
+            setTimeout(() => {
+              onFormatComplete?.();
+            }, 100);
+          }}
           disabled={!value || isProcessing}
           size="sm"
           className="gap-1.5 h-8"
