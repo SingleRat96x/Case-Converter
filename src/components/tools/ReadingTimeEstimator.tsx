@@ -10,23 +10,35 @@ import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Accordion, AccordionItem } from '@/components/ui/accordion';
-import { FileText, FileJson, Settings, Upload, Trash2, Download, Copy } from 'lucide-react';
+import { InteractiveSlider } from '@/components/shared/InteractiveSlider';
+import { FileText, FileJson, Upload, Trash2, Download, Copy, BookOpen, Clock } from 'lucide-react';
 import {
   calculateReadingTime,
   extractWordCountFromText,
   extractWordCountFromJSON,
   parseJSONKeys,
   validateJSON,
-  READING_SPEED_PRESETS,
-  DEFAULT_WPM,
   type ReadingTimeResult,
 } from '@/lib/readingTimeUtils';
 import { copyToClipboard, downloadTextAsFile } from '@/lib/utils';
 import { ReadingTimeAnalytics } from './ReadingTimeAnalytics';
 import { ToolHeaderAd } from '@/components/ads/AdPlacements';
+import { SEOContent } from '@/components/seo/SEOContent';
 
 type InputMode = 'text' | 'json';
+
+// Speed presets for sliders
+const SILENT_SPEEDS = {
+  slow: 150,
+  average: 200,
+  fast: 250
+};
+
+const ALOUD_SPEEDS = {
+  slow: 100,
+  average: 120,
+  fast: 150
+};
 
 export function ReadingTimeEstimator() {
   const { common, tool } = useToolTranslations('tools/misc-tools');
@@ -37,13 +49,13 @@ export function ReadingTimeEstimator() {
   const [jsonKeys, setJsonKeys] = useState('');
   const [isDark, setIsDark] = useState(false);
   
-  // Options state
-  const [speedPreset, setSpeedPreset] = useState('average');
-  const [customWpm, setCustomWpm] = useState('200');
-  const [isAccordionOpen, setIsAccordionOpen] = useState(true);
+  // Speed state - both sliders independently adjustable
+  const [silentSpeed, setSilentSpeed] = useState(SILENT_SPEEDS.average);
+  const [aloudSpeed, setAloudSpeed] = useState(ALOUD_SPEEDS.average);
   
   // Results state
-  const [results, setResults] = useState<ReadingTimeResult | null>(null);
+  const [silentResults, setSilentResults] = useState<ReadingTimeResult | null>(null);
+  const [aloudResults, setAloudResults] = useState<ReadingTimeResult | null>(null);
   const [jsonError, setJsonError] = useState<string | null>(null);
 
   const fileInputRef = React.useRef<HTMLInputElement>(null);
@@ -64,23 +76,14 @@ export function ReadingTimeEstimator() {
     return () => observer.disconnect();
   }, []);
 
-  // Get current WPM value
-  const currentWpm = useMemo(() => {
-    if (speedPreset === 'custom') {
-      const parsed = parseInt(customWpm);
-      return isNaN(parsed) || parsed <= 0 ? DEFAULT_WPM : parsed;
-    }
-    const preset = READING_SPEED_PRESETS.find(p => p.id === speedPreset);
-    return preset?.wpm || DEFAULT_WPM;
-  }, [speedPreset, customWpm]);
-
-  // Calculate reading time
+  // Calculate reading time for both speeds
   const calculateResults = useCallback((textInput: string, mode: InputMode) => {
     let wordCount = 0;
     setJsonError(null);
 
     if (!textInput || textInput.trim().length === 0) {
-      setResults(null);
+      setSilentResults(null);
+      setAloudResults(null);
       return;
     }
 
@@ -92,7 +95,8 @@ export function ReadingTimeEstimator() {
       const validation = validateJSON(textInput);
       if (!validation.valid) {
         setJsonError(validation.error || 'Invalid JSON');
-        setResults(null);
+        setSilentResults(null);
+        setAloudResults(null);
         return;
       }
 
@@ -103,7 +107,8 @@ export function ReadingTimeEstimator() {
       if (result.error) {
         setJsonError(result.error);
         if (result.wordCount === 0) {
-          setResults(null);
+          setSilentResults(null);
+          setAloudResults(null);
           return;
         }
       }
@@ -112,36 +117,30 @@ export function ReadingTimeEstimator() {
     }
 
     if (wordCount === 0) {
-      setResults(null);
+      setSilentResults(null);
+      setAloudResults(null);
       return;
     }
 
-    // Calculate and set results
-    const timeResult = calculateReadingTime(wordCount, currentWpm);
-    setResults(timeResult);
-  }, [jsonKeys, currentWpm]);
+    // Calculate results for both speeds
+    const silentResult = calculateReadingTime(wordCount, silentSpeed);
+    const aloudResult = calculateReadingTime(wordCount, aloudSpeed);
+    
+    setSilentResults(silentResult);
+    setAloudResults(aloudResult);
+  }, [jsonKeys, silentSpeed, aloudSpeed]);
 
   // Auto-calculate when inputs change
   useEffect(() => {
     calculateResults(text, inputMode);
-  }, [text, inputMode, jsonKeys, currentWpm, calculateResults]);
+  }, [text, inputMode, jsonKeys, silentSpeed, aloudSpeed, calculateResults]);
 
   // Handle input mode change
   const handleInputModeChange = (mode: string) => {
     setInputMode(mode as InputMode);
-    setResults(null);
+    setSilentResults(null);
+    setAloudResults(null);
     setJsonError(null);
-  };
-
-  // Handle speed preset change
-  const handleSpeedPresetChange = (preset: string) => {
-    setSpeedPreset(preset);
-    if (preset !== 'custom') {
-      const presetData = READING_SPEED_PRESETS.find(p => p.id === preset);
-      if (presetData) {
-        setCustomWpm(presetData.wpm.toString());
-      }
-    }
   };
 
   const handleFileUpload = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -159,7 +158,8 @@ export function ReadingTimeEstimator() {
 
   const handleClear = () => {
     setText('');
-    setResults(null);
+    setSilentResults(null);
+    setAloudResults(null);
     setJsonError(null);
   };
 
@@ -173,25 +173,14 @@ export function ReadingTimeEstimator() {
     await copyToClipboard(text);
   };
 
-  // Responsive accordion behavior
-  useEffect(() => {
-    const handleResize = () => {
-      setIsAccordionOpen(window.innerWidth >= 640);
-    };
-    
-    handleResize();
-    window.addEventListener('resize', handleResize);
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
       {/* Header */}
       <div className="text-center space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">
           {tool('readingTimeEstimator.title') || 'Reading Time Estimator'}
         </h1>
-        <p className="text-muted-foreground">
+        <p className="text-muted-foreground max-w-2xl mx-auto">
           {tool('readingTimeEstimator.description') || 'Free read time calculator for text, word count, and JSON payloads.'}
         </p>
       </div>
@@ -213,7 +202,7 @@ export function ReadingTimeEstimator() {
 
         <TabsContent value="text" className="space-y-2 mt-4">
           <p className="text-sm text-muted-foreground text-center">
-            {tool('readingTimeEstimator.helperText') || 'Paste your text and get an instant reading time estimate.'}
+            Paste your article, blog post, or any text to analyze reading time
           </p>
         </TabsContent>
 
@@ -240,9 +229,9 @@ export function ReadingTimeEstimator() {
       </Tabs>
 
       {/* CodeMirror Editor with line numbers */}
-      <div className="space-y-2">
+      <div className="space-y-3">
         <div className="flex items-center justify-between">
-          <label className="text-sm font-medium text-foreground">
+          <label className="text-sm font-semibold text-foreground">
             {inputMode === 'json' ? 'JSON Data' : 'Text Input'}
           </label>
           <div className="flex items-center gap-2">
@@ -326,76 +315,120 @@ export function ReadingTimeEstimator() {
         </div>
       )}
 
-      {/* Reading Speed Options */}
-      <Accordion className="w-full">
-        <AccordionItem
-          title={tool('readingTimeEstimator.speedLabel') || 'Reading speed (words per minute)'}
-          defaultOpen={isAccordionOpen}
-          className="w-full"
-        >
-          <div className="space-y-4">
-            <div className="flex items-center gap-2 pb-2 border-b border-border/50">
-              <Settings className="h-4 w-4 text-primary" />
-              <h3 className="text-base font-semibold text-foreground">
-                {tool('readingTimeEstimator.speedLabel') || 'Reading Speed'}
-              </h3>
-            </div>
+      {/* Reading Speed Controls */}
+      <div className="space-y-6 bg-muted/30 rounded-lg p-6 border">
+        <div className="flex items-center gap-2 pb-2 border-b">
+          <Clock className="h-5 w-5 text-primary" />
+          <h2 className="text-lg font-semibold">Reading Speed Settings</h2>
+        </div>
 
-            {/* Preset buttons */}
-            <div className="grid grid-cols-1 gap-2">
-              {READING_SPEED_PRESETS.map((preset) => (
-                <Button
-                  key={preset.id}
-                  variant={speedPreset === preset.id ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => handleSpeedPresetChange(preset.id)}
-                  className="justify-start text-left h-auto py-3"
-                >
-                  <div className="flex flex-col items-start">
-                    <span className="font-medium">
-                      {tool(`readingTimeEstimator.speed${preset.id.charAt(0).toUpperCase() + preset.id.slice(1)}`) || preset.label}
-                    </span>
-                  </div>
-                </Button>
-              ))}
-
-              {/* Custom WPM */}
-              <div className="pt-2">
-                <Button
-                  variant={speedPreset === 'custom' ? 'default' : 'outline'}
-                  size="sm"
-                  onClick={() => setSpeedPreset('custom')}
-                  className="w-full justify-start mb-2"
-                >
-                  {tool('readingTimeEstimator.speedCustom') || 'Custom WPM'}
-                </Button>
-                {speedPreset === 'custom' && (
-                  <Input
-                    type="number"
-                    min="1"
-                    max="1000"
-                    value={customWpm}
-                    onChange={(e) => setCustomWpm(e.target.value)}
-                    placeholder="200"
-                    className="text-sm"
-                  />
-                )}
-              </div>
-            </div>
+        {/* Silent Reading Speed Slider */}
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <FileText className="h-4 w-4 text-muted-foreground" />
+            <h3 className="text-sm font-medium text-muted-foreground">Silent Reading</h3>
           </div>
-        </AccordionItem>
-      </Accordion>
+          <InteractiveSlider
+            value={silentSpeed}
+            min={SILENT_SPEEDS.slow}
+            max={SILENT_SPEEDS.fast}
+            step={10}
+            label={`Silent Reading Speed: ${silentSpeed} WPM`}
+            onChange={setSilentSpeed}
+          />
+          <div className="flex justify-between text-xs text-muted-foreground px-1">
+            <button
+              onClick={() => setSilentSpeed(SILENT_SPEEDS.slow)}
+              className={`hover:text-foreground transition-colors ${silentSpeed === SILENT_SPEEDS.slow ? 'text-primary font-semibold' : ''}`}
+            >
+              Slow ({SILENT_SPEEDS.slow})
+            </button>
+            <button
+              onClick={() => setSilentSpeed(SILENT_SPEEDS.average)}
+              className={`hover:text-foreground transition-colors ${silentSpeed === SILENT_SPEEDS.average ? 'text-primary font-semibold' : ''}`}
+            >
+              Average ({SILENT_SPEEDS.average})
+            </button>
+            <button
+              onClick={() => setSilentSpeed(SILENT_SPEEDS.fast)}
+              className={`hover:text-foreground transition-colors ${silentSpeed === SILENT_SPEEDS.fast ? 'text-primary font-semibold' : ''}`}
+            >
+              Fast ({SILENT_SPEEDS.fast})
+            </button>
+          </div>
+        </div>
 
-      {/* Analytics */}
-      {results && (
-        <ReadingTimeAnalytics
-          results={results}
-          currentWpm={currentWpm}
-          speedPreset={speedPreset}
-          showTitle={false}
-          variant="compact"
-        />
+        {/* Read Aloud Speed Slider */}
+        <div className="space-y-2">
+          <div className="flex items-center gap-2">
+            <BookOpen className="h-4 w-4 text-muted-foreground" />
+            <h3 className="text-sm font-medium text-muted-foreground">Read Aloud</h3>
+          </div>
+          <InteractiveSlider
+            value={aloudSpeed}
+            min={ALOUD_SPEEDS.slow}
+            max={ALOUD_SPEEDS.fast}
+            step={5}
+            label={`Read Aloud Speed: ${aloudSpeed} WPM`}
+            onChange={setAloudSpeed}
+          />
+          <div className="flex justify-between text-xs text-muted-foreground px-1">
+            <button
+              onClick={() => setAloudSpeed(ALOUD_SPEEDS.slow)}
+              className={`hover:text-foreground transition-colors ${aloudSpeed === ALOUD_SPEEDS.slow ? 'text-primary font-semibold' : ''}`}
+            >
+              Slow ({ALOUD_SPEEDS.slow})
+            </button>
+            <button
+              onClick={() => setAloudSpeed(ALOUD_SPEEDS.average)}
+              className={`hover:text-foreground transition-colors ${aloudSpeed === ALOUD_SPEEDS.average ? 'text-primary font-semibold' : ''}`}
+            >
+              Average ({ALOUD_SPEEDS.average})
+            </button>
+            <button
+              onClick={() => setAloudSpeed(ALOUD_SPEEDS.fast)}
+              className={`hover:text-foreground transition-colors ${aloudSpeed === ALOUD_SPEEDS.fast ? 'text-primary font-semibold' : ''}`}
+            >
+              Fast ({ALOUD_SPEEDS.fast})
+            </button>
+          </div>
+        </div>
+      </div>
+
+      {/* Analytics - Two columns side by side on desktop, stacked on mobile */}
+      {(silentResults || aloudResults) && (
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+          {silentResults && (
+            <ReadingTimeAnalytics
+              results={silentResults}
+              currentWpm={silentSpeed}
+              speedPreset="silent"
+              title="Silent Reading Time"
+              icon={FileText}
+              showTitle={true}
+              variant="compact"
+            />
+          )}
+          {aloudResults && (
+            <ReadingTimeAnalytics
+              results={aloudResults}
+              currentWpm={aloudSpeed}
+              speedPreset="aloud"
+              title="Read Aloud Time"
+              icon={BookOpen}
+              showTitle={true}
+              variant="compact"
+            />
+          )}
+        </div>
       )}
+
+      {/* SEO Content */}
+      <SEOContent
+        toolName="reading-time-estimator"
+        enableAds={true}
+        adDensity="medium"
+      />
     </div>
   );
 }
