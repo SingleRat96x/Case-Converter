@@ -10,7 +10,8 @@
 import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
-import { EditorView } from '@codemirror/view';
+import { EditorView, Decoration, DecorationSet, ViewPlugin, ViewUpdate } from '@codemirror/view';
+import { StateField, StateEffect } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
 import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
 import { parseJSONWithError, type ValidationError } from '@/lib/jsonFormatterUtils';
@@ -181,6 +182,49 @@ export function JsonEditorPanel({
   );
 
   /**
+   * Error highlighting decoration
+   */
+  const errorHighlightMark = Decoration.mark({
+    class: 'cm-error-highlight'
+  });
+
+  const errorHighlightField = useMemo(() => {
+    return StateField.define<DecorationSet>({
+      create() {
+        return Decoration.none;
+      },
+      update(decorations, tr) {
+        // Check if we have validation error and are in readOnly mode
+        if (readOnly && validationError && validationError.line && validationError.column) {
+          const doc = tr.state.doc;
+          const lines = doc.toString().split('\n');
+          
+          if (validationError.line <= lines.length) {
+            let pos = 0;
+            // Calculate position up to the error line
+            for (let i = 0; i < validationError.line - 1; i++) {
+              pos += lines[i].length + 1; // +1 for newline
+            }
+            // Add column offset
+            pos += validationError.column - 1;
+            
+            // Highlight 10 characters from error position or until end of line
+            const from = Math.max(0, pos);
+            const lineEnd = pos + (lines[validationError.line - 1].length - (validationError.column - 1));
+            const to = Math.min(doc.length, from + Math.min(10, lineEnd));
+            
+            if (from < to) {
+              return Decoration.set([errorHighlightMark.range(from, to)]);
+            }
+          }
+        }
+        return Decoration.none;
+      },
+      provide: f => EditorView.decorations.from(f)
+    });
+  }, [readOnly, validationError]);
+
+  /**
    * CodeMirror extensions and theme
    */
   const extensions = useMemo(() => {
@@ -194,8 +238,13 @@ export function JsonEditorPanel({
       exts.push(jsonLinter);
     }
 
+    // Add error highlighting for readOnly mode with errors
+    if (readOnly && validationError) {
+      exts.push(errorHighlightField);
+    }
+
     return exts;
-  }, [readOnly, jsonLinter]);
+  }, [readOnly, jsonLinter, validationError, errorHighlightField]);
 
   // Select theme based on dark mode
   const theme = useMemo(() => {
@@ -204,6 +253,17 @@ export function JsonEditorPanel({
 
   return (
     <div className={`space-y-2 ${className}`}>
+      <style jsx global>{`
+        .cm-error-highlight {
+          background-color: rgba(239, 68, 68, 0.2);
+          border-bottom: 2px solid rgb(239, 68, 68);
+          border-radius: 2px;
+        }
+        .dark .cm-error-highlight {
+          background-color: rgba(248, 113, 113, 0.2);
+          border-bottom: 2px solid rgb(248, 113, 113);
+        }
+      `}</style>
       {/* Label and File Upload */}
       {(label || showFileUpload) && (
         <div className="flex items-center justify-between">
