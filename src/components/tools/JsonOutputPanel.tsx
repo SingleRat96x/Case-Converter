@@ -38,7 +38,7 @@ export function JsonOutputPanel({
   height = '500px',
   className = ''
 }: JsonOutputPanelProps) {
-  const { tool, common } = useToolTranslations('tools/code-data');
+  const { tool } = useToolTranslations('tools/code-data');
   const [copySuccess, setCopySuccess] = React.useState(false);
   const [downloadSuccess, setDownloadSuccess] = React.useState(false);
   const editorRef = React.useRef<HTMLDivElement>(null);
@@ -62,11 +62,13 @@ export function JsonOutputPanel({
     if (!value) return;
     const printWindow = window.open('', '_blank');
     if (printWindow) {
+      const title = tool('jsonFormatter.outputLabel') + ' - ' + tool('jsonFormatter.printButton');
+      const heading = tool('jsonFormatter.outputLabel');
       printWindow.document.write(`
         <!DOCTYPE html>
         <html>
           <head>
-            <title>JSON Output - Print</title>
+            <title>${title}</title>
             <style>
               body { 
                 font-family: 'Courier New', monospace; 
@@ -80,7 +82,7 @@ export function JsonOutputPanel({
           </head>
           <body>
             <div class="header">
-              <h1>Formatted JSON Output</h1>
+              <h1>${heading}</h1>
               <div>${new Date().toLocaleString()}</div>
             </div>
             <pre>${value}</pre>
@@ -111,20 +113,20 @@ export function JsonOutputPanel({
               size="sm"
               onClick={() => onViewModeChange('code')}
               className="h-8 gap-1.5"
-              title="View as code"
+              title={tool('jsonFormatter.tooltips.viewCode')}
             >
               <Code2 className="h-3 w-3" />
-              <span className="text-xs">Code</span>
+              <span className="text-xs">{tool('jsonFormatter.viewCode')}</span>
             </Button>
             <Button
               variant={viewMode === 'tree' ? 'default' : 'outline'}
               size="sm"
               onClick={() => onViewModeChange('tree')}
               className="h-8 gap-1.5"
-              title="View as tree"
+              title={tool('jsonFormatter.tooltips.viewTree')}
             >
               <TreePine className="h-3 w-3" />
-              <span className="text-xs">Tree</span>
+              <span className="text-xs">{tool('jsonFormatter.viewTree')}</span>
             </Button>
             
             <div className="w-px h-6 bg-border mx-1" />
@@ -138,17 +140,17 @@ export function JsonOutputPanel({
           onClick={handleCopy}
           disabled={!value}
           className="h-8 gap-1.5"
-          title="Copy to clipboard (Ctrl+C)"
+          title={tool('jsonFormatter.tooltips.copy')}
         >
           {copySuccess ? (
             <>
               <Check className="h-3 w-3" />
-              <span className="text-xs">{common('buttons.copied') || 'Copied'}</span>
+              <span className="text-xs">{tool('jsonFormatter.copied')}</span>
             </>
           ) : (
             <>
               <Copy className="h-3 w-3" />
-              <span className="text-xs">Copy</span>
+              <span className="text-xs">{tool('jsonFormatter.copyButton')}</span>
             </>
           )}
         </Button>
@@ -160,17 +162,17 @@ export function JsonOutputPanel({
           onClick={handleDownload}
           disabled={!value}
           className="h-8 gap-1.5"
-          title="Download as file"
+          title={tool('jsonFormatter.tooltips.download')}
         >
           {downloadSuccess ? (
             <>
               <Check className="h-3 w-3" />
-              <span className="text-xs">Saved</span>
+              <span className="text-xs">{tool('jsonFormatter.saved')}</span>
             </>
           ) : (
             <>
               <Download className="h-3 w-3" />
-              <span className="text-xs">Download</span>
+              <span className="text-xs">{tool('jsonFormatter.downloadButton')}</span>
             </>
           )}
         </Button>
@@ -182,10 +184,10 @@ export function JsonOutputPanel({
           onClick={handlePrint}
           disabled={!value}
           className="h-8 gap-1.5"
-          title="Print (Ctrl+P)"
+          title={tool('jsonFormatter.tooltips.print')}
         >
           <Printer className="h-3 w-3" />
-          <span className="text-xs">Print</span>
+          <span className="text-xs">{tool('jsonFormatter.printButton')}</span>
         </Button>
         </div>
       </div>
@@ -196,7 +198,7 @@ export function JsonOutputPanel({
           <div className="flex items-start gap-2 text-sm">
             <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-red-800 dark:text-red-300">Validation Error</p>
+              <p className="font-medium text-red-800 dark:text-red-300">{tool('jsonFormatter.errors.validationError')}</p>
               <p className="text-red-700 dark:text-red-400 text-xs mt-0.5 break-words">
                 {validationError.message}
                 {validationError.line && validationError.column && (
@@ -216,7 +218,7 @@ export function JsonOutputPanel({
           <JsonEditorPanel
             value={value}
             readOnly={true}
-            placeholder={tool('jsonFormatter.outputPlaceholder') || 'Formatted JSON will appear here...'}
+            placeholder={tool('jsonFormatter.outputPlaceholder')}
             validationError={validationError}
             height={height}
           />
@@ -233,22 +235,22 @@ export function JsonOutputPanel({
         {stats && value ? (
           <>
             <div className="flex items-center gap-3 text-muted-foreground">
-              <span>Objects: {stats.objects}</span>
+              <span>{tool('jsonFormatter.statusBar.objects')}: {stats.objects}</span>
               <span>•</span>
-              <span>Arrays: {stats.arrays}</span>
+              <span>{tool('jsonFormatter.statusBar.arrays')}: {stats.arrays}</span>
               <span>•</span>
-              <span>Keys: {stats.keys}</span>
+              <span>{tool('jsonFormatter.statusBar.keys')}: {stats.keys}</span>
               <span>•</span>
-              <span>Values: {stats.primitives}</span>
+              <span>{tool('jsonFormatter.statusBar.values')}: {stats.primitives}</span>
             </div>
             
             <div className="flex items-center gap-2 text-muted-foreground">
-              <span>Size: {formatSize(stats.size)}</span>
+              <span>{tool('jsonFormatter.statusBar.size')}: {formatSize(stats.size)}</span>
             </div>
           </>
         ) : (
           <div className="text-muted-foreground">
-            No output
+            {tool('jsonFormatter.statusBar.noOutput')}
           </div>
         )}
       </div>

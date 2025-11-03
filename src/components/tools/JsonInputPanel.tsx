@@ -88,7 +88,7 @@ export function JsonInputPanel({
     if (!file) return;
 
     if (file.size > 10 * 1024 * 1024) {
-      alert('File too large. Maximum size is 10MB.');
+      alert(tool('jsonFormatter.errors.fileTooLarge'));
       return;
     }
 
@@ -98,7 +98,7 @@ export function JsonInputPanel({
       onFileUpload(content);
     };
     reader.onerror = () => {
-      alert('Error reading file');
+      alert(tool('jsonFormatter.errors.fileReadError'));
     };
     reader.readAsText(file);
     e.target.value = '';
@@ -155,22 +155,22 @@ export function JsonInputPanel({
           className={`gap-1.5 h-8 min-w-[140px] transition-all duration-300 ${
             formatSuccess ? 'bg-green-600 hover:bg-green-600 dark:bg-green-600' : ''
           }`}
-          title="Format and validate JSON (Ctrl+Enter)"
+          title={tool('jsonFormatter.tooltips.format')}
         >
           {isProcessing ? (
             <>
               <Loader2 className="h-3 w-3 animate-spin" />
-              <span className="text-xs">Processing...</span>
+              <span className="text-xs">{tool('jsonFormatter.processing')}</span>
             </>
           ) : formatSuccess ? (
             <>
               <CheckCircle className="h-3 w-3" />
-              <span className="text-xs">Formatted!</span>
+              <span className="text-xs">{tool('jsonFormatter.formatted')}</span>
             </>
           ) : (
             <>
               <Sparkles className="h-3 w-3" />
-              <span className="text-xs">Format & Validate</span>
+              <span className="text-xs">{tool('jsonFormatter.formatButton')}</span>
             </>
           )}
         </Button>
@@ -181,10 +181,10 @@ export function JsonInputPanel({
           size="sm"
           variant="outline"
           className="gap-1.5 h-8"
-          title="Minify JSON"
+          title={tool('jsonFormatter.tooltips.minify')}
         >
           <Minimize2 className="h-3 w-3" />
-          <span className="text-xs">Minify</span>
+          <span className="text-xs">{tool('jsonFormatter.minifyButton')}</span>
         </Button>
 
         <Button
@@ -193,10 +193,10 @@ export function JsonInputPanel({
           size="sm"
           variant="ghost"
           className="gap-1.5 h-8"
-          title="Clear input (Ctrl+K)"
+          title={tool('jsonFormatter.tooltips.clear')}
         >
           <Trash2 className="h-3 w-3" />
-          <span className="text-xs">Clear</span>
+          <span className="text-xs">{tool('jsonFormatter.clearButton')}</span>
         </Button>
 
         <div className="w-px h-6 bg-border mx-1" />
@@ -207,10 +207,10 @@ export function JsonInputPanel({
           size="sm"
           onClick={handleFileClick}
           className="h-8 gap-1.5"
-          title="Upload JSON file"
+          title={tool('jsonFormatter.tooltips.upload')}
         >
           <Upload className="h-3 w-3" />
-          <span className="text-xs">Upload</span>
+          <span className="text-xs">{tool('jsonFormatter.uploadButton')}</span>
         </Button>
         
         <input
@@ -233,10 +233,10 @@ export function JsonInputPanel({
               <SelectValue />
             </SelectTrigger>
             <SelectContent>
-              <SelectItem value="2">2 spaces</SelectItem>
-              <SelectItem value="4">4 spaces</SelectItem>
-              <SelectItem value="8">8 spaces</SelectItem>
-              <SelectItem value="custom">Custom...</SelectItem>
+              <SelectItem value="2">{tool('jsonFormatter.indentOptions.spaces2')}</SelectItem>
+              <SelectItem value="4">{tool('jsonFormatter.indentOptions.spaces4')}</SelectItem>
+              <SelectItem value="8">{tool('jsonFormatter.indentOptions.spaces8')}</SelectItem>
+              <SelectItem value="custom">{tool('jsonFormatter.indentOptions.custom')}</SelectItem>
             </SelectContent>
           </Select>
 
@@ -264,7 +264,7 @@ export function JsonInputPanel({
             className="scale-75"
           />
           <label htmlFor="sort-keys" className="text-xs cursor-pointer whitespace-nowrap">
-            Sort Keys
+            {tool('jsonFormatter.sortKeys')}
           </label>
         </div>
 
@@ -279,7 +279,7 @@ export function JsonInputPanel({
             className="scale-75"
           />
           <label htmlFor="unescape" className="text-xs cursor-pointer whitespace-nowrap">
-            Unescape
+            {tool('jsonFormatter.unescapeStrings')}
           </label>
         </div>
 
@@ -294,7 +294,7 @@ export function JsonInputPanel({
             className="scale-75"
           />
           <label htmlFor="ndjson" className="text-xs cursor-pointer whitespace-nowrap">
-            NDJSON
+            {tool('jsonFormatter.ndjsonMode')}
           </label>
         </div>
         </div>
@@ -306,7 +306,7 @@ export function JsonInputPanel({
           <div className="flex items-start gap-2 text-sm">
             <AlertCircle className="h-4 w-4 text-red-600 dark:text-red-400 mt-0.5 flex-shrink-0" />
             <div className="flex-1 min-w-0">
-              <p className="font-medium text-red-800 dark:text-red-300">Invalid JSON</p>
+              <p className="font-medium text-red-800 dark:text-red-300">{tool('jsonFormatter.errors.invalidJson')}</p>
               <p className="text-red-700 dark:text-red-400 text-xs mt-0.5 break-words">
                 {validationError.message}
                 {validationError.line && validationError.column && (
@@ -325,7 +325,7 @@ export function JsonInputPanel({
         <JsonEditorPanel
           value={value}
           onChange={onChange}
-          placeholder={tool('jsonFormatter.inputPlaceholder') || 'Paste or type JSON here...'}
+          placeholder={tool('jsonFormatter.inputPlaceholder')}
           validationError={validationError}
           height={height}
           showFileUpload={false}
@@ -335,11 +335,11 @@ export function JsonInputPanel({
       {/* StatusBar */}
       <div className="flex items-center justify-between px-3 py-1.5 border-t border-border bg-muted/30 text-xs">
         <div className="flex items-center gap-3 text-muted-foreground">
-          <span>Lines: {lines}</span>
+          <span>{tool('jsonFormatter.statusBar.lines')}: {lines}</span>
           <span>?</span>
-          <span>Characters: {chars.toLocaleString()}</span>
+          <span>{tool('jsonFormatter.statusBar.characters')}: {chars.toLocaleString()}</span>
           <span>?</span>
-          <span>Words: {words}</span>
+          <span>{tool('jsonFormatter.statusBar.words')}: {words}</span>
         </div>
       </div>
     </div>
