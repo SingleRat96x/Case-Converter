@@ -6,6 +6,7 @@
  */
 
 export interface ReadingTimeResult {
+  hours: number;
   minutes: number;
   seconds: number;
   totalMinutes: number;
@@ -42,6 +43,7 @@ export const OUT_LOUD_WPM = 120;
 export function calculateReadingTime(wordCount: number, wpm: number = DEFAULT_WPM): ReadingTimeResult {
   if (wordCount <= 0 || wpm <= 0) {
     return {
+      hours: 0,
       minutes: 0,
       seconds: 0,
       totalMinutes: 0,
@@ -53,8 +55,10 @@ export function calculateReadingTime(wordCount: number, wpm: number = DEFAULT_WP
 
   // Calculate base reading time
   const totalMinutes = wordCount / wpm;
-  const minutes = Math.floor(totalMinutes);
-  const seconds = Math.round((totalMinutes - minutes) * 60);
+  const hours = Math.floor(totalMinutes / 60);
+  const remainingMinutes = totalMinutes - (hours * 60);
+  const minutes = Math.floor(remainingMinutes);
+  const seconds = Math.round((remainingMinutes - minutes) * 60);
 
   // Calculate range (±15% variation)
   const minMinutes = Math.floor(wordCount / (wpm * 1.15));
@@ -64,6 +68,7 @@ export function calculateReadingTime(wordCount: number, wpm: number = DEFAULT_WP
   const outLoudMinutes = Math.ceil(wordCount / OUT_LOUD_WPM);
 
   return {
+    hours,
     minutes,
     seconds,
     totalMinutes,
@@ -194,24 +199,27 @@ function extractAllStrings(obj: unknown): string {
 }
 
 /**
- * Format reading time as human-readable string
+ * Format reading time as human-readable string with hours support
  */
-export function formatReadingTime(minutes: number, seconds: number): string {
-  if (minutes === 0 && seconds === 0) {
-    return '0 sec';
+export function formatReadingTime(hours: number, minutes: number, seconds: number): string {
+  if (hours === 0 && minutes === 0 && seconds === 0) {
+    return '0:00';
   }
 
-  if (minutes === 0) {
-    return `${seconds} sec`;
+  // If less than 1 hour, use mins:secs format
+  if (hours === 0) {
+    return `${minutes}:${seconds.toString().padStart(2, '0')}`;
   }
 
-  if (seconds === 0) {
-    return minutes === 1 ? '1 min' : `${minutes} min`;
-  }
+  // If 1 hour or more, use hours:mins:secs format
+  return `${hours}:${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}`;
+}
 
-  const minText = minutes === 1 ? '1 min' : `${minutes} min`;
-  const secText = seconds === 1 ? '1 sec' : `${seconds} sec`;
-  return `${minText} ${secText}`;
+/**
+ * Get the time format label based on whether hours are present
+ */
+export function getTimeFormatLabel(hours: number): string {
+  return hours > 0 ? 'hours:mins:secs' : 'mins:secs';
 }
 
 /**
@@ -228,7 +236,7 @@ export function formatReadingRange(min: number, max: number): string {
  * Generate copyable summary string
  */
 export function generateCopyableSummary(result: ReadingTimeResult, wpm: number): string {
-  const timeStr = formatReadingTime(result.minutes, result.seconds);
+  const timeStr = formatReadingTime(result.hours, result.minutes, result.seconds);
   const rangeStr = formatReadingRange(result.range.min, result.range.max);
   
   let summary = `Estimated reading time: ${timeStr}`;

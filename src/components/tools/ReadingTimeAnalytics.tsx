@@ -2,7 +2,7 @@
 
 import React from 'react';
 import { Clock, BookOpen, Hash, Type } from 'lucide-react';
-import { formatReadingTime, type ReadingTimeResult } from '@/lib/readingTimeUtils';
+import { formatReadingTime, getTimeFormatLabel, type ReadingTimeResult } from '@/lib/readingTimeUtils';
 
 interface ReadingTimeAnalyticsProps {
   silentTime: ReadingTimeResult;
@@ -22,16 +22,16 @@ export function ReadingTimeAnalytics({
     {
       key: 'aloud',
       label: 'READ ALOUD TIME',
-      value: formatReadingTime(aloudTime.minutes, aloudTime.seconds),
-      subLabel: 'mins:secs',
+      value: formatReadingTime(aloudTime.hours, aloudTime.minutes, aloudTime.seconds),
+      subLabel: getTimeFormatLabel(aloudTime.hours),
       icon: BookOpen,
       color: 'text-blue-600 dark:text-blue-400'
     },
     {
       key: 'silent',
       label: 'READING TIME',
-      value: formatReadingTime(silentTime.minutes, silentTime.seconds),
-      subLabel: 'mins:secs',
+      value: formatReadingTime(silentTime.hours, silentTime.minutes, silentTime.seconds),
+      subLabel: getTimeFormatLabel(silentTime.hours),
       icon: Clock,
       color: 'text-green-600 dark:text-green-400'
     },

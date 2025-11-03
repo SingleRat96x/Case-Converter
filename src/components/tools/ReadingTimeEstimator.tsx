@@ -8,7 +8,7 @@ import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { Button } from '@/components/ui/button';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { FileText, FileJson, Upload, Trash2 } from 'lucide-react';
+import { FileText, FileJson, Upload, Trash2, BookOpen, Volume2 } from 'lucide-react';
 import { InteractiveSlider } from '@/components/shared/InteractiveSlider';
 import {
   calculateReadingTime,
@@ -267,18 +267,38 @@ export function ReadingTimeEstimator() {
         </div>
       )}
 
+      {/* Analytics Display - Moved above sliders */}
+      {wordCount > 0 && silentTime && aloudTime && (
+        <ReadingTimeAnalytics
+          silentTime={silentTime}
+          aloudTime={aloudTime}
+          wordCount={wordCount}
+          characterCount={characterCount}
+        />
+      )}
+
       {/* Reading Speed Controls with InteractiveSlider */}
       <div className="space-y-6 bg-muted/30 rounded-lg p-6 border">
         <div className="space-y-4">
-          {/* Silent Reading Speed Slider */}
+          {/* Silent Reading Speed Slider with Icon */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-foreground">Silent Reading Speed</span>
+            </div>
+            <span className="text-sm text-muted-foreground">
+              <span className="text-base font-bold text-foreground">{silentSpeed} WPM</span>
+            </span>
+          </div>
           <InteractiveSlider
             value={silentSpeed}
             min={SILENT_SPEEDS[0].wpm}
             max={SILENT_SPEEDS[SILENT_SPEEDS.length - 1].wpm}
             step={1}
             label="Silent Reading Speed"
-            unit="WPM"
             onChange={setSilentSpeed}
+            hideLabel={true}
+            className="mt-2"
           />
           
           {/* Preset buttons positioned under slider */}
@@ -303,15 +323,25 @@ export function ReadingTimeEstimator() {
         <div className="border-t" />
 
         <div className="space-y-4">
-          {/* Read Aloud Speed Slider */}
+          {/* Read Aloud Speed Slider with Icon */}
+          <div className="flex items-center justify-between">
+            <div className="flex items-center gap-2">
+              <Volume2 className="h-4 w-4 text-primary" />
+              <span className="text-sm font-medium text-foreground">Read Aloud Speed</span>
+            </div>
+            <span className="text-sm text-muted-foreground">
+              <span className="text-base font-bold text-foreground">{aloudSpeed} WPM</span>
+            </span>
+          </div>
           <InteractiveSlider
             value={aloudSpeed}
             min={ALOUD_SPEEDS[0].wpm}
             max={ALOUD_SPEEDS[ALOUD_SPEEDS.length - 1].wpm}
             step={1}
             label="Read Aloud Speed"
-            unit="WPM"
             onChange={setAloudSpeed}
+            hideLabel={true}
+            className="mt-2"
           />
           
           {/* Preset buttons positioned under slider */}
@@ -332,16 +362,6 @@ export function ReadingTimeEstimator() {
           </div>
         </div>
       </div>
-
-      {/* Single Analytics Display */}
-      {wordCount > 0 && silentTime && aloudTime && (
-        <ReadingTimeAnalytics
-          silentTime={silentTime}
-          aloudTime={aloudTime}
-          wordCount={wordCount}
-          characterCount={characterCount}
-        />
-      )}
 
       {/* SEO Content */}
       <SEOContent
