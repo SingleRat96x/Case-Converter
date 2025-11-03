@@ -109,7 +109,7 @@ const overrides: Array<ToolMetadataConfig> = [
     slug: 'reading-time-estimator',
     pathname: '/tools/reading-time-estimator',
     type: 'tool',
-    category: 'analysis-counter',
+    category: 'text-analysis',
     i18n: {
       en: {
         title: 'Reading Time Estimator – Free Read Time Calculator for Text & JSON',

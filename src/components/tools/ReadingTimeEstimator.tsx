@@ -239,7 +239,7 @@ export function ReadingTimeEstimator() {
               className="font-mono text-xs"
             />
             <p className="text-xs text-muted-foreground mt-1">
-              Leave empty or type "Auto-detect" to automatically find text content
+              Leave empty or type &quot;Auto-detect&quot; to automatically find text content
             </p>
           </div>
           {jsonError && (
