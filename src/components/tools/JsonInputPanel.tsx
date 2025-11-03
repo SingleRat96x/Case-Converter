@@ -2,8 +2,15 @@
 
 import React from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
-import { Upload, FileText, AlertCircle, CheckCircle } from 'lucide-react';
+import { JsonInputMenu } from './JsonInputMenu';
+import { 
+  Upload, FileText, AlertCircle, CheckCircle, Sparkles, Minimize2, Trash2, Loader2,
+  Undo, Redo, ChevronLeft, ChevronRight, Settings2
+} from 'lucide-react';
 import { Button } from '@/components/ui/button';
+import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
+import { Input } from '@/components/ui/input';
+import { Switch } from '@/components/ui/switch';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import type { ValidationError } from '@/lib/jsonFormatterUtils';
 
@@ -11,7 +18,20 @@ interface JsonInputPanelProps {
   value: string;
   onChange: (value: string) => void;
   onFileUpload: (content: string) => void;
+  onFormat: () => void;
+  onMinify: () => void;
+  onClear: () => void;
   validationError?: ValidationError | null;
+  isProcessing: boolean;
+  // Formatting options
+  indentSize: number;
+  onIndentSizeChange: (size: number) => void;
+  sortKeys: boolean;
+  onSortKeysChange: (value: boolean) => void;
+  unescapeStrings: boolean;
+  onUnescapeStringsChange: (value: boolean) => void;
+  ndjsonMode: boolean;
+  onNdjsonModeChange: (value: boolean) => void;
   height?: string;
   className?: string;
 }
@@ -20,12 +40,25 @@ export function JsonInputPanel({
   value,
   onChange,
   onFileUpload,
+  onFormat,
+  onMinify,
+  onClear,
   validationError,
+  isProcessing,
+  indentSize,
+  onIndentSizeChange,
+  sortKeys,
+  onSortKeysChange,
+  unescapeStrings,
+  onUnescapeStringsChange,
+  ndjsonMode,
+  onNdjsonModeChange,
   height = '500px',
   className = ''
 }: JsonInputPanelProps) {
-  const { tool } = useToolTranslations('tools/code-data');
+  const { tool, common } = useToolTranslations('tools/code-data');
   const fileInputRef = React.useRef<HTMLInputElement>(null);
+  const [customIndent, setCustomIndent] = React.useState('');
 
   const handleFileClick = () => {
     fileInputRef.current?.click();
@@ -52,41 +85,216 @@ export function JsonInputPanel({
     e.target.value = '';
   };
 
+  const handleMenuAction = (actionId: string) => {
+    switch (actionId) {
+      case 'file-new':
+        onClear();
+        break;
+      case 'file-open':
+        handleFileClick();
+        break;
+      case 'file-save-json':
+      case 'file-save-ndjson':
+        // These will be handled by output panel
+        break;
+      case 'edit-select-all':
+        // CodeMirror handles this natively
+        break;
+      case 'insert-sample-object':
+        onChange('{\n  "name": "John Doe",\n  "age": 30,\n  "email": "john@example.com"\n}');
+        break;
+      case 'insert-sample-array':
+        onChange('[1, 2, 3, 4, 5]');
+        break;
+      case 'insert-empty-object':
+        onChange('{}');
+        break;
+      case 'insert-empty-array':
+        onChange('[]');
+        break;
+    }
+  };
+
+  const handleIndentChange = (val: string) => {
+    if (val === 'custom') {
+      setCustomIndent('');
+    } else {
+      const numValue = parseInt(val, 10);
+      if (!isNaN(numValue)) {
+        onIndentSizeChange(numValue);
+      }
+    }
+  };
+
+  const handleCustomIndentChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const val = e.target.value;
+    setCustomIndent(val);
+    const numValue = parseInt(val, 10);
+    if (!isNaN(numValue) && numValue >= 1 && numValue <= 16) {
+      onIndentSizeChange(numValue);
+    }
+  };
+
+  const showCustomIndent = !([2, 4, 8] as const).includes(indentSize as 2 | 4 | 8);
+
   // Calculate stats
   const lines = value ? value.split('\n').length : 0;
   const chars = value.length;
   const words = value ? value.trim().split(/\s+/).filter(Boolean).length : 0;
 
+  const formatButtonText = isProcessing 
+    ? tool('jsonFormatter.processing') || 'Processing...' 
+    : tool('jsonFormatter.formatButton') || 'Format';
+
   return (
     <div className={`flex flex-col border border-border rounded-lg bg-background overflow-hidden ${className}`}>
-      {/* Input Toolbar */}
-      <div className="flex items-center justify-between px-3 py-2 border-b border-border bg-muted/30">
-        <div className="flex items-center gap-2">
-          <FileText className="h-4 w-4 text-muted-foreground" />
-          <span className="text-sm font-medium text-foreground">
-            {tool('jsonFormatter.inputLabel') || 'Input'}
-          </span>
-        </div>
+      {/* Menu Bar */}
+      <JsonInputMenu onMenuAction={handleMenuAction} />
+
+      {/* Toolbar */}
+      <div className="flex flex-wrap items-center gap-2 px-3 py-2 border-b border-border bg-muted/30 overflow-x-auto">
+        {/* Primary Actions */}
+        <Button
+          onClick={onFormat}
+          disabled={!value || isProcessing}
+          size="sm"
+          className="gap-1.5 h-8"
+          title="Format and validate JSON (Ctrl+Enter)"
+        >
+          {isProcessing ? (
+            <>
+              <Loader2 className="h-3 w-3 animate-spin" />
+              <span className="text-xs">{formatButtonText}</span>
+            </>
+          ) : (
+            <>
+              <Sparkles className="h-3 w-3" />
+              <span className="text-xs">{formatButtonText}</span>
+            </>
+          )}
+        </Button>
+
+        <Button
+          onClick={onMinify}
+          disabled={!value || isProcessing}
+          size="sm"
+          variant="outline"
+          className="gap-1.5 h-8"
+          title="Minify JSON"
+        >
+          <Minimize2 className="h-3 w-3" />
+          <span className="text-xs">Minify</span>
+        </Button>
+
+        <Button
+          onClick={onClear}
+          disabled={!value}
+          size="sm"
+          variant="ghost"
+          className="gap-1.5 h-8"
+          title="Clear input (Ctrl+K)"
+        >
+          <Trash2 className="h-3 w-3" />
+          <span className="text-xs">Clear</span>
+        </Button>
+
+        <div className="w-px h-6 bg-border mx-1" />
+
+        {/* Upload */}
+        <Button
+          variant="outline"
+          size="sm"
+          onClick={handleFileClick}
+          className="h-8 gap-1.5"
+          title="Upload JSON file"
+        >
+          <Upload className="h-3 w-3" />
+          <span className="text-xs">Upload</span>
+        </Button>
         
+        <input
+          ref={fileInputRef}
+          type="file"
+          accept=".json,.txt"
+          onChange={handleFileChange}
+          className="hidden"
+        />
+
+        <div className="w-px h-6 bg-border mx-1" />
+
+        {/* Indent Size */}
         <div className="flex items-center gap-2">
-          <Button
-            variant="ghost"
-            size="sm"
-            onClick={handleFileClick}
-            className="h-7 gap-1.5 text-xs"
-            title="Upload JSON file"
+          <Select
+            value={showCustomIndent ? 'custom' : indentSize.toString()}
+            onValueChange={handleIndentChange}
           >
-            <Upload className="h-3 w-3" />
-            Upload
-          </Button>
-          
-          <input
-            ref={fileInputRef}
-            type="file"
-            accept=".json,.txt"
-            onChange={handleFileChange}
-            className="hidden"
+            <SelectTrigger className="h-8 w-[120px] text-xs">
+              <SelectValue />
+            </SelectTrigger>
+            <SelectContent>
+              <SelectItem value="2">2 spaces</SelectItem>
+              <SelectItem value="4">4 spaces</SelectItem>
+              <SelectItem value="8">8 spaces</SelectItem>
+              <SelectItem value="custom">Custom...</SelectItem>
+            </SelectContent>
+          </Select>
+
+          {showCustomIndent && (
+            <Input
+              type="number"
+              min="1"
+              max="16"
+              value={customIndent}
+              onChange={handleCustomIndentChange}
+              placeholder="1-16"
+              className="w-16 h-8 text-xs"
+            />
+          )}
+        </div>
+
+        <div className="w-px h-6 bg-border mx-1" />
+
+        {/* Sort Keys */}
+        <div className="flex items-center gap-2">
+          <Switch
+            id="sort-keys"
+            checked={sortKeys}
+            onCheckedChange={onSortKeysChange}
+            className="scale-75"
           />
+          <label htmlFor="sort-keys" className="text-xs cursor-pointer whitespace-nowrap">
+            Sort Keys
+          </label>
+        </div>
+
+        <div className="w-px h-6 bg-border mx-1" />
+
+        {/* Unescape */}
+        <div className="flex items-center gap-2">
+          <Switch
+            id="unescape"
+            checked={unescapeStrings}
+            onCheckedChange={onUnescapeStringsChange}
+            className="scale-75"
+          />
+          <label htmlFor="unescape" className="text-xs cursor-pointer whitespace-nowrap">
+            Unescape
+          </label>
+        </div>
+
+        <div className="w-px h-6 bg-border mx-1" />
+
+        {/* NDJSON Mode */}
+        <div className="flex items-center gap-2">
+          <Switch
+            id="ndjson"
+            checked={ndjsonMode}
+            onCheckedChange={onNdjsonModeChange}
+            className="scale-75"
+          />
+          <label htmlFor="ndjson" className="text-xs cursor-pointer whitespace-nowrap">
+            NDJSON
+          </label>
         </div>
       </div>
 
@@ -102,7 +310,7 @@ export function JsonInputPanel({
         />
       </div>
 
-      {/* Input StatusBar */}
+      {/* StatusBar */}
       <div className="flex items-center justify-between px-3 py-1.5 border-t border-border bg-muted/30 text-xs">
         <div className="flex items-center gap-3 text-muted-foreground">
           <span>Lines: {lines}</span>
