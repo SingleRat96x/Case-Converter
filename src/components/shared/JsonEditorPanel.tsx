@@ -14,7 +14,7 @@ import { EditorView, Decoration, DecorationSet, ViewPlugin, ViewUpdate } from '@
 import { StateField, StateEffect } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
 import { githubLight, githubDark } from '@uiw/codemirror-theme-github';
-import { parseJSONWithError, type ValidationError } from '@/lib/jsonFormatterUtils';
+import { parseJSONWithError, findAllJSONErrors, type ValidationError } from '@/lib/jsonFormatterUtils';
 import { Upload, AlertCircle } from 'lucide-react';
 
 export interface JsonEditorPanelProps {
@@ -195,27 +195,44 @@ export function JsonEditorPanel({
       },
       update(decorations, tr) {
         // Check if we have validation error and are in readOnly mode
-        if (readOnly && validationError && validationError.line && validationError.column) {
+        if (readOnly && validationError) {
           const doc = tr.state.doc;
-          const lines = doc.toString().split('\n');
+          const content = doc.toString();
           
-          if (validationError.line <= lines.length) {
-            let pos = 0;
-            // Calculate position up to the error line
-            for (let i = 0; i < validationError.line - 1; i++) {
-              pos += lines[i].length + 1; // +1 for newline
-            }
-            // Add column offset
-            pos += validationError.column - 1;
+          // Find all errors in the JSON
+          const allErrors = findAllJSONErrors(content);
+          
+          if (allErrors.length > 0) {
+            const marks: Array<{ from: number; to: number }> = [];
+            const lines = content.split('\n');
             
-            // Highlight 10 characters from error position or until end of line
-            const from = Math.max(0, pos);
-            const lineEnd = pos + (lines[validationError.line - 1].length - (validationError.column - 1));
-            const to = Math.min(doc.length, from + Math.min(10, lineEnd));
+            // Create highlights for all errors
+            allErrors.forEach(error => {
+              if (error.line && error.column && error.line <= lines.length) {
+                let pos = 0;
+                // Calculate position up to the error line
+                for (let i = 0; i < error.line - 1; i++) {
+                  pos += lines[i].length + 1; // +1 for newline
+                }
+                // Add column offset
+                pos += error.column - 1;
+                
+                // Highlight 10 characters from error position or until end of line
+                const from = Math.max(0, pos);
+                const lineEnd = pos + (lines[error.line - 1].length - (error.column - 1));
+                const to = Math.min(doc.length, from + Math.min(10, lineEnd - pos));
+                
+                if (from < to) {
+                  marks.push({ from, to });
+                }
+              }
+            });
             
-            if (from < to) {
-              return Decoration.set([errorHighlightMark.range(from, to)]);
-            }
+            // Sort marks by position and create decorations
+            marks.sort((a, b) => a.from - b.from);
+            const decorations = marks.map(mark => errorHighlightMark.range(mark.from, mark.to));
+            
+            return Decoration.set(decorations);
           }
         }
         return Decoration.none;

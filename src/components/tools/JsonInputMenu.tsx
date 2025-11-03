@@ -6,7 +6,7 @@ import {
   Undo, Redo, Scissors, Copy, Clipboard, Search, TextSelect,
   PlusCircle, Layers, Braces, Brackets,
   Eye, WrapText, ListOrdered, ChevronDown as FoldIcon, ChevronUp as UnfoldIcon,
-  Keyboard, BookOpen, Info
+  Keyboard, BookOpen, Info, File, Edit3, PlusSquare, HelpCircle
 } from 'lucide-react';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 
@@ -18,6 +18,7 @@ interface JsonInputMenuProps {
 interface MenuItem {
   id: string;
   label: string;
+  icon?: React.ReactNode;
   items: { id: string; label: string; shortcut?: string; separator?: boolean; icon?: React.ReactNode }[];
 }
 
@@ -29,6 +30,7 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
     {
       id: 'file',
       label: 'File',
+      icon: <File className="h-4 w-4" />,
       items: [
         { id: 'file-new', label: 'New', shortcut: 'Ctrl+N', icon: <FileText className="h-4 w-4" /> },
         { id: 'file-open', label: 'Open File...', shortcut: 'Ctrl+O', icon: <FolderOpen className="h-4 w-4" /> },
@@ -41,6 +43,7 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
     {
       id: 'edit',
       label: 'Edit',
+      icon: <Edit3 className="h-4 w-4" />,
       items: [
         { id: 'edit-undo', label: 'Undo', shortcut: 'Ctrl+Z', icon: <Undo className="h-4 w-4" /> },
         { id: 'edit-redo', label: 'Redo', shortcut: 'Ctrl+Y', icon: <Redo className="h-4 w-4" /> },
@@ -56,6 +59,7 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
     {
       id: 'insert',
       label: 'Insert',
+      icon: <PlusSquare className="h-4 w-4" />,
       items: [
         { id: 'insert-sample-object', label: 'Sample Object', icon: <Braces className="h-4 w-4" /> },
         { id: 'insert-sample-array', label: 'Sample Array', icon: <Brackets className="h-4 w-4" /> },
@@ -66,6 +70,7 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
     {
       id: 'view',
       label: 'View',
+      icon: <Eye className="h-4 w-4" />,
       items: [
         { id: 'view-word-wrap', label: 'Word Wrap', icon: <WrapText className="h-4 w-4" /> },
         { id: 'view-line-numbers', label: 'Line Numbers', icon: <ListOrdered className="h-4 w-4" /> },
@@ -76,6 +81,7 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
     {
       id: 'help',
       label: 'Help',
+      icon: <HelpCircle className="h-4 w-4" />,
       items: [
         { id: 'help-keyboard-shortcuts', label: 'Keyboard Shortcuts', shortcut: 'Ctrl+?', icon: <Keyboard className="h-4 w-4" /> },
         { id: 'help-json-spec', label: 'JSON Specification', icon: <BookOpen className="h-4 w-4" /> },
@@ -99,8 +105,9 @@ export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuPro
         <div key={menu.id} className="relative">
           <button
             onClick={() => handleMenuClick(menu.id)}
-            className="px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors"
+            className="px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors flex items-center gap-1.5"
           >
+            {menu.icon && <span className="text-muted-foreground">{menu.icon}</span>}
             {menu.label}
           </button>
           

@@ -5,7 +5,7 @@ import {
   Save, Printer, FileJson,
   Copy, TextSelect, Search,
   Code2, TreePine, WrapText, ListOrdered, ChevronDown as FoldIcon, ChevronUp as UnfoldIcon,
-  Keyboard, BookOpen, Info
+  Keyboard, BookOpen, Info, File, Edit3, Eye, HelpCircle
 } from 'lucide-react';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 
@@ -17,6 +17,7 @@ interface JsonOutputMenuProps {
 interface MenuItem {
   id: string;
   label: string;
+  icon?: React.ReactNode;
   items: { id: string; label: string; shortcut?: string; separator?: boolean; icon?: React.ReactNode }[];
 }
 
@@ -28,6 +29,7 @@ export function JsonOutputMenu({ onMenuAction, className = '' }: JsonOutputMenuP
     {
       id: 'file',
       label: 'File',
+      icon: <File className="h-4 w-4" />,
       items: [
         { id: 'file-save-json', label: 'Save as JSON', shortcut: 'Ctrl+S', icon: <Save className="h-4 w-4" /> },
         { id: 'file-save-ndjson', label: 'Save as NDJSON', icon: <FileJson className="h-4 w-4" /> },
@@ -38,6 +40,7 @@ export function JsonOutputMenu({ onMenuAction, className = '' }: JsonOutputMenuP
     {
       id: 'edit',
       label: 'Edit',
+      icon: <Edit3 className="h-4 w-4" />,
       items: [
         { id: 'edit-copy', label: 'Copy All', shortcut: 'Ctrl+C', icon: <Copy className="h-4 w-4" /> },
         { id: 'edit-select-all', label: 'Select All', shortcut: 'Ctrl+A', icon: <TextSelect className="h-4 w-4" /> },
@@ -47,6 +50,7 @@ export function JsonOutputMenu({ onMenuAction, className = '' }: JsonOutputMenuP
     {
       id: 'view',
       label: 'View',
+      icon: <Eye className="h-4 w-4" />,
       items: [
         { id: 'view-code', label: 'Code View', icon: <Code2 className="h-4 w-4" /> },
         { id: 'view-tree', label: 'Tree View', icon: <TreePine className="h-4 w-4" /> },
@@ -60,6 +64,7 @@ export function JsonOutputMenu({ onMenuAction, className = '' }: JsonOutputMenuP
     {
       id: 'help',
       label: 'Help',
+      icon: <HelpCircle className="h-4 w-4" />,
       items: [
         { id: 'help-keyboard-shortcuts', label: 'Keyboard Shortcuts', shortcut: 'Ctrl+?', icon: <Keyboard className="h-4 w-4" /> },
         { id: 'help-json-spec', label: 'JSON Specification', icon: <BookOpen className="h-4 w-4" /> },
@@ -83,8 +88,9 @@ export function JsonOutputMenu({ onMenuAction, className = '' }: JsonOutputMenuP
         <div key={menu.id} className="relative">
           <button
             onClick={() => handleMenuClick(menu.id)}
-            className="px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors"
+            className="px-3 py-1.5 text-sm text-foreground hover:bg-accent transition-colors flex items-center gap-1.5"
           >
+            {menu.icon && <span className="text-muted-foreground">{menu.icon}</span>}
             {menu.label}
           </button>
           
