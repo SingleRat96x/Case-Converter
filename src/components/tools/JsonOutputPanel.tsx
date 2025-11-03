@@ -4,7 +4,7 @@ import React from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
 import { JsonTreeView } from '@/components/shared/JsonTreeView';
 import { JsonOutputMenu } from './JsonOutputMenu';
-import { Copy, Download, Code2, TreePine, FileJson, Check, Printer, ZoomIn, ZoomOut } from 'lucide-react';
+import { Copy, Download, Code2, TreePine, Check, Printer } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { useToolTranslations } from '@/lib/i18n/hooks';
 import { downloadTextAsFile } from '@/lib/utils';
@@ -94,12 +94,6 @@ export function JsonOutputPanel({
   };
 
   const handleMenuAction = (actionId: string) => {
-    // Get CodeMirror editor view
-    const getEditorView = () => {
-      const cmEditor = editorRef.current?.querySelector('.cm-editor') as any;
-      return cmEditor?.view;
-    };
-
     switch (actionId) {
       case 'file-save-json':
       case 'file-save-ndjson':
@@ -111,20 +105,12 @@ export function JsonOutputPanel({
       case 'edit-copy':
         handleCopy();
         break;
-      case 'edit-select-all': {
-        const view = getEditorView();
-        if (view) {
-          import('@codemirror/commands').then(({ selectAll }) => selectAll(view));
-        }
+      case 'edit-select-all':
+        document.execCommand('selectAll');
         break;
-      }
-      case 'edit-find': {
-        const view = getEditorView();
-        if (view) {
-          import('@codemirror/search').then(({ openSearchPanel }) => openSearchPanel(view));
-        }
+      case 'edit-find':
+        // Find is handled by browser or CodeMirror internally
         break;
-      }
       case 'view-code':
         onViewModeChange('code');
         break;

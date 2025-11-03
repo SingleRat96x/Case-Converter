@@ -4,8 +4,7 @@ import React, { useEffect, useRef } from 'react';
 import { JsonEditorPanel } from '@/components/shared/JsonEditorPanel';
 import { JsonInputMenu } from './JsonInputMenu';
 import { 
-  Upload, FileText, AlertCircle, CheckCircle, Sparkles, Minimize2, Trash2, Loader2,
-  Undo, Redo, ChevronLeft, ChevronRight, Settings2
+  Upload, AlertCircle, CheckCircle, Sparkles, Minimize2, Trash2, Loader2
 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
@@ -58,9 +57,8 @@ export function JsonInputPanel({
   height = '500px',
   className = ''
 }: JsonInputPanelProps) {
-  const { tool, common } = useToolTranslations('tools/code-data');
+  const { tool } = useToolTranslations('tools/code-data');
   const fileInputRef = useRef<HTMLInputElement>(null);
-  const editorRef = useRef<HTMLDivElement>(null);
   const [customIndent, setCustomIndent] = React.useState('');
   const isInitialMount = useRef(true);
 
@@ -78,6 +76,7 @@ export function JsonInputPanel({
     if (value && !isProcessing && !validationError) {
       onFormat();
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [indentSize, sortKeys, unescapeStrings, ndjsonMode]);
 
   const handleFileClick = () => {
@@ -106,12 +105,6 @@ export function JsonInputPanel({
   };
 
   const handleMenuAction = (actionId: string) => {
-    // Get CodeMirror editor view
-    const getEditorView = () => {
-      const cmEditor = editorRef.current?.querySelector('.cm-editor') as any;
-      return cmEditor?.view;
-    };
-
     switch (actionId) {
       case 'file-new':
         onClear();
@@ -124,46 +117,27 @@ export function JsonInputPanel({
       case 'file-print':
         // These will be handled by output panel
         break;
-      case 'edit-undo': {
-        const view = getEditorView();
-        if (view) {
-          import('@codemirror/commands').then(({ undo }) => undo(view));
-        }
+      case 'edit-undo':
+        document.execCommand('undo');
         break;
-      }
-      case 'edit-redo': {
-        const view = getEditorView();
-        if (view) {
-          import('@codemirror/commands').then(({ redo }) => redo(view));
-        }
+      case 'edit-redo':
+        document.execCommand('redo');
         break;
-      }
-      case 'edit-cut': {
+      case 'edit-cut':
         document.execCommand('cut');
         break;
-      }
-      case 'edit-copy': {
+      case 'edit-copy':
         document.execCommand('copy');
         break;
-      }
-      case 'edit-paste': {
+      case 'edit-paste':
         document.execCommand('paste');
         break;
-      }
-      case 'edit-select-all': {
-        const view = getEditorView();
-        if (view) {
-          import('@codemirror/commands').then(({ selectAll }) => selectAll(view));
-        }
+      case 'edit-select-all':
+        document.execCommand('selectAll');
         break;
-      }
-      case 'edit-find': {
-        const view = getEditorView();
-        if (view) {
-          import('@codemirror/search').then(({ openSearchPanel }) => openSearchPanel(view));
-        }
+      case 'edit-find':
+        // Search panel is available via Ctrl+F due to CodeMirror search extension
         break;
-      }
       case 'insert-sample-object':
         onChange('{\n  "name": "John Doe",\n  "age": 30,\n  "email": "john@example.com",\n  "isActive": true,\n  "address": {\n    "street": "123 Main St",\n    "city": "New York",\n    "country": "USA"\n  }\n}');
         break;

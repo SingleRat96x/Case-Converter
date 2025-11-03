@@ -7,7 +7,6 @@ import {
   Code2, TreePine, WrapText, ListOrdered, ChevronDown as FoldIcon, ChevronUp as UnfoldIcon,
   Keyboard, BookOpen, Info, File, Edit3, Eye, HelpCircle
 } from 'lucide-react';
-import { useToolTranslations } from '@/lib/i18n/hooks';
 
 interface JsonOutputMenuProps {
   onMenuAction: (actionId: string) => void;
@@ -22,7 +21,6 @@ interface MenuItem {
 }
 
 export function JsonOutputMenu({ onMenuAction, className = '' }: JsonOutputMenuProps) {
-  const { tool } = useToolTranslations('tools/code-data');
   const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   const menuItems: MenuItem[] = [

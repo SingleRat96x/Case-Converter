@@ -10,8 +10,8 @@
 import React, { useCallback, useMemo, useState, useEffect } from 'react';
 import CodeMirror from '@uiw/react-codemirror';
 import { json } from '@codemirror/lang-json';
-import { EditorView, Decoration, DecorationSet, ViewPlugin, ViewUpdate } from '@codemirror/view';
-import { StateField, StateEffect } from '@codemirror/state';
+import { EditorView, Decoration, DecorationSet } from '@codemirror/view';
+import { StateField } from '@codemirror/state';
 import { linter, Diagnostic } from '@codemirror/lint';
 import { search, highlightSelectionMatches } from '@codemirror/search';
 import { history } from '@codemirror/commands';
@@ -191,6 +191,7 @@ export function JsonEditorPanel({
   });
 
   const errorHighlightField = useMemo(() => {
+    const mark = errorHighlightMark;
     return StateField.define<DecorationSet>({
       create() {
         return Decoration.none;
@@ -232,7 +233,7 @@ export function JsonEditorPanel({
             
             // Sort marks by position and create decorations
             marks.sort((a, b) => a.from - b.from);
-            const decorations = marks.map(mark => errorHighlightMark.range(mark.from, mark.to));
+            const decorations = marks.map(m => mark.range(m.from, m.to));
             
             return Decoration.set(decorations);
           }
@@ -241,7 +242,7 @@ export function JsonEditorPanel({
       },
       provide: f => EditorView.decorations.from(f)
     });
-  }, [readOnly, validationError]);
+  }, [readOnly, validationError, errorHighlightMark]);
 
   /**
    * CodeMirror extensions and theme

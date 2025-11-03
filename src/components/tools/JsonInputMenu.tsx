@@ -4,11 +4,10 @@ import React, { useState } from 'react';
 import { 
   FileText, FolderOpen, Save, Printer, FileJson,
   Undo, Redo, Scissors, Copy, Clipboard, Search, TextSelect,
-  PlusCircle, Layers, Braces, Brackets,
+  Braces, Brackets,
   Eye, WrapText, ListOrdered, ChevronDown as FoldIcon, ChevronUp as UnfoldIcon,
   Keyboard, BookOpen, Info, File, Edit3, PlusSquare, HelpCircle
 } from 'lucide-react';
-import { useToolTranslations } from '@/lib/i18n/hooks';
 
 interface JsonInputMenuProps {
   onMenuAction: (actionId: string) => void;
@@ -23,7 +22,6 @@ interface MenuItem {
 }
 
 export function JsonInputMenu({ onMenuAction, className = '' }: JsonInputMenuProps) {
-  const { tool } = useToolTranslations('tools/code-data');
   const [openMenu, setOpenMenu] = useState<string | null>(null);
 
   const menuItems: MenuItem[] = [
