@@ -63,6 +63,10 @@ export function Footer() {
     {
       title: t('navigation.extractNumbers'),
       href: currentLocale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers'
+    },
+    {
+      title: t('navigation.readingTimeEstimator'),
+      href: currentLocale === 'en' ? '/tools/reading-time-estimator' : '/ru/tools/reading-time-estimator'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
