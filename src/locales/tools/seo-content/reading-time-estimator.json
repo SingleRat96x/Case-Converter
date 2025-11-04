@@ -11,20 +11,23 @@
         "title": "Key Features",
         "items": [
           { "title": "Multiple Input Options", "description": "Paste text directly or extract content from JSON data with automatic key detection for common fields like 'content', 'body', or 'text'." },
-          { "title": "Customizable Reading Speeds", "description": "Choose between silent reading (150-250 WPM) or read-aloud speed (100-150 WPM) with convenient preset buttons or custom values." },
-          { "title": "Detailed Time Breakdown", "description": "View reading time in hours:mins:secs format with automatic analytics including word count and character count." },
-          { "title": "Privacy-Focused", "description": "All calculations happen locally in your browser. No text data is sent to servers or stored anywhere." }
+          { "title": "Dual Reading Speed Sliders", "description": "Independently adjust silent reading speed (150-250 WPM) and read-aloud speed (100-150 WPM) with convenient preset buttons." },
+          { "title": "Real-Time Analytics", "description": "View instant reading time in hours:mins:secs format with automatic word count, character count, and dual time estimates." },
+          { "title": "Line-by-Line Editor", "description": "Advanced text editor with line numbers, JSON syntax highlighting, and support for file uploads in multiple formats." },
+          { "title": "Smart JSON Parser", "description": "Automatically extracts text from JSON structures, validates syntax, and provides detailed error messages for invalid data." },
+          { "title": "Privacy-Focused", "description": "All calculations happen locally in your browser. No text data is sent to servers or stored anywhere—complete privacy guaranteed." }
         ]
       },
       "useCases": {
         "title": "Perfect For",
         "description": "Essential for content creators, publishers, and speakers across various use cases.",
         "items": [
-          { "title": "Blog Posts & Articles", "description": "Display accurate reading time estimates to set reader expectations and improve engagement metrics." },
-          { "title": "Presentations & Speeches", "description": "Time your presentations accurately using read-aloud speed to stay within allocated time slots." },
-          { "title": "Books & Long-Form Content", "description": "Calculate chapter and total reading times for books, e-books, and long-form articles." },
-          { "title": "Technical Documentation", "description": "Use slower reading speeds for accurate estimates on complex technical manuals and documentation." },
-          { "title": "API & JSON Content", "description": "Extract and analyze text from JSON responses, CMS data, and structured content." }
+          { "title": "Blog Posts & Articles", "description": "Display accurate reading time estimates to set reader expectations and improve engagement metrics on your website." },
+          { "title": "Presentations & Speeches", "description": "Time your presentations accurately using read-aloud speed to stay within allocated time slots and deliver perfectly paced talks." },
+          { "title": "Books & E-books", "description": "Calculate chapter and total reading times for books, e-books, and long-form articles to help readers plan their reading sessions." },
+          { "title": "Technical Documentation", "description": "Use slower reading speeds for accurate estimates on complex technical manuals, API docs, and developer guides." },
+          { "title": "Content Marketing", "description": "Optimize email newsletters, landing pages, and marketing copy by understanding exact reading times for your target audience." },
+          { "title": "API & CMS Content", "description": "Extract and analyze text from JSON API responses, CMS data exports, and structured content for dynamic reading time displays." }
         ]
       },
       "howToUse": {
@@ -92,20 +95,23 @@
         "title": "Основные Функции",
         "items": [
           { "title": "Несколько Вариантов Ввода", "description": "Вставляйте текст напрямую или извлекайте контент из JSON данных с автоматическим определением ключей, таких как 'content', 'body' или 'text'." },
-          { "title": "Настраиваемые Скорости Чтения", "description": "Выбирайте между тихим чтением (150-250 слов/мин) или чтением вслух (100-150 слов/мин) с удобными кнопками или произвольными значениями." },
-          { "title": "Детальная Разбивка Времени", "description": "Просматривайте время чтения в формате часы:мин:сек с автоматической аналитикой, включая количество слов и символов." },
-          { "title": "Конфиденциальность", "description": "Все расчёты происходят локально в вашем браузере. Никакие текстовые данные не отправляются на серверы." }
+          { "title": "Двойные Ползунки Скорости", "description": "Независимо настраивайте скорость тихого чтения (150-250 слов/мин) и чтения вслух (100-150 слов/мин) с удобными кнопками." },
+          { "title": "Аналитика в Реальном Времени", "description": "Просматривайте мгновенное время чтения в формате часы:мин:сек с автоматическим подсчётом слов, символов и двойными оценками времени." },
+          { "title": "Редактор с Нумерацией Строк", "description": "Продвинутый текстовый редактор с нумерацией строк, подсветкой синтаксиса JSON и поддержкой загрузки файлов в различных форматах." },
+          { "title": "Умный Парсер JSON", "description": "Автоматически извлекает текст из JSON структур, валидирует синтаксис и предоставляет детальные сообщения об ошибках." },
+          { "title": "Конфиденциальность", "description": "Все расчёты происходят локально в вашем браузере. Никакие текстовые данные не отправляются на серверы—полная конфиденциальность гарантирована." }
         ]
       },
       "useCases": {
         "title": "Идеально Для",
         "description": "Необходим для создателей контента, издателей и спикеров в различных сценариях.",
         "items": [
-          { "title": "Блог-Посты и Статьи", "description": "Отображайте точные оценки времени чтения для установки ожиданий читателей и улучшения метрик вовлечённости." },
-          { "title": "Презентации и Выступления", "description": "Точно рассчитывайте время презентаций, используя скорость чтения вслух, чтобы уложиться в отведённое время." },
-          { "title": "Книги и Длинный Контент", "description": "Рассчитывайте время чтения глав и общее время для книг, электронных книг и длинных статей." },
-          { "title": "Техническая Документация", "description": "Используйте более медленные скорости для точных оценок времени на сложные технические руководства." },
-          { "title": "API и JSON Контент", "description": "Извлекайте и анализируйте текст из JSON ответов, CMS данных и структурированного контента." }
+          { "title": "Блог-Посты и Статьи", "description": "Отображайте точные оценки времени чтения для установки ожиданий читателей и улучшения метрик вовлечённости на вашем сайте." },
+          { "title": "Презентации и Выступления", "description": "Точно рассчитывайте время презентаций, используя скорость чтения вслух, чтобы уложиться в отведённое время и идеально распределить темп." },
+          { "title": "Книги и Электронные Книги", "description": "Рассчитывайте время чтения глав и общее время для книг, электронных книг и длинных статей, помогая читателям планировать сессии." },
+          { "title": "Техническая Документация", "description": "Используйте более медленные скорости для точных оценок времени на сложные технические руководства, API документацию и гайды разработчиков." },
+          { "title": "Контент-Маркетинг", "description": "Оптимизируйте email-рассылки, целевые страницы и маркетинговые тексты, понимая точное время чтения для вашей аудитории." },
+          { "title": "API и CMS Контент", "description": "Извлекайте и анализируйте текст из JSON ответов API, экспорта CMS данных и структурированного контента для динамического отображения времени чтения." }
         ]
       },
       "howToUse": {
