@@ -1,204 +1,134 @@
 {
   "en": {
     "title": "Reading Time Estimator – Free Read Time Calculator for Text & JSON",
-    "metaDescription": "Paste text, enter a word count, or provide JSON and instantly get an estimated reading time. Choose words-per-minute for normal, fast, or out-loud reading and see minutes, seconds, and reading time for articles, emails, and books.",
+    "metaDescription": "Calculate reading time instantly for articles, blog posts, and documents. Supports text input, JSON extraction, and customizable reading speeds (silent, out-loud). Free and privacy-focused.",
     "sections": {
       "intro": {
-        "title": "Reading Time Estimator",
-        "content": "Calculate how long it takes to read your text, article, or document with our free reading time estimator. Whether you're a content creator planning blog posts, a speaker timing presentations, or a publisher estimating book reading times, our tool provides instant, accurate estimates based on average reading speeds. Input text directly, enter a word count, or extract text from JSON data."
+        "title": "Estimate Reading Time for Any Content",
+        "content": "Calculate how long it takes to read your text, article, or document with our free reading time estimator. Perfect for content creators, speakers, and publishers who need accurate time estimates. Simply paste your text or JSON data and get instant results with customizable reading speeds for different scenarios."
       },
       "features": {
-        "title": "Powerful Reading Time Calculation Features",
+        "title": "Key Features",
         "items": [
           {
-            "title": "Multiple Input Modes",
-            "description": "Choose from text input, word count entry, or JSON data with automatic text extraction from specified keys."
+            "title": "Multiple Input Options",
+            "description": "Paste text directly or extract content from JSON data with automatic key detection for common fields like 'content', 'body', or 'text'."
           },
           {
             "title": "Customizable Reading Speeds",
-            "description": "Select from preset reading speeds (average 200 wpm, fast 250 wpm, technical 150 wpm, out-loud 120 wpm) or set your own custom speed."
+            "description": "Choose between silent reading (150-250 WPM) or read-aloud speed (100-150 WPM) with convenient preset buttons or custom values."
           },
           {
-            "title": "Precise Time Estimates",
-            "description": "Get accurate reading time estimates displayed in minutes and seconds, with a range to account for reading speed variations."
+            "title": "Detailed Time Breakdown",
+            "description": "View reading time in hours:mins:secs format with automatic analytics including word count and character count."
           },
           {
-            "title": "JSON Text Extraction",
-            "description": "Automatically extract text content from JSON data by specifying keys or using auto-detection for common content fields."
-          },
-          {
-            "title": "Out-Loud Reading Time",
-            "description": "See separate estimates for reading out loud, perfect for presentations, speeches, podcasts, and audio content planning."
-          },
-          {
-            "title": "Word Count Analysis",
-            "description": "Automatically count words from pasted text or extracted JSON content to provide comprehensive reading analytics."
-          },
-          {
-            "title": "Range Estimates",
-            "description": "View reading time ranges to account for individual reading speed variations (±15% from your selected speed)."
-          },
-          {
-            "title": "One-Click Copy",
-            "description": "Copy complete reading time summary to clipboard with word count, speed, range, and out-loud estimates included."
-          },
-          {
-            "title": "Privacy-First",
-            "description": "All calculations happen locally in your browser - no text data is sent to servers or stored."
+            "title": "Privacy-Focused",
+            "description": "All calculations happen locally in your browser. No text data is sent to servers or stored anywhere."
           }
         ]
       },
       "useCases": {
-        "title": "Perfect for Content Creators & Publishers",
-        "description": "Our reading time estimator is essential for various content creation, publishing, and presentation tasks.",
+        "title": "Perfect For",
+        "description": "Essential for content creators, publishers, and speakers across various use cases.",
         "items": [
           {
             "title": "Blog Posts & Articles",
-            "description": "Estimate reading time for blog posts to set reader expectations and improve engagement metrics."
-          },
-          {
-            "title": "Content Marketing",
-            "description": "Plan content length and reading time for email newsletters, landing pages, and marketing materials."
-          },
-          {
-            "title": "Books & E-books",
-            "description": "Calculate chapter reading times and total book reading duration for publisher information and reader planning."
+            "description": "Display accurate reading time estimates to set reader expectations and improve engagement metrics."
           },
           {
             "title": "Presentations & Speeches",
-            "description": "Time your presentations accurately using out-loud reading estimates to stay within allocated time slots."
+            "description": "Time your presentations accurately using read-aloud speed to stay within allocated time slots."
           },
           {
-            "title": "Podcasts & Audio Content",
-            "description": "Estimate script reading time for podcast episodes, audiobooks, and voice-over content."
-          },
-          {
-            "title": "Academic Papers",
-            "description": "Provide reading time estimates for research papers, theses, and academic documentation."
+            "title": "Books & Long-Form Content",
+            "description": "Calculate chapter and total reading times for books, e-books, and long-form articles."
           },
           {
             "title": "Technical Documentation",
-            "description": "Use slower reading speeds to accurately estimate time needed for technical manuals and documentation."
+            "description": "Use slower reading speeds for accurate estimates on complex technical manuals and documentation."
           },
           {
-            "title": "API Content Analysis",
-            "description": "Extract text from JSON API responses to estimate reading time for dynamic content and CMS data."
+            "title": "API & JSON Content",
+            "description": "Extract and analyze text from JSON responses, CMS data, and structured content."
           }
         ]
       },
       "howToUse": {
-        "title": "How to Estimate Reading Time",
-        "description": "Follow these simple steps to calculate reading time for your content.",
+        "title": "How to Use",
+        "description": "Calculate reading time in three simple steps.",
         "steps": [
           {
             "step": 1,
-            "title": "Choose Your Input Mode",
-            "description": "Select Text to paste content directly, Word Count to enter a number, or JSON to extract text from structured data."
+            "title": "Choose Input Mode",
+            "description": "Select 'Text' to paste content directly, or 'JSON' to extract text from structured data."
           },
           {
             "step": 2,
-            "title": "Enter Your Content",
-            "description": "Paste your text, type a word count, or provide JSON data. For JSON, optionally specify keys like [\"content\", \"body\"] or leave blank for auto-detection."
+            "title": "Adjust Reading Speed",
+            "description": "Use the sliders to set your silent reading speed (150-250 WPM) and read-aloud speed (100-150 WPM). Click preset buttons for quick selection."
           },
           {
             "step": 3,
-            "title": "Select Reading Speed",
-            "description": "Choose a preset reading speed (average, fast, technical, or out-loud) or enter a custom words-per-minute value."
-          },
-          {
-            "step": 4,
-            "title": "View Instant Results",
-            "description": "See your estimated reading time in minutes and seconds, along with word count, reading range, and out-loud time. Copy the summary to share or save."
+            "title": "View Results",
+            "description": "See instant reading time estimates with detailed analytics including word count, character count, and time breakdowns."
           }
         ]
       },
       "examples": {
         "title": "Reading Time Examples",
-        "description": "See typical reading times for different content types at various reading speeds.",
+        "description": "Typical reading times for different content lengths.",
         "items": [
           {
-            "title": "Short Blog Post (500 words)",
-            "input": "500 words at 200 wpm",
-            "output": "2 min 30 sec reading time (2-3 minute range)"
+            "title": "Short Article (500 words)",
+            "input": "500 words at 200 WPM",
+            "output": "2:30 reading time"
           },
           {
             "title": "Medium Article (1,500 words)",
-            "input": "1,500 words at 200 wpm",
-            "output": "7 min 30 sec reading time (6-9 minute range)"
+            "input": "1,500 words at 200 WPM",
+            "output": "7:30 reading time"
           },
           {
-            "title": "Long Form Content (3,000 words)",
-            "input": "3,000 words at 250 wpm (fast)",
-            "output": "12 min reading time (10-14 minute range)"
-          },
-          {
-            "title": "Technical Documentation (2,000 words)",
-            "input": "2,000 words at 150 wpm (technical)",
-            "output": "13 min 20 sec reading time (11-15 minute range)"
+            "title": "Long-Form Content (3,000 words)",
+            "input": "3,000 words at 250 WPM (fast)",
+            "output": "12:00 reading time"
           },
           {
             "title": "Presentation Script (1,200 words)",
-            "input": "1,200 words at 120 wpm (out-loud)",
-            "output": "10 min reading time (9-12 minute range)"
+            "input": "1,200 words at 120 WPM (read-aloud)",
+            "output": "10:00 speaking time"
           }
-        ]
-      },
-      "benefits": {
-        "title": "Why Use Our Reading Time Estimator",
-        "content": "Professional reading time calculation with accurate estimates and flexible input options.",
-        "items": [
-          "Completely free with unlimited usage",
-          "No registration or account required",
-          "Multiple input modes: text, word count, and JSON",
-          "Customizable reading speeds for different scenarios",
-          "Automatic word counting and text extraction",
-          "Privacy-first - all calculations done locally",
-          "Out-loud reading estimates for presentations",
-          "Reading time ranges for accuracy",
-          "One-click copy summary to clipboard",
-          "Works with all languages and character sets"
         ]
       },
       "faqs": [
         {
           "question": "How accurate are the reading time estimates?",
-          "answer": "Our estimates are based on well-researched average reading speeds: 200 wpm for regular reading, 250 wpm for fast readers, 150 wpm for technical content, and 120 wpm for out-loud reading. We also provide a range (±15%) to account for individual variations. Actual reading time may vary based on content complexity, reader familiarity with the topic, and individual reading skills."
+          "answer": "Our estimates use well-researched average reading speeds: 200 WPM for regular reading, 250 WPM for fast readers, 150 WPM for technical content, and 120 WPM for read-aloud. Actual reading time varies based on content complexity and reader familiarity."
         },
         {
-          "question": "What reading speeds should I use for different content types?",
-          "answer": "Use Average (200 wpm) for blog posts, articles, and general content. Use Fast (250 wpm) for experienced readers or simple content. Use Slow/Technical (150 wpm) for complex technical documentation, academic papers, or unfamiliar topics. Use Out-loud (120 wpm) for presentations, speeches, podcasts, or any content that will be read aloud."
+          "question": "What's the difference between silent and read-aloud speed?",
+          "answer": "Silent reading is typically faster (200-250 WPM) while speaking out loud is slower (100-150 WPM). Use read-aloud estimates for presentations, speeches, podcasts, and narration."
         },
         {
           "question": "How does JSON text extraction work?",
-          "answer": "You can specify JSON keys to extract text from (like [\"content\", \"body\", \"text\"]) or leave it blank for auto-detection. The tool will recursively search your JSON data for text content in the specified keys or automatically look for common content fields. This is perfect for analyzing content from APIs, CMS exports, or structured data."
-        },
-        {
-          "question": "What's the difference between reading time and out-loud time?",
-          "answer": "Reading time is based on silent reading speeds (typically 200-250 wpm for most people), while out-loud time is based on speaking speeds (typically 120-150 wpm). Out-loud time is always longer because speaking requires more time than silent reading. Use out-loud estimates for presentations, speeches, podcasts, and audiobook narration."
-        },
-        {
-          "question": "Can I use this for books and long-form content?",
-          "answer": "Yes! The tool works for content of any length. For books, you can either paste the entire text, enter the total word count, or estimate chapter by chapter. Many novels are 80,000-100,000 words, which would take approximately 6-8 hours to read at average speed."
-        },
-        {
-          "question": "Why does the tool show a reading time range?",
-          "answer": "Reading speed varies between individuals based on factors like reading skill, content familiarity, and focus level. The range (typically ±15% from your selected speed) provides a more realistic estimate. For example, a 5-minute estimated reading time might have a range of 4-6 minutes in practice."
+          "answer": "The tool automatically detects common content fields in your JSON data (like 'content', 'body', 'text'). It recursively searches the JSON structure to extract all text content for analysis."
         },
         {
           "question": "Is my text data stored or sent to a server?",
-          "answer": "No, all calculations happen locally in your browser using JavaScript. Your text, JSON data, and word counts are never sent to our servers or stored anywhere. This ensures complete privacy and security for your content."
+          "answer": "No. All calculations happen locally in your browser using JavaScript. Your text and JSON data never leave your device, ensuring complete privacy."
         },
         {
-          "question": "Can I use custom reading speeds?",
-          "answer": "Yes! Select the 'Custom WPM' option and enter any words-per-minute value. This is useful if you know your specific reading speed or want to match specific requirements. Average adults read 200-250 wpm, while speed readers can exceed 400 wpm."
+          "question": "Can I use this for books and long content?",
+          "answer": "Yes! The tool handles content of any length. A typical 80,000-word novel would take approximately 6-7 hours to read at average speed."
         }
       ],
       "relatedTools": {
-        "title": "Related Text Analysis Tools",
+        "title": "Related Tools",
         "items": [
           {
             "name": "Text Counter",
-            "description": "Count characters, words, sentences, and paragraphs with detailed text analytics",
+            "description": "Count words, characters, sentences, and paragraphs with detailed analytics",
             "href": "/tools/text-counter"
           },
           {
@@ -222,219 +152,149 @@
   },
   "ru": {
     "title": "Калькулятор Времени Чтения — Бесплатный Оценщик для Текста и JSON",
-    "metaDescription": "Вставьте текст, введите количество слов или предоставьте JSON и мгновенно получите оценку времени чтения. Выберите слов-в-минуту для обычного, быстрого или чтения вслух и посмотрите минуты, секунды и время чтения для статей, писем и книг.",
+    "metaDescription": "Мгновенный расчёт времени чтения для статей, блог-постов и документов. Поддержка текста, JSON извлечения и настраиваемых скоростей чтения. Бесплатно и конфиденциально.",
     "sections": {
       "intro": {
-        "title": "Калькулятор Времени Чтения",
-        "content": "Рассчитайте, сколько времени требуется на чтение вашего текста, статьи или документа с помощью нашего бесплатного калькулятора времени чтения. Независимо от того, являетесь ли вы создателем контента, планирующим блог-посты, спикером, рассчитывающим время презентации, или издателем, оценивающим время чтения книг, наш инструмент предоставляет мгновенные и точные оценки на основе средних скоростей чтения. Вводите текст напрямую, введите количество слов или извлеките текст из JSON данных."
+        "title": "Оценка Времени Чтения для Любого Контента",
+        "content": "Рассчитайте, сколько времени требуется на чтение вашего текста, статьи или документа с помощью нашего бесплатного калькулятора. Идеально для создателей контента, спикеров и издателей, которым нужны точные оценки времени. Просто вставьте текст или JSON данные и получите мгновенные результаты с настраиваемыми скоростями для разных сценариев."
       },
       "features": {
-        "title": "Мощные Функции Расчёта Времени Чтения",
+        "title": "Основные Функции",
         "items": [
           {
-            "title": "Несколько Режимов Ввода",
-            "description": "Выбирайте между вводом текста, вводом количества слов или JSON данными с автоматическим извлечением текста из указанных ключей."
+            "title": "Несколько Вариантов Ввода",
+            "description": "Вставляйте текст напрямую или извлекайте контент из JSON данных с автоматическим определением ключей, таких как 'content', 'body' или 'text'."
           },
           {
             "title": "Настраиваемые Скорости Чтения",
-            "description": "Выбирайте из предустановленных скоростей чтения (средняя 200 слов/мин, быстрая 250 слов/мин, техническая 150 слов/мин, вслух 120 слов/мин) или установите свою скорость."
+            "description": "Выбирайте между тихим чтением (150-250 слов/мин) или чтением вслух (100-150 слов/мин) с удобными кнопками или произвольными значениями."
           },
           {
-            "title": "Точные Оценки Времени",
-            "description": "Получайте точные оценки времени чтения, отображаемые в минутах и секундах, с диапазоном для учёта вариаций скорости чтения."
+            "title": "Детальная Разбивка Времени",
+            "description": "Просматривайте время чтения в формате часы:мин:сек с автоматической аналитикой, включая количество слов и символов."
           },
           {
-            "title": "Извлечение Текста из JSON",
-            "description": "Автоматически извлекайте текстовое содержимое из JSON данных, указывая ключи или используя автоопределение для общих полей контента."
-          },
-          {
-            "title": "Время Чтения Вслух",
-            "description": "Смотрите отдельные оценки для чтения вслух, идеально для презентаций, выступлений, подкастов и планирования аудиоконтента."
-          },
-          {
-            "title": "Анализ Количества Слов",
-            "description": "Автоматически считайте слова из вставленного текста или извлечённого JSON контента для предоставления всесторонней аналитики чтения."
-          },
-          {
-            "title": "Диапазонные Оценки",
-            "description": "Просматривайте диапазоны времени чтения для учёта индивидуальных вариаций скорости чтения (±15% от выбранной скорости)."
-          },
-          {
-            "title": "Копирование Одним Кликом",
-            "description": "Копируйте полную сводку времени чтения в буфер обмена с количеством слов, скоростью, диапазоном и оценками вслух."
-          },
-          {
-            "title": "Приватность Прежде Всего",
-            "description": "Все расчёты происходят локально в вашем браузере - никакие текстовые данные не отправляются на серверы и не сохраняются."
+            "title": "Конфиденциальность",
+            "description": "Все расчёты происходят локально в вашем браузере. Никакие текстовые данные не отправляются на серверы."
           }
         ]
       },
       "useCases": {
-        "title": "Идеально для Создателей Контента и Издателей",
-        "description": "Наш калькулятор времени чтения необходим для различных задач создания контента, публикации и презентаций.",
+        "title": "Идеально Для",
+        "description": "Необходим для создателей контента, издателей и спикеров в различных сценариях.",
         "items": [
           {
             "title": "Блог-Посты и Статьи",
-            "description": "Оценивайте время чтения блог-постов, чтобы задать ожидания читателей и улучшить метрики вовлечённости."
-          },
-          {
-            "title": "Контент-Маркетинг",
-            "description": "Планируйте длину контента и время чтения для email-рассылок, целевых страниц и маркетинговых материалов."
-          },
-          {
-            "title": "Книги и Электронные Книги",
-            "description": "Рассчитывайте время чтения глав и общее время чтения книги для информации издателя и планирования читателя."
+            "description": "Отображайте точные оценки времени чтения для установки ожиданий читателей и улучшения метрик вовлечённости."
           },
           {
             "title": "Презентации и Выступления",
-            "description": "Точно рассчитывайте время презентаций, используя оценки чтения вслух, чтобы уложиться в отведённое время."
+            "description": "Точно рассчитывайте время презентаций, используя скорость чтения вслух, чтобы уложиться в отведённое время."
           },
           {
-            "title": "Подкасты и Аудиоконтент",
-            "description": "Оценивайте время чтения скриптов для эпизодов подкастов, аудиокниг и голосового контента."
-          },
-          {
-            "title": "Академические Работы",
-            "description": "Предоставляйте оценки времени чтения для исследовательских работ, диссертаций и академической документации."
+            "title": "Книги и Длинный Контент",
+            "description": "Рассчитывайте время чтения глав и общее время для книг, электронных книг и длинных статей."
           },
           {
             "title": "Техническая Документация",
-            "description": "Используйте более медленные скорости чтения для точной оценки времени, необходимого для технических руководств и документации."
+            "description": "Используйте более медленные скорости для точных оценок времени на сложные технические руководства."
           },
           {
-            "title": "Анализ Контента API",
-            "description": "Извлекайте текст из JSON ответов API для оценки времени чтения динамического контента и данных CMS."
+            "title": "API и JSON Контент",
+            "description": "Извлекайте и анализируйте текст из JSON ответов, CMS данных и структурированного контента."
           }
         ]
       },
       "howToUse": {
-        "title": "Как Оценить Время Чтения",
-        "description": "Следуйте простым шагам для расчёта времени чтения вашего контента.",
+        "title": "Как Использовать",
+        "description": "Рассчитайте время чтения в три простых шага.",
         "steps": [
           {
             "step": 1,
             "title": "Выберите Режим Ввода",
-            "description": "Выберите Текст для прямой вставки контента, Количество Слов для ввода числа или JSON для извлечения текста из структурированных данных."
+            "description": "Выберите 'Текст' для прямой вставки или 'JSON' для извлечения текста из структурированных данных."
           },
           {
             "step": 2,
-            "title": "Введите Ваш Контент",
-            "description": "Вставьте текст, введите количество слов или предоставьте JSON данные. Для JSON можно указать ключи как [\"content\", \"body\"] или оставить пустым для автоопределения."
+            "title": "Настройте Скорость Чтения",
+            "description": "Используйте ползунки для установки скорости тихого чтения (150-250 слов/мин) и чтения вслух (100-150 слов/мин). Нажимайте кнопки для быстрого выбора."
           },
           {
             "step": 3,
-            "title": "Выберите Скорость Чтения",
-            "description": "Выберите предустановленную скорость чтения (средняя, быстрая, техническая или вслух) или введите своё значение слов в минуту."
-          },
-          {
-            "step": 4,
-            "title": "Просмотрите Мгновенные Результаты",
-            "description": "Смотрите расчётное время чтения в минутах и секундах, вместе с количеством слов, диапазоном чтения и временем вслух. Копируйте сводку для обмена или сохранения."
+            "title": "Просмотрите Результаты",
+            "description": "Получите мгновенные оценки времени чтения с детальной аналитикой, включая количество слов, символов и разбивку времени."
           }
         ]
       },
       "examples": {
         "title": "Примеры Времени Чтения",
-        "description": "Посмотрите типичное время чтения для различных типов контента при разных скоростях чтения.",
+        "description": "Типичное время чтения для контента разной длины.",
         "items": [
           {
-            "title": "Короткий Блог-Пост (500 слов)",
+            "title": "Короткая Статья (500 слов)",
             "input": "500 слов при 200 слов/мин",
-            "output": "2 мин 30 сек время чтения (диапазон 2-3 минуты)"
+            "output": "2:30 время чтения"
           },
           {
             "title": "Средняя Статья (1,500 слов)",
             "input": "1,500 слов при 200 слов/мин",
-            "output": "7 мин 30 сек время чтения (диапазон 6-9 минут)"
+            "output": "7:30 время чтения"
           },
           {
             "title": "Длинный Контент (3,000 слов)",
             "input": "3,000 слов при 250 слов/мин (быстрое)",
-            "output": "12 мин время чтения (диапазон 10-14 минут)"
-          },
-          {
-            "title": "Техническая Документация (2,000 слов)",
-            "input": "2,000 слов при 150 слов/мин (техническое)",
-            "output": "13 мин 20 сек время чтения (диапазон 11-15 минут)"
+            "output": "12:00 время чтения"
           },
           {
             "title": "Скрипт Презентации (1,200 слов)",
             "input": "1,200 слов при 120 слов/мин (вслух)",
-            "output": "10 мин время чтения (диапазон 9-12 минут)"
+            "output": "10:00 время речи"
           }
-        ]
-      },
-      "benefits": {
-        "title": "Почему Использовать Наш Калькулятор Времени Чтения",
-        "content": "Профессиональный расчёт времени чтения с точными оценками и гибкими опциями ввода.",
-        "items": [
-          "Полностью бесплатно с неограниченным использованием",
-          "Не требуется регистрация или аккаунт",
-          "Несколько режимов ввода: текст, количество слов и JSON",
-          "Настраиваемые скорости чтения для разных сценариев",
-          "Автоматический подсчёт слов и извлечение текста",
-          "Приватность прежде всего - все расчёты локально",
-          "Оценки чтения вслух для презентаций",
-          "Диапазоны времени чтения для точности",
-          "Копирование сводки одним кликом",
-          "Работает со всеми языками и наборами символов"
         ]
       },
       "faqs": [
         {
           "question": "Насколько точны оценки времени чтения?",
-          "answer": "Наши оценки основаны на хорошо изученных средних скоростях чтения: 200 слов/мин для обычного чтения, 250 слов/мин для быстрых читателей, 150 слов/мин для технического контента и 120 слов/мин для чтения вслух. Мы также предоставляем диапазон (±15%) для учёта индивидуальных вариаций. Фактическое время чтения может варьироваться в зависимости от сложности контента, знакомства читателя с темой и индивидуальных навыков чтения."
+          "answer": "Наши оценки используют хорошо изученные средние скорости чтения: 200 слов/мин для обычного чтения, 250 слов/мин для быстрого, 150 слов/мин для технического контента и 120 слов/мин для чтения вслух. Фактическое время варьируется в зависимости от сложности контента и знакомства читателя."
         },
         {
-          "question": "Какие скорости чтения использовать для различных типов контента?",
-          "answer": "Используйте Среднюю (200 слов/мин) для блог-постов, статей и общего контента. Используйте Быструю (250 слов/мин) для опытных читателей или простого контента. Используйте Медленную/Техническую (150 слов/мин) для сложной технической документации, академических работ или незнакомых тем. Используйте Вслух (120 слов/мин) для презентаций, выступлений, подкастов или любого контента, который будет читаться вслух."
+          "question": "В чём разница между тихим и громким чтением?",
+          "answer": "Тихое чтение обычно быстрее (200-250 слов/мин), в то время как речь вслух медленнее (100-150 слов/мин). Используйте оценки вслух для презентаций, выступлений, подкастов и озвучки."
         },
         {
           "question": "Как работает извлечение текста из JSON?",
-          "answer": "Вы можете указать ключи JSON для извлечения текста (например, [\"content\", \"body\", \"text\"]) или оставить пустым для автоопределения. Инструмент рекурсивно ищет в ваших JSON данных текстовое содержимое в указанных ключах или автоматически ищет общие поля контента. Это идеально для анализа контента из API, экспорта CMS или структурированных данных."
+          "answer": "Инструмент автоматически определяет общие поля контента в ваших JSON данных (например, 'content', 'body', 'text'). Он рекурсивно ищет в структуре JSON для извлечения всего текстового контента для анализа."
         },
         {
-          "question": "В чём разница между временем чтения и временем вслух?",
-          "answer": "Время чтения основано на скоростях молчаливого чтения (обычно 200-250 слов/мин для большинства людей), в то время как время вслух основано на скоростях речи (обычно 120-150 слов/мин). Время вслух всегда дольше, потому что речь требует больше времени, чем молчаливое чтение. Используйте оценки вслух для презентаций, выступлений, подкастов и озвучки аудиокниг."
+          "question": "Сохраняются ли мои текстовые данные?",
+          "answer": "Нет. Все расчёты происходят локально в вашем браузере с использованием JavaScript. Ваш текст и JSON данные никогда не покидают ваше устройство, обеспечивая полную конфиденциальность."
         },
         {
-          "question": "Могу ли я использовать это для книг и длинного контента?",
-          "answer": "Да! Инструмент работает с контентом любой длины. Для книг вы можете либо вставить весь текст, ввести общее количество слов, либо оценивать главу за главой. Многие романы содержат 80,000-100,000 слов, что займёт примерно 6-8 часов для чтения при средней скорости."
-        },
-        {
-          "question": "Почему инструмент показывает диапазон времени чтения?",
-          "answer": "Скорость чтения варьируется между людьми в зависимости от таких факторов, как навыки чтения, знакомство с контентом и уровень концентрации. Диапазон (обычно ±15% от выбранной скорости) предоставляет более реалистичную оценку. Например, 5-минутное расчётное время чтения может иметь диапазон 4-6 минут на практике."
-        },
-        {
-          "question": "Сохраняются ли мои текстовые данные или отправляются на сервер?",
-          "answer": "Нет, все расчёты происходят локально в вашем браузере с использованием JavaScript. Ваш текст, JSON данные и количество слов никогда не отправляются на наши серверы и нигде не сохраняются. Это обеспечивает полную конфиденциальность и безопасность вашего контента."
-        },
-        {
-          "question": "Могу ли я использовать произвольные скорости чтения?",
-          "answer": "Да! Выберите опцию 'Своя скорость' и введите любое значение слов в минуту. Это полезно, если вы знаете свою конкретную скорость чтения или хотите соответствовать конкретным требованиям. Средние взрослые читают 200-250 слов/мин, в то время как скорочтецы могут превышать 400 слов/мин."
+          "question": "Могу ли я использовать это для книг?",
+          "answer": "Да! Инструмент обрабатывает контент любой длины. Типичный роман на 80,000 слов займёт примерно 6-7 часов для чтения при средней скорости."
         }
       ],
       "relatedTools": {
-        "title": "Связанные Инструменты Анализа Текста",
+        "title": "Связанные Инструменты",
         "items": [
           {
             "name": "Счётчик Текста",
-            "description": "Считайте символы, слова, предложения и абзацы с детальной аналитикой текста",
+            "description": "Считайте слова, символы, предложения и абзацы с детальной аналитикой",
             "href": "/tools/text-counter"
           },
           {
             "name": "Анализатор Частоты Слов",
-            "description": "Анализируйте частоту слов и находите самые распространённые слова в вашем тексте",
+            "description": "Анализируйте частоту слов и находите самые распространённые слова",
             "href": "/tools/word-frequency"
           },
           {
             "name": "Счётчик Предложений",
-            "description": "Считайте предложения и анализируйте структуру предложений с детальными метриками",
+            "description": "Считайте предложения и анализируйте структуру с детальными метриками",
             "href": "/tools/sentence-counter"
           },
           {
             "name": "Форматировщик JSON",
-            "description": "Форматируйте, валидируйте и украшайте JSON данные с подсветкой синтаксиса",
+            "description": "Форматируйте, валидируйте и украшайте JSON с подсветкой синтаксиса",
             "href": "/tools/json-formatter"
           }
         ]
