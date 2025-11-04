@@ -18,7 +18,6 @@ import {
 } from '@/lib/readingTimeUtils';
 import { ReadingTimeAnalytics } from './ReadingTimeAnalytics';
 import { ToolHeaderAd } from '@/components/ads/AdPlacements';
-import { SEOContent } from '@/components/seo/SEOContent';
 
 type InputMode = 'text' | 'json';
 
@@ -367,13 +366,6 @@ export function ReadingTimeEstimator() {
           </div>
         </div>
       </div>
-
-      {/* SEO Content */}
-      <SEOContent
-        toolName="reading-time-estimator"
-        enableAds={true}
-        adDensity="medium"
-      />
     </div>
   );
 }
