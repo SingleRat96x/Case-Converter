@@ -118,6 +118,16 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           title: t('navigation.camelCaseConverter'),
           href: locale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter',
           icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.snakeCaseConverter'),
+          href: locale === 'en' ? '/tools/snake-case-converter' : '/ru/tools/snake-case-converter',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.kebabCaseConverter'),
+          href: locale === 'en' ? '/tools/kebab-case-converter' : '/ru/tools/kebab-case-converter',
+          icon: <ChevronRight className="h-4 w-4" />
         }
       ]
     },
@@ -144,6 +154,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
         {
           title: t('navigation.extractNumbers'),
           href: locale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.readingTimeEstimator'),
+          href: locale === 'en' ? '/tools/reading-time-estimator' : '/ru/tools/reading-time-estimator',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -203,6 +218,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
         {
           title: t('navigation.duplicateLineRemover'),
           href: locale === 'en' ? '/tools/duplicate-line-remover' : '/ru/tools/duplicate-line-remover',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.removePunctuation'),
+          href: locale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
@@ -348,6 +368,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
         {
           title: t('navigation.jsonStringify'),
           href: locale === 'en' ? '/tools/json-stringify' : '/ru/tools/json-stringify',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.jsonFormatter'),
+          href: locale === 'en' ? '/tools/json-formatter' : '/ru/tools/json-formatter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {

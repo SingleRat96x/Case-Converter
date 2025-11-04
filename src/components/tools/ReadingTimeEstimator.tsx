@@ -141,6 +141,12 @@ export function ReadingTimeEstimator() {
     reader.onload = (event) => {
       const content = event.target?.result as string;
       setText(content);
+      
+      // Auto-detect and switch to JSON mode if file is JSON
+      if (file.name.endsWith('.json')) {
+        setInputMode('json');
+        setJsonError(null);
+      }
     };
     reader.readAsText(file);
     e.target.value = '';
