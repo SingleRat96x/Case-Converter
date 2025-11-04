@@ -153,7 +153,7 @@ export function ReadingTimeEstimator() {
   }, []);
 
   return (
-    <div className="space-y-8">
+    <div className="w-full max-w-4xl mx-auto space-y-8">
       {/* Header */}
       <div className="text-center space-y-2">
         <h1 className="text-3xl font-bold tracking-tight">
@@ -246,6 +246,7 @@ export function ReadingTimeEstimator() {
             lineNumbers(),
             EditorView.lineWrapping,
           ]}
+          className="border border-border rounded-md overflow-hidden"
           placeholder={
             inputMode === 'json'
               ? 'Paste your JSON data here...'
@@ -277,88 +278,87 @@ export function ReadingTimeEstimator() {
         />
       )}
 
-      {/* Reading Speed Controls with InteractiveSlider */}
-      <div className="space-y-6 bg-muted/30 rounded-lg p-6 border">
-        <div className="space-y-4">
-          {/* Silent Reading Speed Slider with Icon */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">Silent Reading Speed</span>
+      {/* Reading Speed Controls with InteractiveSlider - Side by side on desktop */}
+      <div className="bg-muted/30 rounded-lg p-6 border">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:divide-x">
+          {/* Silent Reading Speed */}
+          <div className="space-y-4">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <BookOpen className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">Silent Reading Speed</span>
+              </div>
+              <span className="text-sm text-muted-foreground">
+                <span className="text-base font-bold text-foreground">{silentSpeed} WPM</span>
+              </span>
             </div>
-            <span className="text-sm text-muted-foreground">
-              <span className="text-base font-bold text-foreground">{silentSpeed} WPM</span>
-            </span>
-          </div>
-          <InteractiveSlider
-            value={silentSpeed}
-            min={SILENT_SPEEDS[0].wpm}
-            max={SILENT_SPEEDS[SILENT_SPEEDS.length - 1].wpm}
-            step={1}
-            label="Silent Reading Speed"
-            onChange={setSilentSpeed}
-            hideLabel={true}
-            className="mt-2"
-          />
-          
-          {/* Preset buttons positioned under slider */}
-          <div className="flex justify-between items-center px-1">
-            {SILENT_SPEEDS.map((speed) => (
-              <button
-                key={speed.wpm}
-                onClick={() => setSilentSpeed(speed.wpm)}
-                className={`text-xs px-2 py-1 rounded transition-all ${
-                  silentSpeed === speed.wpm
-                    ? 'text-primary font-bold bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                }`}
-              >
-                {speed.label}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        {/* Divider */}
-        <div className="border-t" />
-
-        <div className="space-y-4">
-          {/* Read Aloud Speed Slider with Icon */}
-          <div className="flex items-center justify-between">
-            <div className="flex items-center gap-2">
-              <Volume2 className="h-4 w-4 text-primary" />
-              <span className="text-sm font-medium text-foreground">Read Aloud Speed</span>
+            <InteractiveSlider
+              value={silentSpeed}
+              min={SILENT_SPEEDS[0].wpm}
+              max={SILENT_SPEEDS[SILENT_SPEEDS.length - 1].wpm}
+              step={1}
+              label="Silent Reading Speed"
+              onChange={setSilentSpeed}
+              hideLabel={true}
+              className="mt-2"
+            />
+            
+            {/* Preset buttons positioned under slider */}
+            <div className="flex justify-between items-center px-1">
+              {SILENT_SPEEDS.map((speed) => (
+                <button
+                  key={speed.wpm}
+                  onClick={() => setSilentSpeed(speed.wpm)}
+                  className={`text-xs px-2 py-1 rounded transition-all ${
+                    silentSpeed === speed.wpm
+                      ? 'text-primary font-bold bg-primary/10'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  }`}
+                >
+                  {speed.label}
+                </button>
+              ))}
             </div>
-            <span className="text-sm text-muted-foreground">
-              <span className="text-base font-bold text-foreground">{aloudSpeed} WPM</span>
-            </span>
           </div>
-          <InteractiveSlider
-            value={aloudSpeed}
-            min={ALOUD_SPEEDS[0].wpm}
-            max={ALOUD_SPEEDS[ALOUD_SPEEDS.length - 1].wpm}
-            step={1}
-            label="Read Aloud Speed"
-            onChange={setAloudSpeed}
-            hideLabel={true}
-            className="mt-2"
-          />
-          
-          {/* Preset buttons positioned under slider */}
-          <div className="flex justify-between items-center px-1">
-            {ALOUD_SPEEDS.map((speed) => (
-              <button
-                key={speed.wpm}
-                onClick={() => setAloudSpeed(speed.wpm)}
-                className={`text-xs px-2 py-1 rounded transition-all ${
-                  aloudSpeed === speed.wpm
-                    ? 'text-primary font-bold bg-primary/10'
-                    : 'text-muted-foreground hover:text-foreground hover:bg-muted'
-                }`}
-              >
-                {speed.label}
-              </button>
-            ))}
+
+          {/* Read Aloud Speed */}
+          <div className="space-y-4 lg:pl-6">
+            <div className="flex items-center justify-between">
+              <div className="flex items-center gap-2">
+                <Volume2 className="h-4 w-4 text-primary" />
+                <span className="text-sm font-medium text-foreground">Read Aloud Speed</span>
+              </div>
+              <span className="text-sm text-muted-foreground">
+                <span className="text-base font-bold text-foreground">{aloudSpeed} WPM</span>
+              </span>
+            </div>
+            <InteractiveSlider
+              value={aloudSpeed}
+              min={ALOUD_SPEEDS[0].wpm}
+              max={ALOUD_SPEEDS[ALOUD_SPEEDS.length - 1].wpm}
+              step={1}
+              label="Read Aloud Speed"
+              onChange={setAloudSpeed}
+              hideLabel={true}
+              className="mt-2"
+            />
+            
+            {/* Preset buttons positioned under slider */}
+            <div className="flex justify-between items-center px-1">
+              {ALOUD_SPEEDS.map((speed) => (
+                <button
+                  key={speed.wpm}
+                  onClick={() => setAloudSpeed(speed.wpm)}
+                  className={`text-xs px-2 py-1 rounded transition-all ${
+                    aloudSpeed === speed.wpm
+                      ? 'text-primary font-bold bg-primary/10'
+                      : 'text-muted-foreground hover:text-foreground hover:bg-muted'
+                  }`}
+                >
+                  {speed.label}
+                </button>
+              ))}
+            </div>
           </div>
         </div>
       </div>
