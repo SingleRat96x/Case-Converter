@@ -236,29 +236,34 @@ export function ReadingTimeEstimator() {
           </div>
         </div>
 
-        <CodeMirror
-          value={text}
-          onChange={setText}
-          height="400px"
-          theme={isDark ? githubDark : githubLight}
-          extensions={[
-            inputMode === 'json' ? json() : [],
-            lineNumbers(),
-            EditorView.lineWrapping,
-          ]}
-          className="border border-border rounded-md overflow-hidden"
-          placeholder={
+        <div className="relative group">
+          <CodeMirror
+            value={text}
+            onChange={setText}
+            height="400px"
+            theme={isDark ? githubDark : githubLight}
+            extensions={[
+              inputMode === 'json' ? json() : [],
+              lineNumbers(),
+              EditorView.lineWrapping,
+            ]}
+            className="border-2 border-border rounded-lg overflow-hidden shadow-sm hover:shadow-md hover:border-primary/50 focus-within:border-primary focus-within:shadow-md transition-all duration-200"
+            style={{
+              backgroundColor: isDark ? 'rgb(13, 17, 23)' : 'rgb(255, 255, 255)',
+            }}
+            placeholder={
             inputMode === 'json'
               ? 'Paste your JSON data here...'
               : 'Paste your article, blog post, or text here...'
-          }
-          basicSetup={{
+            }
+            basicSetup={{
             lineNumbers: true,
             highlightActiveLineGutter: true,
             highlightActiveLine: true,
             foldGutter: inputMode === 'json',
-          }}
-        />
+            }}
+          />
+        </div>
       </div>
 
       {/* JSON Error Display */}
@@ -280,9 +285,9 @@ export function ReadingTimeEstimator() {
 
       {/* Reading Speed Controls with InteractiveSlider - Side by side on desktop */}
       <div className="bg-muted/30 rounded-lg p-6 border">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:divide-x">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Silent Reading Speed */}
-          <div className="space-y-4">
+          <div className="space-y-4 lg:pr-6">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <BookOpen className="h-4 w-4 text-primary" />
@@ -322,7 +327,7 @@ export function ReadingTimeEstimator() {
           </div>
 
           {/* Read Aloud Speed */}
-          <div className="space-y-4 lg:pl-6">
+          <div className="space-y-4 lg:pl-6 lg:border-l lg:border-border">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Volume2 className="h-4 w-4 text-primary" />

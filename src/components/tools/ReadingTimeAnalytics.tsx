@@ -54,20 +54,18 @@ export function ReadingTimeAnalytics({
   ];
 
   return (
-    <div className="grid grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
       {statisticsData.map(({ key, label, value, subLabel, icon: Icon, color }) => (
         <div
           key={key}
-          className="flex flex-col items-center p-4 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow"
+          className="flex flex-col items-center p-3 bg-card border border-border rounded-lg hover:shadow-sm transition-shadow"
         >
-          <Icon className={`h-5 w-5 mb-2 ${color}`} />
-          <span className="text-xs font-semibold text-muted-foreground uppercase tracking-wide mb-1">
-            {label}
-          </span>
-          <span className="text-2xl font-bold text-foreground">{value}</span>
+          <Icon className={`h-4 w-4 mb-1 ${color}`} />
+          <span className="text-sm font-medium text-foreground">{value}</span>
           {subLabel && (
-            <span className="text-xs text-muted-foreground mt-1">{subLabel}</span>
+            <span className="text-xs text-muted-foreground mt-0.5">{subLabel}</span>
           )}
+          <span className="text-xs text-muted-foreground text-center mt-1">{label}</span>
         </div>
       ))}
     </div>
