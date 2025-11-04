@@ -217,7 +217,6 @@ export function Header() {
                   className="rounded-r-none border-r-0 transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={currentLocale === 'en'}
                 >
-                  <span className="mr-1">????</span>
                   EN
                 </Button>
                 <Button
@@ -227,7 +226,6 @@ export function Header() {
                   className="rounded-l-none transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={currentLocale === 'ru'}
                 >
-                  <span className="mr-1">????</span>
                   RU
                 </Button>
               </div>
