@@ -138,6 +138,10 @@ export function Footer() {
     {
       title: t('navigation.extractEmailsFromText'),
       href: currentLocale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text'
+    },
+    {
+      title: t('navigation.addLineNumbers'),
+      href: currentLocale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 

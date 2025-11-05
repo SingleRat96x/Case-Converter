@@ -122,6 +122,13 @@ const textModificationTools = [
     description: 'Extract and validate email addresses from any text with advanced filtering',
     icon: '📧',
     href: '/tools/extract-emails-from-text'
+  },
+  {
+    id: 'add-line-numbers-to-text',
+    title: 'Add Line Numbers to Text',
+    description: 'Add customizable line numbers to text with multiple formats and options',
+    icon: '🔢',
+    href: '/tools/add-line-numbers-to-text'
   }
 ];
 

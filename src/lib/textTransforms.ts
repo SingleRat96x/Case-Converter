@@ -505,3 +505,115 @@ export function hasTransformation(char: string, type: 'bold' | 'italic' | 'subsc
   
   return char in maps[type];
 }
+
+// Line numbering utility types and functions
+export type LineNumberFormat = 'numeric' | 'padded2' | 'padded3' | 'alpha-upper' | 'alpha-lower' | 'roman-upper' | 'roman-lower';
+export type LineNumberSeparator = '. ' | ') ' | ': ' | ' - ' | '|' | '\t';
+export type LineNumberApplyTo = 'all' | 'non-empty';
+
+export interface LineNumberOptions {
+  startAt: number;
+  step: number;
+  format: LineNumberFormat;
+  separator: LineNumberSeparator;
+  applyTo: LineNumberApplyTo;
+  skipLinesStartingWith: string;
+}
+
+// Convert number to alphabetic format (1=A, 2=B, ..., 27=AA, 28=AB, etc.)
+function toAlpha(num: number, uppercase: boolean): string {
+  let result = '';
+  let n = num;
+  
+  while (n > 0) {
+    n--; // Adjust for 0-indexed
+    const charCode = (n % 26) + (uppercase ? 65 : 97);
+    result = String.fromCharCode(charCode) + result;
+    n = Math.floor(n / 26);
+  }
+  
+  return result || (uppercase ? 'A' : 'a');
+}
+
+// Convert number to Roman numeral (supports 1-3999)
+function toRoman(num: number, uppercase: boolean): string {
+  if (num < 1 || num > 3999) return num.toString();
+  
+  const romanNumerals = [
+    ['M', 1000], ['CM', 900], ['D', 500], ['CD', 400],
+    ['C', 100], ['XC', 90], ['L', 50], ['XL', 40],
+    ['X', 10], ['IX', 9], ['V', 5], ['IV', 4], ['I', 1]
+  ] as const;
+  
+  let result = '';
+  let remaining = num;
+  
+  for (const [numeral, value] of romanNumerals) {
+    while (remaining >= value) {
+      result += numeral;
+      remaining -= value;
+    }
+  }
+  
+  return uppercase ? result : result.toLowerCase();
+}
+
+// Format a single number according to the specified format
+function formatLineNumber(num: number, format: LineNumberFormat): string {
+  switch (format) {
+    case 'numeric':
+      return num.toString();
+    case 'padded2':
+      return num.toString().padStart(2, '0');
+    case 'padded3':
+      return num.toString().padStart(3, '0');
+    case 'alpha-upper':
+      return toAlpha(num, true);
+    case 'alpha-lower':
+      return toAlpha(num, false);
+    case 'roman-upper':
+      return toRoman(num, true);
+    case 'roman-lower':
+      return toRoman(num, false);
+    default:
+      return num.toString();
+  }
+}
+
+// Main line numbering function
+export function addLineNumbers(text: string, options: LineNumberOptions): string {
+  if (!text) return text;
+  
+  const lines = text.split('\n');
+  const { startAt, step, format, separator, applyTo, skipLinesStartingWith } = options;
+  
+  // Parse skip patterns (comma-separated)
+  const skipPatterns = skipLinesStartingWith
+    ? skipLinesStartingWith.split(',').map(p => p.trim()).filter(p => p.length > 0)
+    : [];
+  
+  let currentNumber = startAt;
+  
+  const numberedLines = lines.map(line => {
+    // Skip empty lines if applyTo is 'non-empty'
+    if (applyTo === 'non-empty' && line.trim().length === 0) {
+      return line;
+    }
+    
+    // Skip lines matching skip patterns
+    if (skipPatterns.length > 0) {
+      const shouldSkip = skipPatterns.some(pattern => line.trimStart().startsWith(pattern));
+      if (shouldSkip) {
+        return line;
+      }
+    }
+    
+    // Format and add line number
+    const lineNumber = formatLineNumber(currentNumber, format);
+    currentNumber += step;
+    
+    return `${lineNumber}${separator}${line}`;
+  });
+  
+  return numberedLines.join('\n');
+}

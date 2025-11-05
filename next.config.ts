@@ -128,6 +128,38 @@ const nextConfig: NextConfig = {
         destination: '/ru/tools/reading-time-estimator',
         permanent: true,
       },
+      // Add Line Numbers redirects (English)
+      {
+        source: '/tools/line-numbering-tool',
+        destination: '/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/tools/number-lines',
+        destination: '/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/tools/add-line-numbers',
+        destination: '/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      // Add Line Numbers redirects (Russian)
+      {
+        source: '/ru/tools/line-numbering-tool',
+        destination: '/ru/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/number-lines',
+        destination: '/ru/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/add-line-numbers',
+        destination: '/ru/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
     ];
   },
   webpack: (config, { isServer }) => {

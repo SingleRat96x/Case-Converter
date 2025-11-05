@@ -50,6 +50,7 @@ const toolCategories = [
       { id: 'plain-text', titleKey: 'navigation.plainText', href: '/tools/plain-text', icon: '📃' },
       { id: 'remove-punctuation', titleKey: 'navigation.removePunctuation', href: '/tools/remove-punctuation', icon: '🧼' },
       { id: 'extract-emails-from-text', titleKey: 'navigation.extractEmailsFromText', href: '/tools/extract-emails-from-text', icon: '📧' },
+      { id: 'add-line-numbers-to-text', titleKey: 'navigation.addLineNumbers', href: '/tools/add-line-numbers-to-text', icon: '🔢' },
     ]
   },
   {

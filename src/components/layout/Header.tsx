@@ -96,6 +96,7 @@ export function Header() {
         { titleKey: 'navigation.sortWords', href: '/tools/sort-words' },
         { titleKey: 'navigation.plainText', href: '/tools/plain-text' },
         { titleKey: 'navigation.extractEmailsFromText', href: '/tools/extract-emails-from-text' },
+        { titleKey: 'navigation.addLineNumbers', href: '/tools/add-line-numbers-to-text' },
       ]
     },
     {

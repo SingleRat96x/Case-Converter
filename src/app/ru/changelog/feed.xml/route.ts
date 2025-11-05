@@ -17,6 +17,13 @@ export async function GET() {
   // Changelog data in Russian
   const changelogEntries = [
     {
+      id: 'dec-2025-line-numbers',
+      title: 'Добавить Номера Строк к Тексту',
+      description: 'Добавляйте настраиваемые номера строк с множеством форматов (числовые, алфавитные, римские цифры), разделителями и расширенными опциями фильтрации',
+      date: new Date('2025-12-05').toUTCString(),
+      category: 'Новая Функция'
+    },
+    {
       id: 'nov-2025-reading-time',
       title: 'Калькулятор Времени Чтения',
       description: 'Рассчитайте время чтения вашего контента с настраиваемой скоростью',

@@ -17,6 +17,13 @@ export async function GET() {
   // Changelog data - in production, you'd fetch this from your data source
   const changelogEntries = [
     {
+      id: 'dec-2025-line-numbers',
+      title: 'Add Line Numbers to Text',
+      description: 'Add customizable line numbers with multiple formats (numeric, alphabetic, Roman numerals), separators, and advanced filtering options',
+      date: new Date('2025-12-05').toUTCString(),
+      category: 'New Feature'
+    },
+    {
       id: 'nov-2025-reading-time',
       title: 'Reading Time Estimator',
       description: 'Calculate reading time for your content with adjustable speed settings',

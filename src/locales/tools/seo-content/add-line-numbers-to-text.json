@@ -1,0 +1,298 @@
+{
+  "en": {
+    "title": "Add Line Numbers to Text – Free Online Line Numbering Tool",
+    "metaDescription": "Add line numbers to text instantly. Paste your text, choose a start number, step, padding (01, 001, etc.), and separator, then copy or download the numbered lines. Perfect for code, scripts, and documents.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Line Numbering Tool – Add Line Numbers to Text",
+        "content": "Quickly add line numbers to any text with our powerful and flexible line numbering tool. Perfect for code review, documentation, educational materials, scripts, and any content where line references are essential. Choose from multiple numbering formats, customize separators, and control which lines get numbered with advanced filtering options."
+      },
+      "features": {
+        "title": "Powerful Line Numbering Features",
+        "items": [
+          { "title": "Multiple Number Formats", "description": "Choose from numeric (1, 2, 3), padded (01, 02 or 001, 002), alphabetic (A, B, C), or Roman numerals (I, II, III)" },
+          { "title": "Custom Separators", "description": "Use periods, colons, hyphens, pipes, tabs, or parentheses to separate line numbers from content" },
+          { "title": "Flexible Start & Step", "description": "Start numbering from any number and increment by any step value" },
+          { "title": "Smart Line Filtering", "description": "Number only non-empty lines or skip lines starting with specific patterns like comments" },
+          { "title": "File Upload Support", "description": "Upload text files and add line numbers to entire documents instantly" },
+          { "title": "Real-time Preview", "description": "See numbered results update automatically as you type and adjust options" },
+          { "title": "Copy & Download", "description": "Easily copy to clipboard or download as a text file" },
+          { "title": "Privacy-First", "description": "All processing happens locally—no data leaves your browser" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Line Numbering",
+        "description": "Line numbers make text more organized and easier to reference across various professional and educational contexts.",
+        "items": [
+          { "title": "Code Review & Programming", "description": "Add line numbers to code snippets for easier reference during reviews and discussions" },
+          { "title": "Documentation & Manuals", "description": "Number technical documentation lines for precise cross-referencing" },
+          { "title": "Educational Materials", "description": "Create numbered examples for teaching programming, poetry analysis, or literary critique" },
+          { "title": "Scripts & Screenplays", "description": "Add line numbers to scripts for production references and rehearsals" },
+          { "title": "Legal Documents", "description": "Number contract lines and legal documents for accurate citations" },
+          { "title": "Poetry & Literature", "description": "Add line numbers to poems and literary texts for academic analysis" },
+          { "title": "Configuration Files", "description": "Number configuration files for easier debugging and support requests" },
+          { "title": "Meeting Notes & Transcripts", "description": "Create numbered transcripts for precise time-stamped references" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Add Line Numbers to Text",
+        "description": "Follow these simple steps to number your text lines with custom formatting options.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Paste or Upload Your Text",
+            "description": "Enter your text in the input area, or upload a text file to add line numbers to an entire document."
+          },
+          {
+            "step": 2,
+            "title": "Configure Numbering Options",
+            "description": "Choose your preferred number format (numeric, padded, alphabetic, or Roman), set the start number and step, and select a separator style."
+          },
+          {
+            "step": 3,
+            "title": "Apply Advanced Filters (Optional)",
+            "description": "Optionally number only non-empty lines or skip lines starting with specific patterns like // or # for comment exclusion."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Your text is automatically numbered as you type. Copy the result to your clipboard or download it as a .txt file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Line Numbering Examples",
+        "description": "See how different numbering formats and options transform your text.",
+        "items": [
+          { "title": "Simple Numeric", "input": "First line\nSecond line\nThird line", "output": "1. First line\n2. Second line\n3. Third line" },
+          { "title": "Padded Numbers", "input": "Line one\nLine two\nLine three", "output": "01. Line one\n02. Line two\n03. Line three" },
+          { "title": "Alphabetic Upper", "input": "Alpha\nBeta\nGamma", "output": "A. Alpha\nB. Beta\nC. Gamma" },
+          { "title": "Roman Numerals", "input": "Introduction\nChapter One\nChapter Two", "output": "I. Introduction\nII. Chapter One\nIII. Chapter Two" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Line Numbering Tool",
+        "content": "Professional line numbering with comprehensive formatting options and universal compatibility.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "7 different numbering format options",
+          "6 separator styles to choose from",
+          "Advanced line filtering capabilities",
+          "Real-time preview as you type",
+          "File upload and download support",
+          "Mobile-optimized responsive design",
+          "Perfect for code, documents, and scripts"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What numbering formats are supported?",
+          "answer": "Our tool supports 7 different formats: numeric (1, 2, 3), 2-digit padded (01, 02, 03), 3-digit padded (001, 002, 003), uppercase alphabetic (A, B, C), lowercase alphabetic (a, b, c), uppercase Roman numerals (I, II, III), and lowercase Roman numerals (i, ii, iii)."
+        },
+        {
+          "question": "Can I start numbering from a specific number?",
+          "answer": "Yes! You can set any starting number you want. For example, start from 10 if you're continuing from a previous section, or start from 0 for zero-indexed numbering commonly used in programming."
+        },
+        {
+          "question": "How do I skip empty lines or comments?",
+          "answer": "Use the 'Apply to' option to number only non-empty lines, automatically skipping blank lines. Additionally, use the 'Skip lines starting with' field to ignore lines beginning with specific patterns like //, #, or ; (common for comments in code)."
+        },
+        {
+          "question": "What separators can I use between numbers and text?",
+          "answer": "Choose from 6 separator styles: period with space (. ), parenthesis with space () ), colon with space (: ), hyphen with spaces ( - ), pipe (|), or tab character for aligned columns."
+        },
+        {
+          "question": "Can I use custom step increments?",
+          "answer": "Absolutely! Set any step value you need. Use step 1 for sequential numbering (1, 2, 3), step 2 for even numbers (2, 4, 6), step 5 for multiples of 5 (5, 10, 15), or any other increment."
+        },
+        {
+          "question": "Is my text data safe and private?",
+          "answer": "Yes, all line numbering happens locally in your browser. Your text is never uploaded to our servers or shared with anyone. Complete privacy guaranteed for all your sensitive code and documents."
+        },
+        {
+          "question": "Can I upload files to add line numbers?",
+          "answer": "Yes! Upload .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html, and other text files. The tool will automatically add line numbers and you can download the result."
+        },
+        {
+          "question": "How does alphabetic numbering work after Z?",
+          "answer": "After reaching Z (or z), the tool continues with AA, AB, AC... just like Excel column naming. This allows you to number thousands of lines using alphabetic format."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Processing Tools",
+        "items": [
+          {
+            "name": "Remove Line Breaks",
+            "description": "Strip unwanted line breaks and merge text into single lines",
+            "href": "/tools/remove-line-breaks"
+          },
+          {
+            "name": "Remove Duplicate Lines",
+            "description": "Eliminate duplicate lines and clean up repetitive text content",
+            "href": "/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Find and Replace Text",
+            "description": "Advanced text replacement with pattern matching and regex support",
+            "href": "/tools/text-replace"
+          },
+          {
+            "name": "Word Sorter",
+            "description": "Sort words alphabetically or by length with custom options",
+            "href": "/tools/sort-words"
+          }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Добавить Номера Строк к Тексту – Бесплатный Онлайн Инструмент Нумерации",
+    "metaDescription": "Мгновенно добавляйте номера строк к тексту. Вставьте текст, выберите начальный номер, шаг, заполнение (01, 001 и т.д.) и разделитель, затем скопируйте или скачайте пронумерованные строки. Идеально для кода, скриптов и документов.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Инструмент Нумерации – Добавить Номера Строк к Тексту",
+        "content": "Быстро добавляйте номера строк к любому тексту с помощью нашего мощного и гибкого инструмента нумерации строк. Идеально для проверки кода, документации, учебных материалов, скриптов и любого контента, где необходимы ссылки на строки. Выбирайте из множества форматов нумерации, настраивайте разделители и контролируйте, какие строки нумеруются, с помощью расширенных опций фильтрации."
+      },
+      "features": {
+        "title": "Мощные Функции Нумерации Строк",
+        "items": [
+          { "title": "Множество Форматов Номеров", "description": "Выбирайте из числовых (1, 2, 3), заполненных (01, 02 или 001, 002), алфавитных (A, B, C) или римских цифр (I, II, III)" },
+          { "title": "Пользовательские Разделители", "description": "Используйте точки, двоеточия, дефисы, вертикальные черты, табуляцию или скобки для разделения номеров строк от содержимого" },
+          { "title": "Гибкий Старт и Шаг", "description": "Начинайте нумерацию с любого числа и увеличивайте на любое значение шага" },
+          { "title": "Умная Фильтрация Строк", "description": "Нумеруйте только непустые строки или пропускайте строки, начинающиеся с определенных шаблонов, таких как комментарии" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и мгновенно добавляйте номера строк к целым документам" },
+          { "title": "Предварительный Просмотр в Реальном Времени", "description": "Видите пронумерованные результаты, обновляющиеся автоматически при вводе и настройке опций" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте в буфер обмена или скачивайте как текстовый файл" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся обработка происходит локально—данные не покидают ваш браузер" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Нумерацию Строк",
+        "description": "Номера строк делают текст более организованным и легче ссылаться в различных профессиональных и образовательных контекстах.",
+        "items": [
+          { "title": "Проверка Кода и Программирование", "description": "Добавляйте номера строк к фрагментам кода для облегчения ссылок во время проверок и обсуждений" },
+          { "title": "Документация и Руководства", "description": "Нумеруйте строки технической документации для точных перекрестных ссылок" },
+          { "title": "Учебные Материалы", "description": "Создавайте пронумерованные примеры для обучения программированию, анализа поэзии или литературной критики" },
+          { "title": "Сценарии и Киносценарии", "description": "Добавляйте номера строк к сценариям для производственных ссылок и репетиций" },
+          { "title": "Юридические Документы", "description": "Нумеруйте строки контрактов и юридических документов для точных цитирований" },
+          { "title": "Поэзия и Литература", "description": "Добавляйте номера строк к стихам и литературным текстам для академического анализа" },
+          { "title": "Конфигурационные Файлы", "description": "Нумеруйте конфигурационные файлы для облегчения отладки и запросов поддержки" },
+          { "title": "Заметки Совещаний и Расшифровки", "description": "Создавайте пронумерованные расшифровки для точных ссылок с временными метками" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Добавить Номера Строк к Тексту",
+        "description": "Следуйте этим простым шагам, чтобы пронумеровать строки вашего текста с пользовательскими опциями форматирования.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Вставьте или Загрузите Ваш Текст",
+            "description": "Введите ваш текст в область ввода или загрузите текстовый файл, чтобы добавить номера строк ко всему документу."
+          },
+          {
+            "step": 2,
+            "title": "Настройте Опции Нумерации",
+            "description": "Выберите предпочитаемый формат номеров (числовой, заполненный, алфавитный или римский), установите начальный номер и шаг, и выберите стиль разделителя."
+          },
+          {
+            "step": 3,
+            "title": "Примените Расширенные Фильтры (Опционально)",
+            "description": "Опционально нумеруйте только непустые строки или пропускайте строки, начинающиеся с определенных шаблонов, таких как // или # для исключения комментариев."
+          },
+          {
+            "step": 4,
+            "title": "Копируйте или Скачайте",
+            "description": "Ваш текст автоматически нумеруется при вводе. Скопируйте результат в буфер обмена или скачайте как .txt файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Нумерации Строк",
+        "description": "Посмотрите, как различные форматы и опции нумерации преобразуют ваш текст.",
+        "items": [
+          { "title": "Простая Числовая", "input": "Первая строка\nВторая строка\nТретья строка", "output": "1. Первая строка\n2. Второая строка\n3. Третья строка" },
+          { "title": "Заполненные Номера", "input": "Строка один\nСтрока два\nСтрока три", "output": "01. Строка один\n02. Строка два\n03. Строка три" },
+          { "title": "Алфавитная Верхняя", "input": "Альфа\nБета\nГамма", "output": "A. Альфа\nB. Бета\nC. Гамма" },
+          { "title": "Римские Цифры", "input": "Введение\nГлава Один\nГлава Два", "output": "I. Введение\nII. Глава Один\nIII. Глава Два" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Инструмент Нумерации Строк",
+        "content": "Профессиональная нумерация строк с комплексными опциями форматирования и универсальной совместимостью.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требует регистрации или создания аккаунта",
+          "Приоритет конфиденциальности - вся обработка происходит локально",
+          "7 различных опций форматов нумерации",
+          "6 стилей разделителей на выбор",
+          "Расширенные возможности фильтрации строк",
+          "Предварительный просмотр в реальном времени при вводе",
+          "Поддержка загрузки и скачивания файлов",
+          "Мобильно-оптимизированный адаптивный дизайн",
+          "Идеально для кода, документов и скриптов"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Какие форматы нумерации поддерживаются?",
+          "answer": "Наш инструмент поддерживает 7 различных форматов: числовой (1, 2, 3), 2-значный заполненный (01, 02, 03), 3-значный заполненный (001, 002, 003), алфавитный верхний регистр (A, B, C), алфавитный нижний регистр (a, b, c), римские цифры верхний регистр (I, II, III) и римские цифры нижний регистр (i, ii, iii)."
+        },
+        {
+          "question": "Могу ли я начать нумерацию с определенного номера?",
+          "answer": "Да! Вы можете установить любой начальный номер. Например, начните с 10, если продолжаете предыдущий раздел, или начните с 0 для нулевой индексации, часто используемой в программировании."
+        },
+        {
+          "question": "Как пропустить пустые строки или комментарии?",
+          "answer": "Используйте опцию 'Применить к' для нумерации только непустых строк, автоматически пропуская пустые строки. Кроме того, используйте поле 'Пропустить строки, начинающиеся с' для игнорирования строк, начинающихся с определенных шаблонов, таких как //, # или ; (обычные для комментариев в коде)."
+        },
+        {
+          "question": "Какие разделители я могу использовать между номерами и текстом?",
+          "answer": "Выбирайте из 6 стилей разделителей: точка с пробелом (. ), скобка с пробелом () ), двоеточие с пробелом (: ), дефис с пробелами ( - ), вертикальная черта (|) или символ табуляции для выровненных столбцов."
+        },
+        {
+          "question": "Могу ли я использовать пользовательские приращения шага?",
+          "answer": "Абсолютно! Установите любое значение шага, которое вам нужно. Используйте шаг 1 для последовательной нумерации (1, 2, 3), шаг 2 для четных чисел (2, 4, 6), шаг 5 для кратных 5 (5, 10, 15) или любое другое приращение."
+        },
+        {
+          "question": "Безопасны ли мои текстовые данные и конфиденциальны?",
+          "answer": "Да, вся нумерация строк происходит локально в вашем браузере. Ваш текст никогда не загружается на наши серверы и не передается кому-либо. Полная конфиденциальность гарантирована для всего вашего конфиденциального кода и документов."
+        },
+        {
+          "question": "Могу ли я загружать файлы для добавления номеров строк?",
+          "answer": "Да! Загружайте .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html и другие текстовые файлы. Инструмент автоматически добавит номера строк, и вы сможете скачать результат."
+        },
+        {
+          "question": "Как работает алфавитная нумерация после Z?",
+          "answer": "После достижения Z (или z) инструмент продолжает с AA, AB, AC... точно так же, как именование столбцов в Excel. Это позволяет вам нумеровать тысячи строк, используя алфавитный формат."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Обработки Текста",
+        "items": [
+          {
+            "name": "Удалить Переносы Строк",
+            "description": "Удалите нежелательные переносы строк и объедините текст в одну строку",
+            "href": "/ru/tools/remove-line-breaks"
+          },
+          {
+            "name": "Удалить Дубликаты Строк",
+            "description": "Устраните дубликаты строк и очистите повторяющийся текстовый контент",
+            "href": "/ru/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Найти и Заменить Текст",
+            "description": "Расширенная замена текста с сопоставлением шаблонов и поддержкой regex",
+            "href": "/ru/tools/text-replace"
+          },
+          {
+            "name": "Сортировка Слов",
+            "description": "Сортируйте слова по алфавиту или длине с пользовательскими опциями",
+            "href": "/ru/tools/sort-words"
+          }
+        ]
+      }
+    }
+  }
+}

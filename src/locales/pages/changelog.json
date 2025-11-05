@@ -27,6 +27,17 @@
     },
     "sample": {
       "month1": {
+        "title": "December 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "Add Line Numbers to Text",
+            "description": "Add customizable line numbers with multiple formats (numeric, alphabetic, Roman numerals), separators, and advanced filtering options",
+            "date": "Dec 5, 2025"
+          }
+        }
+      },
+      "month2": {
         "title": "November 2025",
         "entries": {
           "1": {
@@ -43,7 +54,7 @@
           }
         }
       },
-      "month2": {
+      "month3": {
         "title": "October 2025",
         "entries": {
           "1": {
@@ -78,7 +89,7 @@
           }
         }
       },
-      "month3": {
+      "month4": {
         "title": "August 2025",
         "entries": {
           "1": {
@@ -142,6 +153,17 @@
     },
     "sample": {
       "month1": {
+        "title": "Декабрь 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "Добавить Номера Строк к Тексту",
+            "description": "Добавляйте настраиваемые номера строк с множеством форматов (числовые, алфавитные, римские цифры), разделителями и расширенными опциями фильтрации",
+            "date": "5 дек 2025"
+          }
+        }
+      },
+      "month2": {
         "title": "Ноябрь 2025",
         "entries": {
           "1": {
@@ -158,7 +180,7 @@
           }
         }
       },
-      "month2": {
+      "month3": {
         "title": "Октябрь 2025",
         "entries": {
           "1": {
@@ -193,7 +215,7 @@
           }
         }
       },
-      "month3": {
+      "month4": {
         "title": "Август 2025",
         "entries": {
           "1": {

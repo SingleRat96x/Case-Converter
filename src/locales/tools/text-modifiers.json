@@ -247,6 +247,43 @@
         "urlsRemoved": "URLs Removed",
         "emailsRemoved": "Emails Removed"
       }
+    },
+    "addLineNumbers": {
+      "title": "Add Line Numbers to Text",
+      "description": "Add line numbers to text with customizable formats, separators, and numbering options. Perfect for code, scripts, and documents.",
+      "inputPlaceholder": "Enter or paste your text here to add line numbers...",
+      "outputLabel": "Numbered Text",
+      "uploadDescription": "",
+      "downloadFileName": "numbered-text.txt",
+      "options": {
+        "startAt": "Start at",
+        "step": "Step",
+        "format": "Number Format",
+        "separator": "Separator",
+        "applyTo": "Apply to",
+        "skipLinesStartingWith": "Skip lines starting with"
+      },
+      "formats": {
+        "numeric": "1, 2, 3",
+        "padded2": "01, 02, 03",
+        "padded3": "001, 002, 003",
+        "alphaUpper": "A, B, C",
+        "alphaLower": "a, b, c",
+        "romanUpper": "I, II, III",
+        "romanLower": "i, ii, iii"
+      },
+      "separators": {
+        "periodSpace": ". (period + space)",
+        "parenSpace": ") (parenthesis + space)",
+        "colonSpace": ": (colon + space)",
+        "hyphenSpace": " - (hyphen + spaces)",
+        "pipe": "| (pipe)",
+        "tab": "Tab character"
+      },
+      "applyToOptions": {
+        "all": "All lines",
+        "nonEmpty": "Non-empty lines only"
+      }
     }
   },
   "ru": {
@@ -496,6 +533,43 @@
         "markdownElements": "Markdown Элементы",
         "urlsRemoved": "URL Удалено",
         "emailsRemoved": "Email Удалено"
+      }
+    },
+    "addLineNumbers": {
+      "title": "Добавить Номера Строк к Тексту",
+      "description": "Добавьте номера строк к тексту с настраиваемыми форматами, разделителями и опциями нумерации. Идеально для кода, скриптов и документов.",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для добавления номеров строк...",
+      "outputLabel": "Пронумерованный Текст",
+      "uploadDescription": "",
+      "downloadFileName": "пронумерованный-текст.txt",
+      "options": {
+        "startAt": "Начать с",
+        "step": "Шаг",
+        "format": "Формат Номеров",
+        "separator": "Разделитель",
+        "applyTo": "Применить к",
+        "skipLinesStartingWith": "Пропустить строки, начинающиеся с"
+      },
+      "formats": {
+        "numeric": "1, 2, 3",
+        "padded2": "01, 02, 03",
+        "padded3": "001, 002, 003",
+        "alphaUpper": "A, B, C",
+        "alphaLower": "a, b, c",
+        "romanUpper": "I, II, III",
+        "romanLower": "i, ii, iii"
+      },
+      "separators": {
+        "periodSpace": ". (точка + пробел)",
+        "parenSpace": ") (скобка + пробел)",
+        "colonSpace": ": (двоеточие + пробел)",
+        "hyphenSpace": " - (дефис + пробелы)",
+        "pipe": "| (вертикальная черта)",
+        "tab": "Символ табуляции"
+      },
+      "applyToOptions": {
+        "all": "Все строки",
+        "nonEmpty": "Только непустые строки"
       }
     }
   }
