@@ -4,6 +4,16 @@ export async function GET() {
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
   const currentDate = new Date().toUTCString();
 
+  // Helper function to escape XML entities
+  const escapeXml = (unsafe: string): string => {
+    return unsafe
+      .replace(/&/g, '&amp;')
+      .replace(/</g, '&lt;')
+      .replace(/>/g, '&gt;')
+      .replace(/"/g, '&quot;')
+      .replace(/'/g, '&apos;');
+  };
+
   // Changelog data - in production, you'd fetch this from your data source
   const changelogEntries = [
     {
@@ -97,12 +107,12 @@ export async function GET() {
       <link>${baseUrl}/changelog</link>
     </image>
 ${changelogEntries.map(entry => `    <item>
-      <title>${entry.title}</title>
-      <description>${entry.description}</description>
+      <title>${escapeXml(entry.title)}</title>
+      <description>${escapeXml(entry.description)}</description>
       <link>${baseUrl}/changelog#${entry.id}</link>
       <guid isPermaLink="true">${baseUrl}/changelog#${entry.id}</guid>
       <pubDate>${entry.date}</pubDate>
-      <category>${entry.category}</category>
+      <category>${escapeXml(entry.category)}</category>
     </item>`).join('\n')}
   </channel>
 </rss>`;
