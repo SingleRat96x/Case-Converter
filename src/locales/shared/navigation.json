@@ -132,6 +132,7 @@
       "links": {
         "aboutUs": "About Us",
         "contactUs": "Contact Us",
+        "changelog": "Changelog",
         "privacyPolicy": "Privacy Policy",
         "termsOfService": "Terms of Service"
       }
@@ -270,6 +271,7 @@
       "links": {
         "aboutUs": "О нас",
         "contactUs": "Связаться с нами",
+        "changelog": "История Изменений",
         "privacyPolicy": "Политика конфиденциальности",
         "termsOfService": "Условия использования"
       }

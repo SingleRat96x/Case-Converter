@@ -526,6 +526,14 @@ export function Footer() {
                         {t('footer.links.contactUs')}
                       </Link>
                     </li>
+                    <li>
+                      <Link
+                        href={currentLocale === 'en' ? '/changelog' : '/ru/changelog'}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {t('footer.links.changelog')}
+                      </Link>
+                    </li>
                   </ul>
                 </div>
                 <div>

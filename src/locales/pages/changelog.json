@@ -1,0 +1,182 @@
+{
+  "en": {
+    "title": "Product Changelog",
+    "subtitle": "Track new features, improvements, and updates",
+    "description": "Stay up-to-date with the latest changes, new tools, and improvements to our platform.",
+    "lastUpdated": "Last updated",
+    "version": "Version",
+    "sectionTitle": "Choose Your Preferred Layout Style",
+    "sectionDescription": "Below are three different layout options for the changelog. Select the one that best fits your preference.",
+    "layoutOptions": {
+      "option1": "Option 1: Simple List",
+      "option2": "Option 2: Card Layout",
+      "option3": "Option 3: Timeline View"
+    },
+    "categories": {
+      "new": "New",
+      "improved": "Improved",
+      "fixed": "Fixed",
+      "deprecated": "Deprecated"
+    },
+    "badges": {
+      "new": "New",
+      "feature": "Feature",
+      "improvement": "Improvement",
+      "bugfix": "Bug Fix",
+      "breaking": "Breaking"
+    },
+    "sample": {
+      "month1": {
+        "title": "November 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "Reading Time Estimator",
+            "description": "Calculate reading time for your content with adjustable speed settings",
+            "date": "Nov 5, 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Locale Switcher Enhancement",
+            "description": "Added country flags to language selector for better visibility",
+            "date": "Nov 5, 2025"
+          }
+        }
+      },
+      "month2": {
+        "title": "October 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "JSON Formatter & Validator",
+            "description": "Format and validate JSON with syntax highlighting and real-time error detection",
+            "date": "Oct 31, 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Case Converter Suite",
+            "description": "Added Kebab Case, Snake Case, and Camel Case converters",
+            "date": "Oct 31, 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Email Extraction Tools",
+            "description": "Extract emails from text and PDF files with advanced filtering options",
+            "date": "Oct 28, 2025"
+          },
+          "4": {
+            "type": "improved",
+            "title": "Performance Optimization",
+            "description": "Improved page load speed with font preloading and critical resource hints",
+            "date": "Oct 9, 2025"
+          },
+          "5": {
+            "type": "fixed",
+            "title": "JavaScript Loading Issues",
+            "description": "Resolved chunk loading errors affecting some users",
+            "date": "Oct 29, 2025"
+          }
+        }
+      }
+    },
+    "emptyState": {
+      "title": "No Updates Yet",
+      "description": "Check back soon for the latest updates and new features."
+    },
+    "subscribe": {
+      "title": "Stay Updated",
+      "description": "Want to be notified about new features and updates?",
+      "button": "Subscribe to Updates"
+    }
+  },
+  "ru": {
+    "title": "История Изменений",
+    "subtitle": "Отслеживайте новые функции, улучшения и обновления",
+    "description": "Будьте в курсе последних изменений, новых инструментов и улучшений платформы.",
+    "lastUpdated": "Последнее обновление",
+    "version": "Версия",
+    "sectionTitle": "Выберите Предпочитаемый Стиль Макета",
+    "sectionDescription": "Ниже представлены три различных варианта макета для истории изменений. Выберите тот, который лучше всего соответствует вашим предпочтениям.",
+    "layoutOptions": {
+      "option1": "Вариант 1: Простой Список",
+      "option2": "Вариант 2: Карточный Макет",
+      "option3": "Вариант 3: Временная Шкала"
+    },
+    "categories": {
+      "new": "Новое",
+      "improved": "Улучшено",
+      "fixed": "Исправлено",
+      "deprecated": "Устарело"
+    },
+    "badges": {
+      "new": "Новое",
+      "feature": "Функция",
+      "improvement": "Улучшение",
+      "bugfix": "Исправление",
+      "breaking": "Критическое"
+    },
+    "sample": {
+      "month1": {
+        "title": "Ноябрь 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "Калькулятор Времени Чтения",
+            "description": "Рассчитайте время чтения вашего контента с настраиваемой скоростью",
+            "date": "5 ноя 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Улучшение Переключателя Языка",
+            "description": "Добавлены флаги стран в переключатель языка для лучшей видимости",
+            "date": "5 ноя 2025"
+          }
+        }
+      },
+      "month2": {
+        "title": "Октябрь 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "JSON Форматировщик и Валидатор",
+            "description": "Форматирование и валидация JSON с подсветкой синтаксиса и обнаружением ошибок в реальном времени",
+            "date": "31 окт 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Набор Конвертеров Регистра",
+            "description": "Добавлены конвертеры Kebab Case, Snake Case и Camel Case",
+            "date": "31 окт 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Инструменты Извлечения Email",
+            "description": "Извлечение email из текста и PDF файлов с расширенными опциями фильтрации",
+            "date": "28 окт 2025"
+          },
+          "4": {
+            "type": "improved",
+            "title": "Оптимизация Производительности",
+            "description": "Улучшена скорость загрузки страниц с предзагрузкой шрифтов и критических ресурсов",
+            "date": "9 окт 2025"
+          },
+          "5": {
+            "type": "fixed",
+            "title": "Проблемы Загрузки JavaScript",
+            "description": "Устранены ошибки загрузки чанков, затрагивающие некоторых пользователей",
+            "date": "29 окт 2025"
+          }
+        }
+      }
+    },
+    "emptyState": {
+      "title": "Обновлений Пока Нет",
+      "description": "Скоро здесь появятся последние обновления и новые функции."
+    },
+    "subscribe": {
+      "title": "Оставайтесь в Курсе",
+      "description": "Хотите получать уведомления о новых функциях и обновлениях?",
+      "button": "Подписаться на Обновления"
+    }
+  }
+}
