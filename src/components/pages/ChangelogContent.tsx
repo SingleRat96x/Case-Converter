@@ -2,16 +2,12 @@
 
 import React from 'react';
 import { useTranslation } from '@/lib/i18n/hooks';
-import { getLocaleFromPathname } from '@/lib/i18n';
-import { usePathname } from 'next/navigation';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Clock, Package, Sparkles, Wrench, Bug, AlertTriangle } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 
 export function ChangelogContent() {
   const { tSync: t } = useTranslation('pages/changelog');
-  const pathname = usePathname();
-  const currentLocale = getLocaleFromPathname(pathname);
 
   // Get category icon
   const getCategoryIcon = (type: string) => {
