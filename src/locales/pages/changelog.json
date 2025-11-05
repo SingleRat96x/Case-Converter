@@ -108,8 +108,10 @@
     },
     "subscribe": {
       "title": "Stay Updated",
-      "description": "Want to be notified about new features and updates?",
-      "button": "Subscribe to Updates"
+      "description": "Subscribe to our RSS feed to get notified about new features and updates in your favorite feed reader",
+      "button": "Subscribe via RSS",
+      "rssInfo": "RSS is a web feed that allows you to access updates in a standardized format. Use any RSS reader like Feedly, Inoreader, or your browser.",
+      "copyFeed": "Copy Feed URL"
     }
   },
   "ru": {
@@ -221,8 +223,10 @@
     },
     "subscribe": {
       "title": "Оставайтесь в Курсе",
-      "description": "Хотите получать уведомления о новых функциях и обновлениях?",
-      "button": "Подписаться на Обновления"
+      "description": "Подпишитесь на наш RSS-канал, чтобы получать уведомления о новых функциях и обновлениях в вашей любимой программе чтения RSS",
+      "button": "Подписаться через RSS",
+      "rssInfo": "RSS - это веб-канал, который позволяет получать обновления в стандартизированном формате. Используйте любой RSS-ридер, такой как Feedly, Inoreader или ваш браузер.",
+      "copyFeed": "Скопировать URL канала"
     }
   }
 }

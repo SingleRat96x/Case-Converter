@@ -7,6 +7,7 @@ export const dynamic = 'force-static';
 export async function generateMetadata(): Promise<Metadata> {
   const pathname = '/changelog';
   const locale = 'ru';
+  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
   const canonicalUrl = generateCanonicalUrl(pathname, locale);
   const alternateLinks = generateHreflangLinks(pathname);
 
@@ -26,7 +27,10 @@ export async function generateMetadata(): Promise<Metadata> {
           acc[link.hreflang] = link.href;
         }
         return acc;
-      }, {} as Record<string, string>)
+      }, {} as Record<string, string>),
+      types: {
+        'application/rss+xml': `${baseUrl}/ru/changelog/feed.xml`
+      }
     },
     
     openGraph: {

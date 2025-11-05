@@ -1,13 +1,35 @@
 'use client';
 
-import React from 'react';
+import React, { useState } from 'react';
 import { useTranslation } from '@/lib/i18n/hooks';
-import { Clock, Package, Sparkles, Wrench, Bug, AlertTriangle } from 'lucide-react';
+import { getLocaleFromPathname } from '@/lib/i18n';
+import { usePathname } from 'next/navigation';
+import { Clock, Package, Sparkles, Wrench, Bug, AlertTriangle, Rss, Copy, Check, ExternalLink } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
 import { ChangelogStructuredData } from '@/components/seo/ChangelogStructuredData';
 
 export function ChangelogContent() {
   const { tSync: t } = useTranslation('pages/changelog');
+  const pathname = usePathname();
+  const currentLocale = getLocaleFromPathname(pathname);
+  const [copied, setCopied] = useState(false);
+  
+  const baseUrl = typeof window !== 'undefined' 
+    ? window.location.origin 
+    : process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
+  const feedUrl = currentLocale === 'en' 
+    ? `${baseUrl}/changelog/feed.xml` 
+    : `${baseUrl}/ru/changelog/feed.xml`;
+
+  const handleCopyFeed = async () => {
+    try {
+      await navigator.clipboard.writeText(feedUrl);
+      setCopied(true);
+      setTimeout(() => setCopied(false), 2000);
+    } catch (err) {
+      console.error('Failed to copy:', err);
+    }
+  };
 
   // Get category icon
   const getCategoryIcon = (type: string) => {
@@ -193,18 +215,52 @@ export function ChangelogContent() {
             ))}
           </div>
 
-          {/* Subscribe Section */}
+          {/* RSS Subscribe Section */}
           <div className="mt-16 p-8 rounded-xl bg-gradient-to-br from-primary/10 via-primary/5 to-transparent border border-primary/20">
-            <div className="text-center max-w-xl mx-auto">
-              <h3 className="text-2xl font-bold text-foreground mb-2">
-                {t('subscribe.title')}
-              </h3>
+            <div className="text-center max-w-2xl mx-auto">
+              <div className="flex items-center justify-center gap-3 mb-3">
+                <Rss className="w-8 h-8 text-primary" />
+                <h3 className="text-2xl font-bold text-foreground">
+                  {t('subscribe.title')}
+                </h3>
+              </div>
               <p className="text-base text-muted-foreground mb-6">
                 {t('subscribe.description')}
               </p>
-              <button className="px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm">
-                {t('subscribe.button')}
-              </button>
+              
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-3 mb-4">
+                <a 
+                  href={feedUrl}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-primary text-primary-foreground font-semibold rounded-lg hover:bg-primary/90 transition-colors shadow-sm"
+                >
+                  <Rss className="w-5 h-5" />
+                  {t('subscribe.button')}
+                  <ExternalLink className="w-4 h-4" />
+                </a>
+                
+                <button 
+                  onClick={handleCopyFeed}
+                  className="inline-flex items-center gap-2 px-6 py-3 bg-muted text-foreground font-semibold rounded-lg hover:bg-muted/80 transition-colors"
+                >
+                  {copied ? (
+                    <>
+                      <Check className="w-5 h-5 text-green-600 dark:text-green-400" />
+                      <span className="text-green-600 dark:text-green-400">Copied!</span>
+                    </>
+                  ) : (
+                    <>
+                      <Copy className="w-5 h-5" />
+                      {t('subscribe.copyFeed')}
+                    </>
+                  )}
+                </button>
+              </div>
+              
+              <p className="text-sm text-muted-foreground italic">
+                {t('subscribe.rssInfo')}
+              </p>
             </div>
           </div>
         </div>
