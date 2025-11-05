@@ -59,7 +59,17 @@ export function AddLineNumbersConverter() {
   const lineCount = text ? text.split('\n').length : 0;
 
   return (
-    <div className="space-y-6">
+    <div className="space-y-8">
+      {/* H1 and H2 Description */}
+      <div className="space-y-3">
+        <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+          {tool('addLineNumbers.title')}
+        </h1>
+        <p className="text-base md:text-lg text-muted-foreground">
+          {tool('addLineNumbers.description')}
+        </p>
+      </div>
+
       {/* Main Text Area */}
       <div className="space-y-3">
         <div className="flex items-center justify-between">
@@ -94,8 +104,8 @@ export function AddLineNumbersConverter() {
         <Button
           onClick={handleAddLineNumbers}
           disabled={!text.trim() || hasProcessed}
-          size="lg"
-          className="flex-1 text-base font-semibold h-12"
+          size="default"
+          className="flex-1"
         >
           <span className="mr-2">🔢</span>
           {tool('addLineNumbers.addButton')}
@@ -106,7 +116,7 @@ export function AddLineNumbersConverter() {
             <Button
               onClick={handleCopy}
               variant="secondary"
-              size="lg"
+              size="default"
               className="flex-1 sm:flex-none"
             >
               <Clipboard className="w-4 h-4 mr-2" />
@@ -116,7 +126,7 @@ export function AddLineNumbersConverter() {
             <Button
               onClick={handleDownload}
               variant="secondary"
-              size="lg"
+              size="default"
               className="flex-1 sm:flex-none"
             >
               <Download className="w-4 h-4 mr-2" />
@@ -126,7 +136,7 @@ export function AddLineNumbersConverter() {
             <Button
               onClick={handleReset}
               variant="outline"
-              size="lg"
+              size="default"
               className="flex-1 sm:flex-none"
             >
               <RotateCcw className="w-4 h-4 mr-2" />

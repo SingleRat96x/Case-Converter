@@ -81,244 +81,245 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
   };
 
   return (
-    <div className="space-y-6">
-      {/* Section 1: Basic Settings */}
-      <div className="space-y-4 p-4 bg-muted/30 rounded-lg border">
-        <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
-          <span className="text-primary">⚙️</span>
-          Numbering Settings
-        </h3>
-        
-        <div className="grid grid-cols-2 gap-4">
-          {/* Start At */}
-          <div className="space-y-2">
-            <Label htmlFor="start-at" className="text-sm font-medium">
-              {translations.startAt}
-            </Label>
-            <Input
-              id="start-at"
-              type="number"
-              min="1"
-              value={options.startAt}
-              onChange={(e) => handleStartAtChange(e.target.value)}
-              className="w-full"
-            />
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-foreground">Numbering Options</h3>
+      
+      <Tabs defaultValue="basic" className="w-full">
+        <TabsList className="grid w-full grid-cols-4">
+          <TabsTrigger value="basic">Basic</TabsTrigger>
+          <TabsTrigger value="format">Format</TabsTrigger>
+          <TabsTrigger value="separator">Separator</TabsTrigger>
+          <TabsTrigger value="advanced">Advanced</TabsTrigger>
+        </TabsList>
+
+        {/* Tab 1: Basic Settings */}
+        <TabsContent value="basic" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              {/* Start At */}
+              <div className="space-y-2">
+                <Label htmlFor="start-at" className="text-sm font-medium">
+                  {translations.startAt}
+                </Label>
+                <Input
+                  id="start-at"
+                  type="number"
+                  min="1"
+                  value={options.startAt}
+                  onChange={(e) => handleStartAtChange(e.target.value)}
+                  className="w-full"
+                />
+              </div>
+
+              {/* Step */}
+              <div className="space-y-2">
+                <Label htmlFor="step" className="text-sm font-medium">
+                  {translations.step}
+                </Label>
+                <Input
+                  id="step"
+                  type="number"
+                  min="1"
+                  value={options.step}
+                  onChange={(e) => handleStepChange(e.target.value)}
+                  className="w-full"
+                />
+              </div>
+            </div>
           </div>
+        </TabsContent>
 
-          {/* Step */}
-          <div className="space-y-2">
-            <Label htmlFor="step" className="text-sm font-medium">
-              {translations.step}
-            </Label>
-            <Input
-              id="step"
-              type="number"
-              min="1"
-              value={options.step}
-              onChange={(e) => handleStepChange(e.target.value)}
-              className="w-full"
-            />
+        {/* Tab 2: Format Selection */}
+        <TabsContent value="format" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            <Label className="text-sm font-medium">{translations.format}</Label>
+            
+            <Tabs defaultValue={getFormatType()} onValueChange={(type) => {
+              // Set default format for each type
+              if (type === 'numeric') handleFormatChange('numeric');
+              if (type === 'alphabetic') handleFormatChange('alpha-upper');
+              if (type === 'roman') handleFormatChange('roman-upper');
+            }}>
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="numeric">123</TabsTrigger>
+                <TabsTrigger value="alphabetic">ABC</TabsTrigger>
+                <TabsTrigger value="roman">I II III</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="numeric" className="space-y-3 mt-4">
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('numeric')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'numeric'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">1, 2, 3</div>
+                    <div className="text-xs text-muted-foreground">Standard</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('padded2')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'padded2'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">01, 02, 03</div>
+                    <div className="text-xs text-muted-foreground">2-digit</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('padded3')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'padded3'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">001, 002, 003</div>
+                    <div className="text-xs text-muted-foreground">3-digit</div>
+                  </button>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="alphabetic" className="space-y-3 mt-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('alpha-upper')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'alpha-upper'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">A, B, C</div>
+                    <div className="text-xs text-muted-foreground">Uppercase</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('alpha-lower')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'alpha-lower'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">a, b, c</div>
+                    <div className="text-xs text-muted-foreground">Lowercase</div>
+                  </button>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="roman" className="space-y-3 mt-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('roman-upper')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'roman-upper'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">I, II, III</div>
+                    <div className="text-xs text-muted-foreground">Uppercase</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('roman-lower')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'roman-lower'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">i, ii, iii</div>
+                    <div className="text-xs text-muted-foreground">Lowercase</div>
+                  </button>
+                </div>
+              </TabsContent>
+            </Tabs>
           </div>
-        </div>
-      </div>
+        </TabsContent>
 
-      {/* Section 2: Format Selection */}
-      <div className="space-y-4 p-4 bg-muted/30 rounded-lg border">
-        <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
-          <span className="text-primary">🔢</span>
-          {translations.format}
-        </h3>
-        
-        <Tabs defaultValue={getFormatType()} onValueChange={(type) => {
-          // Set default format for each type
-          if (type === 'numeric') handleFormatChange('numeric');
-          if (type === 'alphabetic') handleFormatChange('alpha-upper');
-          if (type === 'roman') handleFormatChange('roman-upper');
-        }}>
-          <TabsList className="grid w-full grid-cols-3">
-            <TabsTrigger value="numeric">123</TabsTrigger>
-            <TabsTrigger value="alphabetic">ABC</TabsTrigger>
-            <TabsTrigger value="roman">I II III</TabsTrigger>
-          </TabsList>
-          
-          <TabsContent value="numeric" className="space-y-3 mt-4">
-            <div className="grid grid-cols-3 gap-2">
-              <button
-                type="button"
-                onClick={() => handleFormatChange('numeric')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'numeric'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">1, 2, 3</div>
-                <div className="text-xs text-muted-foreground">Standard</div>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleFormatChange('padded2')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'padded2'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">01, 02, 03</div>
-                <div className="text-xs text-muted-foreground">2-digit</div>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleFormatChange('padded3')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'padded3'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">001, 002, 003</div>
-                <div className="text-xs text-muted-foreground">3-digit</div>
-              </button>
+        {/* Tab 3: Separator */}
+        <TabsContent value="separator" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            <Label className="text-sm font-medium">{translations.separator}</Label>
+            
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+              {[
+                { value: '. ' as LineNumberSeparator, label: '1. Text', desc: 'Period' },
+                { value: ') ' as LineNumberSeparator, label: '1) Text', desc: 'Paren' },
+                { value: ': ' as LineNumberSeparator, label: '1: Text', desc: 'Colon' },
+                { value: ' - ' as LineNumberSeparator, label: '1 - Text', desc: 'Hyphen' },
+                { value: '|' as LineNumberSeparator, label: '1|Text', desc: 'Pipe' },
+                { value: '\t' as LineNumberSeparator, label: '1→Text', desc: 'Tab' },
+              ].map((sep) => (
+                <button
+                  key={sep.value}
+                  type="button"
+                  onClick={() => handleSeparatorChange(sep.value)}
+                  className={`p-2 rounded-md border-2 transition-all text-center ${
+                    options.separator === sep.value
+                      ? 'border-primary bg-primary/10 text-primary font-semibold'
+                      : 'border-border hover:border-primary/50 hover:bg-muted'
+                  }`}
+                >
+                  <div className="font-mono text-xs mb-1">{sep.label}</div>
+                  <div className="text-[10px] text-muted-foreground">{sep.desc}</div>
+                </button>
+              ))}
             </div>
-          </TabsContent>
-          
-          <TabsContent value="alphabetic" className="space-y-3 mt-4">
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => handleFormatChange('alpha-upper')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'alpha-upper'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">A, B, C</div>
-                <div className="text-xs text-muted-foreground">Uppercase</div>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleFormatChange('alpha-lower')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'alpha-lower'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">a, b, c</div>
-                <div className="text-xs text-muted-foreground">Lowercase</div>
-              </button>
-            </div>
-          </TabsContent>
-          
-          <TabsContent value="roman" className="space-y-3 mt-4">
-            <div className="grid grid-cols-2 gap-2">
-              <button
-                type="button"
-                onClick={() => handleFormatChange('roman-upper')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'roman-upper'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">I, II, III</div>
-                <div className="text-xs text-muted-foreground">Uppercase</div>
-              </button>
-              <button
-                type="button"
-                onClick={() => handleFormatChange('roman-lower')}
-                className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
-                  options.format === 'roman-lower'
-                    ? 'border-primary bg-primary/10 text-primary font-semibold'
-                    : 'border-border hover:border-primary/50 hover:bg-muted'
-                }`}
-              >
-                <div className="font-bold mb-1">i, ii, iii</div>
-                <div className="text-xs text-muted-foreground">Lowercase</div>
-              </button>
-            </div>
-          </TabsContent>
-        </Tabs>
-      </div>
+          </div>
+        </TabsContent>
 
-      {/* Section 3: Separator */}
-      <div className="space-y-4 p-4 bg-muted/30 rounded-lg border">
-        <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
-          <span className="text-primary">➡️</span>
-          {translations.separator}
-        </h3>
-        
-        <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
-          {[
-            { value: '. ' as LineNumberSeparator, label: '1. Text', desc: 'Period' },
-            { value: ') ' as LineNumberSeparator, label: '1) Text', desc: 'Paren' },
-            { value: ': ' as LineNumberSeparator, label: '1: Text', desc: 'Colon' },
-            { value: ' - ' as LineNumberSeparator, label: '1 - Text', desc: 'Hyphen' },
-            { value: '|' as LineNumberSeparator, label: '1|Text', desc: 'Pipe' },
-            { value: '\t' as LineNumberSeparator, label: '1→Text', desc: 'Tab' },
-          ].map((sep) => (
-            <button
-              key={sep.value}
-              type="button"
-              onClick={() => handleSeparatorChange(sep.value)}
-              className={`p-2 rounded-md border-2 transition-all text-center ${
-                options.separator === sep.value
-                  ? 'border-primary bg-primary/10 text-primary font-semibold'
-                  : 'border-border hover:border-primary/50 hover:bg-muted'
-              }`}
-            >
-              <div className="font-mono text-xs mb-1">{sep.label}</div>
-              <div className="text-[10px] text-muted-foreground">{sep.desc}</div>
-            </button>
-          ))}
-        </div>
-      </div>
+        {/* Tab 4: Advanced Options */}
+        <TabsContent value="advanced" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            {/* Non-empty lines toggle */}
+            <div className="flex items-center justify-between p-3 bg-background/50 rounded-md border">
+              <div className="space-y-0.5">
+                <Label htmlFor="non-empty" className="text-sm font-medium cursor-pointer">
+                  Number non-empty lines only
+                </Label>
+                <p className="text-xs text-muted-foreground">
+                  Skip blank lines when numbering
+                </p>
+              </div>
+              <Switch
+                id="non-empty"
+                checked={options.applyTo === 'non-empty'}
+                onCheckedChange={handleApplyToChange}
+              />
+            </div>
 
-      {/* Section 4: Advanced Options */}
-      <div className="space-y-4 p-4 bg-muted/30 rounded-lg border">
-        <h3 className="text-sm font-semibold text-foreground flex items-center gap-2">
-          <span className="text-primary">⚡</span>
-          Advanced Options
-        </h3>
-        
-        <div className="space-y-4">
-          {/* Non-empty lines toggle */}
-          <div className="flex items-center justify-between p-3 bg-background/50 rounded-md border">
-            <div className="space-y-0.5">
-              <Label htmlFor="non-empty" className="text-sm font-medium cursor-pointer">
-                Number non-empty lines only
+            {/* Skip patterns */}
+            <div className="space-y-2">
+              <Label htmlFor="skip-patterns" className="text-sm font-medium">
+                {translations.skipLinesStartingWith}
               </Label>
+              <Input
+                id="skip-patterns"
+                type="text"
+                placeholder="e.g., //, #, ;"
+                value={options.skipLinesStartingWith}
+                onChange={(e) => handleSkipPatternsChange(e.target.value)}
+                className="w-full font-mono text-sm"
+              />
               <p className="text-xs text-muted-foreground">
-                Skip blank lines when numbering
+                Comma-separated patterns to skip (e.g., &quot;//, #&quot; for comments)
               </p>
             </div>
-            <Switch
-              id="non-empty"
-              checked={options.applyTo === 'non-empty'}
-              onCheckedChange={handleApplyToChange}
-            />
           </div>
-
-          {/* Skip patterns */}
-          <div className="space-y-2">
-            <Label htmlFor="skip-patterns" className="text-sm font-medium">
-              {translations.skipLinesStartingWith}
-            </Label>
-            <Input
-              id="skip-patterns"
-              type="text"
-              placeholder="e.g., //, #, ;"
-              value={options.skipLinesStartingWith}
-              onChange={(e) => handleSkipPatternsChange(e.target.value)}
-              className="w-full font-mono text-sm"
-            />
-            <p className="text-xs text-muted-foreground">
-              Comma-separated patterns to skip (e.g., &quot;//, #&quot; for comments)
-            </p>
-          </div>
-        </div>
-      </div>
+        </TabsContent>
+      </Tabs>
     </div>
   );
 }
