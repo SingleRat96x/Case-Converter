@@ -89,19 +89,19 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
         <TabsList className="grid w-full grid-cols-4">
           <TabsTrigger value="basic" className="flex items-center gap-1.5">
             <Settings className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Basic</span>
+            <span>Basic</span>
           </TabsTrigger>
           <TabsTrigger value="format" className="flex items-center gap-1.5">
             <Type className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Format</span>
+            <span>Format</span>
           </TabsTrigger>
           <TabsTrigger value="separator" className="flex items-center gap-1.5">
             <ArrowRight className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Separator</span>
+            <span>Separator</span>
           </TabsTrigger>
           <TabsTrigger value="advanced" className="flex items-center gap-1.5">
             <Sliders className="w-3.5 h-3.5" />
-            <span className="hidden sm:inline">Advanced</span>
+            <span>Advanced</span>
           </TabsTrigger>
         </TabsList>
 

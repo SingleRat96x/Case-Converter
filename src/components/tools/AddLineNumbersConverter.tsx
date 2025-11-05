@@ -6,11 +6,13 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { LineNumberOptions } from './LineNumberOptions';
 import { addLineNumbers, type LineNumberOptions as LineNumberOptionsType } from '@/lib/textTransforms';
-import { Clipboard, Download, RotateCcw, ListOrdered } from 'lucide-react';
+import { Clipboard, Download, RotateCcw, ListOrdered, Check } from 'lucide-react';
 
 export function AddLineNumbersConverter() {
   const { common, tool } = useToolTranslations('tools/text-modifiers');
   const [text, setText] = useState('');
+  const [originalText, setOriginalText] = useState('');
+  const [buttonState, setButtonState] = useState<'idle' | 'processing' | 'success'>('idle');
   const [hasProcessed, setHasProcessed] = useState(false);
   const [options, setOptions] = useState<LineNumberOptionsType>({
     startAt: 1,
@@ -20,12 +22,36 @@ export function AddLineNumbersConverter() {
     applyTo: 'all',
     skipLinesStartingWith: ''
   });
+  const [lastAppliedOptions, setLastAppliedOptions] = useState<LineNumberOptionsType | null>(null);
+
+  // Track if options have changed since last application
+  const optionsChanged = lastAppliedOptions !== null && 
+    JSON.stringify(options) !== JSON.stringify(lastAppliedOptions);
 
   const handleAddLineNumbers = () => {
     if (text.trim()) {
-      const result = addLineNumbers(text, options);
+      setButtonState('processing');
+      
+      // If this is first time, save original text
+      if (!hasProcessed) {
+        setOriginalText(text);
+      }
+      
+      // Use original text if we're reapplying, otherwise use current text
+      const textToProcess = hasProcessed && originalText ? originalText : text;
+      const result = addLineNumbers(textToProcess, options);
+      
       setText(result);
+      setLastAppliedOptions({ ...options });
       setHasProcessed(true);
+      
+      // Show success state briefly
+      setTimeout(() => {
+        setButtonState('success');
+        setTimeout(() => {
+          setButtonState('idle');
+        }, 1500);
+      }, 200);
     }
   };
 
@@ -51,12 +77,63 @@ export function AddLineNumbersConverter() {
 
   const handleReset = () => {
     setText('');
+    setOriginalText('');
     setHasProcessed(false);
+    setLastAppliedOptions(null);
+    setButtonState('idle');
+  };
+
+  const handleTextChange = (newText: string) => {
+    setText(newText);
+    // If user manually edits numbered text, reset the state
+    if (hasProcessed) {
+      setHasProcessed(false);
+      setOriginalText('');
+      setLastAppliedOptions(null);
+    }
+  };
+
+  const handleOptionsChange = (newOptions: LineNumberOptionsType) => {
+    setOptions(newOptions);
   };
 
   const charCount = text.length;
   const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
   const lineCount = text ? text.split('\n').length : 0;
+
+  // Determine button content based on state
+  const getButtonContent = () => {
+    if (buttonState === 'processing') {
+      return (
+        <>
+          <ListOrdered className="w-4 h-4 mr-2 animate-pulse" />
+          Processing...
+        </>
+      );
+    }
+    if (buttonState === 'success') {
+      return (
+        <>
+          <Check className="w-4 h-4 mr-2" />
+          Applied!
+        </>
+      );
+    }
+    if (hasProcessed && optionsChanged) {
+      return (
+        <>
+          <ListOrdered className="w-4 h-4 mr-2" />
+          Re-apply Line Numbers
+        </>
+      );
+    }
+    return (
+      <>
+        <ListOrdered className="w-4 h-4 mr-2" />
+        {tool('addLineNumbers.addButton')}
+      </>
+    );
+  };
 
   return (
     <div className="space-y-8">
@@ -86,10 +163,7 @@ export function AddLineNumbersConverter() {
         <textarea
           id="text-input"
           value={text}
-          onChange={(e) => {
-            setText(e.target.value);
-            setHasProcessed(false);
-          }}
+          onChange={(e) => handleTextChange(e.target.value)}
           placeholder={tool('addLineNumbers.inputPlaceholder')}
           className="w-full min-h-[300px] p-4 bg-background border border-border rounded-lg resize-y focus:outline-none focus:ring-2 focus:ring-ring font-mono text-sm leading-relaxed"
         />
@@ -103,12 +177,11 @@ export function AddLineNumbersConverter() {
       <div className="flex flex-col sm:flex-row gap-3">
         <Button
           onClick={handleAddLineNumbers}
-          disabled={!text.trim() || hasProcessed}
+          disabled={!text.trim() || buttonState === 'processing'}
           size="default"
           className="w-full sm:flex-1"
         >
-          <ListOrdered className="w-4 h-4 mr-2" />
-          {tool('addLineNumbers.addButton')}
+          {getButtonContent()}
         </Button>
         
         {hasProcessed && (
@@ -152,7 +225,7 @@ export function AddLineNumbersConverter() {
       <div className="pt-4 border-t">
         <LineNumberOptions 
           options={options} 
-          onOptionsChange={setOptions}
+          onOptionsChange={handleOptionsChange}
           translations={{
             startAt: tool('addLineNumbers.options.startAt'),
             step: tool('addLineNumbers.options.step'),
@@ -185,11 +258,20 @@ export function AddLineNumbersConverter() {
         />
       </div>
 
-      {/* Processing message when button is clicked */}
-      {hasProcessed && (
+      {/* Success message when processing is complete */}
+      {hasProcessed && buttonState === 'idle' && !optionsChanged && (
         <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
           <p className="text-sm text-green-600 dark:text-green-400 font-medium">
             ✅ Line numbers added successfully! You can now copy or download the result.
+          </p>
+        </div>
+      )}
+
+      {/* Options changed notification */}
+      {optionsChanged && (
+        <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
+          <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
+            ℹ️ You&apos;ve changed the numbering options. Click &quot;Re-apply Line Numbers&quot; to see the changes.
           </p>
         </div>
       )}
