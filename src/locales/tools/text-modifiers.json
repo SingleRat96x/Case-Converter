@@ -251,8 +251,11 @@
     "addLineNumbers": {
       "title": "Add Line Numbers to Text",
       "description": "Add line numbers to text with customizable formats, separators, and numbering options. Perfect for code, scripts, and documents.",
+      "inputLabel": "Your Text",
       "inputPlaceholder": "Enter or paste your text here to add line numbers...",
       "outputLabel": "Numbered Text",
+      "helperText": "Paste your text above, adjust numbering options below, then click 'Add line numbers' to process.",
+      "addButton": "Add line numbers",
       "uploadDescription": "",
       "downloadFileName": "numbered-text.txt",
       "options": {
@@ -538,8 +541,11 @@
     "addLineNumbers": {
       "title": "Добавить Номера Строк к Тексту",
       "description": "Добавьте номера строк к тексту с настраиваемыми форматами, разделителями и опциями нумерации. Идеально для кода, скриптов и документов.",
+      "inputLabel": "Ваш Текст",
       "inputPlaceholder": "Введите или вставьте ваш текст здесь для добавления номеров строк...",
       "outputLabel": "Пронумерованный Текст",
+      "helperText": "Вставьте текст выше, настройте параметры нумерации ниже, затем нажмите 'Добавить номера строк' для обработки.",
+      "addButton": "Добавить номера строк",
       "uploadDescription": "",
       "downloadFileName": "пронумерованный-текст.txt",
       "options": {
