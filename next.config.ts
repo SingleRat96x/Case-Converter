@@ -86,6 +86,48 @@ const nextConfig: NextConfig = {
         destination: '/ru/tools/json-formatter',
         permanent: true,
       },
+      // Reading Time Estimator redirects (English)
+      {
+        source: '/tools/read-time-estimator',
+        destination: '/tools/reading-time-estimator',
+        permanent: true,
+      },
+      {
+        source: '/tools/reading-time-calculator',
+        destination: '/tools/reading-time-estimator',
+        permanent: true,
+      },
+      {
+        source: '/tools/read-time-calculator',
+        destination: '/tools/reading-time-estimator',
+        permanent: true,
+      },
+      {
+        source: '/tools/estimate-reading-time',
+        destination: '/tools/reading-time-estimator',
+        permanent: true,
+      },
+      // Reading Time Estimator redirects (Russian)
+      {
+        source: '/ru/tools/read-time-estimator',
+        destination: '/ru/tools/reading-time-estimator',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/reading-time-calculator',
+        destination: '/ru/tools/reading-time-estimator',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/read-time-calculator',
+        destination: '/ru/tools/reading-time-estimator',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/estimate-reading-time',
+        destination: '/ru/tools/reading-time-estimator',
+        permanent: true,
+      },
     ];
   },
   webpack: (config, { isServer }) => {

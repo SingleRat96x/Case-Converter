@@ -59,6 +59,7 @@ export function Header() {
         { titleKey: 'navigation.sentenceCounter', href: '/tools/sentence-counter' },
         { titleKey: 'navigation.wordFrequency', href: '/tools/word-frequency' },
         { titleKey: 'navigation.extractNumbers', href: '/tools/extract-numbers' },
+        { titleKey: 'navigation.readingTimeEstimator', href: '/tools/reading-time-estimator' },
       ]
     },
     {
@@ -216,7 +217,7 @@ export function Header() {
                   className="rounded-r-none border-r-0 transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={currentLocale === 'en'}
                 >
-                  <span className="mr-1">🇺🇸</span>
+                  <span className="mr-1.5" role="img" aria-label="UK Flag">{'\u{1F1EC}\u{1F1E7}'}</span>
                   EN
                 </Button>
                 <Button
@@ -226,7 +227,7 @@ export function Header() {
                   className="rounded-l-none transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={currentLocale === 'ru'}
                 >
-                  <span className="mr-1">🇷🇺</span>
+                  <span className="mr-1.5" role="img" aria-label="Russian Flag">{'\u{1F1F7}\u{1F1FA}'}</span>
                   RU
                 </Button>
               </div>

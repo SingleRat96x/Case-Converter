@@ -12,6 +12,8 @@ interface InteractiveSliderProps {
   label: string;
   onChange: (value: number) => void;
   className?: string;
+  unit?: string;
+  hideLabel?: boolean;
 }
 
 export function InteractiveSlider({
@@ -21,7 +23,9 @@ export function InteractiveSlider({
   step = 1,
   label,
   onChange,
-  className = ''
+  className = '',
+  unit = '',
+  hideLabel = false
 }: InteractiveSliderProps) {
   const [isDragging, setIsDragging] = useState(false);
   const sliderRef = useRef<HTMLDivElement>(null);
@@ -145,14 +149,16 @@ export function InteractiveSlider({
   return (
     <div className={`space-y-3 ${className}`}>
       {/* Desktop Layout - Inline */}
-      <div className="hidden sm:flex sm:items-center sm:justify-between sm:gap-4">
-        {/* Label */}
-        <span className="text-sm text-muted-foreground flex-shrink-0">
-          {label.replace(/:\s*\d+$/, '')}: <span className="text-lg font-bold text-foreground">{value}</span>
-        </span>
+      <div className={`hidden sm:flex ${hideLabel ? 'sm:justify-center' : 'sm:items-center sm:justify-between'} sm:gap-4`}>
+        {/* Label - only show if not hidden */}
+        {!hideLabel && (
+          <span className="text-sm text-muted-foreground flex-shrink-0">
+            {label.replace(/:\s*\d+.*$/, '')}: <span className="text-lg font-bold text-foreground">{value}{unit ? ` ${unit}` : ''}</span>
+          </span>
+        )}
 
         {/* Controls */}
-        <div className="flex items-center gap-3 flex-1 max-w-sm">
+        <div className={`flex items-center gap-3 ${hideLabel ? 'w-full' : 'flex-1 max-w-sm'}`}>
           {/* Decrement Button */}
           <Button
             onClick={handleDecrement}
@@ -213,12 +219,14 @@ export function InteractiveSlider({
 
       {/* Mobile Layout - Stacked with centered title */}
       <div className="sm:hidden space-y-3">
-        {/* Centered Label with emphasized number */}
-        <div className="text-center">
-          <span className="text-sm text-muted-foreground">
-            {label.replace(/:\s*\d+$/, '')}: <span className="text-lg font-bold text-foreground">{value}</span>
-          </span>
-        </div>
+        {/* Centered Label with emphasized number - only show if not hidden */}
+        {!hideLabel && (
+          <div className="text-center">
+            <span className="text-sm text-muted-foreground">
+              {label.replace(/:\s*\d+.*$/, '')}: <span className="text-lg font-bold text-foreground">{value}{unit ? ` ${unit}` : ''}</span>
+            </span>
+          </div>
+        )}
 
         {/* Slider Controls */}
         <div className="flex items-center gap-3">

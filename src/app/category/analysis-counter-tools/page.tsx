@@ -31,6 +31,13 @@ const analysisCounterTools = [
     description: 'Extract all numbers from text with advanced options for decimals, currency, percentages, and statistics',
     icon: '🔢',
     href: '/tools/extract-numbers'
+  },
+  {
+    id: 'reading-time-estimator',
+    title: 'Reading Time Estimator',
+    description: 'Estimate reading time for text, articles, and JSON data with customizable reading speeds',
+    icon: '⏱️',
+    href: '/tools/reading-time-estimator'
   }
 ];
 

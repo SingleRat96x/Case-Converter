@@ -105,6 +105,33 @@ const overrides: Array<ToolMetadataConfig> = [
     schema: createAdvancedSchema('random-number', ['Custom ranges', 'Bulk generation', 'No limits'], 'Number Input', 'Random Numbers', 4.8, 1250),
     relatedTools: ['random-letter', 'random-date', 'random-choice'],
   },
+  {
+    slug: 'reading-time-estimator',
+    pathname: '/tools/reading-time-estimator',
+    type: 'tool',
+    category: 'text-analysis',
+    i18n: {
+      en: {
+        title: 'Reading Time Estimator – Free Read Time Calculator for Text & JSON',
+        description: 'Paste text, enter a word count, or provide JSON and instantly get an estimated reading time. Choose words-per-minute for normal, fast, or out-loud reading and see minutes, seconds, and reading time for articles, emails, and books.',
+        shortDescription: 'Calculate reading time for text, word count, or JSON data.',
+      },
+      ru: {
+        title: 'Калькулятор Времени Чтения — Бесплатный Оценщик для Текста и JSON',
+        description: 'Вставьте текст, введите количество слов или предоставьте JSON и мгновенно получите оценку времени чтения. Выберите слов-в-минуту для обычного, быстрого или чтения вслух и посмотрите минуты, секунды и время чтения для статей, писем и книг.',
+        shortDescription: 'Рассчитайте время чтения для текста, количества слов или JSON.',
+      },
+    },
+    schema: createAdvancedSchema(
+      'reading-time-estimator',
+      ['Text input', 'Word count', 'JSON parsing', 'Multiple reading speeds', 'Range estimates'],
+      'Text or JSON Input',
+      'Reading Time Estimate',
+      4.7,
+      820
+    ),
+    relatedTools: ['text-counter', 'word-frequency', 'sentence-counter']
+  },
   // Remaining tools (image + security/dev + text styles)
   {
     slug: 'image-cropper',
