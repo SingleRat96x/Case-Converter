@@ -6,7 +6,7 @@ import { Button } from '@/components/ui/button';
 import { Label } from '@/components/ui/label';
 import { LineNumberOptions } from './LineNumberOptions';
 import { addLineNumbers, type LineNumberOptions as LineNumberOptionsType } from '@/lib/textTransforms';
-import { Clipboard, Download, RotateCcw } from 'lucide-react';
+import { Clipboard, Download, RotateCcw, ListOrdered } from 'lucide-react';
 
 export function AddLineNumbersConverter() {
   const { common, tool } = useToolTranslations('tools/text-modifiers');
@@ -99,45 +99,47 @@ export function AddLineNumbersConverter() {
         </p>
       </div>
 
-      {/* Primary Action Button */}
+      {/* Primary Action Buttons */}
       <div className="flex flex-col sm:flex-row gap-3">
         <Button
           onClick={handleAddLineNumbers}
           disabled={!text.trim() || hasProcessed}
           size="default"
-          className="flex-1"
+          className="w-full sm:flex-1"
         >
-          <span className="mr-2">🔢</span>
+          <ListOrdered className="w-4 h-4 mr-2" />
           {tool('addLineNumbers.addButton')}
         </Button>
         
         {hasProcessed && (
           <>
-            <Button
-              onClick={handleCopy}
-              variant="secondary"
-              size="default"
-              className="flex-1 sm:flex-none"
-            >
-              <Clipboard className="w-4 h-4 mr-2" />
-              {common('buttons.copy')}
-            </Button>
-            
-            <Button
-              onClick={handleDownload}
-              variant="secondary"
-              size="default"
-              className="flex-1 sm:flex-none"
-            >
-              <Download className="w-4 h-4 mr-2" />
-              {common('buttons.download')}
-            </Button>
+            <div className="flex gap-3 sm:contents">
+              <Button
+                onClick={handleCopy}
+                variant="secondary"
+                size="default"
+                className="flex-1 sm:flex-none"
+              >
+                <Clipboard className="w-4 h-4 mr-2" />
+                {common('buttons.copy')}
+              </Button>
+              
+              <Button
+                onClick={handleDownload}
+                variant="secondary"
+                size="default"
+                className="flex-1 sm:flex-none"
+              >
+                <Download className="w-4 h-4 mr-2" />
+                {common('buttons.download')}
+              </Button>
+            </div>
             
             <Button
               onClick={handleReset}
               variant="outline"
               size="default"
-              className="flex-1 sm:flex-none"
+              className="w-full sm:w-auto"
             >
               <RotateCcw className="w-4 h-4 mr-2" />
               Reset
@@ -146,44 +148,42 @@ export function AddLineNumbersConverter() {
         )}
       </div>
 
-      {/* Options - Only show before processing */}
-      {!hasProcessed && (
-        <div className="pt-4 border-t">
-          <LineNumberOptions 
-            options={options} 
-            onOptionsChange={setOptions}
-            translations={{
-              startAt: tool('addLineNumbers.options.startAt'),
-              step: tool('addLineNumbers.options.step'),
-              format: tool('addLineNumbers.options.format'),
-              separator: tool('addLineNumbers.options.separator'),
-              applyTo: tool('addLineNumbers.options.applyTo'),
-              skipLinesStartingWith: tool('addLineNumbers.options.skipLinesStartingWith'),
-              formats: {
-                numeric: tool('addLineNumbers.formats.numeric'),
-                padded2: tool('addLineNumbers.formats.padded2'),
-                padded3: tool('addLineNumbers.formats.padded3'),
-                alphaUpper: tool('addLineNumbers.formats.alphaUpper'),
-                alphaLower: tool('addLineNumbers.formats.alphaLower'),
-                romanUpper: tool('addLineNumbers.formats.romanUpper'),
-                romanLower: tool('addLineNumbers.formats.romanLower')
-              },
-              separators: {
-                periodSpace: tool('addLineNumbers.separators.periodSpace'),
-                parenSpace: tool('addLineNumbers.separators.parenSpace'),
-                colonSpace: tool('addLineNumbers.separators.colonSpace'),
-                hyphenSpace: tool('addLineNumbers.separators.hyphenSpace'),
-                pipe: tool('addLineNumbers.separators.pipe'),
-                tab: tool('addLineNumbers.separators.tab')
-              },
-              applyToOptions: {
-                all: tool('addLineNumbers.applyToOptions.all'),
-                nonEmpty: tool('addLineNumbers.applyToOptions.nonEmpty')
-              }
-            }}
-          />
-        </div>
-      )}
+      {/* Options - Always visible */}
+      <div className="pt-4 border-t">
+        <LineNumberOptions 
+          options={options} 
+          onOptionsChange={setOptions}
+          translations={{
+            startAt: tool('addLineNumbers.options.startAt'),
+            step: tool('addLineNumbers.options.step'),
+            format: tool('addLineNumbers.options.format'),
+            separator: tool('addLineNumbers.options.separator'),
+            applyTo: tool('addLineNumbers.options.applyTo'),
+            skipLinesStartingWith: tool('addLineNumbers.options.skipLinesStartingWith'),
+            formats: {
+              numeric: tool('addLineNumbers.formats.numeric'),
+              padded2: tool('addLineNumbers.formats.padded2'),
+              padded3: tool('addLineNumbers.formats.padded3'),
+              alphaUpper: tool('addLineNumbers.formats.alphaUpper'),
+              alphaLower: tool('addLineNumbers.formats.alphaLower'),
+              romanUpper: tool('addLineNumbers.formats.romanUpper'),
+              romanLower: tool('addLineNumbers.formats.romanLower')
+            },
+            separators: {
+              periodSpace: tool('addLineNumbers.separators.periodSpace'),
+              parenSpace: tool('addLineNumbers.separators.parenSpace'),
+              colonSpace: tool('addLineNumbers.separators.colonSpace'),
+              hyphenSpace: tool('addLineNumbers.separators.hyphenSpace'),
+              pipe: tool('addLineNumbers.separators.pipe'),
+              tab: tool('addLineNumbers.separators.tab')
+            },
+            applyToOptions: {
+              all: tool('addLineNumbers.applyToOptions.all'),
+              nonEmpty: tool('addLineNumbers.applyToOptions.nonEmpty')
+            }
+          }}
+        />
+      </div>
 
       {/* Processing message when button is clicked */}
       {hasProcessed && (

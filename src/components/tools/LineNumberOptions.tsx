@@ -5,6 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Settings, Type, ArrowRight, Sliders } from 'lucide-react';
 import type { LineNumberFormat, LineNumberSeparator, LineNumberOptions as LineNumberOptionsType } from '@/lib/textTransforms';
 
 interface LineNumberOptionsProps {
@@ -86,10 +87,22 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
       
       <Tabs defaultValue="basic" className="w-full">
         <TabsList className="grid w-full grid-cols-4">
-          <TabsTrigger value="basic">Basic</TabsTrigger>
-          <TabsTrigger value="format">Format</TabsTrigger>
-          <TabsTrigger value="separator">Separator</TabsTrigger>
-          <TabsTrigger value="advanced">Advanced</TabsTrigger>
+          <TabsTrigger value="basic" className="flex items-center gap-1.5">
+            <Settings className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Basic</span>
+          </TabsTrigger>
+          <TabsTrigger value="format" className="flex items-center gap-1.5">
+            <Type className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Format</span>
+          </TabsTrigger>
+          <TabsTrigger value="separator" className="flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Separator</span>
+          </TabsTrigger>
+          <TabsTrigger value="advanced" className="flex items-center gap-1.5">
+            <Sliders className="w-3.5 h-3.5" />
+            <span className="hidden sm:inline">Advanced</span>
+          </TabsTrigger>
         </TabsList>
 
         {/* Tab 1: Basic Settings */}
