@@ -4,6 +4,7 @@ import React from 'react';
 import { useTranslation } from '@/lib/i18n/hooks';
 import { Clock, Package, Sparkles, Wrench, Bug, AlertTriangle } from 'lucide-react';
 import { Layout } from '@/components/layout/Layout';
+import { ChangelogStructuredData } from '@/components/seo/ChangelogStructuredData';
 
 export function ChangelogContent() {
   const { tSync: t } = useTranslation('pages/changelog');
@@ -93,11 +94,35 @@ export function ChangelogContent() {
           date: t('sample.month2.entries.5.date')
         }
       ]
+    },
+    {
+      title: t('sample.month3.title'),
+      entries: [
+        {
+          type: t('sample.month3.entries.1.type'),
+          title: t('sample.month3.entries.1.title'),
+          description: t('sample.month3.entries.1.description'),
+          date: t('sample.month3.entries.1.date')
+        },
+        {
+          type: t('sample.month3.entries.2.type'),
+          title: t('sample.month3.entries.2.title'),
+          description: t('sample.month3.entries.2.description'),
+          date: t('sample.month3.entries.2.date')
+        },
+        {
+          type: t('sample.month3.entries.3.type'),
+          title: t('sample.month3.entries.3.title'),
+          description: t('sample.month3.entries.3.description'),
+          date: t('sample.month3.entries.3.date')
+        }
+      ]
     }
   ];
 
   return (
     <Layout>
+      <ChangelogStructuredData />
       <div className="min-h-screen bg-background">
         <div className="container mx-auto px-4 py-8 md:py-12 max-w-4xl">
           {/* Header */}

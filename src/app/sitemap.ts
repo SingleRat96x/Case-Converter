@@ -30,6 +30,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     urls.push({ url: `${base}/ru${p}`, changeFrequency: 'monthly', lastModified: now, priority: 0.5 });
   }
 
+  // Add changelog page
+  urls.push({ url: `${base}/changelog`, changeFrequency: 'weekly', lastModified: now, priority: 0.6 });
+  urls.push({ url: `${base}/ru/changelog`, changeFrequency: 'weekly', lastModified: now, priority: 0.6 });
+
   return urls;
 }
 

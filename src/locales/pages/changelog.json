@@ -77,6 +77,29 @@
             "date": "Oct 29, 2025"
           }
         }
+      },
+      "month3": {
+        "title": "August 2025",
+        "entries": {
+          "1": {
+            "type": "improved",
+            "title": "Mobile Navigation Redesign",
+            "description": "Complete revamp of mobile menu with modern UI/UX patterns and improved touch interactions",
+            "date": "Aug 17, 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Enhanced Accessibility",
+            "description": "Added keyboard navigation and drag interactions for better mobile user experience",
+            "date": "Aug 8, 2025"
+          },
+          "3": {
+            "type": "fixed",
+            "title": "Footer Links Validation",
+            "description": "Verified and fixed all footer navigation links for accuracy",
+            "date": "Aug 8, 2025"
+          }
+        }
       }
     },
     "emptyState": {
@@ -165,6 +188,29 @@
             "title": "Проблемы Загрузки JavaScript",
             "description": "Устранены ошибки загрузки чанков, затрагивающие некоторых пользователей",
             "date": "29 окт 2025"
+          }
+        }
+      },
+      "month3": {
+        "title": "Август 2025",
+        "entries": {
+          "1": {
+            "type": "improved",
+            "title": "Редизайн Мобильной Навигации",
+            "description": "Полный редизайн мобильного меню с современными UI/UX паттернами и улучшенными сенсорными взаимодействиями",
+            "date": "17 авг 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Улучшенная Доступность",
+            "description": "Добавлена навигация с клавиатуры и взаимодействия перетаскиванием для лучшего мобильного опыта",
+            "date": "8 авг 2025"
+          },
+          "3": {
+            "type": "fixed",
+            "title": "Проверка Ссылок в Футере",
+            "description": "Проверены и исправлены все навигационные ссылки в футере для точности",
+            "date": "8 авг 2025"
           }
         }
       }
