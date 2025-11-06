@@ -274,6 +274,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           title: t('navigation.extractEmailsFromText'),
           href: locale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text',
           icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.addLineNumbers'),
+          href: locale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text',
+          icon: <ChevronRight className="h-4 w-4" />
         }
       ]
     },
