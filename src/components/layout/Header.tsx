@@ -97,6 +97,7 @@ export function Header() {
         { titleKey: 'navigation.plainText', href: '/tools/plain-text' },
         { titleKey: 'navigation.extractEmailsFromText', href: '/tools/extract-emails-from-text' },
         { titleKey: 'navigation.addLineNumbers', href: '/tools/add-line-numbers-to-text' },
+        { titleKey: 'navigation.addPrefixSuffix', href: '/tools/add-prefix-and-suffix-to-lines' },
       ]
     },
     {
