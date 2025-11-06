@@ -259,12 +259,20 @@
       "uploadDescription": "",
       "downloadFileName": "numbered-text.txt",
       "options": {
+        "title": "Numbering Options",
+        "tabBasic": "Basic",
+        "tabFormat": "Format",
+        "tabSeparator": "Separator",
         "startAt": "Start at",
         "step": "Step",
         "format": "Number Format",
         "separator": "Separator",
         "applyTo": "Apply to",
-        "skipLinesStartingWith": "Skip lines starting with"
+        "skipLinesStartingWith": "Skip lines starting with",
+        "nonEmptyLabel": "Number non-empty lines only",
+        "nonEmptyDescription": "Skip blank lines when numbering",
+        "skipPatternsPlaceholder": "e.g., //, #, ;",
+        "skipPatternsDescription": "Comma-separated patterns to skip (e.g., \"//, #\" for comments)"
       },
       "formats": {
         "numeric": "1, 2, 3",
@@ -275,6 +283,13 @@
         "romanUpper": "I, II, III",
         "romanLower": "i, ii, iii"
       },
+      "formatLabels": {
+        "standard": "Standard",
+        "twoDigit": "2-digit",
+        "threeDigit": "3-digit",
+        "uppercase": "Uppercase",
+        "lowercase": "Lowercase"
+      },
       "separators": {
         "periodSpace": ". (period + space)",
         "parenSpace": ") (parenthesis + space)",
@@ -282,6 +297,14 @@
         "hyphenSpace": " - (hyphen + spaces)",
         "pipe": "| (pipe)",
         "tab": "Tab character"
+      },
+      "separatorLabels": {
+        "period": "Period",
+        "paren": "Paren",
+        "colon": "Colon",
+        "hyphen": "Hyphen",
+        "pipe": "Pipe",
+        "tab": "Tab"
       },
       "applyToOptions": {
         "all": "All lines",
@@ -549,12 +572,20 @@
       "uploadDescription": "",
       "downloadFileName": "пронумерованный-текст.txt",
       "options": {
+        "title": "Параметры Нумерации",
+        "tabBasic": "Основное",
+        "tabFormat": "Формат",
+        "tabSeparator": "Разделитель",
         "startAt": "Начать с",
         "step": "Шаг",
         "format": "Формат Номеров",
         "separator": "Разделитель",
         "applyTo": "Применить к",
-        "skipLinesStartingWith": "Пропустить строки, начинающиеся с"
+        "skipLinesStartingWith": "Пропустить строки, начинающиеся с",
+        "nonEmptyLabel": "Нумеровать только непустые строки",
+        "nonEmptyDescription": "Пропускать пустые строки при нумерации",
+        "skipPatternsPlaceholder": "например, //, #, ;",
+        "skipPatternsDescription": "Шаблоны через запятую для пропуска (например, \"//, #\" для комментариев)"
       },
       "formats": {
         "numeric": "1, 2, 3",
@@ -565,6 +596,13 @@
         "romanUpper": "I, II, III",
         "romanLower": "i, ii, iii"
       },
+      "formatLabels": {
+        "standard": "Стандартный",
+        "twoDigit": "2 цифры",
+        "threeDigit": "3 цифры",
+        "uppercase": "Заглавные",
+        "lowercase": "Строчные"
+      },
       "separators": {
         "periodSpace": ". (точка + пробел)",
         "parenSpace": ") (скобка + пробел)",
@@ -572,6 +610,14 @@
         "hyphenSpace": " - (дефис + пробелы)",
         "pipe": "| (вертикальная черта)",
         "tab": "Символ табуляции"
+      },
+      "separatorLabels": {
+        "period": "Точка",
+        "paren": "Скобка",
+        "colon": "Двоеточие",
+        "hyphen": "Дефис",
+        "pipe": "Черта",
+        "tab": "Таб"
       },
       "applyToOptions": {
         "all": "Все строки",

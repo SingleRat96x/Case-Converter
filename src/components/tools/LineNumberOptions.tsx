@@ -12,12 +12,20 @@ interface LineNumberOptionsProps {
   options: LineNumberOptionsType;
   onOptionsChange: (options: LineNumberOptionsType) => void;
   translations: {
+    title: string;
+    tabBasic: string;
+    tabFormat: string;
+    tabSeparator: string;
     startAt: string;
     step: string;
     format: string;
     separator: string;
     applyTo: string;
     skipLinesStartingWith: string;
+    nonEmptyLabel: string;
+    nonEmptyDescription: string;
+    skipPatternsPlaceholder: string;
+    skipPatternsDescription: string;
     formats: {
       numeric: string;
       padded2: string;
@@ -27,11 +35,26 @@ interface LineNumberOptionsProps {
       romanUpper: string;
       romanLower: string;
     };
+    formatLabels: {
+      standard: string;
+      twoDigit: string;
+      threeDigit: string;
+      uppercase: string;
+      lowercase: string;
+    };
     separators: {
       periodSpace: string;
       parenSpace: string;
       colonSpace: string;
       hyphenSpace: string;
+      pipe: string;
+      tab: string;
+    };
+    separatorLabels: {
+      period: string;
+      paren: string;
+      colon: string;
+      hyphen: string;
       pipe: string;
       tab: string;
     };
@@ -95,21 +118,21 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
 
   return (
     <div className="space-y-4">
-      <h3 className="text-lg font-semibold text-foreground">Numbering Options</h3>
+      <h3 className="text-lg font-semibold text-foreground">{translations.title}</h3>
       
       <Tabs defaultValue="basic" className="w-full">
         <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="basic" className="flex items-center gap-1.5">
             <Settings className="w-3.5 h-3.5" />
-            <span>Basic</span>
+            <span>{translations.tabBasic}</span>
           </TabsTrigger>
           <TabsTrigger value="format" className="flex items-center gap-1.5">
             <Type className="w-3.5 h-3.5" />
-            <span>Format</span>
+            <span>{translations.tabFormat}</span>
           </TabsTrigger>
           <TabsTrigger value="separator" className="flex items-center gap-1.5">
             <ArrowRight className="w-3.5 h-3.5" />
-            <span>Separator</span>
+            <span>{translations.tabSeparator}</span>
           </TabsTrigger>
         </TabsList>
 
@@ -152,10 +175,10 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
             <div className="flex items-center justify-between p-3 bg-background/50 rounded-md border">
               <div className="space-y-0.5">
                 <Label htmlFor="non-empty" className="text-sm font-medium cursor-pointer">
-                  Number non-empty lines only
+                  {translations.nonEmptyLabel}
                 </Label>
                 <p className="text-xs text-muted-foreground">
-                  Skip blank lines when numbering
+                  {translations.nonEmptyDescription}
                 </p>
               </div>
               <Switch
@@ -173,13 +196,13 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
               <Input
                 id="skip-patterns"
                 type="text"
-                placeholder="e.g., //, #, ;"
+                placeholder={translations.skipPatternsPlaceholder}
                 value={options.skipLinesStartingWith}
                 onChange={(e) => handleSkipPatternsChange(e.target.value)}
                 className="w-full font-mono text-sm"
               />
               <p className="text-xs text-muted-foreground">
-                Comma-separated patterns to skip (e.g., &quot;//, #&quot; for comments)
+                {translations.skipPatternsDescription}
               </p>
             </div>
           </div>
@@ -214,7 +237,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">1, 2, 3</div>
-                    <div className="text-xs text-muted-foreground">Standard</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.standard}</div>
                   </button>
                   <button
                     type="button"
@@ -226,7 +249,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">01, 02, 03</div>
-                    <div className="text-xs text-muted-foreground">2-digit</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.twoDigit}</div>
                   </button>
                   <button
                     type="button"
@@ -238,7 +261,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">001, 002, 003</div>
-                    <div className="text-xs text-muted-foreground">3-digit</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.threeDigit}</div>
                   </button>
                 </div>
               </TabsContent>
@@ -255,7 +278,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">A, B, C</div>
-                    <div className="text-xs text-muted-foreground">Uppercase</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.uppercase}</div>
                   </button>
                   <button
                     type="button"
@@ -267,7 +290,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">a, b, c</div>
-                    <div className="text-xs text-muted-foreground">Lowercase</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.lowercase}</div>
                   </button>
                 </div>
               </TabsContent>
@@ -284,7 +307,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">I, II, III</div>
-                    <div className="text-xs text-muted-foreground">Uppercase</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.uppercase}</div>
                   </button>
                   <button
                     type="button"
@@ -296,7 +319,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                     }`}
                   >
                     <div className="font-bold mb-1">i, ii, iii</div>
-                    <div className="text-xs text-muted-foreground">Lowercase</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.lowercase}</div>
                   </button>
                 </div>
               </TabsContent>
@@ -311,12 +334,12 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
             
             <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
               {[
-                { value: '. ' as LineNumberSeparator, label: '1. Text', desc: 'Period' },
-                { value: ') ' as LineNumberSeparator, label: '1) Text', desc: 'Paren' },
-                { value: ': ' as LineNumberSeparator, label: '1: Text', desc: 'Colon' },
-                { value: ' - ' as LineNumberSeparator, label: '1 - Text', desc: 'Hyphen' },
-                { value: '|' as LineNumberSeparator, label: '1|Text', desc: 'Pipe' },
-                { value: '\t' as LineNumberSeparator, label: '1→Text', desc: 'Tab' },
+                { value: '. ' as LineNumberSeparator, label: '1. Text', desc: translations.separatorLabels.period },
+                { value: ') ' as LineNumberSeparator, label: '1) Text', desc: translations.separatorLabels.paren },
+                { value: ': ' as LineNumberSeparator, label: '1: Text', desc: translations.separatorLabels.colon },
+                { value: ' - ' as LineNumberSeparator, label: '1 - Text', desc: translations.separatorLabels.hyphen },
+                { value: '|' as LineNumberSeparator, label: '1|Text', desc: translations.separatorLabels.pipe },
+                { value: '\t' as LineNumberSeparator, label: '1→Text', desc: translations.separatorLabels.tab },
               ].map((sep) => (
                 <button
                   key={sep.value}

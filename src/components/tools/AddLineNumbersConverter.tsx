@@ -227,12 +227,20 @@ export function AddLineNumbersConverter() {
           options={options} 
           onOptionsChange={handleOptionsChange}
           translations={{
+            title: tool('addLineNumbers.options.title'),
+            tabBasic: tool('addLineNumbers.options.tabBasic'),
+            tabFormat: tool('addLineNumbers.options.tabFormat'),
+            tabSeparator: tool('addLineNumbers.options.tabSeparator'),
             startAt: tool('addLineNumbers.options.startAt'),
             step: tool('addLineNumbers.options.step'),
             format: tool('addLineNumbers.options.format'),
             separator: tool('addLineNumbers.options.separator'),
             applyTo: tool('addLineNumbers.options.applyTo'),
             skipLinesStartingWith: tool('addLineNumbers.options.skipLinesStartingWith'),
+            nonEmptyLabel: tool('addLineNumbers.options.nonEmptyLabel'),
+            nonEmptyDescription: tool('addLineNumbers.options.nonEmptyDescription'),
+            skipPatternsPlaceholder: tool('addLineNumbers.options.skipPatternsPlaceholder'),
+            skipPatternsDescription: tool('addLineNumbers.options.skipPatternsDescription'),
             formats: {
               numeric: tool('addLineNumbers.formats.numeric'),
               padded2: tool('addLineNumbers.formats.padded2'),
@@ -242,6 +250,13 @@ export function AddLineNumbersConverter() {
               romanUpper: tool('addLineNumbers.formats.romanUpper'),
               romanLower: tool('addLineNumbers.formats.romanLower')
             },
+            formatLabels: {
+              standard: tool('addLineNumbers.formatLabels.standard'),
+              twoDigit: tool('addLineNumbers.formatLabels.twoDigit'),
+              threeDigit: tool('addLineNumbers.formatLabels.threeDigit'),
+              uppercase: tool('addLineNumbers.formatLabels.uppercase'),
+              lowercase: tool('addLineNumbers.formatLabels.lowercase')
+            },
             separators: {
               periodSpace: tool('addLineNumbers.separators.periodSpace'),
               parenSpace: tool('addLineNumbers.separators.parenSpace'),
@@ -249,6 +264,14 @@ export function AddLineNumbersConverter() {
               hyphenSpace: tool('addLineNumbers.separators.hyphenSpace'),
               pipe: tool('addLineNumbers.separators.pipe'),
               tab: tool('addLineNumbers.separators.tab')
+            },
+            separatorLabels: {
+              period: tool('addLineNumbers.separatorLabels.period'),
+              paren: tool('addLineNumbers.separatorLabels.paren'),
+              colon: tool('addLineNumbers.separatorLabels.colon'),
+              hyphen: tool('addLineNumbers.separatorLabels.hyphen'),
+              pipe: tool('addLineNumbers.separatorLabels.pipe'),
+              tab: tool('addLineNumbers.separatorLabels.tab')
             },
             applyToOptions: {
               all: tool('addLineNumbers.applyToOptions.all'),
