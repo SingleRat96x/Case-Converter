@@ -134,11 +134,11 @@ export function AddPrefixSuffixConverter() {
   return (
     <div className="space-y-8">
       {/* H1 and H2 */}
-      <div className="space-y-3">
-        <h1 className="text-3xl md:text-4xl font-bold text-foreground">
+      <div className="text-center space-y-4">
+        <h1 className="text-4xl font-bold text-foreground">
           {tool('addPrefixSuffix.title')}
         </h1>
-        <p className="text-base md:text-lg text-muted-foreground">
+        <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
           {tool('addPrefixSuffix.description')}
         </p>
       </div>
