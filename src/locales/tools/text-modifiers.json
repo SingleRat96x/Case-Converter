@@ -256,6 +256,20 @@
       "outputLabel": "Numbered Text",
       "helperText": "Paste your text above, adjust numbering options below, then click 'Add line numbers' to process.",
       "addButton": "Add line numbers",
+      "processing": "Processing...",
+      "applied": "Applied!",
+      "reapplyButton": "Re-apply Line Numbers",
+      "resetButton": "Reset",
+      "successMessage": "Line numbers added successfully! You can now copy or download the result.",
+      "optionsChangedMessage": "You've changed the numbering options. Click \"Re-apply Line Numbers\" to see the changes.",
+      "stats": {
+        "line": "line",
+        "lines": "lines",
+        "word": "word",
+        "words": "words",
+        "char": "char",
+        "chars": "chars"
+      },
       "uploadDescription": "",
       "downloadFileName": "numbered-text.txt",
       "options": {
@@ -569,6 +583,20 @@
       "outputLabel": "Пронумерованный Текст",
       "helperText": "Вставьте текст выше, настройте параметры нумерации ниже, затем нажмите 'Добавить номера строк' для обработки.",
       "addButton": "Добавить номера строк",
+      "processing": "Обработка...",
+      "applied": "Применено!",
+      "reapplyButton": "Повторно Применить Номера Строк",
+      "resetButton": "Сбросить",
+      "successMessage": "Номера строк успешно добавлены! Теперь вы можете скопировать или скачать результат.",
+      "optionsChangedMessage": "Вы изменили параметры нумерации. Нажмите \"Повторно Применить Номера Строк\", чтобы увидеть изменения.",
+      "stats": {
+        "line": "строка",
+        "lines": "строки",
+        "word": "слово",
+        "words": "слова",
+        "char": "символ",
+        "chars": "символы"
+      },
       "uploadDescription": "",
       "downloadFileName": "пронумерованный-текст.txt",
       "options": {

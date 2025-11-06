@@ -107,7 +107,7 @@ export function AddLineNumbersConverter() {
       return (
         <>
           <ListOrdered className="w-4 h-4 mr-2 animate-pulse" />
-          Processing...
+          {tool('addLineNumbers.processing')}
         </>
       );
     }
@@ -115,7 +115,7 @@ export function AddLineNumbersConverter() {
       return (
         <>
           <Check className="w-4 h-4 mr-2" />
-          Applied!
+          {tool('addLineNumbers.applied')}
         </>
       );
     }
@@ -123,7 +123,7 @@ export function AddLineNumbersConverter() {
       return (
         <>
           <ListOrdered className="w-4 h-4 mr-2" />
-          Re-apply Line Numbers
+          {tool('addLineNumbers.reapplyButton')}
         </>
       );
     }
@@ -154,9 +154,9 @@ export function AddLineNumbersConverter() {
             {hasProcessed ? tool('addLineNumbers.outputLabel') : tool('addLineNumbers.inputLabel')}
           </Label>
           <div className="text-xs text-muted-foreground space-x-4">
-            <span>{lineCount} {lineCount === 1 ? 'line' : 'lines'}</span>
-            <span>{wordCount} {wordCount === 1 ? 'word' : 'words'}</span>
-            <span>{charCount} {charCount === 1 ? 'char' : 'chars'}</span>
+            <span>{lineCount} {lineCount === 1 ? tool('addLineNumbers.stats.line') : tool('addLineNumbers.stats.lines')}</span>
+            <span>{wordCount} {wordCount === 1 ? tool('addLineNumbers.stats.word') : tool('addLineNumbers.stats.words')}</span>
+            <span>{charCount} {charCount === 1 ? tool('addLineNumbers.stats.char') : tool('addLineNumbers.stats.chars')}</span>
           </div>
         </div>
         
@@ -215,7 +215,7 @@ export function AddLineNumbersConverter() {
               className="w-full sm:w-auto"
             >
               <RotateCcw className="w-4 h-4 mr-2" />
-              Reset
+              {tool('addLineNumbers.resetButton')}
             </Button>
           </>
         )}
@@ -285,7 +285,7 @@ export function AddLineNumbersConverter() {
       {hasProcessed && buttonState === 'idle' && !optionsChanged && (
         <div className="p-4 bg-green-500/10 border border-green-500/20 rounded-lg">
           <p className="text-sm text-green-600 dark:text-green-400 font-medium">
-            ✅ Line numbers added successfully! You can now copy or download the result.
+            ✅ {tool('addLineNumbers.successMessage')}
           </p>
         </div>
       )}
@@ -294,7 +294,7 @@ export function AddLineNumbersConverter() {
       {optionsChanged && (
         <div className="p-4 bg-blue-500/10 border border-blue-500/20 rounded-lg">
           <p className="text-sm text-blue-600 dark:text-blue-400 font-medium">
-            ℹ️ You&apos;ve changed the numbering options. Click &quot;Re-apply Line Numbers&quot; to see the changes.
+            ℹ️ {tool('addLineNumbers.optionsChangedMessage')}
           </p>
         </div>
       )}
