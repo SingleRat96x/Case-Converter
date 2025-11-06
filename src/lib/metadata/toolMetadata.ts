@@ -1378,6 +1378,43 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['sort-words','repeat-text','plain-text']
   },
   {
+    slug: 'add-line-numbers-to-text',
+    pathname: '/tools/add-line-numbers-to-text',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Add Line Numbers to Text – Free Online Line Numbering Tool',
+        description: 'Add line numbers instantly with 7 formats, custom separators, and smart filtering. Perfect for code, scripts, and documents. Free online tool.',
+        shortDescription: 'Add customizable line numbers with multiple formats and separators',
+        alternateTitle: 'Line Numbering Tool - Add Numbers to Text'
+      },
+      ru: {
+        title: 'Добавить Номера Строк к Тексту – Бесплатный Инструмент Нумерации',
+        description: 'Добавляйте номера строк мгновенно с 7 форматами, настраиваемыми разделителями и умной фильтрацией. Идеально для кода, скриптов и документов.',
+        shortDescription: 'Настраиваемые номера строк с несколькими форматами и разделителями',
+        alternateTitle: 'Инструмент Нумерации Строк - Добавить Номера'
+      }
+    },
+    schema: createAdvancedSchema(
+      'add-line-numbers-to-text',
+      [
+        'Add line numbers to text',
+        'Multiple number formats (numeric, alphabetic, Roman)',
+        '7 numbering format options',
+        '6 separator styles',
+        'Custom start number and step',
+        'Skip empty lines or comments',
+        'Copy and download support'
+      ],
+      'Text',
+      'Numbered Text',
+      4.8,
+      1250
+    ),
+    relatedTools: ['remove-line-breaks','duplicate-line-remover','text-replace','sort-words']
+  },
+  {
     slug: 'sort-words',
     pathname: '/tools/sort-words',
     type: 'tool',
@@ -1705,7 +1742,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
+  'bubble-text','duplicate-line-remover','add-line-numbers-to-text','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
 ];
 
 const CATEGORY_SLUGS: string[] = [
