@@ -5,7 +5,7 @@ import { Label } from '@/components/ui/label';
 import { Input } from '@/components/ui/input';
 import { Switch } from '@/components/ui/switch';
 import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
-import { Settings, Type, ArrowRight, Sliders } from 'lucide-react';
+import { Settings, Type, ArrowRight } from 'lucide-react';
 import type { LineNumberFormat, LineNumberSeparator, LineNumberOptions as LineNumberOptionsType } from '@/lib/textTransforms';
 
 interface LineNumberOptionsProps {
@@ -86,7 +86,7 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
       <h3 className="text-lg font-semibold text-foreground">Numbering Options</h3>
       
       <Tabs defaultValue="basic" className="w-full">
-        <TabsList className="grid w-full grid-cols-4">
+        <TabsList className="grid w-full grid-cols-3">
           <TabsTrigger value="basic" className="flex items-center gap-1.5">
             <Settings className="w-3.5 h-3.5" />
             <span>Basic</span>
@@ -98,10 +98,6 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
           <TabsTrigger value="separator" className="flex items-center gap-1.5">
             <ArrowRight className="w-3.5 h-3.5" />
             <span>Separator</span>
-          </TabsTrigger>
-          <TabsTrigger value="advanced" className="flex items-center gap-1.5">
-            <Sliders className="w-3.5 h-3.5" />
-            <span>Advanced</span>
           </TabsTrigger>
         </TabsList>
 
@@ -138,6 +134,41 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                   className="w-full"
                 />
               </div>
+            </div>
+
+            {/* Non-empty lines toggle */}
+            <div className="flex items-center justify-between p-3 bg-background/50 rounded-md border">
+              <div className="space-y-0.5">
+                <Label htmlFor="non-empty" className="text-sm font-medium cursor-pointer">
+                  Number non-empty lines only
+                </Label>
+                <p className="text-xs text-muted-foreground">
+                  Skip blank lines when numbering
+                </p>
+              </div>
+              <Switch
+                id="non-empty"
+                checked={options.applyTo === 'non-empty'}
+                onCheckedChange={handleApplyToChange}
+              />
+            </div>
+
+            {/* Skip patterns */}
+            <div className="space-y-2">
+              <Label htmlFor="skip-patterns" className="text-sm font-medium">
+                {translations.skipLinesStartingWith}
+              </Label>
+              <Input
+                id="skip-patterns"
+                type="text"
+                placeholder="e.g., //, #, ;"
+                value={options.skipLinesStartingWith}
+                onChange={(e) => handleSkipPatternsChange(e.target.value)}
+                className="w-full font-mono text-sm"
+              />
+              <p className="text-xs text-muted-foreground">
+                Comma-separated patterns to skip (e.g., &quot;//, #&quot; for comments)
+              </p>
             </div>
           </div>
         </TabsContent>
@@ -289,46 +320,6 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
                   <div className="text-[10px] text-muted-foreground">{sep.desc}</div>
                 </button>
               ))}
-            </div>
-          </div>
-        </TabsContent>
-
-        {/* Tab 4: Advanced Options */}
-        <TabsContent value="advanced" className="space-y-4 mt-4">
-          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
-            {/* Non-empty lines toggle */}
-            <div className="flex items-center justify-between p-3 bg-background/50 rounded-md border">
-              <div className="space-y-0.5">
-                <Label htmlFor="non-empty" className="text-sm font-medium cursor-pointer">
-                  Number non-empty lines only
-                </Label>
-                <p className="text-xs text-muted-foreground">
-                  Skip blank lines when numbering
-                </p>
-              </div>
-              <Switch
-                id="non-empty"
-                checked={options.applyTo === 'non-empty'}
-                onCheckedChange={handleApplyToChange}
-              />
-            </div>
-
-            {/* Skip patterns */}
-            <div className="space-y-2">
-              <Label htmlFor="skip-patterns" className="text-sm font-medium">
-                {translations.skipLinesStartingWith}
-              </Label>
-              <Input
-                id="skip-patterns"
-                type="text"
-                placeholder="e.g., //, #, ;"
-                value={options.skipLinesStartingWith}
-                onChange={(e) => handleSkipPatternsChange(e.target.value)}
-                className="w-full font-mono text-sm"
-              />
-              <p className="text-xs text-muted-foreground">
-                Comma-separated patterns to skip (e.g., &quot;//, #&quot; for comments)
-              </p>
             </div>
           </div>
         </TabsContent>
