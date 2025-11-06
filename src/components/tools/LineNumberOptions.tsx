@@ -44,6 +44,12 @@ interface LineNumberOptionsProps {
 
 export function LineNumberOptions({ options, onOptionsChange, translations }: LineNumberOptionsProps) {
   const handleStartAtChange = (value: string) => {
+    // Allow empty string (user is clearing the field)
+    if (value === '') {
+      onOptionsChange({ ...options, startAt: 1 }); // Default to 1
+      return;
+    }
+    
     const num = parseInt(value, 10);
     if (!isNaN(num) && num > 0) {
       onOptionsChange({ ...options, startAt: num });
@@ -51,6 +57,12 @@ export function LineNumberOptions({ options, onOptionsChange, translations }: Li
   };
 
   const handleStepChange = (value: string) => {
+    // Allow empty string (user is clearing the field)
+    if (value === '') {
+      onOptionsChange({ ...options, step: 1 }); // Default to 1
+      return;
+    }
+    
     const num = parseInt(value, 10);
     if (!isNaN(num) && num > 0) {
       onOptionsChange({ ...options, step: num });
