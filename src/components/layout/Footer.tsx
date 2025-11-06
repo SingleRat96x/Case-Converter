@@ -142,6 +142,10 @@ export function Footer() {
     {
       title: t('navigation.addLineNumbers'),
       href: currentLocale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text'
+    },
+    {
+      title: t('navigation.addPrefixSuffix'),
+      href: currentLocale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : '/ru/tools/add-prefix-and-suffix-to-lines'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 

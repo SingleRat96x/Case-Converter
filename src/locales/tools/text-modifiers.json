@@ -324,6 +324,38 @@
         "all": "All lines",
         "nonEmpty": "Non-empty lines only"
       }
+    },
+    "addPrefixSuffix": {
+      "title": "Add Prefix and Suffix to Lines",
+      "description": "Want to quickly add a prefix and suffix to every line of your text? Paste your content, type any prefix and suffix you like, and this tool will instantly update each line for you. It's perfect for code comments, bullet lists, markdown quotes, and tagging log lines.",
+      "inputLabel": "Your Text",
+      "inputPlaceholder": "Enter or paste your text here...",
+      "helperText": "Paste your text above, set prefix/suffix options below, then click 'Apply Prefix/Suffix'.",
+      "addButton": "Apply Prefix/Suffix",
+      "processing": "Processing...",
+      "applied": "Applied!",
+      "reapplyButton": "Re-apply Prefix/Suffix",
+      "resetButton": "Reset",
+      "successMessage": "Prefix and suffix added successfully! You can now copy or download the result.",
+      "optionsChangedMessage": "You've changed the options. Click \"Re-apply Prefix/Suffix\" to see the changes.",
+      "stats": {
+        "line": "line",
+        "lines": "lines",
+        "word": "word",
+        "words": "words",
+        "character": "character",
+        "characters": "characters"
+      },
+      "downloadFileName": "prefix-suffix-text.txt",
+      "options": {
+        "title": "Prefix & Suffix Options",
+        "prefix": "Prefix",
+        "prefixPlaceholder": "Text to add before each line...",
+        "suffix": "Suffix",
+        "suffixPlaceholder": "Text to add after each line...",
+        "ignoreEmptyLabel": "Ignore empty lines",
+        "ignoreEmptyDescription": "Don't add prefix/suffix to blank lines"
+      }
     }
   },
   "ru": {
@@ -650,6 +682,38 @@
       "applyToOptions": {
         "all": "Все строки",
         "nonEmpty": "Только непустые строки"
+      }
+    },
+    "addPrefixSuffix": {
+      "title": "Добавить Префикс и Суффикс к Строкам",
+      "description": "Хотите быстро добавить префикс и суффикс к каждой строке вашего текста? Вставьте содержимое, введите любой префикс и суффикс, и этот инструмент мгновенно обновит каждую строку. Идеально подходит для комментариев в коде, маркированных списков, цитат в markdown и разметки строк логов.",
+      "inputLabel": "Ваш Текст",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь...",
+      "helperText": "Вставьте текст выше, настройте параметры префикса/суффикса ниже, затем нажмите 'Применить Префикс/Суффикс'.",
+      "addButton": "Применить Префикс/Суффикс",
+      "processing": "Обработка...",
+      "applied": "Применено!",
+      "reapplyButton": "Повторно Применить Префикс/Суффикс",
+      "resetButton": "Сбросить",
+      "successMessage": "Префикс и суффикс успешно добавлены! Теперь вы можете скопировать или скачать результат.",
+      "optionsChangedMessage": "Вы изменили параметры. Нажмите \"Повторно Применить Префикс/Суффикс\", чтобы увидеть изменения.",
+      "stats": {
+        "line": "строка",
+        "lines": "строки",
+        "word": "слово",
+        "words": "слова",
+        "character": "символ",
+        "characters": "символы"
+      },
+      "downloadFileName": "префикс-суффикс-текст.txt",
+      "options": {
+        "title": "Параметры Префикса и Суффикса",
+        "prefix": "Префикс",
+        "prefixPlaceholder": "Текст для добавления перед каждой строкой...",
+        "suffix": "Суффикс",
+        "suffixPlaceholder": "Текст для добавления после каждой строки...",
+        "ignoreEmptyLabel": "Игнорировать пустые строки",
+        "ignoreEmptyDescription": "Не добавлять префикс/суффикс к пустым строкам"
       }
     }
   }

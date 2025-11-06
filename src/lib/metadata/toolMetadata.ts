@@ -1415,6 +1415,42 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['remove-line-breaks','duplicate-line-remover','text-replace','sort-words']
   },
   {
+    slug: 'add-prefix-and-suffix-to-lines',
+    pathname: '/tools/add-prefix-and-suffix-to-lines',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Add Prefix and Suffix to Lines Online – Free Text Formatter',
+        description: 'Add custom prefix and suffix to every line instantly. Perfect for formatting code comments, bullet lists, and markdown. Free browser-based tool.',
+        shortDescription: 'Add prefix and suffix to each line of text',
+        alternateTitle: 'Prefix & Suffix Line Formatter Tool'
+      },
+      ru: {
+        title: 'Добавить Префикс и Суффикс к Строкам – Бесплатный Форматтер Текста',
+        description: 'Мгновенно добавляйте префикс и суффикс к каждой строке. Идеально для форматирования комментариев кода, списков и markdown.',
+        shortDescription: 'Добавление префикса и суффикса к каждой строке',
+        alternateTitle: 'Инструмент Префикс и Суффикс Строк'
+      }
+    },
+    schema: createAdvancedSchema(
+      'add-prefix-and-suffix-to-lines',
+      [
+        'Add prefix to lines',
+        'Add suffix to lines',
+        'Ignore empty lines option',
+        'Real-time preview',
+        'Copy and download support',
+        'File upload support'
+      ],
+      'Text',
+      'Formatted Text',
+      4.7,
+      890
+    ),
+    relatedTools: ['add-line-numbers-to-text','text-replace','remove-line-breaks','duplicate-line-remover']
+  },
+  {
     slug: 'sort-words',
     pathname: '/tools/sort-words',
     type: 'tool',
@@ -1742,7 +1778,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','add-line-numbers-to-text','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
+  'bubble-text','duplicate-line-remover','add-line-numbers-to-text','add-prefix-and-suffix-to-lines','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
 ];
 
 const CATEGORY_SLUGS: string[] = [

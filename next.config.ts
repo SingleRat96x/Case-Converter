@@ -160,6 +160,18 @@ const nextConfig: NextConfig = {
         destination: '/ru/tools/add-line-numbers-to-text',
         permanent: true,
       },
+      // Add Prefix/Suffix redirects (English)
+      {
+        source: '/tools/prefix-suffix-lines',
+        destination: '/tools/add-prefix-and-suffix-to-lines',
+        permanent: true,
+      },
+      // Add Prefix/Suffix redirects (Russian)
+      {
+        source: '/ru/tools/prefix-suffix-lines',
+        destination: '/ru/tools/add-prefix-and-suffix-to-lines',
+        permanent: true,
+      },
     ];
   },
   webpack: (config, { isServer }) => {

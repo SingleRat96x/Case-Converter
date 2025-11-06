@@ -617,3 +617,29 @@ export function addLineNumbers(text: string, options: LineNumberOptions): string
   
   return numberedLines.join('\n');
 }
+
+// Prefix and Suffix Options
+export interface PrefixSuffixOptions {
+  prefix: string;
+  suffix: string;
+  ignoreEmpty: boolean;
+}
+
+// Add prefix and suffix to lines
+export function addPrefixSuffix(text: string, options: PrefixSuffixOptions): string {
+  if (!text) return text;
+  
+  const lines = text.split('\n');
+  const { prefix, suffix, ignoreEmpty } = options;
+  
+  const processedLines = lines.map(line => {
+    // Skip empty lines if ignoreEmpty is true
+    if (ignoreEmpty && line.trim().length === 0) {
+      return line;
+    }
+    
+    return `${prefix}${line}${suffix}`;
+  });
+  
+  return processedLines.join('\n');
+}

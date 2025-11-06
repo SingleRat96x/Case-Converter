@@ -51,6 +51,7 @@ const toolCategories = [
       { id: 'remove-punctuation', titleKey: 'navigation.removePunctuation', href: '/tools/remove-punctuation', icon: '🧼' },
       { id: 'extract-emails-from-text', titleKey: 'navigation.extractEmailsFromText', href: '/tools/extract-emails-from-text', icon: '📧' },
       { id: 'add-line-numbers-to-text', titleKey: 'navigation.addLineNumbers', href: '/tools/add-line-numbers-to-text', icon: '🔢' },
+      { id: 'add-prefix-and-suffix-to-lines', titleKey: 'navigation.addPrefixSuffix', href: '/tools/add-prefix-and-suffix-to-lines', icon: '🔗' },
     ]
   },
   {

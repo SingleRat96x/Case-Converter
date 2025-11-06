@@ -31,6 +31,12 @@
         "entries": {
           "1": {
             "type": "new",
+            "title": "Add Prefix and Suffix to Lines",
+            "description": "Add custom prefix and suffix to every line with option to ignore empty lines. Perfect for code comments, markdown, and data formatting",
+            "date": "Dec 6, 2025"
+          },
+          "2": {
+            "type": "new",
             "title": "Add Line Numbers to Text",
             "description": "Add customizable line numbers with multiple formats (numeric, alphabetic, Roman numerals), separators, and advanced filtering options",
             "date": "Dec 5, 2025"
@@ -156,6 +162,12 @@
         "title": "Декабрь 2025",
         "entries": {
           "1": {
+            "type": "new",
+            "title": "Добавить Префикс и Суффикс к Строкам",
+            "description": "Добавляйте пользовательский префикс и суффикс к каждой строке с опцией игнорирования пустых строк. Идеально для комментариев кода, markdown и форматирования данных",
+            "date": "6 дек 2025"
+          },
+          "2": {
             "type": "new",
             "title": "Добавить Номера Строк к Тексту",
             "description": "Добавляйте настраиваемые номера строк с множеством форматов (числовые, алфавитные, римские цифры), разделителями и расширенными опциями фильтрации",

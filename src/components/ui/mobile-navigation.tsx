@@ -279,6 +279,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           title: t('navigation.addLineNumbers'),
           href: locale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text',
           icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.addPrefixSuffix'),
+          href: locale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : '/ru/tools/add-prefix-and-suffix-to-lines',
+          icon: <ChevronRight className="h-4 w-4" />
         }
       ]
     },

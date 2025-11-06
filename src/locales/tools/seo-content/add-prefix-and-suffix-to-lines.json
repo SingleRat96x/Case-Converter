@@ -1,0 +1,276 @@
+{
+  "en": {
+    "title": "Add Prefix and Suffix to Lines Online – Free Text Formatter",
+    "metaDescription": "Add custom prefix and suffix to every line instantly. Perfect for formatting code comments, bullet lists, and markdown. Free browser-based tool.",
+    "sections": {
+      "intro": {
+        "title": "Free Online Prefix and Suffix Line Formatter",
+        "content": "Want to quickly add a prefix and suffix to every line of your text? Paste your content, type any prefix and suffix you like, and this tool will instantly update each line for you. It's perfect for code comments, bullet lists, markdown quotes, and tagging log lines. Process text locally in your browser with complete privacy—no data is ever sent to a server."
+      },
+      "features": {
+        "title": "Powerful Prefix & Suffix Features",
+        "items": [
+          { "title": "Custom Prefix Input", "description": "Add any text before each line: code comment symbols, bullets, brackets, or custom tags" },
+          { "title": "Custom Suffix Input", "description": "Add any text after each line: closing brackets, punctuation, or line terminators" },
+          { "title": "Ignore Empty Lines", "description": "Option to skip blank lines and preserve your document's vertical spacing" },
+          { "title": "Real-time Preview", "description": "See results update instantly as you type your prefix and suffix" },
+          { "title": "Copy & Download", "description": "Easily copy formatted text to clipboard or download as a .txt file" },
+          { "title": "File Upload Support", "description": "Upload text files and format entire documents with prefix and suffix" },
+          { "title": "Universal Compatibility", "description": "Works with code, markdown, CSV, logs, and any plain text format" },
+          { "title": "Privacy-First", "description": "All processing happens locally in your browser—your text never leaves your device" }
+        ]
+      },
+      "useCases": {
+        "title": "When to Use Prefix and Suffix Formatting",
+        "description": "Add structure and formatting to text for various professional and creative applications.",
+        "items": [
+          { "title": "Code Comments", "description": "Add // or # before lines to quickly comment out code blocks" },
+          { "title": "Markdown Lists", "description": "Format lines with > for blockquotes, - or * for bullet lists, or 1. for ordered lists" },
+          { "title": "CSV Wrapping", "description": "Wrap data fields with quotes or brackets for CSV/TSV file formatting" },
+          { "title": "XML/HTML Tags", "description": "Wrap each line with opening and closing HTML or XML tags" },
+          { "title": "Log File Tagging", "description": "Add timestamps, labels, or severity levels to log entries" },
+          { "title": "Array Formatting", "description": "Convert plain lines into array syntax with brackets and commas" },
+          { "title": "Poetry Formatting", "description": "Add indentation or quotation marks to poetry lines" },
+          { "title": "Configuration Files", "description": "Add comment syntax or formatting to configuration file lines" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Add Prefix and Suffix to Lines",
+        "description": "Follow these simple steps to format your text lines with custom prefix and suffix.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Paste or Upload Your Text",
+            "description": "Enter your text in the input area, or upload a text file to format an entire document."
+          },
+          {
+            "step": 2,
+            "title": "Enter Your Prefix",
+            "description": "Type the text you want to add before each line in the Prefix field. Common examples: //, #, >, -, *, [, or custom tags."
+          },
+          {
+            "step": 3,
+            "title": "Enter Your Suffix",
+            "description": "Type the text you want to add after each line in the Suffix field. Common examples: ;, ], ,, or closing tags."
+          },
+          {
+            "step": 4,
+            "title": "Apply and Download",
+            "description": "Click 'Apply Prefix/Suffix' to format your text, then copy to clipboard or download as a file."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Prefix and Suffix Examples",
+        "description": "See how different prefix and suffix combinations transform your text.",
+        "items": [
+          { "title": "Code Comments (JavaScript)", "input": "console.log('test');\nalert('hello');", "output": "// console.log('test');\n// alert('hello');" },
+          { "title": "Markdown Blockquote", "input": "This is a quote\nFrom a famous author", "output": "> This is a quote\n> From a famous author" },
+          { "title": "Array Items", "input": "apple\nbanana\ncherry", "output": "['apple'],\n['banana'],\n['cherry']," },
+          { "title": "HTML List Items", "input": "First item\nSecond item\nThird item", "output": "<li>First item</li>\n<li>Second item</li>\n<li>Third item</li>" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our Prefix & Suffix Tool",
+        "content": "Professional text formatting with instant results and complete privacy protection.",
+        "items": [
+          "Completely free with unlimited usage",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Works offline after initial page load",
+          "Supports any prefix and suffix text",
+          "Ignore empty lines option for clean formatting",
+          "Fast processing for large documents",
+          "Copy to clipboard with one click",
+          "Download formatted text as .txt file",
+          "Compatible with all text formats",
+          "Perfect for developers and writers",
+          "Mobile-friendly responsive design",
+          "Works in all modern browsers",
+          "No file size limits",
+          "Real-time preview as you type"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What can I use as a prefix or suffix?",
+          "answer": "You can use any text as prefix or suffix, including spaces, special characters, code comment symbols (//, #, /*), markdown syntax (>, -, *), brackets ([, ], {, }), quotes, HTML tags, or custom text. The tool accepts any characters you type."
+        },
+        {
+          "question": "How do I add code comment syntax to multiple lines?",
+          "answer": "Simply enter your language's comment syntax in the Prefix field. For example, use // for JavaScript/C++, # for Python/Ruby, or <!-- for HTML. Leave the suffix empty unless you need closing syntax like */."
+        },
+        {
+          "question": "Can I wrap lines with HTML or XML tags?",
+          "answer": "Yes! Enter the opening tag in the Prefix field (e.g., <li>) and the closing tag in the Suffix field (e.g., </li>). Each line will be wrapped with your custom tags."
+        },
+        {
+          "question": "What does 'Ignore empty lines' do?",
+          "answer": "When enabled (default), empty or blank lines won't receive the prefix or suffix. This preserves vertical spacing in your document. Disable it if you want to format every line including blank ones."
+        },
+        {
+          "question": "Can I upload files to format?",
+          "answer": "Yes, you can upload .txt files of any size. The tool will load the entire file content, apply your prefix and suffix to each line, and allow you to download the formatted result."
+        },
+        {
+          "question": "Is my text data private and secure?",
+          "answer": "Absolutely. All text processing happens entirely in your browser using JavaScript. Your text never leaves your device and is never sent to any server. The tool works offline after the initial page load."
+        },
+        {
+          "question": "How do I format markdown lists?",
+          "answer": "For bullet lists, use - or * as prefix. For blockquotes, use > as prefix. For ordered lists, use our 'Add Line Numbers' tool first, then add the appropriate markdown syntax."
+        },
+        {
+          "question": "Can I add multiple characters as prefix or suffix?",
+          "answer": "Yes! You can enter any length of text in both prefix and suffix fields. For example, you can use [Item: as prefix and ] END as suffix to create complex formatting."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Text Formatting Tools",
+        "items": [
+          { "name": "Add Line Numbers to Text", "description": "Add customizable line numbers with multiple formats and separators", "href": "/tools/add-line-numbers-to-text" },
+          { "name": "Find and Replace Text", "description": "Find and replace text with support for regex patterns and multiple replacements", "href": "/tools/text-replace" },
+          { "name": "Remove Line Breaks", "description": "Remove unwanted line breaks and combine lines into a single paragraph", "href": "/tools/remove-line-breaks" },
+          { "name": "Remove Duplicate Lines", "description": "Automatically detect and remove duplicate lines from text", "href": "/tools/duplicate-line-remover" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Добавить Префикс и Суффикс к Строкам – Бесплатный Форматтер Текста",
+    "metaDescription": "Мгновенно добавляйте префикс и суффикс к каждой строке. Идеально для форматирования комментариев кода, списков и markdown. Бесплатный онлайн-инструмент.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Онлайн Форматтер Префиксов и Суффиксов для Строк",
+        "content": "Хотите быстро добавить префикс и суффикс к каждой строке вашего текста? Вставьте содержимое, введите любой префикс и суффикс, и этот инструмент мгновенно обновит каждую строку. Идеально подходит для комментариев в коде, маркированных списков, цитат в markdown и разметки строк логов. Обрабатывайте текст локально в вашем браузере с полной конфиденциальностью—данные никогда не отправляются на сервер."
+      },
+      "features": {
+        "title": "Мощные Функции Префиксов и Суффиксов",
+        "items": [
+          { "title": "Пользовательский Ввод Префикса", "description": "Добавляйте любой текст перед каждой строкой: символы комментариев, маркеры, скобки или пользовательские теги" },
+          { "title": "Пользовательский Ввод Суффикса", "description": "Добавляйте любой текст после каждой строки: закрывающие скобки, пунктуацию или завершители строк" },
+          { "title": "Игнорирование Пустых Строк", "description": "Опция пропуска пустых строк для сохранения вертикальных отступов в документе" },
+          { "title": "Предварительный Просмотр в Реальном Времени", "description": "Видите результаты мгновенно при вводе префикса и суффикса" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте отформатированный текст в буфер обмена или скачивайте как .txt файл" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы и форматируйте целые документы с префиксом и суффиксом" },
+          { "title": "Универсальная Совместимость", "description": "Работает с кодом, markdown, CSV, логами и любым текстовым форматом" },
+          { "title": "Приоритет Конфиденциальности", "description": "Вся обработка происходит локально в вашем браузере—ваш текст никогда не покидает ваше устройство" }
+        ]
+      },
+      "useCases": {
+        "title": "Когда Использовать Форматирование Префиксов и Суффиксов",
+        "description": "Добавляйте структуру и форматирование к тексту для различных профессиональных и творческих применений.",
+        "items": [
+          { "title": "Комментарии в Коде", "description": "Добавляйте // или # перед строками для быстрого комментирования блоков кода" },
+          { "title": "Списки Markdown", "description": "Форматируйте строки с > для цитат, - или * для маркированных списков, или 1. для нумерованных списков" },
+          { "title": "Обёртка CSV", "description": "Оборачивайте поля данных кавычками или скобками для форматирования CSV/TSV файлов" },
+          { "title": "XML/HTML Теги", "description": "Оборачивайте каждую строку открывающими и закрывающими HTML или XML тегами" },
+          { "title": "Разметка Логов", "description": "Добавляйте метки времени, ярлыки или уровни важности к записям логов" },
+          { "title": "Форматирование Массивов", "description": "Преобразуйте простые строки в синтаксис массива со скобками и запятыми" },
+          { "title": "Форматирование Поэзии", "description": "Добавляйте отступы или кавычки к строкам стихов" },
+          { "title": "Конфигурационные Файлы", "description": "Добавляйте синтаксис комментариев или форматирование к строкам конфигурационных файлов" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Добавить Префикс и Суффикс к Строкам",
+        "description": "Следуйте этим простым шагам для форматирования текстовых строк с пользовательским префиксом и суффиксом.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Вставьте или Загрузите Текст",
+            "description": "Введите ваш текст в область ввода или загрузите текстовый файл для форматирования всего документа."
+          },
+          {
+            "step": 2,
+            "title": "Введите Префикс",
+            "description": "Введите текст, который хотите добавить перед каждой строкой в поле Префикс. Типичные примеры: //, #, >, -, *, [, или пользовательские теги."
+          },
+          {
+            "step": 3,
+            "title": "Введите Суффикс",
+            "description": "Введите текст, который хотите добавить после каждой строки в поле Суффикс. Типичные примеры: ;, ], ,, или закрывающие теги."
+          },
+          {
+            "step": 4,
+            "title": "Примените и Скачайте",
+            "description": "Нажмите 'Применить Префикс/Суффикс' для форматирования текста, затем скопируйте в буфер обмена или скачайте как файл."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Префиксов и Суффиксов",
+        "description": "Посмотрите, как различные комбинации префикса и суффикса преобразуют ваш текст.",
+        "items": [
+          { "title": "Комментарии Кода (JavaScript)", "input": "console.log('test');\nalert('hello');", "output": "// console.log('test');\n// alert('hello');" },
+          { "title": "Цитата Markdown", "input": "Это цитата\nОт известного автора", "output": "> Это цитата\n> От известного автора" },
+          { "title": "Элементы Массива", "input": "яблоко\nбанан\nвишня", "output": "['яблоко'],\n['банан'],\n['вишня']," },
+          { "title": "HTML Элементы Списка", "input": "Первый элемент\nВторой элемент\nТретий элемент", "output": "<li>Первый элемент</li>\n<li>Второй элемент</li>\n<li>Третий элемент</li>" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Инструмент Префикс и Суффикс",
+        "content": "Профессиональное форматирование текста с мгновенными результатами и полной защитой конфиденциальности.",
+        "items": [
+          "Полностью бесплатно с неограниченным использованием",
+          "Не требуется регистрация или учетная запись",
+          "Приоритет конфиденциальности - вся обработка локально",
+          "Работает офлайн после начальной загрузки страницы",
+          "Поддерживает любой текст префикса и суффикса",
+          "Опция игнорирования пустых строк для чистого форматирования",
+          "Быстрая обработка больших документов",
+          "Копирование в буфер обмена одним кликом",
+          "Скачивание отформатированного текста как .txt файл",
+          "Совместимость со всеми текстовыми форматами",
+          "Идеально для разработчиков и писателей",
+          "Адаптивный дизайн для мобильных устройств",
+          "Работает во всех современных браузерах",
+          "Без ограничений размера файла",
+          "Предварительный просмотр в реальном времени при вводе"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что можно использовать в качестве префикса или суффикса?",
+          "answer": "Вы можете использовать любой текст как префикс или суффикс, включая пробелы, специальные символы, символы комментариев кода (//, #, /*), синтаксис markdown (>, -, *), скобки ([, ], {, }), кавычки, HTML теги или пользовательский текст. Инструмент принимает любые символы, которые вы вводите."
+        },
+        {
+          "question": "Как добавить синтаксис комментариев кода к нескольким строкам?",
+          "answer": "Просто введите синтаксис комментариев вашего языка программирования в поле Префикс. Например, используйте // для JavaScript/C++, # для Python/Ruby, или <!-- для HTML. Оставьте суффикс пустым, если вам не нужен закрывающий синтаксис типа */."
+        },
+        {
+          "question": "Могу ли я обернуть строки HTML или XML тегами?",
+          "answer": "Да! Введите открывающий тег в поле Префикс (например, <li>) и закрывающий тег в поле Суффикс (например, </li>). Каждая строка будет обернута вашими пользовательскими тегами."
+        },
+        {
+          "question": "Что делает опция 'Игнорировать пустые строки'?",
+          "answer": "Когда включена (по умолчанию), пустые или пробельные строки не получат префикс или суффикс. Это сохраняет вертикальные отступы в вашем документе. Отключите эту опцию, если хотите форматировать каждую строку, включая пустые."
+        },
+        {
+          "question": "Могу ли я загружать файлы для форматирования?",
+          "answer": "Да, вы можете загружать .txt файлы любого размера. Инструмент загрузит весь контент файла, применит ваш префикс и суффикс к каждой строке и позволит скачать отформатированный результат."
+        },
+        {
+          "question": "Являются ли мои текстовые данные конфиденциальными и безопасными?",
+          "answer": "Абсолютно. Вся обработка текста происходит полностью в вашем браузере с использованием JavaScript. Ваш текст никогда не покидает ваше устройство и никогда не отправляется на какой-либо сервер. Инструмент работает офлайн после начальной загрузки страницы."
+        },
+        {
+          "question": "Как форматировать списки markdown?",
+          "answer": "Для маркированных списков используйте - или * в качестве префикса. Для цитат используйте > в качестве префикса. Для нумерованных списков сначала используйте наш инструмент 'Добавить Номера Строк', затем добавьте соответствующий синтаксис markdown."
+        },
+        {
+          "question": "Могу ли я добавить несколько символов в качестве префикса или суффикса?",
+          "answer": "Да! Вы можете ввести текст любой длины в оба поля префикса и суффикса. Например, вы можете использовать [Элемент: в качестве префикса и ] КОНЕЦ в качестве суффикса для создания сложного форматирования."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Форматирования Текста",
+        "items": [
+          { "name": "Добавить Номера Строк к Тексту", "description": "Добавляйте настраиваемые номера строк с несколькими форматами и разделителями", "href": "/ru/tools/add-line-numbers-to-text" },
+          { "name": "Найти и Заменить Текст", "description": "Находите и заменяйте текст с поддержкой регулярных выражений и множественных замен", "href": "/ru/tools/text-replace" },
+          { "name": "Удалить Разрывы Строк", "description": "Удаляйте нежелательные разрывы строк и объединяйте строки в один абзац", "href": "/ru/tools/remove-line-breaks" },
+          { "name": "Удалить Дублирующиеся Строки", "description": "Автоматически обнаруживайте и удаляйте дублирующиеся строки из текста", "href": "/ru/tools/duplicate-line-remover" }
+        ]
+      }
+    }
+  }
+}

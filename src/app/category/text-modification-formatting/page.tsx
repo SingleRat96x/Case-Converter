@@ -129,6 +129,13 @@ const textModificationTools = [
     description: 'Add customizable line numbers to text with multiple formats and options',
     icon: '🔢',
     href: '/tools/add-line-numbers-to-text'
+  },
+  {
+    id: 'add-prefix-and-suffix-to-lines',
+    title: 'Add Prefix & Suffix to Lines',
+    description: 'Add custom prefix and suffix to every line with smart empty line handling',
+    icon: '🔗',
+    href: '/tools/add-prefix-and-suffix-to-lines'
   }
 ];
 
