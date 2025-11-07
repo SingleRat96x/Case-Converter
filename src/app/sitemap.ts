@@ -39,6 +39,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
   urls.push({ url: `${base}/ru/tools/add-line-numbers-to-text`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
   urls.push({ url: `${base}/tools/add-prefix-and-suffix-to-lines`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
   urls.push({ url: `${base}/ru/tools/add-prefix-and-suffix-to-lines`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/tools/sha1-hash-generator`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/ru/tools/sha1-hash-generator`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
 
   return urls;
 }
