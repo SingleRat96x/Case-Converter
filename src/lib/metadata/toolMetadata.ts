@@ -1821,7 +1821,7 @@ const CATEGORY_SLUGS: string[] = [
   'misc-tools','random-generators','code-data-translation','text-modification-formatting','analysis-counter-tools','image-tools','social-media-text-generators','convert-case-tools'
 ];
 
-function buildDefaultI18n(slug: string): Record<SupportedLocale, LocalizedMetadataFields> {
+function buildDefaultI18n(slug: string): { en: LocalizedMetadataFields; ru?: LocalizedMetadataFields; de?: LocalizedMetadataFields } {
   const readable = slug.replace(/-/g, ' ');
   const titleEn = `${readable.charAt(0).toUpperCase()}${readable.slice(1)} — Free Online Tool`;
   const titleRu = `${readable.charAt(0).toUpperCase()}${readable.slice(1)} — Онлайн Инструмент`;
@@ -2047,7 +2047,8 @@ export function getToolMetadataLocalized(slug: string, locale: SupportedLocale):
 export function validateRegistry(): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   for (const [slug, conf] of registry.entries()) {
-    for (const locale of (['en', 'ru'] as SupportedLocale[])) {
+    // Only validate required locales (en is required, ru/de are optional)
+    for (const locale of (['en'] as SupportedLocale[])) {
       const loc = conf.i18n[locale];
       if (!loc) {
         issues.push({ slug, locale, field: 'title', message: 'Missing locale block' });

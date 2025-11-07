@@ -38,10 +38,10 @@ interface AllToolsPageProps {
 // Tool Card Component with description
 const ToolCard: React.FC<{ 
   tool: Tool & { description?: string }; 
-  locale: 'en' | 'ru';
+  locale: 'en' | 'ru' | 'de';
 }> = ({ tool, locale }) => {
   const { tSync: t } = useNavigationTranslations();
-  const toolHref = locale === 'en' ? tool.href : `/ru${tool.href}`;
+  const toolHref = locale === 'en' ? tool.href : `/${locale}${tool.href}`;
   
   // Generate description based on tool
   const getDescription = () => {
@@ -100,13 +100,13 @@ const ToolCard: React.FC<{
 // Category Section Component
 const CategorySection: React.FC<{
   category: ToolCategory;
-  locale: 'en' | 'ru';
+  locale: 'en' | 'ru' | 'de';
   searchQuery: string;
 }> = ({ category, locale, searchQuery }) => {
   const { tSync: t } = useNavigationTranslations();
   const categoryHref = locale === 'en' 
     ? `/category/${category.slug}` 
-    : `/ru/category/${category.slug}`;
+    : `/${locale}/category/${category.slug}`;
   
   // Filter tools based on search
   const filteredTools = useMemo(() => {
