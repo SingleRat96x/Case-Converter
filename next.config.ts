@@ -128,6 +128,72 @@ const nextConfig: NextConfig = {
         destination: '/ru/tools/reading-time-estimator',
         permanent: true,
       },
+      // Add Line Numbers redirects (English)
+      {
+        source: '/tools/line-numbering-tool',
+        destination: '/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/tools/number-lines',
+        destination: '/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/tools/add-line-numbers',
+        destination: '/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      // Add Line Numbers redirects (Russian)
+      {
+        source: '/ru/tools/line-numbering-tool',
+        destination: '/ru/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/number-lines',
+        destination: '/ru/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/add-line-numbers',
+        destination: '/ru/tools/add-line-numbers-to-text',
+        permanent: true,
+      },
+      // Add Prefix/Suffix redirects (English)
+      {
+        source: '/tools/prefix-suffix-lines',
+        destination: '/tools/add-prefix-and-suffix-to-lines',
+        permanent: true,
+      },
+      // Add Prefix/Suffix redirects (Russian)
+      {
+        source: '/ru/tools/prefix-suffix-lines',
+        destination: '/ru/tools/add-prefix-and-suffix-to-lines',
+        permanent: true,
+      },
+      // SHA-1 Hash Generator redirects (English)
+      {
+        source: '/tools/sha1-generator',
+        destination: '/tools/sha1-hash-generator',
+        permanent: true,
+      },
+      {
+        source: '/tools/sha1-hash',
+        destination: '/tools/sha1-hash-generator',
+        permanent: true,
+      },
+      // SHA-1 Hash Generator redirects (Russian)
+      {
+        source: '/ru/tools/sha1-generator',
+        destination: '/ru/tools/sha1-hash-generator',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/sha1-hash',
+        destination: '/ru/tools/sha1-hash-generator',
+        permanent: true,
+      },
     ];
   },
   webpack: (config, { isServer }) => {

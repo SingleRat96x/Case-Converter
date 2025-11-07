@@ -1,0 +1,364 @@
+'use client';
+
+import React from 'react';
+import { Label } from '@/components/ui/label';
+import { Input } from '@/components/ui/input';
+import { Switch } from '@/components/ui/switch';
+import { Tabs, TabsList, TabsTrigger, TabsContent } from '@/components/ui/tabs';
+import { Settings, Type, ArrowRight } from 'lucide-react';
+import type { LineNumberFormat, LineNumberSeparator, LineNumberOptions as LineNumberOptionsType } from '@/lib/textTransforms';
+
+interface LineNumberOptionsProps {
+  options: LineNumberOptionsType;
+  onOptionsChange: (options: LineNumberOptionsType) => void;
+  translations: {
+    title: string;
+    tabBasic: string;
+    tabFormat: string;
+    tabSeparator: string;
+    startAt: string;
+    step: string;
+    format: string;
+    separator: string;
+    applyTo: string;
+    skipLinesStartingWith: string;
+    nonEmptyLabel: string;
+    nonEmptyDescription: string;
+    skipPatternsPlaceholder: string;
+    skipPatternsDescription: string;
+    formats: {
+      numeric: string;
+      padded2: string;
+      padded3: string;
+      alphaUpper: string;
+      alphaLower: string;
+      romanUpper: string;
+      romanLower: string;
+    };
+    formatLabels: {
+      standard: string;
+      twoDigit: string;
+      threeDigit: string;
+      uppercase: string;
+      lowercase: string;
+    };
+    separators: {
+      periodSpace: string;
+      parenSpace: string;
+      colonSpace: string;
+      hyphenSpace: string;
+      pipe: string;
+      tab: string;
+    };
+    separatorLabels: {
+      period: string;
+      paren: string;
+      colon: string;
+      hyphen: string;
+      pipe: string;
+      tab: string;
+    };
+    applyToOptions: {
+      all: string;
+      nonEmpty: string;
+    };
+  };
+}
+
+export function LineNumberOptions({ options, onOptionsChange, translations }: LineNumberOptionsProps) {
+  const handleStartAtChange = (value: string) => {
+    // Allow empty string (user is clearing the field)
+    if (value === '') {
+      onOptionsChange({ ...options, startAt: 1 }); // Default to 1
+      return;
+    }
+    
+    const num = parseInt(value, 10);
+    if (!isNaN(num) && num > 0) {
+      onOptionsChange({ ...options, startAt: num });
+    }
+  };
+
+  const handleStepChange = (value: string) => {
+    // Allow empty string (user is clearing the field)
+    if (value === '') {
+      onOptionsChange({ ...options, step: 1 }); // Default to 1
+      return;
+    }
+    
+    const num = parseInt(value, 10);
+    if (!isNaN(num) && num > 0) {
+      onOptionsChange({ ...options, step: num });
+    }
+  };
+
+  const handleFormatChange = (value: string) => {
+    onOptionsChange({ ...options, format: value as LineNumberFormat });
+  };
+
+  const handleSeparatorChange = (value: LineNumberSeparator) => {
+    onOptionsChange({ ...options, separator: value });
+  };
+
+  const handleApplyToChange = (checked: boolean) => {
+    onOptionsChange({ ...options, applyTo: checked ? 'non-empty' : 'all' });
+  };
+
+  const handleSkipPatternsChange = (value: string) => {
+    onOptionsChange({ ...options, skipLinesStartingWith: value });
+  };
+
+  // Get format type from full format string
+  const getFormatType = () => {
+    if (options.format === 'numeric' || options.format === 'padded2' || options.format === 'padded3') return 'numeric';
+    if (options.format === 'alpha-upper' || options.format === 'alpha-lower') return 'alphabetic';
+    if (options.format === 'roman-upper' || options.format === 'roman-lower') return 'roman';
+    return 'numeric';
+  };
+
+  return (
+    <div className="space-y-4">
+      <h3 className="text-lg font-semibold text-foreground">{translations.title}</h3>
+      
+      <Tabs defaultValue="basic" className="w-full">
+        <TabsList className="grid w-full grid-cols-3">
+          <TabsTrigger value="basic" className="flex items-center gap-1.5">
+            <Settings className="w-3.5 h-3.5" />
+            <span>{translations.tabBasic}</span>
+          </TabsTrigger>
+          <TabsTrigger value="format" className="flex items-center gap-1.5">
+            <Type className="w-3.5 h-3.5" />
+            <span>{translations.tabFormat}</span>
+          </TabsTrigger>
+          <TabsTrigger value="separator" className="flex items-center gap-1.5">
+            <ArrowRight className="w-3.5 h-3.5" />
+            <span>{translations.tabSeparator}</span>
+          </TabsTrigger>
+        </TabsList>
+
+        {/* Tab 1: Basic Settings */}
+        <TabsContent value="basic" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            <div className="grid grid-cols-2 gap-4">
+              {/* Start At */}
+              <div className="space-y-2">
+                <Label htmlFor="start-at" className="text-sm font-medium">
+                  {translations.startAt}
+                </Label>
+                <Input
+                  id="start-at"
+                  type="number"
+                  min="1"
+                  value={options.startAt}
+                  onChange={(e) => handleStartAtChange(e.target.value)}
+                  className="w-full"
+                />
+              </div>
+
+              {/* Step */}
+              <div className="space-y-2">
+                <Label htmlFor="step" className="text-sm font-medium">
+                  {translations.step}
+                </Label>
+                <Input
+                  id="step"
+                  type="number"
+                  min="1"
+                  value={options.step}
+                  onChange={(e) => handleStepChange(e.target.value)}
+                  className="w-full"
+                />
+              </div>
+            </div>
+
+            {/* Non-empty lines toggle */}
+            <div className="flex items-center justify-between p-3 bg-background/50 rounded-md border">
+              <div className="space-y-0.5">
+                <Label htmlFor="non-empty" className="text-sm font-medium cursor-pointer">
+                  {translations.nonEmptyLabel}
+                </Label>
+                <p className="text-xs text-muted-foreground">
+                  {translations.nonEmptyDescription}
+                </p>
+              </div>
+              <Switch
+                id="non-empty"
+                checked={options.applyTo === 'non-empty'}
+                onCheckedChange={handleApplyToChange}
+              />
+            </div>
+
+            {/* Skip patterns */}
+            <div className="space-y-2">
+              <Label htmlFor="skip-patterns" className="text-sm font-medium">
+                {translations.skipLinesStartingWith}
+              </Label>
+              <Input
+                id="skip-patterns"
+                type="text"
+                placeholder={translations.skipPatternsPlaceholder}
+                value={options.skipLinesStartingWith}
+                onChange={(e) => handleSkipPatternsChange(e.target.value)}
+                className="w-full font-mono text-sm"
+              />
+              <p className="text-xs text-muted-foreground">
+                {translations.skipPatternsDescription}
+              </p>
+            </div>
+          </div>
+        </TabsContent>
+
+        {/* Tab 2: Format Selection */}
+        <TabsContent value="format" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            <Label className="text-sm font-medium">{translations.format}</Label>
+            
+            <Tabs defaultValue={getFormatType()} onValueChange={(type) => {
+              // Set default format for each type
+              if (type === 'numeric') handleFormatChange('numeric');
+              if (type === 'alphabetic') handleFormatChange('alpha-upper');
+              if (type === 'roman') handleFormatChange('roman-upper');
+            }}>
+              <TabsList className="grid w-full grid-cols-3">
+                <TabsTrigger value="numeric">123</TabsTrigger>
+                <TabsTrigger value="alphabetic">ABC</TabsTrigger>
+                <TabsTrigger value="roman">I II III</TabsTrigger>
+              </TabsList>
+              
+              <TabsContent value="numeric" className="space-y-3 mt-4">
+                <div className="grid grid-cols-3 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('numeric')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'numeric'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">1, 2, 3</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.standard}</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('padded2')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'padded2'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">01, 02, 03</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.twoDigit}</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('padded3')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'padded3'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">001, 002, 003</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.threeDigit}</div>
+                  </button>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="alphabetic" className="space-y-3 mt-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('alpha-upper')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'alpha-upper'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">A, B, C</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.uppercase}</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('alpha-lower')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'alpha-lower'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">a, b, c</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.lowercase}</div>
+                  </button>
+                </div>
+              </TabsContent>
+              
+              <TabsContent value="roman" className="space-y-3 mt-4">
+                <div className="grid grid-cols-2 gap-2">
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('roman-upper')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'roman-upper'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">I, II, III</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.uppercase}</div>
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => handleFormatChange('roman-lower')}
+                    className={`p-3 rounded-md border-2 transition-all text-center font-mono text-sm ${
+                      options.format === 'roman-lower'
+                        ? 'border-primary bg-primary/10 text-primary font-semibold'
+                        : 'border-border hover:border-primary/50 hover:bg-muted'
+                    }`}
+                  >
+                    <div className="font-bold mb-1">i, ii, iii</div>
+                    <div className="text-xs text-muted-foreground">{translations.formatLabels.lowercase}</div>
+                  </button>
+                </div>
+              </TabsContent>
+            </Tabs>
+          </div>
+        </TabsContent>
+
+        {/* Tab 3: Separator */}
+        <TabsContent value="separator" className="space-y-4 mt-4">
+          <div className="p-4 bg-muted/30 rounded-lg border space-y-4">
+            <Label className="text-sm font-medium">{translations.separator}</Label>
+            
+            <div className="grid grid-cols-3 sm:grid-cols-6 gap-2">
+              {[
+                { value: '. ' as LineNumberSeparator, label: '1. Text', desc: translations.separatorLabels.period },
+                { value: ') ' as LineNumberSeparator, label: '1) Text', desc: translations.separatorLabels.paren },
+                { value: ': ' as LineNumberSeparator, label: '1: Text', desc: translations.separatorLabels.colon },
+                { value: ' - ' as LineNumberSeparator, label: '1 - Text', desc: translations.separatorLabels.hyphen },
+                { value: '|' as LineNumberSeparator, label: '1|Text', desc: translations.separatorLabels.pipe },
+                { value: '\t' as LineNumberSeparator, label: '1→Text', desc: translations.separatorLabels.tab },
+              ].map((sep) => (
+                <button
+                  key={sep.value}
+                  type="button"
+                  onClick={() => handleSeparatorChange(sep.value)}
+                  className={`p-2 rounded-md border-2 transition-all text-center ${
+                    options.separator === sep.value
+                      ? 'border-primary bg-primary/10 text-primary font-semibold'
+                      : 'border-border hover:border-primary/50 hover:bg-muted'
+                  }`}
+                >
+                  <div className="font-mono text-xs mb-1">{sep.label}</div>
+                  <div className="text-[10px] text-muted-foreground">{sep.desc}</div>
+                </button>
+              ))}
+            </div>
+          </div>
+        </TabsContent>
+      </Tabs>
+    </div>
+  );
+}

@@ -61,6 +61,13 @@ const miscTools = [
     href: '/tools/md5-hash'
   },
   {
+    id: 'sha1-hash-generator',
+    title: 'SHA-1 Hash Generator',
+    description: 'Generate SHA-1 hashes for legacy systems and file verification with security notices',
+    icon: '🔑',
+    href: '/tools/sha1-hash-generator'
+  },
+  {
     id: 'utm-builder',
     title: 'UTM Parameter Builder',
     description: 'Build UTM parameters for marketing campaigns and track traffic sources effectively',

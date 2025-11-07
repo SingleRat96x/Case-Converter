@@ -1158,6 +1158,42 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['base64-encoder-decoder','uuid-generator','json-stringify']
   },
   {
+    slug: 'sha1-hash-generator',
+    pathname: '/tools/sha1-hash-generator',
+    type: 'tool',
+    category: 'security-tool',
+    i18n: {
+      en: {
+        title: 'SHA-1 Hash Generator – Online SHA1 Hash Calculator',
+        description: 'Generate SHA-1 hashes online in seconds. Enter any string or text to get its SHA1 checksum for file verification, legacy integrations, and development.',
+        shortDescription: 'Generate SHA-1 hashes from any text or string',
+        alternateTitle: 'Online SHA1 Hash Calculator'
+      },
+      ru: {
+        title: 'Генератор SHA-1 Хэша – Онлайн Калькулятор SHA1',
+        description: 'Генерируйте SHA-1 хэши онлайн за секунды. Получите SHA1 контрольную сумму для проверки файлов, интеграций и разработки.',
+        shortDescription: 'Генерация SHA-1 хэшей из любого текста',
+        alternateTitle: 'Онлайн Калькулятор SHA1 Хэша'
+      }
+    },
+    schema: createAdvancedSchema(
+      'sha1-hash-generator',
+      [
+        'Generate SHA-1 hashes',
+        '40-character hexadecimal output',
+        'Copy to clipboard',
+        'File verification support',
+        'Legacy system compatibility',
+        'Real-time hash generation'
+      ],
+      'Text/String',
+      'SHA-1 Hash',
+      4.6,
+      750
+    ),
+    relatedTools: ['md5-hash','base64-encoder-decoder','hex-to-text','utf8-converter']
+  },
+  {
     slug: 'slugify-url',
     pathname: '/tools/slugify-url',
     type: 'tool',
@@ -1376,6 +1412,79 @@ const overrides: Array<ToolMetadataConfig> = [
     },
     schema: createAdvancedSchema('duplicate-line-remover', ['Deduplicate', 'Sort options'], 'Text Input', 'Deduplicated Text', 4.4, 456),
     relatedTools: ['sort-words','repeat-text','plain-text']
+  },
+  {
+    slug: 'add-line-numbers-to-text',
+    pathname: '/tools/add-line-numbers-to-text',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Add Line Numbers to Text – Free Online Line Numbering Tool',
+        description: 'Add line numbers instantly with 7 formats, custom separators, and smart filtering. Perfect for code, scripts, and documents. Free online tool.',
+        shortDescription: 'Add customizable line numbers with multiple formats and separators',
+        alternateTitle: 'Line Numbering Tool - Add Numbers to Text'
+      },
+      ru: {
+        title: 'Добавить Номера Строк к Тексту – Бесплатный Инструмент Нумерации',
+        description: 'Добавляйте номера строк мгновенно с 7 форматами, настраиваемыми разделителями и умной фильтрацией. Идеально для кода, скриптов и документов.',
+        shortDescription: 'Настраиваемые номера строк с несколькими форматами и разделителями',
+        alternateTitle: 'Инструмент Нумерации Строк - Добавить Номера'
+      }
+    },
+    schema: createAdvancedSchema(
+      'add-line-numbers-to-text',
+      [
+        'Add line numbers to text',
+        'Multiple number formats (numeric, alphabetic, Roman)',
+        '7 numbering format options',
+        '6 separator styles',
+        'Custom start number and step',
+        'Skip empty lines or comments',
+        'Copy and download support'
+      ],
+      'Text',
+      'Numbered Text',
+      4.8,
+      1250
+    ),
+    relatedTools: ['remove-line-breaks','duplicate-line-remover','text-replace','sort-words']
+  },
+  {
+    slug: 'add-prefix-and-suffix-to-lines',
+    pathname: '/tools/add-prefix-and-suffix-to-lines',
+    type: 'tool',
+    category: 'text-modification',
+    i18n: {
+      en: {
+        title: 'Add Prefix and Suffix to Lines Online – Free Text Formatter',
+        description: 'Add custom prefix and suffix to every line instantly. Perfect for formatting code comments, bullet lists, and markdown. Free browser-based tool.',
+        shortDescription: 'Add prefix and suffix to each line of text',
+        alternateTitle: 'Prefix & Suffix Line Formatter Tool'
+      },
+      ru: {
+        title: 'Добавить Префикс и Суффикс к Строкам – Бесплатный Форматтер Текста',
+        description: 'Мгновенно добавляйте префикс и суффикс к каждой строке. Идеально для форматирования комментариев кода, списков и markdown.',
+        shortDescription: 'Добавление префикса и суффикса к каждой строке',
+        alternateTitle: 'Инструмент Префикс и Суффикс Строк'
+      }
+    },
+    schema: createAdvancedSchema(
+      'add-prefix-and-suffix-to-lines',
+      [
+        'Add prefix to lines',
+        'Add suffix to lines',
+        'Ignore empty lines option',
+        'Real-time preview',
+        'Copy and download support',
+        'File upload support'
+      ],
+      'Text',
+      'Formatted Text',
+      4.7,
+      890
+    ),
+    relatedTools: ['add-line-numbers-to-text','text-replace','remove-line-breaks','duplicate-line-remover']
   },
   {
     slug: 'sort-words',
@@ -1705,7 +1814,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
+  'bubble-text','duplicate-line-remover','add-line-numbers-to-text','add-prefix-and-suffix-to-lines','sha1-hash-generator','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
 ];
 
 const CATEGORY_SLUGS: string[] = [

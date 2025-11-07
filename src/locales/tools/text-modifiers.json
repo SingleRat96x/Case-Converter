@@ -247,6 +247,115 @@
         "urlsRemoved": "URLs Removed",
         "emailsRemoved": "Emails Removed"
       }
+    },
+    "addLineNumbers": {
+      "title": "Add Line Numbers to Text",
+      "description": "Add line numbers to text with customizable formats, separators, and numbering options. Perfect for code, scripts, and documents.",
+      "inputLabel": "Your Text",
+      "inputPlaceholder": "Enter or paste your text here to add line numbers...",
+      "outputLabel": "Numbered Text",
+      "helperText": "Paste your text above, adjust numbering options below, then click 'Add line numbers' to process.",
+      "addButton": "Add line numbers",
+      "processing": "Processing...",
+      "applied": "Applied!",
+      "reapplyButton": "Re-apply Line Numbers",
+      "resetButton": "Reset",
+      "successMessage": "Line numbers added successfully! You can now copy or download the result.",
+      "optionsChangedMessage": "You've changed the numbering options. Click \"Re-apply Line Numbers\" to see the changes.",
+      "stats": {
+        "line": "line",
+        "lines": "lines",
+        "word": "word",
+        "words": "words",
+        "char": "char",
+        "chars": "chars"
+      },
+      "uploadDescription": "",
+      "downloadFileName": "numbered-text.txt",
+      "options": {
+        "title": "Numbering Options",
+        "tabBasic": "Basic",
+        "tabFormat": "Format",
+        "tabSeparator": "Separator",
+        "startAt": "Start at",
+        "step": "Step",
+        "format": "Number Format",
+        "separator": "Separator",
+        "applyTo": "Apply to",
+        "skipLinesStartingWith": "Skip lines starting with",
+        "nonEmptyLabel": "Number non-empty lines only",
+        "nonEmptyDescription": "Skip blank lines when numbering",
+        "skipPatternsPlaceholder": "e.g., //, #, ;",
+        "skipPatternsDescription": "Comma-separated patterns to skip (e.g., \"//, #\" for comments)"
+      },
+      "formats": {
+        "numeric": "1, 2, 3",
+        "padded2": "01, 02, 03",
+        "padded3": "001, 002, 003",
+        "alphaUpper": "A, B, C",
+        "alphaLower": "a, b, c",
+        "romanUpper": "I, II, III",
+        "romanLower": "i, ii, iii"
+      },
+      "formatLabels": {
+        "standard": "Standard",
+        "twoDigit": "2-digit",
+        "threeDigit": "3-digit",
+        "uppercase": "Uppercase",
+        "lowercase": "Lowercase"
+      },
+      "separators": {
+        "periodSpace": ". (period + space)",
+        "parenSpace": ") (parenthesis + space)",
+        "colonSpace": ": (colon + space)",
+        "hyphenSpace": " - (hyphen + spaces)",
+        "pipe": "| (pipe)",
+        "tab": "Tab character"
+      },
+      "separatorLabels": {
+        "period": "Period",
+        "paren": "Paren",
+        "colon": "Colon",
+        "hyphen": "Hyphen",
+        "pipe": "Pipe",
+        "tab": "Tab"
+      },
+      "applyToOptions": {
+        "all": "All lines",
+        "nonEmpty": "Non-empty lines only"
+      }
+    },
+    "addPrefixSuffix": {
+      "title": "Add Prefix and Suffix to Lines",
+      "description": "Want to quickly add a prefix and suffix to every line of your text? Paste your content, type any prefix and suffix you like, and this tool will instantly update each line for you. It's perfect for code comments, bullet lists, markdown quotes, and tagging log lines.",
+      "inputLabel": "Your Text",
+      "inputPlaceholder": "Enter or paste your text here...",
+      "helperText": "Paste your text above, set prefix/suffix options below, then click 'Apply Prefix/Suffix'.",
+      "addButton": "Apply Prefix/Suffix",
+      "processing": "Processing...",
+      "applied": "Applied!",
+      "reapplyButton": "Re-apply Prefix/Suffix",
+      "resetButton": "Reset",
+      "successMessage": "Prefix and suffix added successfully! You can now copy or download the result.",
+      "optionsChangedMessage": "You've changed the options. Click \"Re-apply Prefix/Suffix\" to see the changes.",
+      "stats": {
+        "line": "line",
+        "lines": "lines",
+        "word": "word",
+        "words": "words",
+        "character": "character",
+        "characters": "characters"
+      },
+      "downloadFileName": "prefix-suffix-text.txt",
+      "options": {
+        "title": "Prefix & Suffix Options",
+        "prefix": "Prefix",
+        "prefixPlaceholder": "Text to add before each line...",
+        "suffix": "Suffix",
+        "suffixPlaceholder": "Text to add after each line...",
+        "ignoreEmptyLabel": "Ignore empty lines",
+        "ignoreEmptyDescription": "Don't add prefix/suffix to blank lines"
+      }
     }
   },
   "ru": {
@@ -496,6 +605,115 @@
         "markdownElements": "Markdown Элементы",
         "urlsRemoved": "URL Удалено",
         "emailsRemoved": "Email Удалено"
+      }
+    },
+    "addLineNumbers": {
+      "title": "Добавить Номера Строк к Тексту",
+      "description": "Добавьте номера строк к тексту с настраиваемыми форматами, разделителями и опциями нумерации. Идеально для кода, скриптов и документов.",
+      "inputLabel": "Ваш Текст",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь для добавления номеров строк...",
+      "outputLabel": "Пронумерованный Текст",
+      "helperText": "Вставьте текст выше, настройте параметры нумерации ниже, затем нажмите 'Добавить номера строк' для обработки.",
+      "addButton": "Добавить номера строк",
+      "processing": "Обработка...",
+      "applied": "Применено!",
+      "reapplyButton": "Повторно Применить Номера Строк",
+      "resetButton": "Сбросить",
+      "successMessage": "Номера строк успешно добавлены! Теперь вы можете скопировать или скачать результат.",
+      "optionsChangedMessage": "Вы изменили параметры нумерации. Нажмите \"Повторно Применить Номера Строк\", чтобы увидеть изменения.",
+      "stats": {
+        "line": "строка",
+        "lines": "строки",
+        "word": "слово",
+        "words": "слова",
+        "char": "символ",
+        "chars": "символы"
+      },
+      "uploadDescription": "",
+      "downloadFileName": "пронумерованный-текст.txt",
+      "options": {
+        "title": "Параметры Нумерации",
+        "tabBasic": "Основное",
+        "tabFormat": "Формат",
+        "tabSeparator": "Разделитель",
+        "startAt": "Начать с",
+        "step": "Шаг",
+        "format": "Формат Номеров",
+        "separator": "Разделитель",
+        "applyTo": "Применить к",
+        "skipLinesStartingWith": "Пропустить строки, начинающиеся с",
+        "nonEmptyLabel": "Нумеровать только непустые строки",
+        "nonEmptyDescription": "Пропускать пустые строки при нумерации",
+        "skipPatternsPlaceholder": "например, //, #, ;",
+        "skipPatternsDescription": "Шаблоны через запятую для пропуска (например, \"//, #\" для комментариев)"
+      },
+      "formats": {
+        "numeric": "1, 2, 3",
+        "padded2": "01, 02, 03",
+        "padded3": "001, 002, 003",
+        "alphaUpper": "A, B, C",
+        "alphaLower": "a, b, c",
+        "romanUpper": "I, II, III",
+        "romanLower": "i, ii, iii"
+      },
+      "formatLabels": {
+        "standard": "Стандартный",
+        "twoDigit": "2 цифры",
+        "threeDigit": "3 цифры",
+        "uppercase": "Заглавные",
+        "lowercase": "Строчные"
+      },
+      "separators": {
+        "periodSpace": ". (точка + пробел)",
+        "parenSpace": ") (скобка + пробел)",
+        "colonSpace": ": (двоеточие + пробел)",
+        "hyphenSpace": " - (дефис + пробелы)",
+        "pipe": "| (вертикальная черта)",
+        "tab": "Символ табуляции"
+      },
+      "separatorLabels": {
+        "period": "Точка",
+        "paren": "Скобка",
+        "colon": "Двоеточие",
+        "hyphen": "Дефис",
+        "pipe": "Черта",
+        "tab": "Таб"
+      },
+      "applyToOptions": {
+        "all": "Все строки",
+        "nonEmpty": "Только непустые строки"
+      }
+    },
+    "addPrefixSuffix": {
+      "title": "Добавить Префикс и Суффикс к Строкам",
+      "description": "Хотите быстро добавить префикс и суффикс к каждой строке вашего текста? Вставьте содержимое, введите любой префикс и суффикс, и этот инструмент мгновенно обновит каждую строку. Идеально подходит для комментариев в коде, маркированных списков, цитат в markdown и разметки строк логов.",
+      "inputLabel": "Ваш Текст",
+      "inputPlaceholder": "Введите или вставьте ваш текст здесь...",
+      "helperText": "Вставьте текст выше, настройте параметры префикса/суффикса ниже, затем нажмите 'Применить Префикс/Суффикс'.",
+      "addButton": "Применить Префикс/Суффикс",
+      "processing": "Обработка...",
+      "applied": "Применено!",
+      "reapplyButton": "Повторно Применить Префикс/Суффикс",
+      "resetButton": "Сбросить",
+      "successMessage": "Префикс и суффикс успешно добавлены! Теперь вы можете скопировать или скачать результат.",
+      "optionsChangedMessage": "Вы изменили параметры. Нажмите \"Повторно Применить Префикс/Суффикс\", чтобы увидеть изменения.",
+      "stats": {
+        "line": "строка",
+        "lines": "строки",
+        "word": "слово",
+        "words": "слова",
+        "character": "символ",
+        "characters": "символы"
+      },
+      "downloadFileName": "префикс-суффикс-текст.txt",
+      "options": {
+        "title": "Параметры Префикса и Суффикса",
+        "prefix": "Префикс",
+        "prefixPlaceholder": "Текст для добавления перед каждой строкой...",
+        "suffix": "Суффикс",
+        "suffixPlaceholder": "Текст для добавления после каждой строки...",
+        "ignoreEmptyLabel": "Игнорировать пустые строки",
+        "ignoreEmptyDescription": "Не добавлять префикс/суффикс к пустым строкам"
       }
     }
   }

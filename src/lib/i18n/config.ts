@@ -52,6 +52,7 @@ export const namespaces = {
   contactUs: 'pages/contact-us',
   privacyPolicy: 'pages/privacy-policy',
   termsOfService: 'pages/terms-of-service',
+  changelog: 'pages/changelog',
   caseConverters: 'tools/case-converters',
   textGenerators: 'tools/text-generators',
   textModifiers: 'tools/text-modifiers',

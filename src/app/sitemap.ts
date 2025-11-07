@@ -30,6 +30,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     urls.push({ url: `${base}/ru${p}`, changeFrequency: 'monthly', lastModified: now, priority: 0.5 });
   }
 
+  // Add changelog page
+  urls.push({ url: `${base}/changelog`, changeFrequency: 'weekly', lastModified: now, priority: 0.6 });
+  urls.push({ url: `${base}/ru/changelog`, changeFrequency: 'weekly', lastModified: now, priority: 0.6 });
+
+  // Explicitly add high-priority tools (override default 0.6)
+  urls.push({ url: `${base}/tools/add-line-numbers-to-text`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/ru/tools/add-line-numbers-to-text`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/tools/add-prefix-and-suffix-to-lines`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/ru/tools/add-prefix-and-suffix-to-lines`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/tools/sha1-hash-generator`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+  urls.push({ url: `${base}/ru/tools/sha1-hash-generator`, changeFrequency: 'monthly', lastModified: now, priority: 0.8 });
+
   return urls;
 }
 

@@ -274,6 +274,16 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           title: t('navigation.extractEmailsFromText'),
           href: locale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text',
           icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.addLineNumbers'),
+          href: locale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.addPrefixSuffix'),
+          href: locale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : '/ru/tools/add-prefix-and-suffix-to-lines',
+          icon: <ChevronRight className="h-4 w-4" />
         }
       ]
     },
@@ -472,6 +482,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
         {
           title: t('navigation.md5Hash'),
           href: locale === 'en' ? '/tools/md5-hash' : '/ru/tools/md5-hash',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
+          title: t('navigation.sha1HashGenerator'),
+          href: locale === 'en' ? '/tools/sha1-hash-generator' : '/ru/tools/sha1-hash-generator',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {

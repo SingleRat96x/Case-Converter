@@ -138,6 +138,14 @@ export function Footer() {
     {
       title: t('navigation.extractEmailsFromText'),
       href: currentLocale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text'
+    },
+    {
+      title: t('navigation.addLineNumbers'),
+      href: currentLocale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text'
+    },
+    {
+      title: t('navigation.addPrefixSuffix'),
+      href: currentLocale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : '/ru/tools/add-prefix-and-suffix-to-lines'
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
@@ -301,6 +309,10 @@ export function Footer() {
     {
       title: t('navigation.md5Hash'),
       href: currentLocale === 'en' ? '/tools/md5-hash' : '/ru/tools/md5-hash'
+    },
+    {
+      title: t('navigation.sha1HashGenerator'),
+      href: currentLocale === 'en' ? '/tools/sha1-hash-generator' : '/ru/tools/sha1-hash-generator'
     },
     {
       title: t('navigation.phoneticSpelling'),
@@ -524,6 +536,14 @@ export function Footer() {
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {t('footer.links.contactUs')}
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href={currentLocale === 'en' ? '/changelog' : '/ru/changelog'}
+                        className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+                      >
+                        {t('footer.links.changelog')}
                       </Link>
                     </li>
                   </ul>

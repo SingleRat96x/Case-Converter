@@ -500,6 +500,7 @@ export interface TranslationNamespaces {
   'pages/contact-us': Record<string, unknown>;
   'pages/privacy-policy': Record<string, unknown>;
   'pages/terms-of-service': Record<string, unknown>;
+  'pages/changelog': Record<string, unknown>;
   'tools/case-converters': CaseConverterTranslations;
   'tools/text-generators': TextGeneratorTranslations;
   'tools/text-modifiers': TextModifierTranslations;

@@ -1,0 +1,268 @@
+{
+  "en": {
+    "title": "Product Changelog",
+    "subtitle": "Track new features, improvements, and updates",
+    "description": "Stay up-to-date with the latest changes, new tools, and improvements to our platform.",
+    "lastUpdated": "Last updated",
+    "version": "Version",
+    "sectionTitle": "Choose Your Preferred Layout Style",
+    "sectionDescription": "Below are three different layout options for the changelog. Select the one that best fits your preference.",
+    "layoutOptions": {
+      "option1": "Option 1: Simple List",
+      "option2": "Option 2: Card Layout",
+      "option3": "Option 3: Timeline View"
+    },
+    "categories": {
+      "new": "New",
+      "improved": "Improved",
+      "fixed": "Fixed",
+      "deprecated": "Deprecated"
+    },
+    "badges": {
+      "new": "New",
+      "feature": "Feature",
+      "improvement": "Improvement",
+      "bugfix": "Bug Fix",
+      "breaking": "Breaking"
+    },
+    "sample": {
+      "month1": {
+        "title": "November 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "SHA-1 Hash Generator",
+            "description": "Generate SHA-1 hashes online with file verification support and legacy system compatibility. Includes security notices for modern applications",
+            "date": "Nov 7, 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Add Prefix and Suffix to Lines",
+            "description": "Add custom prefix and suffix to every line with option to ignore empty lines. Perfect for code comments, markdown, and data formatting",
+            "date": "Nov 6, 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Add Line Numbers to Text",
+            "description": "Add customizable line numbers with multiple formats (numeric, alphabetic, Roman numerals), separators, and advanced filtering options",
+            "date": "Nov 5, 2025"
+          },
+          "4": {
+            "type": "new",
+            "title": "Reading Time Estimator",
+            "description": "Calculate reading time for your content with adjustable speed settings",
+            "date": "Nov 3, 2025"
+          },
+          "5": {
+            "type": "improved",
+            "title": "Locale Switcher Enhancement",
+            "description": "Added country flags to language selector for better visibility",
+            "date": "Nov 5, 2025"
+          }
+        }
+      },
+      "month2": {
+        "title": "October 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "JSON Formatter & Validator",
+            "description": "Format and validate JSON with syntax highlighting and real-time error detection",
+            "date": "Oct 31, 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Case Converter Suite",
+            "description": "Added Kebab Case, Snake Case, and Camel Case converters",
+            "date": "Oct 31, 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Email Extraction Tools",
+            "description": "Extract emails from text and PDF files with advanced filtering options",
+            "date": "Oct 28, 2025"
+          },
+          "4": {
+            "type": "improved",
+            "title": "Performance Optimization",
+            "description": "Improved page load speed with font preloading and critical resource hints",
+            "date": "Oct 9, 2025"
+          },
+          "5": {
+            "type": "fixed",
+            "title": "JavaScript Loading Issues",
+            "description": "Resolved chunk loading errors affecting some users",
+            "date": "Oct 29, 2025"
+          }
+        }
+      },
+      "month3": {
+        "title": "August 2025",
+        "entries": {
+          "1": {
+            "type": "improved",
+            "title": "Mobile Navigation Redesign",
+            "description": "Complete revamp of mobile menu with modern UI/UX patterns and improved touch interactions",
+            "date": "Aug 17, 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Enhanced Accessibility",
+            "description": "Added keyboard navigation and drag interactions for better mobile user experience",
+            "date": "Aug 8, 2025"
+          },
+          "3": {
+            "type": "fixed",
+            "title": "Footer Links Validation",
+            "description": "Verified and fixed all footer navigation links for accuracy",
+            "date": "Aug 8, 2025"
+          }
+        }
+      }
+    },
+    "emptyState": {
+      "title": "No Updates Yet",
+      "description": "Check back soon for the latest updates and new features."
+    },
+    "subscribe": {
+      "title": "Stay Updated",
+      "description": "Subscribe to our RSS feed to get notified about new features and updates in your favorite feed reader",
+      "button": "Subscribe via RSS",
+      "rssInfo": "RSS is a web feed that allows you to access updates in a standardized format. Use any RSS reader like Feedly, Inoreader, or your browser.",
+      "copyFeed": "Copy Feed URL"
+    }
+  },
+  "ru": {
+    "title": "История Изменений",
+    "subtitle": "Отслеживайте новые функции, улучшения и обновления",
+    "description": "Будьте в курсе последних изменений, новых инструментов и улучшений платформы.",
+    "lastUpdated": "Последнее обновление",
+    "version": "Версия",
+    "sectionTitle": "Выберите Предпочитаемый Стиль Макета",
+    "sectionDescription": "Ниже представлены три различных варианта макета для истории изменений. Выберите тот, который лучше всего соответствует вашим предпочтениям.",
+    "layoutOptions": {
+      "option1": "Вариант 1: Простой Список",
+      "option2": "Вариант 2: Карточный Макет",
+      "option3": "Вариант 3: Временная Шкала"
+    },
+    "categories": {
+      "new": "Новое",
+      "improved": "Улучшено",
+      "fixed": "Исправлено",
+      "deprecated": "Устарело"
+    },
+    "badges": {
+      "new": "Новое",
+      "feature": "Функция",
+      "improvement": "Улучшение",
+      "bugfix": "Исправление",
+      "breaking": "Критическое"
+    },
+    "sample": {
+      "month1": {
+        "title": "Ноябрь 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "Генератор SHA-1 Хеша",
+            "description": "Генерируйте SHA-1 хэши онлайн с поддержкой проверки файлов и совместимостью с устаревшими системами. Включает уведомления о безопасности",
+            "date": "7 ноя 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Добавить Префикс и Суффикс к Строкам",
+            "description": "Добавляйте пользовательский префикс и суффикс к каждой строке с опцией игнорирования пустых строк. Идеально для комментариев кода, markdown и форматирования данных",
+            "date": "6 ноя 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Добавить Номера Строк к Тексту",
+            "description": "Добавляйте настраиваемые номера строк с множеством форматов (числовые, алфавитные, римские цифры), разделителями и расширенными опциями фильтрации",
+            "date": "5 ноя 2025"
+          },
+          "4": {
+            "type": "new",
+            "title": "Калькулятор Времени Чтения",
+            "description": "Рассчитайте время чтения вашего контента с настраиваемой скоростью",
+            "date": "3 ноя 2025"
+          },
+          "5": {
+            "type": "improved",
+            "title": "Улучшение Переключателя Языка",
+            "description": "Добавлены флаги стран в переключатель языка для лучшей видимости",
+            "date": "5 ноя 2025"
+          }
+        }
+      },
+      "month2": {
+        "title": "Октябрь 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "JSON Форматировщик и Валидатор",
+            "description": "Форматирование и валидация JSON с подсветкой синтаксиса и обнаружением ошибок в реальном времени",
+            "date": "31 окт 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Набор Конвертеров Регистра",
+            "description": "Добавлены конвертеры Kebab Case, Snake Case и Camel Case",
+            "date": "31 окт 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Инструменты Извлечения Email",
+            "description": "Извлечение email из текста и PDF файлов с расширенными опциями фильтрации",
+            "date": "28 окт 2025"
+          },
+          "4": {
+            "type": "improved",
+            "title": "Оптимизация Производительности",
+            "description": "Улучшена скорость загрузки страниц с предзагрузкой шрифтов и критических ресурсов",
+            "date": "9 окт 2025"
+          },
+          "5": {
+            "type": "fixed",
+            "title": "Проблемы Загрузки JavaScript",
+            "description": "Устранены ошибки загрузки чанков, затрагивающие некоторых пользователей",
+            "date": "29 окт 2025"
+          }
+        }
+      },
+      "month3": {
+        "title": "Август 2025",
+        "entries": {
+          "1": {
+            "type": "improved",
+            "title": "Редизайн Мобильной Навигации",
+            "description": "Полный редизайн мобильного меню с современными UI/UX паттернами и улучшенными сенсорными взаимодействиями",
+            "date": "17 авг 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Улучшенная Доступность",
+            "description": "Добавлена навигация с клавиатуры и взаимодействия перетаскиванием для лучшего мобильного опыта",
+            "date": "8 авг 2025"
+          },
+          "3": {
+            "type": "fixed",
+            "title": "Проверка Ссылок в Футере",
+            "description": "Проверены и исправлены все навигационные ссылки в футере для точности",
+            "date": "8 авг 2025"
+          }
+        }
+      }
+    },
+    "emptyState": {
+      "title": "Обновлений Пока Нет",
+      "description": "Скоро здесь появятся последние обновления и новые функции."
+    },
+    "subscribe": {
+      "title": "Оставайтесь в Курсе",
+      "description": "Подпишитесь на наш RSS-канал, чтобы получать уведомления о новых функциях и обновлениях в вашей любимой программе чтения RSS",
+      "button": "Подписаться через RSS",
+      "rssInfo": "RSS - это веб-канал, который позволяет получать обновления в стандартизированном формате. Используйте любой RSS-ридер, такой как Feedly, Inoreader или ваш браузер.",
+      "copyFeed": "Скопировать URL канала"
+    }
+  }
+}

@@ -31,6 +31,9 @@
       "plainText": "Convert to Plain Text",
       "extractEmailsFromText": "Extract Emails from Text",
       "extractEmailsFromPdf": "Extract Emails from PDF",
+      "addLineNumbers": "Add Line Numbers to Text",
+      "addPrefixSuffix": "Add Prefix & Suffix to Lines",
+      "sha1HashGenerator": "SHA-1 Hash Generator",
       "extractNumbers": "Extract Numbers from Text",
       "camelCaseConverter": "Camel Case Converter",
       "snakeCaseConverter": "Snake Case Converter",
@@ -132,6 +135,7 @@
       "links": {
         "aboutUs": "About Us",
         "contactUs": "Contact Us",
+        "changelog": "Changelog",
         "privacyPolicy": "Privacy Policy",
         "termsOfService": "Terms of Service"
       }
@@ -169,6 +173,9 @@
       "plainText": "Конвертировать в Простой Текст",
       "extractEmailsFromText": "Извлечение Email из Текста",
       "extractEmailsFromPdf": "Извлечение Email из PDF",
+      "addLineNumbers": "Добавить Номера Строк к Тексту",
+      "addPrefixSuffix": "Добавить Префикс и Суффикс к Строкам",
+      "sha1HashGenerator": "Генератор SHA-1 Хеша",
       "extractNumbers": "Извлечение Чисел из Текста",
       "camelCaseConverter": "Конвертер CamelCase",
       "snakeCaseConverter": "Конвертер Snake Case",
@@ -270,6 +277,7 @@
       "links": {
         "aboutUs": "О нас",
         "contactUs": "Связаться с нами",
+        "changelog": "История Изменений",
         "privacyPolicy": "Политика конфиденциальности",
         "termsOfService": "Условия использования"
       }
