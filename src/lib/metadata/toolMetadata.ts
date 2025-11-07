@@ -1880,6 +1880,11 @@ if (!registry.has('tools')) {
         title: 'Все Бесплатные Онлайн Инструменты — Текст, Код, Изображения',
         description: 'Просматривайте все бесплатные онлайн инструменты в одном месте: форматирование текста, генераторы случайных данных, конвертеры кода/данных, инструменты для изображений и другое.',
         shortDescription: 'Все бесплатные инструменты в одном месте.',
+      },
+      de: {
+        title: 'Alle Kostenlosen Online-Werkzeuge — Text, Code, Bild, Utilities',
+        description: 'Durchsuchen Sie alle kostenlosen Online-Werkzeuge an einem Ort. Textformatierung, Zufallsgeneratoren, Code-/Datenkonverter, Bildwerkzeuge und mehr.',
+        shortDescription: 'Alle kostenlosen Online-Werkzeuge an einem Ort.',
       }
     },
     schema: createCategorySchema('tools', 64, 'All Tools')
@@ -1902,6 +1907,11 @@ if (!registry.has('home')) {
         title: 'Text Case Converter — Бесплатные Текстовые, Кодовые и Графические Инструменты',
         description: 'Профессиональные инструменты: преобразование регистра, генераторы случайных данных, конвертеры кода/данных и инструменты для изображений. Бесплатно и без ограничений.',
         shortDescription: 'Бесплатные инструменты для текста, кода и изображений.',
+      },
+      de: {
+        title: 'Text Case Converter — Kostenlose Text-, Code- und Bildwerkzeuge',
+        description: 'Professionelle Text- und Utility-Werkzeuge: Fall-Konverter, Zufallsgeneratoren, Code-/Datenkonverter und Bildwerkzeuge. Kostenlos und unbegrenzt.',
+        shortDescription: 'Kostenlose Text-, Code- und Bildwerkzeuge. Keine Limits.',
       }
     },
     schema: createCategorySchema('home', 64, 'Text Case Converter')
@@ -2024,6 +2034,11 @@ if (!registry.has('not-found')) {
         title: 'Страница Не Найдена — Text Case Converter',
         description: 'Страница не существует. Вернитесь на главную или посмотрите все инструменты.',
         shortDescription: 'Страница не найдена. Посмотрите все инструменты.',
+      },
+      de: {
+        title: 'Seite Nicht Gefunden — Text Case Converter',
+        description: 'Die gesuchte Seite existiert nicht. Kehren Sie zur Startseite zurück oder erkunden Sie alle Werkzeuge.',
+        shortDescription: 'Seite nicht gefunden. Alle Werkzeuge erkunden.',
       }
     },
     schema: { type: 'CollectionPage', applicationCategory: 'UtilityApplication' }
