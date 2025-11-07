@@ -3,6 +3,7 @@
 import React from 'react';
 import { Clock, BookOpen, Hash, Type } from 'lucide-react';
 import { formatReadingTime, getTimeFormatLabel, type ReadingTimeResult } from '@/lib/readingTimeUtils';
+import { useToolTranslations } from '@/lib/i18n/hooks';
 
 interface ReadingTimeAnalyticsProps {
   silentTime: ReadingTimeResult;
@@ -17,11 +18,12 @@ export function ReadingTimeAnalytics({
   wordCount,
   characterCount 
 }: ReadingTimeAnalyticsProps) {
+  const { tool } = useToolTranslations('tools/misc-tools');
   
   const statisticsData = [
     {
       key: 'aloud',
-      label: 'READ ALOUD TIME',
+      label: tool('readingTimeEstimator.analyticsReadAloud'),
       value: formatReadingTime(aloudTime.hours, aloudTime.minutes, aloudTime.seconds),
       subLabel: getTimeFormatLabel(aloudTime.hours),
       icon: BookOpen,
@@ -29,7 +31,7 @@ export function ReadingTimeAnalytics({
     },
     {
       key: 'silent',
-      label: 'READING TIME',
+      label: tool('readingTimeEstimator.analyticsReadingTime'),
       value: formatReadingTime(silentTime.hours, silentTime.minutes, silentTime.seconds),
       subLabel: getTimeFormatLabel(silentTime.hours),
       icon: Clock,
@@ -37,7 +39,7 @@ export function ReadingTimeAnalytics({
     },
     {
       key: 'words',
-      label: 'WORDS',
+      label: tool('readingTimeEstimator.analyticsWords'),
       value: wordCount.toLocaleString(),
       subLabel: '',
       icon: Hash,
@@ -45,7 +47,7 @@ export function ReadingTimeAnalytics({
     },
     {
       key: 'characters',
-      label: 'CHARACTERS',
+      label: tool('readingTimeEstimator.analyticsCharacters'),
       value: characterCount.toLocaleString(),
       subLabel: '',
       icon: Type,

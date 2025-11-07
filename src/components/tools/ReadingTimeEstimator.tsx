@@ -195,13 +195,13 @@ export function ReadingTimeEstimator() {
 
           <TabsContent value="text" className="mt-0">
             <p className="text-sm text-muted-foreground text-center mb-4">
-              Paste your article, blog post, or any text to analyze reading time
+              {tool('readingTimeEstimator.textTabDescription')}
             </p>
           </TabsContent>
 
           <TabsContent value="json" className="mt-0">
             <p className="text-sm text-muted-foreground text-center mb-4">
-              Paste JSON data to automatically extract and analyze text content
+              {tool('readingTimeEstimator.jsonTabDescription')}
             </p>
           </TabsContent>
         </Tabs>
@@ -211,7 +211,7 @@ export function ReadingTimeEstimator() {
       <div className="space-y-3">
         <div className="flex items-center justify-between">
           <label className="text-sm font-semibold text-foreground">
-            {inputMode === 'json' ? 'JSON Data' : 'Text Input'}
+            {inputMode === 'json' ? tool('readingTimeEstimator.jsonInputLabel') : tool('readingTimeEstimator.textInputLabel')}
           </label>
           <div className="flex items-center gap-2">
             <Button
@@ -258,8 +258,8 @@ export function ReadingTimeEstimator() {
             }}
             placeholder={
             inputMode === 'json'
-              ? 'Paste your JSON data here...'
-              : 'Paste your article, blog post, or text here...'
+              ? tool('readingTimeEstimator.jsonPlaceholder')
+              : tool('readingTimeEstimator.inputPlaceholder')
             }
             basicSetup={{
             lineNumbers: true,
@@ -296,7 +296,7 @@ export function ReadingTimeEstimator() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <BookOpen className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">Silent Reading Speed</span>
+                <span className="text-sm font-medium text-foreground">{tool('readingTimeEstimator.silentReadingSpeed')}</span>
               </div>
               <span className="text-sm text-muted-foreground">
                 <span className="text-base font-bold text-foreground">{silentSpeed} WPM</span>
@@ -325,7 +325,7 @@ export function ReadingTimeEstimator() {
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
                 >
-                  {speed.label}
+                  {speed.label === 'Slow' ? tool('readingTimeEstimator.speedPresetSlow') : speed.label === 'Average' ? tool('readingTimeEstimator.speedPresetAverage') : tool('readingTimeEstimator.speedPresetFast')}
                 </button>
               ))}
             </div>
@@ -336,7 +336,7 @@ export function ReadingTimeEstimator() {
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-2">
                 <Volume2 className="h-4 w-4 text-primary" />
-                <span className="text-sm font-medium text-foreground">Read Aloud Speed</span>
+                <span className="text-sm font-medium text-foreground">{tool('readingTimeEstimator.readAloudSpeed')}</span>
               </div>
               <span className="text-sm text-muted-foreground">
                 <span className="text-base font-bold text-foreground">{aloudSpeed} WPM</span>
@@ -365,7 +365,7 @@ export function ReadingTimeEstimator() {
                       : 'text-muted-foreground hover:text-foreground hover:bg-muted'
                   }`}
                 >
-                  {speed.label}
+                  {speed.label === 'Slow' ? tool('readingTimeEstimator.speedPresetSlow') : speed.label === 'Average' ? tool('readingTimeEstimator.speedPresetAverage') : tool('readingTimeEstimator.speedPresetFast')}
                 </button>
               ))}
             </div>

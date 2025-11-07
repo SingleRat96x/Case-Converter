@@ -121,6 +121,11 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Вставьте текст, введите количество слов или предоставьте JSON и мгновенно получите оценку времени чтения. Выберите слов-в-минуту для обычного, быстрого или чтения вслух и посмотрите минуты, секунды и время чтения для статей, писем и книг.',
         shortDescription: 'Рассчитайте время чтения для текста, количества слов или JSON.',
       },
+      de: {
+        title: 'Lesezeit-Rechner – Kostenloser Lesedauer-Kalkulator für Text & JSON',
+        description: 'Fügen Sie Text ein, geben Sie eine Wortzahl ein oder stellen Sie JSON bereit und erhalten Sie sofort eine geschätzte Lesezeit. Wählen Sie Wörter pro Minute für normales, schnelles oder lautes Lesen und sehen Sie Minuten, Sekunden und Lesezeit für Artikel, E-Mails und Bücher.',
+        shortDescription: 'Berechnen Sie die Lesezeit für Text, Wortanzahl oder JSON-Daten.',
+      },
     },
     schema: createAdvancedSchema(
       'reading-time-estimator',
