@@ -102,5 +102,57 @@
       "convertButton": "Конвертировать в ЧеРеДуЮщИйСя регистр",
       "uploadDescription": ""
     }
+  },
+  "de": {
+    "main": {
+      "title": "Text-Case-Konverter",
+      "description": "Transformieren Sie Ihren Text mühelos in verschiedene Schreibweisen. Perfekt für Entwickler, Autoren und Content-Ersteller.",
+      "downloadFileName": "konvertierter-text.txt"
+    },
+    "uppercase": {
+      "title": "In GROSSBUCHSTABEN konvertieren",
+      "description": "Wandeln Sie jeden Text sofort in Großbuchstaben um. Perfekt für Überschriften, Betonung oder Formatierungsanforderungen.",
+      "outputLabel": "Text in Großbuchstaben",
+      "copiedMessage": "Text in Großbuchstaben in die Zwischenablage kopiert!",
+      "downloadFileName": "grossbuchstaben-text.txt",
+      "convertButton": "In GROSSBUCHSTABEN konvertieren",
+      "uploadDescription": ""
+    },
+    "lowercase": {
+      "title": "In kleinbuchstaben konvertieren",
+      "description": "Wandeln Sie jeden Text sofort in Kleinbuchstaben um. Perfekt für Konsistenz, URLs oder Codierungsstandards.",
+      "outputLabel": "Text in Kleinbuchstaben",
+      "copiedMessage": "Text in Kleinbuchstaben in die Zwischenablage kopiert!",
+      "downloadFileName": "kleinbuchstaben-text.txt",
+      "convertButton": "In kleinbuchstaben konvertieren",
+      "uploadDescription": ""
+    },
+    "titleCase": {
+      "title": "In Titel-Schreibweise konvertieren",
+      "description": "Wandeln Sie jeden Text in Titel-Schreibweise um, bei der jedes Wort mit einem Großbuchstaben beginnt. Perfekt für Überschriften, Titel und richtige Formatierung.",
+      "outputLabel": "Text in Titel-Schreibweise",
+      "copiedMessage": "Text in Titel-Schreibweise in die Zwischenablage kopiert!",
+      "downloadFileName": "titel-schreibweise-text.txt",
+      "convertButton": "In Titel-Schreibweise konvertieren",
+      "uploadDescription": ""
+    },
+    "sentenceCase": {
+      "title": "In Satzschreibweise konvertieren",
+      "description": "Wandeln Sie jeden Text in Satzschreibweise um, bei der nur der erste Buchstabe jedes Satzes großgeschrieben wird. Perfekt für natürliches Schreiben und korrekte Grammatik.",
+      "outputLabel": "Text in Satzschreibweise",
+      "copiedMessage": "Text in Satzschreibweise in die Zwischenablage kopiert!",
+      "downloadFileName": "satzschreibweise-text.txt",
+      "convertButton": "In Satzschreibweise konvertieren",
+      "uploadDescription": ""
+    },
+    "alternatingCase": {
+      "title": "In AbWeChSlUnGsSchReIbWeIsE konvertieren",
+      "description": "Wandeln Sie jeden Text in abwechselnde Schreibweise um, bei der Buchstaben zwischen Klein- und Großbuchstaben wechseln. Perfekt für kreativen Text, Memes oder stilistische Betonung.",
+      "outputLabel": "Text in abwechselnder Schreibweise",
+      "copiedMessage": "Text in abwechselnder Schreibweise in die Zwischenablage kopiert!",
+      "downloadFileName": "abwechselnde-schreibweise-text.txt",
+      "convertButton": "In AbWeChSlUnGsSchReIbWeIsE konvertieren",
+      "uploadDescription": ""
+    }
   }
 }
