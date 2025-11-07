@@ -4,6 +4,7 @@ import { Locale } from './i18n';
 export const htmlLangCodes: Record<Locale, string> = {
   en: 'en',
   ru: 'ru',
+  de: 'de',
 };
 
 // Generate hreflang links for SEO
@@ -11,7 +12,7 @@ export function generateHreflangLinks(pathname: string, baseUrl: string = proces
   const links = [];
   
   // Remove locale from pathname to get the base path and normalize trailing slash
-  const raw = pathname.replace(/^\/ru/, '') || '/';
+  const raw = pathname.replace(/^\/(ru|de)/, '') || '/';
   const basePath = raw.endsWith('/') ? raw : `${raw}/`;
   
   // Add hreflang for each locale
@@ -27,6 +28,12 @@ export function generateHreflangLinks(pathname: string, baseUrl: string = proces
     href: `${baseUrl}/ru${basePath === '/' ? '' : basePath}`
   });
   
+  links.push({
+    rel: 'alternate',
+    hreflang: 'de',
+    href: `${baseUrl}/de${basePath === '/' ? '' : basePath}`
+  });
+  
   // Add x-default for default language (English)
   links.push({
     rel: 'alternate',
@@ -39,14 +46,22 @@ export function generateHreflangLinks(pathname: string, baseUrl: string = proces
 
 // Generate canonical URL
 export function generateCanonicalUrl(pathname: string, locale: Locale, baseUrl: string = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net') {
-  const raw = pathname.replace(/^\/ru/, '') || '/';
+  const raw = pathname.replace(/^\/(ru|de)/, '') || '/';
   const basePath = raw.endsWith('/') ? raw : `${raw}/`;
   
   if (locale === 'en') {
     return `${baseUrl}${basePath}`;
   }
   
-  return `${baseUrl}/ru${basePath === '/' ? '' : basePath}`;
+  if (locale === 'ru') {
+    return `${baseUrl}/ru${basePath === '/' ? '' : basePath}`;
+  }
+  
+  if (locale === 'de') {
+    return `${baseUrl}/de${basePath === '/' ? '' : basePath}`;
+  }
+  
+  return `${baseUrl}${basePath}`;
 }
 
 // Browser language detection utility for client-side

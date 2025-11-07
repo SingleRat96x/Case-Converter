@@ -192,13 +192,13 @@ export function Header() {
             
             {/* Additional Navigation Links */}
             <Link 
-              href={currentLocale === 'en' ? '/about-us' : '/ru/about-us'}
+              href={currentLocale === 'en' ? '/about-us' : currentLocale === 'ru' ? '/ru/about-us' : '/de/about-us'}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
             >
               {t('navigation.about')}
             </Link>
             <Link 
-              href={currentLocale === 'en' ? '/contact-us' : '/ru/contact-us'}
+              href={currentLocale === 'en' ? '/contact-us' : currentLocale === 'ru' ? '/ru/contact-us' : '/de/contact-us'}
               className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors px-3 py-2"
             >
               {t('navigation.contact')}
@@ -227,11 +227,21 @@ export function Header() {
                   variant={currentLocale === 'ru' ? 'default' : 'outline'}
                   size="sm"
                   onClick={() => switchLanguage('ru')}
-                  className="rounded-l-none transition-all duration-200 hover:scale-105 active:scale-95"
+                  className="rounded-none border-r-0 transition-all duration-200 hover:scale-105 active:scale-95"
                   disabled={currentLocale === 'ru'}
                 >
                   <span className="mr-1.5" role="img" aria-label="Russian Flag">{'\u{1F1F7}\u{1F1FA}'}</span>
                   RU
+                </Button>
+                <Button
+                  variant={currentLocale === 'de' ? 'default' : 'outline'}
+                  size="sm"
+                  onClick={() => switchLanguage('de')}
+                  className="rounded-l-none transition-all duration-200 hover:scale-105 active:scale-95"
+                  disabled={currentLocale === 'de'}
+                >
+                  <span className="mr-1.5" role="img" aria-label="German Flag">{'\u{1F1E9}\u{1F1EA}'}</span>
+                  DE
                 </Button>
               </div>
               <ThemeToggle />

@@ -1924,6 +1924,11 @@ if (!registry.has('home')) {
             title: 'О нас — Text Case Converter',
             description: 'Узнайте о Text Case Converter: наша миссия, стандарты качества и инструменты для разработчиков и создателей.',
             shortDescription: 'О Text Case Converter и нашей миссии.'
+          },
+          de: {
+            title: 'Über uns — Text Case Converter',
+            description: 'Erfahren Sie mehr über Text Case Converter: unsere Mission, Qualitätsstandards und die Werkzeuge, die wir für Entwickler und Ersteller entwickeln.',
+            shortDescription: 'Über Text Case Converter und unsere Mission.'
           }
         },
         schema: createStaticPageSchema('about-us', 'About Us')
@@ -1942,6 +1947,11 @@ if (!registry.has('home')) {
             title: 'Связаться с нами — Text Case Converter',
             description: 'Свяжитесь с командой Text Case Converter: отзывы, поддержка или партнерство.',
             shortDescription: 'Свяжитесь с командой Text Case Converter.'
+          },
+          de: {
+            title: 'Kontakt — Text Case Converter',
+            description: 'Kontaktieren Sie das Text Case Converter-Team für Feedback, Support oder Partnerschaftsanfragen.',
+            shortDescription: 'Kontaktieren Sie das Text Case Converter-Team.'
           }
         },
         schema: createStaticPageSchema('contact-us', 'Contact Us')
@@ -1960,6 +1970,11 @@ if (!registry.has('home')) {
             title: 'Политика конфиденциальности — Text Case Converter',
             description: 'Политика конфиденциальности Text Case Converter. Как мы обрабатываем данные с приоритетом приватности. Контент позже.',
             shortDescription: 'Информация о политике конфиденциальности.'
+          },
+          de: {
+            title: 'Datenschutzrichtlinie — Text Case Converter',
+            description: 'Datenschutzrichtlinie für Text Case Converter. Erfahren Sie, wie wir Daten mit Datenschutz an erster Stelle behandeln.',
+            shortDescription: 'Informationen zur Datenschutzrichtlinie.'
           }
         },
         schema: createStaticPageSchema('privacy-policy', 'Privacy Policy')
@@ -1978,6 +1993,11 @@ if (!registry.has('home')) {
             title: 'Условия использования — Text Case Converter',
             description: 'Условия использования Text Case Converter. Подробности об использовании наших сервисов. Контент позже.',
             shortDescription: 'Информация об условиях использования.'
+          },
+          de: {
+            title: 'Nutzungsbedingungen — Text Case Converter',
+            description: 'Nutzungsbedingungen für Text Case Converter. Details über die Nutzung unserer Dienste.',
+            shortDescription: 'Informationen zu den Nutzungsbedingungen.'
           }
         },
         schema: createStaticPageSchema('terms-of-service', 'Terms of Service')

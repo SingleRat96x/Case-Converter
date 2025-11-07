@@ -108,7 +108,8 @@
       "availableIn": "Available in:",
       "languages": {
         "en": "🇺🇸 English",
-        "ru": "🇷🇺 Русский"
+        "ru": "🇷🇺 Русский",
+        "de": "🇩🇪 Deutsch"
       }
     },
     "category": {
@@ -225,12 +226,131 @@
       "availableIn": "Доступно на языках:",
       "languages": {
         "en": "🇺🇸 English",
-        "ru": "🇷🇺 Русский"
+        "ru": "🇷🇺 Русский",
+        "de": "🇩🇪 Deutsch"
       }
     },
     "category": {
       "toolsAvailableBadge": "{count} профессиональных инструментов",
       "toolsListSummary": "Доступно {count} инструментов • Все инструменты бесплатны и без ограничений"
+    }
+  },
+  "de": {
+    "header": {
+      "title": "Textfall-Konverter"
+    },
+    "notFound": {
+      "title": "Seite nicht gefunden",
+      "description": "Entschuldigung, die gesuchte Seite existiert nicht oder wurde verschoben.",
+      "backHome": "Zurück zur Startseite",
+      "viewTools": "Alle Werkzeuge durchsuchen"
+    },
+    "buttons": {
+      "copy": "Kopieren",
+      "copied": "Kopiert",
+      "clear": "Löschen",
+      "download": "Herunterladen",
+      "upload": "Datei hochladen",
+      "downloadReport": "Bericht herunterladen"
+    },
+    "messages": {
+      "copied": "Text in die Zwischenablage kopiert!",
+      "cleared": "Text gelöscht!",
+      "uploadSuccess": "Datei erfolgreich hochgeladen!",
+      "uploadError": "Fehler beim Lesen der Datei",
+      "invalidFile": "Bitte wählen Sie eine gültige Textdatei"
+    },
+    "labels": {
+      "inputText": "Eingabetext",
+      "outputText": "Ausgabetext",
+      "convertedImages": "Konvertierte Bilder",
+      "convertedImage": "Konvertiertes Bild"
+    },
+    "placeholders": {
+      "enterText": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein..."
+    },
+    "descriptions": {
+      "uploadFile": "Laden Sie eine Textdatei zum Konvertieren hoch"
+    },
+    "analytics": {
+      "title": "Textstatistiken",
+      "characters": "Zeichen",
+      "charactersNoSpaces": "Zeichen (ohne Leerzeichen)",
+      "words": "Wörter",
+      "sentences": "Sätze",
+      "lines": "Zeilen",
+      "paragraphs": "Absätze",
+      "numberStatistics": "Zahlenstatistiken",
+      "letterStatistics": "Buchstabenstatistiken",
+      "dateStatistics": "Datumsstatistiken",
+      "monthStatistics": "Monatsstatistiken",
+      "ipAnalysis": "IP-Adress-Analyse",
+      "ipBreakdown": "Netzwerkadressenaufschlüsselung und Statistiken",
+      "comprehensiveIPBreakdown": "Detaillierte Analyse Ihrer generierten IP-Adressen",
+      "totalIPs": "IP-Adressen Gesamt",
+      "uniqueAddresses": "eindeutige Adressen",
+      "ipVersions": "IP-Versionen",
+      "addressTypes": "Adresstypen",
+      "additionalInfo": "Zusätzliche Info",
+      "private": "Privat",
+      "public": "Öffentlich",
+      "withCIDR": "Mit CIDR",
+      "duplicates": "Duplikate",
+      "unique": "Eindeutig",
+      "count": "Anzahl",
+      "minimum": "Minimum",
+      "maximum": "Maximum",
+      "range": "Bereich",
+      "sum": "Summe",
+      "average": "Durchschnitt",
+      "totalLetters": "Buchstaben Gesamt",
+      "uniqueLetters": "Eindeutige Buchstaben",
+      "uppercase": "Großbuchstaben",
+      "lowercase": "Kleinbuchstaben",
+      "mostCommon": "Am häufigsten",
+      "totalDates": "Daten Gesamt",
+      "uniqueDates": "Eindeutige Daten",
+      "earliestDate": "Frühestes Datum",
+      "latestDate": "Spätestes Datum",
+      "dateRange": "Datumsbereich",
+      "mostCommonYear": "Häufigstes Jahr",
+      "totalMonths": "Monate Gesamt",
+      "uniqueMonths": "Eindeutige Monate",
+      "earliestMonth": "Frühester Monat",
+      "latestMonth": "Spätester Monat",
+      "monthRange": "Monatsbereich"
+    },
+    "dialog": {
+      "clearConfirm": {
+        "title": "Text löschen",
+        "titleImages": "Bilder löschen",
+        "titleFiles": "Dateien löschen",
+        "description": "Sind Sie sicher, dass Sie den gesamten Text löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+        "descriptionImages": "Sind Sie sicher, dass Sie alle Bilder löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+        "descriptionFiles": "Sind Sie sicher, dass Sie alle Dateien löschen möchten? Diese Aktion kann nicht rückgängig gemacht werden.",
+        "confirm": "Löschen",
+        "cancel": "Abbrechen"
+      }
+    },
+    "generator": {
+      "generatorOptions": "Generator-Optionen",
+      "configureSettings": "Konfigurieren Sie Ihre Generierungseinstellungen",
+      "generatedContent": "Ihr generierter Inhalt",
+      "contentPlaceholder": "Generierter Inhalt wird hier angezeigt...",
+      "faqTitle": "Häufig Gestellte Fragen (FAQ)"
+    },
+    "footer": {
+      "tagline": "Professionelle Werkzeuge zur Texttransformation für Entwickler, Autoren und Content-Ersteller. Transformieren Sie Ihren Text mit Leichtigkeit und Präzision.",
+      "availableIn": "Verfügbar in:",
+      "languages": {
+        "en": "🇺🇸 English",
+        "ru": "🇷🇺 Русский",
+        "de": "🇩🇪 Deutsch"
+      }
+    },
+    "category": {
+      "toolsAvailableBadge": "{count} Professionelle Werkzeuge Verfügbar",
+      "toolsListSummary": "{count} Werkzeuge verfügbar • Alle Werkzeuge sind kostenlos und unbegrenzt"
     }
   }
 }

@@ -1,5 +1,5 @@
 
-export type SupportedLocale = 'en' | 'ru';
+export type SupportedLocale = 'en' | 'ru' | 'de';
 
 export interface LocalizedMetadataFields {
   title: string; // 30-60 chars recommended

@@ -264,5 +264,138 @@
       "rssInfo": "RSS - это веб-канал, который позволяет получать обновления в стандартизированном формате. Используйте любой RSS-ридер, такой как Feedly, Inoreader или ваш браузер.",
       "copyFeed": "Скопировать URL канала"
     }
+  },
+  "de": {
+    "title": "Produkt-Änderungsprotokoll",
+    "subtitle": "Verfolgen Sie neue Funktionen, Verbesserungen und Updates",
+    "description": "Bleiben Sie auf dem Laufenden über die neuesten Änderungen, neuen Werkzeuge und Verbesserungen unserer Plattform.",
+    "lastUpdated": "Zuletzt aktualisiert",
+    "version": "Version",
+    "sectionTitle": "Wählen Sie Ihren bevorzugten Layout-Stil",
+    "sectionDescription": "Unten finden Sie drei verschiedene Layout-Optionen für das Änderungsprotokoll. Wählen Sie diejenige aus, die am besten zu Ihren Präferenzen passt.",
+    "layoutOptions": {
+      "option1": "Option 1: Einfache Liste",
+      "option2": "Option 2: Karten-Layout",
+      "option3": "Option 3: Zeitleisten-Ansicht"
+    },
+    "categories": {
+      "new": "Neu",
+      "improved": "Verbessert",
+      "fixed": "Behoben",
+      "deprecated": "Veraltet"
+    },
+    "badges": {
+      "new": "Neu",
+      "feature": "Funktion",
+      "improvement": "Verbesserung",
+      "bugfix": "Fehlerbehebung",
+      "breaking": "Breaking"
+    },
+    "sample": {
+      "month1": {
+        "title": "November 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "SHA-1 Hash-Generator",
+            "description": "Generieren Sie SHA-1-Hashes online mit Dateiüberprüfungsunterstützung und Legacy-Systemkompatibilität. Enthält Sicherheitshinweise für moderne Anwendungen",
+            "date": "7. Nov 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Präfix und Suffix zu Zeilen hinzufügen",
+            "description": "Fügen Sie jeder Zeile ein benutzerdefiniertes Präfix und Suffix hinzu mit der Option, leere Zeilen zu ignorieren. Perfekt für Code-Kommentare, Markdown und Datenformatierung",
+            "date": "6. Nov 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "Zeilennummern zu Text hinzufügen",
+            "description": "Fügen Sie anpassbare Zeilennummern mit mehreren Formaten (numerisch, alphabetisch, römische Ziffern), Trennzeichen und erweiterten Filteroptionen hinzu",
+            "date": "5. Nov 2025"
+          },
+          "4": {
+            "type": "new",
+            "title": "Lesezeit-Schätzer",
+            "description": "Berechnen Sie die Lesezeit für Ihren Inhalt mit einstellbaren Geschwindigkeitseinstellungen",
+            "date": "3. Nov 2025"
+          },
+          "5": {
+            "type": "improved",
+            "title": "Verbesserung des Sprachwechslers",
+            "description": "Länderflaggen zum Sprachwähler hinzugefügt für bessere Sichtbarkeit",
+            "date": "5. Nov 2025"
+          }
+        }
+      },
+      "month2": {
+        "title": "Oktober 2025",
+        "entries": {
+          "1": {
+            "type": "new",
+            "title": "JSON Formatierer & Validator",
+            "description": "Formatieren und validieren Sie JSON mit Syntaxhervorhebung und Echtzeit-Fehlererkennung",
+            "date": "31. Okt 2025"
+          },
+          "2": {
+            "type": "new",
+            "title": "Case-Converter-Suite",
+            "description": "Kebab Case, Snake Case und Camel Case Konverter hinzugefügt",
+            "date": "31. Okt 2025"
+          },
+          "3": {
+            "type": "new",
+            "title": "E-Mail-Extraktionswerkzeuge",
+            "description": "E-Mails aus Text- und PDF-Dateien mit erweiterten Filteroptionen extrahieren",
+            "date": "28. Okt 2025"
+          },
+          "4": {
+            "type": "improved",
+            "title": "Leistungsoptimierung",
+            "description": "Verbesserte Seitenladegeschwindigkeit durch Schriftarten-Preloading und kritische Ressourcen-Hints",
+            "date": "9. Okt 2025"
+          },
+          "5": {
+            "type": "fixed",
+            "title": "JavaScript-Ladeprobleme",
+            "description": "Chunk-Ladefehler behoben, die einige Benutzer betrafen",
+            "date": "29. Okt 2025"
+          }
+        }
+      },
+      "month3": {
+        "title": "August 2025",
+        "entries": {
+          "1": {
+            "type": "improved",
+            "title": "Neugestaltung der mobilen Navigation",
+            "description": "Komplette Überarbeitung des mobilen Menüs mit modernen UI/UX-Mustern und verbesserten Touch-Interaktionen",
+            "date": "17. Aug 2025"
+          },
+          "2": {
+            "type": "improved",
+            "title": "Verbesserte Barrierefreiheit",
+            "description": "Tastaturnavigation und Drag-Interaktionen für bessere mobile Benutzererfahrung hinzugefügt",
+            "date": "8. Aug 2025"
+          },
+          "3": {
+            "type": "fixed",
+            "title": "Validierung der Footer-Links",
+            "description": "Alle Footer-Navigationslinks auf Genauigkeit überprüft und korrigiert",
+            "date": "8. Aug 2025"
+          }
+        }
+      }
+    },
+    "emptyState": {
+      "title": "Noch keine Updates",
+      "description": "Schauen Sie bald wieder vorbei für die neuesten Updates und neuen Funktionen."
+    },
+    "subscribe": {
+      "title": "Bleiben Sie auf dem Laufenden",
+      "description": "Abonnieren Sie unseren RSS-Feed, um über neue Funktionen und Updates in Ihrem bevorzugten Feed-Reader benachrichtigt zu werden",
+      "button": "Über RSS abonnieren",
+      "rssInfo": "RSS ist ein Web-Feed, mit dem Sie Updates in einem standardisierten Format erhalten können. Verwenden Sie einen beliebigen RSS-Reader wie Feedly, Inoreader oder Ihren Browser.",
+      "copyFeed": "Feed-URL kopieren"
+    }
   }
 }
