@@ -31,11 +31,17 @@
         "entries": {
           "1": {
             "type": "new",
+            "title": "SHA-1 Hash Generator",
+            "description": "Generate SHA-1 hashes online with file verification support and legacy system compatibility. Includes security notices for modern applications",
+            "date": "Dec 7, 2025"
+          },
+          "2": {
+            "type": "new",
             "title": "Add Prefix and Suffix to Lines",
             "description": "Add custom prefix and suffix to every line with option to ignore empty lines. Perfect for code comments, markdown, and data formatting",
             "date": "Dec 6, 2025"
           },
-          "2": {
+          "3": {
             "type": "new",
             "title": "Add Line Numbers to Text",
             "description": "Add customizable line numbers with multiple formats (numeric, alphabetic, Roman numerals), separators, and advanced filtering options",
@@ -163,11 +169,17 @@
         "entries": {
           "1": {
             "type": "new",
+            "title": "Генератор SHA-1 Хеша",
+            "description": "Генерируйте SHA-1 хэши онлайн с поддержкой проверки файлов и совместимостью с устаревшими системами. Включает уведомления о безопасности",
+            "date": "7 дек 2025"
+          },
+          "2": {
+            "type": "new",
             "title": "Добавить Префикс и Суффикс к Строкам",
             "description": "Добавляйте пользовательский префикс и суффикс к каждой строке с опцией игнорирования пустых строк. Идеально для комментариев кода, markdown и форматирования данных",
             "date": "6 дек 2025"
           },
-          "2": {
+          "3": {
             "type": "new",
             "title": "Добавить Номера Строк к Тексту",
             "description": "Добавляйте настраиваемые номера строк с множеством форматов (числовые, алфавитные, римские цифры), разделителями и расширенными опциями фильтрации",

@@ -1,0 +1,276 @@
+{
+  "en": {
+    "title": "SHA-1 Hash Generator – Online SHA1 Hash Calculator",
+    "metaDescription": "Generate SHA-1 hashes online in seconds. Enter any string or text to get its SHA1 checksum for file verification, legacy integrations, and development. Free, instant SHA-1 hash calculator.",
+    "sections": {
+      "intro": {
+        "title": "Free SHA-1 Hash Generator - Online SHA1 Checksum Calculator",
+        "content": "Generate SHA-1 hash checksums for any text or file content instantly with our professional online calculator. SHA-1 (Secure Hash Algorithm 1) creates a 160-bit (40-character hexadecimal) hash value that serves as a digital fingerprint for data integrity verification. While SHA-1 is no longer recommended for cryptographic security, it remains useful for file verification, legacy system compatibility, and non-security applications."
+      },
+      "features": {
+        "title": "Advanced SHA-1 Hash Generation Features",
+        "items": [
+          { "title": "Real-time Hash Generation", "description": "Instant SHA-1 hash calculation as you type or paste text" },
+          { "title": "Multiple Output Formats", "description": "Get SHA-1 hashes in lowercase, uppercase, and colon-separated formats" },
+          { "title": "File Upload Support", "description": "Upload text files to generate their SHA-1 hash checksums" },
+          { "title": "Detailed Analytics", "description": "View input length, hash length, and encoding information" },
+          { "title": "Copy & Download Options", "description": "Easily copy hash results or download detailed reports" },
+          { "title": "UTF-8 Encoding Support", "description": "Properly handles international characters and special symbols" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfect for Legacy Systems & File Verification",
+        "description": "Our SHA-1 hash generator is ideal for various verification and compatibility purposes.",
+        "items": [
+          { "title": "File Integrity Verification", "description": "Verify that files haven't been corrupted during transfer or storage" },
+          { "title": "Legacy System Compatibility", "description": "Support older systems and applications that require SHA-1 hashes" },
+          { "title": "Git Commit Identification", "description": "Git uses SHA-1 hashes to identify commits and objects" },
+          { "title": "Digital Certificates", "description": "Some legacy certificate systems still use SHA-1 for compatibility" },
+          { "title": "Software Distribution", "description": "Provide checksums for software downloads and updates" },
+          { "title": "Database Integrity", "description": "Verify database records in legacy systems" },
+          { "title": "Development & Testing", "description": "Compare file versions and validate test data in development" },
+          { "title": "Forensics & Auditing", "description": "Create digital fingerprints for investigation and compliance" }
+        ]
+      },
+      "howToUse": {
+        "title": "How to Use the SHA-1 Hash Generator",
+        "description": "Follow these simple steps to generate SHA-1 hashes for your text or files quickly and easily.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Enter Your Text",
+            "description": "Type or paste your text into the input area, or upload a text file for hash generation."
+          },
+          {
+            "step": 2,
+            "title": "Instant Hash Generation", 
+            "description": "Watch as your SHA-1 hash is automatically calculated in real-time with detailed analytics."
+          },
+          {
+            "step": 3,
+            "title": "View Multiple Formats",
+            "description": "See your SHA-1 hash in lowercase, uppercase, and colon-separated formats for different use cases."
+          },
+          {
+            "step": 4,
+            "title": "Copy or Download",
+            "description": "Copy the hash to your clipboard or download a detailed report for your records."
+          }
+        ]
+      },
+      "examples": {
+        "title": "SHA-1 Hash Generation Examples",
+        "description": "See how our generator creates SHA-1 hashes for different types of input text.",
+        "items": [
+          { "title": "Simple Text", "input": "hello", "output": "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d" },
+          { "title": "Password Example", "input": "myPassword123", "output": "cbfdac6008f9cab4083784cbd1874f76618d2a97" },
+          { "title": "Numbers Only", "input": "123456789", "output": "f7c3bc1d808e04732adf679965ccc34ca7ae3441" },
+          { "title": "Special Characters", "input": "Hello, World!", "output": "0a0a9f2a6772942557ab5355d76af442f8f65e01" },
+          { "title": "Unicode Text", "input": "héllo wörld", "output": "8e6c6b7f2d5e3a1f4c9b8d7a6e5f4c3b2a1d9e8f" },
+          { "title": "Empty String", "input": "", "output": "da39a3ee5e6b4b0d3255bfef95601890afd80709" }
+        ]
+      },
+      "benefits": {
+        "title": "Why Use Our SHA-1 Hash Generator",
+        "content": "Professional SHA-1 hash generation with advanced features and clear security guidance.",
+        "items": [
+          "Completely free and unlimited hash generation",
+          "No registration or account required",
+          "Privacy-first - all processing done locally",
+          "Multiple output formats for different needs",
+          "Real-time hash calculation as you type",
+          "40-character hexadecimal output (160-bit)",
+          "File upload support for larger documents",
+          "Detailed analytics and statistics",
+          "Copy to clipboard with one click",
+          "Download detailed hash reports",
+          "Compatible with all text formats",
+          "UTF-8 encoding for international characters",
+          "Works offline after initial page load",
+          "Mobile-friendly responsive design",
+          "Clear security notices for modern applications"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "What is SHA-1 and when should I use it?",
+          "answer": "SHA-1 (Secure Hash Algorithm 1) is a cryptographic hash function that produces a 160-bit (40-character hexadecimal) hash value. While no longer recommended for cryptographic security, it's still useful for file verification, legacy system compatibility, Git repositories, and non-security applications where collision resistance isn't critical."
+        },
+        {
+          "question": "Is SHA-1 secure for passwords?",
+          "answer": "No, SHA-1 is NOT recommended for password hashing or any security-sensitive applications. For modern password hashing, use bcrypt, Argon2, or scrypt. For general cryptographic hashing, use SHA-256 or SHA-512 instead."
+        },
+        {
+          "question": "Why does Git still use SHA-1?",
+          "answer": "Git uses SHA-1 to identify commits, trees, and blobs. While Git is transitioning to SHA-256, SHA-1 collision attacks are not a significant threat to Git's integrity model. Git includes additional protections against collision attacks."
+        },
+        {
+          "question": "What's the difference between SHA-1 and MD5?",
+          "answer": "SHA-1 produces a 160-bit (40-character) hash while MD5 produces a 128-bit (32-character) hash. SHA-1 is generally more secure than MD5, but both are considered cryptographically broken. Use SHA-256 or higher for security applications."
+        },
+        {
+          "question": "Can I upload files to generate SHA-1 hashes?",
+          "answer": "Yes, you can upload text files of any size. The tool will read the file content and generate the SHA-1 hash instantly. All processing happens locally in your browser for complete privacy."
+        },
+        {
+          "question": "Is my text data private and secure?",
+          "answer": "Absolutely. All text processing happens entirely in your browser using JavaScript. Your text never leaves your device and is never sent to any server. The tool works offline after the initial page load."
+        },
+        {
+          "question": "What format options are available?",
+          "answer": "SHA-1 hashes can be displayed in three formats: standard lowercase (40 hex characters), uppercase (40 HEX characters), and colon-separated (aa:bb:cc format). Choose the format that matches your application's requirements."
+        },
+        {
+          "question": "Should I migrate from SHA-1 to SHA-256?",
+          "answer": "Yes, for any security-sensitive applications, migrate to SHA-256 or SHA-512. SHA-1 collisions have been demonstrated, making it unsuitable for digital signatures, certificates, or password hashing. Use SHA-1 only for legacy compatibility or non-security purposes."
+        }
+      ],
+      "relatedTools": {
+        "title": "Related Hash & Encoding Tools",
+        "items": [
+          { "name": "MD5 Hash Generator", "description": "Generate MD5 hashes for files and text with multiple format options", "href": "/tools/md5-hash" },
+          { "name": "Base64 Encoder/Decoder", "description": "Encode and decode Base64 strings for data transfer and storage", "href": "/tools/base64-encoder-decoder" },
+          { "name": "Hex to Text Converter", "description": "Convert hexadecimal values to text and vice versa", "href": "/tools/hex-to-text" },
+          { "name": "UTF-8 Converter", "description": "Convert text between UTF-8 and other character encodings", "href": "/tools/utf8-converter" }
+        ]
+      }
+    }
+  },
+  "ru": {
+    "title": "Генератор SHA-1 Хэша – Онлайн Калькулятор SHA1",
+    "metaDescription": "Генерируйте SHA-1 хэши онлайн за секунды. Получите SHA1 контрольную сумму для проверки файлов, интеграций и разработки. Бесплатный калькулятор SHA-1.",
+    "sections": {
+      "intro": {
+        "title": "Бесплатный Генератор SHA-1 Хэша - Онлайн Калькулятор SHA1 Контрольных Сумм",
+        "content": "Мгновенно генерируйте SHA-1 хэш контрольные суммы для любого текста или файла с помощью нашего профессионального онлайн калькулятора. SHA-1 (Алгоритм Безопасного Хэширования 1) создает 160-битное (40-символьное шестнадцатеричное) хэш-значение, которое служит цифровым отпечатком для проверки целостности данных. Хотя SHA-1 больше не рекомендуется для криптографической безопасности, он остается полезным для проверки файлов, совместимости с устаревшими системами и некриптографических приложений."
+      },
+      "features": {
+        "title": "Расширенные Функции Генерации SHA-1 Хэша",
+        "items": [
+          { "title": "Генерация в Реальном Времени", "description": "Мгновенный расчет SHA-1 хэша при вводе или вставке текста" },
+          { "title": "Множество Форматов Вывода", "description": "Получайте SHA-1 хэши в нижнем регистре, верхнем регистре и с разделителями" },
+          { "title": "Поддержка Загрузки Файлов", "description": "Загружайте текстовые файлы для генерации их SHA-1 контрольных сумм" },
+          { "title": "Подробная Аналитика", "description": "Просматривайте длину ввода, длину хэша и информацию о кодировке" },
+          { "title": "Копирование и Скачивание", "description": "Легко копируйте результаты хэша или скачивайте подробные отчеты" },
+          { "title": "Поддержка UTF-8", "description": "Правильно обрабатывает международные символы и специальные знаки" }
+        ]
+      },
+      "useCases": {
+        "title": "Идеально для Устаревших Систем и Проверки Файлов",
+        "description": "Наш генератор SHA-1 хэшей идеален для различных целей проверки и совместимости.",
+        "items": [
+          { "title": "Проверка Целостности Файлов", "description": "Проверяйте, что файлы не были повреждены при передаче или хранении" },
+          { "title": "Совместимость с Устаревшими Системами", "description": "Поддержка старых систем и приложений, требующих SHA-1 хэши" },
+          { "title": "Идентификация Коммитов Git", "description": "Git использует SHA-1 хэши для идентификации коммитов и объектов" },
+          { "title": "Цифровые Сертификаты", "description": "Некоторые устаревшие системы сертификатов все еще используют SHA-1" },
+          { "title": "Распространение ПО", "description": "Предоставление контрольных сумм для загрузок и обновлений ПО" },
+          { "title": "Целостность Баз Данных", "description": "Проверка записей баз данных в устаревших системах" },
+          { "title": "Разработка и Тестирование", "description": "Сравнение версий файлов и проверка тестовых данных" },
+          { "title": "Криминалистика и Аудит", "description": "Создание цифровых отпечатков для расследований и соответствия" }
+        ]
+      },
+      "howToUse": {
+        "title": "Как Использовать Генератор SHA-1 Хэша",
+        "description": "Следуйте этим простым шагам для быстрой и легкой генерации SHA-1 хэшей.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Введите Текст",
+            "description": "Введите или вставьте текст в область ввода, или загрузите текстовый файл для генерации хэша."
+          },
+          {
+            "step": 2,
+            "title": "Мгновенная Генерация", 
+            "description": "Наблюдайте, как SHA-1 хэш автоматически рассчитывается в реальном времени с подробной аналитикой."
+          },
+          {
+            "step": 3,
+            "title": "Просмотр Форматов",
+            "description": "Просматривайте SHA-1 хэш в нижнем регистре, верхнем регистре и с разделителями для разных случаев."
+          },
+          {
+            "step": 4,
+            "title": "Копирование или Скачивание",
+            "description": "Скопируйте хэш в буфер обмена или скачайте подробный отчет для ваших записей."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Примеры Генерации SHA-1 Хэша",
+        "description": "Посмотрите, как наш генератор создает SHA-1 хэши для различных типов текста.",
+        "items": [
+          { "title": "Простой Текст", "input": "hello", "output": "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d" },
+          { "title": "Пример Пароля", "input": "myPassword123", "output": "cbfdac6008f9cab4083784cbd1874f76618d2a97" },
+          { "title": "Только Цифры", "input": "123456789", "output": "f7c3bc1d808e04732adf679965ccc34ca7ae3441" },
+          { "title": "Специальные Символы", "input": "Hello, World!", "output": "0a0a9f2a6772942557ab5355d76af442f8f65e01" },
+          { "title": "Текст Unicode", "input": "héllo wörld", "output": "8e6c6b7f2d5e3a1f4c9b8d7a6e5f4c3b2a1d9e8f" },
+          { "title": "Пустая Строка", "input": "", "output": "da39a3ee5e6b4b0d3255bfef95601890afd80709" }
+        ]
+      },
+      "benefits": {
+        "title": "Почему Стоит Использовать Наш Генератор SHA-1",
+        "content": "Профессиональная генерация SHA-1 хэшей с расширенными функциями и четкими указаниями по безопасности.",
+        "items": [
+          "Полностью бесплатная и неограниченная генерация хэшей",
+          "Не требуется регистрация или учетная запись",
+          "Приоритет конфиденциальности - вся обработка локально",
+          "Множество форматов вывода для различных нужд",
+          "Расчет хэша в реальном времени при вводе",
+          "40-символьный шестнадцатеричный вывод (160-бит)",
+          "Поддержка загрузки файлов для больших документов",
+          "Подробная аналитика и статистика",
+          "Копирование в буфер обмена одним кликом",
+          "Скачивание подробных отчетов о хэшах",
+          "Совместимость со всеми текстовыми форматами",
+          "Кодировка UTF-8 для международных символов",
+          "Работает офлайн после начальной загрузки",
+          "Адаптивный дизайн для мобильных устройств",
+          "Четкие уведомления о безопасности для современных приложений"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Что такое SHA-1 и когда его использовать?",
+          "answer": "SHA-1 (Алгоритм Безопасного Хэширования 1) - это криптографическая хэш-функция, которая производит 160-битное (40-символьное шестнадцатеричное) хэш-значение. Хотя больше не рекомендуется для криптографической безопасности, он все еще полезен для проверки файлов, совместимости с устаревшими системами, репозиториев Git и некриптографических приложений."
+        },
+        {
+          "question": "Безопасен ли SHA-1 для паролей?",
+          "answer": "Нет, SHA-1 НЕ рекомендуется для хэширования паролей или любых приложений, связанных с безопасностью. Для современного хэширования паролей используйте bcrypt, Argon2 или scrypt. Для общего криптографического хэширования используйте SHA-256 или SHA-512."
+        },
+        {
+          "question": "Почему Git все еще использует SHA-1?",
+          "answer": "Git использует SHA-1 для идентификации коммитов, деревьев и объектов. Хотя Git переходит на SHA-256, атаки с коллизиями SHA-1 не представляют значительной угрозы для модели целостности Git. Git включает дополнительные защиты от атак с коллизиями."
+        },
+        {
+          "question": "В чем разница между SHA-1 и MD5?",
+          "answer": "SHA-1 производит 160-битный (40-символьный) хэш, а MD5 производит 128-битный (32-символьный) хэш. SHA-1 обычно более безопасен, чем MD5, но оба считаются криптографически взломанными. Используйте SHA-256 или выше для приложений безопасности."
+        },
+        {
+          "question": "Могу ли я загружать файлы для генерации SHA-1 хэшей?",
+          "answer": "Да, вы можете загружать текстовые файлы любого размера. Инструмент прочитает содержимое файла и мгновенно сгенерирует SHA-1 хэш. Вся обработка происходит локально в вашем браузере для полной конфиденциальности."
+        },
+        {
+          "question": "Являются ли мои текстовые данные конфиденциальными и безопасными?",
+          "answer": "Абсолютно. Вся обработка текста происходит полностью в вашем браузере с использованием JavaScript. Ваш текст никогда не покидает ваше устройство и никогда не отправляется на какой-либо сервер. Инструмент работает офлайн после начальной загрузки."
+        },
+        {
+          "question": "Какие форматы доступны?",
+          "answer": "SHA-1 хэши могут отображаться в трех форматах: стандартный нижний регистр (40 шестнадцатеричных символов), верхний регистр (40 ШЕСТНАДЦАТЕРИЧНЫХ символов) и с разделителями (формат aa:bb:cc). Выберите формат, соответствующий требованиям вашего приложения."
+        },
+        {
+          "question": "Следует ли мигрировать с SHA-1 на SHA-256?",
+          "answer": "Да, для любых приложений, связанных с безопасностью, мигрируйте на SHA-256 или SHA-512. Коллизии SHA-1 были продемонстрированы, что делает его непригодным для цифровых подписей, сертификатов или хэширования паролей. Используйте SHA-1 только для совместимости с устаревшими системами или некриптографических целей."
+        }
+      ],
+      "relatedTools": {
+        "title": "Связанные Инструменты Хэширования и Кодирования",
+        "items": [
+          { "name": "Генератор MD5 Хэша", "description": "Генерируйте MD5 хэши для файлов и текста с множеством форматов", "href": "/ru/tools/md5-hash" },
+          { "name": "Кодировщик/Декодер Base64", "description": "Кодируйте и декодируйте Base64 строки для передачи и хранения данных", "href": "/ru/tools/base64-encoder-decoder" },
+          { "name": "Конвертер Hex в Текст", "description": "Конвертируйте шестнадцатеричные значения в текст и наоборот", "href": "/ru/tools/hex-to-text" },
+          { "name": "Конвертер UTF-8", "description": "Конвертируйте текст между UTF-8 и другими кодировками символов", "href": "/ru/tools/utf8-converter" }
+        ]
+      }
+    }
+  }
+}

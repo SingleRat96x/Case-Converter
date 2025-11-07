@@ -485,6 +485,11 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
+          title: t('navigation.sha1HashGenerator'),
+          href: locale === 'en' ? '/tools/sha1-hash-generator' : '/ru/tools/sha1-hash-generator',
+          icon: <ChevronRight className="h-4 w-4" />
+        },
+        {
           title: t('navigation.phoneticSpelling'),
           href: locale === 'en' ? '/tools/phonetic-spelling' : '/ru/tools/phonetic-spelling',
           icon: <ChevronRight className="h-4 w-4" />

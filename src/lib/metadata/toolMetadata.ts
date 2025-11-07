@@ -1158,6 +1158,42 @@ const overrides: Array<ToolMetadataConfig> = [
     relatedTools: ['base64-encoder-decoder','uuid-generator','json-stringify']
   },
   {
+    slug: 'sha1-hash-generator',
+    pathname: '/tools/sha1-hash-generator',
+    type: 'tool',
+    category: 'security-tool',
+    i18n: {
+      en: {
+        title: 'SHA-1 Hash Generator – Online SHA1 Hash Calculator',
+        description: 'Generate SHA-1 hashes online in seconds. Enter any string or text to get its SHA1 checksum for file verification, legacy integrations, and development.',
+        shortDescription: 'Generate SHA-1 hashes from any text or string',
+        alternateTitle: 'Online SHA1 Hash Calculator'
+      },
+      ru: {
+        title: 'Генератор SHA-1 Хэша – Онлайн Калькулятор SHA1',
+        description: 'Генерируйте SHA-1 хэши онлайн за секунды. Получите SHA1 контрольную сумму для проверки файлов, интеграций и разработки.',
+        shortDescription: 'Генерация SHA-1 хэшей из любого текста',
+        alternateTitle: 'Онлайн Калькулятор SHA1 Хэша'
+      }
+    },
+    schema: createAdvancedSchema(
+      'sha1-hash-generator',
+      [
+        'Generate SHA-1 hashes',
+        '40-character hexadecimal output',
+        'Copy to clipboard',
+        'File verification support',
+        'Legacy system compatibility',
+        'Real-time hash generation'
+      ],
+      'Text/String',
+      'SHA-1 Hash',
+      4.6,
+      750
+    ),
+    relatedTools: ['md5-hash','base64-encoder-decoder','hex-to-text','utf8-converter']
+  },
+  {
     slug: 'slugify-url',
     pathname: '/tools/slugify-url',
     type: 'tool',
@@ -1778,7 +1814,7 @@ const TOOL_SLUGS: string[] = [
   'csv-to-json','alternating-case','instagram-fonts','lowercase','image-cropper','nato-phonetic','image-to-text','image-resizer',
   'italic-text','ascii-art-generator','jpg-to-webp','mirror-text','cursed-text','online-notepad','facebook-font','password-generator',
   'discord-font','big-text','number-sorter','json-stringify','morse-code','binary-code-translator','md5-hash','base64-encoder-decoder',
-  'bubble-text','duplicate-line-remover','add-line-numbers-to-text','add-prefix-and-suffix-to-lines','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
+  'bubble-text','duplicate-line-remover','add-line-numbers-to-text','add-prefix-and-suffix-to-lines','sha1-hash-generator','hex-to-text','bold-text','phonetic-spelling','extract-emails-from-text','extract-emails-from-pdf'
 ];
 
 const CATEGORY_SLUGS: string[] = [

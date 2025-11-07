@@ -17,6 +17,13 @@ export async function GET() {
   // Changelog data - in production, you'd fetch this from your data source
   const changelogEntries = [
     {
+      id: 'dec-2025-sha1-hash',
+      title: 'SHA-1 Hash Generator',
+      description: 'Generate SHA-1 hashes online with file verification support and legacy system compatibility. Includes security notices for modern applications',
+      date: new Date('2025-12-07').toUTCString(),
+      category: 'New Feature'
+    },
+    {
       id: 'dec-2025-prefix-suffix',
       title: 'Add Prefix and Suffix to Lines',
       description: 'Add custom prefix and suffix to every line with option to ignore empty lines. Perfect for code comments, markdown, and data formatting',

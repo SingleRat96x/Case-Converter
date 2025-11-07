@@ -8,7 +8,6 @@ import { ActionButtons } from '@/components/shared/ActionButtons';
 import { FeedbackMessage } from '@/components/shared/FeedbackMessage';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
-import { Alert, AlertTitle, AlertDescription } from '@/components/ui/alert';
 import { generateSHA1Hash } from '@/lib/sha1Utils';
 import { copyToClipboard, downloadTextAsFile } from '@/lib/utils';
 import { AlertTriangle } from 'lucide-react';
@@ -125,13 +124,19 @@ For secure applications, use SHA-256 or SHA-512 instead.`;
       </div>
 
       {/* Security Warning */}
-      <Alert variant="destructive" className="mb-6">
-        <AlertTriangle className="h-4 w-4" />
-        <AlertTitle>{tool('sha1Hash.securityWarning.title', 'Security Notice')}</AlertTitle>
-        <AlertDescription>
-          {tool('sha1Hash.securityWarning.message', 'SHA-1 is no longer recommended for modern cryptographic security. For secure applications, use SHA-256 or SHA-512 instead.')}
-        </AlertDescription>
-      </Alert>
+      <div className="mb-6 p-4 rounded-lg border-2 border-amber-200 dark:border-amber-900 bg-amber-50 dark:bg-amber-950/30">
+        <div className="flex items-start gap-3">
+          <AlertTriangle className="h-5 w-5 text-amber-600 dark:text-amber-400 flex-shrink-0 mt-0.5" />
+          <div className="flex-1 space-y-1">
+            <h3 className="text-sm font-semibold text-amber-900 dark:text-amber-100">
+              {tool('sha1Hash.securityWarning.title', 'Security Notice')}
+            </h3>
+            <p className="text-sm text-amber-800 dark:text-amber-200">
+              {tool('sha1Hash.securityWarning.message', 'SHA-1 is no longer recommended for modern cryptographic security. For secure applications, use SHA-256 or SHA-512 instead.')}
+            </p>
+          </div>
+        </div>
+      </div>
 
       {/* Input Section */}
       <div className="space-y-6">

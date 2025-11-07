@@ -311,6 +311,10 @@ export function Footer() {
       href: currentLocale === 'en' ? '/tools/md5-hash' : '/ru/tools/md5-hash'
     },
     {
+      title: t('navigation.sha1HashGenerator'),
+      href: currentLocale === 'en' ? '/tools/sha1-hash-generator' : '/ru/tools/sha1-hash-generator'
+    },
+    {
       title: t('navigation.phoneticSpelling'),
       href: currentLocale === 'en' ? '/tools/phonetic-spelling' : '/ru/tools/phonetic-spelling'
     },

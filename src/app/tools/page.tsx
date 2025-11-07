@@ -141,6 +141,7 @@ const toolCategories = [
       { id: 'ascii-art-generator', titleKey: 'navigation.asciiArtGenerator', href: '/tools/ascii-art-generator', icon: '🎨' },
       { id: 'nato-phonetic', titleKey: 'navigation.natoPhonetic', href: '/tools/nato-phonetic', icon: '✈️' },
       { id: 'md5-hash', titleKey: 'navigation.md5Hash', href: '/tools/md5-hash', icon: '#️⃣' },
+      { id: 'sha1-hash-generator', titleKey: 'navigation.sha1HashGenerator', href: '/tools/sha1-hash-generator', icon: '🔐' },
       { id: 'phonetic-spelling', titleKey: 'navigation.phoneticSpelling', href: '/tools/phonetic-spelling', icon: '🔤' },
       { id: 'pig-latin', titleKey: 'navigation.pigLatin', href: '/tools/pig-latin', icon: '🐷' },
       { id: 'roman-numeral-date', titleKey: 'navigation.romanNumeralDate', href: '/tools/roman-numeral-date', icon: '🏛️' },

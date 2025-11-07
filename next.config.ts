@@ -172,6 +172,28 @@ const nextConfig: NextConfig = {
         destination: '/ru/tools/add-prefix-and-suffix-to-lines',
         permanent: true,
       },
+      // SHA-1 Hash Generator redirects (English)
+      {
+        source: '/tools/sha1-generator',
+        destination: '/tools/sha1-hash-generator',
+        permanent: true,
+      },
+      {
+        source: '/tools/sha1-hash',
+        destination: '/tools/sha1-hash-generator',
+        permanent: true,
+      },
+      // SHA-1 Hash Generator redirects (Russian)
+      {
+        source: '/ru/tools/sha1-generator',
+        destination: '/ru/tools/sha1-hash-generator',
+        permanent: true,
+      },
+      {
+        source: '/ru/tools/sha1-hash',
+        destination: '/ru/tools/sha1-hash-generator',
+        permanent: true,
+      },
     ];
   },
   webpack: (config, { isServer }) => {

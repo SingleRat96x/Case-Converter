@@ -160,6 +160,7 @@ export function Header() {
         { titleKey: 'navigation.asciiArtGenerator', href: '/tools/ascii-art-generator' },
         { titleKey: 'navigation.natoPhonetic', href: '/tools/nato-phonetic' },
         { titleKey: 'navigation.md5Hash', href: '/tools/md5-hash' },
+        { titleKey: 'navigation.sha1HashGenerator', href: '/tools/sha1-hash-generator' },
         { titleKey: 'navigation.phoneticSpelling', href: '/tools/phonetic-spelling' },
         { titleKey: 'navigation.pigLatin', href: '/tools/pig-latin' },
         { titleKey: 'navigation.romanNumeralDate', href: '/tools/roman-numeral-date' },

@@ -401,6 +401,46 @@
         "valid": "Valid Hash"
       }
     },
+    "sha1Hash": {
+      "title": "SHA-1 Hash Generator",
+      "description": "Generate SHA-1 hash checksums for text and files instantly. 40-character hexadecimal hash output with multiple formats and real-time generation.",
+      "inputLabel": "Text to Hash",
+      "inputPlaceholder": "Enter text to generate SHA-1 hash...",
+      "outputPlaceholder": "Your SHA-1 hash will appear here",
+      "uploadDescription": "Upload a text file to generate its SHA-1 hash",
+      "downloadFileName": "sha1-hash-report.txt",
+      "reportText": "Download Report",
+      "securityWarning": {
+        "title": "Security Notice",
+        "message": "SHA-1 is no longer recommended for modern cryptographic security. For secure applications, use SHA-256 or SHA-512 instead."
+      },
+      "analytics": {
+        "inputLength": "Input Length",
+        "hashLength": "Hash Length",
+        "encoding": "Encoding"
+      },
+      "report": {
+        "title": "SHA-1 Hash Analysis Report",
+        "generatedAt": "Generated",
+        "originalText": "Original Text",
+        "hashResults": "Hash Results"
+      },
+      "formats": {
+        "standard": "Standard",
+        "uppercase": "Uppercase",
+        "colonSeparated": "Colon-separated",
+        "spaceSeparated": "Space-separated",
+        "copied": "Hash copied to clipboard!",
+        "outputFormat": "Output Format"
+      },
+      "stats": {
+        "title": "SHA-1 Hash Analysis",
+        "inputChars": "Input Characters",
+        "hashChars": "Hash Characters",
+        "encoding": "Encoding",
+        "valid": "Valid Hash"
+      }
+    },
     "utmBuilder": {
       "title": "UTM Parameter Builder - Track Marketing Campaigns",
       "description": "Build UTM parameters for Google Analytics campaign tracking. Generate trackable URLs with source, medium, campaign, term, and content parameters for accurate marketing attribution.",
@@ -1245,6 +1285,46 @@
       },
       "stats": {
         "title": "Анализ MD5 Хеша",
+        "inputChars": "Символов Входа",
+        "hashChars": "Символов Хеша",
+        "encoding": "Кодировка",
+        "valid": "Корректный Хеш"
+      }
+    },
+    "sha1Hash": {
+      "title": "Генератор SHA-1 Хеша",
+      "description": "Мгновенно генерируйте SHA-1 хеш-суммы для текста и файлов. 40-символьный шестнадцатеричный вывод хеша с множественными форматами и генерацией в реальном времени.",
+      "inputLabel": "Текст для Хеширования",
+      "inputPlaceholder": "Введите текст для генерации SHA-1 хеша...",
+      "outputPlaceholder": "Ваш SHA-1 хеш появится здесь",
+      "uploadDescription": "Загрузите текстовый файл для генерации его SHA-1 хеша",
+      "downloadFileName": "отчет-sha1-хеш.txt",
+      "reportText": "Скачать Отчет",
+      "securityWarning": {
+        "title": "Уведомление о Безопасности",
+        "message": "SHA-1 больше не рекомендуется для современной криптографической безопасности. Для безопасных приложений используйте SHA-256 или SHA-512."
+      },
+      "analytics": {
+        "inputLength": "Длина Входного Текста",
+        "hashLength": "Длина Хеша",
+        "encoding": "Кодировка"
+      },
+      "report": {
+        "title": "Отчет Анализа SHA-1 Хеша",
+        "generatedAt": "Создан",
+        "originalText": "Исходный Текст",
+        "hashResults": "Результаты Хеширования"
+      },
+      "formats": {
+        "standard": "Стандартный",
+        "uppercase": "Прописные",
+        "colonSeparated": "Через двоеточие",
+        "spaceSeparated": "Через пробел",
+        "copied": "Хеш скопирован в буфер обмена!",
+        "outputFormat": "Формат Вывода"
+      },
+      "stats": {
+        "title": "Анализ SHA-1 Хеша",
         "inputChars": "Символов Входа",
         "hashChars": "Символов Хеша",
         "encoding": "Кодировка",
