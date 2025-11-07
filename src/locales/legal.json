@@ -1357,13 +1357,14 @@
           },
           "serverSide": {
             "title": "Serverseitige Verarbeitung",
-            "description": "Einige Werkzeuge erfordern Serververarbeitung für:",
-            "reasons": {
-              "0": "Komplexe Operationen, die Bibliotheken benötigen, die zu groß für Browser sind",
-              "1": "Optische Zeichenerkennung (OCR) und KI-basierte Funktionen",
-              "2": "Dateikonvertierungen mit spezialisierten Bibliotheken"
+            "description": "Einige erweiterte Funktionen erfordern Serververarbeitung, darunter:",
+            "examples": {
+              "0": "Große Dateikonvertierungen (>10MB)",
+              "1": "Komplexe Bildverarbeitungsoperationen",
+              "2": "OCR (Optische Zeichenerkennung)",
+              "3": "Erweiterte Formatkonvertierungen"
             },
-            "privacy": "Auch bei serverseitiger Verarbeitung werden Ihre Daten nicht gespeichert und nach Abschluss der Operation sofort gelöscht."
+            "privacy": "Bei serverseitiger Verarbeitung werden Daten sofort verarbeitet und nicht dauerhaft gespeichert."
           }
         },
         "privacy": {
@@ -1413,65 +1414,57 @@
               "description": "Klare visuelle Indikatoren zeigen, welches Element fokussiert ist, während Sie mit der Tastatur navigieren."
             }
           },
-          "commitment": "Wir testen regelmäßig mit unterstützenden Technologien und begrüßen Feedback zur Verbesserung der Barrierefreiheit. Kontaktieren Sie uns unter {contactEmail}, wenn Sie auf Probleme stoßen."
+          "feedback": "Wenn Sie auf Barrierefreiheitsprobleme stoßen, kontaktieren Sie uns bitte unter {contactEmail}. Wir sind der kontinuierlichen Verbesserung verpflichtet."
         },
         "roadmap": {
-          "title": "Produkt-Roadmap & kommende Funktionen",
-          "intro": "Wir entwickeln uns ständig weiter. Hier ist, woran wir arbeiten:",
+          "title": "Entwicklungs-Roadmap",
+          "intro": "Kommende Funktionen und Verbesserungen basierend auf Nutzerfeedback:",
           "upcoming": {
             "0": {
-              "category": "Neue Werkzeuge",
-              "items": {
-                "0": "Erweiterte RegEx-Tools für Entwickler",
-                "1": "Batch-Datei-Verarbeitungsfunktionen",
-                "2": "Kollaborative Text-Bearbeitungsfunktionen",
-                "3": "Benutzerdefinierte Werkzeug-Vorlagen und -Profile"
-              }
+              "title": "Erweiterte Dateiverarbeitung",
+              "description": "Unterstützung für größere Dateien und zusätzliche Formatkonvertierungen",
+              "timeline": "Q2 2026"
             },
             "1": {
-              "category": "Plattformverbesserungen",
-              "items": {
-                "0": "Progressive Web App (PWA) für Offline-Nutzung",
-                "1": "Browser-Erweiterungen für schnellen Zugriff",
-                "2": "API-Zugang für Entwicklerintegration",
-                "3": "Verbesserte mobile Erfahrung"
-              }
+              "title": "Batch-Operationen",
+              "description": "Mehrere Dateien oder Textblöcke gleichzeitig verarbeiten",
+              "timeline": "Q2 2026"
             },
             "2": {
-              "category": "Benutzer-angeforderte Funktionen",
-              "items": {
-                "0": "Verlaufs-/Favoriten-System",
-                "1": "Werkzeug-Verkettung (mehrere Operationen kombinieren)",
-                "2": "Exportieren in mehr Formate",
-                "3": "Mehr Anpassungsoptionen"
-              }
-            }
-          },
-          "feedback": "Haben Sie eine Funktionsanfrage? Wir würden sie gerne hören! Kontaktieren Sie uns unter {contactEmail}."
-        },
-        "contact": {
-          "title": "Kontaktieren Sie uns",
-          "intro": "Haben Sie Fragen, Feedback oder Funktionsanfragen? Wir sind hier, um zu helfen:",
-          "purposes": {
-            "0": {
-              "title": "Technischer Support",
-              "description": "Wenn Sie ein Problem haben oder einen Fehler zu melden haben"
-            },
-            "1": {
-              "title": "Funktionsanfragen",
-              "description": "Schlagen Sie neue Werkzeuge oder Verbesserungen bestehender vor"
-            },
-            "2": {
-              "title": "Datenschutzfragen",
-              "description": "Fragen zu unseren Datenpraktiken oder zur Datenschutzrichtlinie"
+              "title": "Benutzerdefinierte Werkzeug-Workflows",
+              "description": "Mehrere Werkzeuge für komplexe Transformationen verketten",
+              "timeline": "Q3 2026"
             },
             "3": {
-              "title": "Geschäftsanfragen",
-              "description": "Partnerschaften, API-Zugang oder kommerzielle Nutzung"
+              "title": "API-Zugang",
+              "description": "Programmatischer Zugriff für Entwickler und Automatisierung",
+              "timeline": "Q4 2026"
             }
           },
-          "email": "E-Mail: {contactEmail}",
-          "response": "Typische Antwortzeit: innerhalb von {responseTime}"
+          "feedback": "Haben Sie Ideen für neue Funktionen? Teilen Sie sie über unsere Kontaktseite."
+        },
+        "contact": {
+          "title": "Kontakt & Partnerschaft",
+          "intro": "Wir freuen uns über Feedback, Vorschläge und Partnerschaftsmöglichkeiten:",
+          "purposes": {
+            "0": {
+              "title": "Allgemeines Feedback",
+              "description": "Verbesserungsvorschläge, Fehlerberichte oder Funktionsanfragen"
+            },
+            "1": {
+              "title": "Geschäftspartnerschaft",
+              "description": "Integrationsmöglichkeiten, White-Label-Lösungen oder Enterprise-Lizenzen"
+            },
+            "2": {
+              "title": "Technischer Support",
+              "description": "Hilfe zu spezifischen Werkzeugen oder Barrierefreiheitsfragen"
+            },
+            "3": {
+              "title": "Medien & Presse",
+              "description": "Presseanfragen, Interviews oder Rezensionsanfragen"
+            }
+          },
+          "response": "Wir antworten in der Regel innerhalb von 1-2 Werktagen auf Anfragen."
         }
       }
     },
@@ -1512,60 +1505,63 @@
         "fields": {
           "name": {
             "label": "Name",
-            "placeholder": "Ihr Name",
-            "required": "Name ist erforderlich"
+            "placeholder": "Ihr vollständiger Name",
+            "required": true
           },
           "email": {
-            "label": "E-Mail",
+            "label": "E-Mail-Adresse",
             "placeholder": "ihre.email@beispiel.de",
-            "required": "E-Mail ist erforderlich",
-            "invalid": "Bitte geben Sie eine gültige E-Mail-Adresse ein"
+            "required": true
           },
           "category": {
             "label": "Kategorie",
             "placeholder": "Wählen Sie eine Kategorie",
+            "required": true,
             "options": {
-              "support": "Technischer Support",
-              "feature": "Funktionsanfrage",
-              "privacy": "Datenschutz",
-              "business": "Geschäftliche Anfrage",
-              "accessibility": "Barrierefreiheit",
+              "general-inquiry": "Allgemeine Anfrage",
+              "bug-report": "Fehlerbericht",
+              "feature-request": "Funktionsanfrage",
+              "business-partnership": "Geschäftspartnerschaft",
+              "privacy-request": "Datenschutzanfrage",
               "other": "Sonstiges"
             }
           },
           "message": {
             "label": "Nachricht",
-            "placeholder": "Teilen Sie uns mit, wie wir helfen können...",
-            "required": "Nachricht ist erforderlich",
-            "minLength": "Nachricht muss mindestens {min} Zeichen lang sein"
-          },
-          "submit": "Nachricht senden",
-          "submitting": "Wird gesendet..."
-        }
+            "placeholder": "Beschreiben Sie Ihre Frage oder Ihr Feedback im Detail...",
+            "required": true
+          }
+        },
+        "submit": "Nachricht senden",
+        "submitting": "Wird gesendet...",
+        "privacy": "Mit dem Absenden dieses Formulars stimmen Sie unserer {privacyLink} zu.",
+        "privacyLinkText": "Datenschutzrichtlinie"
       },
       "success": {
-        "title": "Nachricht gesendet!",
-        "description": "Vielen Dank für Ihre Nachricht. Wir werden uns in Kürze bei Ihnen melden.",
-        "responseTime": "Typische Antwortzeit: {responseTime}"
+        "title": "Nachricht erfolgreich gesendet!",
+        "description": "Vielen Dank für Ihre Kontaktaufnahme. Wir antworten innerhalb von 1-2 Werktagen.",
+        "sendAnother": "Weitere Nachricht senden"
       },
       "errors": {
-        "submit": "Fehler beim Senden der Nachricht. Bitte versuchen Sie es erneut.",
-        "network": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung.",
-        "validation": "Bitte füllen Sie alle erforderlichen Felder korrekt aus."
+        "required": "Dieses Feld ist erforderlich",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "rateLimited": "Zu viele Anfragen. Bitte warten Sie, bevor Sie eine weitere Nachricht senden.",
+        "serverError": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+        "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
       },
       "direct": {
         "title": "Direktkontakt",
         "email": "E-Mail: {contactEmail}",
-        "response": "Antwortzeit: {responseTime}"
+        "response": "Antwortzeit: 1-2 Werktage"
       },
       "additional": {
-        "title": "Zusätzliche Ressourcen",
-        "privacy": "Datenschutzrichtlinie",
-        "terms": "Nutzungsbedingungen"
+        "title": "Benötigen Sie sofortige Hilfe?",
+        "description1": "Bei dringenden technischen Problemen versuchen Sie zunächst, unsere Werkzeugdokumentation oder häufige Fehlerbehebungsschritte zu überprüfen.",
+        "description2": "Die meisten Probleme können durch Aktualisieren der Seite oder Löschen des Browser-Cache gelöst werden."
       },
       "privacy": {
-        "title": "Ihre Privatsphäre",
-        "description": "Kontaktformular-Übermittlungen werden sicher verarbeitet und gemäß unserer Datenschutzrichtlinie gespeichert."
+        "title": "Datenschutzhinweis",
+        "description": "Wir respektieren Ihre Privatsphäre. Kontaktformular-Übermittlungen werden nur zur Beantwortung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben."
       }
     },
     "cookies": {
