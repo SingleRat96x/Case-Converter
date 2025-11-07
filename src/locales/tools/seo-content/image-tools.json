@@ -54,7 +54,7 @@
           },
           {
             "name": "Image Resizer",
-            "href": "/tools/image-resizer", 
+            "href": "/tools/image-resizer",
             "description": "Resize images to specific dimensions while maintaining quality and aspect ratio"
           },
           {
@@ -156,7 +156,7 @@
             "description": "Generate random data, test images, and mock content for development"
           },
           {
-            "name": "Analysis & Counter Tools", 
+            "name": "Analysis & Counter Tools",
             "href": "/category/text-analysis",
             "description": "Analyze extracted text, count characters, and process OCR results"
           }
@@ -219,7 +219,7 @@
           },
           {
             "name": "Изменение Размера Изображений",
-            "href": "/ru/tools/image-resizer", 
+            "href": "/ru/tools/image-resizer",
             "description": "Изменяйте размер изображений до определенных размеров, сохраняя качество и соотношение сторон"
           },
           {
@@ -321,9 +321,69 @@
             "description": "Генерируйте случайные данные, тестовые изображения и мок-контент для разработки"
           },
           {
-            "name": "Инструменты Анализа и Подсчета", 
+            "name": "Инструменты Анализа и Подсчета",
             "href": "/ru/category/text-analysis",
             "description": "Анализируйте извлеченный текст, считайте символы и обрабатывайте результаты OCR"
+          }
+        ]
+      }
+    }
+  },
+  "de": {
+    "title": "Bildwerkzeuge - Online-Bild-Editor & Konverter",
+    "metaDescription": "Kostenlose Online-Bildwerkzeuge: Zuschneiden, Größe ändern, OCR-Texterkennung, JPG zu PNG, WebP-Konverter. Bearbeiten und konvertieren Sie Bilder sofort ohne Upload.",
+    "sections": {
+      "intro": {
+        "title": "Professionelle Bildbearbeitungs- und Konvertierungs-Werkzeuge",
+        "content": "Bearbeiten und konvertieren Sie Bilder mit unserer umfassenden Suite von Online-Bildwerkzeugen. Schneiden Sie Bilder zu, ändern Sie die Größe, extrahieren Sie Text mit OCR und konvertieren Sie zwischen Formaten - alles in Ihrem Browser ohne Uploads oder Serververarbeitung. Perfekt für schnelle Bildbearbeitung, Formatkonvertierung und Textextraktion."
+      },
+      "toolsList": {
+        "title": "Verfügbare Bildwerkzeuge",
+        "items": [
+          {
+            "name": "Bild-Zuschneidewerkzeug",
+            "href": "/de/tools/image-cropper",
+            "description": "Schneiden Sie Bilder auf genaue Abmessungen oder Seitenverhältnisse zu"
+          },
+          {
+            "name": "Bildgrößenänderung",
+            "href": "/de/tools/image-resizer",
+            "description": "Ändern Sie die Bildgröße auf benutzerdefinierte Abmessungen mit Qualitätserhaltung"
+          },
+          {
+            "name": "Bild zu Text (OCR)",
+            "href": "/de/tools/image-to-text",
+            "description": "Extrahieren Sie Text aus Bildern mit OCR-Technologie"
+          },
+          {
+            "name": "JPG zu PNG",
+            "href": "/de/tools/jpg-to-png",
+            "description": "Konvertieren Sie JPEG-Bilder in PNG-Format"
+          },
+          {
+            "name": "JPG zu WebP",
+            "href": "/de/tools/jpg-to-webp",
+            "description": "Konvertieren Sie JPEG in modernes WebP-Format für bessere Kompression"
+          },
+          {
+            "name": "PNG zu JPG",
+            "href": "/de/tools/png-to-jpg",
+            "description": "Konvertieren Sie PNG-Bilder in JPEG-Format"
+          },
+          {
+            "name": "PNG zu WebP",
+            "href": "/de/tools/png-to-webp",
+            "description": "Konvertieren Sie PNG in WebP für optimierte Web-Performance"
+          },
+          {
+            "name": "WebP zu JPG",
+            "href": "/de/tools/webp-to-jpg",
+            "description": "Konvertieren Sie WebP-Bilder zurück in JPEG-Format"
+          },
+          {
+            "name": "WebP zu PNG",
+            "href": "/de/tools/webp-to-png",
+            "description": "Konvertieren Sie WebP in PNG mit Transparenzunterstützung"
           }
         ]
       }
