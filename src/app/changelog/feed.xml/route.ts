@@ -17,31 +17,31 @@ export async function GET() {
   // Changelog data - in production, you'd fetch this from your data source
   const changelogEntries = [
     {
-      id: 'dec-2025-sha1-hash',
+      id: 'nov-2025-sha1-hash',
       title: 'SHA-1 Hash Generator',
       description: 'Generate SHA-1 hashes online with file verification support and legacy system compatibility. Includes security notices for modern applications',
-      date: new Date('2025-12-07').toUTCString(),
+      date: new Date('2025-11-07').toUTCString(),
       category: 'New Feature'
     },
     {
-      id: 'dec-2025-prefix-suffix',
+      id: 'nov-2025-prefix-suffix',
       title: 'Add Prefix and Suffix to Lines',
       description: 'Add custom prefix and suffix to every line with option to ignore empty lines. Perfect for code comments, markdown, and data formatting',
-      date: new Date('2025-12-06').toUTCString(),
+      date: new Date('2025-11-06').toUTCString(),
       category: 'New Feature'
     },
     {
-      id: 'dec-2025-line-numbers',
+      id: 'nov-2025-line-numbers',
       title: 'Add Line Numbers to Text',
       description: 'Add customizable line numbers with multiple formats (numeric, alphabetic, Roman numerals), separators, and advanced filtering options',
-      date: new Date('2025-12-05').toUTCString(),
+      date: new Date('2025-11-05').toUTCString(),
       category: 'New Feature'
     },
     {
       id: 'nov-2025-reading-time',
       title: 'Reading Time Estimator',
       description: 'Calculate reading time for your content with adjustable speed settings',
-      date: new Date('2025-11-05').toUTCString(),
+      date: new Date('2025-11-03').toUTCString(),
       category: 'New Feature'
     },
     {

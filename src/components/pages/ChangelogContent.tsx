@@ -73,6 +73,30 @@ export function ChangelogContent() {
           title: t('sample.month1.entries.1.title'),
           description: t('sample.month1.entries.1.description'),
           date: t('sample.month1.entries.1.date')
+        },
+        {
+          type: t('sample.month1.entries.2.type'),
+          title: t('sample.month1.entries.2.title'),
+          description: t('sample.month1.entries.2.description'),
+          date: t('sample.month1.entries.2.date')
+        },
+        {
+          type: t('sample.month1.entries.3.type'),
+          title: t('sample.month1.entries.3.title'),
+          description: t('sample.month1.entries.3.description'),
+          date: t('sample.month1.entries.3.date')
+        },
+        {
+          type: t('sample.month1.entries.4.type'),
+          title: t('sample.month1.entries.4.title'),
+          description: t('sample.month1.entries.4.description'),
+          date: t('sample.month1.entries.4.date')
+        },
+        {
+          type: t('sample.month1.entries.5.type'),
+          title: t('sample.month1.entries.5.title'),
+          description: t('sample.month1.entries.5.description'),
+          date: t('sample.month1.entries.5.date')
         }
       ]
     },
@@ -90,6 +114,24 @@ export function ChangelogContent() {
           title: t('sample.month2.entries.2.title'),
           description: t('sample.month2.entries.2.description'),
           date: t('sample.month2.entries.2.date')
+        },
+        {
+          type: t('sample.month2.entries.3.type'),
+          title: t('sample.month2.entries.3.title'),
+          description: t('sample.month2.entries.3.description'),
+          date: t('sample.month2.entries.3.date')
+        },
+        {
+          type: t('sample.month2.entries.4.type'),
+          title: t('sample.month2.entries.4.title'),
+          description: t('sample.month2.entries.4.description'),
+          date: t('sample.month2.entries.4.date')
+        },
+        {
+          type: t('sample.month2.entries.5.type'),
+          title: t('sample.month2.entries.5.title'),
+          description: t('sample.month2.entries.5.description'),
+          date: t('sample.month2.entries.5.date')
         }
       ]
     },
@@ -113,41 +155,6 @@ export function ChangelogContent() {
           title: t('sample.month3.entries.3.title'),
           description: t('sample.month3.entries.3.description'),
           date: t('sample.month3.entries.3.date')
-        },
-        {
-          type: t('sample.month3.entries.4.type'),
-          title: t('sample.month3.entries.4.title'),
-          description: t('sample.month3.entries.4.description'),
-          date: t('sample.month3.entries.4.date')
-        },
-        {
-          type: t('sample.month3.entries.5.type'),
-          title: t('sample.month3.entries.5.title'),
-          description: t('sample.month3.entries.5.description'),
-          date: t('sample.month3.entries.5.date')
-        }
-      ]
-    },
-    {
-      title: t('sample.month4.title'),
-      entries: [
-        {
-          type: t('sample.month4.entries.1.type'),
-          title: t('sample.month4.entries.1.title'),
-          description: t('sample.month4.entries.1.description'),
-          date: t('sample.month4.entries.1.date')
-        },
-        {
-          type: t('sample.month4.entries.2.type'),
-          title: t('sample.month4.entries.2.title'),
-          description: t('sample.month4.entries.2.description'),
-          date: t('sample.month4.entries.2.date')
-        },
-        {
-          type: t('sample.month4.entries.3.type'),
-          title: t('sample.month4.entries.3.title'),
-          description: t('sample.month4.entries.3.description'),
-          date: t('sample.month4.entries.3.date')
         }
       ]
     }

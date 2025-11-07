@@ -17,31 +17,31 @@ export async function GET() {
   // Changelog data in Russian
   const changelogEntries = [
     {
-      id: 'dec-2025-sha1-hash',
+      id: 'nov-2025-sha1-hash',
       title: 'Генератор SHA-1 Хеша',
       description: 'Генерируйте SHA-1 хэши онлайн с поддержкой проверки файлов и совместимостью с устаревшими системами. Включает уведомления о безопасности',
-      date: new Date('2025-12-07').toUTCString(),
+      date: new Date('2025-11-07').toUTCString(),
       category: 'Новая Функция'
     },
     {
-      id: 'dec-2025-prefix-suffix',
+      id: 'nov-2025-prefix-suffix',
       title: 'Добавить Префикс и Суффикс к Строкам',
       description: 'Добавляйте пользовательский префикс и суффикс к каждой строке с опцией игнорирования пустых строк. Идеально для комментариев кода, markdown и форматирования данных',
-      date: new Date('2025-12-06').toUTCString(),
+      date: new Date('2025-11-06').toUTCString(),
       category: 'Новая Функция'
     },
     {
-      id: 'dec-2025-line-numbers',
+      id: 'nov-2025-line-numbers',
       title: 'Добавить Номера Строк к Тексту',
       description: 'Добавляйте настраиваемые номера строк с множеством форматов (числовые, алфавитные, римские цифры), разделителями и расширенными опциями фильтрации',
-      date: new Date('2025-12-05').toUTCString(),
+      date: new Date('2025-11-05').toUTCString(),
       category: 'Новая Функция'
     },
     {
       id: 'nov-2025-reading-time',
       title: 'Калькулятор Времени Чтения',
       description: 'Рассчитайте время чтения вашего контента с настраиваемой скоростью',
-      date: new Date('2025-11-05').toUTCString(),
+      date: new Date('2025-11-03').toUTCString(),
       category: 'Новая Функция'
     },
     {
