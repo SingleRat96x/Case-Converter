@@ -70,7 +70,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({ category, locale }) => {
   // Category IDs now match the actual slugs
   const categoryHref = locale === 'en' 
     ? `/category/${category.id}` 
-    : `/ru/category/${category.id}`;
+    : `/${locale}/category/${category.id}`;
 
   return (
     <div className="mega-menu-preview">
@@ -79,7 +79,7 @@ const PreviewPanel: React.FC<PreviewPanelProps> = ({ category, locale }) => {
       </div>
       <div className="mega-menu-preview-items">
         {topTools.map((tool, index) => {
-          const toolHref = locale === 'en' ? tool.href : `/ru${tool.href}`;
+          const toolHref = locale === 'en' ? tool.href : `/${locale}${tool.href}`;
           return (
             <Link
               key={`${tool.href}-${index}`}
@@ -301,7 +301,7 @@ export function MegaMenu({ categories }: MegaMenuProps) {
                             const categorySlug = getCategorySlug(category.id);
                             const categoryHref = currentLocale === 'en' 
                               ? `/category/${categorySlug}` 
-                              : `/ru/category/${categorySlug}`;
+                              : `/${currentLocale}/category/${categorySlug}`;
                             window.location.href = categoryHref;
                           }}
                           onKeyDown={(e) => {

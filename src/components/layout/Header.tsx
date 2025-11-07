@@ -176,7 +176,7 @@ export function Header() {
         <div className="flex h-16 items-center justify-between">
           {/* Logo and Title */}
           <div className="flex items-center space-x-4">
-            <Link href={currentLocale === 'en' ? '/' : '/ru/'} className="flex items-center space-x-2">
+            <Link href={currentLocale === 'en' ? '/' : `/${currentLocale}/`} className="flex items-center space-x-2">
               <div className="h-8 w-8 rounded-lg bg-gradient-to-br from-blue-500 to-purple-600 flex items-center justify-center">
                 <span className="text-white font-bold text-lg">T</span>
               </div>
