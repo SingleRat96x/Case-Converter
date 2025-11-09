@@ -716,5 +716,49 @@
         "ignoreEmptyDescription": "Не добавлять префикс/суффикс к пустым строкам"
       }
     }
+  },
+  "de": {
+    "textCounter": {
+      "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
+      "description": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Perfekt für Autoren, Studenten und Content-Ersteller.",
+      "inputLabel": "Zu analysierender Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um ihn zu analysieren...",
+      "uploadDescription": "",
+      "downloadFileName": "textanalyse-bericht.txt",
+      "report": {
+        "title": "Textanalyse-Bericht",
+        "generatedAt": "Erstellt",
+        "summary": "Zusammenfassung",
+        "originalText": "Originaltext"
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "realTimeTitle": "Echtzeit-Analyse"
+      },
+      "analytics": {
+        "characters": "Zeichen",
+        "charactersNoSpaces": "Zeichen (ohne Leerzeichen)",
+        "words": "Wörter",
+        "sentences": "Sätze",
+        "lines": "Zeilen",
+        "paragraphs": "Absätze",
+        "readingTime": "Lesezeit",
+        "speakingTime": "Sprechzeit"
+      },
+      "actions": {
+        "analyzeFile": "Datei Analysieren",
+        "exportReport": "Bericht Exportieren",
+        "clearText": "Text Löschen",
+        "copyResults": "Ergebnisse Kopieren"
+      },
+      "messages": {
+        "analysisComplete": "Textanalyse abgeschlossen!",
+        "resultsCopied": "Analyseergebnisse in die Zwischenablage kopiert!",
+        "fileAnalyzed": "Datei erfolgreich analysiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
+        "estimatedReadingTime": "Minuten Lesezeit",
+        "estimatedSpeakingTime": "Minuten Sprechzeit"
+      }
+    }
   }
 }

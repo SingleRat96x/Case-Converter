@@ -1647,6 +1647,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Счётчик Текста — Символы, Слова, Строки и Другое',
         description: 'Считайте символы, слова, строки, предложения и абзацы в любом тексте. Получайте детальную статистику включая время чтения и частоту символов.',
         shortDescription: 'Счётчик символов, слов, строк и статистика текста.',
+      },
+      de: {
+        title: 'Textzähler — Zeichen, Wörter, Zeilen & Mehr Zählen',
+        description: 'Zählen Sie Zeichen, Wörter, Zeilen, Sätze und Absätze in beliebigem Text. Erhalten Sie detaillierte Statistiken einschließlich Lesezeit und Zeichenhäufigkeit.',
+        shortDescription: 'Zeichen, Wörter, Zeilen zählen und Textstatistiken erhalten.',
       }
     },
     schema: createAdvancedSchema('text-counter', ['Character count', 'Word count', 'Line count', 'Reading time', 'Statistics'], 'Text Input', 'Text Statistics', 4.7, 789),
