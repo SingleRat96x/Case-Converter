@@ -381,6 +381,7 @@
       "extractButton": "Extract numbers",
       "copyList": "Copy list",
       "downloadCSV": "Download CSV",
+      "downloadTXT": "Download TXT",
       "optionsTitle": "Extraction Options",
       "numberFormatTitle": "Number Format Options",
       "keepDecimals": "Keep decimals (e.g., 123.45)",
@@ -898,6 +899,7 @@
       "extractButton": "Извлечь числа",
       "copyList": "Копировать список",
       "downloadCSV": "Скачать CSV",
+      "downloadTXT": "Скачать TXT",
       "optionsTitle": "Опции Извлечения",
       "numberFormatTitle": "Опции Формата Чисел",
       "keepDecimals": "Сохранить десятичные (например, 123.45)",
@@ -1031,6 +1033,37 @@
       "error": "Ошибка",
       "errorInvalidInput": "Неверный ввод",
       "errorConversion": "Ошибка конвертации"
+    }
+  },
+  "de": {
+    "extractNumbers": {
+      "title": "Zahlen aus Text Extrahieren",
+      "description": "Extrahieren Sie alle Zahlen aus unordentlichem Text – dann kopieren, exportieren oder berechnen",
+      "outputLabel": "Extrahierte Zahlen",
+      "inputPlaceholder": "Fügen Sie Ihren Text hier ein...",
+      "helperText": "Fügen Sie Text links ein. Wählen Sie, was behalten werden soll (Dezimalzahlen, %, Währung). Klicken Sie auf 'Zahlen extrahieren'.",
+      "extractButton": "Zahlen extrahieren",
+      "copyList": "Liste kopieren",
+      "downloadCSV": "CSV Herunterladen",
+      "downloadTXT": "TXT Herunterladen",
+      "optionsTitle": "Extraktionsoptionen",
+      "numberFormatTitle": "Zahlenformat-Optionen",
+      "keepDecimals": "Dezimalzahlen beibehalten (z.B. 123,45)",
+      "keepNegatives": "Negative Zahlen beibehalten (z.B. -42)",
+      "thousandsSeparators": "Tausendertrennzeichen beachten (, oder .)",
+      "scientificNotation": "Wissenschaftliche Notation akzeptieren (1.2e6)",
+      "uniqueOnly": "Nur eindeutige ausgeben",
+      "phoneNumbersMode": "Telefonnummern-Modus (E.164 normalisiert)",
+      "percentageHandling": "Prozentsätze:",
+      "keepPercent": "% Behalten",
+      "stripPercent": "% Entfernen",
+      "convertDecimal": "→ Dezimal",
+      "currencyLabel": "Währungssymbole behalten:",
+      "outputFormat": "Ausgabeformat:",
+      "onePerLine": "Eins pro Zeile",
+      "csvFormat": "CSV",
+      "numbersExtracted": "Zahlen extrahiert!",
+      "noNumbersFound": "Keine Zahlen gefunden"
     }
   }
 }

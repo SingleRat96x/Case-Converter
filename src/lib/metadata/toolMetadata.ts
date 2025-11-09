@@ -1742,6 +1742,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Извлечь Числа из Текста – Бесплатный Онлайн Экстрактор Чисел',
         description: 'Вставьте текст и мгновенно извлеките числа (целые, десятичные, отрицательные, валюту, проценты). Опции для уникальных значений, CSV экспорта, суммы/среднего и извлечения телефонных номеров.',
         shortDescription: 'Извлечение чисел из текста с расширенными опциями и статистикой.',
+      },
+      de: {
+        title: 'Zahlen aus Text Extrahieren – Kostenloser Online-Zahlenextraktor',
+        description: 'Fügen Sie Text ein und extrahieren Sie sofort Zahlen (Ganzzahlen, Dezimalzahlen, negative Zahlen, Währungen, Prozentsätze). Optionen für eindeutige Werte, CSV-Export, Summe/Durchschnitt und Telefonnummer-Extraktion.',
+        shortDescription: 'Zahlen aus Text mit erweiterten Optionen und Statistiken extrahieren.',
       }
     },
     schema: createAdvancedSchema('extract-numbers', ['Number extraction', 'Phone detection', 'Currency handling', 'Statistics', 'CSV export'], 'Text Input', 'Extracted Numbers', 4.6, 678),

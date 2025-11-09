@@ -3,7 +3,7 @@
 **Start Date:** 2025-11-07  
 **Status:** IN PROGRESS  
 **Current Phase:** Phase 1  
-**Completion:** 4/75 tools (5.3%)
+**Completion:** 5/75 tools (6.7%)
 
 ---
 
@@ -11,9 +11,9 @@
 
 ```
 Total Tools: 75
-Completed:    4  [█░░░░░░░░░░░░░░░░░░░] 5.3%
+Completed:    5  [█░░░░░░░░░░░░░░░░░░░] 6.7%
 In Progress:  0
-Remaining:   71
+Remaining:   70
 ```
 
 ---
@@ -24,6 +24,7 @@ Remaining:   71
 - [x] **text-counter** (text-analysis) - Completed 2025-11-07
 - [x] **sentence-counter** (text-analysis) - Completed 2025-11-07
 - [x] **word-frequency** (text-analysis) - Completed 2025-11-07
+- [x] **extract-numbers** (text-analysis) - Completed 2025-11-07
 
 ---
 
@@ -35,11 +36,11 @@ Each subtask = specific work item for that tool
 
 ---
 
-# PHASE 1: TEXT ANALYSIS TOOLS (2 remaining)
+# PHASE 1: TEXT ANALYSIS TOOLS ✅ COMPLETE!
 
 **Category:** `text-analysis`  
-**Component File:** `tools/text-modifiers.json`  
-**Progress:** 4/5 tools (80%)
+**Component Files:** `tools/text-modifiers.json`, `tools/misc-tools.json`, `tools/text-generators.json`  
+**Progress:** 5/5 tools (100%)
 
 ---
 
@@ -83,13 +84,14 @@ Each subtask = specific work item for that tool
 
 ---
 
-## ⬜ Task 1.5: extract-numbers
-- [ ] Add German metadata to `toolMetadata.ts`
-- [ ] Add German SEO content to `seo-content/extract-numbers.json`
-- [ ] Verify/add German translations in `tools/text-modifiers.json`
-- [ ] Create page file `/de/tools/extract-numbers/page.tsx`
-- [ ] Run lint/types/build checks
-- **Status:** PENDING
+## ✅ Task 1.5: extract-numbers
+- [x] Add German metadata to `toolMetadata.ts`
+- [x] Add German SEO content to `seo-content/extract-numbers.json`
+- [x] Add German translations in `tools/text-generators.json`
+- [x] Create page file `/de/tools/extract-numbers/page.tsx`
+- [x] Fixed hardcoded text (added `downloadTXT` key)
+- [x] Run lint/types/build checks
+- **Status:** COMPLETED ✅
 
 ---
 
