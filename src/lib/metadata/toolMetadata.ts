@@ -982,6 +982,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Анализ Частоты Слов — Подсчёт Повторений',
         description: 'Анализируйте частоту слов в тексте. Подсчёты, проценты и стоп‑слова для SEO, исследований и редактирования. Экспорт результатов.',
         shortDescription: 'Частота слов и подсчёты.',
+      },
+      de: {
+        title: 'Worthäufigkeits-Analysator — Worthäufigkeiten Zählen',
+        description: 'Analysieren Sie die Worthäufigkeit in beliebigem Text. Erhalten Sie Zählungen, Prozentsätze und Stoppwort-Kontrolle für SEO, Forschung und Bearbeitung. Ergebnisse exportieren.',
+        shortDescription: 'Worthäufigkeit und Zählungen analysieren.',
       }
     },
     schema: createAdvancedSchema('word-frequency', ['Counts', 'Stop-words', 'Export'], 'Text Input', 'Word Frequency Analysis', 4.4, 456),

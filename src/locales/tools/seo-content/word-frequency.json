@@ -278,5 +278,145 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Professioneller Worthäufigkeits-Analysator & Textanalyse-Tool",
+    "metaDescription": "Analysieren Sie die Worthäufigkeit und entdecken Sie die häufigsten Wörter in Ihrem Text. Professionelles Worthäufigkeits-Analysetool für Content-Ersteller, Autoren und Forscher mit detaillierten Statistiken und Exportfunktionen.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Worthäufigkeits-Analysator & Textanalyse-Tool",
+        "content": "Entdecken Sie die häufigsten Wörter in Ihrem Text mit unserem fortschrittlichen Worthäufigkeits-Analysator. Erhalten Sie detaillierte Statistiken, sortierbare Häufigkeitstabellen und umfassende Analysen für Content-Optimierung, Schreibforschung und linguistische Studien. Perfekt für Autoren, Content-Ersteller und Forscher, die präzise Worthäufigkeitsdaten benötigen."
+      },
+      "features": {
+        "title": "Erweiterte Worthäufigkeits-Analysefunktionen",
+        "items": [
+          { "title": "Echtzeit-Häufigkeitsanalyse", "description": "Sofortige Worthäufigkeitsberechnung beim Tippen oder Einfügen von Text" },
+          { "title": "Sortierbare Häufigkeitstabellen", "description": "Sortieren Sie nach Häufigkeit, alphabetisch oder mit benutzerdefinierten Filtern für einfache Analyse" },
+          { "title": "Erweiterte Filteroptionen", "description": "Filtern Sie nach Wortlänge, Groß-/Kleinschreibung und schließen Sie häufige Wörter aus" },
+          { "title": "Statistische Einblicke", "description": "Gesamtwörter, eindeutige Wörter, häufigste Wörter und durchschnittliche Wortlänge" },
+          { "title": "Visuelle Häufigkeitsbalken", "description": "Interaktive Balkendiagramme, die relative Worthäufigkeitsprozentsätze zeigen" },
+          { "title": "Anpassbare Anzeige", "description": "Zeigen Sie die Top 10, 20, 50 oder 100 häufigsten Wörter an" },
+          { "title": "Analyseberichte Exportieren", "description": "Laden Sie detaillierte Häufigkeitsberichte in mehreren Formaten herunter" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Analysieren Sie Textdateien in gängigen Formaten direkt in Ihrem Browser" },
+          { "title": "Mehrsprachige Unterstützung", "description": "Funktioniert mit jeder Sprache einschließlich Zeichen mit Akzenten und Unicode" },
+          { "title": "Datenschutz-Orientierte Analyse", "description": "Alle Analysen laufen lokal – keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Content-Analyse & Forschung",
+        "description": "Unser Worthäufigkeits-Analysator ist unverzichtbar für verschiedene Content-Analyse- und Forschungsaufgaben.",
+        "items": [
+          { "title": "Content-Optimierung", "description": "Identifizieren Sie übermäßig verwendete Wörter und verbessern Sie die Content-Vielfalt" },
+          { "title": "SEO-Analyse", "description": "Analysieren Sie die Keyword-Dichte und optimieren Sie Content für Suchmaschinen" },
+          { "title": "Akademische Forschung", "description": "Studieren Sie linguistische Muster und Wortverwendung in Texten" },
+          { "title": "Schreibanalyse", "description": "Verbessern Sie den Schreibstil durch Identifizierung wiederholter Wortverwendung" },
+          { "title": "Markenüberwachung", "description": "Analysieren Sie die Häufigkeit von Markenbegriffen in Content und Bewertungen" },
+          { "title": "Social-Media-Analyse", "description": "Verstehen Sie Trendwörter und beliebte Begriffe in Posts" },
+          { "title": "Dokumentanalyse", "description": "Extrahieren Sie Schlüsselbegriffe und Themen aus großen Dokumenten" },
+          { "title": "Sprachenlernen", "description": "Identifizieren Sie die häufigsten Wörter für den Vokabelaufbau" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Verwenden Sie den Worthäufigkeits-Analysator",
+        "description": "Befolgen Sie diese einfachen Schritte, um die Worthäufigkeit zu analysieren und detaillierte Statistiken zu erhalten.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text Ein",
+            "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein oder laden Sie eine Textdatei zur Analyse hoch."
+          },
+          {
+            "step": 2,
+            "title": "Echtzeit-Analyse Anzeigen",
+            "description": "Beobachten Sie, wie das Tool automatisch Worthäufigkeiten berechnet und Statistiken beim Tippen anzeigt."
+          },
+          {
+            "step": 3,
+            "title": "Analyseoptionen Anpassen",
+            "description": "Verwenden Sie Filter zum Sortieren von Ergebnissen, passen Sie Anforderungen an die Wortlänge an und aktivieren Sie die Groß-/Kleinschreibung."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnisse Exportieren",
+            "description": "Laden Sie einen detaillierten Häufigkeitsanalysebericht herunter oder kopieren Sie die Ergebnisse in die Zwischenablage."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Worthäufigkeits-Analysebeispiele",
+        "description": "Sehen Sie, wie unser Analysator verschiedene Content-Typen verarbeitet und Wortmuster aufdeckt.",
+        "items": [
+          { "title": "Blog-Artikel", "input": "Artikel mit 1.000 Wörtern", "output": "Top 20 Wörter: 'die' (45×), 'und' (32×), 'der' (28×)" },
+          { "title": "Produktbewertung", "input": "Kundenfeedback", "output": "Schlüsselbegriffe: 'Qualität' (12×), 'Preis' (8×), 'empfehlen' (6×)" },
+          { "title": "Wissenschaftliche Arbeit", "input": "Forschungsdokument", "output": "Fachbegriffe: 'Analyse' (24×), 'Ergebnisse' (18×), 'Daten' (15×)" },
+          { "title": "Social-Media-Post", "input": "Twitter-Thread", "output": "Trendwörter: 'fantastisch' (5×), 'liebe' (4×), 'großartig' (3×)" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Worthäufigkeits-Analysator Verwenden",
+        "content": "Professionelle Worthäufigkeitsanalyse mit erweiterten Funktionen und umfassenden Statistiken.",
+        "items": [
+          "Vollständig kostenlos und unbegrenzte Analyse",
+          "Keine Registrierung oder Anmeldung erforderlich",
+          "Datenschutz zuerst - alle Analysen erfolgen lokal",
+          "Unterstützt mehrere Dateiformate",
+          "Echtzeit-Analyse mit sofortigen Ergebnissen",
+          "Erweiterte Filter- und Sortieroptionen",
+          "Ergebnisse für Dokumentation exportieren",
+          "Funktioniert mit jeder Sprache und jedem Zeichensatz"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wie genau ist die Worthäufigkeitsanalyse?",
+          "answer": "Unser Worthäufigkeits-Analysator verwendet fortschrittliche Textanalyse-Algorithmen, um Wörter genau zu identifizieren und zu zählen, Interpunktion korrekt zu behandeln und verschiedene Sprachen und Zeichensätze einschließlich Zeichen mit Akzenten und Unicode zu unterstützen."
+        },
+        {
+          "question": "Kann ich Dateien in verschiedenen Formaten analysieren?",
+          "answer": "Ja, Sie können .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html und andere textbasierte Dateiformate für die Worthäufigkeitsanalyse hochladen."
+        },
+        {
+          "question": "Welche Filteroptionen sind verfügbar?",
+          "answer": "Sie können nach minimaler Wortlänge filtern, Groß-/Kleinschreibung umschalten, Ergebnisse nach Häufigkeit oder alphabetisch sortieren und wählen, wie viele Top-Wörter angezeigt werden sollen (10, 20, 50 oder 100)."
+        },
+        {
+          "question": "Werden meine Textdaten gespeichert oder geteilt?",
+          "answer": "Nein, alle Worthäufigkeitsanalysen erfolgen lokal in Ihrem Browser. Ihr Text wird niemals auf unseren Servern gespeichert, an Dritte übermittelt oder für andere Zwecke verwendet."
+        },
+        {
+          "question": "Kann ich dies für nicht-englischen Text verwenden?",
+          "answer": "Absolut! Unser Worthäufigkeits-Analysator funktioniert mit jeder Sprache und jedem Zeichensatz, einschließlich Sprachen mit Zeichen mit Akzenten, Sonderzeichen, Emojis und Unicode-Text."
+        },
+        {
+          "question": "Wie exportiere ich die Analyseergebnisse?",
+          "answer": "Klicken Sie auf die Schaltfläche 'Bericht Herunterladen', um eine umfassende Textdatei mit allen Häufigkeitsstatistiken, Wort-Rankings und dem Originaltext für Dokumentationszwecke zu exportieren."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textanalyse-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen, Wörter, Zeilen und erhalten Sie Lesezeitschätzungen",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Satzzähler",
+            "description": "Zählen Sie Sätze und analysieren Sie die Satzstruktur in Ihrem Text",
+            "href": "/de/tools/sentence-counter"
+          },
+          {
+            "name": "Text-Ersetzungs-Tool",
+            "description": "Suchen und ersetzen Sie Text mit erweiterter Mustererkennung",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Duplikat-Zeilen-Entferner",
+            "description": "Entfernen Sie doppelte Zeilen aus Ihrem Text effizient",
+            "href": "/de/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
   }
 }

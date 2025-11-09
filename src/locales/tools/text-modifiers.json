@@ -759,6 +759,48 @@
         "sentencesFound": "Sätze gefunden"
       }
     },
+    "wordFrequency": {
+      "title": "Worthäufigkeits-Analysator - Häufigste Wörter Finden",
+      "description": "Analysieren Sie die Worthäufigkeit und entdecken Sie die häufigsten Wörter in Ihrem Text. Perfekt für Content-Analyse, Schreiboptimierung und linguistische Forschung.",
+      "inputLabel": "Zu Analysierender Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um die Worthäufigkeit zu analysieren...",
+      "uploadDescription": "Laden Sie eine Textdatei zur Analyse hoch (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "worthäufigkeitsanalyse.txt",
+      "report": {
+        "title": "Worthäufigkeitsanalysebericht",
+        "generatedAt": "Generiert",
+        "summary": "Zusammenfassung",
+        "originalText": "Originaltext",
+        "topWordsTitle": "Häufigste Wörter"
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "realTimeTitle": "Echtzeit-Analyse"
+      },
+      "analytics": {
+        "totalWords": "Wörter Insgesamt",
+        "uniqueWords": "Eindeutige Wörter",
+        "mostCommon": "Am Häufigsten",
+        "averageLength": "Durchschnittliche Länge",
+        "rank": "Rang",
+        "word": "Wort",
+        "count": "Anzahl",
+        "percentage": "Prozentsatz"
+      },
+      "actions": {
+        "analyzeFile": "Datei Analysieren",
+        "exportReport": "Bericht Exportieren",
+        "clearText": "Text Löschen",
+        "copyResults": "Ergebnisse Kopieren"
+      },
+      "messages": {
+        "analysisComplete": "Worthäufigkeitsanalyse abgeschlossen!",
+        "resultsCopied": "Analyseergebnisse in die Zwischenablage kopiert!",
+        "fileAnalyzed": "Datei erfolgreich analysiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
+        "wordsAnalyzed": "Wörter analysiert"
+      }
+    },
     "textCounter": {
       "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
       "description": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Perfekt für Autoren, Studenten und Content-Ersteller.",
