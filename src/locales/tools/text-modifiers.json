@@ -718,6 +718,47 @@
     }
   },
   "de": {
+    "sentenceCounter": {
+      "title": "Satzzähler & Analyse-Tool",
+      "description": "Analysieren Sie die Satzstruktur, zählen Sie Sätze und erhalten Sie detaillierte Satzstatistiken. Perfekt für Autoren, Redakteure und Content-Ersteller.",
+      "inputLabel": "Zu Analysierender Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um die Satzstruktur zu analysieren...",
+      "uploadDescription": "Laden Sie eine Textdatei zur Analyse hoch (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "satzanalyse-bericht.txt",
+      "report": {
+        "title": "Satzanalysebericht",
+        "generatedAt": "Generiert",
+        "summary": "Zusammenfassung",
+        "originalText": "Originaltext"
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "realTimeTitle": "Echtzeit-Analyse"
+      },
+      "analytics": {
+        "totalSentences": "Sätze Insgesamt",
+        "averageWordsPerSentence": "Durchschnittliche Wörter pro Satz",
+        "shortestSentence": "Kürzester Satz",
+        "longestSentence": "Längster Satz",
+        "declarativeSentences": "Aussagesätze",
+        "questionSentences": "Fragesätze",
+        "exclamatorySentences": "Ausrufesätze",
+        "complexSentences": "Komplexe Sätze"
+      },
+      "actions": {
+        "analyzeFile": "Datei Analysieren",
+        "exportReport": "Bericht Exportieren",
+        "clearText": "Text Löschen",
+        "copyResults": "Ergebnisse Kopieren"
+      },
+      "messages": {
+        "analysisComplete": "Satzanalyse abgeschlossen!",
+        "resultsCopied": "Analyseergebnisse in die Zwischenablage kopiert!",
+        "fileAnalyzed": "Datei erfolgreich analysiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
+        "sentencesFound": "Sätze gefunden"
+      }
+    },
     "textCounter": {
       "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
       "description": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Perfekt für Autoren, Studenten und Content-Ersteller.",

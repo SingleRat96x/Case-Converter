@@ -717,6 +717,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Счётчик Предложений — Быстро и Точно',
         description: 'Мгновенно считайте предложения в тексте с высокой точностью. Счётчики слов/символов и время чтения. Бесплатно и без ограничений.',
         shortDescription: 'Счётчик предложений и метрики текста.',
+      },
+      de: {
+        title: 'Satzzähler — Sätze Schnell & Genau Zählen',
+        description: 'Zählen Sie Sätze in Ihrem Text sofort mit hoher Genauigkeit. Enthält Wort-/Zeichenstatistiken und Lesezeit. Kostenlos und unbegrenzt.',
+        shortDescription: 'Sätze mit genauen Textstatistiken zählen.',
       }
     },
     schema: createAdvancedSchema('sentence-counter', ['Sentence counting', 'Reading time', 'Text stats'], 'Text Input', 'Text Statistics', 4.5, 567),
