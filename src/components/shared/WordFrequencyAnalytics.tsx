@@ -2,6 +2,7 @@
 
 import React, { useMemo, useState } from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import { useCommonTranslations } from '@/lib/i18n/hooks';
 import { BarChart3, Hash, Type, FileText, AlignLeft, Filter } from 'lucide-react';
 
 interface WordFrequencyAnalyticsProps {
@@ -28,6 +29,7 @@ interface WordFrequencyStats {
 type SortOrder = 'frequency-desc' | 'frequency-asc' | 'alphabetical-asc' | 'alphabetical-desc';
 
 export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'default' }: WordFrequencyAnalyticsProps) {
+  const { tSync } = useCommonTranslations();
   const [sortOrder, setSortOrder] = useState<SortOrder>('frequency-desc');
   const [minWordLength, setMinWordLength] = useState(1);
   const [caseSensitive, setCaseSensitive] = useState(false);
@@ -115,40 +117,40 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
 
   const summaryStats = [
     {
-      label: 'Total Words',
+      label: tSync('analytics.totalWords', 'Total Words'),
       value: stats.totalWords,
       icon: FileText,
       color: 'text-blue-600 dark:text-blue-400'
     },
     {
-      label: 'Unique Words',
+      label: tSync('analytics.uniqueWords', 'Unique Words'),
       value: stats.uniqueWords,
       icon: Hash,
       color: 'text-purple-600 dark:text-purple-400'
     },
     {
-      label: 'Most Common',
+      label: tSync('analytics.mostCommon', 'Most Common'),
       value: `"${stats.mostCommonWord}" (${stats.mostCommonCount})`,
       icon: Type,
       color: 'text-green-600 dark:text-green-400',
       isText: true
     },
     {
-      label: 'Avg Length',
-      value: `${stats.averageWordLength} chars`,
+      label: tSync('analytics.avgLength', 'Avg Length'),
+      value: `${stats.averageWordLength} ${tSync('analytics.chars', 'chars')}`,
       icon: AlignLeft,
       color: 'text-orange-600 dark:text-orange-400',
       isText: true
     },
     {
-      label: 'Diversity',
+      label: tSync('analytics.diversity', 'Diversity'),
       value: `${stats.totalWords > 0 ? ((stats.uniqueWords / stats.totalWords) * 100).toFixed(1) : 0}%`,
       icon: BarChart3,
       color: 'text-cyan-600 dark:text-cyan-400',
       isText: true
     },
     {
-      label: 'Top Word %',
+      label: tSync('analytics.topWordPercent', 'Top Word %'),
       value: `${stats.totalWords > 0 ? ((stats.mostCommonCount / stats.totalWords) * 100).toFixed(1) : 0}%`,
       icon: Filter,
       color: 'text-red-600 dark:text-red-400',
@@ -180,7 +182,7 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
           <div className="bg-card border rounded-lg p-4">
             <h4 className="text-sm font-semibold mb-3 flex items-center gap-2">
               <BarChart3 className="h-4 w-4" />
-              Top {Math.min(9, sortedFrequencies.length)} Words
+              {`${tSync('analytics.topNWordsPrefix', 'Top')} ${Math.min(9, sortedFrequencies.length)} ${tSync('analytics.wordsLabel', 'Words')}`}
             </h4>
             <div className="grid grid-cols-3 gap-2">
               {sortedFrequencies.slice(0, 9).map(({ word, count, percentage }, index) => {
@@ -258,7 +260,7 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
             {sortedFrequencies.length > 9 && (
               <div className="mt-3 text-center">
                 <span className="text-xs text-muted-foreground bg-muted px-2 py-1 rounded">
-                  +{sortedFrequencies.length - 9} more words in full table below
+                  {`+${sortedFrequencies.length - 9} ${tSync('analytics.moreWordsSuffix', 'more words in full table below')}`}
                 </span>
               </div>
             )}
@@ -276,7 +278,7 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
           <CardHeader className="pb-4">
             <CardTitle className="flex items-center gap-2 text-lg">
               <BarChart3 className="h-5 w-5 text-primary" />
-              Word Frequency Analysis
+              {tSync('analytics.wordFrequencyAnalysis', 'Word Frequency Analysis')}
             </CardTitle>
           </CardHeader>
         )}
@@ -305,55 +307,55 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
             <div className="flex items-center justify-between">
               <CardTitle className="flex items-center gap-2">
                 <Hash className="h-5 w-5 text-primary" />
-                Word Frequency Table
+                {tSync('analytics.wordFrequencyTable', 'Word Frequency Table')}
               </CardTitle>
               <div className="flex items-center gap-2">
                 <Filter className="h-4 w-4 text-muted-foreground" />
-                <span className="text-sm text-muted-foreground">Filters</span>
+                <span className="text-sm text-muted-foreground">{tSync('analytics.filters', 'Filters')}</span>
               </div>
             </div>
             
             {/* Controls */}
             <div className="grid grid-cols-2 md:grid-cols-4 gap-4 pt-4">
               <div>
-                <label className="text-xs font-medium text-muted-foreground mb-1 block">Sort By</label>
+                <label className="text-xs font-medium text-muted-foreground mb-1 block">{tSync('analytics.sortBy', 'Sort By')}</label>
                 <select 
                   value={sortOrder} 
                   onChange={(e) => setSortOrder(e.target.value as SortOrder)}
                   className="w-full text-sm border rounded px-2 py-1 bg-background"
                 >
-                  <option value="frequency-desc">Frequency (High to Low)</option>
-                  <option value="frequency-asc">Frequency (Low to High)</option>
-                  <option value="alphabetical-asc">Alphabetical (A-Z)</option>
-                  <option value="alphabetical-desc">Alphabetical (Z-A)</option>
+                  <option value="frequency-desc">{tSync('analytics.frequencyHighLow', 'Frequency (High to Low)')}</option>
+                  <option value="frequency-asc">{tSync('analytics.frequencyLowHigh', 'Frequency (Low to High)')}</option>
+                  <option value="alphabetical-asc">{tSync('analytics.alphabeticalAZ', 'Alphabetical (A-Z)')}</option>
+                  <option value="alphabetical-desc">{tSync('analytics.alphabeticalZA', 'Alphabetical (Z-A)')}</option>
                 </select>
               </div>
               
               <div>
-                <label className="text-xs font-medium text-muted-foreground mb-1 block">Show Top</label>
+                <label className="text-xs font-medium text-muted-foreground mb-1 block">{tSync('analytics.showTop', 'Show Top')}</label>
                 <select 
                   value={showTop} 
                   onChange={(e) => setShowTop(Number(e.target.value))}
                   className="w-full text-sm border rounded px-2 py-1 bg-background"
                 >
-                  <option value={10}>10 words</option>
-                  <option value={20}>20 words</option>
-                  <option value={50}>50 words</option>
-                  <option value={100}>100 words</option>
+                  <option value={10}>{`10 ${tSync('analytics.wordsLabel', 'words')}`}</option>
+                  <option value={20}>{`20 ${tSync('analytics.wordsLabel', 'words')}`}</option>
+                  <option value={50}>{`50 ${tSync('analytics.wordsLabel', 'words')}`}</option>
+                  <option value={100}>{`100 ${tSync('analytics.wordsLabel', 'words')}`}</option>
                 </select>
               </div>
               
               <div>
-                <label className="text-xs font-medium text-muted-foreground mb-1 block">Min Length</label>
+                <label className="text-xs font-medium text-muted-foreground mb-1 block">{tSync('analytics.minLength', 'Min Length')}</label>
                 <select 
                   value={minWordLength} 
                   onChange={(e) => setMinWordLength(Number(e.target.value))}
                   className="w-full text-sm border rounded px-2 py-1 bg-background"
                 >
-                  <option value={1}>1+ chars</option>
-                  <option value={2}>2+ chars</option>
-                  <option value={3}>3+ chars</option>
-                  <option value={4}>4+ chars</option>
+                  <option value={1}>{`1+ ${tSync('analytics.chars', 'chars')}`}</option>
+                  <option value={2}>{`2+ ${tSync('analytics.chars', 'chars')}`}</option>
+                  <option value={3}>{`3+ ${tSync('analytics.chars', 'chars')}`}</option>
+                  <option value={4}>{`4+ ${tSync('analytics.chars', 'chars')}`}</option>
                 </select>
               </div>
               
@@ -365,7 +367,7 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
                     onChange={(e) => setCaseSensitive(e.target.checked)}
                     className="mr-2"
                   />
-                  Case Sensitive
+                  {tSync('analytics.caseSensitive', 'Case Sensitive')}
                 </label>
               </div>
             </div>
@@ -376,11 +378,11 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
               <table className="w-full text-sm">
                 <thead className="bg-muted/50 sticky top-0">
                   <tr>
-                    <th className="text-left p-2 font-medium">Rank</th>
-                    <th className="text-left p-2 font-medium">Word</th>
-                    <th className="text-right p-2 font-medium">Count</th>
-                    <th className="text-right p-2 font-medium">Percentage</th>
-                    <th className="text-left p-2 font-medium">Bar</th>
+                    <th className="text-left p-2 font-medium">{tSync('analytics.rank', 'Rank')}</th>
+                    <th className="text-left p-2 font-medium">{tSync('analytics.word', 'Word')}</th>
+                    <th className="text-right p-2 font-medium">{tSync('analytics.count', 'Count')}</th>
+                    <th className="text-right p-2 font-medium">{tSync('analytics.percentage', 'Percentage')}</th>
+                    <th className="text-left p-2 font-medium">{tSync('analytics.bar', 'Bar')}</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -412,14 +414,14 @@ export function WordFrequencyAnalytics({ text, showTitle = true, variant = 'defa
             {sortedFrequencies.length === 0 && stats.totalWords === 0 && (
               <div className="text-center py-8 text-muted-foreground">
                 <FileText className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p>Enter some text to see word frequency analysis</p>
+                <p>{tSync('analytics.enterTextPrompt', 'Enter some text to see word frequency analysis')}</p>
               </div>
             )}
             
             {sortedFrequencies.length === 0 && stats.totalWords > 0 && (
               <div className="text-center py-8 text-muted-foreground">
                 <Filter className="h-12 w-12 mx-auto mb-4 opacity-50" />
-                <p>No words match the current filters</p>
+                <p>{tSync('analytics.noWordsMatchFilters', 'No words match the current filters')}</p>
               </div>
             )}
           </CardContent>
