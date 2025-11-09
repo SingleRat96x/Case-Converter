@@ -111,14 +111,14 @@ export function TextCounterAnalytics({ text, showTitle = true, variant = 'defaul
     },
     {
       key: 'readingTime',
-      label: 'Reading Time (min)',
+      label: tSync('analytics.readingTime', 'Reading Time (min)'),
       value: stats.readingTime,
       icon: Clock,
       color: 'text-cyan-600 dark:text-cyan-400'
     },
     {
       key: 'speakingTime',
-      label: 'Speaking Time (min)',
+      label: tSync('analytics.speakingTime', 'Speaking Time (min)'),
       value: stats.speakingTime,
       icon: Mic,
       color: 'text-pink-600 dark:text-pink-400'

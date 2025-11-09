@@ -27,6 +27,8 @@
     "labels": {
       "inputText": "Input Text",
       "outputText": "Output Text",
+      "input": "Input",
+      "output": "Output",
       "convertedImages": "Converted Images",
       "convertedImage": "Converted Image"
     },
@@ -44,6 +46,8 @@
       "sentences": "Sentences",
       "lines": "Lines",
       "paragraphs": "Paragraphs",
+      "readingTime": "Reading Time (min)",
+      "speakingTime": "Speaking Time (min)",
       "numberStatistics": "Number Statistics",
       "letterStatistics": "Letter Statistics",
       "dateStatistics": "Date Statistics",
@@ -145,6 +149,8 @@
     "labels": {
       "inputText": "Входной Текст",
       "outputText": "Выходной Текст",
+      "input": "Ввод",
+      "output": "Вывод",
       "convertedImages": "Конвертированные Изображения",
       "convertedImage": "Конвертированное Изображение"
     },
@@ -162,6 +168,8 @@
       "sentences": "Предложения",
       "lines": "Строки",
       "paragraphs": "Абзацы",
+      "readingTime": "Время Чтения (мин)",
+      "speakingTime": "Время Речи (мин)",
       "numberStatistics": "Статистика Чисел",
       "letterStatistics": "Статистика Букв",
       "dateStatistics": "Статистика Дат",
@@ -263,6 +271,8 @@
     "labels": {
       "inputText": "Eingabetext",
       "outputText": "Ausgabetext",
+      "input": "Eingabe",
+      "output": "Ausgabe",
       "convertedImages": "Konvertierte Bilder",
       "convertedImage": "Konvertiertes Bild"
     },
@@ -280,6 +290,8 @@
       "sentences": "Sätze",
       "lines": "Zeilen",
       "paragraphs": "Absätze",
+      "readingTime": "Lesezeit (Min)",
+      "speakingTime": "Sprechzeit (Min)",
       "numberStatistics": "Zahlenstatistiken",
       "letterStatistics": "Buchstabenstatistiken",
       "dateStatistics": "Datumsstatistiken",
