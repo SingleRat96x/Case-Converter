@@ -1767,6 +1767,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер CamelCase – Текст и Ключи JSON (Snake → camelCase Онлайн)',
         description: 'Преобразуйте текст, идентификаторы и ключи JSON в camelCase онлайн. Вставьте текст или JSON, обрабатывайте вложенные объекты/массивы, сохраняйте акронимы и переключайтесь между snake_case, kebab-case, PascalCase и camelCase.',
         shortDescription: 'Преобразование текста и ключей JSON в camelCase с расширенными опциями.',
+      },
+      de: {
+        title: 'Camel Case Converter – Text & JSON-Schlüssel (Snake → camelCase Online)',
+        description: 'Konvertieren Sie Text, Bezeichner und JSON-Schlüssel online in camelCase. Fügen Sie Text oder JSON ein, verarbeiten Sie verschachtelte Objekte/Arrays, behalten Sie Akronyme bei und wechseln Sie zwischen snake_case, kebab-case, PascalCase und camelCase.',
+        shortDescription: 'Text und JSON-Schlüssel mit erweiterten Optionen in camelCase konvertieren.',
       }
     },
     schema: createAdvancedSchema('camel-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'Multiple case styles'], 'Text/JSON Input', 'camelCase Output', 4.7, 892),
