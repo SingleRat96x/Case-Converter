@@ -203,7 +203,7 @@ export function SnakeCaseConverter() {
   const customInputLabel = (
     <div className="flex items-center gap-2 mb-2">
       <label htmlFor="text-input" className="text-sm font-medium text-foreground">
-        Input:
+        {tool('snakeCase.inputLabel', 'Input:')}
       </label>
       <Select value={inputType} onValueChange={handleTabChange}>
         <SelectTrigger className="w-[180px] h-8 text-xs">
@@ -213,19 +213,19 @@ export function SnakeCaseConverter() {
           <SelectItem value="text" className="text-xs">
             <div className="flex items-center gap-2">
               <FileText className="h-3 w-3" />
-              Text / Identifiers
+              {tool('snakeCase.tabText', 'Text / Identifiers')}
             </div>
           </SelectItem>
           <SelectItem value="json" className="text-xs">
             <div className="flex items-center gap-2">
               <FileJson className="h-3 w-3" />
-              JSON
+              {tool('snakeCase.tabJson', 'JSON')}
             </div>
           </SelectItem>
           <SelectItem value="csv" className="text-xs">
             <div className="flex items-center gap-2">
               <Table className="h-3 w-3" />
-              CSV Headers
+              {tool('snakeCase.tabCsv', 'CSV Headers')}
             </div>
           </SelectItem>
         </SelectContent>
@@ -297,7 +297,7 @@ export function SnakeCaseConverter() {
                   </p>
                   {validationError.line && (
                     <p className="text-xs text-red-600 dark:text-red-400 mt-1">
-                      Line {validationError.line}, Column {validationError.column}
+                      {`${tool('snakeCase.validationError', 'Line {{line}}, Column {{column}}').replace('{{line}}', String(validationError.line)).replace('{{column}}', String(validationError.column))}`}
                     </p>
                   )}
                 </div>

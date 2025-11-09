@@ -350,5 +350,196 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Snake Case Converter – camelCase & Text zu snake_case (Online)",
+    "metaDescription": "Konvertieren Sie Text, Bezeichner und JSON-Schlüssel online in snake_case. Fügen Sie Text oder JSON ein, verarbeiten Sie verschachtelte Objekte, bewahren Sie Akronyme und konvertieren Sie optional zurück zu camelCase oder UPPER_SNAKE_CASE.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Online Snake-Case-Converter",
+        "content": "Konvertieren Sie camelCase, PascalCase, kebab-case oder Text mit Leerzeichen sofort in snake_case mit unserem entwicklerorientierten Konvertierungstool. Perfekt zum Transformieren von Variablennamen, JSON-API-Antworten, Datenbankfeldern und Code-Bezeichnern zwischen Namenskonventionen. Verarbeiten Sie tief verschachtelte JSON-Objekte und Arrays, bewahren Sie Akronyme wie HTTP und API, wechseln Sie zwischen lower_snake_case und UPPER_SNAKE_CASE oder konvertieren Sie von snake_case zurück zu camelCase. Alle Verarbeitung erfolgt lokal in Ihrem Browser für vollständige Privatsphäre und Sicherheit."
+      },
+      "features": {
+        "title": "Erweiterte Snake-Case-Konvertierungsfunktionen",
+        "items": [
+          {
+            "title": "Mehrere Eingabetypen",
+            "description": "Konvertieren Sie einfache Textbezeichner, JSON mit verschachtelten Schlüsseln oder CSV-Header alles in einem Tool mit Registerkarten-Interface."
+          },
+          {
+            "title": "Tiefe JSON-Verarbeitung",
+            "description": "Rekursiv alle Schlüssel in verschachtelten JSON-Objekten und Arrays konvertieren, während Datenstruktur und Werte erhalten bleiben."
+          },
+          {
+            "title": "Mehrere Konvertierungsmodi",
+            "description": "Unterstützung für camelCase → snake_case, PascalCase → snake_case, kebab-case → snake_case, Title Case → snake_case und Umkehr snake_case → camelCase."
+          },
+          {
+            "title": "UPPER_SNAKE_CASE-Unterstützung",
+            "description": "Wechseln Sie zwischen lower_snake_case (Standard) und UPPER_SNAKE_CASE (Screaming Snake Case) für Konstanten und Umgebungsvariablen."
+          },
+          {
+            "title": "Akronym-Bewahrung",
+            "description": "Intelligentes Erkennen und Bewahren von Akronymen wie user_id, http_client und api_key ohne sie zu zerstören."
+          },
+          {
+            "title": "JSONPath-Ausschlüsse",
+            "description": "Bestimmte JSON-Pfade von der Konvertierung ausschließen mit JSONPath-Notation mit Wildcard-Unterstützung."
+          },
+          {
+            "title": "Pretty-Print JSON",
+            "description": "JSON-Ausgabe mit korrekter Einrückung für Lesbarkeit formatieren oder für Produktion minimieren."
+          },
+          {
+            "title": "Sichere Zeichenbehandlung",
+            "description": "Optional Nicht-ASCII-Zeichen entfernen und diakritische Zeichen für sichere Variablennamen normalisieren."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Häufige Anwendungsfälle für Snake-Case-Konvertierung",
+        "description": "Snake-Case-Konvertierung ist essentiell für Python-Entwicklung, Datenbankdesign, API-Integration und sprachübergreifende Code-Migration.",
+        "items": [
+          { "title": "Python-Entwicklung", "description": "camelCase JavaScript-Konventionen in snake_case Python-Standards transformieren" },
+          { "title": "Datenbank-Schemadesign", "description": "camelCase oder kebab-case Bezeichner in snake_case Datenbankspaltennamen konvertieren" },
+          { "title": "API-Integrations-Mapping", "description": "camelCase Frontend-Daten in snake_case Backend-API-Formate transformieren" },
+          { "title": "Python-Code-Konventionen", "description": "PEP 8 Namensstandards sicherstellen indem camelCase in snake_case konvertiert wird" },
+          { "title": "Ruby/Rails-Entwicklung", "description": "Rails Konventionen für Modellattribute und Methodennamen folgen" },
+          { "title": "SQL-Abfrage-Generierung", "description": "Anwendungsvariablen in SQL-kompatible snake_case Spaltennamen transformieren" },
+          { "title": "Umgebungsvariablen", "description": "Konfigurationsschlüssel in UPPER_SNAKE_CASE für .env Dateien konvertieren" },
+          { "title": "Cross-Language-Refactoring", "description": "Code zwischen JavaScript und Python durch Konventionskonvertierung portieren" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Konvertieren Sie in Snake Case",
+        "description": "Befolgen Sie diese Schritte, um Text, Bezeichner oder JSON in snake_case-Format zu transformieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Eingabetyp Wählen",
+            "description": "Wählen Sie die passende Registerkarte: Text/Bezeichner für Variablennamen, JSON für API-Antworten oder CSV für Header."
+          },
+          {
+            "step": 2,
+            "title": "Daten Einfügen",
+            "description": "Fügen Sie Text, JSON-Objekt oder CSV-Daten in den Eingabebereich ein. Für JSON überprüft das Tool automatisch die Syntax."
+          },
+          {
+            "step": 3,
+            "title": "Optionen Anpassen",
+            "description": "Wählen Sie Konvertierungsmodus (camel→snake, pascal→snake usw.), Ausgabestil (lower_snake_case oder UPPER_SNAKE_CASE) und schalten Sie Optionen wie Akronym-Bewahrung um."
+          },
+          {
+            "step": 4,
+            "title": "Konvertieren und Kopieren",
+            "description": "Klicken Sie 'In snake_case konvertieren' oder drücken Sie Ctrl/Cmd+Enter. Überprüfen Sie das Ergebnis und kopieren Sie in die Zwischenablage oder laden Sie als Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Snake-Case-Konvertierungs-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Namenskonventionen mit verschiedenen Optionen in snake_case konvertiert werden.",
+        "items": [
+          { 
+            "title": "camelCase → snake_case",
+            "input": "userName\napiEndpointUrl\nmaxFileSize",
+            "output": "user_name\napi_endpoint_url\nmax_file_size"
+          },
+          { 
+            "title": "PascalCase → snake_case",
+            "input": "UserName\nApiKey\nFileSize",
+            "output": "user_name\napi_key\nfile_size"
+          },
+          { 
+            "title": "kebab-case → snake_case",
+            "input": "user-profile-page\napi-base-url\nmax-file-size",
+            "output": "user_profile_page\napi_base_url\nmax_file_size"
+          },
+          { 
+            "title": "UPPER_SNAKE_CASE-Ausgabe",
+            "input": "apiKey\ndatabaseUrl\nmaxConnections",
+            "output": "API_KEY\nDATABASE_URL\nMAX_CONNECTIONS"
+          },
+          { 
+            "title": "JSON-Schlüssel → snake_case",
+            "input": "{\n  \"userProfile\": {\n    \"firstName\": \"Anna\",\n    \"lastName\": \"Schmidt\",\n    \"apiKey\": \"abc123\"\n  }\n}",
+            "output": "{\n  \"user_profile\": {\n    \"first_name\": \"Anna\",\n    \"last_name\": \"Schmidt\",\n    \"api_key\": \"abc123\"\n  }\n}"
+          },
+          { 
+            "title": "Mit Akronym-Bewahrung",
+            "input": "userID\nxmlHttpRequest\napiEndpoint",
+            "output": "user_id\nxml_http_request\napi_endpoint"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Snake-Case-Converter Verwenden",
+        "content": "Professionelle Snake-Case-Konvertierung mit erweiterten Funktionen für Entwickler, Zeit sparen bei manueller Refactoring und konsistente Namenskonventionen sicherstellen.",
+        "items": [
+          "Vollständig kostenlos ohne Limits oder Registrierung",
+          "Datenschutz zuerst - alle Verarbeitung im Browser",
+          "Unterstützung für Text-, JSON- und CSV-Formate",
+          "Verarbeitung tief verschachtelter Objekte und Arrays",
+          "Intelligente Akronym-Bewahrung (user_id, http_client)",
+          "Mehrere Konvertierungsmodi (camel, pascal, kebab, umkehren)",
+          "UPPER_SNAKE_CASE und lower_snake_case Ausgabeoptionen",
+          "JSONPath-Ausschlüsse für selektive Konvertierung",
+          "JSON-Ausgabe formatieren oder minimieren",
+          "Tastaturkürzel für schnellen Workflow (Ctrl/Cmd+Enter)"
+        ]
+      },
+      "faqs": [
+        { 
+          "question": "Was ist der Unterschied zwischen lower_snake_case und UPPER_SNAKE_CASE?", 
+          "answer": "lower_snake_case verwendet Kleinbuchstaben mit Unterstrichen als Trennzeichen (user_name, api_key) und wird für Variablen und Funktionen verwendet. UPPER_SNAKE_CASE (auch Screaming Snake Case genannt) verwendet Großbuchstaben (API_KEY, MAX_CONNECTIONS) und wird konventionell für Konstanten und Umgebungsvariablen verwendet."
+        },
+        { 
+          "question": "Wird verschachteltes JSON unterstützt?", 
+          "answer": "Ja! Das Tool verarbeitet rekursiv alle Schlüssel in verschachtelten JSON-Objekten und Arrays, unabhängig von der Verschachtelungstiefe. Es bewahrt die vollständige Datenstruktur und Werte während nur Schlüssel konvertiert werden (oder Schlüssel und Werte je nach Einstellungen)."
+        },
+        { 
+          "question": "Wie funktioniert die Akronym-Bewahrung?", 
+          "answer": "Wenn aktiviert, erkennt das Tool aufeinanderfolgende Großbuchstaben (ID, URL, XML, API) und bewahrt sie im entsprechenden Format in der Ausgabe. Zum Beispiel wird userID zu user_id (nicht user_i_d), und xmlHttpRequest wird zu xml_http_request. Dies folgt gängigen Python- und Datenbankkonventionen."
+        },
+        { 
+          "question": "Kann ich von snake_case zurück zu camelCase konvertieren?", 
+          "answer": "Ja! Verwenden Sie den 'Umkehren (snake_case → camelCase)'-Modus um umgekehrte Konvertierung durchzuführen. Zum Beispiel wird user_name zurück zu userName, und api_endpoint wird zu apiEndpoint. Dies ist nützlich beim Konvertieren von Backend-Daten zu Frontend-Konventionen."
+        },
+        { 
+          "question": "Kann ich bestimmte JSON-Pfade von der Konvertierung ausschließen?", 
+          "answer": "Ja! Verwenden Sie die 'Pfade ausschließen'-Option mit JSONPath-Notation. Zum Beispiel behält $.data.items[*].url alle 'url'-Schlüssel im items-Array unverändert während alles andere konvertiert wird. Wildcards (*) werden für flexible Übereinstimmung unterstützt."
+        },
+        { 
+          "question": "Was bedeutet 'Nur Schlüssel konvertieren' für JSON?", 
+          "answer": "Wenn aktiviert (Standard), werden nur JSON-Objektschlüssel konvertiert während Werte unverändert bleiben. Wenn deaktiviert, werden sowohl Schlüssel als auch Zeichenfolgenwerte verarbeitet. Dies ist wichtig wenn Sie Zeichenfolgeninhalte in Werten bewahren möchten."
+        },
+        { 
+          "question": "Wie werden Title Case oder Leerzeichen behandelt?", 
+          "answer": "Wählen Sie den 'Title Case / Leerzeichen'-Modus um Text mit Leerzeichen in snake_case zu konvertieren. Zum Beispiel wird 'User Profile Settings' zu 'user_profile_settings'. Das Tool trennt nach Leerzeichen und konvertiert entsprechend jedes Wort."
+        },
+        { 
+          "question": "Kann ich CSV-Header konvertieren?", 
+          "answer": "Ja! Wechseln Sie zur CSV-Registerkarte und fügen Sie CSV-Daten ein. Das Tool konvertiert nur die Header-Zeile in snake_case und lässt alle Datenzeilen unverändert. Dies ist ideal zur Vorbereitung von CSV-Daten für Datenbankimporte oder Python-Verarbeitung."
+        },
+        { 
+          "question": "Was macht 'Nur sichere Zeichen'?", 
+          "answer": "Diese Option entfernt Nicht-ASCII-Zeichen und normalisiert diakritische Zeichen (é→e, ñ→n). Sie stellt sicher, dass die Ausgabe nur standardmäßige englische Buchstaben, Zahlen und Unterstriche enthält, die für Variablennamen in den meisten Programmiersprachen und Datenbanken sicher sind."
+        },
+        { 
+          "question": "Werden meine Daten gespeichert oder an einen Server gesendet?", 
+          "answer": "Nein. Alle Konvertierung erfolgt vollständig in Ihrem Browser mit JavaScript. Ihr Text und JSON werden niemals auf unsere Server hochgeladen und gewährleisten vollständige Privatsphäre für sensiblen Code und API-Antworten."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textkonvertierungs-Tools",
+        "description": "Erkunden Sie weitere Tools für Texttransformation, Case-Konvertierung und Code-Formatierung.",
+        "items": [
+          { "name": "Camel Case Converter", "description": "Text und JSON-Schlüssel in camelCase oder PascalCase konvertieren", "href": "/de/tools/camel-case-converter" },
+          { "name": "Kebab Case Converter", "description": "Zwischen kebab-case, camelCase und snake_case konvertieren", "href": "/de/tools/kebab-case-converter" },
+          { "name": "UPPERCASE Converter", "description": "Gesamten Text in UPPERCASE-Format konvertieren", "href": "/de/tools/uppercase" },
+          { "name": "lowercase Converter", "description": "Gesamten Text in lowercase-Format transformieren", "href": "/de/tools/lowercase" }
+        ]
+      }
+    }
   }
 }

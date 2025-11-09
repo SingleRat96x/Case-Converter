@@ -1792,6 +1792,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер Snake Case – camelCase и Текст в snake_case (Онлайн)',
         description: 'Конвертируйте текст, идентификаторы и ключи JSON в snake_case онлайн. Вставьте текст или JSON, обрабатывайте вложенные объекты, сохраняйте акронимы и опционально конвертируйте обратно в camelCase или UPPER_SNAKE_CASE.',
         shortDescription: 'Преобразование текста и ключей JSON в snake_case с расширенными опциями.',
+      },
+      de: {
+        title: 'Snake Case Converter – camelCase & Text zu snake_case (Online)',
+        description: 'Konvertieren Sie Text, Bezeichner und JSON-Schlüssel online in snake_case. Fügen Sie Text oder JSON ein, verarbeiten Sie verschachtelte Objekte, bewahren Sie Akronyme und konvertieren Sie optional zurück zu camelCase oder UPPER_SNAKE_CASE.',
+        shortDescription: 'Text und JSON-Schlüssel mit erweiterten Optionen in snake_case konvertieren.',
       }
     },
     schema: createAdvancedSchema('snake-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'UPPER_SNAKE_CASE support'], 'Text/JSON Input', 'snake_case Output', 4.7, 856),
