@@ -1647,6 +1647,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Замена Текста — Поиск и Замена Онлайн',
         description: 'Находите и заменяйте текст в документах, коде или любом тексте. Поддержка регистро-зависимого поиска, regex-паттернов и массовой замены.',
         shortDescription: 'Поиск и замена текста с расширенными опциями.',
+      },
+      de: {
+        title: 'Text Ersetzen — Suchen und Ersetzen Online',
+        description: 'Suchen und ersetzen Sie Text in Dokumenten, Code oder beliebigem Text. Unterstützung für groß-/kleinschreibungsabhängige Suche, Regex-Muster und Massenersetzung.',
+        shortDescription: 'Text mit erweiterten Optionen suchen und ersetzen.',
       }
     },
     schema: createAdvancedSchema('text-replace', ['Find and replace', 'Case sensitive', 'Regex support', 'Bulk replacement'], 'Text Input', 'Replaced Text', 4.6, 678),

@@ -1166,6 +1166,38 @@
       "downloadFileName": "tiefgestellter-text.txt",
       "convertButton": "Tiefgestellten Text Generieren",
       "uploadDescription": ""
+    },
+    "textReplace": {
+      "title": "Text Suchen und Ersetzen",
+      "description": "Suchen und ersetzen Sie Text mit leistungsstarken Optionen für Groß-/Kleinschreibungsbeachtung und Ganzes-Wort-Suche. Perfekt für Massentextbearbeitung und Korrekturen.",
+      "outputLabel": "Ersetzter Text",
+      "inputPlaceholder": "Text zum Suchen und Ersetzen eingeben...",
+      "copiedMessage": "Ersetzter Text in die Zwischenablage kopiert!",
+      "downloadFileName": "ersetzter-text.txt",
+      "convertButton": "Text Ersetzen",
+      "uploadDescription": "",
+      "find": "Text Suchen",
+      "findPlaceholder": "Zu suchenden Text eingeben...",
+      "replaceWith": "Ersetzen Durch", 
+      "replacePlaceholder": "Ersetzungstext eingeben...",
+      "swap": "Tauschen",
+      "options": {
+        "caseSensitive": "Groß-/Kleinschreibung Beachten",
+        "wholeWord": "Ganzes Wort",
+        "regex": "Regex Verwenden"
+      },
+      "matches": "Übereinstimmungen gefunden",
+      "noMatches": "Keine Übereinstimmungen gefunden",
+      "regexInfo": "Reguläre Ausdrücke Modus aktiviert. Verwenden Sie Muster wie \\d+ für Ziffern oder [a-z]+ für Kleinbuchstaben.",
+      "regexExamples": "Beispiele: \\d{3}-\\d{3}-\\d{4} (Telefon), [a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,} (E-Mail)",
+      "preview": "Übereinstimmungs-Vorschau:",
+      "analytics": {
+        "title": "Ersetzungsanalyse",
+        "matchesFound": "Gefundene Übereinstimmungen",
+        "totalReplacements": "Gesamtersetzungen",
+        "charactersChanged": "Zeichen Geändert",
+        "patternLength": "Musterlänge"
+      }
     }
   }
 }
