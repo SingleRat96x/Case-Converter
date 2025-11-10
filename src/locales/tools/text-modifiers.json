@@ -861,6 +861,83 @@
       "wordCount": "{{count}} Wörter sortiert",
       "duplicatesRemoved": "{{count}} Duplikate entfernt"
     },
+    "addLineNumbers": {
+      "title": "Zeilennummern zu Text Hinzufügen",
+      "description": "Fügen Sie Zeilennummern zu Text mit anpassbaren Formaten, Trennzeichen und Nummerierungsoptionen hinzu. Perfekt für Code, Skripte und Dokumente.",
+      "inputLabel": "Ihr Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um Zeilennummern hinzuzufügen...",
+      "outputLabel": "Nummerierter Text",
+      "helperText": "Fügen Sie Ihren Text oben ein, passen Sie die Nummerierungsoptionen unten an und klicken Sie dann auf 'Zeilennummern hinzufügen' zum Verarbeiten.",
+      "addButton": "Zeilennummern hinzufügen",
+      "processing": "Verarbeitung...",
+      "applied": "Angewendet!",
+      "reapplyButton": "Zeilennummern Erneut Anwenden",
+      "resetButton": "Zurücksetzen",
+      "successMessage": "Zeilennummern erfolgreich hinzugefügt! Sie können das Ergebnis jetzt kopieren oder herunterladen.",
+      "optionsChangedMessage": "Sie haben die Nummerierungsoptionen geändert. Klicken Sie auf \"Zeilennummern Erneut Anwenden\", um die Änderungen zu sehen.",
+      "stats": {
+        "line": "Zeile",
+        "lines": "Zeilen",
+        "word": "Wort",
+        "words": "Wörter",
+        "char": "Zeichen",
+        "chars": "Zeichen"
+      },
+      "uploadDescription": "",
+      "downloadFileName": "nummerierter-text.txt",
+      "options": {
+        "title": "Nummerierungsoptionen",
+        "tabBasic": "Basis",
+        "tabFormat": "Format",
+        "tabSeparator": "Trennzeichen",
+        "startAt": "Starten bei",
+        "step": "Schritt",
+        "format": "Nummernformat",
+        "separator": "Trennzeichen",
+        "applyTo": "Anwenden auf",
+        "skipLinesStartingWith": "Zeilen überspringen, die beginnen mit",
+        "nonEmptyLabel": "Nur nicht-leere Zeilen nummerieren",
+        "nonEmptyDescription": "Leere Zeilen bei Nummerierung überspringen",
+        "skipPatternsPlaceholder": "z.B., //, #, ;",
+        "skipPatternsDescription": "Durch Komma getrennte Muster zum Überspringen (z.B., \"//, #\" für Kommentare)"
+      },
+      "formats": {
+        "numeric": "1, 2, 3",
+        "padded2": "01, 02, 03",
+        "padded3": "001, 002, 003",
+        "alphaUpper": "A, B, C",
+        "alphaLower": "a, b, c",
+        "romanUpper": "I, II, III",
+        "romanLower": "i, ii, iii"
+      },
+      "formatLabels": {
+        "standard": "Standard",
+        "twoDigit": "2-stellig",
+        "threeDigit": "3-stellig",
+        "uppercase": "Großbuchstaben",
+        "lowercase": "Kleinbuchstaben"
+      },
+      "separators": {
+        "periodSpace": ". (Punkt + Leerzeichen)",
+        "parenSpace": ") (Klammer + Leerzeichen)",
+        "colonSpace": ": (Doppelpunkt + Leerzeichen)",
+        "hyphenSpace": " - (Bindestrich + Leerzeichen)",
+        "pipe": "| (Vertikaler Strich)",
+        "tab": "Tabulator-Zeichen"
+      },
+      "separatorLabels": {
+        "period": "Punkt",
+        "paren": "Klammer",
+        "colon": "Doppelpunkt",
+        "hyphen": "Bindestrich",
+        "pipe": "Vertikaler Strich",
+        "tab": "Tab"
+      },
+      "applyToOptions": {
+        "all": "Alle Zeilen",
+        "nonEmpty": "Nur nicht-leere Zeilen"
+      }
+    },
     "textCounter": {
       "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
       "description": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Perfekt für Autoren, Studenten und Content-Ersteller.",

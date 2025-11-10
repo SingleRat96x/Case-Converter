@@ -294,5 +294,153 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Zeilennummern zu Text Hinzufügen – Kostenloses Online Nummerierungs-Tool",
+    "metaDescription": "Fügen Sie sofort Zeilennummern mit 7 Formaten, benutzerdefinierten Trennzeichen und intelligenter Filterung hinzu. Perfekt für Code, Skripte und Dokumente. Kostenloses Online-Tool.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloses Online Zeilennummerierungs-Tool – Zeilennummern zu Text Hinzufügen",
+        "content": "Fügen Sie schnell Zeilennummern zu jedem Text mit unserem leistungsstarken und flexiblen Zeilennummerierungs-Tool hinzu. Perfekt für Code-Reviews, Dokumentation, Lehrmaterialien, Skripte und jeden Inhalt, bei dem Zeilenreferenzen wichtig sind. Wählen Sie aus mehreren Nummerierungsformaten, passen Sie Trennzeichen an und kontrollieren Sie mit erweiterten Filteroptionen, welche Zeilen nummeriert werden."
+      },
+      "features": {
+        "title": "Leistungsstarke Zeilennummerierungs-Funktionen",
+        "items": [
+          { "title": "Mehrere Nummernformate", "description": "Wählen Sie aus numerisch (1, 2, 3), aufgefüllt (01, 02 oder 001, 002), alphabetisch (A, B, C) oder römischen Ziffern (I, II, III)" },
+          { "title": "Benutzerdefinierte Trennzeichen", "description": "Verwenden Sie Punkte, Doppelpunkte, Bindestriche, vertikale Striche, Tabulatoren oder Klammern, um Zeilennummern vom Inhalt zu trennen" },
+          { "title": "Flexibler Start & Schritt", "description": "Beginnen Sie die Nummerierung bei einer beliebigen Zahl und erhöhen Sie um einen beliebigen Schrittwert" },
+          { "title": "Intelligente Zeilenfilterung", "description": "Nummerieren Sie nur nicht-leere Zeilen oder überspringen Sie Zeilen, die mit bestimmten Mustern wie Kommentaren beginnen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und fügen Sie sofort Zeilennummern zu ganzen Dokumenten hinzu" },
+          { "title": "Echtzeit-Vorschau", "description": "Sehen Sie nummerierte Ergebnisse, die sich automatisch aktualisieren, während Sie tippen und Optionen anpassen" },
+          { "title": "Kopieren & Herunterladen", "description": "Einfach in die Zwischenablage kopieren oder als Textdatei herunterladen" },
+          { "title": "Datenschutz-First", "description": "Alle Verarbeitung erfolgt lokal—keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Wann Zeilennummerierung Verwenden",
+        "description": "Zeilennummern machen Text organisierter und leichter referenzierbar in verschiedenen professionellen und pädagogischen Kontexten.",
+        "items": [
+          { "title": "Code-Review & Programmierung", "description": "Fügen Sie Zeilennummern zu Code-Snippets hinzu für einfachere Referenzierung während Reviews und Diskussionen" },
+          { "title": "Dokumentation & Handbücher", "description": "Nummerieren Sie technische Dokumentationszeilen für präzise Querverweise" },
+          { "title": "Lehrmaterialien", "description": "Erstellen Sie nummerierte Beispiele für den Unterricht in Programmierung, Gedichtanalyse oder Literaturkritik" },
+          { "title": "Skripte & Drehbücher", "description": "Fügen Sie Zeilennummern zu Skripten für Produktionsreferenzen und Proben hinzu" },
+          { "title": "Juristische Dokumente", "description": "Nummerieren Sie Vertragszeilen und juristische Dokumente für genaue Zitate" },
+          { "title": "Poesie & Literatur", "description": "Fügen Sie Zeilennummern zu Gedichten und literarischen Texten für akademische Analysen hinzu" },
+          { "title": "Konfigurationsdateien", "description": "Nummerieren Sie Konfigurationsdateien für einfacheres Debugging und Support-Anfragen" },
+          { "title": "Besprechungsnotizen & Transkripte", "description": "Erstellen Sie nummerierte Transkripte für präzise zeitgestempelte Referenzen" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Fügen Sie Zeilennummern zu Text Hinzu",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihre Textzeilen mit benutzerdefinierten Formatierungsoptionen zu nummerieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text Einfügen oder Hochladen",
+            "description": "Geben Sie Ihren Text in den Eingabebereich ein, oder laden Sie eine Textdatei hoch, um einem ganzen Dokument Zeilennummern hinzuzufügen."
+          },
+          {
+            "step": 2,
+            "title": "Nummerierungsoptionen Konfigurieren",
+            "description": "Wählen Sie Ihr bevorzugtes Nummernformat (numerisch, aufgefüllt, alphabetisch oder römisch), legen Sie die Startnummer und den Schritt fest und wählen Sie einen Trennzeichenstil."
+          },
+          {
+            "step": 3,
+            "title": "Erweiterte Filter Anwenden (Optional)",
+            "description": "Nummerieren Sie optional nur nicht-leere Zeilen oder überspringen Sie Zeilen, die mit bestimmten Mustern wie // oder # für Kommentarausschluss beginnen."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen",
+            "description": "Ihr Text wird automatisch nummeriert, während Sie tippen. Kopieren Sie das Ergebnis in Ihre Zwischenablage oder laden Sie es als .txt-Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Zeilennummerierungs-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Nummerierungsformate und Optionen Ihren Text transformieren.",
+        "items": [
+          { "title": "Einfach Numerisch", "input": "Erste Zeile\nZweite Zeile\nDritte Zeile", "output": "1. Erste Zeile\n2. Zweite Zeile\n3. Dritte Zeile" },
+          { "title": "Aufgefüllte Nummern", "input": "Zeile eins\nZeile zwei\nZeile drei", "output": "01. Zeile eins\n02. Zeile zwei\n03. Zeile drei" },
+          { "title": "Alphabetisch Groß", "input": "Alpha\nBeta\nGamma", "output": "A. Alpha\nB. Beta\nC. Gamma" },
+          { "title": "Römische Ziffern", "input": "Einleitung\nKapitel Eins\nKapitel Zwei", "output": "I. Einleitung\nII. Kapitel Eins\nIII. Kapitel Zwei" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unser Zeilennummerierungs-Tool Verwenden",
+        "content": "Professionelle Zeilennummerierung mit umfassenden Formatierungsoptionen und universeller Kompatibilität.",
+        "items": [
+          "Komplett kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz-First - alle Verarbeitung erfolgt lokal",
+          "7 verschiedene Nummerierungsformat-Optionen",
+          "6 Trennzeichenstile zur Auswahl",
+          "Erweiterte Zeilenfilterungsfähigkeiten",
+          "Echtzeit-Vorschau während der Eingabe",
+          "Datei-Upload- und Download-Unterstützung",
+          "Mobil-optimiertes responsives Design",
+          "Perfekt für Code, Dokumente und Skripte"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Nummerierungsformate werden unterstützt?",
+          "answer": "Unser Tool unterstützt 7 verschiedene Formate: numerisch (1, 2, 3), 2-stellig aufgefüllt (01, 02, 03), 3-stellig aufgefüllt (001, 002, 003), alphabetisch Großbuchstaben (A, B, C), alphabetisch Kleinbuchstaben (a, b, c), römische Ziffern Großbuchstaben (I, II, III) und römische Ziffern Kleinbuchstaben (i, ii, iii)."
+        },
+        {
+          "question": "Kann ich die Nummerierung bei einer bestimmten Nummer starten?",
+          "answer": "Ja! Sie können jede beliebige Startnummer festlegen. Zum Beispiel starten Sie bei 10, wenn Sie einen vorherigen Abschnitt fortsetzen, oder starten Sie bei 0 für Null-Indexierung, die häufig in der Programmierung verwendet wird."
+        },
+        {
+          "question": "Wie überspringe ich leere Zeilen oder Kommentare?",
+          "answer": "Verwenden Sie die Option 'Anwenden auf', um nur nicht-leere Zeilen zu nummerieren und leere Zeilen automatisch zu überspringen. Verwenden Sie zusätzlich das Feld 'Zeilen überspringen, die beginnen mit', um Zeilen zu ignorieren, die mit bestimmten Mustern beginnen, wie //, # oder ; (üblich für Code-Kommentare)."
+        },
+        {
+          "question": "Welche Trennzeichen kann ich zwischen Nummern und Text verwenden?",
+          "answer": "Wählen Sie aus 6 Trennzeichenstilen: Punkt mit Leerzeichen (. ), Klammer mit Leerzeichen () ), Doppelpunkt mit Leerzeichen (: ), Bindestrich mit Leerzeichen ( - ), vertikaler Strich (|) oder Tabulatorzeichen für ausgerichtete Spalten."
+        },
+        {
+          "question": "Kann ich benutzerdefinierte Schritt-Inkremente verwenden?",
+          "answer": "Absolut! Legen Sie jeden beliebigen Schrittwert fest, den Sie benötigen. Verwenden Sie Schritt 1 für sequentielle Nummerierung (1, 2, 3), Schritt 2 für gerade Zahlen (2, 4, 6), Schritt 5 für Vielfache von 5 (5, 10, 15) oder jedes andere Inkrement."
+        },
+        {
+          "question": "Sind meine Textdaten sicher und privat?",
+          "answer": "Ja, alle Zeilennummerierung erfolgt lokal in Ihrem Browser. Ihr Text wird niemals auf unsere Server hochgeladen oder an irgendwen übertragen. Vollständige Privatsphäre ist für Ihren gesamten sensiblen Code und Ihre Dokumente garantiert."
+        },
+        {
+          "question": "Kann ich Dateien hochladen, um Zeilennummern hinzuzufügen?",
+          "answer": "Ja! Laden Sie .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html und andere Textdateien hoch. Das Tool fügt automatisch Zeilennummern hinzu, und Sie können das Ergebnis herunterladen."
+        },
+        {
+          "question": "Wie funktioniert die alphabetische Nummerierung nach Z?",
+          "answer": "Nach Erreichen von Z (oder z) setzt das Tool mit AA, AB, AC... fort, genau wie Excel-Spaltenbenennung. Dies ermöglicht es Ihnen, Tausende von Zeilen im alphabetischen Format zu nummerieren."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textverarbeitungs-Tools",
+        "items": [
+          {
+            "name": "Zeilenumbrüche Entfernen",
+            "description": "Entfernen Sie unerwünschte Zeilenumbrüche und kombinieren Sie Text in eine Zeile",
+            "href": "/de/tools/remove-line-breaks"
+          },
+          {
+            "name": "Doppelte Zeilen Entfernen",
+            "description": "Eliminieren Sie doppelte Zeilen und bereinigen Sie sich wiederholenden Textinhalt",
+            "href": "/de/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Text Suchen und Ersetzen",
+            "description": "Erweiterte Textersetzung mit Mustererkennung und Regex-Unterstützung",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Wörter Sortieren",
+            "description": "Sortieren Sie Wörter alphabetisch oder nach Länge mit benutzerdefinierten Optionen",
+            "href": "/de/tools/sort-words"
+          }
+        ]
+      }
+    }
   }
 }

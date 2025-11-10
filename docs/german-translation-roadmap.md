@@ -3,7 +3,7 @@
 **Start Date:** 2025-11-07  
 **Status:** IN PROGRESS  
 **Current Phase:** Phase 2  
-**Completion:** 10/75 tools (13.3%)
+**Completion:** 11/75 tools (14.7%)
 
 ---
 
@@ -11,9 +11,9 @@
 
 ```
 Total Tools: 75
-Completed:   10  [██░░░░░░░░░░░░░░░░░░] 13.3%
+Completed:   11  [██░░░░░░░░░░░░░░░░░░] 14.7%
 In Progress:  0
-Remaining:   65
+Remaining:   64
 ```
 
 ---
@@ -30,6 +30,7 @@ Remaining:   65
 - [x] **sort-words** (text-modification) - Completed 2025-11-07
 - [x] **subscript-text** (text-modification) - Completed 2025-11-07
 - [x] **text-replace** (text-modification) - Completed 2025-11-07
+- [x] **add-line-numbers-to-text** (text-modification) - Completed 2025-11-07
 
 ---
 
@@ -105,17 +106,18 @@ Each subtask = specific work item for that tool
 
 **Category:** `text-modification`  
 **Component Files:** `tools/text-modifiers.json`, `tools/text-generators.json`  
-**Progress:** 5/24 tools (20.8%)
+**Progress:** 6/24 tools (25.0%)
 
 ---
 
-## ⬜ Task 2.1: add-line-numbers-to-text
-- [ ] Add German metadata to `toolMetadata.ts`
-- [ ] Add German SEO content to `seo-content/add-line-numbers-to-text.json`
-- [ ] Verify/add German translations in `tools/text-modifiers.json`
-- [ ] Create page file `/de/tools/add-line-numbers-to-text/page.tsx`
-- [ ] Run lint/types/build checks
-- **Status:** PENDING
+## ✅ Task 2.1: add-line-numbers-to-text
+- [x] Add German metadata to `toolMetadata.ts`
+- [x] Add German SEO content to `seo-content/add-line-numbers-to-text.json` (149 lines)
+- [x] Add German translations in `tools/text-modifiers.json` (76 keys)
+- [x] Component already fully translated - no hardcoded text
+- [x] Create page file `/de/tools/add-line-numbers-to-text/page.tsx`
+- [x] Run lint/types/build checks - ✅ PASSED
+- **Status:** COMPLETED 2025-11-07
 
 ---
 
