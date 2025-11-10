@@ -1323,6 +1323,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Alternating Case — Чередование Регистра',
         description: 'Создавайте текст с чередующимся регистром для весёлых эффектов. Вставьте или введите и копируйте мгновенно.',
         shortDescription: 'Чередование регистра для текста.',
+      },
+      de: {
+        title: 'Alternating Case — aLtErNiErEnDe GrOß-/KlEiNsChReIbUnG',
+        description: 'Erstellen Sie alternierende Groß-/Kleinschreibung für lustige Texteffekte. Einfügen oder tippen und sofort kopieren. Perfekt für Memes und spielerische Inhalte.',
+        shortDescription: 'Alternierenden Groß-/Kleinschreibung Text erstellen.',
       }
     },
     schema: createAdvancedSchema('alternating-case', ['Fun effects', 'Instant copy'], 'Text Input', 'Alternating Case Text', 4.3, 389),
