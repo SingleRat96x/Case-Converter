@@ -1411,5 +1411,82 @@
         "needsAttention": "Некоторые параметры требуют внимания"
       }
     }
+  },
+  "de": {
+    "asciiArtGenerator": {
+      "title": "ASCII Art Generator - Text & Bild zu ASCII Art Konverter",
+      "description": "Erstellen Sie beeindruckende ASCII-Kunst aus Text und Bildern. Konvertieren Sie Ihren Text in dekorative ASCII-Schriftarten oder transformieren Sie Bilder in schöne ASCII-Kunst mit anpassbaren Optionen.",
+      "modes": {
+        "text": "Text zu ASCII",
+        "image": "Bild zu ASCII",
+        "textDescription": "Text in dekorative ASCII-Kunst-Schriftarten konvertieren",
+        "imageDescription": "Bilder in ASCII-Zeichen-Kunst transformieren"
+      },
+      "textPanel": {
+        "inputLabel": "Geben Sie Ihren Text ein",
+        "inputPlaceholder": "Geben Sie Ihren Text hier ein...",
+        "fontLabel": "ASCII-Schriftart",
+        "alignmentLabel": "Textausrichtung",
+        "spacingLabel": "Zeichenabstand",
+        "widthLabel": "Ausgabebreite"
+      },
+      "imagePanel": {
+        "uploadLabel": "Bild Hochladen",
+        "uploadDescription": "Laden Sie ein Bild hoch, um es in ASCII-Kunst zu konvertieren",
+        "dragDropLabel": "Bild hier hineinziehen oder klicken zum Auswählen",
+        "supportedFormats": "Unterstützt: JPEG, PNG, GIF, BMP, WebP (max 10MB)",
+        "presetLabel": "ASCII-Stil-Voreinstellung",
+        "charsetLabel": "Zeichensatz",
+        "widthLabel": "ASCII-Breite",
+        "contrastLabel": "Kontrast",
+        "brightnessLabel": "Helligkeit",
+        "invertLabel": "Farben Invertieren"
+      },
+      "output": {
+        "label": "ASCII Art Ausgabe",
+        "placeholder": "Ihre ASCII-Kunst wird hier erscheinen...",
+        "copySuccess": "ASCII-Kunst in Zwischenablage kopiert!",
+        "copyError": "Fehler beim Kopieren in Zwischenablage",
+        "downloadFileName": "ascii-art.txt",
+        "previewLabel": "Vorschau"
+      },
+      "options": {
+        "title": "ASCII Art Optionen",
+        "addBorder": "Rahmen Hinzufügen",
+        "borderChar": "Rahmenzeichen",
+        "realTimePreview": "Echtzeit-Vorschau"
+      },
+      "stats": {
+        "lines": "Zeilen",
+        "characters": "Zeichen",
+        "maxLineLength": "Max Zeilenlänge",
+        "avgLineLength": "Durchschn. Zeilenlänge",
+        "originalSize": "Originalgröße",
+        "outputSize": "Ausgabegröße"
+      },
+      "fonts": {
+        "standard": "Standard",
+        "block": "Block",
+        "small": "Klein"
+      },
+      "presets": {
+        "detailed": "Detailliert",
+        "simple": "Einfach",
+        "blocks": "Blöcke",
+        "minimal": "Minimal"
+      },
+      "alignment": {
+        "left": "Links",
+        "center": "Zentriert",
+        "right": "Rechts"
+      },
+      "errors": {
+        "invalidFile": "Ungültiger Dateityp. Bitte laden Sie eine Bilddatei hoch.",
+        "fileTooLarge": "Datei zu groß. Bitte laden Sie ein Bild unter 10MB hoch.",
+        "processingFailed": "Bildverarbeitung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+        "emptyText": "Bitte geben Sie Text zur Konvertierung ein.",
+        "loadingFailed": "Bild konnte nicht geladen werden. Bitte versuchen Sie eine andere Datei."
+      }
+    }
   }
 }

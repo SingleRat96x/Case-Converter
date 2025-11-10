@@ -554,6 +554,11 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Создавайте ASCII-баннеры во множестве шрифтов. Копируйте или скачивайте. Отлично для терминалов, README и развлечения!',
         shortDescription: 'ASCII-баннеры в разных шрифтах. Бесплатно.',
       },
+      de: {
+        title: 'ASCII Art Generator — Stilvolle Text-Banner (Kostenlos)',
+        description: 'Erstellen Sie ASCII-Text-Banner in vielen Schriftarten. Sofort kopieren oder herunterladen. Perfekt für Terminals, READMEs und Spaß!',
+        shortDescription: 'ASCII-Text-Banner in vielen Schriftarten erstellen. Kostenlos.',
+      },
     },
     schema: createAdvancedSchema('ascii-art-generator', ['Many fonts', 'Copy/Download', 'Instant output'], 'Text Input', 'ASCII Art', 4.4, 456),
   },
