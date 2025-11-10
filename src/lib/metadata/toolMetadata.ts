@@ -1488,6 +1488,12 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Мгновенно добавляйте префикс и суффикс к каждой строке. Идеально для форматирования комментариев кода, списков и markdown.',
         shortDescription: 'Добавление префикса и суффикса к каждой строке',
         alternateTitle: 'Инструмент Префикс и Суффикс Строк'
+      },
+      de: {
+        title: 'Präfix und Suffix zu Zeilen Hinzufügen Online – Kostenloser Text-Formatierer',
+        description: 'Fügen Sie sofort benutzerdefinierte Präfixe und Suffixe zu jeder Zeile hinzu. Perfekt für Formatierung von Code-Kommentaren, Aufzählungslisten und Markdown. Kostenloses browserbasiertes Tool.',
+        shortDescription: 'Präfix und Suffix zu jeder Textzeile hinzufügen',
+        alternateTitle: 'Präfix & Suffix Zeilen-Formatierer Tool'
       }
     },
     schema: createAdvancedSchema(

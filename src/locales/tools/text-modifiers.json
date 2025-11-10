@@ -938,6 +938,38 @@
         "nonEmpty": "Nur nicht-leere Zeilen"
       }
     },
+    "addPrefixSuffix": {
+      "title": "Präfix und Suffix zu Zeilen Hinzufügen",
+      "description": "Möchten Sie schnell ein Präfix und Suffix zu jeder Zeile Ihres Textes hinzufügen? Fügen Sie Ihren Inhalt ein, geben Sie ein beliebiges Präfix und Suffix ein, und dieses Tool aktualisiert sofort jede Zeile für Sie. Es ist perfekt für Code-Kommentare, Aufzählungslisten, Markdown-Zitate und Tagging von Log-Zeilen.",
+      "inputLabel": "Ihr Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein...",
+      "helperText": "Fügen Sie Ihren Text oben ein, legen Sie Präfix/Suffix-Optionen unten fest, dann klicken Sie auf 'Präfix/Suffix Anwenden'.",
+      "addButton": "Präfix/Suffix Anwenden",
+      "processing": "Verarbeitung...",
+      "applied": "Angewendet!",
+      "reapplyButton": "Präfix/Suffix Erneut Anwenden",
+      "resetButton": "Zurücksetzen",
+      "successMessage": "Präfix und Suffix erfolgreich hinzugefügt! Sie können das Ergebnis jetzt kopieren oder herunterladen.",
+      "optionsChangedMessage": "Sie haben die Optionen geändert. Klicken Sie auf \"Präfix/Suffix Erneut Anwenden\", um die Änderungen zu sehen.",
+      "stats": {
+        "line": "Zeile",
+        "lines": "Zeilen",
+        "word": "Wort",
+        "words": "Wörter",
+        "character": "Zeichen",
+        "characters": "Zeichen"
+      },
+      "downloadFileName": "präfix-suffix-text.txt",
+      "options": {
+        "title": "Präfix & Suffix Optionen",
+        "prefix": "Präfix",
+        "prefixPlaceholder": "Text vor jeder Zeile hinzufügen...",
+        "suffix": "Suffix",
+        "suffixPlaceholder": "Text nach jeder Zeile hinzufügen...",
+        "ignoreEmptyLabel": "Leere Zeilen ignorieren",
+        "ignoreEmptyDescription": "Präfix/Suffix nicht zu Leerzeilen hinzufügen"
+      }
+    },
     "textCounter": {
       "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
       "description": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Perfekt für Autoren, Studenten und Content-Ersteller.",
