@@ -1193,10 +1193,15 @@
       "preview": "Übereinstimmungs-Vorschau:",
       "analytics": {
         "title": "Ersetzungsanalyse",
+        "originalLength": "Original-Länge",
         "matchesFound": "Gefundene Übereinstimmungen",
-        "totalReplacements": "Gesamtersetzungen",
-        "charactersChanged": "Zeichen Geändert",
-        "patternLength": "Musterlänge"
+        "operationType": "Operationstyp",
+        "replacedLength": "Länge Nach Ersetzung",
+        "lengthDifference": "Längenunterschied",
+        "caseSensitive": "Groß-/Kleinschreibung Beachtet",
+        "wholeWord": "Ganzes Wort",
+        "regex": "Regex",
+        "standard": "Standard"
       }
     }
   }
