@@ -1445,6 +1445,12 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Добавляйте номера строк мгновенно с 7 форматами, настраиваемыми разделителями и умной фильтрацией. Идеально для кода, скриптов и документов.',
         shortDescription: 'Настраиваемые номера строк с несколькими форматами и разделителями',
         alternateTitle: 'Инструмент Нумерации Строк - Добавить Номера'
+      },
+      de: {
+        title: 'Zeilennummern zu Text Hinzufügen – Kostenloser Online Nummerierungs-Tool',
+        description: 'Fügen Sie sofort Zeilennummern mit 7 Formaten, benutzerdefinierten Trennzeichen und intelligenter Filterung hinzu. Perfekt für Code, Skripte und Dokumente. Kostenloses Online-Tool.',
+        shortDescription: 'Anpassbare Zeilennummern mit mehreren Formaten und Trennzeichen hinzufügen',
+        alternateTitle: 'Zeilennummerierungs-Tool - Nummern zu Text Hinzufügen'
       }
     },
     schema: createAdvancedSchema(
