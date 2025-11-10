@@ -160,6 +160,87 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Tiefgestellter Text Generator - Unicode Tiefstellung Konverter",
+    "metaDescription": "Generieren Sie tiefgestellten Unicode-Text für Formeln, Chemie und wissenschaftliche Notation. Konvertieren Sie H2O zu H₂O, CO2 zu CO₂ und mehr. Kostenlos & funktioniert überall.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Tiefgestellter Text Generator - Unicode Tiefstellung Konverter",
+        "content": "Erstellen Sie sofort tiefgestellte Unicode-Zeichen für wissenschaftliche Notation, mathematische Formeln und chemische Gleichungen. Konvertieren Sie reguläre Zahlen und Buchstaben in korrekte Tiefstellungssymbole wie H₂O, CO₂, x₁, y₂ direkt in Ihrem Browser."
+      },
+      "features": {
+        "title": "Leistungsstarke Tiefstellungs-Konvertierungsfunktionen",
+        "items": [
+          { "title": "Sofortige Konvertierung", "description": "Echtzeit-Tiefstellungskonvertierung während Sie tippen oder Text einfügen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und konvertieren Sie ganze Dokumente zu Tiefstellung" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie Ergebnisse einfach oder laden Sie als Textdateien herunter" },
+          { "title": "Text-Analytik", "description": "Erhalten Sie detaillierte Statistiken über Ihren konvertierten Text" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert mit allen Sprachen und Sonderzeichen" },
+          { "title": "Datenschutz-First", "description": "Alle Konvertierung erfolgt lokal—keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Anwendungen für Tiefgestellten Text",
+        "description": "Tiefgestellte Zeichen sind essentiell für Wissenschaft, Mathematik und technisches Schreiben.",
+        "items": [
+          { "title": "Chemische Notation", "description": "Schreiben Sie chemische Formeln wie H₂O, CO₂, SO₄²⁻ mit korrekten Tiefstellungen." },
+          { "title": "Mathematik", "description": "Formatieren Sie Variablen mit Indizes wie x₁, x₂, aₙ für Sequenzen und Reihen." },
+          { "title": "Physik & Ingenieurwesen", "description": "Verwenden Sie Tiefstellungen für Vektorkomponenten und spezialisierte Variablen (vₓ, Fᵧ)." },
+          { "title": "Dokumentation & Akademie", "description": "Erstellen Sie präzise technische Dokumente mit korrekter wissenschaftlicher Formatierung." },
+          { "title": "Bildung & Studiennotizen", "description": "Bereiten Sie saubere, lesbare Notizen und Aufgaben mit korrekten Tiefstellungen vor." },
+          { "title": "Plattformübergreifendes Publizieren", "description": "Stellen Sie konsistente Tiefstellungsdarstellung über Apps und Plattformen mit Unicode sicher." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Generieren Sie Tiefgestellten Text",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihren Text in tiefgestellte Zeichen zu konvertieren.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein, oder laden Sie eine Textdatei zur Konvertierung hoch." },
+          { "step": 2, "title": "Automatische Konvertierung", "description": "Beobachten Sie, wie Ihr Text sofort in Unicode-Tiefstellungszeichen in Echtzeit konvertiert wird." },
+          { "step": 3, "title": "Analytik Überprüfen", "description": "Überprüfen Sie die Textstatistiken einschließlich Zeichenanzahl, Wortanzahl und mehr." },
+          { "step": 4, "title": "Kopieren oder Herunterladen", "description": "Kopieren Sie den tiefgestellten Text oder laden Sie ihn als Textdatei herunter zur Verwendung überall." }
+        ]
+      },
+      "examples": {
+        "title": "Tiefstellungs-Konvertierungsbeispiele",
+        "description": "Sehen Sie, wie verschiedene Texttypen in Unicode-Tiefstellungsformat konvertiert werden.",
+        "items": [
+          { "title": "Chemie", "input": "H2O, CO2, NH3", "output": "H₂O, CO₂, NH₃" },
+          { "title": "Mathematik", "input": "x1, x2, an", "output": "x₁, x₂, aₙ" },
+          { "title": "Physik", "input": "vx, Fy", "output": "vₓ, Fᵧ" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Tiefstellungs-Konverter Verwenden",
+        "content": "Professionelle Tiefstellungskonvertierung mit umfassenden Funktionen und Analytik.",
+        "items": [
+          "Komplett kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz-First - alle Verarbeitung erfolgt lokal",
+          "Unterstützung für mehrere Dateiformate",
+          "Echtzeit-Konvertierung während Sie tippen",
+          "Detaillierte Text-Analytik",
+          "Responsives Design für alle Geräte",
+          "Funktioniert mit allen Sprachen und Zeichen"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist tiefgestellter Text?", "answer": "Tiefgestellter Text erscheint unterhalb der Grundlinie und wird häufig in chemischen Formeln, mathematischen Indizes und wissenschaftlicher Notation verwendet." },
+        { "question": "Funktioniert das Tool mit nicht-englischem Text?", "answer": "Ja, unser Konverter funktioniert mit allen Sprachen und Unicode-Zeichen." },
+        { "question": "Kann ich ganze Dateien konvertieren?", "answer": "Auf jeden Fall! Laden Sie Textdateien (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) hoch und konvertieren Sie deren Inhalt in Tiefstellungsformat." },
+        { "question": "Sind meine Daten sicher?", "answer": "Ja, alle Verarbeitung erfolgt lokal in Ihrem Browser. Nichts wird hochgeladen oder übertragen." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text- und Wissenschafts-Tools",
+        "items": [
+          { "name": "Kursivtext-Generator", "description": "Erstellen Sie kursiven Unicode-Text für Akzente", "href": "/de/tools/italic-text" },
+          { "name": "Fetttext-Generator", "description": "Erstellen Sie fetten Unicode-Text, der überall funktioniert", "href": "/de/tools/bold-text" },
+          { "name": "Phonetische Schreibweise Generator", "description": "Konvertieren Sie Text in phonetische Schreibweise (IPA, NATO, einfache Namen)", "href": "/de/tools/phonetic-spelling" },
+          { "name": "Datum zu Römischen Ziffern Konverter", "description": "Konvertieren Sie Daten in römische Ziffern für klassische wissenschaftliche Notation", "href": "/de/tools/roman-numeral-date" }
+        ]
+      }
+    }
   }
 }
 

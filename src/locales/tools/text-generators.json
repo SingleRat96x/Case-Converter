@@ -1157,6 +1157,15 @@
       "csvFormat": "CSV",
       "numbersExtracted": "Zahlen extrahiert!",
       "noNumbersFound": "Keine Zahlen gefunden"
+    },
+    "subscript": {
+      "title": "Tiefgestellter Text Generator",
+      "description": "Erstellen Sie tiefgestellten Unicode-Text für mathematische Formeln, chemische Gleichungen und wissenschaftliche Notation. Perfekt für H₂O, CO₂ und mehr.",
+      "outputLabel": "Tiefgestellter Text",
+      "copiedMessage": "Tiefgestellter Text in die Zwischenablage kopiert!",
+      "downloadFileName": "tiefgestellter-text.txt",
+      "convertButton": "Tiefgestellten Text Generieren",
+      "uploadDescription": ""
     }
   }
 }

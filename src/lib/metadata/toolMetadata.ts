@@ -1581,6 +1581,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Нижний Индекс — Маленькие Символы X₂ (Копировать)',
         description: 'Создавайте символы нижнего индекса (например, X₂) для математики и научной записи. Пишите, просматривайте и копируйте.',
         shortDescription: 'Нижний индекс (X₂).',
+      },
+      de: {
+        title: 'Tiefgestellter Text Generator — X₂ Kleine Zeichen (Kopieren)',
+        description: 'Erstellen Sie tiefgestellte Zeichen (wie X₂) für Mathematik und wissenschaftliche Notation. Tippen, Vorschau anzeigen und sofort kopieren. Kostenlos und unbegrenzt.',
+        shortDescription: 'Tiefgestellte Zeichen erstellen (X₂).',
       }
     },
     schema: createAdvancedSchema('subscript-text', ['Subscript', 'Instant copy'], 'Text Input', 'Subscript Text', 4.4, 456),
