@@ -316,5 +316,164 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Wort-Sortierer - Alphabetisches & Längen-Sortierungs-Tool",
+    "metaDescription": "Sortieren Sie Wörter alphabetisch, nach Länge oder zufällig mit erweiterten Optionen. Duplikate entfernen, groß-/kleinschreibungsabhängige Sortierung und benutzerdefinierte Trennzeichen. Perfekt für Datenorganisation und Textverarbeitung.",
+    "sections": {
+      "intro": {
+        "title": "Wörter Sofort mit Erweiterten Optionen Sortieren",
+        "content": "Unser Wort-Sortierungs-Tool hilft Ihnen, Textdaten effizient zu organisieren. Sortieren Sie Wörter alphabetisch, nach Länge oder zufällig mit leistungsstarken Anpassungsoptionen einschließlich Groß-/Kleinschreibungsbeachtung, Duplikatentfernung und benutzerdefinierten Trennzeichen."
+      },
+      "features": {
+        "title": "Leistungsstarke Wort-Sortierungsfunktionen",
+        "items": [
+          {
+            "title": "Mehrere Sortiermodi",
+            "description": "Alphabetisch, nach Wortlänge oder umgekehrter Reihenfolge mit zufälligen Mischoptionen sortieren"
+          },
+          {
+            "title": "Flexible Trennzeichen",
+            "description": "Unterstützung für Leerzeichen, Kommas, Zeilenumbrüche und benutzerdefinierte Trennzeichen für verschiedene Datenformate"
+          },
+          {
+            "title": "Erweiterte Optionen",
+            "description": "Groß-/kleinschreibungsabhängige Sortierung, Duplikatentfernung und Leerzeichen-Trimmen für saubere Ergebnisse"
+          },
+          {
+            "title": "Echtzeit-Verarbeitung",
+            "description": "Sofortige Sortierung mit Live-Vorschau während Sie tippen oder Optionen ändern"
+          },
+          {
+            "title": "Massenverarbeitung",
+            "description": "Große Textdateien mit effizienter Verarbeitung und Speicherverwaltung verarbeiten"
+          },
+          {
+            "title": "Export-Optionen",
+            "description": "Sortierte Ergebnisse in verschiedenen Formaten mit anpassbaren Dateinamen herunterladen"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Anwendungen für Wort-Sortierung",
+        "description": "Wort-Sortierung ist essentiell für Datenorganisation, Content-Management und Textverarbeitungs-Workflows.",
+        "items": [
+          {
+            "title": "Datenorganisation",
+            "description": "Listen, Inventare und Datensätze für bessere Organisation und Analyse sortieren"
+          },
+          {
+            "title": "Content-Management",
+            "description": "Tags, Kategorien und Schlüsselwörter für Websites und Content-Systeme organisieren"
+          },
+          {
+            "title": "Akademische Forschung",
+            "description": "Bibliografien, Referenzen und Forschungsdaten für systematische Organisation sortieren"
+          },
+          {
+            "title": "Programmierung",
+            "description": "Funktionsnamen, Variablen und Code-Elemente für bessere Code-Organisation sortieren"
+          },
+          {
+            "title": "Sprachenlernen",
+            "description": "Vokabellisten alphabetisch oder nach Schwierigkeitsgrad für strukturiertes Lernen sortieren"
+          },
+          {
+            "title": "Geschäftsanwendungen",
+            "description": "Kundenlisten, Produktnamen und Geschäftsdaten für Berichte und Analysen sortieren"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So Sortieren Sie Wörter",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihre Textdaten zu organisieren.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Fügen Sie Ihren Text ein oder laden Sie eine Datei mit zu sortierenden Wörtern hoch." },
+          { "step": 2, "title": "Sortiermodus Wählen", "description": "Wählen Sie alphabetische, nach Länge oder umgekehrte Sortierung mit zufälligen Optionen." },
+          { "step": 3, "title": "Trennzeichen Anpassen", "description": "Wählen Sie das passende Trennzeichen (Leerzeichen, Komma, Zeilenumbruch oder benutzerdefiniert)." },
+          { "step": 4, "title": "Erweiterte Optionen Festlegen", "description": "Passen Sie Groß-/Kleinschreibungsbeachtung, Duplikatentfernung und Leerzeichen-Trimmen an." },
+          { "step": 5, "title": "Ergebnisse Überprüfen", "description": "Sehen Sie sortierte Wörter sofort und laden Sie bei Bedarf herunter." }
+        ]
+      },
+      "examples": {
+        "title": "Wort-Sortierungs-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Texttypen sortiert werden.",
+        "items": [
+          {
+            "title": "Alphabetische Sortierung",
+            "input": "zebra apfel banane kirsche",
+            "output": "apfel banane kirsche zebra"
+          },
+          {
+            "title": "Sortierung nach Länge",
+            "input": "katze elefant hund",
+            "output": "katze hund elefant"
+          },
+          {
+            "title": "Benutzerdefiniertes Trennzeichen",
+            "input": "rot,blau,grün,gelb",
+            "output": "blau,gelb,grün,rot"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile der Wort-Sortierung",
+        "items": [
+          "Verbesserte Datenorganisation und Lesbarkeit",
+          "Schnelle Datenverarbeitung und -analyse",
+          "Besseres Content-Management und Kategorisierung",
+          "Erhöhte Produktivität in Text-Workflows",
+          "Professionelle Präsentation organisierter Daten",
+          "Effiziente Verarbeitung großer Datensätze"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Kann ich Wörter nach Länge statt alphabetisch sortieren?",
+          "answer": "Ja! Wählen Sie den Sortiermodus 'Länge', um Wörter von kurz zu lang oder umgekehrt zu sortieren."
+        },
+        {
+          "question": "Wie gehe ich mit verschiedenen Trennzeichen in meinem Text um?",
+          "answer": "Wählen Sie die passende Trennzeichen-Option (Leerzeichen, Komma, Zeilenumbruch) oder verwenden Sie ein benutzerdefiniertes Trennzeichen für spezifische Zeichen."
+        },
+        {
+          "question": "Kann ich doppelte Wörter beim Sortieren entfernen?",
+          "answer": "Absolut! Aktivieren Sie die Option 'Duplikate Entfernen', um wiederholte Wörter aus Ihrer sortierten Liste auszuschließen."
+        },
+        {
+          "question": "Ist die Sortierung groß-/kleinschreibungsabhängig?",
+          "answer": "Sie können groß-/kleinschreibungsabhängige oder -unabhängige Sortierung mit den erweiterten Optionen wählen."
+        },
+        {
+          "question": "Kann ich Wörter in zufälliger Reihenfolge sortieren?",
+          "answer": "Ja! Wählen Sie die Reihenfolge 'Zufällig', um Ihre Wörter in zufälliger Sequenz zu mischen."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text- und Daten-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Wörter, Zeichen und Zeilen in Ihrem Text",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Worthäufigkeit",
+            "description": "Analysieren Sie Worthäufigkeit und Verwendungsmuster",
+            "href": "/de/tools/word-frequency"
+          },
+          {
+            "name": "Duplikate Entfernen",
+            "description": "Entfernen Sie doppelte Zeilen und Wörter aus Text",
+            "href": "/de/tools/duplicate-line-remover"
+          },
+          {
+            "name": "Text Ersetzen",
+            "description": "Finden und ersetzen Sie Text mit erweiterten Optionen",
+            "href": "/de/tools/text-replace"
+          }
+        ]
+      }
+    }
   }
 }

@@ -314,7 +314,7 @@ export function WordSorter() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2 pb-2 border-b border-border/50">
                   <ArrowUpDown className="h-4 w-4 text-primary" />
-                  <h3 className="text-base font-semibold text-foreground">Sort Configuration</h3>
+                  <h3 className="text-base font-semibold text-foreground">{tool('wordSorter.sectionTitles.sortConfig', 'Sort Configuration')}</h3>
                 </div>
                 <div className="flex flex-col sm:flex-row gap-4">
                   <div className="flex-1">
@@ -395,7 +395,7 @@ export function WordSorter() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2 pb-2 border-b border-border/50">
                   <Settings className="h-4 w-4 text-primary" />
-                  <h3 className="text-base font-semibold text-foreground">Separator Options</h3>
+                  <h3 className="text-base font-semibold text-foreground">{tool('wordSorter.sectionTitles.separatorOptions', 'Separator Options')}</h3>
                 </div>
                 <div>
                   <label className="text-xs font-medium text-muted-foreground mb-2 block uppercase tracking-wide">
@@ -444,7 +444,7 @@ export function WordSorter() {
               <div className="space-y-4">
                 <div className="flex items-center gap-2 pb-2 border-b border-border/50">
                   <Settings2 className="h-4 w-4 text-primary" />
-                  <h3 className="text-base font-semibold text-foreground">Advanced Options</h3>
+                  <h3 className="text-base font-semibold text-foreground">{tool('wordSorter.sectionTitles.advancedOptions', 'Advanced Options')}</h3>
                 </div>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-3">
                   <div className="flex items-center justify-between p-3 rounded-lg border bg-card hover:bg-accent/5 transition-colors">

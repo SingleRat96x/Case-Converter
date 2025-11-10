@@ -1516,6 +1516,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Сортировка Слов — Алфавитная или Обратная',
         description: 'Сортируйте слова или строки по алфавиту (А→Я/Я→А). Удаляйте дубликаты и пробелы. Подходит для списков и тегов.',
         shortDescription: 'Алфавитная сортировка слов.',
+      },
+      de: {
+        title: 'Wörter Sortieren — Alphabetisch oder Umgekehrt',
+        description: 'Sortieren Sie Wörter oder Zeilen alphabetisch (A→Z/Z→A). Duplikate entfernen und Leerzeichen trimmen. Perfekt für Listen, Tags und SEO-Bereinigung.',
+        shortDescription: 'Wörter und Listen alphabetisch sortieren.',
       }
     },
     schema: createAdvancedSchema('sort-words', ['Alphabetize', 'Deduplicate'], 'Text Input', 'Sorted Words', 4.3, 389),

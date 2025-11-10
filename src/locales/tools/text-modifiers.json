@@ -180,6 +180,11 @@
         "custom": "Custom"
       },
       "customSeparatorPlaceholder": "Enter custom separator...",
+      "sectionTitles": {
+        "sortConfig": "Sort Configuration",
+        "separatorOptions": "Separator Options",
+        "advancedOptions": "Advanced Options"
+      },
       "options": {
         "title": "Advanced Options",
         "caseSensitive": "Case Sensitive",
@@ -539,6 +544,11 @@
         "custom": "Пользовательский"
       },
       "customSeparatorPlaceholder": "Введите пользовательский разделитель...",
+      "sectionTitles": {
+        "sortConfig": "Конфигурация Сортировки",
+        "separatorOptions": "Опции Разделителя",
+        "advancedOptions": "Расширенные Опции"
+      },
       "options": {
         "title": "Расширенные Опции",
         "caseSensitive": "Учитывать Регистр",
@@ -800,6 +810,56 @@
         "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
         "wordsAnalyzed": "Wörter analysiert"
       }
+    },
+    "wordSorter": {
+      "title": "Wörter Sortieren - Alphabetisches & Längen-Sortierungs-Tool",
+      "description": "Sortieren Sie Wörter alphabetisch, nach Länge oder zufällig mit erweiterten Optionen. Perfekt für Datenorganisation und Textverarbeitung.",
+      "inputLabel": "Zu Sortierender Text",
+      "outputLabel": "Sortierte Wörter",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um Wörter zu sortieren...",
+      "uploadDescription": "",
+      "downloadFileName": "sortierte-wörter.txt",
+      "sortMode": "Sortiermodus",
+      "sortOrder": "Sortierreihenfolge",
+      "separator": "Trennzeichen",
+      "modes": {
+        "alphabetical": "Alphabetisch",
+        "length": "Länge",
+        "reverse": "Umkehren"
+      },
+      "orders": {
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend",
+        "random": "Zufällig"
+      },
+      "separators": {
+        "space": "Leerzeichen",
+        "newline": "Zeilenumbruch",
+        "comma": "Komma",
+        "custom": "Benutzerdefiniert"
+      },
+      "customSeparatorPlaceholder": "Benutzerdefiniertes Trennzeichen eingeben...",
+      "sectionTitles": {
+        "sortConfig": "Sortier-Konfiguration",
+        "separatorOptions": "Trennzeichen-Optionen",
+        "advancedOptions": "Erweiterte Optionen"
+      },
+      "options": {
+        "title": "Erweiterte Optionen",
+        "caseSensitive": "Groß-/Kleinschreibung Beachten",
+        "removeDuplicates": "Duplikate Entfernen",
+        "trimWhitespace": "Leerzeichen Trimmen"
+      },
+      "stats": {
+        "original": "Original-Wörter",
+        "sorted": "Sortierte Wörter",
+        "duplicates": "Duplikate Entfernt",
+        "mode": "Sortiermodus",
+        "order": "Sortierreihenfolge",
+        "separator": "Trennzeichen"
+      },
+      "wordCount": "{{count}} Wörter sortiert",
+      "duplicatesRemoved": "{{count}} Duplikate entfernt"
     },
     "textCounter": {
       "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
