@@ -1668,6 +1668,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Невидимый Текст — Пустые Символы (Копировать)',
         description: 'Создавайте невидимые символы и пустые пробелы (нулевой ширины) для форматирования и отступов. Копируйте мгновенно.',
         shortDescription: 'Пустые символы (копировать).',
+      },
+      de: {
+        title: 'Unsichtbarer Text Generator — Leere/Unsichtbare Zeichen (Kopieren)',
+        description: 'Erstellen Sie unsichtbare Zeichen und Leerzeichen (Null-Breite) für Formatierung und Abstände. Sofort kopieren & einfügen.',
+        shortDescription: 'Leere/unsichtbare Zeichen (kopieren).',
       }
     },
     schema: createAdvancedSchema('invisible-text', ['Invisible chars', 'Zero-width spaces'], 'Text Input', 'Invisible Text', 4.0, 267),

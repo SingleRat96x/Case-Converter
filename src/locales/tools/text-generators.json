@@ -1212,6 +1212,31 @@
       "convertButton": "Tiefgestellten Text Generieren",
       "uploadDescription": ""
     },
+    "invisibleText": {
+      "title": "Unsichtbarer Text Generator",
+      "description": "Erstellen Sie unsichtbaren Text mit Null-Breite Unicode-Zeichen und unsichtbaren Unicode-Operatoren. Perfekt für Steganographie, versteckte Nachrichten und spezielle Formatierungsanwendungen.",
+      "outputLabel": "Text mit Unsichtbaren Zeichen",
+      "inputPlaceholder": "Geben Sie Ihren Text ein, um unsichtbare Zeichen hinzuzufügen...",
+      "copiedMessage": "Unsichtbarer Text in Zwischenablage kopiert!",
+      "downloadFileName": "unsichtbarer-text.txt",
+      "convertButton": "Unsichtbaren Text Generieren",
+      "uploadDescription": "",
+      "copyInvisible": "Unsichtbaren Text Kopieren",
+      "copied": "Kopiert!",
+      "methods": {
+        "zeroWidth": "Null-Breite",
+        "unicode": "Unicode"
+      },
+      "stats": {
+        "visible": "Sichtbar",
+        "invisible": "Unsichtbar", 
+        "total": "Gesamt",
+        "invisibilityRatio": "Unsichtbarkeitsquote"
+      },
+      "methodDescription": "Wählen Sie die Methode für die Generierung unsichtbarer Zeichen",
+      "zeroWidthDescription": "Verwendet Null-Breite Leerzeichen, Verbinder und Nicht-Verbinder",
+      "unicodeDescription": "Verwendet unsichtbare Unicode-Funktionsanwendungsoperatoren"
+    },
     "extractEmails": {
       "title": "E-Mails aus Text Extrahieren",
       "description": "Extrahieren und validieren Sie E-Mail-Adressen aus jedem Text. Finden Sie E-Mails in Dokumenten, Webseiten oder großen Textblöcken mit erweiterten Filter- und Exportoptionen.",
