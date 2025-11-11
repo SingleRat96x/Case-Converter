@@ -1212,6 +1212,83 @@
       "convertButton": "Tiefgestellten Text Generieren",
       "uploadDescription": ""
     },
+    "extractEmails": {
+      "title": "E-Mails aus Text Extrahieren",
+      "description": "Extrahieren und validieren Sie E-Mail-Adressen aus jedem Text. Finden Sie E-Mails in Dokumenten, Webseiten oder großen Textblöcken mit erweiterten Filter- und Exportoptionen.",
+      "outputLabel": "Extrahierte E-Mails",
+      "inputPlaceholder": "Fügen Sie Ihren Text hier ein, um E-Mail-Adressen zu extrahieren...",
+      "copiedMessage": "Extrahierte E-Mails in Zwischenablage kopiert!",
+      "downloadFileName": "extrahierte-emails.txt",
+      "convertButton": "E-Mails Extrahieren",
+      "uploadDescription": "Laden Sie eine Textdatei hoch, um E-Mails zu extrahieren",
+      "noEmailsFound": "Keine E-Mail-Adressen im Text gefunden.",
+      "extractionOptions": "Extraktionsoptionen",
+      "showOptions": "Optionen Anzeigen",
+      "hideOptions": "Optionen Ausblenden",
+      "extractionMode": "Extraktionsmodus",
+      "modes": {
+        "default": "Standard",
+        "custom": "Benutzerdefiniert"
+      },
+      "modeTooltips": {
+        "title": "Extraktionsmodi Erklärt",
+        "default": "Intelligente Extraktion mit optimierten Patterns für beste Ergebnisse",
+        "custom": "Verwenden Sie Ihr eigenes reguläres Ausdrucksmuster für E-Mail-Extraktion"
+      },
+      "sections": {
+        "extraction": "Extraktionskonfiguration",
+        "processing": "Verarbeitungsoptionen"
+      },
+      "sortBy": "Sortieren Nach",
+      "sortOptions": {
+        "alphabetical": "Alphabetisch",
+        "domain": "Domain",
+        "position": "Position",
+        "validity": "Gültigkeit"
+      },
+      "sortOrder": "Sortierreihenfolge",
+      "sortOrderOptions": {
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend"
+      },
+      "removeDuplicates": "Duplikate Entfernen",
+      "validateEmails": "E-Mails Validieren",
+      "sortTooltip": "Wählen Sie, wie die extrahierten E-Mail-Adressen sortiert werden sollen",
+      "duplicatesTooltip": "Entfernen Sie doppelte E-Mail-Adressen aus den Ergebnissen",
+      "validationTooltip": "Führen Sie RFC-konforme Validierung auf extrahierten E-Mails durch",
+      "filterEmails": "E-Mails Filtern",
+      "domainFilter": "Domain-Filter",
+      "domainFilterPlaceholder": "z.B. gmail.com",
+      "clearFilter": "Filter Löschen",
+      "filterTypes": {
+        "contains": "Enthält",
+        "notContains": "Enthält Nicht",
+        "equals": "Gleich"
+      },
+      "customRegex": "Benutzerdefiniertes Regex-Pattern",
+      "customRegexPlaceholder": "Geben Sie Ihr Regex-Pattern ein...",
+      "customRegexHint": "Verwenden Sie einen gültigen JavaScript regulären Ausdruck zum Matchen von E-Mails",
+      "stats": {
+        "totalFound": "Gesamt Gefunden",
+        "unique": "Einzigartig",
+        "valid": "Gültig",
+        "invalid": "Ungültig"
+      },
+      "copyEmails": "E-Mails Kopieren",
+      "exportTxt": "TXT Exportieren",
+      "exportCsv": "CSV Exportieren",
+      "exportJson": "JSON Exportieren",
+      "extractedEmails": "Extrahierte E-Mails",
+      "topDomains": "Top-Domains",
+      "duplicatesFound": "Duplikate gefunden",
+      "duplicatesHint": "Aktivieren Sie 'Duplikate Entfernen', um sie herauszufiltern",
+      "domainsHint": "Häufigste E-Mail-Domains im Text gefunden",
+      "analysis": "Analyse",
+      "validityRate": "Gültigkeitsrate",
+      "avgLocalLength": "Durchschn. Lokale Länge",
+      "avgDomainLength": "Durchschn. Domain-Länge",
+      "uniqueDomains": "Einzigartige Domains"
+    },
     "textReplace": {
       "title": "Text Suchen und Ersetzen",
       "description": "Suchen und ersetzen Sie Text mit leistungsstarken Optionen für Groß-/Kleinschreibungsbeachtung und Ganzes-Wort-Suche. Perfekt für Massentextbearbeitung und Korrekturen.",

@@ -1764,6 +1764,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Извлечение Email из Текста — Бесплатный Экстрактор Email',
         description: 'Извлекайте и проверяйте email адреса из любого текста с помощью нашего бесплатного онлайн инструмента. Находите email в документах, веб-страницах и текстовых блоках.',
         shortDescription: 'Извлекайте и проверяйте email из текста с расширенными опциями.',
+      },
+      de: {
+        title: 'E-Mails aus Text Extrahieren — Kostenloser E-Mail-Extraktor',
+        description: 'Extrahieren und validieren Sie E-Mail-Adressen aus jedem Text mit unserem kostenlosen Online-Tool. Finden Sie E-Mails in Dokumenten, Webseiten und Textblöcken mit erweiterten Filteroptionen.',
+        shortDescription: 'E-Mails aus Text extrahieren und validieren mit erweiterten Optionen.',
       }
     },
     schema: createAdvancedSchema('extract-emails-from-text', ['Email extraction', 'Email validation', 'Multiple formats', 'Domain analysis', 'Duplicate removal'], 'Text Input', 'Extracted Emails', 4.6, 789),

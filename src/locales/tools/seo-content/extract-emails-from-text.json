@@ -216,5 +216,114 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser E-Mail-Extraktor - E-Mails aus Text Online Extrahieren",
+    "metaDescription": "Extrahieren und validieren Sie E-Mail-Adressen aus jedem Text mit unserem kostenlosen Online-Tool. Finden Sie E-Mails in Dokumenten, Webseiten und Textblöcken mit erweiterten Filteroptionen.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser E-Mail-Extraktor - E-Mails aus Text Online Extrahieren",
+        "content": "Extrahieren und validieren Sie schnell E-Mail-Adressen aus jedem Text mit unserem leistungsstarken Online-E-Mail-Extraktions-Tool. Perfekt für Data Mining, Lead-Generierung, Kontaktlisten-Erstellung und Bereinigung von Textdokumenten. Extrahieren Sie E-Mails aus Webseiten, Dokumenten oder großen Textblöcken mit erweiterten Filter- und Validierungsoptionen."
+      },
+      "features": {
+        "title": "Leistungsstarke E-Mail-Extraktions-Funktionen",
+        "items": [
+          { "title": "Mehrere Extraktionsmodi", "description": "Wählen Sie aus Einfach, Umfassend oder Strikt für unterschiedliche Genauigkeitsniveaus" },
+          { "title": "E-Mail-Validierung", "description": "Validieren Sie automatisch extrahierte E-Mails, um gültige und ungültige Adressen zu identifizieren" },
+          { "title": "Duplikate Entfernen", "description": "Entfernen Sie doppelte E-Mail-Adressen mit Groß-/Kleinschreibung unabhängigem Matching" },
+          { "title": "Erweiterte Sortierung", "description": "Sortieren Sie E-Mails alphabetisch, nach Domain, Position oder Validierungsstatus" },
+          { "title": "Domain-Analyse", "description": "Erhalten Sie detaillierte Statistiken über E-Mail-Domains und Provider" },
+          { "title": "Mehrere Exportformate", "description": "Exportieren Sie Ergebnisse als TXT, CSV oder JSON mit detaillierten Informationen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch, um E-Mails aus großen Dokumenten zu extrahieren" },
+          { "title": "Echtzeit-Verarbeitung", "description": "Extrahieren Sie E-Mails sofort während Sie tippen oder Text einfügen" },
+          { "title": "Datenschutz zuerst", "description": "Alle Verarbeitung erfolgt lokal in Ihrem Browser - keine Daten werden hochgeladen" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Anwendungsfälle für E-Mail-Extraktion",
+        "description": "Extrahieren Sie E-Mails effizient für verschiedene geschäftliche und persönliche Bedürfnisse.",
+        "items": [
+          { "title": "Lead-Generierung", "description": "Extrahieren Sie potenzielle Kunden-E-Mails aus Webseiten, Artikeln und Geschäftsverzeichnissen." },
+          { "title": "Kontaktlisten-Erstellung", "description": "Erstellen Sie umfassende Kontaktlisten aus verschiedenen Textquellen und Dokumenten." },
+          { "title": "Data Mining", "description": "Extrahieren Sie E-Mail-Adressen aus großen Datensätzen, Berichten und Forschungsdokumenten." },
+          { "title": "E-Mail-Marketing", "description": "Sammeln Sie E-Mail-Adressen für Newsletter-Abonnements und Marketing-Kampagnen." },
+          { "title": "Forschung & Analyse", "description": "Analysieren Sie E-Mail-Muster und Domains für Marktforschung und Wettbewerbsanalyse." },
+          { "title": "Dokument-Bereinigung", "description": "Extrahieren und organisieren Sie E-Mail-Adressen aus unordentlichen oder unstrukturierten Textdokumenten." },
+          { "title": "CRM-Integration", "description": "Bereiten Sie E-Mail-Listen für den Import in CRM-Systeme und Marketing-Plattformen vor." },
+          { "title": "Compliance & Verifizierung", "description": "Validieren Sie E-Mail-Adressen für Compliance und Datenqualitätszwecke." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Extrahieren Sie E-Mails aus Text",
+        "description": "Folgen Sie diesen einfachen Schritten, um E-Mail-Adressen aus jedem Text zu extrahieren und zu validieren.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Fügen Sie Ihren Text in den Eingabebereich ein oder laden Sie eine Textdatei mit dem zu verarbeitenden Inhalt hoch." },
+          { "step": 2, "title": "Optionen Konfigurieren", "description": "Wählen Sie den Extraktionsmodus (Einfach, Umfassend oder Strikt), Sortiereinstellungen und Validierungseinstellungen." },
+          { "step": 3, "title": "Ergebnisse Anzeigen", "description": "Sehen Sie extrahierte E-Mails mit Validierungsstatus, Domain-Analyse und detaillierten Statistiken." },
+          { "step": 4, "title": "Exportieren oder Kopieren", "description": "Kopieren Sie die E-Mail-Liste in die Zwischenablage oder exportieren Sie sie als TXT, CSV oder JSON zur weiteren Verwendung." }
+        ]
+      },
+      "examples": {
+        "title": "E-Mail-Extraktions-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Texttypen verarbeitet werden, um E-Mail-Adressen zu extrahieren.",
+        "items": [
+          { 
+            "title": "Geschäftskontakt-Text", 
+            "input": "Kontaktieren Sie uns unter info@firma.de oder support@business.de für Unterstützung. Unser Verkaufsteam erreichen Sie unter sales@firma.de.", 
+            "output": "info@firma.de\nsupport@business.de\nsales@firma.de",
+            "description": "Extrahiert alle gültigen E-Mail-Adressen aus Geschäftskontaktinformationen."
+          },
+          { 
+            "title": "Gemischter Inhalt", 
+            "input": "E-Mail an max.mustermann@gmail.com oder rufen Sie (555) 123-4567 an. Versuchen Sie auch admin@website.de für technische Probleme.", 
+            "output": "max.mustermann@gmail.com\nadmin@website.de",
+            "description": "Filtert Telefonnummern heraus und extrahiert nur E-Mail-Adressen aus gemischtem Inhalt."
+          },
+          { 
+            "title": "Webseiten-Inhalt", 
+            "input": "Abonnieren Sie newsletter@beispiel.de. Folgen Sie uns in sozialen Medien oder kontaktieren Sie presse@beispiel.de für Medienanfragen.", 
+            "output": "newsletter@beispiel.de\npresse@beispiel.de",
+            "description": "Extrahiert E-Mails aus typischem Webseiten-Inhalt mit mehreren Kontaktpunkten."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unser E-Mail-Extraktions-Tool Verwenden",
+        "content": "Professionelle E-Mail-Extraktion mit erweiterten Funktionen und umfassender Validierung.",
+        "items": [
+          "Völlig kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz zuerst - alle Verarbeitung erfolgt lokal",
+          "Mehrere Extraktionsmodi für verschiedene Bedürfnisse",
+          "Erweiterte E-Mail-Validierung und -Verifizierung",
+          "Duplikaterkennung und -entfernung",
+          "Domain-Analyse und Statistiken",
+          "Mehrere Exportformate (TXT, CSV, JSON)",
+          "Datei-Upload-Unterstützung für große Dokumente",
+          "Echtzeit-Extraktion während Sie tippen",
+          "Mobil-optimiertes responsives Design",
+          "Funktioniert mit allen Sprachen und Zeichensätzen"
+        ]
+      },
+      "faqs": [
+        { "question": "Welche Extraktionsmodi sind verfügbar?", "answer": "Wir bieten drei Modi: Einfach (grundlegendes Pattern Matching), Umfassend (erweiterte Patterns für bessere Genauigkeit) und Strikt (folgt RFC-Standards eng für maximale Präzision)." },
+        { "question": "Wie funktioniert die E-Mail-Validierung?", "answer": "Unsere Validierung überprüft E-Mail-Format, Zeichengültigkeit, Domain-Struktur und häufige Muster, um potenziell ungültige Adressen zu identifizieren." },
+        { "question": "Kann ich E-Mails aus Dateien extrahieren?", "answer": "Ja! Laden Sie Textdateien (.txt, .md, .csv, etc.) hoch und das Tool extrahiert E-Mails aus dem gesamten Dokumentinhalt." },
+        { "question": "Sind meine Daten sicher und privat?", "answer": "Absolut. Alle E-Mail-Extraktion und -Verarbeitung erfolgt lokal in Ihrem Browser. Kein Text oder E-Mails werden auf unsere Server hochgeladen." },
+        { "question": "Welche Exportformate werden unterstützt?", "answer": "Sie können extrahierte E-Mails als Klartext (TXT), kommagetrennte Werte (CSV) mit Headern oder strukturiertes JSON-Format exportieren." },
+        { "question": "Wie werden Duplikate behandelt?", "answer": "Das Tool kann automatisch doppelte E-Mail-Adressen erkennen und entfernen, indem Groß-/Kleinschreibung unabhängiges Matching verwendet wird. Sie können diese Funktion aktivieren oder deaktivieren." },
+        { "question": "Kann ich die extrahierten E-Mails sortieren?", "answer": "Ja, Sie können E-Mails alphabetisch, nach Domain-Namen, nach Position im Originaltext oder nach Validierungsstatus (gültige E-Mails zuerst) sortieren." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textverarbeitungs-Tools",
+        "description": "Entdecken Sie andere nützliche Tools für Textverarbeitung und Datenextraktion.",
+        "items": [
+          { "name": "Text Zähler", "description": "Zählen Sie Zeichen, Wörter, Zeilen und analysieren Sie Textstatistiken", "href": "/de/tools/text-counter" },
+          { "name": "Text Suchen und Ersetzen", "description": "Finden und ersetzen Sie Text mit erweiterten Pattern-Matching-Optionen", "href": "/de/tools/text-replace" },
+          { "name": "Textformatierung Entfernen", "description": "Bereinigen und entfernen Sie Formatierung aus Textdokumenten", "href": "/de/tools/remove-text-formatting" },
+          { "name": "Doppelte Zeilen Entfernen", "description": "Entfernen Sie doppelte Zeilen und bereinigen Sie Textinhalte", "href": "/de/tools/duplicate-line-remover" }
+        ]
+      }
+    }
   }
 }
