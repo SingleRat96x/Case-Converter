@@ -1438,6 +1438,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Дубликаты Строк — Очистка Текста',
         description: 'Удаляйте повторяющиеся строки, оставляя первые или только уникальные. Сортируйте и очищайте списки для таблиц и кода.',
         shortDescription: 'Удаление дубликатов строк.',
+      },
+      de: {
+        title: 'Doppelte Zeilen Entfernen — Text Bereinigen und Deduplizieren',
+        description: 'Entfernen Sie doppelte Zeilen aus Ihrem Text, behalten Sie nur die erste oder einzigartige. Sortieren und bereinigen Sie Listen für Tabellen und Code.',
+        shortDescription: 'Doppelte Zeilen im Text entfernen.',
       }
     },
     schema: createAdvancedSchema('duplicate-line-remover', ['Deduplicate', 'Sort options'], 'Text Input', 'Deduplicated Text', 4.4, 456),

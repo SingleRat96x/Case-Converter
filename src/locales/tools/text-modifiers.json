@@ -143,7 +143,10 @@
         "title": "Processing Statistics",
         "original": "Original Lines",
         "unique": "Unique Lines",
-        "removed": "Duplicates Removed"
+        "removed": "Duplicates Removed",
+        "duplicatePercent": "Duplicate %",
+        "sizeRatio": "Size Ratio",
+        "efficiency": "Efficiency"
       },
       "info": {
         "caseSensitive": "",
@@ -507,7 +510,10 @@
         "title": "Статистика Обработки",
         "original": "Исходные Строки",
         "unique": "Уникальные Строки",
-        "removed": "Дубликаты Удалены"
+        "removed": "Дубликаты Удалены",
+        "duplicatePercent": "Процент Дубликатов",
+        "sizeRatio": "Соотношение Размера",
+        "efficiency": "Эффективность"
       },
       "info": {
         "caseSensitive": "",
@@ -1010,6 +1016,36 @@
         "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
         "estimatedReadingTime": "Minuten Lesezeit",
         "estimatedSpeakingTime": "Minuten Sprechzeit"
+      }
+    },
+    "duplicateLineRemover": {
+      "title": "Doppelte Zeilen Entfernen - Text Bereinigungstool",
+      "description": "Entfernen Sie doppelte Zeilen aus Ihrem Text mit erweiterten Optionen. Perfekt für Datenbereinigung, Duplikate entfernen und Textverarbeitung.",
+      "inputLabel": "Text zur Verarbeitung",
+      "outputLabel": "Einzigartige Zeilen",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um doppelte Zeilen zu entfernen...",
+      "uploadDescription": "",
+      "downloadFileName": "einzigartige-zeilen.txt",
+      "options": {
+        "caseSensitive": "Groß-/Kleinschreibung Beachten",
+        "trimLines": "Zeilen Trimmen",
+        "keepFirst": "Erste Behalten",
+        "preserveOrder": "Reihenfolge Bewahren"
+      },
+      "stats": {
+        "title": "Verarbeitungsstatistiken",
+        "original": "Original-Zeilen",
+        "unique": "Einzigartige Zeilen",
+        "removed": "Duplikate Entfernt",
+        "duplicatePercent": "Duplikat %",
+        "sizeRatio": "Größenverhältnis",
+        "efficiency": "Effizienz"
+      },
+      "info": {
+        "caseSensitive": "",
+        "trimLines": "",
+        "keepFirst": "",
+        "keepLast": "Behalten Sie das letzte Vorkommen doppelter Zeilen"
       }
     }
   }

@@ -160,5 +160,86 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Duplikate-Zeilen-Entferner - Text Bereinigungstool",
+    "metaDescription": "Entfernen Sie doppelte Zeilen aus Text sofort mit erweiterten Optionen. Groß-/Kleinschreibung beachten, Zeilen trimmen, erste/letzte behalten und Reihenfolge bewahren. Perfekt für Datenbereinigung und Textverarbeitung.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Duplikate-Zeilen-Entferner - Text Bereinigungstool",
+        "content": "Entfernen Sie doppelte Zeilen aus Ihrem Text mit leistungsstarken Optionen einschließlich Groß-/Kleinschreibung, Zeilen-Trimming und Reihenfolgenbewahrung. Perfekt für Datenbereinigung, Entfernen von Duplikaten und Textverarbeitung mit detaillierter Analytik."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen zum Entfernen doppelter Zeilen",
+        "items": [
+          { "title": "Erweiterte Optionen", "description": "Groß-/Kleinschreibung beachtender Vergleich, Zeilen-Trimming und Reihenfolgenbewahrung" },
+          { "title": "Flexible Verarbeitung", "description": "Behalten Sie erstes oder letztes Vorkommen doppelter Zeilen" },
+          { "title": "Echtzeit-Analytik", "description": "Detaillierte Statistiken zeigen Original-, Unique- und entfernte Zeilen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Verarbeiten Sie ganze Textdateien mit Duplikate-Zeilen-Entfernung" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie Ergebnisse einfach oder laden Sie bereinigte Textdateien herunter" },
+          { "title": "Datenschutz zuerst", "description": "Alle Verarbeitung erfolgt lokal in Ihrem Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Verwendungen für Duplikate-Zeilen-Entfernung",
+        "description": "Häufige Szenarien, wo Duplikate-Zeilen-Entfernung unerlässlich ist.",
+        "items": [
+          { "title": "Datenbereinigung", "description": "Bereinigen Sie Datensätze durch Entfernen doppelter Einträge und redundanter Informationen." },
+          { "title": "Log-Datei-Verarbeitung", "description": "Entfernen Sie doppelte Log-Einträge, um Dateigröße zu reduzieren und Lesbarkeit zu verbessern." },
+          { "title": "Textverarbeitung", "description": "Bereinigen Sie kopierten Text aus Dokumenten, Websites oder Datenbanken." },
+          { "title": "Code-Deduplizierung", "description": "Entfernen Sie doppelte Zeilen in Code-Dateien, Konfigurationsdateien oder Skripten." },
+          { "title": "Listenverwaltung", "description": "Bereinigen Sie E-Mail-Listen, Kontaktlisten oder textbasierte Listen." },
+          { "title": "Content-Organisation", "description": "Organisieren und bereinigen Sie Content durch Entfernen doppelter Absätze oder Abschnitte." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Entfernen Sie Doppelte Zeilen",
+        "description": "Folgen Sie diesen einfachen Schritten, um Ihren Text zu bereinigen.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Fügen Sie Ihren Text ein oder laden Sie eine Datei mit doppelten Zeilen hoch." },
+          { "step": 2, "title": "Optionen Konfigurieren", "description": "Wählen Sie Groß-/Kleinschreibung, Zeilen-Trimming und ob erstes oder letztes Vorkommen behalten werden soll." },
+          { "step": 3, "title": "Analytik Überprüfen", "description": "Überprüfen Sie die detaillierten Statistiken zu Original-, Unique- und entfernten Zeilenzahlen." },
+          { "step": 4, "title": "Kopieren oder Herunterladen", "description": "Kopieren Sie den bereinigten Text oder laden Sie ihn als Datei zur weiteren Verwendung herunter." }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Duplikate-Zeilen-Entfernung",
+        "description": "Sehen Sie, wie verschiedene Texttypen bereinigt werden.",
+        "items": [
+          { "title": "Einfache Liste", "input": "Apfel\nBanane\nApfel\nOrange\nBanane", "output": "Apfel\nBanane\nOrange" },
+          { "title": "Groß-/Kleinschreibung beachten", "input": "Hallo\nhallo\nHALLO", "output": "Hallo\nhallo\nHALLO" },
+          { "title": "Mit Leerzeichen", "input": "  Zeile 1  \nZeile 1\n  Zeile 2  ", "output": "  Zeile 1  \n  Zeile 2  " }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Duplikate-Zeilen-Entferner Verwenden",
+        "content": "Professionelle Duplikate-Zeilen-Entfernung mit umfassender Analytik und flexiblen Optionen.",
+        "items": [
+          "Völlig kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz zuerst - alle Verarbeitung erfolgt lokal",
+          "Erweiterte Optionen für präzise Kontrolle",
+          "Echtzeit-Analytik und Statistiken",
+          "Unterstützung für große Textdateien",
+          "Mobil-optimiertes responsives Design",
+          "Funktioniert mit allen Textformaten und Sprachen"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist Duplikate-Zeilen-Entfernung?", "answer": "Duplikate-Zeilen-Entfernung ist der Prozess der Identifizierung und Entfernung wiederholter Zeilen aus Text, wobei nur einzigartige Einträge beibehalten werden." },
+        { "question": "Was ist der Unterschied zwischen Groß-/Kleinschreibung beachten und nicht beachten?", "answer": "Groß-/Kleinschreibung beachten behandelt 'Hallo' und 'hallo' als unterschiedliche Zeilen, während nicht beachten sie als gleich behandelt." },
+        { "question": "Kann ich große Dateien verarbeiten?", "answer": "Ja, unser Tool kann große Textdateien effizient mit Echtzeit-Verarbeitung und detaillierter Analytik verarbeiten." },
+        { "question": "Sind meine Daten privat?", "answer": "Ja, alle Textverarbeitung erfolgt lokal in Ihrem Browser. Ihre Daten werden niemals auf unsere Server hochgeladen." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textverarbeitungs-Tools",
+        "items": [
+          { "name": "Text Zähler", "description": "Analysieren Sie Textstatistiken einschließlich Zeilen, Wörter und Zeichen", "href": "/de/tools/text-counter" },
+          { "name": "Zeilenumbrüche Entfernen", "description": "Entfernen Sie unerwünschte Zeilenumbrüche aus Text", "href": "/de/tools/remove-line-breaks" },
+          { "name": "Text Ersetzen", "description": "Finden und ersetzen Sie Text mit erweiterten Optionen", "href": "/de/tools/text-replace" },
+          { "name": "Worthäufigkeits-Analysator", "description": "Analysieren Sie Worthäufigkeit und finden Sie häufige Wörter", "href": "/de/tools/word-frequency" }
+        ]
+      }
+    }
   }
 }
