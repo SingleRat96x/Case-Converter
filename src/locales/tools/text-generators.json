@@ -52,7 +52,10 @@
       "copiedMessage": "Cursed text copied to clipboard!",
       "downloadFileName": "cursed-text.txt",
       "convertButton": "Generate Cursed Text",
-      "uploadDescription": ""
+      "uploadDescription": "",
+      "intensityLow": "Low Intensity",
+      "intensityMedium": "Medium Intensity",
+      "intensityHigh": "High Intensity"
     },
     "mirror": {
       "title": "Mirror Text Generator",
@@ -577,7 +580,10 @@
       "copiedMessage": "Проклятый текст скопирован в буфер обмена!",
       "downloadFileName": "cursed-text.txt",
       "convertButton": "Сгенерировать Проклятый Текст",
-      "uploadDescription": ""
+      "uploadDescription": "",
+      "intensityLow": "Низкая Интенсивность",
+      "intensityMedium": "Средняя Интенсивность",
+      "intensityHigh": "Высокая Интенсивность"
     },
     "mirror": {
       "title": "Генератор Зеркального Текста",
@@ -1067,6 +1073,18 @@
       "downloadFileName": "blasentext.txt",
       "convertButton": "Blasentext Generieren",
       "uploadDescription": ""
+    },
+    "cursed": {
+      "title": "Verfluchter Text Generator",
+      "description": "Erstellen Sie glitchigen, Zalgo-Stil verfluchten Text mit kombinierenden diakritischen Zeichen. Perfekt für gruselige, chaotische oder aufmerksamkeitsstarke Texteffekte.",
+      "outputLabel": "Verfluchter Text",
+      "copiedMessage": "Verfluchter Text in Zwischenablage kopiert!",
+      "downloadFileName": "verfluchter-text.txt",
+      "convertButton": "Verfluchten Text Generieren",
+      "uploadDescription": "",
+      "intensityLow": "Niedrige Intensität",
+      "intensityMedium": "Mittlere Intensität",
+      "intensityHigh": "Hohe Intensität"
     },
     "bigText": {
       "title": "Big Text Generator",

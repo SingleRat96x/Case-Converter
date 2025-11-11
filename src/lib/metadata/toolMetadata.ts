@@ -1734,6 +1734,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Проклятого Текста — Unicode Стилизация',
         description: 'Создавайте проклятый, стилизованный текст с помощью Unicode символов. Уникальные шрифты для соцсетей, ников и креативных проектов.',
         shortDescription: 'Генератор проклятого Unicode текста для соцсетей.',
+      },
+      de: {
+        title: 'Verfluchter Text Generator — Unicode Stilisierter Text',
+        description: 'Generieren Sie verfluchten, stilisierten Text mit Unicode-Zeichen. Erstellen Sie einzigartige Schriftarten für Social Media, Benutzernamen und kreative Projekte.',
+        shortDescription: 'Verfluchten Unicode-Text für Social Media generieren.',
       }
     },
     schema: createAdvancedSchema('cursed-text', ['Unicode text', 'Stylish fonts', 'Social media ready', 'Creative styling'], 'Text Input', 'Cursed Text', 4.3, 389),

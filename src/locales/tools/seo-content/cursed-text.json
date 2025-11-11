@@ -160,6 +160,87 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Verfluchter Text Generator - Zalgo Glitch Unicode",
+    "metaDescription": "Erstellen Sie verfluchten (Zalgo) Text mit glitchigen diakritischen Zeichen. Perfekt für gruselige Effekte, Memes und aufmerksamkeitsstarken Text, der einfaches Unicode bleibt.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Verfluchter Text Generator - Zalgo Glitch Unicode",
+        "content": "Generieren Sie sofort chaotischen, glitchigen verfluchten Text mit kombinierenden diakritischen Zeichen. Fügen Sie einen gruseligen, beschädigten Look zu Ihren Nachrichten hinzu, während Sie Unicode-kompatibel bleiben."
+      },
+      "features": {
+        "title": "Verfluchter Text Funktionen",
+        "items": [
+          { "title": "Sofortige Konvertierung", "description": "Echtzeit-Generierung von verfluchtem Text während Sie tippen" },
+          { "title": "Intensitätskontrolle", "description": "Wählen Sie niedrige, mittlere oder hohe Korruptionsstufen" },
+          { "title": "Datei-Upload", "description": "Konvertieren Sie ganze Dateien in verfluchten Text" },
+          { "title": "Kopieren & Herunterladen", "description": "In Zwischenablage kopieren oder als Text herunterladen" },
+          { "title": "Text-Analytik", "description": "Sehen Sie Zählungen und Statistiken für Ihren transformierten Text" },
+          { "title": "Datenschutz zuerst", "description": "Alle Verarbeitung läuft lokal in Ihrem Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Verwendungen für Verfluchten Text",
+        "description": "Erstellen Sie beunruhigende, Horror-thematische oder Meme-artige Texteffekte.",
+        "items": [
+          { "title": "Horror & Gruselige Posts", "description": "Fügen Sie unheimliche Stimmung zu Halloween-Posts und Horror-Content hinzu." },
+          { "title": "Memes & Witze", "description": "Erstellen Sie chaotische, lustige Ausgaben für Meme-Formate." },
+          { "title": "Glitch-Ästhetik", "description": "Stylen Sie Text mit einem beschädigten, kaputten Aussehen." },
+          { "title": "Aufmerksamkeits-Erreger", "description": "Machen Sie Titel und Callouts unmöglich zu ignorieren." },
+          { "title": "Kreative Projekte", "description": "Verwenden Sie in Postern, Thumbnails und Kunst für einen einzigartigen Look." },
+          { "title": "Chat & Social", "description": "Senden Sie beunruhigende Nachrichten, die in Chats herausstechen." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Generieren Sie Verfluchten Text",
+        "description": "Verwandeln Sie normalen Text in wenigen Schritten in verfluchten Text.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Tippen oder fügen Sie Ihren Text ein oder laden Sie eine Datei hoch." },
+          { "step": 2, "title": "Intensität Wählen", "description": "Wählen Sie niedrige, mittlere oder hohe Korruptionsstufe." },
+          { "step": 3, "title": "Analytik Überprüfen", "description": "Überprüfen Sie Wort-/Zeichenzahlen und andere Statistiken." },
+          { "step": 4, "title": "Kopieren oder Herunterladen", "description": "In Zwischenablage kopieren oder als Textdatei herunterladen." }
+        ]
+      },
+      "examples": {
+        "title": "Verfluchter Text Beispiele",
+        "description": "Vergleichen Sie verschiedene Intensitätsstufen.",
+        "items": [
+          { "title": "Niedrig", "input": "Hallo dort", "output": "H̗̘a̱͒l̦̑l̪͂o̟ͫ d̝͛o̙ͫr̗t̠͌" },
+          { "title": "Mittel", "input": "Achtung", "output": "A̳ͫc̞̍h̤͛t̬ͯu̪ͬṉ̐g̞̐" },
+          { "title": "Hoch", "input": "Es kommt", "output": "E͚ͫs͙ͫ k͔̃o̲̐m̗̈́m̟̊t̞̍" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Verfluchten Text Generator Verwenden",
+        "content": "Schnelle, flexible und datenschutzfreundliche Erstellung von verfluchtem Text.",
+        "items": [
+          "Kostenlos und unbegrenzt",
+          "Keine Anmeldung erforderlich",
+          "Nur lokale Verarbeitung",
+          "Mehrere Intensitätsstufen",
+          "Echtzeit-Konvertierung",
+          "Analytik enthalten",
+          "Responsives Design",
+          "Unicode-kompatible Ausgabe"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist verfluchter (Zalgo) Text?", "answer": "Verfluchter Text verwendet übermäßige kombinierende diakritische Zeichen, um ein chaotisches, geglitchtes Aussehen zu erzeugen, während er einfacher Unicode-Text bleibt." },
+        { "question": "Wird er überall angezeigt?", "answer": "Die Anzeige variiert je nach Schriftart und Plattform, aber die meisten modernen Systeme zeigen kombinierende Zeichen korrekt an." },
+        { "question": "Kann ich Dateien konvertieren?", "answer": "Ja, laden Sie eine Textdatei hoch und das Tool konvertiert deren Inhalt." },
+        { "question": "Sind meine Daten privat?", "answer": "Alle Verarbeitung erfolgt in Ihrem Browser—keine Uploads." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Styling-Tools",
+        "items": [
+          { "name": "Fetter Text Generator", "description": "Generieren Sie fetten Unicode-Text", "href": "/de/tools/bold-text" },
+          { "name": "Kursivtext Generator", "description": "Erstellen Sie kursiven Unicode-Text", "href": "/de/tools/italic-text" },
+          { "name": "Blasentext Generator", "description": "Verwandeln Sie Text in spielerische Blasenbuchstaben", "href": "/de/tools/bubble-text" },
+          { "name": "Discord Schriftarten Generator", "description": "Gaming-inspirierte Unicode-Stile für Discord", "href": "/de/tools/discord-font" }
+        ]
+      }
+    }
   }
 }
 

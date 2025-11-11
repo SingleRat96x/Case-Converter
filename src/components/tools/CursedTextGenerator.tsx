@@ -61,21 +61,21 @@ export function CursedTextGenerator() {
           size="sm"
           onClick={() => handleIntensityChange('low')}
         >
-          Low Intensity
+          {tool('cursed.intensityLow')}
         </Button>
         <Button
           variant={intensity === 'medium' ? 'default' : 'outline'}
           size="sm"
           onClick={() => handleIntensityChange('medium')}
         >
-          Medium Intensity
+          {tool('cursed.intensityMedium')}
         </Button>
         <Button
           variant={intensity === 'high' ? 'default' : 'outline'}
           size="sm"
           onClick={() => handleIntensityChange('high')}
         >
-          High Intensity
+          {tool('cursed.intensityHigh')}
         </Button>
       </div>
     </BaseTextConverter>
