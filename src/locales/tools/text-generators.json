@@ -1065,6 +1065,15 @@
       "convertButton": "Fetten Text Generieren",
       "uploadDescription": ""
     },
+    "italic": {
+      "title": "Kursivtext Generator",
+      "description": "Generieren Sie kursiven Unicode-Text, der überall funktioniert. Verwandeln Sie Ihren normalen Text in kursive Zeichen für Betonung und stilistische Formatierung.",
+      "outputLabel": "Kursivtext",
+      "copiedMessage": "Kursivtext in Zwischenablage kopiert!",
+      "downloadFileName": "kursivtext.txt",
+      "convertButton": "Kursivtext Generieren",
+      "uploadDescription": ""
+    },
     "bubble": {
       "title": "Blasentext Generator",
       "description": "Verwandeln Sie Ihren Text in Blasenbuchstaben mit Unicode-Zeichen. Erstellen Sie lustigen, spielerischen Text perfekt für Social Media, Nachrichten und kreativen Content.",

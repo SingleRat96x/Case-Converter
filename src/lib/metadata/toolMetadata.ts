@@ -1648,6 +1648,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Курсив — Наклонный Unicode (Копировать и Вставить)',
         description: 'Делайте наклонный курсивный Unicode‑текст для постов, био и сообщений. Пишите, просматривайте, копируйте мгновенно.',
         shortDescription: 'Курсивный Unicode‑текст (копировать).',
+      },
+      de: {
+        title: 'Kursivtext Generator — Schräger Unicode (Kopieren & Einfügen)',
+        description: 'Erstellen Sie schrägen kursiven Unicode-Text für Posts, Bios und Nachrichten. Tippen, Vorschau anzeigen, kopieren & einfügen sofort. Kostenlos und unbegrenzt.',
+        shortDescription: 'Kursiver Unicode-Text (kopieren & einfügen).',
       }
     },
     schema: createAdvancedSchema('italic-text', ['Italic style', 'Instant copy'], 'Text Input', 'Italic Text', 4.7, 789),

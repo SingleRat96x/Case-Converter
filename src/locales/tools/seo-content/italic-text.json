@@ -162,6 +162,88 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Kursivtext Generator - Unicode Kursiv Konverter",
+    "metaDescription": "Generieren Sie kursiven Unicode-Text sofort mit unserem kostenlosen Kursivtext-Generator. Erstellen Sie kursive Schriftarten für Social Media, Dokumente und Messaging, die überall funktionieren. Kopieren und einfügen Sie kursiven Text.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Kursivtext Generator - Unicode Kursiv Konverter",
+        "content": "Verwandeln Sie Ihren normalen Text sofort in kursive Unicode-Zeichen mit unserem leistungsstarken und kostenlosen Kursivtext-Generator. Perfekt zum Erstellen von Betonung in Social-Media-Posts, professionellen Dokumenten und herausragenden Nachrichten, die auf allen Plattformen und Geräten funktionieren."
+      },
+      "features": {
+        "title": "Leistungsstarke Kursivtext-Generierungs-Funktionen",
+        "items": [
+          { "title": "Sofortige Konvertierung", "description": "Echtzeit-Kursivtext-Konvertierung während Sie tippen oder Text einfügen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und konvertieren Sie ganze Dokumente in kursiven Text" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie Ergebnisse einfach oder laden Sie sie als Textdateien herunter" },
+          { "title": "Textanalytik", "description": "Erhalten Sie detaillierte Statistiken über Ihren konvertierten Text" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert mit allen Sprachen und Sonderzeichen" },
+          { "title": "Datenschutz zuerst", "description": "Alle Konvertierung erfolgt lokal—keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Verwendungen für Kursivtext",
+        "description": "Kursivtext ist perfekt für Betonung und stilistische Darstellung auf Plattformen und in verschiedenen Inhaltstypen.",
+        "items": [
+          { "title": "Social-Media-Betonung", "description": "Fügen Sie subtile Betonung zu Instagram-Bios, Bildunterschriften und Tweets mit kursivem Text hinzu." },
+          { "title": "Dokument-Styling", "description": "Formatieren Sie Titel, Referenzen und Notizen mit professionell aussehendem kursivem Text." },
+          { "title": "Chat & Foren", "description": "Heben Sie Schlüsselbegriffe hervor oder fügen Sie Ton in Discord, Slack und Forenbeiträgen hinzu." },
+          { "title": "Überschriften & Callouts", "description": "Gestalten Sie herausragende Zwischenüberschriften und Callouts für Artikel und Landingpages." },
+          { "title": "Plattformübergreifende Konsistenz", "description": "Stellen Sie sicher, dass derselbe kursive Stil überall mit Unicode-Zeichen erscheint." },
+          { "title": "Branding & Style Guides", "description": "Behalten Sie den Markenton bei, indem Sie kursiven Text für bestimmte Begriffe gemäß Ihrem Style Guide verwenden." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Generieren Sie Kursivtext",
+        "description": "Folgen Sie diesen einfachen Schritten, um Ihren Text in kursive Unicode-Zeichen zu konvertieren.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Geben Sie Ihren Text in den Eingabebereich ein oder fügen Sie ihn ein, oder laden Sie eine Textdatei zur Konvertierung hoch." },
+          { "step": 2, "title": "Automatische Konvertierung", "description": "Beobachten Sie, wie Ihr Text sofort in Echtzeit in kursive Unicode-Zeichen konvertiert wird." },
+          { "step": 3, "title": "Analytik Überprüfen", "description": "Überprüfen Sie die Textstatistiken einschließlich Zeichenanzahl, Wortanzahl und mehr." },
+          { "step": 4, "title": "Kopieren oder Herunterladen", "description": "Kopieren Sie den kursiven Text in Ihre Zwischenablage oder laden Sie ihn als Textdatei herunter, um ihn überall zu verwenden." }
+        ]
+      },
+      "examples": {
+        "title": "Kursivtext-Konvertierungsbeispiele",
+        "description": "Sehen Sie, wie verschiedene Texttypen in das kursive Unicode-Format konvertiert werden.",
+        "items": [
+          { "title": "Einfacher Text", "input": "Hallo Welt", "output": "𝘏𝘢𝘭𝘭𝘰 𝘞𝘦𝘭𝘵" },
+          { "title": "Social Media", "input": "Folgen Sie mir für mehr Tipps!", "output": "𝘍𝘰𝘭𝘨𝘦𝘯 𝘚𝘪𝘦 𝘮𝘪𝘳 𝘧ü𝘳 𝘮𝘦𝘩𝘳 𝘛𝘪𝘱𝘱𝘴!" },
+          { "title": "Call to Action", "input": "Mehr Erfahren", "output": "𝘔𝘦𝘩𝘳 𝘌𝘳𝘧𝘢𝘩𝘳𝘦𝘯" },
+          { "title": "Mit Zahlen", "input": "Sparen Sie 20% Heute", "output": "𝘚𝘱𝘢𝘳𝘦𝘯 𝘚𝘪𝘦 20% 𝘏𝘦𝘶𝘵𝘦" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Kursivtext-Generator Verwenden",
+        "content": "Professionelle Kursivtext-Generierung mit umfassenden Funktionen und Analytik.",
+        "items": [
+          "Völlig kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz zuerst - alle Verarbeitung erfolgt lokal",
+          "Unterstützung für mehrere Dateiformate",
+          "Echtzeit-Konvertierung während Sie tippen",
+          "Detaillierte Textanalytik enthalten",
+          "Mobil-optimiertes responsives Design",
+          "Funktioniert mit allen Sprachen und Zeichen"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist Kursivtext?", "answer": "Kursivtext ist ein schräger Stil von Zeichen, der für Betonung, Titel und stilistische Zwecke verwendet wird. Dieses Tool konvertiert normalen Text in kursive Unicode-Zeichen, die auf allen Plattformen funktionieren." },
+        { "question": "Funktioniert das Tool mit nicht-englischem Text?", "answer": "Ja, unser Kursivtext-Generator funktioniert mit allen Sprachen und Zeichensätzen, einschließlich akzentuierter Zeichen, Sonderzeichen und Unicode-Text aus jeder Sprache." },
+        { "question": "Kann ich ganze Dateien in Kursivtext konvertieren?", "answer": "Absolut! Sie können Textdateien (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) hochladen und deren gesamten Inhalt in kursive Formatierung konvertieren." },
+        { "question": "Sind meine Textdaten sicher und privat?", "answer": "Ja, alle Textkonvertierung erfolgt lokal in Ihrem Browser. Ihr Text wird niemals auf unsere Server hochgeladen oder mit jemandem geteilt. Vollständige Privatsphäre garantiert." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Styling-Tools",
+        "items": [
+          { "name": "Fetter Text Generator", "description": "Erstellen Sie fetten Unicode-Text für Betonung und Styling", "href": "/de/tools/bold-text" },
+          { "name": "Instagram Schriftarten Generator", "description": "Generieren Sie stilvolle Schriftarten perfekt für Instagram-Bios und -Posts", "href": "/de/tools/instagram-fonts" },
+          { "name": "Facebook Schriftarten Generator", "description": "Erstellen Sie auffällige Schriftarten für Facebook-Posts und Profile", "href": "/de/tools/facebook-font" },
+          { "name": "Discord Schriftarten Generator", "description": "Generieren Sie einzigartige Schriftarten für Discord-Nachrichten und Benutzernamen", "href": "/de/tools/discord-font" }
+        ]
+      }
+    }
   }
 }
 
