@@ -1583,6 +1583,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Большой Текст — Крупные Буквы для Заголовков',
         description: 'Делайте крупные буквы для заголовков и баннеров. Пишите, просматривайте и копируйте одним кликом. Бесплатно без лимитов.',
         shortDescription: 'Крупные буквы для заголовков.',
+      },
+      de: {
+        title: 'Big Text Generator — Große Buchstaben für Überschriften (Kostenlos)',
+        description: 'Erstellen Sie große Buchstaben für Überschriften, Titel und Banner. Tippen, Vorschau anzeigen, kopieren & einfügen mit einem Klick. Kostenlos und unbegrenzt.',
+        shortDescription: 'Große Buchstaben für Überschriften (kostenlos).',
       }
     },
     schema: createAdvancedSchema('big-text', ['Large letters', 'Instant copy'], 'Text Input', 'Big Text', 4.5, 567),

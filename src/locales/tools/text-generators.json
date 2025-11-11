@@ -1050,6 +1050,15 @@
     }
   },
   "de": {
+    "bigText": {
+      "title": "Big Text Generator",
+      "description": "Generieren Sie großen, fetten Unicode-Text, der hervorsticht. Perfekt für Überschriften, Ankündigungen und um Ihren Text prominenter und auffälliger zu machen.",
+      "outputLabel": "Big Text",
+      "copiedMessage": "Big Text in Zwischenablage kopiert!",
+      "downloadFileName": "big-text.txt",
+      "convertButton": "Big Text Generieren",
+      "uploadDescription": ""
+    },
     "camelCase": {
       "title": "Camel Case Converter (Text & JSON-Schlüssel)",
       "description": "Konvertieren Sie snake_case, kebab-case oder Text mit Leerzeichen in camelCase. Funktioniert mit verschachteltem JSON.",

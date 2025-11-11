@@ -160,6 +160,87 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Big Text Generator - Große Fette Unicode-Text",
+    "metaDescription": "Generieren Sie großen, fetten Unicode-Text, der hervorsticht. Perfekt für Überschriften, Ankündigungen und um Ihren Text prominenter und auffälliger zu machen.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Big Text Generator - Große Fette Unicode-Text",
+        "content": "Erstellen Sie sofort aufmerksamkeitsstarken großen Text mit Unicode-freundlichen Zeichen. Ideal für Überschriften, Social-Media-Posts, Callouts und Ankündigungen, die Wirkung und Lesbarkeit plattformübergreifend benötigen."
+      },
+      "features": {
+        "title": "Leistungsstarke Big Text Funktionen",
+        "items": [
+          { "title": "Sofortige Konvertierung", "description": "Echtzeit-Konvertierung zu großem Text während Sie tippen oder Text einfügen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und konvertieren Sie ganze Dokumente zu großem Text" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie Ergebnisse einfach oder laden Sie als Textdateien herunter" },
+          { "title": "Text-Analytik", "description": "Erhalten Sie detaillierte Statistiken über Ihren konvertierten Text" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert mit allen Sprachen und Sonderzeichen" },
+          { "title": "Datenschutz-First", "description": "Alle Konvertierung erfolgt lokal—keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Verwendungen für Big Text",
+        "description": "Lassen Sie Inhalte mit lesbarem, wirkungsvollem großem Text hervorstechen.",
+        "items": [
+          { "title": "Überschriften & Banner", "description": "Erstellen Sie fette Überschriften für Seiten, Landing-Bereiche und Banner." },
+          { "title": "Ankündigungen", "description": "Heben Sie wichtige Updates, Verkäufe oder Warnungen mit großem Text hervor." },
+          { "title": "Social Media", "description": "Gestalten Sie scroll-stopping Posts und Story-Untertitel." },
+          { "title": "Präsentationsfolien", "description": "Verbessern Sie Lesbarkeit und Betonung auf Folien und Postern." },
+          { "title": "Callouts & CTAs", "description": "Lenken Sie Aufmerksamkeit auf Call-to-Action-Phrasen und Schlüsselpunkte." },
+          { "title": "Barrierefreiheit", "description": "Verbessern Sie Lesbarkeit für Benutzer, die von größeren Textgrößen profitieren." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Generieren Sie Big Text",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihren Text in ein größeres, fettes Format zu konvertieren.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein, oder laden Sie eine Textdatei zur Konvertierung hoch." },
+          { "step": 2, "title": "Automatische Konvertierung", "description": "Beobachten Sie, wie Ihr Text sofort in große, fett-stilisierte Zeichen konvertiert wird." },
+          { "step": 3, "title": "Analytik Überprüfen", "description": "Prüfen Sie die Textstatistiken einschließlich Zeichenanzahl, Wortanzahl und mehr." },
+          { "step": 4, "title": "Kopieren oder Herunterladen", "description": "Kopieren Sie den großen Text in Ihre Zwischenablage oder laden Sie ihn als Textdatei herunter." }
+        ]
+      },
+      "examples": {
+        "title": "Big Text Konvertierungsbeispiele",
+        "description": "Sehen Sie, wie verschiedene Textarten in einen größeren, wirkungsvollen Stil konvertiert werden.",
+        "items": [
+          { "title": "Überschrift", "input": "Blitzverkauf Heute", "output": "🅱🅻🅸🆃🆉🆅🅴🆁🅺🅰🆄🅵 🅷🅴🆄🆃🅴" },
+          { "title": "Callout", "input": "Zeitlich Begrenztes Angebot", "output": "🆉🅴🅸🆃🅻🅸🅲🅷 🅱🅴🅶🆁🅴🅽🆉🆃🅴🆂 🅰🅽🅶🅴🅱🅾🆃" },
+          { "title": "CTA", "input": "Jetzt Beitreten", "output": "🅹🅴🆃🆉🆃 🅱🅴🅸🆃🆁🅴🆃🅴🅽" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Big Text Generator Verwenden",
+        "content": "Professionelle Konvertierung großen Texts mit umfassenden Funktionen und Analytik.",
+        "items": [
+          "Komplett kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz-first - alle Verarbeitung lokal durchgeführt",
+          "Unterstützung für mehrere Dateiformate",
+          "Echtzeit-Konvertierung während Sie tippen",
+          "Detaillierte Text-Analytik enthalten",
+          "Mobil-optimiertes responsives Design",
+          "Funktioniert mit allen Sprachen und Zeichen"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist Big Text?", "answer": "Big Text ist visuell größerer oder stilisierter Text, der mit Unicode-freundlichen Zeichen und Transformationen erstellt wird, um Wirkung und Lesbarkeit zu erhöhen." },
+        { "question": "Funktioniert das Tool überall?", "answer": "Ja, die generierten Zeichen sind Klartext und funktionieren plattformübergreifend, in Apps und Browsern, die Unicode unterstützen." },
+        { "question": "Kann ich ganze Dateien konvertieren?", "answer": "Absolut! Laden Sie eine Textdatei hoch, um ihren Inhalt in einen großen Textstil zu konvertieren." },
+        { "question": "Sind meine Daten privat?", "answer": "Alle Verarbeitung erfolgt lokal in Ihrem Browser. Nichts wird hochgeladen." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Styling-Tools",
+        "items": [
+          { "name": "Fetter Text Generator", "description": "Generieren Sie fetten Unicode-Text, der überall funktioniert", "href": "/de/tools/bold-text" },
+          { "name": "Kursiver Text Generator", "description": "Erstellen Sie kursiven Unicode-Text für Betonung und Styling", "href": "/de/tools/italic-text" },
+          { "name": "Instagram Schriftarten Generator", "description": "Generieren Sie stilvolle Schriftarten für Social-Media-Bios und Posts", "href": "/de/tools/instagram-fonts" },
+          { "name": "Facebook Schriftarten Generator", "description": "Erstellen Sie auffällige Schriftarten für Facebook-Posts und Profile", "href": "/de/tools/facebook-font" }
+        ]
+      }
+    }
   }
 }
 
