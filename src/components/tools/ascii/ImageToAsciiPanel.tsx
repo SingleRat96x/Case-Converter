@@ -312,7 +312,7 @@ export function ImageToAsciiPanel({ onAsciiGenerated }: ImageToAsciiPanelProps) 
           <div className="space-y-2 mb-4">
             <label className="text-sm font-medium text-foreground flex items-center gap-2">
               <Settings className="h-4 w-4" />
-              ASCII Settings
+              {tool('asciiArtGenerator.imagePanel.settingsLabel')}
             </label>
           </div>
           <div className="border border-border rounded-lg p-4 bg-muted/10">
@@ -402,7 +402,7 @@ export function ImageToAsciiPanel({ onAsciiGenerated }: ImageToAsciiPanelProps) 
           >
             <div className="flex items-center gap-2">
               <Settings className="h-4 w-4 text-muted-foreground" />
-              <span className="text-sm font-medium text-foreground">ASCII Settings</span>
+              <span className="text-sm font-medium text-foreground">{tool('asciiArtGenerator.imagePanel.settingsLabel')}</span>
             </div>
             <ChevronDown 
               className={`h-4 w-4 text-muted-foreground transition-transform duration-200 ${

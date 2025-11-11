@@ -33,10 +33,10 @@ export function AsciiModeSelector({ mode, onModeChange }: AsciiModeSelectorProps
     <div className="space-y-6 mb-8">
       <div className="text-center">
         <h2 className="text-lg font-semibold text-foreground mb-2">
-          Choose Generation Mode
+          {tool('asciiArtGenerator.modeSelector.title')}
         </h2>
         <p className="text-sm text-muted-foreground">
-          Select whether you want to convert text or images into ASCII art
+          {tool('asciiArtGenerator.modeSelector.description')}
         </p>
       </div>
       
