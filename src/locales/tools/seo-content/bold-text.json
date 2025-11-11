@@ -270,5 +270,141 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Fetter Text Generator - Unicode Fettdruck Schriftarten Konverter",
+    "metaDescription": "Erstellen Sie sofort fetten Unicode-Text mit unserem kostenlosen Fetttext-Generator. Erstellen Sie fette Schriftarten für Social Media, Dokumente und Messaging, die überall funktionieren. Kopieren und einfügen Sie fetten Text.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Fetter Text Generator - Unicode Fettdruck Schriftarten Konverter",
+        "content": "Verwandeln Sie Ihren normalen Text sofort in fette Unicode-Zeichen mit unserem leistungsstarken und kostenlosen Fetttext-Generator. Perfekt für auffällige Social-Media-Beiträge, professionelle Dokumente und herausragende Nachrichten, die auf allen Plattformen und Geräten funktionieren."
+      },
+      "features": {
+        "title": "Leistungsstarke Fetttext-Generierungs-Funktionen",
+        "items": [
+          { "title": "Sofortige Konvertierung", "description": "Echtzeit-Fetttext-Konvertierung während Sie tippen oder Text einfügen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und konvertieren Sie ganze Dokumente in fetten Text" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie Ergebnisse einfach oder laden Sie sie als Textdateien herunter" },
+          { "title": "Text-Analytik", "description": "Erhalten Sie detaillierte Statistiken über Ihren konvertierten Text" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert mit allen Sprachen und Sonderzeichen" },
+          { "title": "Datenschutz zuerst", "description": "Alle Konvertierungen erfolgen lokal—keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Wann Fetttext-Generierung Verwenden",
+        "description": "Fetter Text dient vielen wichtigen Zwecken auf verschiedenen Plattformen und in verschiedenen Kommunikationskontexten.",
+        "items": [
+          { "title": "Social-Media-Beiträge", "description": "Heben Sie Ihre Twitter-, Facebook- und Instagram-Beiträge mit fettem Text hervor" },
+          { "title": "Discord & Gaming", "description": "Erstellen Sie aufmerksamkeitsstarke Nachrichten in Discord-Servern und Gaming-Communities" },
+          { "title": "WhatsApp & Messaging", "description": "Betonen Sie wichtige Nachrichten in Chat-Anwendungen und Text-Messaging" },
+          { "title": "E-Mail-Marketing", "description": "Heben Sie wichtige Punkte und Handlungsaufforderungen in E-Mail-Kampagnen hervor" },
+          { "title": "Dokument-Überschriften", "description": "Erstellen Sie fette Überschriften und Titel für professionelle Dokumente" },
+          { "title": "Website-Inhalte", "description": "Betonen Sie wichtigen Text auf Websites und Landing-Pages" },
+          { "title": "Kreatives Schreiben", "description": "Fügen Sie Betonung und visuelle Wirkung zu kreativen Inhalten und Geschichten hinzu" },
+          { "title": "Bildungsmaterialien", "description": "Heben Sie Schlüsselkonzepte und wichtige Informationen in Lernmaterialien hervor" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Erstellen Sie Fetten Text",
+        "description": "Folgen Sie diesen einfachen Schritten, um Ihren Text in fette Unicode-Zeichen zu konvertieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text Ein",
+            "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein oder laden Sie eine Textdatei zur Konvertierung hoch."
+          },
+          {
+            "step": 2,
+            "title": "Automatische Konvertierung",
+            "description": "Sehen Sie zu, wie Ihr Text sofort in Echtzeit in fette Unicode-Zeichen konvertiert wird."
+          },
+          {
+            "step": 3,
+            "title": "Analytik Überprüfen",
+            "description": "Überprüfen Sie die Textstatistiken einschließlich Zeichenanzahl, Wortanzahl und mehr."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen",
+            "description": "Kopieren Sie den fetten Text in die Zwischenablage oder laden Sie ihn als Textdatei herunter, um ihn überall zu verwenden."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Fetttext-Konvertierung",
+        "description": "Sehen Sie, wie verschiedene Texttypen in fettes Unicode-Format konvertiert werden.",
+        "items": [
+          { "title": "Einfacher Text", "input": "Hallo Welt", "output": "𝐇𝐚𝐥𝐥𝐨 𝐖𝐞𝐥𝐭" },
+          { "title": "Social Media", "input": "Folgen Sie mir für mehr Tipps!", "output": "𝐅𝐨𝐥𝐠𝐞𝐧 𝐒𝐢𝐞 𝐦𝐢𝐫 𝐟ü𝐫 𝐦𝐞𝐡𝐫 𝐓𝐢𝐩𝐩𝐬!" },
+          { "title": "Handlungsaufforderung", "input": "JETZT HIER KLICKEN", "output": "𝐉𝐄𝐓𝐙𝐓 𝐇𝐈𝐄𝐑 𝐊𝐋𝐈𝐂𝐊𝐄𝐍" },
+          { "title": "Mit Zahlen", "input": "50% Rabatt Heute", "output": "𝟓𝟎% 𝐑𝐚𝐛𝐚𝐭𝐭 𝐇𝐞𝐮𝐭𝐞" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Fetttext-Generator Verwenden",
+        "content": "Professionelle Fetttext-Generierung mit umfassenden Funktionen und universeller Kompatibilität.",
+        "items": [
+          "Völlig kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz zuerst - alle Verarbeitung erfolgt lokal",
+          "Unterstützung für mehrere Dateiformate",
+          "Echtzeit-Konvertierung während Sie tippen",
+          "Detaillierte Text-Analytik enthalten",
+          "Mobil-optimiertes responsives Design",
+          "Funktioniert mit allen Sprachen und Plattformen"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist Unicode-Fetttext?",
+          "answer": "Unicode-Fetttext verwendet spezielle Unicode-Zeichen, die fett erscheinen, ohne dass eine Formatierung erforderlich ist. Diese Zeichen funktionieren auf allen Plattformen, Social-Media-Sites, Messaging-Apps und Geräten und sind daher perfekt, um überall Betonung zu schaffen."
+        },
+        {
+          "question": "Funktioniert fetter Text auf allen Plattformen?",
+          "answer": "Ja! Unser Fetttext-Generator erstellt Unicode-Zeichen, die auf Twitter, Facebook, Instagram, Discord, WhatsApp und praktisch allen anderen Plattformen und Anwendungen funktionieren, die Unicode-Text unterstützen."
+        },
+        {
+          "question": "Kann ich ganze Dateien in fetten Text konvertieren?",
+          "answer": "Absolut! Sie können Textdateien (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html) hochladen und deren gesamten Inhalt in fetten Unicode-Text konvertieren."
+        },
+        {
+          "question": "Sind meine Textdaten sicher und privat?",
+          "answer": "Ja, alle Textkonvertierungen erfolgen lokal in Ihrem Browser. Ihr Text wird niemals auf unsere Server hochgeladen oder mit jemandem geteilt. Vollständige Privatsphäre garantiert."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen diesem und regulärer Fettformatierung?",
+          "answer": "Reguläre Fettformatierung erfordert HTML-Tags oder Rich-Text-Editoren und funktioniert nicht überall. Unser Unicode-Fetttext funktioniert als einfacher Text auf jeder Plattform, Social-Media-Site oder Messaging-App."
+        },
+        {
+          "question": "Kann ich fetten Text in Social-Media-Biografien verwenden?",
+          "answer": "Ja! Unicode-Fetttext ist perfekt für Social-Media-Biografien, Beiträge, Kommentare und überall, wo Sie Text hervorheben möchten, ohne dass spezielle Formatierungsunterstützung erforderlich ist."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Styling-Tools",
+        "items": [
+          {
+            "name": "Kursivtext Generator",
+            "description": "Erstellen Sie kursiven Unicode-Text für Betonung und stilistische Zwecke",
+            "href": "/de/tools/italic-text"
+          },
+          {
+            "name": "Instagram Schriftarten Generator",
+            "description": "Generieren Sie stilvolle Schriftarten perfekt für Instagram-Bios und Beiträge",
+            "href": "/de/tools/instagram-fonts"
+          },
+          {
+            "name": "Facebook Schriftarten Generator",
+            "description": "Erstellen Sie auffällige Schriftarten für Facebook-Beiträge und Profile",
+            "href": "/de/tools/facebook-font"
+          },
+          {
+            "name": "Discord Schriftarten Generator",
+            "description": "Generieren Sie einzigartige Schriftarten für Discord-Nachrichten und Benutzernamen",
+            "href": "/de/tools/discord-font"
+          }
+        ]
+      }
+    }
   }
 }

@@ -807,6 +807,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Жирного Текста — Копируйте Стильный Bold',
         description: 'Создавайте жирный Unicode‑текст для соцсетей, чатов и био. Пишите, просматривайте и копируйте мгновенно. Бесплатно без лимитов.',
         shortDescription: 'Жирный Unicode‑текст для соцсетей.',
+      },
+      de: {
+        title: 'Fetter Text Generator — Kopieren & Einfügen Stilvoller Fettdruck',
+        description: 'Erstellen Sie fetten Unicode-Text für Social Media, Chats und Bios. Tippen, Vorschau anzeigen und sofort kopieren. Kostenlos ohne Limits.',
+        shortDescription: 'Fetten Unicode-Text für Social Media erstellen.',
       }
     },
     schema: createAdvancedSchema('bold-text', ['Unicode bold', 'Instant copy'], 'Text Input', 'Bold Text', 4.7, 789),

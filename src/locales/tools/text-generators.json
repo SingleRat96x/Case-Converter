@@ -1050,6 +1050,15 @@
     }
   },
   "de": {
+    "bold": {
+      "title": "Fetter Text Generator",
+      "description": "Generieren Sie fetten Unicode-Text, der überall funktioniert. Verwandeln Sie Ihren normalen Text in fette Zeichen für Social Media, Dokumente und Messaging.",
+      "outputLabel": "Fetter Text",
+      "copiedMessage": "Fetter Text in Zwischenablage kopiert!",
+      "downloadFileName": "fetter-text.txt",
+      "convertButton": "Fetten Text Generieren",
+      "uploadDescription": ""
+    },
     "bigText": {
       "title": "Big Text Generator",
       "description": "Generieren Sie großen, fetten Unicode-Text, der hervorsticht. Perfekt für Überschriften, Ankündigungen und um Ihren Text prominenter und auffälliger zu machen.",
