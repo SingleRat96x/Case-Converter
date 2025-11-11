@@ -1894,6 +1894,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер Kebab Case – Конвертация camelCase/snake_case ↔ kebab-case',
         description: 'Бесплатный онлайн конвертер kebab case для текста и ключей JSON. Конвертируйте camelCase, snake_case и kebab-case в обоих направлениях. Вставьте текст или JSON, выберите целевой регистр.',
         shortDescription: 'Конвертация между kebab-case, camelCase и snake_case с поддержкой JSON.',
+      },
+      de: {
+        title: 'Kebab Case Konverter – camelCase/snake_case ↔ kebab-case (Text & JSON)',
+        description: 'Kostenloser Online-Kebab-Case-Konverter für Text und JSON-Schlüssel. Konvertieren Sie camelCase, snake_case und kebab-case in beide Richtungen. Text oder JSON einfügen, Zielformat wählen, sofort exportieren.',
+        shortDescription: 'Konvertierung zwischen kebab-case, camelCase und snake_case mit JSON-Unterstützung.',
       }
     },
     schema: createAdvancedSchema(
