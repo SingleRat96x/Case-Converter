@@ -1408,6 +1408,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Разрывы Строк — Компактный Однострочный Текст',
         description: 'Удаляйте переносы строк и лишние пробелы из текста. Получайте компактный однострочный вывод для форм, кода или CSV.',
         shortDescription: 'Удаление переносов и пробелов.',
+      },
+      de: {
+        title: 'Zeilenumbrüche entfernen — Text auf eine Zeile bringen',
+        description: 'Entfernen Sie unerwünschte Zeilenumbrüche und doppelte Leerzeichen aus Text. Ideal für Formulare, Code-Snippets, CSV-Daten oder Social Posts.',
+        shortDescription: 'Zeilenumbrüche und Leerzeichen entfernen.',
       }
     },
     schema: createAdvancedSchema('remove-line-breaks', ['Line-break removal', 'Trim spaces'], 'Text Input', 'Single Line Text', 4.5, 567),

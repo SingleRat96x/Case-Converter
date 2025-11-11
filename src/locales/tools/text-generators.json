@@ -1123,6 +1123,34 @@
       "convertButton": "Spiegeltext Generieren",
       "uploadDescription": ""
     },
+    "removeLineBreaks": {
+      "title": "Zeilenumbrüche Entfernen",
+      "description": "Entfernen Sie unerwünschte Zeilenumbrüche aus Text und entscheiden Sie, ob Absätze erhalten bleiben sollen. Perfekt zum Bereinigen kopierter Inhalte und zur Vorbereitung für Web, Social Media oder CSV.",
+      "outputLabel": "Bereinigter Text",
+      "inputPlaceholder": "Text mit Zeilenumbrüchen hier einfügen...",
+      "copiedMessage": "Bereinigter Text in Zwischenablage kopiert!",
+      "downloadFileName": "text-ohne-zeilenumbrueche.txt",
+      "convertButton": "Zeilenumbrüche Entfernen",
+      "uploadDescription": "",
+      "replaceWith": "Zeilenumbrüche ersetzen durch",
+      "space": "Leerzeichen",
+      "nothing": "Nichts",
+      "preserveParagraphs": "Absätze beibehalten",
+      "preserveInfo": "Einzelne Zeilenumbrüche werden entfernt, Doppelumbrüche (Absätze) bleiben erhalten.",
+      "removeAllInfo": "Alle Zeilenumbrüche werden entfernt und durch Ihre Auswahl ersetzt.",
+      "analytics": {
+        "title": "Statistik zur Zeilenumbruch-Entfernung",
+        "originalLines": "Ursprüngliche Zeilen",
+        "lineBreaksRemoved": "Entfernte Zeilenumbrüche",
+        "processingMode": "Verarbeitungsmodus",
+        "convertedLines": "Ergebniszeilen",
+        "lengthReduction": "Längenänderung",
+        "preserveParagraphs": "Absätze beibehalten",
+        "removeAll": "Alles entfernen",
+        "withSpaces": "Mit Leerzeichen",
+        "withoutSpaces": "Ohne Leerzeichen"
+      }
+    },
     "camelCase": {
       "title": "Camel Case Converter (Text & JSON-Schlüssel)",
       "description": "Konvertieren Sie snake_case, kebab-case oder Text mit Leerzeichen in camelCase. Funktioniert mit verschachteltem JSON.",

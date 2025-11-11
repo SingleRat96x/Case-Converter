@@ -306,5 +306,84 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Zeilenumbrüche Entfernen – Textformatierung online bereinigen",
+    "metaDescription": "Entfernen Sie Zeilenumbrüche und doppelte Leerzeichen online. Behalten Sie Absätze bei Bedarf und bereiten Sie Text für Web, Social Media, CSV oder E-Mails vor.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Zeilenumbruch-Entferner",
+        "content": "Bereinigen Sie kopierten oder formatierten Text im Handumdrehen. Entfernen Sie einzelne Zeilenumbrüche, behalten Sie Absätze auf Wunsch bei und entscheiden Sie, ob Leerzeichen eingefügt oder vollständig entfernt werden sollen – ideal für Content-Migration, Web-Publishing und Datenverarbeitung."
+      },
+      "features": {
+        "title": "Funktionen zum Entfernen von Zeilenumbrüchen",
+        "items": [
+          { "title": "Intelligente Erkennung", "description": "Erkennt einzelne Zeilenumbrüche automatisch und entfernt sie ohne den Text zu beschädigen." },
+          { "title": "Absatzschutz", "description": "Bewahrt doppelte Zeilenumbrüche, damit Absätze und Textblöcke erhalten bleiben." },
+          { "title": "Flexible Ersatzoptionen", "description": "Wählen Sie zwischen Leerzeichen oder komplettem Entfernen, je nach gewünschter Ausgabe." },
+          { "title": "Sofortiges Feedback", "description": "Sie sehen das Ergebnis live, während Sie Text einfügen oder Anpassungen vornehmen." },
+          { "title": "Leistungsstark bei großen Textmengen", "description": "Verarbeitet lange Dokumente, Artikel oder Chat-Verläufe schnell und zuverlässig." },
+          { "title": "Saubere Copy-Paste-Ergebnisse", "description": "Ideal, um Text aus PDFs, E-Mails oder CMS-Systemen für neue Kanäle aufzubereiten." }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzzwecke",
+        "description": "Nutzen Sie das Tool in redaktionellen Workflows, bei der Datenaufbereitung und im täglichen Büroalltag.",
+        "items": [
+          { "title": "PDF-Text bereinigen", "description": "Entfernen Sie harte Zeilenumbrüche aus kopierten PDF-Inhalten für bessere Lesbarkeit." },
+          { "title": "Web-Content formatieren", "description": "Bereiten Sie Artikel und Blogposts für HTML oder CMS-Systeme vor." },
+          { "title": "Social-Media-Vorlagen", "description": "Erstellen Sie sauber formatierte Posts ohne unerwünschte Umbrüche." },
+          { "title": "CSV & Datenexporte", "description": "Formen Sie Text in eine Zeile, um Daten für Imports oder APIs aufzubereiten." },
+          { "title": "E-Mail-Optimierung", "description": "Vermeiden Sie gebrochene Zeilen in Newslettern oder Support-Antworten." },
+          { "title": "Text für Übersetzungen", "description": "Liefern Sie Übersetzern formatierungsfreien Text für effizientere Bearbeitung." }
+        ]
+      },
+      "howToUse": {
+        "title": "Zeilenumbrüche in vier Schritten entfernen",
+        "description": "Schnelle Bereinigung ohne zusätzliche Software.",
+        "steps": [
+          { "step": 1, "title": "Text einfügen oder hochladen", "description": "Fügen Sie Ihren Text in das Eingabefeld ein oder laden Sie eine Textdatei mit Zeilenumbrüchen hoch." },
+          { "step": 2, "title": "Ersatz auswählen", "description": "Entscheiden Sie, ob Zeilenumbrüche durch Leerzeichen ersetzt oder komplett entfernt werden sollen." },
+          { "step": 3, "title": "Absatzoption festlegen", "description": "Aktivieren Sie die Absatz-Erhaltung, wenn doppelte Umbrüche erhalten bleiben sollen." },
+          { "step": 4, "title": "Ergebnis übernehmen", "description": "Kopieren Sie den bereinigten Text oder laden Sie ihn als .txt-Datei herunter." }
+        ]
+      },
+      "examples": {
+        "title": "Anwendungsbeispiele",
+        "items": [
+          { "title": "PDF-Bereinigung", "input": "Dies ist ein Beispiel\\nText aus einem PDF\\nmit unerwünschten\\nZeilenumbrüchen.", "output": "Dies ist ein Beispiel Text aus einem PDF mit unerwünschten Zeilenumbrüchen." },
+          { "title": "Absätze behalten", "input": "Erster Abschnitt\\nmit Umbruch.\\n\\nZweiter Abschnitt\\nbleibt erhalten.", "output": "Erster Abschnitt mit Umbruch.\\n\\nZweiter Abschnitt bleibt erhalten." },
+          { "title": "E-Mail-Layout", "input": "Support-Antwort\\nüber mehrere Zeilen\\nfür bessere\\nLesbarkeit.", "output": "Support-Antwort über mehrere Zeilen für bessere Lesbarkeit." }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile unseres Tools",
+        "items": [
+          "Schneller als manuelles Suchen und Ersetzen",
+          "Verbessert Lesbarkeit und Konsistenz",
+          "Reduziert Nacharbeit in Redaktionsprozessen",
+          "Unterstützt beliebige Sprachen und Zeichensätze",
+          "Komplett browserbasiert – keine Installation nötig",
+          "Datenschutzfreundlich, da Verarbeitung lokal erfolgt",
+          "Auch mobil komfortabel nutzbar",
+          "Kostenfrei ohne Registrierung"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist der Unterschied zwischen \"Leerzeichen\" und \"Nichts\"?", "answer": "Mit \"Leerzeichen\" bleibt ein Abstand zwischen Wörtern erhalten. \"Nichts\" entfernt Zeilenumbrüche komplett, wodurch zusammenhängende Zeichenketten entstehen." },
+        { "question": "Wie funktioniert das Beibehalten von Absätzen?", "answer": "Bei aktivierter Option werden nur einzelne Zeilenumbrüche entfernt. Doppelte Zeilenumbrüche bleiben bestehen, sodass Absatztrennungen erhalten bleiben." },
+        { "question": "Kann ich sehr lange Texte verarbeiten?", "answer": "Ja, das Tool verarbeitet auch große Textblöcke zuverlässig und zeigt Ergebnisse direkt in der Vorschau." },
+        { "question": "Ist das Tool für mehrere Sprachen geeignet?", "answer": "Ja, die Bereinigung basiert auf Formatierungszeichen und funktioniert unabhängig von der Sprache des Textes." },
+        { "question": "Werden meine Inhalte gespeichert?", "answer": "Nein, alle Berechnungen laufen lokal im Browser. Es werden keine Daten an Server gesendet oder gespeichert." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textwerkzeuge",
+        "items": [
+          { "name": "Textzähler", "description": "Zählen Sie Zeichen, Wörter und Zeilen in Ihrem Text", "href": "/de/tools/text-counter" },
+          { "name": "Text ersetzen", "description": "Suchen und ersetzen Sie Textmuster mit erweiterten Optionen", "href": "/de/tools/text-replace" },
+          { "name": "Worthäufigkeit", "description": "Analysieren Sie häufige Wörter und Textstatistiken", "href": "/de/tools/word-frequency" }
+        ]
+      }
+    }
   }
 }
