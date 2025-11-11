@@ -1151,6 +1151,38 @@
         "withoutSpaces": "Ohne Leerzeichen"
       }
     },
+    "removePunctuation": {
+      "title": "Satzzeichen Entfernen",
+      "description": "Bereinigen Sie Text von Punkten, Kommata, Anführungszeichen und Symbolen und behalten Sie nur die Zeichen, die Sie wirklich benötigen.",
+      "outputLabel": "Bereinigter Text",
+      "inputPlaceholder": "Fügen Sie Ihren Text hier ein...",
+      "helperText": "Fügen Sie links Text ein. Wählen Sie, was erhalten bleiben soll. Klicken Sie auf „Satzzeichen entfernen“.",
+      "copyCleanedText": "Bereinigten Text kopieren",
+      "downloadFileName": "text-ohne-satzzeichen.txt",
+      "removeButton": "Satzzeichen entfernen",
+      "optionsTitle": "Optionen: Wählen Sie, was erhalten bleiben soll",
+      "preserveTitle": "Erhaltungsoptionen",
+      "keepApostrophes": "Apostrophe in Kontraktionen beibehalten (z. B. don't → don't)",
+      "keepHyphens": "Bindestriche/Unterstriche beibehalten (für Slugs)",
+      "keepEmailURL": "Punktuation in E-Mails/URLs beibehalten (Adressen nicht zerstören)",
+      "keepNumbers": "Zahlen beibehalten",
+      "keepLineBreaks": "Zeilenumbrüche beibehalten",
+      "customKeepLabel": "Eigene Behalten-Liste:",
+      "customKeepPlaceholder": "@#&%/",
+      "customKeepHint": "Geben Sie zusätzliche Zeichen ein, die erhalten bleiben sollen",
+      "analytics": {
+        "title": "Statistik zur Satzzeichen-Entfernung",
+        "originalLines": "Ursprüngliche Zeilen",
+        "lineBreaksRemoved": "Entfernte Zeilenumbrüche",
+        "processingMode": "Verarbeitungsmodus",
+        "convertedLines": "Ergebniszeilen",
+        "lengthReduction": "Längenänderung",
+        "preserveParagraphs": "Absätze beibehalten",
+        "removeAll": "Alles entfernen",
+        "withSpaces": "Mit Leerzeichen",
+        "withoutSpaces": "Ohne Leerzeichen"
+      }
+    },
     "camelCase": {
       "title": "Camel Case Converter (Text & JSON-Schlüssel)",
       "description": "Konvertieren Sie snake_case, kebab-case oder Text mit Leerzeichen in camelCase. Funktioniert mit verschachteltem JSON.",

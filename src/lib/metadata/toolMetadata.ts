@@ -1433,6 +1433,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Пунктуацию из Текста – Бесплатный Онлайн Инструмент',
         description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"\' …) сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
         shortDescription: 'Удаление знаков пунктуации с выборочным сохранением.',
+      },
+      de: {
+        title: 'Satzzeichen Entfernen – Kostenloser Online-Punktuations-Entferner',
+        description: 'Fügen Sie Text ein und entfernen Sie Satzzeichen (.,!?;:–—"\' …) sofort, während Wörter erhalten bleiben. Optional können bestimmte Zeichen, Zahlen und Zeilenumbrüche behalten werden.',
+        shortDescription: 'Satzzeichen gezielt entfernen und wichtige Zeichen behalten.',
       }
     },
     schema: createAdvancedSchema('remove-punctuation', ['Selective removal', 'Custom keep list', 'Email/URL protection'], 'Text Input', 'Clean Text', 4.5, 567),
