@@ -1568,6 +1568,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Пузырьковый Текст — Милые Буквы (Копировать и Вставить)',
         description: 'Делайте милые пузырьковые буквы для постов и сообщений. Пишите, просматривайте и копируйте мгновенно. Бесплатно.',
         shortDescription: 'Милые пузырьковые буквы.',
+      },
+      de: {
+        title: 'Blasentext Generator — Niedliche Blasenbuchstaben (Kopieren & Einfügen)',
+        description: 'Erstellen Sie niedliche Blasenbuchstaben für Posts und Nachrichten. Tippen, Vorschau anzeigen und sofort kopieren. Kostenlos und unbegrenzt.',
+        shortDescription: 'Niedliche Blasenbuchstaben (kopieren & einfügen).',
       }
     },
     schema: createAdvancedSchema('bubble-text', ['Bubble style', 'Instant copy'], 'Text Input', 'Bubble Text', 4.6, 678),

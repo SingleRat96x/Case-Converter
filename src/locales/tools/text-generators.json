@@ -1059,6 +1059,15 @@
       "convertButton": "Fetten Text Generieren",
       "uploadDescription": ""
     },
+    "bubble": {
+      "title": "Blasentext Generator",
+      "description": "Verwandeln Sie Ihren Text in Blasenbuchstaben mit Unicode-Zeichen. Erstellen Sie lustigen, spielerischen Text perfekt für Social Media, Nachrichten und kreativen Content.",
+      "outputLabel": "Blasentext",
+      "copiedMessage": "Blasentext in Zwischenablage kopiert!",
+      "downloadFileName": "blasentext.txt",
+      "convertButton": "Blasentext Generieren",
+      "uploadDescription": ""
+    },
     "bigText": {
       "title": "Big Text Generator",
       "description": "Generieren Sie großen, fetten Unicode-Text, der hervorsticht. Perfekt für Überschriften, Ankündigungen und um Ihren Text prominenter und auffälliger zu machen.",
