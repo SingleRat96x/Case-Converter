@@ -1114,6 +1114,15 @@
       "convertButton": "Big Text Generieren",
       "uploadDescription": ""
     },
+    "mirror": {
+      "title": "Spiegeltext Generator",
+      "description": "Spiegeln Sie Ihren Text rückwärts für kreative Effekte, Rätsel oder Profile, die im Spiegel lesbar sein sollen.",
+      "outputLabel": "Spiegeltext",
+      "copiedMessage": "Spiegeltext in Zwischenablage kopiert!",
+      "downloadFileName": "spiegeltext.txt",
+      "convertButton": "Spiegeltext Generieren",
+      "uploadDescription": ""
+    },
     "camelCase": {
       "title": "Camel Case Converter (Text & JSON-Schlüssel)",
       "description": "Konvertieren Sie snake_case, kebab-case oder Text mit Leerzeichen in camelCase. Funktioniert mit verschachteltem JSON.",

@@ -734,6 +734,57 @@
     }
   },
   "de": {
+    "plainText": {
+      "title": "Klartext-Konverter – HTML, Markdown & Formatierung entfernen",
+      "description": "Konvertieren Sie formatierten Text in sauberen Klartext, indem Sie HTML-Tags, Markdown, URLs, E-Mails und Sonderzeichen entfernen.",
+      "inputLabel": "Formatierter Text",
+      "outputLabel": "Klartext",
+      "inputPlaceholder": "Fügen Sie hier Ihren formatierten Text ein (HTML, Markdown usw.)...",
+      "uploadDescription": "",
+      "downloadFileName": "klartext.txt",
+      "accordion": {
+        "title": "Klartext-Konvertierungsoptionen"
+      },
+      "tabs": {
+        "formatRemoval": "Format entfernen",
+        "contentFiltering": "Inhaltsfilter",
+        "textProcessing": "Textverarbeitung"
+      },
+      "options": {
+        "common": "Allgemeine Optionen",
+        "contentRemoval": "Inhalt entfernen",
+        "lineBreaks": "Zeilenumbruch-Optionen",
+        "removeHtml": "HTML-Tags entfernen",
+        "removeMarkdown": "Markdown entfernen",
+        "removeUrls": "URLs entfernen",
+        "removeEmails": "E-Mail-Adressen entfernen",
+        "removeNumbers": "Zahlen entfernen",
+        "removeSpecialChars": "Sonderzeichen entfernen",
+        "removePunctuation": "Satzzeichen entfernen",
+        "removeEmojis": "Emojis entfernen",
+        "removeExtraSpaces": "Mehrfach-Leerzeichen entfernen",
+        "normalizeWhitespace": "Leerzeichen normalisieren",
+        "preserveLineBreaks": "Zeilenumbrüche beibehalten",
+        "trimLines": "Leerzeichen in Zeilen kürzen"
+      },
+      "warning": "Warnung: Aggressive Optionen können wichtigen Inhalt entfernen. Prüfen Sie das Ergebnis sorgfältig.",
+      "stats": {
+        "removed": "{{count}} Zeichen entfernt",
+        "original": "Original",
+        "result": "Ergebnis"
+      },
+      "analytics": {
+        "title": "Klartext-Konvertierungsanalyse",
+        "originalLength": "Originallänge",
+        "plainLength": "Klartext-Länge",
+        "charactersRemoved": "Entfernte Zeichen",
+        "reductionPercentage": "Reduktion %",
+        "htmlElements": "HTML-Elemente",
+        "markdownElements": "Markdown-Elemente",
+        "urlsRemoved": "Entfernte URLs",
+        "emailsRemoved": "Entfernte E-Mails"
+      }
+    },
     "sentenceCounter": {
       "title": "Satzzähler & Analyse-Tool",
       "description": "Analysieren Sie die Satzstruktur, zählen Sie Sätze und erhalten Sie detaillierte Satzstatistiken. Perfekt für Autoren, Redakteure und Content-Ersteller.",

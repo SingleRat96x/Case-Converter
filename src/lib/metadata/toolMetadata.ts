@@ -1037,6 +1037,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер В Простой Текст — Без Форматирования',
         description: 'Преобразуйте любой текст в простой. Удалите скрытые стили, ссылки и шрифты. Идеально для писем, документов и кода.',
         shortDescription: 'Чистый простой текст.',
+      },
+      de: {
+        title: 'Klartext-Konverter — Formatierung entfernen',
+        description: 'Wandeln Sie formatierten Text sofort in reinen Klartext um. Entfernen Sie HTML, Markdown, Links, E-Mails und Sonderzeichen mit nur einem Klick.',
+        shortDescription: 'Formatierten Text in Klartext umwandeln.',
       }
     },
     schema: createAdvancedSchema('plain-text', ['Strip styles', 'One-click copy'], 'Formatted Text Input', 'Plain Text', 4.7, 789),
@@ -1358,6 +1363,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Зеркальный Текст — Переворот и Отражение Онлайн',
         description: 'Переворачивайте или отражайте текст по горизонтали в один клик. Для креативных эффектов, головоломок и никнеймов.',
         shortDescription: 'Отразить или перевернуть текст.',
+      },
+      de: {
+        title: 'Spiegeltext-Generator — Text rückwärts spiegeln',
+        description: 'Spiegeln oder kehren Sie Text sofort um. Ideal für kreative Designs, Rätsel, Profile und jede Anwendung mit gespiegelten Effekten.',
+        shortDescription: 'Text spiegeln oder rückwärts darstellen.',
       }
     },
     schema: createAdvancedSchema('mirror-text', ['Reverse/mirror', 'One-click copy'], 'Text Input', 'Mirrored Text', 4.2, 321),
