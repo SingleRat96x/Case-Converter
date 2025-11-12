@@ -275,6 +275,103 @@
           }
         ]
       }
+  },
+  "de": {
+    "title": "Formatierung Entfernen – HTML, Markdown & Styles online bereinigen",
+    "metaDescription": "Entfernen Sie HTML, Markdown, Links, Emojis und Sonderzeichen aus Text. Wandeln Sie Inhalte in sauberen Klartext um – ideal für CMS, E-Mails und Code.",
+    "sections": {
+      "intro": {
+        "title": "Formatierten Text in Klartext verwandeln",
+        "content": "Bereinigen Sie kopierten oder formatierten Text mit einem Klick. Entfernen Sie HTML-Tags, Markdown, Links, Emojis, Styles und überflüssige Leerzeichen, um sauberen Klartext für Dokumente, E-Mails, CMS oder Code zu erhalten."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen zur Formatierungsentfernung",
+        "items": [
+          { "title": "HTML & CSS entfernen", "description": "Entfernt Tags, Inline-Styles und Klassen, sodass nur der reine Inhalt übrig bleibt." },
+          { "title": "Markdown bereinigen", "description": "Löscht Markdown-Syntax wie Überschriften, Listen, Codeblöcke und Links automatisch." },
+          { "title": "URLs & E-Mails optional entfernen", "description": "Entscheiden Sie, ob Links und E-Mail-Adressen beibehalten oder entfernt werden sollen." },
+          { "title": "Sonderzeichen filtern", "description": "Entfernt Emojis, Sonderzeichen, nicht druckbare Zeichen und Formatierungsreste." },
+          { "title": "Whitespace normalisieren", "description": "Reduziert mehrere Leerzeichen, Tabs und Zeilenumbrüche auf ein sauberes Layout." },
+          { "title": "Live-Vorschau & Download", "description": "Sehen Sie das Ergebnis sofort, kopieren Sie es oder laden Sie es als Textdatei herunter." }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle",
+        "description": "Text bereinigen ist in vielen Workflows hilfreich.",
+        "items": [
+          { "title": "Content-Migration", "description": "Konvertieren Sie HTML- oder Rich-Text-Inhalte in Klartext für neue CMS oder Systeme." },
+          { "title": "E-Mail & Newsletter", "description": "Entfernen Sie Formatierungen aus kopierten E-Mails, bevor sie weiterverwendet werden." },
+          { "title": "Code & Kommentare", "description": "Bereiten Sie Texte für Kommentare oder Variablennamen ohne Formatierung vor." },
+          { "title": "SEO & Keyword-Listen", "description": "Erstellen Sie saubere Keyword-Listen ohne Sonderzeichen und HTML-Reste." },
+          { "title": "Datenverarbeitung", "description": "Liefern Sie klaren Text für NLP, Machine Learning oder analytische Tools." },
+          { "title": "Social-Media-Posts", "description": "Bereiten Sie kopierten Text für Social-Posts ohne unerwünschte Formatierung vor." }
+        ]
+      },
+      "howToUse": {
+        "title": "So entfernen Sie Textformatierung",
+        "description": "In wenigen Schritten zu sauberem Klartext.",
+        "steps": [
+          { "step": 1, "title": "Text einfügen oder Datei laden", "description": "Fügen Sie formatierten Text in das Eingabefeld ein oder laden Sie eine Textdatei hoch." },
+          { "step": 2, "title": "Bereinigungsoptionen wählen", "description": "Entscheiden Sie, ob HTML, Markdown, URLs, E-Mails, Sonderzeichen oder Zahlen entfernt werden sollen." },
+          { "step": 3, "title": "Vorschau prüfen", "description": "Überprüfen Sie das Ergebnis in Echtzeit, passen Sie Optionen bei Bedarf an." },
+          { "step": 4, "title": "Ergebnis übernehmen", "description": "Kopieren Sie den bereinigten Text oder laden Sie ihn als .txt-Datei herunter." }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Formatierungsentfernung",
+        "description": "So verändert sich der Text je nach Ausgangsformat.",
+        "items": [
+          {
+            "title": "HTML zu Klartext",
+            "input": "<h2>Willkommen</h2><p>Das ist <strong>wichtiger</strong> Text mit einem <a href=\"#\">Link</a>.</p>",
+            "output": "Willkommen\n\nDas ist wichtiger Text mit einem Link."
+          },
+          {
+            "title": "Markdown bereinigen",
+            "input": "## Überschrift\n\n*Aufzählungspunkt* mit [Link](https://example.com) und `Code`.",
+            "output": "Überschrift\n\nAufzählungspunkt mit Link und Code."
+          },
+          {
+            "title": "Rich-Text aus Word",
+            "input": "Kopierter Text mit verschiedenen Schriftarten, Farben und Aufzählungen.",
+            "output": "Kopierter Text mit verschiedenen Schriftarten, Farben und Aufzählungen."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unser Tool nutzen?",
+        "content": "Schnelle, verlässliche und datenschutzfreundliche Textbereinigung.",
+        "items": [
+          "Kostenlos und ohne Anmeldung nutzbar",
+          "Sofortige Ergebnisse ohne Wartezeit",
+          "Selektive Entfernung dank flexibler Optionen",
+          "Unterstützt große Textmengen und unterschiedliche Formate",
+          "Privatsphäre: Verarbeitung erfolgt lokal im Browser",
+          "Responsives Design – auch mobil angenehm zu bedienen",
+          "Kompatibel mit allen Sprachen und Unicode-Zeichen",
+          "Ideal als Vorstufe zum Plain-Text-Export"
+        ]
+      },
+      "faqs": {
+        "title": "Häufige Fragen",
+        "items": [
+          { "question": "Welche Formatierungen werden entfernt?", "answer": "Standardmäßig entfernen wir HTML-Tags, CSS-Stile, Markdown-Syntax, Links, E-Mails, Emojis, Sonderzeichen sowie doppelte Leerzeichen. Sie können jede Option gezielt ein- oder ausschalten." },
+          { "question": "Kann ich bestimmte Elemente behalten?", "answer": "Ja, lassen Sie einzelne Optionen deaktiviert, wenn Sie beispielsweise URLs, E-Mails oder Zahlen beibehalten möchten." },
+          { "question": "Wie steht es um große Textmengen?", "answer": "Das Tool verarbeitet auch lange Texte, Artikel oder ganze Dokumente performant und ohne Größenbeschränkung." },
+          { "question": "Werden meine Daten gespeichert?", "answer": "Nein, alle Berechnungen passieren ausschließlich in Ihrem Browser. Es werden keine Daten übertragen oder gespeichert." },
+          { "question": "Funktioniert das Tool mit mehreren Sprachen?", "answer": "Ja, es arbeitet sprachunabhängig und unterstützt sämtliche Unicode-Zeichen." }
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          { "name": "Klartext-Konverter", "description": "Konvertieren Sie Texte komplett in Klartext", "href": "/de/tools/plain-text" },
+          { "name": "Zeilenumbrüche entfernen", "description": "Entfernen Sie unerwünschte Zeilenumbrüche aus Text", "href": "/de/tools/remove-line-breaks" },
+          { "name": "Satzzeichen entfernen", "description": "Bereinigen Sie Text von Kommata, Punkten und Symbolen", "href": "/de/tools/remove-punctuation" },
+          { "name": "Text ersetzen", "description": "Finden und ersetzen Sie Textmuster mit erweiterten Optionen", "href": "/de/tools/text-replace" }
+        ]
+      }
+    }
     }
   }
 }

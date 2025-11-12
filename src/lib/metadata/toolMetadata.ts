@@ -952,6 +952,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Форматирование Текста — В Чистый Текст',
         description: 'Удаляйте жирный/курсив/шрифты, ссылки и стили из вставленного текста. Получайте чистый текст для документов, почты и кода.',
         shortDescription: 'Очистка форматирования до простого текста.',
+      },
+      de: {
+        title: 'Formatierung Entfernen — In reinen Klartext umwandeln',
+        description: 'Entfernen Sie Fett/Kursiv/Schriften, Links und Styles aus eingefügtem Text. Ideal für Dokumente, E-Mails und Code – saubere Ausgabe mit einem Klick.',
+        shortDescription: 'Formatierung auf Klartext reduzieren.',
       }
     },
     schema: createAdvancedSchema('remove-text-formatting', ['Strip styles', 'Clean output'], 'Formatted Text Input', 'Plain Text', 4.6, 678),

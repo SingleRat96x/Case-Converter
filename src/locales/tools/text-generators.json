@@ -872,6 +872,43 @@
       "customKeepHint": "Введите любые дополнительные символы для сохранения"
     },
     "removeTextFormatting": {
+      "title": "Formatierung Entfernen",
+      "description": "Entfernen Sie HTML-Tags, Markdown, Links, E-Mails und Sonderzeichen. Bereinigen Sie kopierten Inhalt und erhalten Sie sauberen Klartext.",
+      "outputLabel": "Bereinigter Text",
+      "inputPlaceholder": "Geben Sie formatierten Text zur Bereinigung ein...",
+      "copiedMessage": "Bereinigter Text in Zwischenablage kopiert!",
+      "downloadFileName": "text-ohne-formatierung.txt",
+      "convertButton": "Formatierung Entfernen",
+      "uploadDescription": "",
+      "optionsTitle": "Bereinigungsoptionen",
+      "warning": "Hinweis: Diese Optionen können wichtigen Inhalt entfernen. Prüfen Sie das Ergebnis sorgfältig.",
+      "options": {
+        "removeHtml": "HTML-Tags entfernen",
+        "removeMarkdown": "Markdown entfernen",
+        "removeExtraSpaces": "Mehrfach-Leerzeichen entfernen",
+        "removeUrls": "URLs entfernen",
+        "removeEmails": "E-Mails entfernen",
+        "removeSpecialChars": "Sonderzeichen entfernen",
+        "removeNumbers": "Zahlen entfernen"
+      },
+      "analytics": {
+        "title": "Statistik zur Formatierungsentfernung",
+        "originalLength": "Originallänge",
+        "urlsEmails": "URLs + E-Mails",
+        "specialCharsRemoved": "Entfernte Sonderzeichen",
+        "totalElementsRemoved": "Entfernte Elemente",
+        "charactersReduced": "Entfernte Zeichen",
+        "textReduction": "Textreduzierung",
+        "html": "HTML",
+        "markdown": "Markdown",
+        "urls": "URLs",
+        "emails": "E-Mails",
+        "specialChars": "Sonderzeichen",
+        "numbers": "Zahlen",
+        "none": "Keine aktiv"
+      }
+    },
+    "removeTextFormatting": {
       "title": "Инструмент Удаления Форматирования Текста",
       "description": "Удаляйте HTML теги, Markdown форматирование, URL, электронную почту и специальные символы из текста. Очищайте форматирование с помощью нашего продвинутого инструмента очистки текста.",
       "outputLabel": "Очищенный Текст",
