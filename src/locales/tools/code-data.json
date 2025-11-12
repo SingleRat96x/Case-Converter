@@ -1604,5 +1604,65 @@
         "fileReadError": "Ошибка чтения файла"
       }
     }
+  },
+  "de": {
+    "base64": {
+      "title": "Base64 Encoder/Decoder",
+      "description": "Kodieren und dekodieren Sie Text in das Base64-Format oder zurück. Perfekt für Datenübertragung, API-Integrationen und das Encodieren von Textinhalten.",
+      "labels": {
+        "plainText": "Klartext",
+        "base64Text": "Base64-kodiert"
+      },
+      "placeholders": {
+        "encode": "Text eingeben, der in Base64 kodiert werden soll...",
+        "decode": "Base64-Zeichenkette zum Dekodieren eingeben..."
+      },
+      "uploadDescription": "",
+      "modes": {
+        "encode": "In Base64 kodieren",
+        "decode": "Aus Base64 dekodieren"
+      },
+      "dataType": {
+        "title": "Datentyp",
+        "text": "Text",
+        "binary": "Binär",
+        "image": "Bild"
+      },
+      "options": {
+        "title": "Optionen",
+        "urlSafe": "URL-sichere Kodierung",
+        "includePadding": "Padding beibehalten",
+        "lineBreaks": "Zeilenumbrüche einfügen",
+        "lineLength": "Zeilenlänge"
+      },
+      "errors": {
+        "encodeFailed": "Text konnte nicht in Base64 kodiert werden",
+        "decodeFailed": "Base64-Zeichenkette konnte nicht dekodiert werden",
+        "invalidBase64": "Ungültiges Base64-Format",
+        "fileReadFailed": "Datei konnte nicht gelesen werden",
+        "conversionFailed": "Konvertierung fehlgeschlagen"
+      },
+      "messages": {
+        "encodeSuccess": "Erfolgreich in Base64 kodiert",
+        "decodeSuccess": "Erfolgreich aus Base64 dekodiert",
+        "fileUploaded": "Datei erfolgreich hochgeladen"
+      },
+      "info": {
+        "description": "Base64 wandelt Text in ASCII-Zeichen mit einem 64-Zeichen-Alphabet um. Ideal, um Daten sicher über textbasierte Protokolle zu übertragen.",
+        "encodingNote": "Die Kodierung vergrößert die Datenmenge um etwa 33 %."
+      },
+      "stats": {
+        "inputSize": "Eingabe",
+        "outputSize": "Ausgabe",
+        "expansionRatio": "Vergrößerungsfaktor",
+        "compressionRatio": "Kompressionsfaktor"
+      },
+      "analytics": {
+        "title": "Base64-Analyse",
+        "lines": "Zeilen",
+        "characters": "Zeichen",
+        "efficiency": "Effizienz"
+      }
+    }
   }
 }

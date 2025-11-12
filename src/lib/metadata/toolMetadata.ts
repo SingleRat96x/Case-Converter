@@ -313,6 +313,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Base64 Кодер/Декодер — Текст и Файлы',
         description: 'Кодируйте/декодируйте Base64 для текста и файлов. Копируйте, загружайте и проверяйте. Полезно для data URI и отладки.',
         shortDescription: 'Base64 для текста/файлов.',
+      },
+      de: {
+        title: 'Base64 Encoder/Decoder – Text & Dateien umwandeln',
+        description: 'Kodieren oder dekodieren Sie Text und Dateien in Base64 – sicher, datenschutzfreundlich und direkt im Browser. Ideal für Data-URIs, APIs, Debugging und Tests mit Download- und Analysefunktionen.',
+        shortDescription: 'Base64 für Text und Dateien kodieren/decodieren.',
       }
     },
     schema: createAdvancedSchema('base64-encoder-decoder', ['Text/file', 'Copy/download'], 'Data Input', 'Base64 Encoded/Decoded', 4.6, 678),

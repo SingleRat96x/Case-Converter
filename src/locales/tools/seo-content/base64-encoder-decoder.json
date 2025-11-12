@@ -266,5 +266,139 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Base64-Encoder & Decoder – Text- und Datenkonverter",
+    "metaDescription": "Kodieren und dekodieren Sie Base64 online mit URL-sicheren Optionen, Padding-Steuerung und Zeilenumbrüchen. Dateien hochladen, Größen analysieren und sofort konvertieren – 100 % lokal und privat.",
+    "sections": {
+      "intro": {
+        "title": "Base64-Encoder & Decoder für Entwickler",
+        "content": "Kodieren oder dekodieren Sie beliebige Daten in Base64 – inklusive URL-sicherer Varianten, konfigurierbarem Padding und Zeilenumbrüchen. Laden Sie Dateien hoch, analysieren Sie Größen in Echtzeit und bleiben Sie dank reiner Client-Verarbeitung vollständig DSGVO-konform."
+      },
+      "features": {
+        "title": "Funktionen des Base64-Konverters",
+        "items": [
+          { "title": "Zweirichtungs-Konvertierung", "description": "Text sofort in Base64 umwandeln oder Base64-Zeichenketten zurück in Klartext konvertieren" },
+          { "title": "URL-sichere Kodierung", "description": "Erzeugen Sie Base64-Strings ohne +/– und Schrägstriche – perfekt für URLs und Dateinamen" },
+          { "title": "Padding-Kontrolle", "description": "Padding-Zeichen gezielt hinzufügen oder entfernen, je nach Einsatzzweck" },
+          { "title": "Zeilenumbrüche konfigurieren", "description": "Optionale Zeilenlängen festlegen, um lange Ausgaben lesbarer zu machen" },
+          { "title": "Datei-Upload", "description": "Beliebige Dateien direkt im Browser in Base64 konvertieren und wieder zurück" },
+          { "title": "Live-Analytics", "description": "Eingabe- und Ausgabegrößen, Vergrößerungsfaktoren sowie Effizienzkennzahlen sofort einsehen" },
+          { "title": "100 % lokal", "description": "Ihre Daten verlassen niemals den Browser – keine Serverübertragung, keine Speicherung" },
+          { "title": "Responsives UI", "description": "Optimiert für Desktop, Tablet und Smartphone mit intuitiver Bedienung" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle",
+        "description": "Der Base64-Encoder ist unverzichtbar für zahlreiche Aufgaben in Entwicklung, Sicherheit und Datenverarbeitung.",
+        "items": [
+          { "title": "API-Entwicklung", "description": "Daten für HTTP-Header, Tokens oder Authentifizierung sicher kodieren" },
+          { "title": "E-Mail-Anhänge", "description": "Binärdateien kodieren, um sie problemlos per SMTP zu versenden" },
+          { "title": "Web-Embedding", "description": "Bilder, SVGs oder Fonts als Data-URI direkt in HTML/CSS einbetten" },
+          { "title": "Persistenz & Datenbanken", "description": "Sensible Inhalte Base64-kodiert speichern und bei Bedarf dekodieren" },
+          { "title": "Konfigurationsdateien", "description": "Konfigurationswerte, Secrets oder Zertifikate transportabel verpacken" },
+          { "title": "Binärdaten-Transfer", "description": "Binäre Payloads über textbasierte Protokolle wie JSON oder XML übertragen" },
+          { "title": "Authentifizierung", "description": "Zugangsdaten und Tokens für Basic Auth oder Signaturen vorbereiten" },
+          { "title": "Archivierung & Backup", "description": "Daten für spätere Kompression oder sichere Ablage vorbereiten" }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert der Base64-Encoder",
+        "description": "In vier Schritten zur Base64-Kodierung oder zurück zum Klartext.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Daten eingeben oder Datei laden",
+            "description": "Text eintippen bzw. einfügen oder eine Datei über den Upload-Button auswählen."
+          },
+          {
+            "step": 2,
+            "title": "Modus wählen",
+            "description": "„In Base64 kodieren“ für Klartext → Base64 oder „Aus Base64 dekodieren“ für Base64 → Klartext auswählen."
+          },
+          {
+            "step": 3,
+            "title": "Optionen anpassen",
+            "description": "URL-sichere Variante, Padding und Zeilenumbrüche nach Bedarf konfigurieren."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis nutzen",
+            "description": "Ausgabe prüfen, kopieren oder als Datei herunterladen – inklusive Statistik und Analyse."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Base64-Beispiele",
+        "description": "Beispiele zeigen, wie unterschiedliche Eingaben in Base64 aussehen.",
+        "items": [
+          { "title": "Einfacher Text", "input": "Hallo Welt", "output": "SGFsbG8gV2VsdA==" },
+          { "title": "URL-sicher", "input": "Hallo Welt", "output": "SGFsbG8gV2VsdA" },
+          { "title": "Mit Zeilenumbrüchen", "input": "Langer Text", "output": "TGFuZ2VyIFRleHQ= (mit Zeilenumbrüchen)" },
+          { "title": "Binärdaten", "input": "Binärdatei", "output": "Kodierte binäre Darstellung" }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile unseres Base64-Tools",
+        "content": "Ein flexibler Encoder/Decoder mit Profi-Features und transparenten Kennzahlen.",
+        "items": [
+          "Kostenlos und ohne Limits nutzbar",
+          "Keine Registrierung, keine versteckten Gebühren",
+          "Komplette Verarbeitung im Browser – maximaler Datenschutz",
+          "Unterstützt Text, binäre Daten und Dateien",
+          "Sofortige Ergebnisse ohne Wartezeit",
+          "Konfigurierbare Optionen für jeden Workflow",
+          "Ausführliche Größenauswertung und Effizienzwerte",
+          "Responsives Design für Desktop und Mobilgeräte"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wofür wird Base64 eingesetzt?",
+          "answer": "Base64 wandelt Binärdaten in ASCII-Text um, damit sie über textbasierte Protokolle wie HTTP, E-Mail oder XML transportiert werden können. Häufige Einsatzgebiete sind Data-URIs für Bilder, das Speichern von Binärdaten in Datenbanken oder API-Authentifizierung."
+        },
+        {
+          "question": "Was unterscheidet URL-sicheres Base64?",
+          "answer": "Bei der URL-sicheren Variante werden die Zeichen „+“ und „/“ durch „-“ und „_“ ersetzt und Padding optional entfernt. Dadurch lassen sich die Strings ohne zusätzliche Kodierung in URLs oder Dateinamen verwenden."
+        },
+        {
+          "question": "Wie stark wächst die Datenmenge durch Base64?",
+          "answer": "Die Kodierung erhöht die Datenmenge um ca. 33 %, da aus 3 Byte Binärdaten 4 Byte Base64-Text entstehen (4/3 ≈ 1,33)."
+        },
+        {
+          "question": "Bleiben meine Daten privat?",
+          "answer": "Ja. Die komplette Verarbeitung findet ausschließlich im Browser statt. Es werden keine Daten an Server gesendet oder dauerhaft gespeichert."
+        },
+        {
+          "question": "Kann ich Dateien kodieren?",
+          "answer": "Natürlich. Laden Sie beliebige Dateien hoch – sie werden lokal in Base64 gewandelt. Die Analyse zeigt außerdem Größe, Vergrößerungsfaktor und Effizienz."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Daten-Tools",
+        "items": [
+          {
+            "name": "Hex-zu-Text Konverter",
+            "description": "Zwischen Hexadezimalwerten und Text wechseln – mit vielfältigen Formatoptionen",
+            "href": "/de/tools/hex-to-text"
+          },
+          {
+            "name": "Binärcode Übersetzer",
+            "description": "Text zu Binärcode und zurück – ideal zum Lernen oder Debuggen",
+            "href": "/de/tools/binary-code-translator"
+          },
+          {
+            "name": "URL Encoder/Decoder",
+            "description": "URLs und Parameter sicher encodieren oder decodieren",
+            "href": "/de/tools/url-converter"
+          },
+          {
+            "name": "UTF-8 Konverter",
+            "description": "Text in UTF-8-Bytes umwandeln und wieder zurück zum Klartext",
+            "href": "/de/tools/utf8-converter"
+          }
+        ]
+      }
+    }
   }
 }
