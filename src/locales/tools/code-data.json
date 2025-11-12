@@ -103,6 +103,15 @@
         "characters": "Characters",
         "bits": "Total Bits",
         "bytes": "Bytes"
+      },
+      "analytics": {
+        "title": "Binary Code Analytics",
+        "inputChars": "Input Characters",
+        "outputBits": "Output Bits",
+        "bytes": "Bytes",
+        "sizeRatio": "Size Ratio",
+        "uniqueChars": "Unique Characters",
+        "bitDensity": "Bit Density"
       }
     },
     "hex": {
@@ -906,6 +915,15 @@
         "characters": "???????",
         "bits": "????? ?????",
         "bytes": "?????"
+      },
+      "analytics": {
+        "title": "????????? ?????? ?????",
+        "inputChars": "??????? ???????",
+        "outputBits": "????? ?????",
+        "bytes": "?????",
+        "sizeRatio": "??????????? ???????",
+        "uniqueChars": "???????? ???????",
+        "bitDensity": "???????????? ?????"
       }
     },
     "hex": {
@@ -1662,6 +1680,62 @@
         "lines": "Zeilen",
         "characters": "Zeichen",
         "efficiency": "Effizienz"
+      }
+    },
+    "binary": {
+      "title": "Binärcode-Übersetzer",
+      "description": "Konvertieren Sie Text in Binärcode und Binärfolgen zurück in lesbaren Text. Ideal zum Lernen von Kodierungen, für Schulprojekte und schnelle Prüfungen.",
+      "labels": {
+        "binaryCode": "Binärcode"
+      },
+      "placeholders": {
+        "encode": "Text eingeben, der in Binär umgewandelt werden soll...",
+        "decode": "Binärcode eingeben, der in Text umgewandelt werden soll...",
+        "encodeOutput": "Der Binärcode erscheint hier...",
+        "decodeOutput": "Der dekodierte Text erscheint hier..."
+      },
+      "modes": {
+        "textToBinary": "Text zu Binär",
+        "binaryToText": "Binär zu Text"
+      },
+      "options": {
+        "title": "Optionen",
+        "delimiter": "Trennzeichen",
+        "delimiters": {
+          "space": "Leerzeichen",
+          "none": "Keins",
+          "newline": "Zeilenumbruch"
+        },
+        "groupSize": "Gruppengröße (Bits)",
+        "bitLabel": "Bits",
+        "padding": "Auf Gruppengröße auffüllen"
+      },
+      "errors": {
+        "encodeFailed": "Kodierung in Binär fehlgeschlagen",
+        "decodeFailed": "Dekodierung aus Binär fehlgeschlagen",
+        "invalidBinary": "Ungültige Binärzeichenfolge",
+        "invalidCharCode": "Ungültiger Zeichencode",
+        "conversionFailed": "Konvertierung fehlgeschlagen"
+      },
+      "info": {
+        "description": "Binär stellt Zeichen ausschließlich mit 0 und 1 dar. Jede Eingabe wird in den entsprechenden ASCII- oder Unicode-Wert übersetzt.",
+        "encodingNote": "Standard-ASCII-Zeichen benötigen 7–8 Bits, Unicode-Zeichen können mehr verwenden.",
+        "decodingNote": "Binärfolgen dürfen nur aus 0 und 1 bestehen und können mit Leerzeichen oder Zeilenumbrüchen getrennt werden."
+      },
+      "stats": {
+        "inputChars": "Eingabezeichen",
+        "characters": "Zeichen",
+        "bits": "Bits gesamt",
+        "bytes": "Bytes"
+      },
+      "analytics": {
+        "title": "Binär-Analyse",
+        "inputChars": "Eingabezeichen",
+        "outputBits": "Ausgabebits",
+        "bytes": "Bytes",
+        "sizeRatio": "Größenverhältnis",
+        "uniqueChars": "Einzigartige Zeichen",
+        "bitDensity": "Bit-Dichte"
       }
     }
   }

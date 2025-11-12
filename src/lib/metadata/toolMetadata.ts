@@ -917,6 +917,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Переводчик Бинарного Кода — Текст ↔ Бинарный',
         description: 'Переводите текст в бинарный код и обратно мгновенно. Подходит для изучения кодировок и быстрых конвертаций. Копирование в один клик.',
         shortDescription: 'Текст ↔ бинарный код.',
+      },
+      de: {
+        title: 'Binärcode-Übersetzer – Text ↔ Binär (Online)',
+        description: 'Wandeln Sie Text sofort in Binärcode und Binärfolgen zurück in lesbaren Text. Ideal zum Lernen von Kodierungen, für Schulprojekte oder schnelle Prüfungen – inklusive Kopierfunktion.',
+        shortDescription: 'Text und Binärcode gegenseitig umwandeln.',
       }
     },
     schema: createAdvancedSchema('binary-code-translator', ['Two-way conversion', 'Instant copy'], 'Binary Input', 'Text Output', 4.2, 321),

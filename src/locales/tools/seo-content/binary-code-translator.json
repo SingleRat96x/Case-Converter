@@ -328,5 +328,139 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Binärcode-Übersetzer – Text ↔ Binär-Konverter",
+    "metaDescription": "Wandeln Sie Text sofort in Binärcode und Binärfolgen zurück in Klartext. Unterstützt verschiedene Trennzeichen, Gruppengrößen, Statistik und Copy-to-Clipboard – komplett im Browser.",
+    "sections": {
+      "intro": {
+        "title": "Binär-Konverter für Entwickler, Studierende & Maker",
+        "content": "Unser Binärcode-Übersetzer verwandelt Text in Binärfolgen und Binärdaten zurück in lesbaren Text – schnell, präzise und direkt im Browser. Perfekt für Informatik-Unterricht, Debugging, Lernmaterialien oder schnelle Prüfungen Ihrer Datenrepräsentationen."
+      },
+      "features": {
+        "title": "Leistungsstarke Binärfunktionen",
+        "items": [
+          { "title": "Zweirichtungs-Konvertierung", "description": "Text ↔ Binär in Echtzeit mit sofortiger Ausgabe" },
+          { "title": "Flexible Trennzeichen", "description": "Leerzeichen, kein Trenner oder Zeilenumbrüche – Sie entscheiden" },
+          { "title": "Bits gruppieren", "description": "Gruppieren Sie Bits (z. B. 8er-Blöcke) und füllen Sie fehlende Stellen automatisch auf" },
+          { "title": "Live-Validierung", "description": "Warnungen bei ungültigen Binärfolgen oder Zeichencodes" },
+          { "title": "Copy-to-Clipboard", "description": "Ergebnisse mit einem Klick kopieren oder weiterverarbeiten" },
+          { "title": "Lokal & privat", "description": "Alle Berechnungen laufen in Ihrem Browser – keine Serverübertragung" },
+          { "title": "Responsives Design", "description": "Angenehme Bedienung auf Desktop, Tablet und Smartphone" },
+          { "title": "Echtzeit-Statistik", "description": "Analyse von Bits, Zeichen und Bytes für schnelle Plausibilitätsprüfungen" }
+        ]
+      },
+      "useCases": {
+        "title": "Einsatzbereiche des Binär-Konverters",
+        "description": "Ob im Unterricht, beim Reverse Engineering oder in technischen Projekten – der Binärübersetzer ist vielseitig einsetzbar.",
+        "items": [
+          { "title": "Informatik-Lehre", "description": "Binäre Darstellungen von Buchstaben demonstrieren und üben" },
+          { "title": "Debugging & Reverse Engineering", "description": "Binärdaten inspizieren und schnell zurück in Klartext wandeln" },
+          { "title": "Dokumentationen & Tutorials", "description": "Codierungsbeispiele für Lernmaterialien oder Blogposts erzeugen" },
+          { "title": "Mikrocontroller & Embedded", "description": "Binärwerte für Register, Flags oder Protokolle vorbereiten" },
+          { "title": "CTF & Sicherheits-Workshops", "description": "Rätsel und Forensik-Aufgaben rund um Binärrepräsentationen lösen" },
+          { "title": "Datenkonvertierung", "description": "Zwischenschritte für Hex-, Base64- oder ASCII-Ketten prüfen" },
+          { "title": "Schulprojekte", "description": "Digitale Nachrichten in Binär formulieren und wieder zurückübersetzen" },
+          { "title": "Kreative Anwendungen", "description": "Coole Binärtexte für Poster, Kunstprojekte oder Social Media erstellen" }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den Binärcode-Übersetzer",
+        "description": "Vier einfache Schritte bringen Text und Binärdaten in Form.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Eingabe wählen",
+            "description": "Text eingeben oder Binärfolgen mit 0 und 1 einsetzen. Beispielwerte können per Copy & Paste übernommen werden."
+          },
+          {
+            "step": 2,
+            "title": "Richtung festlegen",
+            "description": "„Text zu Binär“ oder „Binär zu Text“ auswählen, um die Konvertierung zu starten."
+          },
+          {
+            "step": 3,
+            "title": "Optionen konfigurieren",
+            "description": "Trennzeichen, Gruppengröße und Padding einstellen, damit die Ausgabe Ihren Anforderungen entspricht."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis weiterverwenden",
+            "description": "Ausgabe prüfen, kopieren oder als Grundlage für weitere Kodierungen (z. B. Hex oder Base64) nutzen."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Binär-Beispiele",
+        "description": "Vergleichen Sie typische Eingaben und Ausgaben im Text- und Binärmodus.",
+        "items": [
+          { "title": "Text → Binär", "input": "Hallo", "output": "01001000 01100001 01101100 01101100 01101111" },
+          { "title": "Binär → Text", "input": "01010111 01100101 01101100 01110100", "output": "Welt" },
+          { "title": "Ohne Trennzeichen", "input": "Code", "output": "01000011011011110110010001100101" },
+          { "title": "Eigene Gruppierung", "input": "01001000|01101001", "output": "Hi" }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile mit diesem Tool",
+        "content": "Schnelle Ergebnisse, flexible Einstellungen und volle Datenkontrolle.",
+        "items": [
+          "Kostenlose Online-Nutzung ohne Anmeldung",
+          "Sofortige Konvertierung in beide Richtungen",
+          "Anpassbare Trennzeichen und Gruppengrößen",
+          "Validierung und klare Fehlermeldungen bei Tippfehlern",
+          "Statistiken zu Bits, Zeichen und Bytes auf einen Blick",
+          "Alle Daten bleiben lokal auf Ihrem Gerät",
+          "Responsives Interface für jede Bildschirmgröße",
+          "Perfekt kombinierbar mit Hex-, Base64- und UTF-8-Tools"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Kodierung wird verwendet?",
+          "answer": "Standardmäßig basiert die Umwandlung auf ASCII/UTF-8. Jeder Buchstabe wird in seine Unicode-Codepoints übersetzt. So bleiben internationale Zeichen erhalten."
+        },
+        {
+          "question": "Wie gehe ich mit langen Binärketten um?",
+          "answer": "Nutzen Sie Trennzeichen (Leerzeichen oder Zeilenumbrüche), um Ihre Binärwerte sauber zu strukturieren. Der Konverter akzeptiert beide Varianten."
+        },
+        {
+          "question": "Was passiert bei ungültigen Zeichen?",
+          "answer": "Der Übersetzer prüft die Eingabe und meldet invaliden Binärcode oder nicht-dekodierbare Werte mit klaren Fehlermeldungen."
+        },
+        {
+          "question": "Kann ich die Ausgabe gruppieren?",
+          "answer": "Ja, wählen Sie einfach die gewünschte Gruppengröße in Bits (z. B. 8) und aktivieren Sie optional Padding, damit unvollständige Gruppen automatisch ergänzt werden."
+        },
+        {
+          "question": "Bleiben meine Daten privat?",
+          "answer": "Absolut. Alle Umwandlungen passieren lokal in Ihrem Browser. Es werden keine Daten an Server geschickt oder gespeichert."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Kodierungs-Tools",
+        "items": [
+          {
+            "name": "Hex-zu-Text Konverter",
+            "description": "Zwischen Hexadezimaldarstellung und Klartext wechseln",
+            "href": "/de/tools/hex-to-text"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Text und Dateien in Base64 kodieren oder dekodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "UTF-8 Konverter",
+            "description": "Text in UTF-8-Bytes umwandeln und wieder zurück",
+            "href": "/de/tools/utf8-converter"
+          },
+          {
+            "name": "JSON Formatter",
+            "description": "JSON-Daten formatieren, validieren und analysieren",
+            "href": "/de/tools/json-formatter"
+          }
+        ]
+      }
+    }
   }
 }
