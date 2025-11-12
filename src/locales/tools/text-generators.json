@@ -1188,6 +1188,36 @@
         "withoutSpaces": "Ohne Leerzeichen"
       }
     },
+    "repeatText": {
+      "title": "Textwiederholer",
+      "description": "Wiederholen Sie Ihren Text beliebig oft und steuern Sie Abstände mit individuellen Trennzeichen. Ideal für Muster, Testdaten oder wiederkehrende Inhalte.",
+      "outputLabel": "Wiederholter Text",
+      "inputPlaceholder": "Text eingeben, der wiederholt werden soll...",
+      "copiedMessage": "Wiederholter Text in die Zwischenablage kopiert!",
+      "downloadFileName": "wiederholter-text.txt",
+      "convertButton": "Text wiederholen",
+      "uploadDescription": "",
+      "times": "Mal",
+      "reset": "Zurücksetzen",
+      "separator": "Trennzeichen",
+      "separators": {
+        "newline": "Zeilenumbruch",
+        "space": "Leerzeichen",
+        "none": "Keins",
+        "custom": "Benutzerdefiniert"
+      },
+      "customPlaceholder": "Benutzerdefiniertes Trennzeichen eingeben...",
+      "warning": "Große Ausgabe erkannt. Dies kann die Browserleistung beeinflussen.",
+      "hint": "Tipp: Verwenden Sie +/- auf der Tastatur, um die Wiederholungen schnell anzupassen",
+      "analytics": {
+        "title": "Analyse der Wiederholungen",
+        "originalLength": "Originallänge",
+        "repeatCount": "Anzahl der Wiederholungen",
+        "separatorType": "Trennzeichentyp",
+        "totalLength": "Gesamtlänge",
+        "expansionRatio": "Vergrößerungsfaktor"
+      }
+    },
     "removeTextFormatting": {
       "title": "Formatierung Entfernen",
       "description": "Entfernen Sie HTML-Tags, Markdown, Links, E-Mails und Sonderzeichen. Bereinigen Sie kopierten Inhalt und erhalten Sie sauberen Klartext.",

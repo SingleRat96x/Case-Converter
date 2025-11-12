@@ -271,4 +271,141 @@
       }
     }
   }
+  ,
+  "de": {
+    "title": "Textwiederholer - Text mehrfach mit Wunschtrennzeichen",
+    "metaDescription": "Wiederholen Sie Text hunderte Male mit Zeilenumbrüchen, Leerzeichen oder eigenen Trennzeichen. Ideal für Muster, Testdaten, Platzhalterinhalte und automatisierte Workflows.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Textwiederholer",
+        "content": "Wiederholen Sie beliebigen Text so oft Sie möchten und behalten Sie dabei die volle Kontrolle über Trennzeichen und Formatierung. Ideal für Muster, Testdaten, Layout-Platzhalter oder kreative Wiederholungen mit sofortiger Vorschau und anpassbaren Optionen."
+      },
+      "features": {
+        "title": "Funktionen für das Wiederholen von Text",
+        "items": [
+          { "title": "Flexibler Wiederholungszähler", "description": "Wiederholen Sie Text von 1 bis 1000 Mal mit komfortablen +/- Schaltflächen und Direkteingabe" },
+          { "title": "Mehrere Trennzeichen-Optionen", "description": "Wählen Sie zwischen Zeilenumbrüchen, Leerzeichen, keinem Trennzeichen oder einer eigenen Zeichenfolge" },
+          { "title": "Schnellauswahl-Presets", "description": "Ein-Klick-Voreinstellungen für 2x, 5x, 10x, 25x, 50x und 100x Wiederholungen" },
+          { "title": "Benutzerdefinierte Trennzeichen", "description": "Fügen Sie jede beliebige Zeichenfolge, Symbole oder Emojis als Trenner zwischen Wiederholungen ein" },
+          { "title": "Live-Vorschau", "description": "Sehen Sie das Ergebnis in Echtzeit, während Sie Anzahl und Trennzeichen ändern" },
+          { "title": "Tastaturkürzel", "description": "Nutzen Sie die Tasten + und -, um die Wiederholungsanzahl ohne Maus anzupassen" },
+          { "title": "Leistungswarnung", "description": "Automatische Hinweise bei sehr großen Ausgaben schützen vor Browser-Verzögerungen" },
+          { "title": "Datei-Upload", "description": "Laden Sie Textdateien hoch und wiederholen Sie deren Inhalt mit denselben Einstellungen" },
+          { "title": "Sofortiges Herunterladen", "description": "Speichern Sie das Ergebnis als Datei für weitere Anwendungen" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzmöglichkeiten",
+        "description": "Textwiederholungen sind in vielen Branchen und Projekten ein praktisches Hilfsmittel.",
+        "items": [
+          { "title": "Testdatengenerierung", "description": "Erzeugen Sie Beispieldaten für Software-Tests, Datenbanken und QA" },
+          { "title": "Muster und Templates", "description": "Erstellen Sie wiederkehrende Muster für Design, ASCII-Art oder Layouts" },
+          { "title": "Content-Platzhalter", "description": "Füllen Sie leere Bereiche in Mockups, Templates oder CMS-Strukturen" },
+          { "title": "Code und Skripte", "description": "Generieren Sie wiederkehrende Codefragmente, SQL-Statements oder Konfigurationen" },
+          { "title": "Lehr- und Übungsmaterial", "description": "Erstellen Sie Arbeitsblätter, Drill-Übungen oder Vokabelkarten mit Wiederholungen" },
+          { "title": "Social-Media-Posts", "description": "Setzen Sie Wiederholungen ein, um Betonung und Aufmerksamkeit zu erzeugen" },
+          { "title": "Datenaufbereitung", "description": "Bereiten Sie wiederkehrende Einträge für Tabellen, CSV-Importe oder Formularfelder vor" },
+          { "title": "Kreatives Schreiben", "description": "Nutzen Sie Wiederholungen als Stilmittel für Poesie, Lyrics oder Storytelling" }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie den Textwiederholer",
+        "description": "In wenigen Schritten zu wiederholtem Text mit perfektem Format:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text eingeben oder hochladen",
+            "description": "Tippen Sie Ihren Text in das Eingabefeld oder laden Sie eine Textdatei hoch, deren Inhalt wiederholt werden soll."
+          },
+          {
+            "step": 2,
+            "title": "Wiederholungsanzahl festlegen",
+            "description": "Stellen Sie die gewünschte Anzahl über das Zahlenfeld, die +/- Schaltflächen oder die Schnellauswahl ein."
+          },
+          {
+            "step": 3,
+            "title": "Trennzeichen wählen",
+            "description": "Bestimmen Sie, ob Wiederholungen mit Zeilenumbrüchen, Leerzeichen, ohne Trennzeichen oder mit einer eigenen Zeichenfolge verbunden werden."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis nutzen",
+            "description": "Kopieren Sie das Ergebnis mit einem Klick oder laden Sie es als Datei herunter, um es weiterzuverwenden."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Ausgabevarianten",
+        "description": "So verändern verschiedene Trennzeichen das Erscheinungsbild Ihrer Wiederholungen.",
+        "items": [
+          { "title": "Zeilenumbruch-Trennzeichen", "input": "Hallo Welt", "output": "Hallo Welt\\nHallo Welt\\nHallo Welt" },
+          { "title": "Leerzeichen-Trennzeichen", "input": "Test", "output": "Test Test Test Test Test" },
+          { "title": "Benutzerdefiniertes Trennzeichen", "input": "Element", "output": "Element | Element | Element | Element" },
+          { "title": "Kein Trennzeichen", "input": "ABC", "output": "ABCABCABCABC" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieser Textwiederholer überzeugt",
+        "content": "Präzise Steuerung, schnelle Ergebnisse und professionelle Optionen für jede Wiederholung.",
+        "items": [
+          "Unterstützung für bis zu 1000 Wiederholungen pro Text",
+          "Mehrere Trennzeichen für perfekte Formatierung",
+          "Schnellzugriff auf gängige Wiederholungswerte",
+          "Benutzerdefinierte Trennzeichen für maximale Flexibilität",
+          "Live-Vorschau ohne Wartezeit",
+          "Tastaturkürzel für effizientes Arbeiten",
+          "Automatische Warnungen bei großen Ausgaben",
+          "Upload- und Download-Funktionen integriert",
+          "Komplett kostenlos und ohne Anmeldung"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wie oft kann ich Text wiederholen?",
+          "answer": "Sie können Ihren Text bis zu 1000-mal duplizieren. Bei sehr großen Ausgaben zeigt das Tool Warnhinweise an, damit Ihr Browser flüssig bleibt."
+        },
+        {
+          "question": "Welche Trennzeichen stehen zur Auswahl?",
+          "answer": "Sie wählen zwischen Zeilenumbrüchen, Leerzeichen, keinem Trennzeichen oder einem frei definierbaren Trennzeichen."
+        },
+        {
+          "question": "Gibt es Tastaturkürzel?",
+          "answer": "Ja. Verwenden Sie „+“ oder „=“, um die Wiederholungen zu erhöhen, und „-“ zum Verringern – solange der Fokus nicht in einem Eingabefeld liegt."
+        },
+        {
+          "question": "Wie erstelle ich Muster mit eigenen Trennzeichen?",
+          "answer": "Wählen Sie „Benutzerdefiniert“ als Trennzeichen und geben Sie Ihre gewünschte Zeichenfolge ein, beispielsweise |, -, ★ oder Emojis."
+        },
+        {
+          "question": "Kann ich Text aus Dateien wiederholen?",
+          "answer": "Ja. Laden Sie Textdateien (.txt, .md, .js, .ts, .json, .css, .html usw.) hoch und wiederholen Sie den Inhalt mit Ihren Einstellungen."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen, Wörter und Zeilen samt Analyse",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Text suchen & ersetzen",
+            "description": "Finden und ersetzen Sie Text mit leistungsstarken Filtern",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Text Case Converter",
+            "description": "Konvertieren Sie Text in Groß-, Klein- oder Titel-Schreibweise",
+            "href": "/de/tools/uppercase"
+          },
+          {
+            "name": "Worthäufigkeits-Analyse",
+            "description": "Analysieren Sie die häufigsten Wörter in Ihrem Text",
+            "href": "/de/tools/word-frequency"
+          }
+        ]
+      }
+    }
+  }
 }

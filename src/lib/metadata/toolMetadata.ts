@@ -1393,6 +1393,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Повтор Текста — С Повторителями и Разделителями',
         description: 'Повторяйте строки или фразы много раз с разделителями и нумерацией. Быстро создавайте списки для тестов и демонстраций.',
         shortDescription: 'Повтор текста с разделителями.',
+      },
+      de: {
+        title: 'Textwiederholer: Text mit individuellen Trennzeichen',
+        description: 'Wiederholen Sie Texte bis zu 1000-mal mit Zeilenumbrüchen, Leerzeichen oder eigenen Trennzeichen. Ideal für Muster, Testdaten und automatisierte Inhalte.',
+        shortDescription: 'Text beliebig oft mit anpassbaren Trennzeichen wiederholen.',
       }
     },
     schema: createAdvancedSchema('repeat-text', ['Repeats', 'Numbering', 'Separators'], 'Text Input', 'Repeated Text', 4.1, 298),

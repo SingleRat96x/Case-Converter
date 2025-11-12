@@ -275,6 +275,7 @@
           }
         ]
       }
+    }
   },
   "de": {
     "title": "Formatierung Entfernen – HTML, Markdown & Styles online bereinigen",
@@ -352,16 +353,13 @@
           "Ideal als Vorstufe zum Plain-Text-Export"
         ]
       },
-      "faqs": {
-        "title": "Häufige Fragen",
-        "items": [
-          { "question": "Welche Formatierungen werden entfernt?", "answer": "Standardmäßig entfernen wir HTML-Tags, CSS-Stile, Markdown-Syntax, Links, E-Mails, Emojis, Sonderzeichen sowie doppelte Leerzeichen. Sie können jede Option gezielt ein- oder ausschalten." },
-          { "question": "Kann ich bestimmte Elemente behalten?", "answer": "Ja, lassen Sie einzelne Optionen deaktiviert, wenn Sie beispielsweise URLs, E-Mails oder Zahlen beibehalten möchten." },
-          { "question": "Wie steht es um große Textmengen?", "answer": "Das Tool verarbeitet auch lange Texte, Artikel oder ganze Dokumente performant und ohne Größenbeschränkung." },
-          { "question": "Werden meine Daten gespeichert?", "answer": "Nein, alle Berechnungen passieren ausschließlich in Ihrem Browser. Es werden keine Daten übertragen oder gespeichert." },
-          { "question": "Funktioniert das Tool mit mehreren Sprachen?", "answer": "Ja, es arbeitet sprachunabhängig und unterstützt sämtliche Unicode-Zeichen." }
-        ]
-      },
+      "faqs": [
+        { "question": "Welche Formatierungen werden entfernt?", "answer": "Standardmäßig entfernen wir HTML-Tags, CSS-Stile, Markdown-Syntax, Links, E-Mails, Emojis, Sonderzeichen sowie doppelte Leerzeichen. Sie können jede Option gezielt ein- oder ausschalten." },
+        { "question": "Kann ich bestimmte Elemente behalten?", "answer": "Ja, lassen Sie einzelne Optionen deaktiviert, wenn Sie beispielsweise URLs, E-Mails oder Zahlen beibehalten möchten." },
+        { "question": "Wie steht es um große Textmengen?", "answer": "Das Tool verarbeitet auch lange Texte, Artikel oder ganze Dokumente performant und ohne Größenbeschränkung." },
+        { "question": "Werden meine Daten gespeichert?", "answer": "Nein, alle Berechnungen passieren ausschließlich in Ihrem Browser. Es werden keine Daten übertragen oder gespeichert." },
+        { "question": "Funktioniert das Tool mit mehreren Sprachen?", "answer": "Ja, es arbeitet sprachunabhängig und unterstützt sämtliche Unicode-Zeichen." }
+      ],
       "relatedTools": {
         "title": "Verwandte Tools",
         "items": [
@@ -371,7 +369,6 @@
           { "name": "Text ersetzen", "description": "Finden und ersetzen Sie Textmuster mit erweiterten Optionen", "href": "/de/tools/text-replace" }
         ]
       }
-    }
     }
   }
 }
