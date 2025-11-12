@@ -352,5 +352,139 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Caesar-Verschlüsselung Online – Text mit Verschiebung codieren",
+    "metaDescription": "Verschlüsseln und entschlüsseln Sie Text mit dem klassischen Caesar-Shift. Stellen Sie den Verschiebungswert ein, vergleichen Sie Varianten, nutzen Sie Statistik und Analyse – alles im Browser.",
+    "sections": {
+      "intro": {
+        "title": "Caesar Cipher – Klassiker der Kryptografie im Browser",
+        "content": "Die Caesar-Verschlüsselung verschiebt jeden Buchstaben um eine feste Anzahl an Positionen im Alphabet. Unser Online-Tool macht das Experimentieren besonders einfach: Verschiebung setzen, Optionen wählen, Ergebnis kopieren – perfekt für Unterricht, Kryptografie-Grundlagen oder schnelle Tests."
+      },
+      "features": {
+        "title": "Funktionen des Caesar-Konverters",
+        "items": [
+          { "title": "Zweirichtungs-Konvertierung", "description": "Text sofort verschlüsseln oder einen Caesar-Shift wieder entschlüsseln" },
+          { "title": "Flexibler Verschiebungswert", "description": "Beliebigen Shift in positive oder negative Richtung wählen" },
+          { "title": "Optionen für Zeichenbeibehaltung", "description": "Groß-/Kleinschreibung, Zahlen und Symbole je nach Bedarf erhalten" },
+          { "title": "Sofortige Vorschau", "description": "Ergebnisse in Echtzeit anzeigen, ohne die Seite neu zu laden" },
+          { "title": "Copy-to-Clipboard", "description": "Erhalte den verschlüsselten oder entschlüsselten Text mit einem Klick" },
+          { "title": "Zufalls-Verschiebung", "description": "Per Zufall einen neuen Shift-Wert generieren – ideal für Rätsel" },
+          { "title": "Statistik & Analyse", "description": "Übersicht über Buchstabenanzahl, Alphabet-Anteil und Shift-Wert" },
+          { "title": "Komplett lokal", "description": "Alle Berechnungen laufen im Browser – keine Datenübertragung" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzbereiche",
+        "description": "Die Caesar-Verschlüsselung eignet sich für zahlreiche Bildungs- und Freizeit-Projekte.",
+        "items": [
+          { "title": "Schulunterricht", "description": "Kryptografie anschaulich erklären und gemeinsam ausprobieren" },
+          { "title": "Rätsel & Escape Rooms", "description": "Geheime Botschaften erstellen oder decodieren" },
+          { "title": "Geschichtliche Grundbegriffe", "description": "Historische Verschlüsselungen der Antike und Renaissance nachvollziehen" },
+          { "title": "Ctf & Sicherheitstraining", "description": "Einfache Substitutionen üben, bevor komplexere Verfahren folgen" },
+          { "title": "Sprachspiele", "description": "Kodierte Nachrichten austauschen oder Alphabet-Shift-Rätsel bauen" },
+          { "title": "Kreative Projekte", "description": "Poster, Kunstwerke oder Social-Media-Beiträge mit geheimen Botschaften erstellen" },
+          { "title": "Vorbereitung auf ROT13", "description": "Grundlagen für weitere Alphaverschiebungen oder ROT-Verfahren legen" },
+          { "title": "Mathematische Experimente", "description": "Zusammenhänge zwischen modularer Arithmetik und Buchstabenverschiebung erforschen" }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert die Caesar-Verschlüsselung",
+        "description": "Vier Schritte reichen, um einen Text zu schützen oder wieder lesbar zu machen.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text eingeben",
+            "description": "Schreiben oder kopieren Sie den Text in das Eingabefeld – wahlweise Klartext oder bereits verschlüsselt."
+          },
+          {
+            "step": 2,
+            "title": "Modus wählen",
+            "description": "Legen Sie fest, ob verschlüsselt („Text verschlüsseln“) oder entschlüsselt („Text entschlüsseln“) werden soll."
+          },
+          {
+            "step": 3,
+            "title": "Verschiebung und Optionen einstellen",
+            "description": "Bestimmen Sie die Verschiebung, ob Groß-/Kleinschreibung erhalten bleibt, und wie Zahlen oder Symbole behandelt werden."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis nutzen",
+            "description": "Lesen Sie den verarbeiteten Text sofort ab, kopieren Sie ihn oder verwenden Sie ihn für weitere Experimente."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Caesar-Shift Beispiele",
+        "description": "So verändert sich Text bei unterschiedlichen Verschiebungen.",
+        "items": [
+          { "title": "Shift +3 (klassisch)", "input": "Kryptografie", "output": "Nsbwurogudilh" },
+          { "title": "Negativer Shift", "input": "Vertraulich", "output": "Sboniwrfif" },
+          { "title": "Shift +13 (ROT13)", "input": "Hallo Welt", "output": "Unyyb Jrgy" },
+          { "title": "Zahlen/Symbole behalten", "input": "Code 123!", "output": "Frgh 123!" }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile mit diesem Tool",
+        "content": "Ein praxisnahes Tool für Kryptografie-Einsteiger und didaktische Projekte.",
+        "items": [
+          "Historische Verschlüsselung intuitiv ausprobieren",
+          "Frei wählbare Verschiebung – auch negative Werte",
+          "Optionale Beibehaltung von Zahlen und Symbolen",
+          "Schnelle Ergebnisse und Copy-to-Clipboard",
+          "Statistiken zu Buchstaben, Wörtern und Alphabet-Anteil",
+          "Vollständig browserbasiert – keine Anmeldung erforderlich",
+          "Ideal in Kombination mit ROT13 oder Substitutionstabellen",
+          "Kostenlos und werbefrei nutzbar"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist eine Verschiebung beim Caesar Cipher?",
+          "answer": "Sie wählen eine Zahl, um die jede Buchstabe im Alphabet verschoben wird. Bei einer Verschiebung um +3 wird A zu D, B zu E usw. Bei –3 dreht sich die Richtung um."
+        },
+        {
+          "question": "Wird die Groß-/Kleinschreibung verändert?",
+          "answer": "Standardmäßig ja, jedoch können Sie die Option „Groß-/Kleinschreibung beibehalten“ aktivieren, um das Original beizubehalten."
+        },
+        {
+          "question": "Was passiert mit Zahlen oder Sonderzeichen?",
+          "answer": "Sie können festlegen, ob Zahlen und Symbole unverändert bleiben oder ebenfalls verschoben werden sollen. Standardmäßig bleiben sie erhalten."
+        },
+        {
+          "question": "Kann ich den Text auch wieder entschlüsseln?",
+          "answer": "Natürlich. Wählen Sie schlicht den Modus „Text entschlüsseln“, geben Sie den verschlüsselten Text sowie den korrekten Verschiebungswert ein – das Tool übernimmt den Rest."
+        },
+        {
+          "question": "Ist Caesar-Verschlüsselung sicher?",
+          "answer": "Für moderne Anwendungen nicht, da es nur 26 mögliche Verschiebungen gibt. Sie eignet sich jedoch hervorragend zum Lernen, für Schulprojekte und einfache Rätsel."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Verschlüsselungs- und Texttools",
+        "items": [
+          {
+            "name": "ROT13 Konverter",
+            "description": "Spezielle Caesar-Variante mit fester Verschiebung um 13",
+            "href": "/de/tools/rot13"
+          },
+          {
+            "name": "Binärcode Übersetzer",
+            "description": "Text in Binär umwandeln und zurück – ideal für Lernprojekte",
+            "href": "/de/tools/binary-code-translator"
+          },
+          {
+            "name": "Morse-Code Übersetzer",
+            "description": "Text in Morsecode und zurück inklusive Audioausgabe",
+            "href": "/de/tools/morse-code"
+          },
+          {
+            "name": "Text Case Converter",
+            "description": "Schnell zwischen Groß-, Klein- oder Titel-Schreibweise wechseln",
+            "href": "/de/tools/uppercase"
+          }
+        ]
+      }
+    }
   }
 }

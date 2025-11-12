@@ -498,6 +498,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Шифр Цезаря — Кодирование/Декодирование Со Сдвигом',
         description: 'Кодируйте или декодируйте текст шифром Цезаря. Управляйте величиной сдвига, копируйте результаты и изучайте шифры.',
         shortDescription: 'Шифр Цезаря для текста.',
+      },
+      de: {
+        title: 'Caesar-Verschlüsselung – Text mit Verschiebung codieren',
+        description: 'Verschlüsseln oder entschlüsseln Sie Text mit dem klassischen Caesar-Shift. Stellen Sie den Verschiebewert ein, kopieren Sie Ergebnisse und entdecken Sie einfache Substitutionsverfahren.',
+        shortDescription: 'Text mit Caesar-Shift codieren oder decodieren.',
       }
     },
     schema: createAdvancedSchema('caesar-cipher', ['Shift control', 'Instant copy'], 'Text Input', 'Encrypted Text', 3.8, 201),
