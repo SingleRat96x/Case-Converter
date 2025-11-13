@@ -1805,6 +1805,92 @@
         "frequencyTitle": "Buchstabenhäufigkeit",
         "frequencyHint": "Häufige Buchstaben im Deutschen: E, N, I, S, R, A"
       }
+    },
+    "csvJson": {
+      "title": "CSV-zu-JSON-Konverter",
+      "description": "Konvertieren Sie CSV-Daten in JSON und JSON wieder zurück. Ideal für Datenpipelines, API-Integrationen und flexible Formattransformationen.",
+      "labels": {
+        "csvData": "CSV-Daten",
+        "jsonData": "JSON-Daten"
+      },
+      "placeholders": {
+        "csv": "CSV-Daten eingeben, die in JSON umgewandelt werden sollen...",
+        "json": "JSON-Daten eingeben, die in CSV umgewandelt werden sollen..."
+      },
+      "modes": {
+        "csvToJson": "CSV zu JSON",
+        "jsonToCsv": "JSON zu CSV"
+      },
+      "accordion": {
+        "title": "CSV-zu-JSON-Optionen"
+      },
+      "sections": {
+        "format": "Formatkonfiguration",
+        "processing": "Verarbeitungseinstellungen"
+      },
+      "tabs": {
+        "conversion": "Konvertierung",
+        "settings": "Einstellungen"
+      },
+      "options": {
+        "title": "Optionen",
+        "delimiter": "Trennzeichen",
+        "delimiters": {
+          "comma": "Komma",
+          "semicolon": "Semikolon",
+          "tab": "Tabulator",
+          "pipe": "Pipe"
+        },
+        "customDelimiter": "Eigenes Trennzeichen...",
+        "hasHeaders": "Erste Zeile als Kopfzeilen",
+        "jsonFormat": "JSON-Format",
+        "formats": {
+          "pretty": "Lesbar",
+          "array": "Array",
+          "object": "Objekt"
+        },
+        "skipEmptyLines": "Leere Zeilen überspringen",
+        "trimWhitespace": "Leerzeichen trimmen",
+        "handleQuotes": "Zitatzeichen berücksichtigen"
+      },
+      "actions": {
+        "clear": "Alles löschen",
+        "example": "Beispiel testen"
+      },
+      "errors": {
+        "emptyInput": "Eingabedaten sind leer",
+        "csvParsingFailed": "CSV-Daten konnten nicht analysiert werden",
+        "jsonParsingFailed": "JSON-Daten konnten nicht analysiert werden",
+        "invalidJson": "Ungültiges JSON-Format",
+        "unsupportedJsonFormat": "Nicht unterstützte JSON-Struktur",
+        "unsupportedDataStructure": "Nicht unterstützte Datenstruktur",
+        "conversionFailed": "Konvertierung fehlgeschlagen"
+      },
+      "info": {
+        "description": "Konvertieren Sie zwischen CSV- und JSON-Formaten mit konfigurierbaren Optionen. Unterstützt Kopfzeilen, individuelle Trennzeichen und verschiedene JSON-Strukturen.",
+        "csvNote": "CSV-Dateien können unterschiedliche Trennzeichen und eingebettete Zeilenumbrüche in Anführungszeichen enthalten.",
+        "jsonNote": "JSON-Daten können Arrays von Objekten, einzelne Objekte oder Array-Arrays sein. Das Tool erkennt die Struktur automatisch."
+      },
+      "stats": {
+        "rows": "Datenzeilen",
+        "columns": "Spalten",
+        "jsonSize": "JSON-Größe"
+      },
+      "analytics": {
+        "title": "CSV-zu-JSON-Analyse",
+        "rows": "Zeilen",
+        "columns": "Spalten",
+        "inputSize": "Eingabegröße",
+        "outputSize": "Ausgabegröße",
+        "dataPoints": "Datenpunkte",
+        "compressionRatio": "Größenänderung"
+      },
+      "examples": {
+        "title": "Schnelle Beispiele",
+        "csvExample": "CSV-Beispiel",
+        "jsonExample": "JSON-Beispiel",
+        "hint": "Beispiel auswählen, um die Konvertierung mit verschiedenen Datenstrukturen zu testen"
+      }
     }
   }
 }

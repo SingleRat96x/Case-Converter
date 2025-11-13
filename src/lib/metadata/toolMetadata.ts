@@ -1182,6 +1182,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'CSV ↔ JSON Конвертер — Быстро и Точно',
         description: 'Преобразуйте CSV в корректный JSON и обратно. Настраивайте заголовки, разделители и кавычки. Копируйте и загружайте.',
         shortDescription: 'CSV ↔ JSON с настройками.',
+      },
+      de: {
+        title: 'CSV-zu-JSON-Konverter – Schnelle Datenumwandlung',
+        description: 'Wandeln Sie CSV-Daten in sauberes JSON und wieder zurück. Unterstützt benutzerdefinierte Trennzeichen, Header-Steuerung sowie flexible Formatoptionen.',
+        shortDescription: 'CSV ↔ JSON mit flexiblen Optionen.',
       }
     },
     schema: createAdvancedSchema('csv-to-json', ['CSV ↔ JSON', 'Delimiter options'], 'CSV Input', 'JSON Output', 4.7, 789),

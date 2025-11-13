@@ -352,5 +352,182 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser CSV-zu-JSON-Konverter – Bidirektionale Datenumwandlung",
+    "metaDescription": "Konvertieren Sie CSV zu JSON und JSON zu CSV in Sekunden. Kostenloses Online-Tool mit anpassbaren Trennzeichen, Header-Steuerung und erweiterten Formatoptionen für Datenverarbeitung.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser CSV-zu-JSON-Konverter – Bidirektionale Datenumwandlung",
+        "content": "Wandeln Sie Daten zwischen CSV und JSON mit unserem umfassenden Online-Konverter um. Unterstützt bidirektionale Konvertierung, frei wählbare Trennzeichen, Header-Verwaltung und detailreiche Formatoptionen. Ideal für Datenpipelines, API-Integrationen und flexible Formattransformationen."
+      },
+      "features": {
+        "title": "Erweiterte Funktionen für CSV-zu-JSON-Konvertierung",
+        "items": [
+          {
+            "title": "Bidirektionale Konvertierung",
+            "description": "CSV in JSON und JSON wieder zurück mit sofortigem Moduswechsel und intelligenter Formaterkennung."
+          },
+          {
+            "title": "Anpassbare Trennzeichen",
+            "description": "Unterstützt Komma, Semikolon, Tabulator, Pipe und benutzerdefinierte Trennzeichen für regionale CSV-Standards."
+          },
+          {
+            "title": "Header-Verwaltung",
+            "description": "Automatisches Erkennen und Verarbeiten von Kopfzeilen mit Optionen zum Ein- oder Ausschließen."
+          },
+          {
+            "title": "JSON-Formatoptionen",
+            "description": "Wählen Sie zwischen Array-, Objekt- oder lesbar formatiertem JSON mit sauberen Einrückungen."
+          },
+          {
+            "title": "Datenverarbeitungsoptionen",
+            "description": "Erweiterte Einstellungen für Anführungszeichen, Leerzeichen, leere Zeilen und automatische Datentyp-Erkennung."
+          },
+          {
+            "title": "Analyse in Echtzeit",
+            "description": "Detaillierte Statistiken zu Zeilen, Spalten, Dateigrößen, Größenänderungen und Datenpunkten."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Wichtige Einsatzgebiete für CSV-zu-JSON-Konvertierung",
+        "description": "Transformieren Sie Datenformate für Anwendungen, APIs und Analyse-Workflows.",
+        "items": [
+          {
+            "title": "API-Integration",
+            "description": "Wandeln Sie CSV-Daten in JSON um, damit REST-APIs und Webservices sie direkt verarbeiten können."
+          },
+          {
+            "title": "Datenmigration",
+            "description": "Übertragen Sie Datensätze zwischen Systemen, Datenbanken und Anwendungen ohne Formatverluste."
+          },
+          {
+            "title": "Webentwicklung",
+            "description": "Bereiten Sie CSV-Datasets für JavaScript-Anwendungen, Diagramme und dynamische Oberflächen vor."
+          },
+          {
+            "title": "Datenanalyse",
+            "description": "Konvertieren Sie CSV-Dateien für Analyse-Tools und Frameworks, die JSON als Eingabe erwarten."
+          },
+          {
+            "title": "Konfigurationsdateien",
+            "description": "Überführen Sie CSV-Konfigurationen in JSON für moderne Anwendungen und Microservices."
+          },
+          {
+            "title": "Berichtserstellung",
+            "description": "Verwandeln Sie CSV-Berichte in JSON für Automatisierung, Dashboards und Workflows."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie zwischen CSV und JSON",
+        "description": "Folgen Sie diesen Schritten, um Ihre Daten zuverlässig umzuwandeln.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Konvertierungsmodus wählen",
+            "description": "Wählen Sie per Umschalter, ob Sie CSV in JSON oder JSON in CSV umwandeln möchten."
+          },
+          {
+            "step": 2,
+            "title": "Daten eingeben",
+            "description": "Fügen Sie Ihre CSV- oder JSON-Daten in das Eingabefeld ein oder laden Sie eine Datei hoch."
+          },
+          {
+            "step": 3,
+            "title": "Optionen konfigurieren",
+            "description": "Stellen Sie Trennzeichen, Header-Verhalten und JSON-Format in den Optionen ein."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis prüfen & exportieren",
+            "description": "Überprüfen Sie die Ausgabe, sehen Sie sich die Analysen an und kopieren oder laden Sie das Ergebnis herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für CSV-zu-JSON-Konvertierungen",
+        "description": "So sehen unterschiedliche Datensätze nach der Umwandlung aus.",
+        "items": [
+          {
+            "title": "Einfaches CSV zu JSON",
+            "input": "Name,Alter,Stadt\nAnna,28,Berlin\nLukas,32,Hamburg",
+            "output": "[\n  {\"Name\": \"Anna\", \"Alter\": 28, \"Stadt\": \"Berlin\"},\n  {\"Name\": \"Lukas\", \"Alter\": 32, \"Stadt\": \"Hamburg\"}\n]"
+          },
+          {
+            "title": "JSON zu CSV",
+            "input": "[{\"produkt\": \"Laptop\", \"preis\": 999.99}, {\"produkt\": \"Maus\", \"preis\": 29.99}]",
+            "output": "produkt,preis\nLaptop,999.99\nMaus,29.99"
+          },
+          {
+            "title": "Individuelles Trennzeichen",
+            "input": "ID;Name;Aktiv\n1;Max;true\n2;Lea;false",
+            "output": "[\n  {\"ID\": 1, \"Name\": \"Max\", \"Aktiv\": true},\n  {\"ID\": 2, \"Name\": \"Lea\", \"Aktiv\": false}\n]"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unseren CSV-zu-JSON-Konverter nutzen",
+        "content": "Professionelle Datenkonvertierung mit umfassenden Optionen und intelligenter Verarbeitung.",
+        "items": [
+          "Sofortige bidirektionale Konvertierung zwischen CSV und JSON",
+          "Unterstützung mehrerer Trennzeichen und eigener Separatoren",
+          "Intelligente Erkennung und Verarbeitung von Kopfzeilen",
+          "Erweitertes JSON-Formatting mit Lesbarkeitsoptionen",
+          "Analyse in Echtzeit und Einblicke zur Größenoptimierung",
+          "Robuste Fehlerbehandlung und Datenvalidierung",
+          "Datenschutzfreundlich – Verarbeitung erfolgt vollständig lokal",
+          "Kostenlos nutzbar, keine Registrierung erforderlich"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche CSV-Formate werden unterstützt?",
+          "answer": "Unser Konverter unterstützt Standard-CSV mit Komma, Semikolon, Tabulator, Pipe und benutzerdefinierten Trennzeichen. Er verarbeitet Felder in Anführungszeichen, Escape-Zeichen und unterschiedliche regionale CSV-Standards."
+        },
+        {
+          "question": "Wie werden Datentypen behandelt?",
+          "answer": "Der Konverter erkennt Zahlen automatisch und speichert sie als Zahlen im JSON. Text bleibt Zeichenkette. Boolesche Werte (true/false) werden ebenfalls erkannt. Über die Optionen können Sie dieses Verhalten anpassen."
+        },
+        {
+          "question": "Kann ich JSON-Arrays zurück in CSV umwandeln?",
+          "answer": "Ja, das Tool unterstützt beide Richtungen. Es verarbeitet JSON-Arrays von Objekten, verschachtelte Strukturen und unterschiedliche Formate. Kopfzeilen werden automatisch extrahiert und für CSV vorbereitet."
+        },
+        {
+          "question": "Was passiert mit leeren Feldern oder fehlenden Daten?",
+          "answer": "Leere CSV-Zellen werden als leere Zeichenketten im JSON ausgegeben. Fehlende JSON-Eigenschaften werden zu leeren CSV-Zellen. Über die Verarbeitungsoptionen steuern Sie den Umgang mit leeren Zeilen und Whitespaces."
+        },
+        {
+          "question": "Gibt es eine Größenbeschränkung?",
+          "answer": "Es gibt keine künstlichen Limits. Die Konvertierung läuft vollständig im Browser, daher hängt die praktische Grenze vom Arbeitsspeicher Ihres Geräts ab. Große Dateien werden effizient mit Fortschrittsanzeige verarbeitet."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Datenverarbeitungs-Tools",
+        "items": [
+          {
+            "name": "JSON Stringify",
+            "description": "JSON formatieren und validieren mit Syntaxhervorhebung",
+            "href": "/de/tools/json-stringify"
+          },
+          {
+            "name": "Base64-Encoder/Decoder",
+            "description": "Daten mit Base64 kodieren und dekodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Textstatistiken und Datenstruktur analysieren",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "URL-Konverter",
+            "description": "URLs für Webanwendungen kodieren und dekodieren",
+            "href": "/de/tools/url-converter"
+          }
+        ]
+      }
+    }
   }
 }
