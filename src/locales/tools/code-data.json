@@ -1106,74 +1106,6 @@
         "frequencyHint": "Наиболее распространённые буквы в русском: О, Е, А, И, Н, Т"
       }
     },
-    "caesar": {
-      "title": "Caesar-Verschlüsselung",
-      "description": "Verschlüsseln und entschlüsseln Sie Text mit der klassischen Caesar-Verschiebung. Ideal zum Erlernen historischer Kryptografie, fürs Klassenzimmer oder für simple Sicherheitsexperimente.",
-      "labels": {
-        "cipherText": "Chiffrierter Text"
-      },
-      "placeholders": {
-        "encode": "Text eingeben, der mit dem Caesar-Shift verschlüsselt werden soll...",
-        "decode": "Chiffrierten Text eingeben, um ihn zu entschlüsseln..."
-      },
-      "modes": {
-        "encode": "Text verschlüsseln",
-        "decode": "Text entschlüsseln"
-      },
-      "accordion": {
-        "title": "Caesar-Optionen"
-      },
-      "sections": {
-        "cipher": "Verschiebung konfigurieren",
-        "preservation": "Beibehaltung-Einstellungen"
-      },
-      "tabs": {
-        "cipher": "Verschiebung",
-        "settings": "Einstellungen"
-      },
-      "options": {
-        "title": "Optionen",
-        "shift": "Verschiebung",
-        "preserveCase": "Groß-/Kleinschreibung beibehalten",
-        "preserveNumbers": "Zahlen beibehalten",
-        "preserveSymbols": "Symbole beibehalten"
-      },
-      "actions": {
-        "random": "Zufall",
-        "randomShift": "Zufällige Verschiebung erzeugen",
-        "resetClassic": "Klassischer Caesar (Verschiebung 3)"
-      },
-      "errors": {
-        "encodeFailed": "Text konnte nicht verschlüsselt werden",
-        "decodeFailed": "Text konnte nicht entschlüsselt werden",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Der Caesar-Shift verschiebt jeden Buchstaben um eine feste Anzahl an Positionen im Alphabet. Probieren Sie unterschiedliche Werte aus, um die Wirkung zu verstehen.",
-        "encodingNote": "Beim Verschlüsseln werden Buchstaben nach vorne verschoben und nach Z wieder zu A zurückgesetzt.",
-        "decodingNote": "Beim Entschlüsseln werden die Buchstaben um den gleichen Betrag zurück verschoben."
-      },
-      "stats": {
-        "letters": "Buchstaben",
-        "shift": "Verschiebung",
-        "shiftValue": "Wert",
-        "words": "Wörter",
-        "alphabetic": "Alphabetisch %"
-      },
-      "analytics": {
-        "title": "Caesar-Analyse",
-        "letters": "Buchstaben",
-        "words": "Wörter",
-        "shiftValue": "Verschiebungswert",
-        "alphabeticPercentage": "Alphabetisch %",
-        "totalCharacters": "Gesamtzeichen",
-        "preservedCharacters": "Behaltene Zeichen"
-      },
-      "analysis": {
-        "frequencyTitle": "Buchstabenhäufigkeit",
-        "frequencyHint": "Häufige Buchstaben im Deutschen: E, N, I, S, R, A"
-      }
-    },
     "rot13": {
       "title": "ROT13 ?????????? ? ???????",
       "description": "????????? ? ??????????? ????? ? ??????? ????? ROT13. ???????????? ???? ??????????? ????, ??????? ???????????? ????? ?? 13 ??????? ? ????????.",
@@ -1804,6 +1736,74 @@
         "sizeRatio": "Größenverhältnis",
         "uniqueChars": "Einzigartige Zeichen",
         "bitDensity": "Bit-Dichte"
+      }
+    },
+    "caesar": {
+      "title": "Caesar-Verschlüsselung",
+      "description": "Verschlüsseln und entschlüsseln Sie Text mit der klassischen Caesar-Verschiebung. Ideal zum Erlernen historischer Kryptografie, fürs Klassenzimmer oder für simple Sicherheitsexperimente.",
+      "labels": {
+        "cipherText": "Chiffrierter Text"
+      },
+      "placeholders": {
+        "encode": "Text eingeben, der mit dem Caesar-Shift verschlüsselt werden soll...",
+        "decode": "Chiffrierten Text eingeben, um ihn zu entschlüsseln..."
+      },
+      "modes": {
+        "encode": "Text verschlüsseln",
+        "decode": "Text entschlüsseln"
+      },
+      "accordion": {
+        "title": "Caesar-Optionen"
+      },
+      "sections": {
+        "cipher": "Verschiebung konfigurieren",
+        "preservation": "Beibehaltung-Einstellungen"
+      },
+      "tabs": {
+        "cipher": "Verschiebung",
+        "settings": "Einstellungen"
+      },
+      "options": {
+        "title": "Optionen",
+        "shift": "Verschiebung",
+        "preserveCase": "Groß-/Kleinschreibung beibehalten",
+        "preserveNumbers": "Zahlen beibehalten",
+        "preserveSymbols": "Symbole beibehalten"
+      },
+      "actions": {
+        "random": "Zufall",
+        "randomShift": "Zufällige Verschiebung erzeugen",
+        "resetClassic": "Klassischer Caesar (Verschiebung 3)"
+      },
+      "errors": {
+        "encodeFailed": "Text konnte nicht verschlüsselt werden",
+        "decodeFailed": "Text konnte nicht entschlüsselt werden",
+        "conversionFailed": "Konvertierung fehlgeschlagen"
+      },
+      "info": {
+        "description": "Der Caesar-Shift verschiebt jeden Buchstaben um eine feste Anzahl an Positionen im Alphabet. Probieren Sie unterschiedliche Werte aus, um die Wirkung zu verstehen.",
+        "encodingNote": "Beim Verschlüsseln werden Buchstaben nach vorne verschoben und nach Z wieder zu A zurückgesetzt.",
+        "decodingNote": "Beim Entschlüsseln werden die Buchstaben um den gleichen Betrag zurück verschoben."
+      },
+      "stats": {
+        "letters": "Buchstaben",
+        "shift": "Verschiebung",
+        "shiftValue": "Wert",
+        "words": "Wörter",
+        "alphabetic": "Alphabetisch %"
+      },
+      "analytics": {
+        "title": "Caesar-Analyse",
+        "letters": "Buchstaben",
+        "words": "Wörter",
+        "shiftValue": "Verschiebungswert",
+        "alphabeticPercentage": "Alphabetisch %",
+        "totalCharacters": "Gesamtzeichen",
+        "preservedCharacters": "Behaltene Zeichen"
+      },
+      "analysis": {
+        "frequencyTitle": "Buchstabenhäufigkeit",
+        "frequencyHint": "Häufige Buchstaben im Deutschen: E, N, I, S, R, A"
       }
     }
   }
