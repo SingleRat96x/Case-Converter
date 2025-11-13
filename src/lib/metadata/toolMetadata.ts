@@ -785,8 +785,13 @@ const overrides: Array<ToolMetadataConfig> = [
       },
       ru: {
         title: 'Переводчик НАТО-Фонетического Алфавита — Слова‑коды',
-        description: 'Преобразуйте текст в фонетический алфавит НАТО и обратно. Удобно для чёткого произношения по телефону/рации. Мгновальное копирование.',
+        description: 'Преобразуйте текст в фонетический алфавит НАТО и обратно. Удобно для чёткого произношения по телефону/рации. Мгновенное копирование.',
         shortDescription: 'Текст ↔ фонетический алфавит НАТО.',
+      },
+      de: {
+        title: 'NATO-Funkalphabet Übersetzer – Text ↔ Codewörter',
+        description: 'Wandeln Sie Text in das NATO-Funkalphabet und zurück. Ideal für klare Buchstabierung über Telefon oder Funk, mit sofortigem Kopieren und flexiblen Optionen.',
+        shortDescription: 'Text ↔ NATO-Codewörter übersetzen.',
       }
     },
     schema: createAdvancedSchema('nato-phonetic', ['Text to code words', 'Reverse translation'], 'Text Input', 'NATO Phonetic', 4.3, 389),

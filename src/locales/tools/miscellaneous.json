@@ -1058,6 +1058,131 @@
     }
   },
   "de": {
+    "onlineNotepad": {
+      "title": "Online Notepad - Free Web-Based Text Editor",
+      "description": "A simple and efficient online notepad for taking notes, editing text, and creating documents. Features auto-save, download options, and mobile-optimized interface.",
+      "inputPlaceholder": "Start typing your notes here...",
+      "uploadDescription": "Upload a text file to edit in the notepad",
+      "downloadFileName": "notepad.txt",
+      "printTitle": "Online Notepad",
+      "printDate": "Printed on:",
+      "newFileTitle": "Create New File",
+      "newFileDescription": "Are you sure you want to create a new file? Any unsaved changes will be lost.",
+      "newFileConfirm": "Create New",
+      "newFileCancel": "Cancel",
+      "textNotFound": "Text not found",
+      "statusLabels": {
+        "words": "Words",
+        "characters": "Characters",
+        "lines": "Lines",
+        "selected": "Selected",
+        "line": "Ln",
+        "column": "Col",
+        "encoding": "Encoding",
+        "lastSaved": "Last saved",
+        "neverSaved": "Never saved",
+        "justSaved": "Just saved",
+        "minuteAgo": "minute ago",
+        "minutesAgo": "minutes ago",
+        "hourAgo": "hour ago",
+        "hoursAgo": "hours ago",
+        "saving": "Saving...",
+        "notSaved": "Not saved"
+      },
+      "menu": {
+        "file": "File",
+        "edit": "Edit",
+        "view": "View",
+        "help": "Help",
+        "new": "New",
+        "open": "Open",
+        "saveTxt": "Save as TXT",
+        "saveMd": "Save as MD",
+        "print": "Print",
+        "exit": "Exit",
+        "undo": "Undo",
+        "redo": "Redo",
+        "cut": "Cut",
+        "copy": "Copy",
+        "paste": "Paste",
+        "selectAll": "Select All",
+        "findReplace": "Find and Replace",
+        "fullscreen": "Full Screen",
+        "preview": "Preview",
+        "wordWrap": "Word Wrap",
+        "keyboardShortcuts": "Keyboard Shortcuts",
+        "about": "About",
+        "insert": "Insert",
+        "dateTime": "Date and Time"
+      },
+      "dialogs": {
+        "keyboardShortcuts": {
+          "title": "Keyboard Shortcuts",
+          "description": "Complete list of keyboard shortcuts available in the Online Notepad",
+          "categories": {
+            "fileOperations": "File Operations",
+            "editOperations": "Edit Operations",
+            "viewOperations": "View Operations",
+            "navigation": "Navigation"
+          },
+          "shortcuts": {
+            "newFile": "New file",
+            "openFile": "Open file",
+            "saveTxt": "Save as TXT",
+            "saveMd": "Save as Markdown",
+            "print": "Print document",
+            "undo": "Undo",
+            "redo": "Redo",
+            "cut": "Cut",
+            "copy": "Copy",
+            "paste": "Paste",
+            "selectAll": "Select all",
+            "fullscreen": "Toggle fullscreen",
+            "preview": "Toggle preview",
+            "insertDateTime": "Insert date and time",
+            "tab": "Insert tab character",
+            "escape": "Close menus and dialogs"
+          },
+          "tip": "💡 Tip: Use these shortcuts to work more efficiently with your documents."
+        },
+        "about": {
+          "title": "About Online Notepad",
+          "description": "A modern, feature-rich text editor for all your note-taking needs",
+          "appName": "Online Notepad",
+          "version": "Version 1.0.0",
+          "featuresTitle": "Key Features",
+          "features": {
+            "richText": "Rich text editing with formatting options",
+            "autoSave": "Auto-save functionality",
+            "printExport": "Print and export capabilities",
+            "preview": "Preview mode and fullscreen editing"
+          },
+          "footer": {
+            "builtWith": "Built with modern web technologies for the best user experience.",
+            "copyright": "© 2024 Text Case Converter Tools"
+          }
+        },
+        "findReplace": {
+          "title": "Find and Replace",
+          "description": "Search and replace text in your document",
+          "findLabel": "Find",
+          "replaceLabel": "Replace with",
+          "findPlaceholder": "Enter text to find...",
+          "replacePlaceholder": "Enter replacement text...",
+          "matchCase": "Match case",
+          "wholeWord": "Whole word",
+          "useRegex": "Use regular expressions",
+          "findNext": "Find Next",
+          "findPrevious": "Find Previous",
+          "replace": "Replace",
+          "replaceAll": "Replace All",
+          "close": "Close",
+          "notFound": "Text not found",
+          "replaced": "Replaced {count} occurrence(s)",
+          "noMatches": "No matches found"
+        }
+      }
+    },
     "asciiArtGenerator": {
       "title": "ASCII Art Generator - Text & Bild zu ASCII Art Konverter",
       "description": "Erstellen Sie beeindruckende ASCII-Kunst aus Text und Bildern. Konvertieren Sie Ihren Text in dekorative ASCII-Schriftarten oder transformieren Sie Bilder in schöne ASCII-Kunst mit anpassbaren Optionen.",
@@ -1137,6 +1262,52 @@
         "processingFailed": "Bildverarbeitung fehlgeschlagen. Bitte versuchen Sie es erneut.",
         "emptyText": "Bitte geben Sie Text zur Konvertierung ein.",
         "loadingFailed": "Bild konnte nicht geladen werden. Bitte versuchen Sie eine andere Datei."
+      }
+    },
+    "natoPhonetic": {
+      "title": "NATO-Funkalphabet Konverter",
+      "description": "Konvertieren Sie Text in das NATO-Funkalphabet und zurück. Ideal für klare Kommunikation in Militär, Luftfahrt und professionellen Teams.",
+      "inputLabel": "Text zur Konvertierung",
+      "outputLabel": "NATO-Funkalphabet Ergebnis",
+      "inputPlaceholder": "Text eingeben oder bereits phonetische Wörter hinzufügen...",
+      "uploadDescription": "Textdatei zur Konvertierung hochladen (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "nato-funkalphabet-umwandlung.txt",
+      "modes": {
+        "auto": "Automatisch erkennen",
+        "textToPhonetic": "Text → NATO-Funkalphabet",
+        "phoneticToText": "NATO-Funkalphabet → Text"
+      },
+      "phoneticTable": {
+        "title": "NATO-Funkalphabet Referenz",
+        "letterColumn": "Buchstabe",
+        "phoneticColumn": "Codewort",
+        "numberColumn": "Zahl",
+        "copyTooltip": "Zum Kopieren klicken",
+        "lettersSection": "Buchstaben (A-Z)",
+        "numbersSection": "Zahlen (0-9)"
+      },
+      "actions": {
+        "convertText": "Text konvertieren",
+        "clearAll": "Alles löschen",
+        "copyResult": "Ergebnis kopieren",
+        "downloadResult": "Ergebnis herunterladen",
+        "copyPhonetic": "Codewort kopieren",
+        "showTable": "Referenztabelle anzeigen",
+        "hideTable": "Referenztabelle verbergen"
+      },
+      "messages": {
+        "conversionComplete": "Konvertierung abgeschlossen!",
+        "textCopied": "Text in Zwischenablage kopiert!",
+        "phoneticCopied": "Codewort kopiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Konvertierung ein.",
+        "invalidPhoneticText": "Die Eingabe scheint kein gültiges NATO-Funkalphabet zu sein.",
+        "autoDetectedMode": "Konvertierungsmodus automatisch erkannt"
+      },
+      "stats": {
+        "originalLength": "Länge Originaltext",
+        "convertedLength": "Länge nach Konvertierung",
+        "wordCount": "Wortanzahl",
+        "compressionRatio": "Erweiterungsfaktor"
       }
     }
   }
