@@ -458,6 +458,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Hex ↔ Текст — Конвертация Шестнадцатеричных Строк',
         description: 'Преобразуйте шестнадцатеричные строки в читаемый текст и обратно. Полезно для отладки и конвертаций данных.',
         shortDescription: 'Hex ↔ текст.',
+      },
+      de: {
+        title: 'Hex-zu-Text-Konverter – Hexadezimal ↔ Text',
+        description: 'Wandeln Sie Hexadezimal-Zeichenfolgen in lesbaren Text und umgekehrt. Ideal für Debugging, Kodierungen und Datenkonvertierungen.',
+        shortDescription: 'Hex ↔ Text konvertieren.',
       }
     },
     schema: createAdvancedSchema('hex-to-text', ['Two-way', 'Debugging'], 'Hex Input', 'Text Output', 4.0, 267),
@@ -478,6 +483,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Азбука Морзе — Перевод Текста в Морзе (С Аудио)',
         description: 'Переводите текст в азбуку Морзе и обратно. Опциональное аудио для обучения и практики. Мгновенное копирование.',
         shortDescription: 'Текст ↔ код Морзе.',
+      },
+      de: {
+        title: 'Morsecode Übersetzer – Text ↔ Morse mit Audio',
+        description: 'Wandeln Sie Text in Morsecode und zurück. Ein optionaler Audio-Player unterstützt beim Lernen und Üben. Kopieren und teilen Sie Ergebnisse sofort.',
+        shortDescription: 'Text ↔ Morse mit Audio abspielen und kopieren.',
       }
     },
     schema: createAdvancedSchema('morse-code', ['Audio', 'Two-way translation'], 'Text Input', 'Morse Code', 3.9, 234),
@@ -1102,6 +1112,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'JSON Форматировщик и Валидатор — Бесплатный Онлайн JSON Просмотрщик',
         description: 'Форматируйте, валидируйте и исследуйте JSON с подсветкой синтаксиса. Режим древа, минификация, сортировка ключей, поддержка NDJSON. Вставляйте или загружайте файлы до 10МБ. Всё работает локально в браузере.',
         shortDescription: 'Форматирование, валидация и исследование JSON онлайн.',
+      },
+      de: {
+        title: 'JSON-Formatter & Validator – Kostenloser Online-Viewer',
+        description: 'Formatieren, validieren und analysieren Sie JSON mit Syntax-Highlighting. Baumansicht, Minify, Schlüsselsortierung, NDJSON-Unterstützung. Einfügen oder Dateien bis 10 MB hochladen – alles läuft lokal im Browser.',
+        shortDescription: 'JSON online formatieren, prüfen und erkunden.',
       }
     },
     schema: createAdvancedSchema('json-formatter', ['Format', 'Validate', 'Tree view', 'Syntax highlighting', 'NDJSON'], 'JSON Input', 'Formatted JSON', 4.9, 1567),

@@ -103,15 +103,6 @@
         "characters": "Characters",
         "bits": "Total Bits",
         "bytes": "Bytes"
-      },
-      "analytics": {
-        "title": "Binary Code Analytics",
-        "inputChars": "Input Characters",
-        "outputBits": "Output Bits",
-        "bytes": "Bytes",
-        "sizeRatio": "Size Ratio",
-        "uniqueChars": "Unique Characters",
-        "bitDensity": "Bit Density"
       }
     },
     "hex": {
@@ -209,7 +200,7 @@
       },
       "stats": {
         "dots": "Dots",
-        "dashes": "Dashes",
+        "dashes": "Dashes", 
         "words": "Words",
         "duration": "Duration (sec)"
       },
@@ -747,18 +738,10 @@
     },
     "jsonFormatter": {
       "title": "Online JSON Formatter & Validator",
-      "intro": "Format, validate, and explore JSON in seconds. Paste raw JSON?or drop a .json or .txt file?and we'll pretty-print it with syntax highlighting. Toggle indent size, collapse levels, minify for production, or unescape strings for readability. Everything happens locally in your browser.",
+      "intro": "Format, validate, and explore JSON in seconds. Paste raw JSON—or drop a .json or .txt file—and we'll pretty-print it with syntax highlighting. Toggle indent size, collapse levels, minify for production, or unescape strings for readability. Everything happens locally in your browser.",
       "formatButton": "Format & Validate",
       "minifyButton": "Minify",
-      "clearButton": "Clear",
-      "uploadButton": "Upload",
-      "copyButton": "Copy",
-      "downloadButton": "Download",
-      "printButton": "Print",
       "processing": "Processing...",
-      "formatted": "Formatted!",
-      "copied": "Copied",
-      "saved": "Saved",
       "inputLabel": "Input",
       "outputLabel": "Output",
       "inputPlaceholder": "Paste or type JSON here...",
@@ -772,42 +755,11 @@
       "viewModeLabel": "View Mode",
       "viewCode": "Code",
       "viewTree": "Tree",
-      "tooltips": {
-        "format": "Format and validate JSON (Ctrl+Enter)",
-        "minify": "Minify JSON",
-        "clear": "Clear input (Ctrl+K)",
-        "upload": "Upload JSON file",
-        "copy": "Copy to clipboard (Ctrl+C)",
-        "download": "Download as file",
-        "print": "Print (Ctrl+P)",
-        "viewCode": "View as code",
-        "viewTree": "View as tree"
-      },
-      "statusBar": {
-        "lines": "Lines",
-        "characters": "Characters",
-        "words": "Words",
-        "objects": "Objects",
-        "arrays": "Arrays",
-        "keys": "Keys",
-        "values": "Values",
-        "size": "Size",
-        "noOutput": "No output"
-      },
-      "indentOptions": {
-        "spaces2": "2 spaces",
-        "spaces4": "4 spaces",
-        "spaces8": "8 spaces",
-        "custom": "Custom..."
-      },
       "errors": {
         "invalidJson": "Invalid JSON",
-        "validationError": "Validation Error",
         "emptyInput": "Input is empty",
         "parsingError": "Failed to parse JSON",
-        "formattingError": "Failed to format JSON",
-        "fileTooLarge": "File too large. Maximum size is 10MB.",
-        "fileReadError": "Error reading file"
+        "formattingError": "Failed to format JSON"
       }
     }
   },
@@ -915,15 +867,6 @@
         "characters": "Символы",
         "bits": "Всего битов",
         "bytes": "Байты"
-      },
-      "analytics": {
-        "title": "Аналитика двоичного кода",
-        "inputChars": "Входные символы",
-        "outputBits": "Выходные биты",
-        "bytes": "Байты",
-        "sizeRatio": "Отношение размеров",
-        "uniqueChars": "Уникальные символы",
-        "bitDensity": "Плотность бит"
       }
     },
     "hex": {
@@ -1380,7 +1323,7 @@
       "info": {
         "description": "URL кодирование преобразует специальные символы в процентно-кодированный формат (%XX) для безопасной передачи в URL.",
         "encodingNote": "Кодирование компонентов строже, чем кодирование URI, и должно использоваться для параметров URL.",
-        "decodingNote": "Декодирование преобразует процентно-кодированные последовательности обратно в их исходные символы."
+        "decodingNote": "Декодирование преобразует процентно-кодированные последовательности обратно в исходные символы."
       },
       "stats": {
         "inputLength": "Длина Ввода",
@@ -1560,17 +1503,9 @@
     "jsonFormatter": {
       "title": "Онлайн JSON Форматировщик и Валидатор",
       "intro": "Форматируйте, валидируйте и исследуйте JSON за секунды. Вставьте сырой JSON—или перетащите файл .json или .txt—и мы его красиво отформатируем с подсветкой синтаксиса. Настройте размер отступа, сворачивайте уровни, минифицируйте для продакшена или разэкранируйте строки для читаемости. Всё происходит локально в вашем браузере.",
-      "formatButton": "Форматировать",
+      "formatButton": "Форматировать и Валидировать",
       "minifyButton": "Минифицировать",
-      "clearButton": "Очистить",
-      "uploadButton": "Загрузить",
-      "copyButton": "Копировать",
-      "downloadButton": "Скачать",
-      "printButton": "Печать",
       "processing": "Обработка...",
-      "formatted": "Готово!",
-      "copied": "Скопировано",
-      "saved": "Сохранено",
       "inputLabel": "Ввод",
       "outputLabel": "Вывод",
       "inputPlaceholder": "Вставьте или введите JSON здесь...",
@@ -1584,563 +1519,11 @@
       "viewModeLabel": "Режим Просмотра",
       "viewCode": "Код",
       "viewTree": "Дерево",
-      "tooltips": {
-        "format": "Форматировать и валидировать JSON (Ctrl+Enter)",
-        "minify": "Минифицировать JSON",
-        "clear": "Очистить ввод (Ctrl+K)",
-        "upload": "Загрузить JSON файл",
-        "copy": "Копировать в буфер обмена (Ctrl+C)",
-        "download": "Скачать как файл",
-        "print": "Печать (Ctrl+P)",
-        "viewCode": "Просмотр как код",
-        "viewTree": "Просмотр как дерево"
-      },
-      "statusBar": {
-        "lines": "Строки",
-        "characters": "Символы",
-        "words": "Слова",
-        "objects": "Объекты",
-        "arrays": "Массивы",
-        "keys": "Ключи",
-        "values": "Значения",
-        "size": "Размер",
-        "noOutput": "Нет вывода"
-      },
-      "indentOptions": {
-        "spaces2": "2 пробела",
-        "spaces4": "4 пробела",
-        "spaces8": "8 пробелов",
-        "custom": "Пользовательский..."
-      },
       "errors": {
         "invalidJson": "Неверный JSON",
-        "validationError": "Ошибка Валидации",
         "emptyInput": "Ввод пуст",
         "parsingError": "Не удалось разобрать JSON",
-        "formattingError": "Не удалось отформатировать JSON",
-        "fileTooLarge": "Файл слишком большой. Максимальный размер 10МБ.",
-        "fileReadError": "Ошибка чтения файла"
-      }
-    }
-  },
-  "de": {
-    "base64": {
-      "title": "Base64 Encoder/Decoder",
-      "description": "Kodieren und dekodieren Sie Text in das Base64-Format oder zurück. Perfekt für Datenübertragung, API-Integrationen und das Encodieren von Textinhalten.",
-      "labels": {
-        "plainText": "Klartext",
-        "base64Text": "Base64-kodiert"
-      },
-      "placeholders": {
-        "encode": "Text eingeben, der in Base64 kodiert werden soll...",
-        "decode": "Base64-Zeichenkette zum Dekodieren eingeben..."
-      },
-      "uploadDescription": "",
-      "modes": {
-        "encode": "In Base64 kodieren",
-        "decode": "Aus Base64 dekodieren"
-      },
-      "dataType": {
-        "title": "Datentyp",
-        "text": "Text",
-        "binary": "Binär",
-        "image": "Bild"
-      },
-      "options": {
-        "title": "Optionen",
-        "urlSafe": "URL-sichere Kodierung",
-        "includePadding": "Padding beibehalten",
-        "lineBreaks": "Zeilenumbrüche einfügen",
-        "lineLength": "Zeilenlänge"
-      },
-      "errors": {
-        "encodeFailed": "Text konnte nicht in Base64 kodiert werden",
-        "decodeFailed": "Base64-Zeichenkette konnte nicht dekodiert werden",
-        "invalidBase64": "Ungültiges Base64-Format",
-        "fileReadFailed": "Datei konnte nicht gelesen werden",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "messages": {
-        "encodeSuccess": "Erfolgreich in Base64 kodiert",
-        "decodeSuccess": "Erfolgreich aus Base64 dekodiert",
-        "fileUploaded": "Datei erfolgreich hochgeladen"
-      },
-      "info": {
-        "description": "Base64 wandelt Text in ASCII-Zeichen mit einem 64-Zeichen-Alphabet um. Ideal, um Daten sicher über textbasierte Protokolle zu übertragen.",
-        "encodingNote": "Die Kodierung vergrößert die Datenmenge um etwa 33 %."
-      },
-      "stats": {
-        "inputSize": "Eingabe",
-        "outputSize": "Ausgabe",
-        "expansionRatio": "Vergrößerungsfaktor",
-        "compressionRatio": "Kompressionsfaktor"
-      },
-      "analytics": {
-        "title": "Base64-Analyse",
-        "lines": "Zeilen",
-        "characters": "Zeichen",
-        "efficiency": "Effizienz"
-      }
-    },
-    "binary": {
-      "title": "Binärcode-Übersetzer",
-      "description": "Konvertieren Sie Text in Binärcode und Binärfolgen zurück in lesbaren Text. Ideal zum Lernen von Kodierungen, für Schulprojekte und schnelle Prüfungen.",
-      "labels": {
-        "binaryCode": "Binärcode"
-      },
-      "placeholders": {
-        "encode": "Text eingeben, der in Binär umgewandelt werden soll...",
-        "decode": "Binärcode eingeben, der in Text umgewandelt werden soll...",
-        "encodeOutput": "Der Binärcode erscheint hier...",
-        "decodeOutput": "Der dekodierte Text erscheint hier..."
-      },
-      "modes": {
-        "textToBinary": "Text zu Binär",
-        "binaryToText": "Binär zu Text"
-      },
-      "options": {
-        "title": "Optionen",
-        "delimiter": "Trennzeichen",
-        "delimiters": {
-          "space": "Leerzeichen",
-          "none": "Keins",
-          "newline": "Zeilenumbruch"
-        },
-        "groupSize": "Gruppengröße (Bits)",
-        "bitLabel": "Bits",
-        "padding": "Auf Gruppengröße auffüllen"
-      },
-      "errors": {
-        "encodeFailed": "Kodierung in Binär fehlgeschlagen",
-        "decodeFailed": "Dekodierung aus Binär fehlgeschlagen",
-        "invalidBinary": "Ungültige Binärzeichenfolge",
-        "invalidCharCode": "Ungültiger Zeichencode",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Binär stellt Zeichen ausschließlich mit 0 und 1 dar. Jede Eingabe wird in den entsprechenden ASCII- oder Unicode-Wert übersetzt.",
-        "encodingNote": "Standard-ASCII-Zeichen benötigen 7–8 Bits, Unicode-Zeichen können mehr verwenden.",
-        "decodingNote": "Binärfolgen dürfen nur aus 0 und 1 bestehen und können mit Leerzeichen oder Zeilenumbrüchen getrennt werden."
-      },
-      "stats": {
-        "inputChars": "Eingabezeichen",
-        "characters": "Zeichen",
-        "bits": "Bits gesamt",
-        "bytes": "Bytes"
-      },
-      "analytics": {
-        "title": "Binär-Analyse",
-        "inputChars": "Eingabezeichen",
-        "outputBits": "Ausgabebits",
-        "bytes": "Bytes",
-        "sizeRatio": "Größenverhältnis",
-        "uniqueChars": "Einzigartige Zeichen",
-        "bitDensity": "Bit-Dichte"
-      }
-    },
-    "hex": {
-      "title": "Hex-zu-Text-Konverter",
-      "description": "Konvertieren Sie Text in Hexadezimalcode und dekodieren Sie Hex zurück in Text. Perfekt für Debugging, Datenanalyse und das Verständnis von Zeichenkodierungen.",
-      "labels": {
-        "hexCode": "Hexadezimalcode"
-      },
-      "placeholders": {
-        "encode": "Text eingeben, der in Hex umgewandelt werden soll...",
-        "decode": "Hex-Code eingeben, der in Text umgewandelt werden soll..."
-      },
-      "modes": {
-        "textToHex": "Text zu Hex",
-        "hexToText": "Hex zu Text"
-      },
-      "options": {
-        "title": "Optionen",
-        "delimiter": "Trennzeichen",
-        "delimiters": {
-          "space": "Leerzeichen",
-          "none": "Keins",
-          "colon": "Doppelpunkt"
-        },
-        "uppercase": "Großbuchstaben",
-        "prefix": "0x-Präfix hinzufügen"
-      },
-      "errors": {
-        "encodeFailed": "Text konnte nicht in Hex konvertiert werden",
-        "decodeFailed": "Hex konnte nicht in Text konvertiert werden",
-        "invalidHex": "Ungültige Hexadezimal-Zeichenfolge",
-        "invalidCharCode": "Ungültiger Zeichencode",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Die Hexadezimaldarstellung bildet Text mit Ziffern 0-9 und Buchstaben A-F ab. Jeder Buchstabe wird in seinen ASCII- oder Unicode-Wert im Hexformat überführt.",
-        "encodingNote": "Pro Zeichen werden in der Regel 2 Hex-Ziffern verwendet und damit weniger Platz als bei Binär benötigt.",
-        "decodingNote": "Hex-Zeichenfolgen dürfen nur die Zeichen 0-9 und A-F enthalten und können mit optionalen Trennzeichen formatiert sein."
-      },
-      "stats": {
-        "inputChars": "Eingabezeichen",
-        "hexChars": "Hex-Zeichen",
-        "bytes": "Bytes"
-      }
-    },
-    "morse": {
-      "title": "Morsecode-Übersetzer",
-      "description": "Wandeln Sie Text in Morsecode um und dekodieren Sie Morsezeichen wieder in Klartext. Inklusive Audio-Wiedergabe zum Lernen und Kommunizieren.",
-      "labels": {
-        "morseCode": "Morsecode"
-      },
-      "placeholders": {
-        "encode": "Text eingeben, der in Morsecode umgewandelt werden soll...",
-        "decode": "Morsecode eingeben, der in Text umgewandelt werden soll..."
-      },
-      "modes": {
-        "textToMorse": "Text zu Morse",
-        "morseToText": "Morse zu Text"
-      },
-      "accordion": {
-        "title": "Morsecode-Einstellungen"
-      },
-      "sections": {
-        "format": "Formatierungsoptionen",
-        "audio": "Audio-Einstellungen"
-      },
-      "options": {
-        "title": "Optionen",
-        "delimiter": "Trennzeichen",
-        "delimiters": {
-          "space": "Leerzeichen",
-          "slash": "Schrägstrich (/)",
-          "pipe": "Pipe (|)"
-        },
-        "playSpeed": "Geschwindigkeit",
-        "frequency": "Frequenz",
-        "volume": "Lautstärke"
-      },
-      "audio": {
-        "play": "Audio abspielen",
-        "stop": "Audio stoppen",
-        "mute": "Stummschalten",
-        "unmute": "Ton einschalten"
-      },
-      "errors": {
-        "encodeFailed": "Morsecode konnte nicht erzeugt werden",
-        "decodeFailed": "Morsecode konnte nicht dekodiert werden",
-        "invalidMorse": "Ungültiges Morsecode-Format",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Morsecode bildet Zeichen über Punkte und Striche ab. Nutzen Sie die Wiedergabe, um Timing und Rhythmus zu trainieren.",
-        "encodingNote": "Buchstaben werden durch Leerzeichen getrennt, Wörter durch Schrägstriche. Lernen Sie das Muster durch wiederholtes Anhören.",
-        "decodingNote": "Verwenden Sie Punkte (.) und Striche (-) mit Leerzeichen dazwischen. Nutzen Sie / oder | für Wortabstände."
-      },
-      "stats": {
-        "dots": "Punkte",
-        "dashes": "Striche",
-        "words": "Wörter",
-        "duration": "Dauer (Sek.)"
-      },
-      "analytics": {
-        "title": "Morsecode-Analyse",
-        "dots": "Punkte",
-        "dashes": "Striche",
-        "characters": "Zeichen",
-        "words": "Wörter",
-        "duration": "Dauer",
-        "morseLength": "Morse-Länge"
-      },
-      "reference": {
-        "title": "Schnellreferenz"
-      }
-    },
-    "jsonFormatter": {
-      "title": "Online JSON-Formatter & Validator",
-      "intro": "Formatieren, validieren und analysieren Sie JSON in Sekunden. Fügen Sie Roh-JSON ein oder laden Sie eine .json-/.txt-Datei hoch und erhalten Sie sofort eine lesbare Ausgabe mit Syntax-Highlighting. Ändern Sie Einrückung, sortieren Sie Schlüssel, aktivieren Sie NDJSON oder ent-escapen Sie Zeichenketten – alles passiert lokal in Ihrem Browser.",
-      "formatButton": "Formatieren & Validieren",
-      "minifyButton": "Minifizieren",
-      "clearButton": "Leeren",
-      "uploadButton": "Hochladen",
-      "copyButton": "Kopieren",
-      "downloadButton": "Herunterladen",
-      "printButton": "Drucken",
-      "processing": "Verarbeitung...",
-      "formatted": "Formatiert!",
-      "copied": "Kopiert",
-      "saved": "Gespeichert",
-      "inputLabel": "Eingabe",
-      "outputLabel": "Ausgabe",
-      "inputPlaceholder": "JSON hier einfügen oder eingeben...",
-      "outputPlaceholder": "Formatiertes JSON erscheint hier...",
-      "helperText": "JSON einfügen oder eine JSON/TXT-Datei ablegen. Wir formatieren und validieren alles lokal in Ihrem Browser. Drücken Sie Strg/Cmd+Enter zum Formatieren.",
-      "optionsTitle": "Formatierungsoptionen",
-      "indentSizeLabel": "Einrückungsgröße",
-      "sortKeys": "Schlüssel alphabetisch sortieren",
-      "unescapeStrings": "Zeichenketten ent-escapen",
-      "ndjsonMode": "NDJSON-Modus (Zeile für Zeile)",
-      "viewModeLabel": "Ansichtsmodus",
-      "viewCode": "Code",
-      "viewTree": "Baum",
-      "tooltips": {
-        "format": "JSON formatieren und validieren (Strg+Enter)",
-        "minify": "JSON minifizieren",
-        "clear": "Eingabe leeren (Strg+K)",
-        "upload": "JSON-Datei hochladen",
-        "copy": "In Zwischenablage kopieren (Strg+C)",
-        "download": "Als Datei herunterladen",
-        "print": "Drucken (Strg+P)",
-        "viewCode": "Als Code anzeigen",
-        "viewTree": "Als Baum anzeigen"
-      },
-      "statusBar": {
-        "lines": "Zeilen",
-        "characters": "Zeichen",
-        "words": "Wörter",
-        "objects": "Objekte",
-        "arrays": "Arrays",
-        "keys": "Schlüssel",
-        "values": "Werte",
-        "size": "Größe",
-        "noOutput": "Keine Ausgabe"
-      },
-      "indentOptions": {
-        "spaces2": "2 Leerzeichen",
-        "spaces4": "4 Leerzeichen",
-        "spaces8": "8 Leerzeichen",
-        "custom": "Benutzerdefiniert..."
-      },
-      "errors": {
-        "invalidJson": "Ungültiges JSON",
-        "validationError": "Validierungsfehler",
-        "emptyInput": "Eingabe ist leer",
-        "parsingError": "JSON konnte nicht geparst werden",
-        "formattingError": "JSON konnte nicht formatiert werden",
-        "fileTooLarge": "Datei zu groß. Maximal 10 MB.",
-        "fileReadError": "Fehler beim Lesen der Datei"
-      }
-    },
-    "jsonStringify": {
-      "title": "JSON-Stringify-Tool",
-      "description": "JSON-Daten formatieren, in Strings umwandeln oder wieder zurück parsen – mit flexiblen Optionen für Entwickler.",
-      "labels": {
-        "jsonInput": "JSON-Eingabe",
-        "jsonString": "JSON-String"
-      },
-      "placeholders": {
-        "json": "JSON-Objekt oder Array zum Stringify eingeben...",
-        "string": "JSON-String eingeben, der formatiert werden soll..."
-      },
-      "modes": {
-        "stringify": "JSON stringify",
-        "parse": "Parsen & formatieren"
-      },
-      "accordion": {
-        "title": "JSON-Stringify-Optionen"
-      },
-      "sections": {
-        "formatting": "Formatierungseinstellungen",
-        "processing": "Verarbeitungsoptionen"
-      },
-      "tabs": {
-        "formatting": "Formatierung",
-        "settings": "Einstellungen"
-      },
-      "options": {
-        "title": "Optionen",
-        "indentSize": "Einrückungsgröße",
-        "spaces": "Leerzeichen",
-        "outputFormat": "Ausgabeformat",
-        "pretty": "Lesbar",
-        "compact": "Kompakt",
-        "sortKeys": "Schlüssel sortieren",
-        "escapeUnicode": "Unicode escapen",
-        "removeComments": "Kommentare entfernen",
-        "validateJson": "JSON validieren"
-      },
-      "actions": {
-        "clear": "Alles löschen",
-        "example": "Beispiel testen"
-      },
-      "errors": {
-        "stringifyFailed": "JSON konnte nicht stringify ausgegeben werden",
-        "parseFailed": "JSON konnte nicht geparst werden",
-        "invalidJson": "Ungültiges JSON-Format",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Verarbeiten Sie JSON mit individuell anpassbaren Formatoptionen. Unterstützt Pretty-Print, Schlüsselsortierung, Validierung und Unicode-Steuerung.",
-        "stringifyNote": "Objekte und Arrays werden mit der gewählten Einrückung in saubere JSON-Strings umgewandelt.",
-        "parseNote": "JSON-Strings werden geparst, validiert und für bessere Lesbarkeit neu formatiert. Optional lassen sich Kommentare entfernen."
-      },
-      "stats": {
-        "inputSize": "Eingabegröße",
-        "outputSize": "Ausgabegröße",
-        "elements": "Elemente",
-        "depth": "Max. Tiefe"
-      },
-      "analytics": {
-        "title": "JSON-Stringify-Analyse",
-        "inputSize": "Eingabegröße",
-        "outputSize": "Ausgabegröße",
-        "elements": "Elemente",
-        "keys": "Schlüssel",
-        "depth": "Max. Tiefe",
-        "compressionRatio": "Größenänderung"
-      },
-      "examples": {
-        "title": "Schnelle Beispiele",
-        "example": "Beispiel",
-        "hint": "Beispiel auswählen, um JSON-Strukturen mit unterschiedlichen Optionen zu testen"
-      }
-    },
-    "caesar": {
-      "title": "Caesar-Verschlüsselung",
-      "description": "Verschlüsseln und entschlüsseln Sie Text mit der klassischen Caesar-Verschiebung. Ideal zum Erlernen historischer Kryptografie, fürs Klassenzimmer oder für simple Sicherheitsexperimente.",
-      "labels": {
-        "cipherText": "Chiffrierter Text"
-      },
-      "placeholders": {
-        "encode": "Text eingeben, der mit dem Caesar-Shift verschlüsselt werden soll...",
-        "decode": "Chiffrierten Text eingeben, um ihn zu entschlüsseln..."
-      },
-      "modes": {
-        "encode": "Text verschlüsseln",
-        "decode": "Text entschlüsseln"
-      },
-      "accordion": {
-        "title": "Caesar-Optionen"
-      },
-      "sections": {
-        "cipher": "Verschiebung konfigurieren",
-        "preservation": "Beibehaltung-Einstellungen"
-      },
-      "tabs": {
-        "cipher": "Verschiebung",
-        "settings": "Einstellungen"
-      },
-      "options": {
-        "title": "Optionen",
-        "shift": "Verschiebung",
-        "preserveCase": "Groß-/Kleinschreibung beibehalten",
-        "preserveNumbers": "Zahlen beibehalten",
-        "preserveSymbols": "Symbole beibehalten"
-      },
-      "actions": {
-        "random": "Zufall",
-        "randomShift": "Zufällige Verschiebung erzeugen",
-        "resetClassic": "Klassischer Caesar (Verschiebung 3)"
-      },
-      "errors": {
-        "encodeFailed": "Text konnte nicht verschlüsselt werden",
-        "decodeFailed": "Text konnte nicht entschlüsselt werden",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Der Caesar-Shift verschiebt jeden Buchstaben um eine feste Anzahl an Positionen im Alphabet. Probieren Sie unterschiedliche Werte aus, um die Wirkung zu verstehen.",
-        "encodingNote": "Beim Verschlüsseln werden Buchstaben nach vorne verschoben und nach Z wieder zu A zurückgesetzt.",
-        "decodingNote": "Beim Entschlüsseln werden die Buchstaben um den gleichen Betrag zurück verschoben."
-      },
-      "stats": {
-        "letters": "Buchstaben",
-        "shift": "Verschiebung",
-        "shiftValue": "Wert",
-        "words": "Wörter",
-        "alphabetic": "Alphabetisch %"
-      },
-      "analytics": {
-        "title": "Caesar-Analyse",
-        "letters": "Buchstaben",
-        "words": "Wörter",
-        "shiftValue": "Verschiebungswert",
-        "alphabeticPercentage": "Alphabetisch %",
-        "totalCharacters": "Gesamtzeichen",
-        "preservedCharacters": "Behaltene Zeichen"
-      },
-      "analysis": {
-        "frequencyTitle": "Buchstabenhäufigkeit",
-        "frequencyHint": "Häufige Buchstaben im Deutschen: E, N, I, S, R, A"
-      }
-    },
-    "csvJson": {
-      "title": "CSV-zu-JSON-Konverter",
-      "description": "Konvertieren Sie CSV-Daten in JSON und JSON wieder zurück. Ideal für Datenpipelines, API-Integrationen und flexible Formattransformationen.",
-      "labels": {
-        "csvData": "CSV-Daten",
-        "jsonData": "JSON-Daten"
-      },
-      "placeholders": {
-        "csv": "CSV-Daten eingeben, die in JSON umgewandelt werden sollen...",
-        "json": "JSON-Daten eingeben, die in CSV umgewandelt werden sollen..."
-      },
-      "modes": {
-        "csvToJson": "CSV zu JSON",
-        "jsonToCsv": "JSON zu CSV"
-      },
-      "accordion": {
-        "title": "CSV-zu-JSON-Optionen"
-      },
-      "sections": {
-        "format": "Formatkonfiguration",
-        "processing": "Verarbeitungseinstellungen"
-      },
-      "tabs": {
-        "conversion": "Konvertierung",
-        "settings": "Einstellungen"
-      },
-      "options": {
-        "title": "Optionen",
-        "delimiter": "Trennzeichen",
-        "delimiters": {
-          "comma": "Komma",
-          "semicolon": "Semikolon",
-          "tab": "Tabulator",
-          "pipe": "Pipe"
-        },
-        "customDelimiter": "Eigenes Trennzeichen...",
-        "hasHeaders": "Erste Zeile als Kopfzeilen",
-        "jsonFormat": "JSON-Format",
-        "formats": {
-          "pretty": "Lesbar",
-          "array": "Array",
-          "object": "Objekt"
-        },
-        "skipEmptyLines": "Leere Zeilen überspringen",
-        "trimWhitespace": "Leerzeichen trimmen",
-        "handleQuotes": "Zitatzeichen berücksichtigen"
-      },
-      "actions": {
-        "clear": "Alles löschen",
-        "example": "Beispiel testen"
-      },
-      "errors": {
-        "emptyInput": "Eingabedaten sind leer",
-        "csvParsingFailed": "CSV-Daten konnten nicht analysiert werden",
-        "jsonParsingFailed": "JSON-Daten konnten nicht analysiert werden",
-        "invalidJson": "Ungültiges JSON-Format",
-        "unsupportedJsonFormat": "Nicht unterstützte JSON-Struktur",
-        "unsupportedDataStructure": "Nicht unterstützte Datenstruktur",
-        "conversionFailed": "Konvertierung fehlgeschlagen"
-      },
-      "info": {
-        "description": "Konvertieren Sie zwischen CSV- und JSON-Formaten mit konfigurierbaren Optionen. Unterstützt Kopfzeilen, individuelle Trennzeichen und verschiedene JSON-Strukturen.",
-        "csvNote": "CSV-Dateien können unterschiedliche Trennzeichen und eingebettete Zeilenumbrüche in Anführungszeichen enthalten.",
-        "jsonNote": "JSON-Daten können Arrays von Objekten, einzelne Objekte oder Array-Arrays sein. Das Tool erkennt die Struktur automatisch."
-      },
-      "stats": {
-        "rows": "Datenzeilen",
-        "columns": "Spalten",
-        "jsonSize": "JSON-Größe"
-      },
-      "analytics": {
-        "title": "CSV-zu-JSON-Analyse",
-        "rows": "Zeilen",
-        "columns": "Spalten",
-        "inputSize": "Eingabegröße",
-        "outputSize": "Ausgabegröße",
-        "dataPoints": "Datenpunkte",
-        "compressionRatio": "Größenänderung"
-      },
-      "examples": {
-        "title": "Schnelle Beispiele",
-        "csvExample": "CSV-Beispiel",
-        "jsonExample": "JSON-Beispiel",
-        "hint": "Beispiel auswählen, um die Konvertierung mit verschiedenen Datenstrukturen zu testen"
+        "formattingError": "Не удалось отформатировать JSON"
       }
     }
   }

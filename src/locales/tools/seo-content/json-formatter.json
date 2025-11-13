@@ -431,5 +431,200 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "JSON-Formatter & Validator – Kostenloser Online-JSON-Viewer",
+    "metaDescription": "Fügen Sie JSON/TXT ein oder laden Sie eine Datei hoch, um es sofort zu formatieren, zu validieren und farblich hervorzuheben. Wählen Sie Einrückungen, Baumansicht, Minify, Schlüssel sortieren, NDJSON-Modus und vieles mehr.",
+    "sections": {
+      "intro": {
+        "title": "Online JSON-Formatter & Validator",
+        "content": "Professioneller Zweifenster-Editor für JSON mit Echtzeit-Formatierung, Validierung und Fehler-Highlighting. Fügen Sie JSON direkt ein oder laden Sie Dateien bis 10 MB hoch – das formatiere Ergebnis mit Syntax-Highlighting erscheint sofort. Optionale Auto-Formatierung beim Ändern von Einstellungen, präzise Fehlermeldungen, Umschalten zwischen Code- und Baumansicht. Die komplette Verarbeitung findet lokal in Ihrem Browser statt."
+      },
+      "features": {
+        "title": "Leistungsstarke JSON-Funktionen",
+        "items": [
+          {
+            "title": "Zweifenster-Layout",
+            "description": "Getrennte Eingabe- und Ausgabefelder mit eigenen Toolbars, Statusanzeigen und Tastenkürzeln für einen effizienten Workflow."
+          },
+          {
+            "title": "Visuelle Fehleranzeige",
+            "description": "Alle Syntaxfehler werden rot markiert und zusätzlich in einer Fehlerleiste mit exakter Zeilen- und Spaltenangabe aufgelistet."
+          },
+          {
+            "title": "Auto-Format bei Optionswechsel",
+            "description": "Ändern Sie Einrückung, Sortierung oder NDJSON-Modus – das JSON wird automatisch neu formatiert, ganz ohne zusätzlichen Klick."
+          },
+          {
+            "title": "Erfolgsfeedback",
+            "description": "Die Schaltfläche wechselt bei erfolgreicher Formatierung kurz in ein grünes „Formatiert!“, damit Sie sofort sehen, dass alles geklappt hat."
+          },
+          {
+            "title": "Code- & Baumansicht",
+            "description": "Wechseln Sie jederzeit zwischen Syntax-Editor und aufklappbarer Baumansicht, um verschachtelte Strukturen zu erkunden."
+          },
+          {
+            "title": "NDJSON-Unterstützung",
+            "description": "Validieren und formatieren Sie JSON-Zeilenströme (NDJSON) für Log-Dateien und Datenpipelines zeilenweise mit Fehlerprüfung."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien für JSON-Formatierung",
+        "description": "JSON-Formatierung ist unverzichtbar für API-Entwicklung, Debugging, Datenvalidierung und Konfigurationsverwaltung.",
+        "items": [
+          { "title": "API-Response-Debugging", "description": "Minifizierte API-Antworten lesbar formatieren, um Struktur und Werte schnell zu überprüfen" },
+          { "title": "Konfigurationsdateien", "description": "config.json, package.json oder settings-Dateien mit konsistenter Einrückung und Sortierung versehen" },
+          { "title": "JSON-Validierung", "description": "Syntaxfehler erkennen und über präzise Zeilen-/Spaltenangaben schnelle Korrekturen durchführen" },
+          { "title": "Datenexporte vorbereiten", "description": "JSON-Exporte aus Datenbanken oder APIs formatiert weitergeben oder dokumentieren" },
+          { "title": "Dokumentationen & Tutorials", "description": "Lesbare JSON-Beispiele für API-Dokumentation und Schulungsunterlagen generieren" },
+          { "title": "Logfile-Analyse", "description": "JSON-basierte Logs formatieren und durchsuchen, um Probleme leichter zu identifizieren" },
+          { "title": "NDJSON-Verarbeitung", "description": "Zeilenbasierte JSON-Streams aus Logs oder Streaming-Systemen validieren" },
+          { "title": "JSON-Minifizierung", "description": "JSON für Produktion kompakt machen, um Bandbreite und Speicherplatz zu sparen" }
+        ]
+      },
+      "howToUse": {
+        "title": "JSON formatieren und validieren – so geht’s",
+        "description": "Fünf einfache Schritte zum sauberen JSON.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "JSON einfügen oder Datei hochladen",
+            "description": "Text einfügen oder .json/.txt-Datei per Drag & Drop ablegen. Dateien bis 10 MB werden unterstützt."
+          },
+          {
+            "step": 2,
+            "title": "Formatoptionen wählen",
+            "description": "Einrückung (2, 4, 8 Leerzeichen oder Custom), Schlüsselsortierung, Unescape, NDJSON-Modus und mehr einstellen."
+          },
+          {
+            "step": 3,
+            "title": "Formatieren & Validieren",
+            "description": "Auf „Formatieren & Validieren“ klicken oder Strg/Cmd+Enter drücken – Fehler werden mit Linie und Spalte markiert."
+          },
+          {
+            "step": 4,
+            "title": "Auto-Format nutzen",
+            "description": "Beim Ändern von Optionen wird JSON automatisch neu formatiert – kein erneuter Button-Klick nötig."
+          },
+          {
+            "step": 5,
+            "title": "Analysieren & exportieren",
+            "description": "Zwischen Code- und Baumansicht wechseln, kopieren, herunterladen, minifizieren oder drucken."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für JSON-Formatierung",
+        "description": "So verändern sich verschiedene JSON-Strukturen bei unterschiedlichen Einrückungen.",
+        "items": [
+          {
+            "title": "Minifiziert → Lesbar (2 Leerzeichen)",
+            "input": "{\"name\":\"John\",\"age\":30,\"city\":\"NYC\"}",
+            "output": "{\n  \"name\": \"John\",\n  \"age\": 30,\n  \"city\": \"NYC\"\n}"
+          },
+          {
+            "title": "Verschachtelte Objekte (4 Leerzeichen)",
+            "input": "{\"user\":{\"profile\":{\"firstName\":\"Jane\",\"lastName\":\"Doe\"}}}",
+            "output": "{\n    \"user\": {\n        \"profile\": {\n            \"firstName\": \"Jane\",\n            \"lastName\": \"Doe\"\n        }\n    }\n}"
+          },
+          {
+            "title": "Arrays mit Objekten",
+            "input": "{\"users\":[{\"id\":1,\"name\":\"Alice\"},{\"id\":2,\"name\":\"Bob\"}]}",
+            "output": "{\n  \"users\": [\n    {\"id\": 1, \"name\": \"Alice\"},\n    {\"id\": 2, \"name\": \"Bob\"}\n  ]\n}"
+          },
+          {
+            "title": "Schlüssel alphabetisch sortieren",
+            "input": "{\"zebra\":1,\"apple\":2,\"mango\":3}",
+            "output": "{\n  \"apple\": 2,\n  \"mango\": 3,\n  \"zebra\": 1\n}"
+          },
+          {
+            "title": "Strings ent-escapen",
+            "input": "{\"message\":\"Zeile 1\\nZeile 2\\tTab\"}",
+            "output": "{\n  \"message\": \"Zeile 1\nZeile 2\tTab\"\n}"
+          },
+          {
+            "title": "NDJSON formatieren",
+            "input": "{\"id\":1,\"name\":\"Alice\"}\n{\"id\":2,\"name\":\"Bob\"}",
+            "output": "{\n  \"id\": 1,\n  \"name\": \"Alice\"\n}\n{\n  \"id\": 2,\n  \"name\": \"Bob\"\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unser JSON-Formatter?",
+        "content": "Entwicklerfreundliche Funktionen mit Echtzeit-Feedback und Datenschutz by Design.",
+        "items": [
+          "Zweifenster-Editor mit separaten Toolbars und Statusleisten",
+          "Mehrfachfehler-Erkennung mit rot markierten Bereichen",
+          "Fehlerbanner mit exakter Zeilen-/Spaltenangabe",
+          "Auto-Format beim Ändern von Optionen",
+          "Grünes Erfolgsfeedback „Formatiert!“ nach erfolgreichem Lauf",
+          "Code- und Baumansicht für unterschiedliche Blickwinkel",
+          "Statusbar mit Zeilen, Zeichen, Objekten, Arrays, Schlüsseln, Werten",
+          "Kostenlos, unbegrenzt, keine Anmeldung erforderlich",
+          "Sortieren von JSON-Schlüsseln auf Knopfdruck",
+          "NDJSON-Unterstützung für Logs und Streaming-Daten",
+          "Dateigrößen bis 10 MB performant verarbeiten",
+          "Strg/Cmd+Enter zum Formatieren, Strg+K zum Leeren, Strg+P zum Drucken",
+          "Dark-/Light-Mode-Unterstützung passend zum Systemthema",
+          "Kompletter Datenschutz, da alles lokal im Browser geschieht"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Warum sollte ich JSON formatieren?",
+          "answer": "Formatiertes JSON lässt sich leichter lesen, verstehen und debuggen. Pretty-Printing fügt Einrückungen und Zeilenumbrüche hinzu, damit Sie Strukturen und Werte schneller finden."
+        },
+        {
+          "question": "Wie arbeitet der Validator?",
+          "answer": "Wir nutzen den integrierten JSON-Parser des Browsers. Alle gefundenen Fehler werden markiert und mit genauer Zeilen-/Spaltennummer in der Fehlerleiste angezeigt."
+        },
+        {
+          "question": "Was bewirkt der NDJSON-Modus?",
+          "answer": "NDJSON steht für Newline Delimited JSON – jede Zeile enthält ein separates JSON-Objekt. Unser Tool prüft jede Zeile einzeln und zeigt Fehler sofort an."
+        },
+        {
+          "question": "Was bedeutet „Strings ent-escapen“?",
+          "answer": "Escape-Sequenzen wie \\n oder \\t werden in echte Zeilenumbrüche bzw. Tabs umgewandelt, damit Sie den Text so sehen, wie er später interpretiert wird."
+        },
+        {
+          "question": "Kann ich JSON-Schlüssel alphabetisch sortieren?",
+          "answer": "Ja, aktivieren Sie „Schlüssel alphabetisch sortieren“, um alle Objekt-Schlüssel rekursiv zu ordnen – ideal für Vergleiche oder konsistente Konfigurationen."
+        },
+        {
+          "question": "Ist meine JSON-Datei sicher?",
+          "answer": "Ja. Alles passiert lokal im Browser. Es werden keinerlei Daten auf Server übertragen – perfekt für sensible Konfigurations- oder Kundendaten."
+        },
+        {
+          "question": "Welche Tastenkürzel gibt es?",
+          "answer": "Strg/Cmd+Enter formatiert JSON, Strg+K leert die Eingabe, Strg+F startet die Suche, Strg+P öffnet den Druckdialog."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Code- & Daten-Tools",
+        "items": [
+          {
+            "name": "JSON Stringify Tool",
+            "href": "/de/tools/json-stringify",
+            "description": "JavaScript-Objekte in JSON-Strings umwandeln"
+          },
+          {
+            "name": "CSV-zu-JSON-Konverter",
+            "href": "/de/tools/csv-to-json",
+            "description": "CSV-Daten in JSON-Strukturen transformieren"
+          },
+          {
+            "name": "Base64-Encoder/Decoder",
+            "href": "/de/tools/base64-encoder-decoder",
+            "description": "Daten mit Base64 kodieren oder dekodieren"
+          },
+          {
+            "name": "URL-Konverter",
+            "href": "/de/tools/url-converter",
+            "description": "URLs für Webanwendungen kodieren und dekodieren"
+          }
+        ]
+      }
+    }
   }
 }

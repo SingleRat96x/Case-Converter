@@ -352,5 +352,182 @@
           ]
         }
     }
+  },
+  "de": {
+    "title": "Kostenloser Morsecode-Übersetzer – Text zu Morse & Morse zu Text",
+    "metaDescription": "Konvertieren Sie Text sofort in Morsecode und Morsecode zurück in Klartext. Kostenloser Online-Morseübersetzer mit Audio-Wiedergabe, anpassbaren Einstellungen und Live-Analyse.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Morsecode-Übersetzer – Text zu Morse & Morse zu Text",
+        "content": "Verwandeln Sie Klartext in Morsecode und dekodieren Sie Morsezeichen mühelos wieder zurück. Unser umfassender Online-Übersetzer bietet Live-Konvertierung, Audio-Wiedergabe, flexible Einstellungen und detaillierte Statistiken – ideal zum Lernen, Kommunizieren und für Notfallszenarien."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für Morsecode-Übersetzung",
+        "items": [
+          {
+            "title": "Bidirektionale Umwandlung",
+            "description": "Wechseln Sie nahtlos zwischen Text-zu-Morse und Morse-zu-Text und erhalten Sie sofortige Ergebnisse."
+          },
+          {
+            "title": "Audio-Wiedergabe",
+            "description": "Hören Sie originale Punkt- und Strichsignale mit einstellbarer Geschwindigkeit, Frequenz und Lautstärke."
+          },
+          {
+            "title": "Flexible Formatierung",
+            "description": "Wählen Sie Leerzeichen, Schrägstriche oder Pipes als Trenner, um den Morsecode exakt an Ihren Anwendungsfall anzupassen."
+          },
+          {
+            "title": "Live-Analytik",
+            "description": "Erhalten Sie Kennzahlen wie Punkt-/Strich-Anzahl, Zeichenstatistik und geschätzte Sendezeit in Echtzeit."
+          },
+          {
+            "title": "Geschwindigkeitskontrolle",
+            "description": "Regeln Sie die Wiedergabe von 5 bis 50 WPM (Wörter pro Minute), passend zu Lernziel oder Übertragung."
+          },
+          {
+            "title": "Dateiunterstützung",
+            "description": "Laden Sie Textdateien für Stapelkonvertierungen hoch und speichern Sie Morsecode oder dekodierten Text als Datei."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Wichtige Einsatzgebiete für Morsecode",
+        "description": "Morsecode bleibt in Bildung, Kommunikation und Sicherheit weiterhin relevant.",
+        "items": [
+          {
+            "title": "Amateurfunk (CW)",
+            "description": "Üben und kommunizieren Sie im Continuous-Wave-Modus innerhalb des Amateurfunkspektrums."
+          },
+          {
+            "title": "Notfallkommunikation",
+            "description": "Bereiten Sie sich auf Situationen vor, in denen klassische Kommunikationskanäle versagen könnten."
+          },
+          {
+            "title": "Bildung & Schulung",
+            "description": "Nutzen Sie Morsecode im Unterricht, in Pfadfindergruppen oder Kommunikationskursen."
+          },
+          {
+            "title": "Schifffahrt & Luftfahrt",
+            "description": "Verstehen Sie Navigationssignale, bei denen Morsecode weiterhin eingesetzt wird."
+          },
+          {
+            "title": "Geheime Nachrichten",
+            "description": "Erstellen Sie verschlüsselte Botschaften für Rätsel, Spiele und kreative Projekte."
+          },
+          {
+            "title": "Historische Forschung",
+            "description": "Dekodieren Sie historische Telegramme und analysieren Sie klassische Funkprotokolle."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den Morsecode-Übersetzer",
+        "description": "Folgen Sie diesen Schritten für eine präzise Konvertierung.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Modus auswählen",
+            "description": "Entscheiden Sie, ob Text in Morsecode oder Morsecode in Text umgewandelt werden soll."
+          },
+          {
+            "step": 2,
+            "title": "Inhalt eingeben",
+            "description": "Tippen oder fügen Sie Text bzw. Morsecode ein oder laden Sie eine Datei hoch."
+          },
+          {
+            "step": 3,
+            "title": "Einstellungen anpassen",
+            "description": "Konfigurieren Sie Trennzeichen, Audio-Geschwindigkeit, Frequenz und Lautstärke nach Bedarf."
+          },
+          {
+            "step": 4,
+            "title": "Anhören & Analysieren",
+            "description": "Nutzen Sie die Audio-Wiedergabe und prüfen Sie die Statistiken, bevor Sie Ergebnisse kopieren."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Morsecode-Übersetzungen",
+        "description": "So werden unterschiedliche Inhalte zwischen Text und Morsecode übertragen.",
+        "items": [
+          {
+            "title": "Einfache Nachricht",
+            "input": "HALLO WELT",
+            "output": ".... . .-.. .-.. --- / .-- . .-.. -"
+          },
+          {
+            "title": "Notrufsignal",
+            "input": "SOS",
+            "output": "... --- ..."
+          },
+          {
+            "title": "Zahlen & Buchstaben",
+            "input": "TEST 123",
+            "output": "- . ... - / .---- ..--- ...--"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile unseres Morsecode-Übersetzers",
+        "content": "Professionelle Morsecode-Tools mit Fokus auf Lernen, Präzision und Datenschutz.",
+        "items": [
+          "Sofortige bidirektionale Konvertierung zwischen Text und Morsecode",
+          "Authentische Audio-Wiedergabe mit fein einstellbaren Parametern",
+          "Live-Analysten inklusive geschätzter Sendezeiten",
+          "Mehrere Formatierungsoptionen für unterschiedliche Einsätze",
+          "Upload- und Download-Funktionen für Dateien",
+          "Didaktische Unterstützung für das Morsecode-Training",
+          "Lokale Verarbeitung für maximale Privatsphäre",
+          "Kostenlos, ohne Registrierung oder Limitierungen"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist Morsecode und wie funktioniert er?",
+          "answer": "Morsecode bildet Buchstaben, Zahlen und Satzzeichen durch kurze (Punkte) und lange Signale (Striche) ab. Diese können über Ton, Licht oder Funk übertragen werden und ermöglichen Kommunikation auch ohne moderne Infrastruktur."
+        },
+        {
+          "question": "Kann ich die Audio-Geschwindigkeit anpassen?",
+          "answer": "Ja. Stellen Sie die Wiedergabe zwischen 5 und 50 WPM ein und passen Sie Frequenz sowie Lautstärke flexibel an Ihre Lernziele an."
+        },
+        {
+          "question": "Welche Trennzeichen werden unterstützt?",
+          "answer": "Sie können standardmäßig Leerzeichen, Schrägstriche (/) oder Pipes (|) verwenden, um Morsecode exakt nach Vorgabe zu formatieren."
+        },
+        {
+          "question": "Ist die Übersetzung für alle Zeichen zuverlässig?",
+          "answer": "Der Übersetzer deckt den vollständigen internationalen Morsecode ab – inklusive Alphabet, Ziffern und gängiger Satzzeichen – und folgt den etablierten Kodierungsrichtlinien."
+        },
+        {
+          "question": "Eignet sich das Tool zum Lernen?",
+          "answer": "Definitiv. Audio-Wiedergabe, Geschwindigkeitsregler und Statistik erlauben effektives Training – starten Sie langsam und steigern Sie das Tempo Schritt für Schritt."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Kommunikations- & Kodierungs-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zeichen, Wörter und Textstatistiken analysieren",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Text mit Base64 kodieren und decodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binärcode Übersetzer",
+            "description": "Text in Binär umwandeln und wieder zurück",
+            "href": "/de/tools/binary-code-translator"
+          },
+          {
+            "name": "Caesar-Verschlüsselung",
+            "description": "Text per Caesar-Chiffre verschlüsseln und entschlüsseln",
+            "href": "/de/tools/caesar-cipher"
+          }
+        ]
+      }
+    }
   }
 }
