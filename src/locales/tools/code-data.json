@@ -1850,6 +1850,72 @@
         "title": "Schnellreferenz"
       }
     },
+    "slugify": {
+      "title": "URL-Slug-Generator",
+      "description": "Erzeugen Sie SEO-freundliche Slugs aus Überschriften, Produktnamen oder beliebigem Text – perfekt für Blogs, Shops und CMS.",
+      "labels": {
+        "textInput": "Texteingabe",
+        "slugInput": "URL-Slug",
+        "slugOutput": "URL-Slug",
+        "textOutput": "Textausgabe"
+      },
+      "placeholders": {
+        "text": "Text eingeben, der in einen URL-Slug konvertiert werden soll...",
+        "slug": "Slug eingeben, der wieder in Text umgewandelt werden soll..."
+      },
+      "modes": {
+        "slugify": "Slug erstellen",
+        "humanize": "Slug lesbar machen"
+      },
+      "accordion": {
+        "title": "Slug-Optionen"
+      },
+      "sections": {
+        "configuration": "Slug-Konfiguration",
+        "processing": "Verarbeitungseinstellungen"
+      },
+      "actions": {
+        "clear": "Alles löschen",
+        "example": "Beispiel testen"
+      },
+      "options": {
+        "separator": "Trennzeichen",
+        "maxLength": "Maximale Länge",
+        "lowercase": "In Kleinbuchstaben umwandeln",
+        "removeStopWords": "Stopwörter entfernen",
+        "removeSpecialChars": "Sonderzeichen entfernen",
+        "preserveNumbers": "Zahlen beibehalten",
+        "separators": {
+          "hyphen": "Bindestrich (-)",
+          "underscore": "Unterstrich (_)",
+          "dot": "Punkt (.)"
+        }
+      },
+      "analytics": {
+        "title": "Slug-Analyse",
+        "inputLength": "Eingabelänge",
+        "outputLength": "Ausgabelänge",
+        "wordCount": "Wörter",
+        "compressionRatio": "Kompression",
+        "separatorCount": "Trennzeichen",
+        "seoScore": "SEO-Wert"
+      },
+      "errors": {
+        "slugifyFailed": "URL-Slug konnte nicht erstellt werden",
+        "humanizeFailed": "Slug konnte nicht humanisiert werden",
+        "conversionFailed": "Umwandlung fehlgeschlagen"
+      },
+      "info": {
+        "description": "URL-Slugs sind kurze, lesbare und SEO-freundliche Zeichenketten, die in Links verwendet werden.",
+        "slugifyNote": "Text wird bereinigt, optional kleingeschrieben und Leerzeichen werden durch das gewählte Trennzeichen ersetzt.",
+        "humanizeNote": "Slugs lassen sich mit korrekter Großschreibung und Abständen wieder in normalen Text zurückverwandeln."
+      },
+      "stats": {
+        "inputLength": "Eingabelänge",
+        "outputLength": "Ausgabelänge",
+        "wordCount": "Wörter"
+      }
+    },
     "jsonFormatter": {
       "title": "Online JSON-Formatter & Validator",
       "intro": "Formatieren, validieren und analysieren Sie JSON in Sekunden. Fügen Sie Roh-JSON ein oder laden Sie eine .json-/.txt-Datei hoch und erhalten Sie sofort eine lesbare Ausgabe mit Syntax-Highlighting. Ändern Sie Einrückung, sortieren Sie Schlüssel, aktivieren Sie NDJSON oder ent-escapen Sie Zeichenketten – alles passiert lokal in Ihrem Browser.",
@@ -2055,6 +2121,70 @@
       "analysis": {
         "frequencyTitle": "Buchstabenhäufigkeit",
         "frequencyHint": "Häufige Buchstaben im Deutschen: E, N, I, S, R, A"
+      }
+    },
+    "rot13": {
+      "title": "ROT13-Encoder & Decoder",
+      "description": "Kodieren und dekodieren Sie Text mit der ROT13-Verschiebung. Der symmetrische Buchstabenersatz dreht jeden Buchstaben um 13 Positionen und eignet sich perfekt für schnelle Obfuskation.",
+      "labels": {
+        "inputText": "Eingabetext",
+        "outputText": "ROT13-Ausgabe"
+      },
+      "placeholders": {
+        "input": "Text eingeben, der per ROT13 transformiert werden soll..."
+      },
+      "accordion": {
+        "title": "ROT13-Optionen"
+      },
+      "sections": {
+        "transformation": "Transformations-Einstellungen",
+        "preservation": "Beibehaltung"
+      },
+      "tabs": {
+        "transform": "Transformieren",
+        "settings": "Einstellungen"
+      },
+      "options": {
+        "title": "Optionen",
+        "preserveCase": "Groß-/Kleinschreibung beibehalten",
+        "preserveNumbers": "Zahlen beibehalten",
+        "preserveSymbols": "Symbole beibehalten",
+        "doubleEncode": "Doppelt kodieren (ROT26)"
+      },
+      "actions": {
+        "swap": "Eingabe/Ausgabe tauschen",
+        "clear": "Alles löschen",
+        "example": "Beispiel testen"
+      },
+      "demo": {
+        "alphabetTitle": "Alphabet-Abbildung"
+      },
+      "examples": {
+        "title": "Schnelle Beispiele",
+        "hint": "Auf ein Beispiel klicken, um die ROT13-Transformation zu testen"
+      },
+      "errors": {
+        "transformFailed": "Text konnte nicht mit ROT13 transformiert werden"
+      },
+      "info": {
+        "description": "ROT13 ist ein symmetrisches Verfahren: dieselbe Operation verschlüsselt und entschlüsselt, indem jeder Buchstabe um 13 Positionen verschoben wird.",
+        "symmetricNote": "Da ROT13 symmetrisch ist, führt doppeltes Anwenden immer zurück zum Original.",
+        "doubleNote": "ROT26 (zweifache Anwendung) entspricht einer vollen Alphabet-Rotation und dient als anschauliches Lernbeispiel."
+      },
+      "stats": {
+        "letters": "Buchstaben",
+        "rotation": "Rotation",
+        "words": "Wörter",
+        "alphabetic": "Alphabetisch"
+      },
+      "analytics": {
+        "title": "ROT13-Analyse",
+        "letters": "Buchstaben",
+        "words": "Wörter",
+        "rotation": "Rotation",
+        "alphabeticPercentage": "Alphabetisch %",
+        "totalCharacters": "Gesamtzeichen",
+        "symmetricPairs": "Symmetrische Paare"
       }
     },
     "csvJson": {

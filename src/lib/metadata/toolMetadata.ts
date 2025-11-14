@@ -1167,6 +1167,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'ROT13 Кодер/Декодер — Простое Сокрытие Текста',
         description: 'Кодируйте или декодируйте текст алгоритмом ROT13 мгновенно. Быстрый способ скрыть спойлеры или ответы. Копирование в один клик.',
         shortDescription: 'ROT13 кодирование/декодирование.',
+      },
+      de: {
+        title: 'ROT13-Encoder & Decoder – Text sofort verschleiern',
+        description: 'Kodieren oder dekodieren Sie Text mit dem symmetrischen ROT13-Verfahren in Sekunden. Alphabetreferenz, Zeichen-Erhaltungsoptionen und Echtzeit-Analyse inklusive.',
+        shortDescription: 'Text per ROT13 kodieren oder dekodieren – reversibel.',
       }
     },
     schema: createAdvancedSchema('rot13', ['Encode/decode', 'Instant copy'], 'Text Input', 'ROT13 Text', 4.0, 267),
@@ -1288,6 +1293,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Slugify URL — SEO‑Чистые Ссылки из Текста',
         description: 'Преобразуйте заголовки в SEO‑дружественные слаги: нижний регистр, дефисы и безопасные символы. Для блогов и страниц.',
         shortDescription: 'Чистые SEO‑слаги из текста.',
+      },
+      de: {
+        title: 'Slugify-Tool – SEO-freundliche URLs erstellen',
+        description: 'Erzeugen Sie saubere, suchmaschinenfreundliche Slugs aus beliebigem Text mit frei wählbaren Trennzeichen, Längenlimit, Stopwort-Filter und Humanize-Modus – ideal für Blogs, Shops und CMS.',
+        shortDescription: 'URL-Slugs in Sekunden generieren und optimieren.',
       }
     },
     schema: createAdvancedSchema('slugify-url', ['Lowercase', 'Safe characters'], 'Text Input', 'URL Slug', 4.5, 567),
