@@ -1122,6 +1122,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных Месяцев — Любые Диапазоны',
         description: 'Выбирайте случайные месяцы по названию или номеру. Указывайте диапазоны лет и генерируйте списки для планирования и тестов.',
         shortDescription: 'Случайные месяцы и списки.',
+      },
+      de: {
+        title: 'Zufalls-Monatsgenerator — Monate nach Jahrbereichen wählen',
+        description: 'Wählen Sie zufällige Monate mit Namen oder Zahlen, definieren Sie Jahrbereiche und erstellen Sie Listen für Planung, Tests oder Spiele.',
+        shortDescription: 'Zufällige Monate mit eigenen Jahrbereichen.',
       }
     },
     schema: createAdvancedSchema('random-month', ['Names/numbers', 'Year ranges', 'Bulk list'], 'Settings Input', 'Random Months', 4.3, 389),

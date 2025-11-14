@@ -201,6 +201,174 @@
       ]
     }
   },
+  "de": {
+    "title": "Zufalls-Monatsgenerator – Monate online zufällig auswählen",
+    "metaDescription": "Generieren Sie zufällige Monate für beliebige Jahrbereiche mit mehreren Ausgabeformaten. Ideal für Planung, Tests, Statistik und kreative Projekte. Kostenlos & ohne Limits.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Zufalls-Monatsgenerator",
+        "content": "Unser Generator erstellt kryptografisch sichere, zufällige Monate – perfekt für Projektplanung, Softwaretests, Zeitachsen oder Datengenerierung. Definieren Sie Start- und Endjahr, wählen Sie zwischen numerischen, kurzen oder ausgeschriebenen Monatsnamen, steuern Sie Duplikate und sortieren Sie das Ergebnis chronologisch."
+      },
+      "features": {
+        "title": "Leistungsmerkmale des Monatgenerators",
+        "items": [
+          {
+            "title": "Mehrere Ausgabeformate",
+            "description": "Zahlen (01, 02, 03), kurze Monatsnamen (Jan, Feb, Mär), ausgeschriebene Namen (Januar, Februar, März) oder Kombinationen mit Jahr"
+          },
+          {
+            "title": "Flexible Jahrbereiche",
+            "description": "Unterstützt jeden Zeitraum zwischen 1900 und 2100 – ideal für historische Daten und Zukunftsprognosen"
+          },
+          {
+            "title": "Kryptografisch sicher",
+            "description": "Verwendet crypto.getRandomValues() für echte Zufälligkeit ohne Verzerrungen"
+          },
+          {
+            "title": "Massengenerierung",
+            "description": "Erzeugen Sie bis zu 10.000 Monate pro Lauf für umfangreiche Test- oder Daten-Szenarien"
+          },
+          {
+            "title": "Duplikat-Kontrolle",
+            "description": "Erlauben oder verhindern Sie doppelte Monate abhängig von Ihrem Use Case"
+          },
+          {
+            "title": "Chronologische Sortierung",
+            "description": "Optional sortieren wir die Ergebnisse automatisch vom frühesten zum spätesten Monat"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie den Zufalls-Monatsgenerator",
+        "steps": [
+          {
+            "title": "Jahrbereich festlegen",
+            "description": "Geben Sie Start- und Endjahr ein (1900–2100). Das Endjahr darf nicht vor dem Startjahr liegen."
+          },
+          {
+            "title": "Menge bestimmen",
+            "description": "Wählen Sie, wie viele Monate generiert werden sollen (1–10.000). Ohne Duplikate darf die Menge die verfügbaren Monate im Zeitraum nicht überschreiten."
+          },
+          {
+            "title": "Ausgabeformat wählen",
+            "description": "Entscheiden Sie sich für numerische Werte, Kurzformen, ausgeschriebene Namen oder Jahr+Monat."
+          },
+          {
+            "title": "Optionen konfigurieren",
+            "description": "Duplikate erlauben oder verbieten und auf Wunsch die Ausgabe chronologisch sortieren."
+          },
+          {
+            "title": "Generieren & exportieren",
+            "description": "Klicken Sie auf „Generieren“, kopieren Sie das Ergebnis oder laden Sie es als Textdatei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für generierte Monatssätze",
+        "items": [
+          {
+            "input": "Jahre: 2020–2025, Menge: 5, Format: Langnamen",
+            "output": "März\nJuli\nNovember\nApril\nSeptember"
+          },
+          {
+            "input": "Jahre: 2023–2024, Menge: 3, Format: Jahr+Monat, sortiert",
+            "output": "Februar 2023\nAugust 2023\nJuni 2024"
+          },
+          {
+            "input": "Jahr: 2022, Menge: 4, Format: Numerisch",
+            "output": "03\n07\n12\n01"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzmöglichkeiten",
+        "items": [
+          {
+            "title": "Projekt- & Ressourcenplanung",
+            "description": "Monate zufällig verteilen, um Milestones, Workloads oder Simulationen zu planen"
+          },
+          {
+            "title": "Software- und QA-Tests",
+            "description": "Zufällige Monatseinträge für Formulare, Zeitlogik oder Datenbanken erzeugen"
+          },
+          {
+            "title": "Statistische Analysen",
+            "description": "Stichproben von Monaten für Forschungs- und Datenmodelle erstellen"
+          },
+          {
+            "title": "Bildung & Training",
+            "description": "Übungen zu Jahreszeiten, Kalenderwissen und Zufallsaufgaben gestalten"
+          },
+          {
+            "title": "Creative Challenges",
+            "description": "Monate als Schreib- oder Designimpulse zufällig auswählen"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile auf einen Blick",
+        "items": [
+          "Echte Zufälligkeit dank Web Crypto API",
+          "Vier professionelle Ausgabeformate",
+          "Validierung verhindert ungültige Einstellungen",
+          "Schnelle Ergebnisse – auch bei 10.000 Einträgen",
+          "Komplett kostenlos und ohne Anmeldung",
+          "Daten bleiben lokal im Browser"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          {
+            "name": "Zufallsdatums-Generator",
+            "href": "/de/tools/random-date",
+            "description": "Zufällige Daten inklusive Tag erzeugen"
+          },
+          {
+            "name": "Zufallszahlengenerator",
+            "href": "/de/tools/random-number",
+            "description": "Beliebige Zahlenbereiche zufällig befüllen"
+          },
+          {
+            "name": "Zufalls-Buchstabengenerator",
+            "href": "/de/tools/random-letter",
+            "description": "Buchstaben mit frei definierter Schreibweise erstellen"
+          },
+          {
+            "name": "Textfall-Konverter",
+            "href": "/de/tools/uppercase",
+            "description": "Text schnell zwischen verschiedenen Schreibweisen umwandeln"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Ausgabeformate stehen zur Verfügung?",
+          "answer": "Sie können Monate numerisch, als kurze oder ausgeschriebene Namen sowie als Kombination aus Monat und Jahr ausgeben lassen."
+        },
+        {
+          "question": "Kann ich Duplikate verhindern?",
+          "answer": "Ja. Schalten Sie „Doppelte Monate erlauben“ aus – wir achten darauf, dass Ihre Menge den verfügbaren Monaten im Zeitraum entspricht."
+        },
+        {
+          "question": "Welche Jahrbereiche werden unterstützt?",
+          "answer": "Alle Jahre von 1900 bis 2100 – ausreichend für historische Daten wie für langfristige Planungen."
+        },
+        {
+          "question": "Wie funktioniert die Sortieroption?",
+          "answer": "Aktivieren Sie „Chronologisch sortieren“, um die Ausgabe automatisch vom frühesten zum spätesten Monat zu ordnen."
+        },
+        {
+          "question": "Sind die Ergebnisse wirklich zufällig?",
+          "answer": "Ja. Die Generierung nutzt den sicheren Zufallszahlengenerator des Browsers (Web Crypto API) und ist somit für professionelle Szenarien geeignet."
+        },
+        {
+          "question": "Kann ich große Mengen erzeugen?",
+          "answer": "Sie können bis zu 10.000 Monate pro Lauf generieren. Für noch mehr Daten wiederholen Sie den Vorgang beliebig oft."
+        }
+      ]
+    }
+  },
   "ru": {
     "title": "Генератор Случайных Месяцев - Генерация Случайных Месяцев Онлайн",
     "metaDescription": "Генерируйте случайные месяцы в заданных диапазонах лет с различными форматами вывода. Идеально для планирования, составления расписаний, тестирования и генерации данных.",

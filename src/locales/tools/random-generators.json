@@ -155,7 +155,8 @@
         "invalidYear": "Please enter a valid year between 1900 and 2100",
         "endBeforeStart": "End year must be after or equal to start year",
         "quantityInvalid": "Quantity must be between 1 and 10,000",
-        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the total months in the year range"
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the total months in the year range",
+        "generationError": "An error occurred while generating months. Please try again."
       },
       "downloadFileName": "random-months.txt",
       "copiedMessage": "Random months copied to clipboard!",
@@ -473,6 +474,50 @@
         "outputFormat": "Bestimmen Sie, wie die Buchstaben im Output dargestellt werden",
         "allowDuplicates": "Wenn aktiviert, kann derselbe Buchstabe mehrmals erscheinen"
       }
+    },
+    "randomMonth": {
+      "title": "Zufalls-Monatsgenerator",
+      "description": "Generieren Sie zufällige Monate in beliebigen Jahrbereichen und Ausgabeformaten – perfekt für Planung, Tests, Zeitachsen und Datengenerierung.",
+      "outputLabel": "Generierte Monate",
+      "generateButton": "Zufällige Monate erzeugen",
+      "options": {
+        "startYear": "Startjahr",
+        "endYear": "Endjahr",
+        "quantity": "Wie viele Monate",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte Monate erlauben",
+        "sortResults": "Chronologisch sortieren",
+        "numeric": "Numerisch (01, 02, 03...)",
+        "short": "Kurz (Jan, Feb, Mär...)",
+        "long": "Lang (Januar, Februar, März...)",
+        "yearMonth": "Jahr + Monat (Januar 2024, Februar 2024...)"
+      },
+      "placeholders": {
+        "startYear": "Startjahr eingeben (z. B. 2020)",
+        "endYear": "Endjahr eingeben (z. B. 2030)",
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "startYearRequired": "Startjahr ist erforderlich",
+        "endYearRequired": "Endjahr ist erforderlich",
+        "quantityRequired": "Menge ist erforderlich",
+        "invalidYear": "Bitte geben Sie ein gültiges Jahr zwischen 1900 und 2100 ein",
+        "endBeforeStart": "Das Endjahr muss größer oder gleich dem Startjahr sein",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die verfügbaren Monate im Jahrbereich nicht überschreiten",
+        "generationError": "Beim Generieren der Monate ist ein Fehler aufgetreten. Bitte erneut versuchen."
+      },
+      "downloadFileName": "zufalls-monate.txt",
+      "copiedMessage": "Zufallsmonate wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Monate erzeugt!",
+      "help": {
+        "startYear": "Frühestes Jahr, aus dem Monate erzeugt werden dürfen",
+        "endYear": "Spätestes Jahr, aus dem Monate erzeugt werden dürfen",
+        "quantity": "Wie viele zufällige Monate erzeugt werden sollen (maximal 10.000)",
+        "outputFormat": "Wählen Sie, in welchem Format die Monate angezeigt werden",
+        "allowDuplicates": "Wenn aktiviert, kann derselbe Monat mehrfach vorkommen",
+        "sortResults": "Sortiert die Ausgabe chronologisch, wenn diese Option aktiv ist"
+      }
     }
   },
   "ru": {
@@ -583,7 +628,8 @@
         "invalidYear": "Пожалуйста, введите действительный год между 1900 и 2100",
         "endBeforeStart": "Конечный год должен быть после или равен начальному году",
         "quantityInvalid": "Количество должно быть от 1 до 10 000",
-        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать общее количество месяцев в диапазоне лет"
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать общее количество месяцев в диапазоне лет",
+        "generationError": "Произошла ошибка при генерации месяцев. Пожалуйста, попробуйте еще раз."
       },
       "downloadFileName": "random-months.txt",
       "copiedMessage": "Случайные месяцы скопированы в буфер обмена!",
