@@ -352,5 +352,182 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser UTF-8-Encoder/Decoder – Unicode-Bytes analysieren",
+    "metaDescription": "Kodieren Sie Text in UTF-8-Bytes oder machen Sie Bytefolgen sofort lesbar. BOM-Steuerung, flexible Trennzeichen, Analytics und Unicode-Support für Dev, QA und Lokalisation.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser UTF-8-Encoder/Decoder – Unicode-Bytes analysieren",
+        "content": "Unser UTF-8-Konverter zeigt Ihnen exakt, wie Zeichen in Bytes übersetzt werden – inklusive BOM-Option, Trennzeichensteuerung, Groß/Kleinschreibung und Live-Analytics. Ideal, um Encoding-Bugs zu beheben, internationale Inhalte zu prüfen oder Bytefolgen für Skripte zu erzeugen."
+      },
+      "features": {
+        "title": "Leistungsstarke Features für Encoding-Profis",
+        "items": [
+          {
+            "title": "Bidirektionale Konvertierung",
+            "description": "Schalten Sie zwischen Text → UTF-8 und UTF-8 → Text um, ohne den Inhalt neu einzugeben."
+          },
+          {
+            "title": "Flexible Ausgabeformate",
+            "description": "Wählen Sie dezimale, hexadezimale, binäre, Array- oder Escaped-Ausgabe – jeweils mit Leerzeichen, Komma oder ganz ohne Trennzeichen."
+          },
+          {
+            "title": "BOM- und Großschreibungskontrolle",
+            "description": "Fügen Sie optional einen Byte Order Mark hinzu und erzwingen Sie Groß- oder Kleinschreibung für Hexwerte."
+          },
+          {
+            "title": "Zeichen-Analytics in Echtzeit",
+            "description": "Ermitteln Sie Eingabezeichen, Ausgabebytes, Bytes pro Zeichen, ASCII-/Unicode-Anteil und Effizienz auf einen Blick."
+          },
+          {
+            "title": "Unicode- und Emoji-Support",
+            "description": "Verarbeiten Sie mühelos Akzente, asiatische Schriftzeichen, RTL-Sprachen und Emojis ohne Datenverlust."
+          },
+          {
+            "title": "Developer-Taugliche UI",
+            "description": "Alles läuft lokal im Browser, sodass sensible Daten oder Logs nie den Rechner verlassen."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle",
+        "description": "Beheben Sie Encoding-Probleme in Apps, Skripten oder Datenpipelines in wenigen Sekunden.",
+        "items": [
+          {
+            "title": "Encoding-Debugging",
+            "description": "Analysieren Sie, warum Texte als „Ã¤“ erscheinen, und stellen Sie die korrekten Bytes wieder her."
+          },
+          {
+            "title": "Internationalisierung",
+            "description": "Verifizieren Sie, dass lokalisierte Inhalte korrekt gespeichert, exportiert und ausgeliefert werden."
+          },
+          {
+            "title": "API- und Datei-Workflows",
+            "description": "Konvertieren Sie Nutzereingaben oder Dateiimporte in exakt das Byteformat, das Ihre API erwartet."
+          },
+          {
+            "title": "Forensik & Reverse Engineering",
+            "description": "Untersuchen Sie Binärdaten oder Logauszüge, um Zeichenketten zu rekonstruieren."
+          },
+          {
+            "title": "Bildung & Training",
+            "description": "Veranschaulichen Sie Lernenden, wie ASCII, Mehrbyte-Zeichen und Emojis tatsächlich codiert werden."
+          },
+          {
+            "title": "Migrationen",
+            "description": "Prüfen Sie Daten vor ETL-/Migrationsprozessen und verhindern Sie fehlerhafte Encoding-Konvertierungen."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert der UTF-8-Konverter",
+        "description": "Vier einfache Schritte liefern saubere Bytes oder Klartext.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Modus wählen",
+            "description": "Stellen Sie ein, ob Sie Text kodieren oder Bytewerte dekodieren möchten."
+          },
+          {
+            "step": 2,
+            "title": "Daten einfügen",
+            "description": "Geben Sie Text oder UTF-8-Bytes ein – unterstützt werden \\\\x-Notation, Arrays oder durch Leerzeichen getrennte Zahlen."
+          },
+          {
+            "step": 3,
+            "title": "Optionen anpassen",
+            "description": "Wählen Sie das Ausgabeformat, definieren Sie Trennzeichen, aktivieren Sie BOM oder Hex-Großschreibung."
+          },
+          {
+            "step": 4,
+            "title": "Analyse & Export",
+            "description": "Überprüfen Sie die Analytics, kopieren Sie das Ergebnis oder laden Sie es als Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "UTF-8 in der Praxis",
+        "description": "So sehen unterschiedliche Zeichenklassen als Bytefolgen aus.",
+        "items": [
+          {
+            "title": "ASCII-Text",
+            "input": "Hallo Welt",
+            "output": "\\x48\\x61\\x6c\\x6c\\x6f\\x20\\x57\\x65\\x6c\\x74"
+          },
+          {
+            "title": "Akzent & Umlaute",
+            "input": "café Grüße",
+            "output": "\\x63\\x61\\x66\\xc3\\xa9\\x20\\x47\\x72\\xc3\\xbc\\xc3\\x9fe"
+          },
+          {
+            "title": "Emoji & Multibyte",
+            "input": "Hallo 🌍",
+            "output": "\\x48\\x61\\x6c\\x6c\\x6f\\x20\\xf0\\x9f\\x8c\\x8d"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "content": "Schnelle Fehlersuche, präzise Steuerung und 100 % lokale Verarbeitung.",
+        "items": [
+          "Sofortige Umwandlung in beide Richtungen",
+          "Alle relevanten Ausgabeformate in einem Tool",
+          "BOM- und Trennzeichensteuerung für Legacy-Systeme",
+          "Detaillierte Analytics zu Bytes pro Zeichen",
+          "Unicode-tauglich – inklusive Emojis & RTL",
+          "Ideal für Entwickler:innen, QA, Editorial & Localization",
+          "Keine Anmeldung, keine Uploads auf Server",
+          "Kostenlos und jederzeit verfügbar"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist UTF-8 eigentlich?",
+          "answer": "UTF-8 ist die Standardkodierung im Web. Sie kann jedes Unicode-Zeichen darstellen und bleibt gleichzeitig kompatibel zu ASCII, weil die ersten 128 Codes identisch sind."
+        },
+        {
+          "question": "Wie viele Bytes braucht ein Zeichen?",
+          "answer": "ASCII-Zeichen benötigen 1 Byte, europäische Akzente meist 2 Bytes, viele asiatische Schriftzeichen 3 Bytes und Emojis 4 Bytes."
+        },
+        {
+          "question": "Wofür brauche ich einen BOM?",
+          "answer": "Ein Byte Order Mark ist optional. Einige Editoren oder Windows-Anwendungen erkennen UTF-8 nur zuverlässig, wenn der BOM gesetzt ist."
+        },
+        {
+          "question": "Kann ich beliebige Bytefolgen dekodieren?",
+          "answer": "Das Tool akzeptiert gültige UTF-8-Bytes. Bei fehlerhaften Sequenzen erhalten Sie klare Fehlermeldungen, damit Sie die Stelle korrigieren können."
+        },
+        {
+          "question": "Unterstützt ihr Copy & Download?",
+          "answer": "Ja, Sie können Ergebnisse kopieren oder als Datei exportieren, um sie in Builds, Skripten oder Tickets zu verwenden."
+        }
+      ],
+      "relatedTools": {
+        "title": "Weitere Encoding-Werkzeuge",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Daten als Base64 kodieren oder aus Base64 zurückholen",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "URL-Konverter",
+            "description": "URLs und Parameter sicher kodieren oder dekodieren",
+            "href": "/de/tools/url-converter"
+          },
+          {
+            "name": "Hex-zu-Text",
+            "description": "Hexadezimale Werte in Text und zurück konvertieren",
+            "href": "/de/tools/hex-to-text"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zeichen- und Byte-Statistiken für beliebige Texte",
+            "href": "/de/tools/text-counter"
+          }
+        ]
+      }
+    }
   }
 }

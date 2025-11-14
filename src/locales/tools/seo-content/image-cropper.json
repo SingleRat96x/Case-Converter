@@ -352,5 +352,182 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Online Bild-Zuschneider – Bilder zuschneiden, skalieren & optimieren",
+    "metaDescription": "Zuschneiden und skalieren Sie Bilder direkt im Browser. Voreingestellte Seitenverhältnisse, Qualitätskontrolle, Formatwahl und Live-Vorschau – perfekt für Social Media, E-Commerce und Webdesign.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Online Bild-Zuschneider – Bilder zuschneiden, skalieren & optimieren",
+        "content": "Unser Bild-Zuschneider liefert professionelle Ergebnisse ohne Desktop-Software: Wählen Sie den Ausschnitt per Drag-and-Drop, nutzen Sie feste Seitenverhältnisse, drehen Sie Motive, stellen Sie Qualität und Ausgabeformat ein und sehen Sie jede Änderung live. Ideal für Social Posts, Banner, Produktfotos oder Profilbilder."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für präzises Cropping",
+        "items": [
+          {
+            "title": "Pixelgenauer Zuschnitt",
+            "description": "Drag-and-Drop-Griffe, Hilfslinien und Zoom sorgen dafür, dass der Fokus exakt dort landet, wo Sie ihn brauchen."
+          },
+          {
+            "title": "Seitenverhältnisse für jede Plattform",
+            "description": "Fertige Presets wie 1:1, 16:9, 4:3, 3:2 oder 5:4 – plus freier Modus für individuelle Maße."
+          },
+          {
+            "title": "Format- und Qualitätskontrolle",
+            "description": "Exportieren Sie als PNG, JPG oder WebP und bestimmen Sie Qualität, Hintergrundfarbe und Ausgabegröße."
+          },
+          {
+            "title": "Live-Vorschau & Analytics",
+            "description": "Sehen Sie sofort, wie sich Auflösung, Dateigröße und Kompressionsrate verändern."
+          },
+          {
+            "title": "Rotation & Hintergrundoptionen",
+            "description": "Drehen Sie Motive in 90°-Schritten und füllen Sie transparente Bereiche mit Ihrer Wunschfarbe."
+          },
+          {
+            "title": "Workflow für Serien",
+            "description": "Nutzen Sie identische Einstellungen erneut, um ganze Bildserien konsistent aufzubereiten."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle",
+        "description": "Ein Tool – alle Kanäle: Social Media, Web, Print und interne Dokumente.",
+        "items": [
+          {
+            "title": "Social-Media-Assets",
+            "description": "Instagram-Quadrate, Reels, Facebook-Titelbilder oder YouTube-Thumbnails in Sekunden erstellen."
+          },
+          {
+            "title": "Web- & App-Design",
+            "description": "Hero-Banner, Slider, Feature-Kacheln oder Blog-Teaser exakt auf Ihre Raster zuschneiden."
+          },
+          {
+            "title": "Produktbilder & Marketplace",
+            "description": "Einheitliche Bildgrößen für Shops, Marktplätze und Kataloge – inklusive Qualitäts-Optimierung."
+          },
+          {
+            "title": "Profile & Avatare",
+            "description": "Quadratische oder runde Profilbilder für Teamseiten, Communities oder Messaging-Apps."
+          },
+          {
+            "title": "Print & Marketing",
+            "description": "Bilder für Flyer, Broschüren oder Präsentationen schnell auf das gewünschte Verhältnis bringen."
+          },
+          {
+            "title": "Fotofinishing",
+            "description": "Störende Ränder entfernen, Motiv hervorheben und die Bildkomposition verbessern."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert der Bild-Zuschneider",
+        "description": "Vom Upload bis zum Download in vier Schritten.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Bild hochladen",
+            "description": "Datei auswählen oder per Drag-and-Drop hinzufügen. Unterstützt JPG, PNG und WebP bis 10 MB."
+          },
+          {
+            "step": 2,
+            "title": "Ausschnitt festlegen",
+            "description": "Ziehen Sie den Rahmen, wählen Sie ein Preset oder arbeiten Sie frei. Zoomen Sie hinein, um Details zu kontrollieren."
+          },
+          {
+            "step": 3,
+            "title": "Ausgabe konfigurieren",
+            "description": "Format, Qualität, Zielgröße, Hintergrundfarbe und Rotation nach Bedarf einstellen."
+          },
+          {
+            "step": 4,
+            "title": "Exportieren & verwenden",
+            "description": "Ergebnis prüfen, Analytics checken und mit einem Klick downloaden oder kopieren."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele aus der Praxis",
+        "description": "Typische Szenarien für wiederkehrende Workflows.",
+        "items": [
+          {
+            "title": "Quadrat für Instagram",
+            "input": "Panorama 1920×1080",
+            "output": "Crop 1080×1080 mit Fokus auf das Hauptmotiv"
+          },
+          {
+            "title": "Profilfoto",
+            "input": "Hochformat 2000×3000",
+            "output": "500×500 mit neutralem Hintergrund für Avatare"
+          },
+          {
+            "title": "Website-Banner",
+            "input": "Breites Foto 3000×2000",
+            "output": "Organisiertes 1200×400-Banner für Landing Pages"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "content": "Mehr Kontrolle, weniger Klicks – und alles lokal in Ihrem Browser.",
+        "items": [
+          "Intuitive Drag-and-Drop-Steuerung",
+          "Alle wichtigen Seitenverhältnisse als Preset",
+          "Live-Vorschau mit Zoom und Pan",
+          "Format- & Qualitätskonverter integriert",
+          "Analytics zu Dateigröße und Einsparungen",
+          "Rotation & Hintergrundfarbe für transparente Bereiche",
+          "Keine Uploads auf Fremdserver – volle Privatsphäre",
+          "Kostenlos und ohne Login nutzbar"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Dateiformate unterstützt ihr?",
+          "answer": "Sie können JPG/JPEG, PNG und WebP importieren und auch wieder in diese Formate exportieren. Bis zu 10 MB pro Bild."
+        },
+        {
+          "question": "Wie erstelle ich Social-Media-Formate?",
+          "answer": "Nutzen Sie die Presets: 1:1 für Instagram, 16:9 für YouTube/LinkedIn, 4:3 für Facebook, 5:4 für Pinterest usw."
+        },
+        {
+          "question": "Bleibt die Qualität erhalten?",
+          "answer": "Ja – wählen Sie einfach ‚Hoch‘ oder ‚Max‘ bei der Qualität oder exportieren Sie als PNG für verlustfreie Ergebnisse."
+        },
+        {
+          "question": "Wann sollte ich PNG, JPG oder WebP wählen?",
+          "answer": "PNG für Transparenz oder Logos, JPG für Fotos mit frei wählbarer Kompression, WebP für bestes Verhältnis aus Qualität und Dateigröße."
+        },
+        {
+          "question": "Was zeigt die Crop-Reduktion an?",
+          "answer": "Dieser Wert sagt aus, wie viel Prozent der Fläche entfernt wurden – praktisch, um Bildfokus und Dateigröße zu bewerten."
+        }
+      ],
+      "relatedTools": {
+        "title": "Weitere Bild-Utilities",
+        "items": [
+          {
+            "name": "Image Resizer",
+            "description": "Bilder präzise skalieren und optimierte Assets erzeugen",
+            "href": "/de/tools/image-resizer"
+          },
+          {
+            "name": "JPG-zu-PNG-Konverter",
+            "description": "JPEG-Dateien verlustfrei in PNG konvertieren",
+            "href": "/de/tools/jpg-to-png"
+          },
+          {
+            "name": "PNG-zu-JPG-Konverter",
+            "description": "PNG-Dateien für webfreundliche JPGs verkleinern",
+            "href": "/de/tools/png-to-jpg"
+          },
+          {
+            "name": "JPG-zu-WebP",
+            "description": "Bilder in moderne WebP-Assets mit geringer Dateigröße umwandeln",
+            "href": "/de/tools/jpg-to-webp"
+          }
+        ]
+      }
+    }
   }
 }

@@ -1463,5 +1463,207 @@
         "clearDescription": "Это удалит текущее изображение и сбросит все настройки конвертации. Это действие нельзя отменить."
       }
     }
+  },
+  "de": {
+    "imageCropper": {
+      "title": "Bild-Zuschneider",
+      "description": "Zuschneiden, Größe ändern und Bilder mit höchster Präzision optimieren – ideal für Social Media, Webdesign und Fotografie.",
+      "outputLabel": "Zugeschnittenes Bild",
+      "copiedMessage": "Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "cropped-image",
+      "uploadDescription": "Laden Sie ein Bild hoch, um es zuzuschneiden und zu bearbeiten",
+      "labels": {
+        "originalImage": "Originalbild",
+        "croppedResult": "Zugeschnittenes Ergebnis",
+        "uploadArea": "Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um eine Bilddatei auszuwählen",
+        "supportedFormats": "Unterstützt JPG, PNG, WebP • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird verarbeitet…",
+        "cropPreview": "Das zugeschnittene Bild erscheint hier"
+      },
+      "accordion": {
+        "title": "Optionen für Bildzuschnitt"
+      },
+      "sections": {
+        "cropSettings": "Zuschnitt-Einstellungen",
+        "outputSettings": "Ausgabe-Einstellungen",
+        "appearance": "Darstellung"
+      },
+      "options": {
+        "cropSettings": "Zuschnitt-Einstellungen",
+        "aspectRatio": "Seitenverhältnis",
+        "aspectRatios": {
+          "free": "Frei",
+          "square": "1:1",
+          "widescreen": "16:9",
+          "standard": "4:3",
+          "photo": "3:2",
+          "portrait": "5:4",
+          "tall": "2:3"
+        },
+        "outputFormat": "Ausgabeformat",
+        "quality": "Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "outputSize": "Ausgabegröße",
+        "width": "Breite (px)",
+        "height": "Höhe (px)",
+        "keepOriginalSize": "Originale Zuschnittgröße beibehalten",
+        "enableRotation": "Rotation aktivieren",
+        "backgroundColor": "Hintergrundfarbe"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "fileSize": "Dateigröße",
+        "croppedSize": "Zugeschnittene Größe",
+        "compression": "Dateigröße"
+      },
+      "analytics": {
+        "title": "Bildzuschnitt-Analyse",
+        "originalSize": "Originalgröße",
+        "croppedSize": "Zugeschnittene Größe",
+        "originalFileSize": "Originale Dateigröße",
+        "croppedFileSize": "Dateigröße nach Zuschnitt",
+        "compressionRatio": "Kompressionsrate",
+        "cropReduction": "Reduktion durch Zuschnitt"
+      },
+      "presets": {
+        "square": "Quadrat",
+        "wide": "Breit",
+        "photo": "Foto"
+      },
+      "info": {
+        "description": "Laden Sie ein Bild und ziehen Sie an den Griffen, um den Bildausschnitt festzulegen. Das Ergebnis aktualisiert sich automatisch.",
+        "supportInfo": "Unterstützt JPG, PNG und WebP bis 10 MB. Nutzen Sie voreingestellte Seitenverhältnisse für alle wichtigen Plattformen."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige Bilddatei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToCrop": "Bild konnte nicht zugeschnitten werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar"
+      },
+      "actions": {
+        "rotate": "Drehen",
+        "rotateLeft": "Nach links drehen",
+        "rotateRight": "Nach rechts drehen",
+        "crop": "Zuschneiden",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen",
+        "extractText": "Text extrahieren",
+        "processing": "Verarbeitung…",
+        "reupload": "Bild ersetzen",
+        "example": "Beispiel"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Zuschnitt-Einstellungen werden zurückgesetzt. Dieser Vorgang kann nicht rückgängig gemacht werden."
+      }
+    },
+    "imageResizer": {
+      "title": "Bildgrößenänderer",
+      "description": "Skalieren Sie Ihre Bilder auf beliebige Maße und behalten Sie dabei Qualität sowie Seitenverhältnis im Griff. Perfekt für Web-Optimierung, Thumbnails und Social Media.",
+      "outputLabel": "Bild mit neuer Größe",
+      "copiedMessage": "Bild in die Zwischenablage kopiert!",
+      "downloadFileName": "resized-image",
+      "uploadDescription": "Bilddatei hochladen, um die Größe anzupassen",
+      "labels": {
+        "originalImage": "Originalbild",
+        "resizedResult": "Ergebnis nach Skalierung",
+        "uploadArea": "Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein Bild zu wählen",
+        "supportedFormats": "Unterstützt JPG, PNG, WebP • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird verarbeitet…",
+        "resizePreview": "Das skalierte Bild erscheint hier"
+      },
+      "accordion": {
+        "title": "Bildgrößen-Optionen"
+      },
+      "sections": {
+        "sizeSettings": "Größeneinstellungen",
+        "qualitySettings": "Qualität & Format",
+        "fineTune": "Feinabstimmung"
+      },
+      "options": {
+        "resizeMode": "Skalierungsmodus",
+        "modes": {
+          "dimensions": "Pixel (Breite/Höhe)",
+          "percentage": "Prozentuale Skalierung"
+        },
+        "width": "Breite (px)",
+        "height": "Höhe (px)",
+        "percentage": "Prozent",
+        "lockAspectRatio": "Seitenverhältnis sperren",
+        "outputFormat": "Ausgabeformat",
+        "quality": "Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "backgroundColor": "Hintergrundfarbe (für Transparenz)",
+        "enlarge": "Vergrößerung erlauben",
+        "autoDownload": "Nach Skalierung automatisch herunterladen"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "Neue Größe",
+        "originalFileSize": "Originale Dateigröße",
+        "resizedFileSize": "Dateigröße nach Skalierung",
+        "sizeChange": "Differenz",
+        "sizeRatio": "Größenverhältnis"
+      },
+      "analytics": {
+        "title": "Bildgrößen-Analyse",
+        "originalSize": "Originalgröße",
+        "newSize": "Neue Größe",
+        "originalFileSize": "Originale Dateigröße",
+        "resizedFileSize": "Dateigröße nach Skalierung",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Geben Sie Pixelmaße oder Prozentwerte ein und lassen Sie das Tool das Seitenverhältnis automatisch beibehalten.",
+        "supportInfo": "Unterstützt JPG, PNG und WebP bis 10 MB. Ideal, um Bilder für Websites, Newsletter oder Apps vorzubereiten."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige Bilddatei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "invalidSize": "Bitte geben Sie gültige Abmessungen ein",
+        "failedToResize": "Bild konnte nicht skaliert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar"
+      },
+      "actions": {
+        "resize": "Größe ändern",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen",
+        "reupload": "Bild ersetzen",
+        "processing": "Verarbeitung…"
+      },
+      "dialog": {
+        "clearTitle": "Bild zurücksetzen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Größenoptionen werden zurückgesetzt."
+      }
+    }
   }
 }

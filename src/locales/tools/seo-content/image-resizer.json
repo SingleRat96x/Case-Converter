@@ -390,5 +390,182 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Kostenloser Online Bildgrößenänderer – Bilder skalieren & optimieren",
+    "metaDescription": "Skalieren Sie Bilder per Pixel oder Prozent, halten Sie das Seitenverhältnis ein und exportieren Sie als PNG, JPG oder WebP – inklusive Qualitätskontrolle und Live-Analytics.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Bildgrößenänderer für Web, Social & Print",
+        "content": "Optimieren Sie Fotos für Websites, Social Media oder E-Commerce in Sekunden. Unser Tool unterstützt feste Pixelabmessungen, prozentuale Skalierung, Formatwechsel, Hintergrundfarben für Transparenz und zeigt jede Änderung live an – sicher und komplett lokal in Ihrem Browser."
+      },
+      "features": {
+        "title": "Highlights unseres Bild-Resizers",
+        "items": [
+          {
+            "title": "Pixel- & Prozentsteuerung",
+            "description": "Geben Sie Breite/Höhe in Pixeln ein oder skalieren Sie prozentual, optional mit gesperrtem Seitenverhältnis."
+          },
+          {
+            "title": "Social-Media-Presets",
+            "description": "One-Klick-Vorlagen für Instagram, Facebook, YouTube, LinkedIn, Pinterest und mehr."
+          },
+          {
+            "title": "Format- & Qualitätswahl",
+            "description": "Exportieren Sie als PNG, JPG oder WebP und steuern Sie Qualität, Hintergrundfarbe sowie automatische Downloads."
+          },
+          {
+            "title": "Live-Vorschau & Analytics",
+            "description": "Sehen Sie Ausgabegröße, Dateigewicht und Kompressionsrate, bevor Sie herunterladen."
+          },
+          {
+            "title": "Batch-freundlicher Flow",
+            "description": "Übernehmen Sie identische Einstellungen erneut, um ganze Bildserien effizient aufzubereiten."
+          },
+          {
+            "title": "100 % privat",
+            "description": "Alle Berechnungen laufen clientseitig – vertrauliche Assets verlassen nie Ihren Rechner."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So skalieren Sie Bilder online",
+        "description": "Vier einfache Schritte vom Upload zum Download.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Bild hinzufügen",
+            "description": "JPG, PNG oder WebP per Klick oder Drag-and-Drop hochladen (max. 10 MB)."
+          },
+          {
+            "step": 2,
+            "title": "Zielgröße definieren",
+            "description": "Pixelmaße eingeben, ein Preset wählen oder den Prozentmodus aktivieren."
+          },
+          {
+            "step": 3,
+            "title": "Optionen konfigurieren",
+            "description": "Format, Qualität, Seitenverhältnis, Hintergrundfarbe und automatische Downloads festlegen."
+          },
+          {
+            "step": 4,
+            "title": "Analyse & Export",
+            "description": "Ergebnis prüfen,Analytics lesen und das Bild herunterladen oder kopieren."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Praxisbeispiele",
+        "description": "Häufige Workflows für Marketing und Entwicklung.",
+        "items": [
+          {
+            "input": "Foto 4000×3000px (2,8 MB)",
+            "output": "Web-Optimierung 1600×1200px WebP (High) ≈ 320 KB",
+            "description": "Hero-Bilder für Landing Pages in Sekundenschnelle"
+          },
+          {
+            "input": "Produktbild 2400×2400px",
+            "output": "600×600 PNG (lossless)",
+            "description": "Einheitliche Kacheln für Shops & Marktplätze"
+          },
+          {
+            "input": "Portrait 3024×4032px",
+            "output": "1080×1920 JPG (Medium)",
+            "description": "Story-Content für Instagram, Snapchat & TikTok"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Einsatzszenarien",
+        "description": "Für Developer:innen, Designer:innen, Marketing- und Content-Teams.",
+        "items": [
+          {
+            "title": "Web-Performance",
+            "description": "Bilder verkleinern, um Core Web Vitals zu verbessern und Ladezeiten zu senken."
+          },
+          {
+            "title": "Social Media & Thumbnails",
+            "description": "Storys, Reels, Cover und YouTube-Vorschaubilder auf Plattformgrößen bringen."
+          },
+          {
+            "title": "E-Commerce",
+            "description": "Produktfotos für Marktplätze, Datenfeeds und Werbebanner vereinheitlichen."
+          },
+          {
+            "title": "Newsletter & Slides",
+            "description": "Bilder so vorbereiten, dass sie in E-Mails und Präsentationen optimal dargestellt werden."
+          },
+          {
+            "title": "Mobile & Apps",
+            "description": "Screenshots, Store-Assets oder UI-Bilder für unterschiedliche Dichten exportieren."
+          },
+          {
+            "title": "Archivierung",
+            "description": "Große Bildbestände platzsparend verkleinern – ideal für Backups & Freigaben."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "items": [
+          "Skalierung per Pixel oder Prozent",
+          "Seitenverhältnis sperren oder frei anpassen",
+          "PNG, JPG, WebP mit frei wählbarer Qualität",
+          "Live-Vorschau & Analytics zu Dateigrößen",
+          "Hintergrundfarbe für transparente Bereiche",
+          "Keine Server-Uploads, volle Privatsphäre",
+          "Kostenlos, schnell und ohne Anmeldung",
+          "Ideal für Dev, Design, Marketing & Redaktion"
+        ]
+      },
+      "relatedTools": {
+        "title": "Weitere Bild-Utilities",
+        "description": "Kombinieren Sie den Resizer mit anderen Editoren für einen perfekten Workflow.",
+        "items": [
+          {
+            "name": "Image Cropper",
+            "description": "Bildausschnitte festlegen und Motive hervorheben",
+            "href": "/de/tools/image-cropper"
+          },
+          {
+            "name": "JPG zu PNG",
+            "description": "JPEG-Dateien verlustfrei in PNG konvertieren",
+            "href": "/de/tools/jpg-to-png"
+          },
+          {
+            "name": "PNG zu JPG",
+            "description": "PNG-Bilder für Web & Apps verkleinern",
+            "href": "/de/tools/png-to-jpg"
+          },
+          {
+            "name": "JPG zu WebP",
+            "description": "Moderne WebP-Assets mit kleiner Dateigröße erstellen",
+            "href": "/de/tools/jpg-to-webp"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Formate unterstützt ihr?",
+          "answer": "Upload und Export funktionieren mit JPG/JPEG, PNG und WebP."
+        },
+        {
+          "question": "Gibt es Limits bei der Dateigröße?",
+          "answer": "Ja, pro Bild bis 10 MB. Bei größeren Dateien empfiehlt sich eine Komprimierung vorab."
+        },
+        {
+          "question": "Bleibt das Seitenverhältnis erhalten?",
+          "answer": "Aktivieren Sie „Seitenverhältnis sperren“, dann wird die zweite Kante automatisch berechnet."
+        },
+        {
+          "question": "Werden meine Bilder gespeichert?",
+          "answer": "Nein. Alles passiert lokal im Browser – nach dem Schließen des Tabs sind keine Daten mehr vorhanden."
+        },
+        {
+          "question": "Wie wirkt sich die Qualitätseinstellung aus?",
+          "answer": "„Niedrig“ erzeugt sehr kleine Dateien, „Hoch“ oder „Max“ bewahren mehr Details. Die Analytics zeigen die genaue Einsparung."
+        }
+      ]
+    }
   }
 }

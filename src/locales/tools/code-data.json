@@ -1992,6 +1992,91 @@
         "unicode": "Unicode: こんにちは"
       }
     },
+    "utf8": {
+      "title": "UTF-8-Encoder / Decoder",
+      "description": "Kodieren Sie Text in UTF-8-Bytes oder machen Sie Bytefolgen wieder lesbar – ideal zum Debuggen von Kodierungsproblemen und für internationale Inhalte.",
+      "labels": {
+        "plainText": "Klartext",
+        "utf8Bytes": "UTF-8-Bytes"
+      },
+      "placeholders": {
+        "encode": "Text eingeben, der in UTF-8-Bytes konvertiert werden soll...",
+        "decode": "UTF-8-Bytes eingeben, die in Text konvertiert werden sollen..."
+      },
+      "modes": {
+        "encode": "Text zu UTF-8",
+        "decode": "UTF-8 zu Text"
+      },
+      "accordion": {
+        "title": "UTF-8-Kodierungsoptionen"
+      },
+      "sections": {
+        "encoding": "Kodierungskonfiguration"
+      },
+      "actions": {
+        "clear": "Leeren",
+        "example": "Beispiel"
+      },
+      "options": {
+        "title": "Ausgabeformat",
+        "outputFormat": "Format",
+        "formats": {
+          "decimal": "Dezimal (65 66 67)",
+          "hex": "Hexadezimal (41 42 43)",
+          "binary": "Binär (01000001 01000010)",
+          "array": "Array [65, 66, 67]",
+          "escaped": "Escaped (\\x41\\x42\\x43)"
+        },
+        "separator": "Trennzeichen",
+        "separators": {
+          "space": "Leerzeichen",
+          "comma": "Komma",
+          "none": "Keins"
+        },
+        "showBom": "BOM anzeigen (Byte Order Mark)",
+        "uppercase": "Hex in Großbuchstaben"
+      },
+      "errors": {
+        "encodeFailed": "Text konnte nicht in UTF-8 kodiert werden",
+        "decodeFailed": "UTF-8-Bytes konnten nicht dekodiert werden",
+        "invalidBytes": "Ungültige Bytefolge",
+        "invalidFormat": "Ungültiges Eingabeformat",
+        "conversionFailed": "Konvertierung fehlgeschlagen"
+      },
+      "messages": {
+        "encodeSuccess": "Erfolgreich in UTF-8 kodiert",
+        "decodeSuccess": "Erfolgreich aus UTF-8 dekodiert"
+      },
+      "info": {
+        "description": "UTF-8 ist eine variable Zeichenkodierung und stellt jedes Unicode-Zeichen mit 1–4 Bytes dar.",
+        "encodingNote": "ASCII-Zeichen (0–127) nutzen 1 Byte, internationale Zeichen benötigen meist 2–4 Bytes.",
+        "decodingNote": "Bytewerte können mit Leerzeichen, Kommas oder im Array-Format eingegeben werden."
+      },
+      "stats": {
+        "inputChars": "Eingabezeichen",
+        "outputBytes": "Ausgabebytes",
+        "bytesPerChar": "Ø Bytes/Zeichen",
+        "encoding": "Kodierungseffizienz"
+      },
+      "analytics": {
+        "title": "UTF-8-Konverter-Analyse",
+        "inputChars": "Eingabezeichen",
+        "outputBytes": "Ausgabebytes",
+        "bytesPerChar": "Bytes/Zeichen",
+        "efficiency": "Effizienz",
+        "asciiChars": "ASCII-Zeichen",
+        "unicodeChars": "Unicode-Zeichen"
+      },
+      "examples": {
+        "title": "UTF-8-Beispiele",
+        "ascii": "Hallo Welt",
+        "accented": "café résumé",
+        "emoji": "Hallo 👋 Welt 🌍",
+        "chinese": "你好世界",
+        "arabic": "مرحبا بالعالم",
+        "mixed": "Mix: Hallo 你好 🌍"
+      }
+    },
     "jsonFormatter": {
       "title": "Online JSON-Formatter & Validator",
       "intro": "Formatieren, validieren und analysieren Sie JSON in Sekunden. Fügen Sie Roh-JSON ein oder laden Sie eine .json-/.txt-Datei hoch und erhalten Sie sofort eine lesbare Ausgabe mit Syntax-Highlighting. Ändern Sie Einrückung, sortieren Sie Schlüssel, aktivieren Sie NDJSON oder ent-escapen Sie Zeichenketten – alles passiert lokal in Ihrem Browser.",

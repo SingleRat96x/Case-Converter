@@ -153,6 +153,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Обрезка Изображений — Точный Размер и Пропорции',
         description: 'Обрезайте изображения до точных размеров или пропорций. Перетаскивание, предпросмотр и скачивание. В браузере, без хранения.',
         shortDescription: 'Обрезка по размеру/пропорциям.',
+      },
+      de: {
+        title: 'Bild-Zuschneider – Bilder präzise zuschneiden & exportieren',
+        description: 'Ziehen, zuschneiden, drehen und exportieren Sie Bilder exakt im gewünschten Seitenverhältnis. Live-Vorschau, Qualitätskontrolle und Formatwahl – alles lokal im Browser ohne Upload auf Server.',
+        shortDescription: 'Bilder pixelgenau zuschneiden und optimieren.',
       }
     },
     schema: createAdvancedSchema('image-cropper', ['Fixed size', 'Aspect ratios'], 'Image Input', 'Cropped Image', 4.7, 892),
@@ -173,6 +178,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Изменение Размеров Изображений — По Ширине/Высоте',
         description: 'Меняйте размер изображений по ширине/высоте или процентам. Сохранение пропорций и качества. Быстро и приватно.',
         shortDescription: 'Изменение размеров по размеру/процентам.',
+      },
+      de: {
+        title: 'Bildgrößenänderer – Fotos per Breite/Höhe oder Prozent skalieren',
+        description: 'Skalieren Sie Bilder nach Pixelmaßen oder Prozentsatz, halten Sie das Seitenverhältnis automatisch ein und wählen Sie Qualität sowie Ausgabeformat – alles lokal und blitzschnell im Browser.',
+        shortDescription: 'Bilder verlustarm skalieren und optimieren.',
       }
     },
     schema: createAdvancedSchema('image-resizer', ['Keep aspect', 'Quality'], 'Image Input', 'Resized Image', 4.6, 743),
@@ -967,6 +977,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер UTF‑8 — Декодирование/Кодирование в Текст',
         description: 'Декодируйте UTF‑8 в читаемый текст и кодируйте обратно. Исправляйте «кракозябры» и проблемы кодировок за секунды.',
         shortDescription: 'UTF‑8 ↔ текст.',
+      },
+      de: {
+        title: 'UTF-8-Konverter – Text sicher kodieren & dekodieren',
+        description: 'Wandeln Sie Klartext in UTF‑8-Bytefolgen um oder reparieren Sie defekte Zeichen in Sekunden. BOM-Steuerung, flexible Trennzeichen und Analytics inklusive.',
+        shortDescription: 'UTF‑8 ↔ Text mit BOM- und Formatoptionen.',
       }
     },
     schema: createAdvancedSchema('utf8-converter', ['Decode', 'Encode', 'Fix garbled text'], 'Text Input', 'UTF-8 Output', 4.1, 298),
