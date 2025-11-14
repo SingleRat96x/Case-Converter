@@ -1782,14 +1782,14 @@
       }
     },
     "morse": {
-      "title": "Morsecode-Übersetzer",
-      "description": "Wandeln Sie Text in Morsecode um und dekodieren Sie Morsezeichen wieder in Klartext. Inklusive Audio-Wiedergabe zum Lernen und Kommunizieren.",
+      "title": "Morsecode-Übersetzer & Audio-Generator",
+      "description": "Konvertieren Sie Text in Morsecode und dekodieren Sie Signale wieder zurück. Beinhaltet Audio-Wiedergabe, Formatoptionen und detaillierte Statistikmodule.",
       "labels": {
         "morseCode": "Morsecode"
       },
       "placeholders": {
         "encode": "Text eingeben, der in Morsecode umgewandelt werden soll...",
-        "decode": "Morsecode eingeben, der in Text umgewandelt werden soll..."
+        "decode": "Morsecode mit Punkten und Strichen eingeben..."
       },
       "modes": {
         "textToMorse": "Text zu Morse",
@@ -1799,37 +1799,37 @@
         "title": "Morsecode-Einstellungen"
       },
       "sections": {
-        "format": "Formatierungsoptionen",
-        "audio": "Audio-Einstellungen"
+        "format": "Formatsteuerung",
+        "audio": "Audio-Steuerung"
       },
       "options": {
         "title": "Optionen",
-        "delimiter": "Trennzeichen",
+        "delimiter": "Trennzeichen wählen",
         "delimiters": {
           "space": "Leerzeichen",
           "slash": "Schrägstrich (/)",
           "pipe": "Pipe (|)"
         },
-        "playSpeed": "Geschwindigkeit",
-        "frequency": "Frequenz",
+        "playSpeed": "Wiedergabegeschwindigkeit",
+        "frequency": "Tonfrequenz",
         "volume": "Lautstärke"
       },
       "audio": {
         "play": "Audio abspielen",
         "stop": "Audio stoppen",
         "mute": "Stummschalten",
-        "unmute": "Ton einschalten"
+        "unmute": "Ton aktivieren"
       },
       "errors": {
         "encodeFailed": "Morsecode konnte nicht erzeugt werden",
-        "decodeFailed": "Morsecode konnte nicht dekodiert werden",
+        "decodeFailed": "Eingaben konnten nicht dekodiert werden",
         "invalidMorse": "Ungültiges Morsecode-Format",
         "conversionFailed": "Konvertierung fehlgeschlagen"
       },
       "info": {
-        "description": "Morsecode bildet Zeichen über Punkte und Striche ab. Nutzen Sie die Wiedergabe, um Timing und Rhythmus zu trainieren.",
-        "encodingNote": "Buchstaben werden durch Leerzeichen getrennt, Wörter durch Schrägstriche. Lernen Sie das Muster durch wiederholtes Anhören.",
-        "decodingNote": "Verwenden Sie Punkte (.) und Striche (-) mit Leerzeichen dazwischen. Nutzen Sie / oder | für Wortabstände."
+        "description": "Morsecode stellt Zeichen über kurze und lange Signale dar. Nutzen Sie die Audiofunktion, um Rhythmus und Timing zu trainieren.",
+        "encodingNote": "Trennen Sie Buchstaben mit Leerzeichen und Wörter mit / oder |, damit Nachrichten eindeutig bleiben.",
+        "decodingNote": "Geben Sie Punkte (.) und Striche (-) strukturiert ein und entfernen Sie überflüssige Leerzeichen vor dem Dekodieren."
       },
       "stats": {
         "dots": "Punkte",

@@ -485,9 +485,9 @@ const overrides: Array<ToolMetadataConfig> = [
         shortDescription: 'Текст ↔ код Морзе.',
       },
       de: {
-        title: 'Morsecode Übersetzer – Text ↔ Morse mit Audio',
-        description: 'Wandeln Sie Text in Morsecode und zurück. Ein optionaler Audio-Player unterstützt beim Lernen und Üben. Kopieren und teilen Sie Ergebnisse sofort.',
-        shortDescription: 'Text ↔ Morse mit Audio abspielen und kopieren.',
+        title: 'Morsecode-Übersetzer — Text ↔ Morse mit Audio & Analyse',
+        description: 'Übersetzen Sie Klartext binnen Sekunden in Morsecode und wieder zurück. Inklusive Audio-Wiedergabe, Tempo- und Frequenzsteuerung sowie Live-Statistiken für Training und Kommunikation.',
+        shortDescription: 'Text ↔ Morse mit Audio- und Analysefunktionen.',
       }
     },
     schema: createAdvancedSchema('morse-code', ['Audio', 'Two-way translation'], 'Text Input', 'Morse Code', 3.9, 234),
