@@ -311,6 +311,84 @@
       }
     }
   },
+  "de": {
+    "randomChoice": {
+      "title": "Zufalls-Auswahlgenerator",
+      "description": "Wählen Sie zufällige Einträge aus Ihrer eigenen Liste – perfekt für Entscheidungen, Verlosungen, Teamaufteilungen und kreative Inspiration.",
+      "outputLabel": "Ausgewählte Optionen",
+      "generateButton": "Zufallswahl treffen",
+      "options": {
+        "choices": "Ihre Optionen (eine pro Zeile)",
+        "quantity": "Wie viele Optionen auswählen",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Duplikate erlauben",
+        "removeBlanks": "Leere Zeilen entfernen",
+        "lines": "Zeilenumbruch (Option1\\nOption2)",
+        "comma": "Kommagetrennt (Option1, Option2)",
+        "numbered": "Nummerierte Liste (1. Option)",
+        "bulleted": "Aufzählungsliste (• Option)"
+      },
+      "placeholders": {
+        "choices": "Pizza\\nBurger\\nSushi\\nTacos\\nSalat",
+        "quantity": "Menge eingeben (1-1000)"
+      },
+      "validation": {
+        "choicesRequired": "Bitte geben Sie mindestens eine Option ein",
+        "noValidChoices": "Nach der Verarbeitung wurden keine gültigen Optionen gefunden",
+        "needMoreChoices": "Es werden mehr Optionen benötigt, um die gewünschte Menge auszuwählen",
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 1.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die Anzahl verfügbarer Optionen nicht überschreiten"
+      },
+      "downloadFileName": "random-choices.txt",
+      "help": {
+        "choices": "Tragen Sie jede Option in eine eigene Zeile ein. Jede Zeile wird als eigenständige Auswahl behandelt.",
+        "quantity": "Anzahl der zufälligen Auswahlen aus Ihrer Liste (maximal 1.000)",
+        "outputFormat": "Bestimmen Sie, wie die ausgewählten Optionen ausgegeben werden sollen",
+        "allowDuplicates": "Wenn aktiviert, kann dieselbe Option mehrfach gezogen werden",
+        "removeBlanks": "Ignoriert leere oder nur aus Leerzeichen bestehende Zeilen"
+      }
+    },
+    "randomDate": {
+      "title": "Zufallsdatums-Generator",
+      "description": "Generieren Sie zufällige Daten in beliebigen Zeiträumen und Ausgabeformaten – ideal für Tests, Simulationen, Planungen oder Kreativprojekte.",
+      "outputLabel": "Zufällig erzeugte Daten",
+      "generateButton": "Zufallsdaten erzeugen",
+      "options": {
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "quantity": "Wie viele Daten",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte Daten erlauben",
+        "iso": "ISO-Format (YYYY-MM-DD)",
+        "us": "US-Format (MM/DD/YYYY)",
+        "eu": "EU-Format (DD/MM/YYYY)",
+        "readable": "Lesbares Format (Monat TT, JJJJ)"
+      },
+      "placeholders": {
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "startDateRequired": "Startdatum ist erforderlich",
+        "endDateRequired": "Enddatum ist erforderlich",
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "endBeforeStart": "Enddatum muss nach dem Startdatum liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die Anzahl verfügbarer Tage nicht überschreiten",
+        "invalidDate": "Bitte geben Sie ein gültiges Datum ein"
+      },
+      "downloadFileName": "random-dates.txt",
+      "copiedMessage": "Zufallsdaten wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Datum/Datumswerte erstellt!",
+      "help": {
+        "startDate": "Frühestes Datum, das erzeugt werden darf",
+        "endDate": "Spätestes Datum, das erzeugt werden darf",
+        "quantity": "Wie viele zufällige Daten generiert werden (maximal 10.000)",
+        "outputFormat": "Format, in dem die Ergebnisse angezeigt werden",
+        "allowDuplicates": "Wenn aktiviert, kann dasselbe Datum mehrfach auftreten"
+      }
+    }
+  },
   "ru": {
     "randomNumber": {
       "title": "Генератор Случайных Чисел",

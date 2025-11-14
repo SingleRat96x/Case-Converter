@@ -1821,6 +1821,77 @@
         "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
       }
     },
+    "webpToPng": {
+      "title": "WebP-zu-PNG-Konverter",
+      "description": "Konvertieren Sie WebP-Dateien verlustfrei in PNG und behalten Sie volle Transparenz für Design-Workflows, Styleguides und plattformübergreifende Assets.",
+      "outputLabel": "Konvertiertes PNG-Bild",
+      "copiedMessage": "PNG-Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "WebP-Datei hochladen, um sie in PNG umzuwandeln",
+      "labels": {
+        "originalImage": "Originales WebP-Bild",
+        "convertedResult": "Konvertiertes PNG-Ergebnis",
+        "uploadArea": "WebP-Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein WebP auszuwählen",
+        "supportedFormats": "Unterstützt WebP • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird konvertiert…",
+        "convertPreview": "Das PNG erscheint hier"
+      },
+      "options": {
+        "conversionSettings": "Konvertierungseinstellungen",
+        "quality": "PNG-Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "compression": "PNG-Kompression",
+        "compressionLevels": {
+          "none": "Keine",
+          "fast": "Schnell",
+          "best": "Beste"
+        }
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "PNG-Größe",
+        "fileSize": "Dateigröße",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Laden Sie ein WebP hoch und erhalten Sie sofort ein transparentes PNG – ideal für Mockups, UI-Elemente und Präsentationen.",
+        "supportInfo": "Unterstützt WebP bis 10 MB. PNG-Ausgabe ist verlustfrei und überall kompatibel."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige WebP-Datei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToConvert": "Bild konnte nicht nach PNG konvertiert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar",
+        "conversionFailed": "Konvertierung fehlgeschlagen",
+        "failedToCreateZip": "ZIP-Datei konnte nicht erstellt werden"
+      },
+      "actions": {
+        "convert": "In PNG konvertieren",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
+      }
+    },
     "jpgToWebp": {
       "title": "JPG-zu-WebP-Konverter",
       "description": "Konvertieren Sie JPG/JPEG-Bilder in moderne WebP-Dateien, verkleinern Sie die Dateigröße drastisch und behalten Sie gleichzeitig eine hervorragende Bildqualität – perfekt für schnelle Webseiten und effiziente Workflows.",
@@ -1948,6 +2019,78 @@
       },
       "errors": {
         "invalidFile": "Bitte wählen Sie eine gültige PNG-Datei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToConvert": "Bild konnte nicht nach JPG konvertiert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar",
+        "conversionFailed": "Konvertierung fehlgeschlagen",
+        "failedToCreateZip": "ZIP-Datei konnte nicht erstellt werden"
+      },
+      "actions": {
+        "convert": "In JPG konvertieren",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
+      }
+    },
+    "webpToJpg": {
+      "title": "WebP-zu-JPG-Konverter",
+      "description": "Konvertieren Sie WebP-Dateien in JPG/JPEG, um maximale Kompatibilität mit älteren Browsern, CMS und Tools zu sichern – inklusive Qualitäts- und Hintergrundoptionen.",
+      "outputLabel": "Konvertiertes JPG-Bild",
+      "copiedMessage": "JPG-Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "WebP-Datei hochladen, um sie in JPG umzuwandeln",
+      "labels": {
+        "originalImage": "Originales WebP-Bild",
+        "convertedResult": "Konvertiertes JPG-Ergebnis",
+        "uploadArea": "WebP-Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein WebP auszuwählen",
+        "supportedFormats": "Unterstützt WebP • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird konvertiert…",
+        "convertPreview": "Das JPG erscheint hier"
+      },
+      "options": {
+        "conversionSettings": "Konvertierungseinstellungen",
+        "quality": "JPG-Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "compression": "JPG-Kompression",
+        "compressionLevels": {
+          "fast": "Schnell",
+          "standard": "Standard",
+          "best": "Beste"
+        },
+        "backgroundColor": "Hintergrundfarbe"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "JPG-Größe",
+        "fileSize": "Dateigröße",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Laden Sie ein WebP hoch und wandeln Sie es lokal im Browser in ein kompatibles JPG um – perfekt für E-Mails, Onlineshops und Legacy-Systeme.",
+        "supportInfo": "Unterstützt WebP bis 10 MB. Wählen Sie Qualität, Kompression und Hintergrundfarbe vollständig offline."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige WebP-Datei",
         "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
         "failedToLoad": "Bild konnte nicht geladen werden",
         "failedToRead": "Datei konnte nicht gelesen werden",

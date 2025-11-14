@@ -303,6 +303,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'WebP → JPG — Совместимый Формат',
         description: 'Конвертируйте WebP обратно в JPG для приложений без поддержки WebP. Перетаскивание и быстрое скачивание. Приватно.',
         shortDescription: 'WebP → JPG конвертация.',
+      },
+      de: {
+        title: 'WebP-zu-JPG-Konverter — Kompatible JPEGs erzeugen',
+        description: 'Wandeln Sie WebP-Bilder lokal in JPG/JPEG um, sichern Sie volle Browser-Kompatibilität und behalten Sie Kontrolle über Qualität, Hintergrundfarbe und Dateigröße.',
+        shortDescription: 'WebP-Bilder in kompatible JPG/JPEG-Dateien umwandeln.',
       }
     },
     schema: createAdvancedSchema('webp-to-jpg', ['Compatibility', 'Batch'], 'Image Input', 'JPG Image', 4.1, 389),
@@ -323,6 +328,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'WebP → PNG — Сохранение Прозрачности',
         description: 'Конвертируйте WebP в PNG с сохранением прозрачности. В браузере, пакетно и быстрое скачивание.',
         shortDescription: 'WebP → PNG конвертация.',
+      },
+      de: {
+        title: 'WebP-zu-PNG-Konverter — Transparenz erhalten',
+        description: 'Wandeln Sie WebP-Dateien lokal in PNG um, behalten Sie transparente Pixel und lossless-Qualität und exportieren Sie kompatible Assets für Design, Apps und Shops.',
+        shortDescription: 'WebP-Bilder verlustfrei in PNG mit Transparenz konvertieren.',
       }
     },
     schema: createAdvancedSchema('webp-to-png', ['Transparency', 'Batch'], 'Image Input', 'PNG Image', 4.0, 356),
@@ -408,6 +418,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Случайный Выбор — Честный Выбор Варианта',
         description: 'Выбирайте случайные варианты из списка честно. Исключайте повторы, задавайте количество и экспортируйте результат.',
         shortDescription: 'Случайный выбор из списка.',
+      },
+      de: {
+        title: 'Random-Choice-Generator — Faire Entscheidungen',
+        description: 'Lassen Sie den Zufall entscheiden: Geben Sie beliebige Optionen ein, ziehen Sie ein oder mehrere Ergebnisse mit oder ohne Wiederholung und exportieren Sie die Liste für Verlosungen, Teams oder Alltagsentscheidungen.',
+        shortDescription: 'Zufällige Auswahl aus eigenen Listen treffen.',
       }
     },
     schema: createAdvancedSchema('random-choice', ['No duplicates', 'Export'], 'List Input', 'Random Choice', 4.4, 456),
@@ -797,6 +812,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных Дат — Любые Диапазоны',
         description: 'Генерируйте случайные даты в заданных диапазонах. Выбирайте форматы, исключайте выходные, создавайте списки. Идеально для тестов и выборок.',
         shortDescription: 'Случайные даты в любом диапазоне и формате.',
+      },
+      de: {
+        title: 'Zufallsdatums-Generator — Daten in jedem Bereich ziehen',
+        description: 'Erstellen Sie zufällige Termine in beliebigen Zeiträumen, wählen Sie Formate, schließen Sie Wochenenden aus und generieren Sie ganze Listen für Tests, Sampling oder Planung.',
+        shortDescription: 'Zufällige Daten in jedem Bereich und Format erzeugen.',
       }
     },
     schema: createAdvancedSchema('random-date', ['Custom ranges', 'Date formats', 'Bulk output'], 'Date Input', 'Random Dates', 4.4, 456),
