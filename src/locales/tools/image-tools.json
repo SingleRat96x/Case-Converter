@@ -1664,6 +1664,383 @@
         "clearTitle": "Bild zurücksetzen",
         "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Größenoptionen werden zurückgesetzt."
       }
+    },
+    "imageToText": {
+      "title": "Bild zu Text OCR",
+      "description": "Extrahieren Sie Text aus Bildern mit moderner OCR-Technologie. Unterstützt mehrere Sprachen und liefert präzise Ergebnisse aus Fotos, Screenshots und Dokumenten.",
+      "outputLabel": "Extrahierter Text",
+      "copiedMessage": "Text wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "extracted-text",
+      "uploadDescription": "Laden Sie eine Bilddatei hoch, um Text zu extrahieren",
+      "labels": {
+        "uploadArea": "Bild hochladen",
+        "extractedText": "Extrahierter Text",
+        "dragDrop": "Ziehen und ablegen oder klicken, um eine Bilddatei auszuwählen",
+        "supportedFormats": "Unterstützt JPG, PNG, GIF, WebP, BMP, TIFF • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Text wird extrahiert…",
+        "textPreview": "Der extrahierte Text erscheint hier"
+      },
+      "accordion": {
+        "title": "OCR-Verarbeitungsoptionen"
+      },
+      "sections": {
+        "language": "Spracheinstellungen",
+        "processing": "Verarbeitungseinstellungen"
+      },
+      "options": {
+        "ocrSettings": "OCR-Einstellungen",
+        "language": "Erkennungssprache",
+        "confidence": "Konfidenzschwelle",
+        "confidenceDescription": "Minimale Vertrauensstufe für die Texterkennung (höher = genauer)",
+        "preserveFormatting": "Formatierung beibehalten",
+        "preserveFormattingDescription": "Ursprüngliches Layout und Abstände übernehmen",
+        "detectOrientation": "Ausrichtung automatisch erkennen",
+        "detectOrientationDescription": "Erkennt und korrigiert gedrehte oder schiefe Bilder automatisch"
+      },
+      "stats": {
+        "title": "Ergebnisübersicht",
+        "imageSize": "Bilddatei",
+        "textLength": "Textlänge",
+        "wordCount": "Wörter",
+        "confidence": "Konfidenz"
+      },
+      "analytics": {
+        "title": "OCR-Analysen",
+        "imageFileSize": "Bildgröße",
+        "textLength": "Textlänge",
+        "wordCount": "Wörter",
+        "lineCount": "Zeilen",
+        "confidence": "Konfidenz",
+        "extractionRatio": "Extraktionsverhältnis"
+      },
+      "messages": {
+        "ocrSuccess": "Text erfolgreich extrahiert!",
+        "textCopied": "Text wurde in die Zwischenablage kopiert!"
+      },
+      "info": {
+        "description": "Laden Sie ein beliebiges Bild mit Text und unser OCR extrahiert den Inhalt in wenigen Sekunden. Funktioniert mit Fotos, Screenshots, Scans und vielem mehr.",
+        "supportInfo": "Unterstützt mehrere Bildformate und Sprachen. Die besten Ergebnisse erhalten Sie mit klaren, kontrastreichen Textbereichen."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige Bilddatei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "ocrFailed": "Text konnte nicht aus dem Bild extrahiert werden",
+        "lowConfidence": "Die Erkennung war zu unzuverlässig. Passen Sie die Einstellungen an oder verwenden Sie ein klareres Bild.",
+        "noTextFound": "In diesem Bild wurde kein Text gefunden"
+      },
+      "actions": {
+        "extract": "Text extrahieren",
+        "extractText": "Text extrahieren",
+        "processing": "Verarbeitung…",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Bild hochladen",
+        "reupload": "Erneut hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch werden das aktuelle Bild und der extrahierte Text entfernt. Dieser Vorgang kann nicht rückgängig gemacht werden."
+      }
+    },
+    "jpgToPng": {
+      "title": "JPG-zu-PNG-Konverter",
+      "description": "Wandeln Sie JPG/JPEG-Bilder in hochwertige PNG-Dateien mit Transparenz- und Farbkontrolle um – ideal für Logos, Produktfotos und Webdesign.",
+      "outputLabel": "Konvertiertes PNG-Bild",
+      "copiedMessage": "PNG-Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "JPG/JPEG-Datei hochladen, um sie in PNG umzuwandeln",
+      "labels": {
+        "originalImage": "Originales JPG-Bild",
+        "convertedResult": "Konvertiertes PNG-Ergebnis",
+        "uploadArea": "JPG/JPEG-Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein JPG/JPEG auszuwählen",
+        "supportedFormats": "Unterstützt JPG, JPEG • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird konvertiert…",
+        "convertPreview": "Das PNG erscheint hier"
+      },
+      "options": {
+        "conversionSettings": "Konvertierungseinstellungen",
+        "quality": "PNG-Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "compression": "PNG-Kompression",
+        "compressionLevels": {
+          "none": "Keine",
+          "fast": "Schnell",
+          "best": "Beste"
+        },
+        "losslessMode": "Verlustfreier Modus",
+        "losslessModeDescription": "Aktivieren Sie maximale Qualität (größere Dateien)",
+        "webpSettings": "PNG-Einstellungen"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "PNG-Größe",
+        "fileSize": "Dateigröße",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Laden Sie ein JPG/JPEG hoch und lassen Sie es automatisch in PNG konvertieren – perfekt für transparente Hintergründe oder verlustfreie Assets.",
+        "supportInfo": "Unterstützt Dateien bis 10 MB. Wählen Sie Qualität und Kompression passend zu Ihrem Workflow."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige JPG- oder JPEG-Datei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToConvert": "Bild konnte nicht nach PNG konvertiert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar",
+        "conversionFailed": "Konvertierung fehlgeschlagen",
+        "failedToCreateZip": "ZIP-Datei konnte nicht erstellt werden"
+      },
+      "actions": {
+        "convert": "In PNG konvertieren",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
+      }
+    },
+    "jpgToWebp": {
+      "title": "JPG-zu-WebP-Konverter",
+      "description": "Konvertieren Sie JPG/JPEG-Bilder in moderne WebP-Dateien, verkleinern Sie die Dateigröße drastisch und behalten Sie gleichzeitig eine hervorragende Bildqualität – perfekt für schnelle Webseiten und effiziente Workflows.",
+      "outputLabel": "Konvertiertes WebP-Bild",
+      "copiedMessage": "WebP-Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "JPG/JPEG-Datei hochladen, um sie in WebP zu konvertieren",
+      "labels": {
+        "originalImage": "Originales JPG-Bild",
+        "convertedResult": "Konvertiertes WebP-Ergebnis",
+        "uploadArea": "JPG/JPEG-Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein JPG/JPEG auszuwählen",
+        "supportedFormats": "Unterstützt JPG, JPEG • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird konvertiert…",
+        "convertPreview": "Das WebP erscheint hier"
+      },
+      "options": {
+        "conversionSettings": "Konvertierungseinstellungen",
+        "quality": "WebP-Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "compression": "Kompression",
+        "compressionLevels": {
+          "none": "Keine",
+          "fast": "Schnell",
+          "best": "Beste"
+        },
+        "losslessMode": "Verlustfreier Modus",
+        "losslessModeDescription": "Aktivieren Sie perfekte Qualität (größere Dateien)",
+        "webpSettings": "WebP-Einstellungen"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "WebP-Größe",
+        "fileSize": "Dateigröße",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Laden Sie ein JPG/JPEG hoch und lassen Sie es lokal im Browser in das WebP-Format umwandeln. WebP liefert deutlich kleinere Dateien bei nahezu identischer visueller Qualität.",
+        "supportInfo": "Unterstützt Dateien bis 10 MB. Wählen Sie Qualität und Kompressionsmodus passend für SEO, Performance oder Design."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige JPG- oder JPEG-Datei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToConvert": "Bild konnte nicht nach WebP konvertiert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar",
+        "conversionFailed": "Konvertierung fehlgeschlagen",
+        "failedToCreateZip": "ZIP-Datei konnte nicht erstellt werden"
+      },
+      "actions": {
+        "convert": "In WebP konvertieren",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
+      }
+    },
+    "pngToJpg": {
+      "title": "PNG-zu-JPG-Konverter",
+      "description": "Konvertieren Sie PNG-Bilder in JPG/JPEG, um kleinere Dateien und maximale Kompatibilität zu erreichen – inklusive Hintergrundfarbe für transparente Bereiche.",
+      "outputLabel": "Konvertiertes JPG-Bild",
+      "copiedMessage": "JPG-Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "PNG-Datei hochladen, um sie in JPG umzuwandeln",
+      "labels": {
+        "originalImage": "Originales PNG-Bild",
+        "convertedResult": "Konvertiertes JPG-Ergebnis",
+        "uploadArea": "PNG-Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein PNG auszuwählen",
+        "supportedFormats": "Unterstützt PNG • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird konvertiert…",
+        "convertPreview": "Das JPG erscheint hier"
+      },
+      "options": {
+        "conversionSettings": "Konvertierungseinstellungen",
+        "quality": "JPG-Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "compression": "JPG-Kompression",
+        "compressionLevels": {
+          "fast": "Schnell",
+          "standard": "Standard",
+          "best": "Beste"
+        },
+        "handleTransparency": "Transparenz behandeln",
+        "backgroundColor": "Hintergrundfarbe"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "JPG-Größe",
+        "fileSize": "Dateigröße",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Laden Sie ein PNG hoch und konvertieren Sie es in Sekundenschnelle in JPG, wobei transparente Bereiche automatisch mit Ihrer Wunschfarbe gefüllt werden.",
+        "supportInfo": "Unterstützt PNG bis 10 MB. JPG reduziert die Dateigröße, entfernt aber Transparenz – ideal für Fotos, Galerien und E-Mails."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige PNG-Datei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToConvert": "Bild konnte nicht nach JPG konvertiert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar",
+        "conversionFailed": "Konvertierung fehlgeschlagen",
+        "failedToCreateZip": "ZIP-Datei konnte nicht erstellt werden"
+      },
+      "actions": {
+        "convert": "In JPG konvertieren",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
+      }
+    },
+    "pngToWebp": {
+      "title": "PNG-zu-WebP-Konverter",
+      "description": "Konvertieren Sie PNG-Bilder in moderne WebP-Dateien, behalten Sie Transparenz bei und reduzieren Sie die Dateigröße erheblich – ideal für performante Websites und Apps.",
+      "outputLabel": "Konvertiertes WebP-Bild",
+      "copiedMessage": "WebP-Bild wurde in die Zwischenablage kopiert!",
+      "downloadFileName": "converted-image",
+      "uploadDescription": "PNG-Datei hochladen, um sie in WebP umzuwandeln",
+      "labels": {
+        "originalImage": "Originales PNG-Bild",
+        "convertedResult": "Konvertiertes WebP-Ergebnis",
+        "uploadArea": "PNG-Bild hochladen",
+        "dragDrop": "Ziehen und ablegen oder klicken, um ein PNG auszuwählen",
+        "supportedFormats": "Unterstützt PNG • Max. 10 MB",
+        "replace": "Ersetzen"
+      },
+      "placeholders": {
+        "uploading": "Wird hochgeladen…",
+        "processing": "Wird konvertiert…",
+        "convertPreview": "Das WebP erscheint hier"
+      },
+      "options": {
+        "conversionSettings": "Konvertierungseinstellungen",
+        "quality": "WebP-Qualität",
+        "qualityLevels": {
+          "max": "Max",
+          "high": "Hoch",
+          "medium": "Mittel",
+          "low": "Niedrig"
+        },
+        "compression": "Kompression",
+        "compressionLevels": {
+          "none": "Keine",
+          "fast": "Schnell",
+          "best": "Beste"
+        },
+        "losslessMode": "Verlustfreier Modus",
+        "losslessModeDescription": "Aktivieren Sie perfekte Qualität (größere Dateien)",
+        "webpSettings": "WebP-Einstellungen"
+      },
+      "stats": {
+        "originalSize": "Originalgröße",
+        "newSize": "WebP-Größe",
+        "fileSize": "Dateigröße",
+        "sizeChange": "Größenänderung",
+        "sizeRatio": "Verhältnis",
+        "quality": "Qualität",
+        "format": "Format"
+      },
+      "info": {
+        "description": "Laden Sie ein PNG hoch und erhalten Sie in Sekunden ein WebP-Bild mit identischer Transparenz, aber deutlich kleinerer Dateigröße.",
+        "supportInfo": "Unterstützt PNG bis 10 MB. WebP liefert besseres SNR und spart Bandbreite ohne sichtbare Verluste."
+      },
+      "errors": {
+        "invalidFile": "Bitte wählen Sie eine gültige PNG-Datei",
+        "fileTooLarge": "Bilddateien dürfen nicht größer als 10 MB sein",
+        "failedToLoad": "Bild konnte nicht geladen werden",
+        "failedToRead": "Datei konnte nicht gelesen werden",
+        "failedToConvert": "Bild konnte nicht nach WebP konvertiert werden",
+        "canvasNotSupported": "Canvas-Kontext nicht verfügbar",
+        "conversionFailed": "Konvertierung fehlgeschlagen",
+        "failedToCreateZip": "ZIP-Datei konnte nicht erstellt werden"
+      },
+      "actions": {
+        "convert": "In WebP konvertieren",
+        "download": "Download",
+        "copy": "Kopieren",
+        "clear": "Zurücksetzen",
+        "upload": "Hochladen"
+      },
+      "dialog": {
+        "clearTitle": "Bild löschen",
+        "clearDescription": "Dadurch wird das aktuelle Bild entfernt und alle Konvertierungseinstellungen werden zurückgesetzt."
+      }
     }
   }
 }

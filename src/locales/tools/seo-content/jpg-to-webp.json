@@ -124,7 +124,68 @@
         { "question": "Загружаются ли мои изображения?", "answer": "Нет, конвертация выполняется локально в вашем браузере." }
       ]
     }
+  },
+  "de": {
+    "sections": {
+      "intro": {
+        "title": "JPG-zu-WebP-Konverter",
+        "content": "Verwandeln Sie JPG/JPEG-Bilder in das moderne WebP-Format und reduzieren Sie die Dateigröße um bis zu 60 %, ohne sichtbare Qualitätseinbußen. Ideal für schnellere Websites, bessere Core-Web-Vitals und effizientere Medien-Workflows."
+      },
+      "features": {
+        "title": "Funktions-Highlights",
+        "items": [
+          { "title": "Individuelle Qualitätsstufen", "description": "Wählen Sie genau den Qualitätsgrad, der zu Ihrem Projekt passt – vom kleinsten Output bis zur verlustfreien Variante." },
+          { "title": "Batch-Konvertierung", "description": "Mehrere Dateien per Drag & Drop hinzufügen und gesammelt als ZIP herunterladen." },
+          { "title": "100 % privat", "description": "Die Konvertierung läuft komplett lokal im Browser – keine Uploads, keine Server." }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie JPG in WebP",
+        "description": "In drei schnellen Schritten zum Ergebnis:",
+        "steps": [
+          { "step": 1, "title": "Bilder hochladen", "description": "JPG/JPEG-Dateien per Drag & Drop oder Klick auswählen." },
+          { "step": 2, "title": "Qualität festlegen", "description": "Preset wählen oder den Verlustfrei-Modus aktivieren – optional Kompression anpassen." },
+          { "step": 3, "title": "WebP herunterladen", "description": "Einzelne Dateien oder das gesamte Paket als ZIP speichern." }
+        ]
+      },
+      "examples": {
+        "title": "Praxisbeispiele",
+        "description": "Typische Einsparungen im Vergleich zu JPG:",
+        "items": [
+          { "input": "1024×768 JPG (450 KB)", "output": "WebP (220 KB)", "description": "≈ 50 % kleiner bei identischer Optik." },
+          { "input": "1200×800 JPG (800 KB)", "output": "WebP (380 KB)", "description": "≈ 52 % Platzersparnis für große Hero-Bilder." }
+        ]
+      },
+      "useCases": {
+        "title": "Einsatzgebiete",
+        "description": "Wo WebP besonders punktet:",
+        "items": [
+          { "title": "Performance-orientierte Websites", "description": "Schnellere Ladezeiten für Blogs, Landingpages und Shops." },
+          { "title": "Newsletter & Messaging", "description": "Hochwertige Bilder verschicken, ohne große Anhänge." }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile",
+        "items": [
+          "Deutlich kleinere Dateien bei starker Qualität",
+          "Bessere Core-Web-Vitals und SEO-Scores",
+          "Funktioniert offline direkt im Browser"
+        ]
+      },
+      "relatedTools": {
+        "title": "Weitere Bild-Tools",
+        "description": "Passend für Ihren Optimierungs-Workflow:",
+        "items": [
+          { "name": "PNG zu WebP", "description": "PNG-Dateien effizient in WebP überführen.", "href": "/de/tools/png-to-webp" },
+          { "name": "WebP zu JPG", "description": "WebP-Bilder zurück in JPG umwandeln, falls benötigt.", "href": "/de/tools/webp-to-jpg" },
+          { "name": "WebP zu PNG", "description": "WebP in PNG mit Transparenz exportieren.", "href": "/de/tools/webp-to-png" },
+          { "name": "Bildgrößenänderer", "description": "Pixelmaße anpassen, bevor Sie konvertieren.", "href": "/de/tools/image-resizer" }
+        ]
+      },
+      "faqs": [
+        { "question": "Unterstützen alle Browser WebP?", "answer": "Ja, alle modernen Browser auf Desktop und Mobile unterstützen WebP. Für alte Umgebungen können Sie Fallbacks bereitstellen." },
+        { "question": "Werden meine Bilder hochgeladen?", "answer": "Nein. Alles passiert lokal im Browser – Ihre Dateien verlassen Ihr Gerät nicht." }
+      ]
+    }
   }
 }
-
-

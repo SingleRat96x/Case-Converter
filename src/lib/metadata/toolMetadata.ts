@@ -203,6 +203,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Изображение в Текст (OCR) — Распознавание Текста',
         description: 'Преобразуйте изображения в текст с помощью OCR. Вставляйте или загружайте и копируйте результат. Для чеков, сканов и скриншотов.',
         shortDescription: 'Распознавание текста в изображениях.',
+      },
+      de: {
+        title: 'Bild zu Text (OCR) — Text aus Bildern extrahieren',
+        description: 'Extrahieren Sie Text aus Bildern mit präziser OCR. Laden oder fügen Sie Dateien ein und kopieren Sie das Ergebnis – ideal für Belege, Scans und Screenshots.',
+        shortDescription: 'Text mit OCR aus Bildern gewinnen.',
       }
     },
     schema: createAdvancedSchema('image-to-text', ['OCR', 'Copy results'], 'Image Input', 'Extracted Text', 4.5, 634),
@@ -223,6 +228,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'JPG → PNG — Конвертация Фото в PNG с Прозрачностью',
         description: 'Конвертируйте JPG в PNG с поддержкой прозрачности. Перетаскивайте несколько файлов и скачивайте быстро. Приватно.',
         shortDescription: 'JPG → PNG конвертация.',
+      },
+      de: {
+        title: 'JPG zu PNG — Fotos in transparente PNGs umwandeln',
+        description: 'Konvertieren Sie JPG/JPEG-Bilder online in PNG mit Transparenz, Farbkontrolle und verlustfreier Qualität. Ideal für Webdesign, Logos und Produktfotos.',
+        shortDescription: 'JPG/JPEG in PNG umwandeln.',
       }
     },
     schema: createAdvancedSchema('jpg-to-png', ['Batch convert', 'Transparency'], 'Image Input', 'PNG Image', 4.4, 567),
@@ -243,6 +253,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'JPG → WebP — Меньший Размер с Отличным Качеством',
         description: 'Конвертируйте JPG в WebP для меньшего размера при хорошем качестве. Быстрая конверсия в браузере. Пакетная обработка.',
         shortDescription: 'JPG → WebP быстро.',
+      },
+      de: {
+        title: 'JPG zu WebP — Kleinere Dateien bei hoher Qualität',
+        description: 'Konvertieren Sie JPG/JPEG-Bilder in moderne WebP-Dateien, reduzieren Sie die Größe drastisch und behalten Sie dennoch gestochen scharfe Ergebnisse – schnell, lokal und sicher.',
+        shortDescription: 'JPG/JPEG in WebP umwandeln.',
       }
     },
     schema: createAdvancedSchema('jpg-to-webp', ['Batch', 'Quality'], 'Image Input', 'WebP Image', 4.3, 498),
@@ -263,6 +278,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'PNG → JPG — Конвертация Прозрачных PNG в JPG',
         description: 'Конвертируйте PNG в JPG для совместимости. Настройка качества, пакетная обработка в браузере, быстрое скачивание.',
         shortDescription: 'PNG → JPG конвертация.',
+      },
+      de: {
+        title: 'PNG zu JPG — Transparente PNGs kompatibel machen',
+        description: 'Wandeln Sie PNG-Dateien in JPG um, um kleinere Dateien und maximale Kompatibilität zu erhalten. Qualität und Kompression lassen sich flexibel in Sekunden direkt im Browser anpassen.',
+        shortDescription: 'PNG-Bilder in JPG konvertieren.',
       }
     },
     schema: createAdvancedSchema('png-to-jpg', ['Quality control', 'Batch'], 'Image Input', 'JPG Image', 4.2, 432),
@@ -1162,6 +1182,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'PNG → WebP Конвертер — Сжать Изображения с Качеством',
         description: 'Конвертируйте PNG в WebP для меньшего размера и отличного качества. Быстро, в браузере и безопасно. Перетаскивайте файлы.',
         shortDescription: 'Быстрый PNG → WebP.',
+      },
+      de: {
+        title: 'PNG zu WebP — Transparenz behalten, Größe reduzieren',
+        description: 'Konvertieren Sie PNG-Dateien in moderne WebP-Bilder und behalten Sie volle Transparenz bei deutlich kleineren Dateien – ideal für schnelle Webseiten und mobile Apps.',
+        shortDescription: 'PNG-Bilder in WebP umwandeln.',
       }
     },
     schema: createAdvancedSchema('png-to-webp', ['Batch convert', 'Browser-based'], 'PNG Image Input', 'WebP Image', 4.5, 567),
