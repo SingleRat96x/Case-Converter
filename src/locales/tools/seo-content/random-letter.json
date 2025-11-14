@@ -227,6 +227,180 @@
       }
     }
   },
+  "de": {
+    "title": "Kostenloser Zufalls-Buchstabengenerator – Groß-/Kleinschreibung & Formate",
+    "metaDescription": "Generieren Sie zufällige Buchstaben mit frei wählbarer Groß-/Kleinschreibung, Ausgabeformaten und Duplikatkontrolle. Ideal für Spiele, Unterricht, Tests und kreative Projekte – kostenlos und unbegrenzt.",
+    "sections": {
+      "intro": {
+        "title": "Professionelles Tool für zufällige Buchstaben",
+        "content": "Unser Zufalls-Buchstabengenerator liefert kryptografisch sichere Buchstabenfolgen für Spiele, Unterricht, Softwaretests oder kreative Ideen. Stellen Sie Menge, Schreibweise, Format und Duplikate exakt ein und erstellen Sie bis zu 10.000 Buchstaben pro Durchlauf – alles direkt im Browser, ohne Datenübertragung."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen des Buchstabengenerators",
+        "items": [
+          {
+            "title": "Kryptografische Zufälligkeit",
+            "description": "Verwendet crypto.getRandomValues() und garantiert unverzerrte, unvorhersehbare Buchstabenfolgen"
+          },
+          {
+            "title": "Flexible Schreibweise",
+            "description": "Wählen Sie zwischen Großbuchstaben, Kleinbuchstaben oder einem gemischten Alphabet mit 52 Zeichen"
+          },
+          {
+            "title": "Mehrere Ausgabeformate",
+            "description": "Geben Sie Buchstaben mit Leerzeichen, als zusammenhängende Zeichenkette oder zeilenweise aus"
+          },
+          {
+            "title": "Massengenerierung",
+            "description": "Erzeugen Sie bis zu 10.000 Buchstaben auf einmal für Tests, Losungen oder Datensätze"
+          },
+          {
+            "title": "Duplikat-Steuerung",
+            "description": "Erlauben oder verbieten Sie doppelte Buchstaben – perfekt für Spiele oder eindeutige Sets"
+          },
+          {
+            "title": "Sofortige Ergebnisse",
+            "description": "Echtzeit-Validierung, Kopieren mit einem Klick und optionaler Download als Textdatei"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den Zufalls-Buchstabengenerator",
+        "steps": [
+          {
+            "title": "Menge festlegen",
+            "description": "Geben Sie 1–10.000 als gewünschte Buchstabenanzahl ein. Bei deaktivierten Duplikaten gelten die Limits des gewählten Alphabets."
+          },
+          {
+            "title": "Schreibweise wählen",
+            "description": "Stellen Sie auf Großbuchstaben, Kleinbuchstaben oder gemischt um – je nach Spiel, Übung oder Testfall."
+          },
+          {
+            "title": "Ausgabeformat bestimmen",
+            "description": "Nutzen Sie Leerzeichen für Übersicht, das kontinuierliche Format für kompakte Strings oder Zeilenumbrüche für Listen."
+          },
+          {
+            "title": "Duplikate konfigurieren",
+            "description": "Schalten Sie doppelte Buchstaben aus, wenn jedes Zeichen nur einmal vorkommen soll (z. B. Lernkarten oder Spielsteine)."
+          },
+          {
+            "title": "Generieren & exportieren",
+            "description": "Starten Sie die Generierung, kopieren Sie das Ergebnis oder laden Sie es als TXT-Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für generierte Buchstabensets",
+        "items": [
+          {
+            "title": "Scrabble-Training",
+            "input": "Menge: 7, Gemischt, Format: Leerzeichen",
+            "output": "K m R a T n B"
+          },
+          {
+            "title": "Alphabet-Übung",
+            "input": "Menge: 5, Nur Großbuchstaben, Format: Zeilenumbrüche",
+            "output": "F\nM\nQ\nC\nW"
+          },
+          {
+            "title": "Sichere Token",
+            "input": "Menge: 12, Gemischt, Format: Kontinuierlich",
+            "output": "xPmKqLnRtFaD"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzmöglichkeiten",
+        "items": [
+          {
+            "title": "Bildung & Unterricht",
+            "description": "An Buchstabenrätsel, Lautübungen, Vokabelspiele oder Leseaufgaben anpassen"
+          },
+          {
+            "title": "Wortspiele & Rätsel",
+            "description": "Buchstabenpools für Scrabble, Kreuzworträtsel, Anagramme oder kreative Challenges erstellen"
+          },
+          {
+            "title": "Software- & QA-Tests",
+            "description": "Zufällige Eingaben für Textfelder, Validierungslogik oder String-Verarbeitung generieren"
+          },
+          {
+            "title": "Kreatives Schreiben",
+            "description": "Zufallsbuchstaben als Schreibimpuls, Namensgenerator oder Constraint nutzen"
+          },
+          {
+            "title": "Datengenerierung",
+            "description": "Alphabetische Dummy-Daten für Datenbanken, Formulare oder Schnittstellen erzeugen"
+          },
+          {
+            "title": "Sicherheit & Passwörter",
+            "description": "Zufällige Buchstabenteile für Passwörter, Tokens oder Captchas bereitstellen"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile unseres Generators",
+        "items": [
+          "Echte Zufälligkeit dank Web Crypto API – ideal für sicherheitsrelevante Szenarien",
+          "Kostenlos, ohne Anmeldung und ohne Nutzungsbegrenzung",
+          "Hohe Performance selbst bei großen Mengen durch optimierte Algorithmen",
+          "Flexible Formate für jede Darstellung – copy & paste oder Download",
+          "Alle Berechnungen laufen lokal im Browser, keine Daten werden gespeichert"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          {
+            "name": "Zufallszahlengenerator",
+            "description": "Erzeugen Sie Zufallszahlen in beliebigen Bereichen",
+            "href": "/de/tools/random-number"
+          },
+          {
+            "name": "Zufallsdatums-Generator",
+            "description": "Erstellen Sie zufällige Daten mit individuellen Zeiträumen",
+            "href": "/de/tools/random-date"
+          },
+          {
+            "name": "Zufalls-Monatsgenerator",
+            "description": "Generieren Sie Monate für Planungen oder Simulationen",
+            "href": "/de/tools/random-month"
+          },
+          {
+            "name": "Textfall-Konverter",
+            "description": "Wandeln Sie Text zwischen Groß-, Klein- und Titel-Schreibung um",
+            "href": "/de/tools/uppercase"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wie zufällig sind die erzeugten Buchstaben?",
+          "answer": "Die Generierung basiert auf crypto.getRandomValues() und liefert kryptografisch sichere Ergebnisse – perfekt für Spiele, Tests oder sicherheitskritische Anwendungsfälle."
+        },
+        {
+          "question": "Kann ich die Schreibweise beliebig kombinieren?",
+          "answer": "Ja. Wählen Sie Großbuchstaben, Kleinbuchstaben oder beides gleichzeitig. Gemischte Sets bieten 52 mögliche Zeichen, einzelne Register jeweils 26."
+        },
+        {
+          "question": "Wie verhindere ich doppelte Buchstaben?",
+          "answer": "Schalten Sie die Option „Doppelte Buchstaben erlauben“ aus. Beachten Sie, dass die Menge dann maximal 26 (ein Register) bzw. 52 (gemischt) betragen darf."
+        },
+        {
+          "question": "Welche Ausgabeformate stehen zur Verfügung?",
+          "answer": "Spaced (A B C) für Lesbarkeit, Continuous (ABC) für kompakte Strings und Lines, um jedes Zeichen in eine eigene Zeile zu setzen."
+        },
+        {
+          "question": "Wie viele Buchstaben kann ich erzeugen?",
+          "answer": "Bis zu 10.000 pro Durchlauf – ausreichend für die meisten Projekte, Tests oder Datenmengen."
+        },
+        {
+          "question": "Darf ich die Buchstaben kommerziell nutzen?",
+          "answer": "Ja, sämtliche Ergebnisse sind frei verwendbar – privat, beruflich oder kommerziell."
+        }
+      ]
+    }
+  },
   "ru": {
     "title": "Бесплатный Генератор Случайных Букв - Настраиваемые Опции Регистра и Формата",
     "metaDescription": "Мгновенно генерируйте случайные буквы с помощью нашего продвинутого генератора. Выбирайте заглавные, строчные или смешанный регистр. Форматируйте с пробелами, непрерывно или по строкам. Идеально для игр, образования, тестирования и творческих проектов. Бесплатно и без ограничений.",

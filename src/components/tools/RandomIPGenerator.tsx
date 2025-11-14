@@ -269,12 +269,12 @@ export function RandomIPGenerator() {
       
     } catch (error) {
       console.error('Error generating random IPs:', error);
-      setValidationErrors({ quantity: 'An error occurred while generating IP addresses' });
+      setValidationErrors({ quantity: tool('randomIP.validation.generationError') });
       setIsAnimating(false);
     } finally {
       setIsGenerating(false);
     }
-  }, [quantity, ipVersion, allowDuplicates, sortResults, validateInputs, generateSecureRandomIP, formatIP]);
+  }, [quantity, ipVersion, allowDuplicates, sortResults, validateInputs, generateSecureRandomIP, formatIP, tool]);
 
   // Generate IPs on component mount and when settings change
   useEffect(() => {
@@ -336,7 +336,7 @@ export function RandomIPGenerator() {
         
       } catch (error) {
         console.error('Error generating random IPs:', error);
-        setValidationErrors({ quantity: 'An error occurred while generating IP addresses' });
+        setValidationErrors({ quantity: tool('randomIP.validation.generationError') });
         setIsAnimating(false);
       } finally {
         setIsGenerating(false);
@@ -344,7 +344,7 @@ export function RandomIPGenerator() {
     };
 
     generateIPs();
-  }, [quantity, ipVersion, ipType, customRange, allowDuplicates, sortResults, outputFormat, validateInputs, generateSecureRandomIP, formatIP]);
+  }, [quantity, ipVersion, ipType, customRange, allowDuplicates, sortResults, outputFormat, validateInputs, generateSecureRandomIP, formatIP, tool]);
 
   const ipTypeOptions = [
     {
@@ -444,7 +444,7 @@ export function RandomIPGenerator() {
                 : 'bg-background border-input hover:bg-muted'
             }`}
           >
-            IPv4
+            {tool('randomIP.options.ipv4')}
           </button>
           <button
             onClick={() => setIPVersion('ipv6')}
@@ -454,7 +454,7 @@ export function RandomIPGenerator() {
                 : 'bg-background border-input hover:bg-muted'
             }`}
           >
-            IPv6
+            {tool('randomIP.options.ipv6')}
           </button>
         </div>
       </div>

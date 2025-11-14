@@ -443,6 +443,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных Букв — Верхний/Нижний Регистр',
         description: 'Генерируйте случайные буквы: верхний, нижний или смешанный регистр. Контроль количества и исключение повторов.',
         shortDescription: 'Случайные буквы (А–Я).',
+      },
+      de: {
+        title: 'Zufalls-Buchstabengenerator — Groß/Klein & Sets',
+        description: 'Erzeugen Sie zufällige Buchstaben in Groß-, Klein- oder Mischschreibung. Steuern Sie Menge, Format und Duplikate und kopieren Sie Ergebnisse sofort.',
+        shortDescription: 'Zufällige Buchstaben (A–Z) generieren.',
       }
     },
     schema: createAdvancedSchema('random-letter', ['Upper/lower', 'No repeats'], 'Number Input', 'Random Letters', 4.3, 389),
@@ -598,6 +603,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных IP — IPv4 и IPv6 для Тестирования',
         description: 'Генерируйте случайные IPv4/IPv6 адреса для разработки и тестов. CIDR диапазоны, приватные/публичные, массовый вывод.',
         shortDescription: 'Случайные IPv4/IPv6 с CIDR и массовой генерацией.',
+      },
+      de: {
+        title: 'Zufalls-IP-Generator — IPv4 & IPv6 für Netzwerktests',
+        description: 'Generieren Sie zufällige IPv4/IPv6-Adressen für Entwicklung und Tests. Unterstützt CIDR-Bereiche, private/öffentliche Netze und Massenausgabe.',
+        shortDescription: 'Zufällige IPv4/IPv6-Adressen mit CIDR- und Bulk-Optionen.',
       },
     },
     schema: createAdvancedSchema('random-ip', ['IPv4', 'IPv6', 'CIDR ranges', 'Bulk'], 'Settings Input', 'Random IP Addresses', 4.6, 567),

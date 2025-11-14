@@ -76,7 +76,8 @@
         "quantityInvalid": "Quantity must be between 1 and 10,000",
         "customRangeRequired": "Custom range is required",
         "invalidCIDR": "Please enter a valid CIDR notation (e.g., 192.168.1.0/24)",
-        "invalidSubnetMask": "Subnet mask must be between 1 and 32 for IPv4"
+        "invalidSubnetMask": "Subnet mask must be between 1 and 32 for IPv4",
+        "generationError": "An error occurred while generating IP addresses. Please try again."
       },
       "downloadFileName": "random-ip-addresses.txt",
       "help": {
@@ -112,7 +113,8 @@
       "validation": {
         "quantityRequired": "Quantity is required",
         "quantityInvalid": "Quantity must be between 1 and 10,000",
-        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed available letters (26 for single case, 52 for mixed case)"
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed available letters (26 for single case, 52 for mixed case)",
+        "generationError": "An error occurred while generating letters. Please try again."
       },
       "downloadFileName": "random-letters.txt",
       "copiedMessage": "Random letters copied to clipboard!",
@@ -387,6 +389,90 @@
         "outputFormat": "Format, in dem die Ergebnisse angezeigt werden",
         "allowDuplicates": "Wenn aktiviert, kann dasselbe Datum mehrfach auftreten"
       }
+    },
+    "randomIP": {
+      "title": "Zufälliger IP-Adressgenerator",
+      "description": "Generieren Sie zufällige IPv4- und IPv6-Adressen für Netzwerktests, Entwicklung und Simulation. Unterstützt benutzerdefinierte Bereiche, private/öffentliche Netze sowie mehrere Ausgabeformate.",
+      "outputLabel": "Generierte IP-Adressen",
+      "generateButton": "Zufällige IPs erzeugen",
+      "options": {
+        "ipVersion": "IP-Version",
+        "ipType": "IP-Adress-Typ",
+        "quantity": "Wie viele IP-Adressen",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte IPs erlauben",
+        "sortResults": "Ergebnisse sortieren",
+        "customRange": "Benutzerdefinierter IP-Bereich",
+        "subnetMask": "Subnetzmaske",
+        "ipv4": "IPv4",
+        "ipv6": "IPv6",
+        "any": "Beliebige IP-Adresse",
+        "private": "Nur private IPs",
+        "public": "Nur öffentliche IPs",
+        "custom": "Benutzerdefinierter Bereich",
+        "standard": "Standard (192.168.1.1)",
+        "cidr": "CIDR-Notation (192.168.1.1/24)",
+        "hex": "Hexadezimal",
+        "binary": "Binär"
+      },
+      "placeholders": {
+        "quantity": "Menge eingeben (1-10000)",
+        "customRange": "z. B. 192.168.1.0/24"
+      },
+      "validation": {
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "customRangeRequired": "Ein benutzerdefinierter Bereich ist erforderlich",
+        "invalidCIDR": "Bitte geben Sie eine gültige CIDR-Notation ein (z. B. 192.168.1.0/24)",
+        "invalidSubnetMask": "Die Subnetzmaske muss zwischen 1 und 32 für IPv4 liegen",
+        "generationError": "Beim Erzeugen der IP-Adressen ist ein Fehler aufgetreten. Bitte erneut versuchen."
+      },
+      "downloadFileName": "zufalls-ip-adressen.txt",
+      "help": {
+        "ipVersion": "Wählen Sie zwischen IPv4 (32 Bit) und IPv6 (128 Bit) Adressen",
+        "ipType": "Bestimmen Sie, welche IPs generiert werden sollen: beliebig, nur private, nur öffentliche oder ein eigener Bereich",
+        "quantity": "Wie viele zufällige IP-Adressen generiert werden (maximal 10.000)",
+        "outputFormat": "Wählen Sie, wie die generierten IPs dargestellt werden: Standard, CIDR, Hex oder Binär",
+        "allowDuplicates": "Wenn aktiviert, kann dieselbe IP-Adresse mehrfach erscheinen",
+        "sortResults": "Sortiert die IP-Adressen numerisch",
+        "customRange": "CIDR-Bereich angeben, innerhalb dessen IP-Adressen erstellt werden sollen"
+      }
+    },
+    "randomLetter": {
+      "title": "Zufalls-Buchstabengenerator",
+      "description": "Erzeugen Sie zufällige Buchstaben mit frei wählbarer Groß-/Kleinschreibung und Ausgabeformaten. Perfekt für Spiele, Unterricht, Tests und kreative Projekte.",
+      "outputLabel": "Generierte Buchstaben",
+      "generateButton": "Zufällige Buchstaben erzeugen",
+      "options": {
+        "quantity": "Wie viele Buchstaben",
+        "caseType": "Schreibweise",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte Buchstaben erlauben",
+        "mixed": "Gemischt (A-Z, a-z)",
+        "uppercase": "Nur Großbuchstaben (A-Z)",
+        "lowercase": "Nur Kleinbuchstaben (a-z)",
+        "spaced": "Mit Leerzeichen (A B C)",
+        "continuous": "Zusammenhängend (ABC)",
+        "lines": "Mit Zeilenumbrüchen (A\\nB\\nC)"
+      },
+      "placeholders": {
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die verfügbaren Buchstaben nicht überschreiten (26 je Register, 52 gemischt)",
+        "generationError": "Beim Generieren der Buchstaben ist ein Fehler aufgetreten. Bitte erneut versuchen."
+      },
+      "downloadFileName": "zufalls-buchstaben.txt",
+      "copiedMessage": "Zufallsbuchstaben wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Buchstaben erzeugt!",
+      "help": {
+        "quantity": "Wie viele Buchstaben erzeugt werden sollen (maximal 10.000)",
+        "caseType": "Wählen Sie zwischen Groß-, Klein- oder Mischschreibung",
+        "outputFormat": "Bestimmen Sie, wie die Buchstaben im Output dargestellt werden",
+        "allowDuplicates": "Wenn aktiviert, kann derselbe Buchstabe mehrmals erscheinen"
+      }
     }
   },
   "ru": {
@@ -455,7 +541,8 @@
       "validation": {
         "quantityRequired": "Количество обязательно",
         "quantityInvalid": "Количество должно быть от 1 до 10 000",
-        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать доступные буквы (26 для одного регистра, 52 для смешанного)"
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать доступные буквы (26 для одного регистра, 52 для смешанного)",
+        "generationError": "Произошла ошибка при генерации букв. Пожалуйста, попробуйте еще раз."
       },
       "downloadFileName": "random-letters.txt",
       "copiedMessage": "Случайные буквы скопированы в буфер обмена!",
@@ -544,7 +631,8 @@
         "quantityInvalid": "Количество должно быть от 1 до 10 000",
         "customRangeRequired": "Настраиваемый диапазон обязателен",
         "invalidCIDR": "Пожалуйста, введите действительную CIDR нотацию (например, 192.168.1.0/24)",
-        "invalidSubnetMask": "Маска подсети должна быть от 1 до 32 для IPv4"
+        "invalidSubnetMask": "Маска подсети должна быть от 1 до 32 для IPv4",
+        "generationError": "Произошла ошибка при генерации IP-адресов. Пожалуйста, попробуйте еще раз."
       },
       "downloadFileName": "random-ip-addresses.txt",
       "help": {
