@@ -352,5 +352,182 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser URL-Encoder/Decoder – Prozentkodierung & URI-Komponenten",
+    "metaDescription": "Kodieren oder dekodieren Sie URLs und Parameter sofort. Mehrere Kodierungsarten, Fehlerprüfung und Analytics – ideal für Webentwicklung, APIs und sichere Link-Erstellung.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser URL-Encoder/Decoder – Prozentkodierung & URI-Komponenten",
+        "content": "Verwandeln Sie Text, URLs oder Formularparameter mit nur einem Klick in korrekt kodierte Links – oder machen Sie Prozentkodierung wieder lesbar. Das Tool unterstützt mehrere Kodierungsarten, liefert Live-Statistiken und prüft auf ungültige Sequenzen. Perfekt für Entwickler:innen, SEOs und Teams, die fehlerfreie Links benötigen."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für URL-Kodierung",
+        "items": [
+          {
+            "title": "Bidirektionale Konvertierung",
+            "description": "Schalten Sie nahtlos zwischen Kodieren und Dekodieren um und behalten Sie Original- sowie Zieltext parallel im Blick."
+          },
+          {
+            "title": "Drei Kodierungsmodi",
+            "description": "Unterstützt URI-Komponenten (encodeURIComponent), vollständige URI-Kodierung (encodeURI) und Formular-Datenkodierung für application/x-www-form-urlencoded."
+          },
+          {
+            "title": "Sonderzeichen-Kontrolle",
+            "description": "Kodiert Leerzeichen, kaufmännische Unds, Fragezeichen und Unicode-Zeichen korrekt, damit Links überall funktionieren."
+          },
+          {
+            "title": "Echtzeit-Analytics",
+            "description": "Sie erhalten Länge, Anzahl kodierter Zeichen, Sicherheitsgewinn und Größenänderung in Echtzeit."
+          },
+          {
+            "title": "Fehler- und Malformed-Prüfung",
+            "description": "Erkennt fehlerhafte Prozentfolgen oder ungültige Eingaben und liefert konkrete Hinweise zur Korrektur."
+          },
+          {
+            "title": "Entwicklerfreundliche Optionen",
+            "description": "Steuern Sie Reserved Characters, Ersatz für Leerzeichen (+ oder %20) und weitere Parameter direkt aus der UI."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien für URL-Kodierung",
+        "description": "Schützen Sie Links, API-Aufrufe und nutzergenerierte Inhalte vor beschädigten Zeichenketten.",
+        "items": [
+          {
+            "title": "Query-Parameter absichern",
+            "description": "Formularwerte und Filterparameter sauber kodieren, bevor sie an GET- oder POST-Endpunkte gesendet werden."
+          },
+          {
+            "title": "REST- & GraphQL-APIs",
+            "description": "Parameter für API-Aufrufe vorbereiten, damit Sonderzeichen in Tokens oder IDs korrekt übertragen werden."
+          },
+          {
+            "title": "CMS & Marketing",
+            "description": "Nachverfolgungslinks (UTM), Newsletter-URLs oder Social-Media-Sharing-Links fehlerfrei generieren."
+          },
+          {
+            "title": "Formular-Uploads",
+            "description": "Inhalte aus Formularen oder CSV-Importen normalisieren, bevor sie in Datenbanken landen."
+          },
+          {
+            "title": "Validierung & QA",
+            "description": "Eingehende Datenströme prüfen, defekte Zeichen finden und automatisch korrigieren."
+          },
+          {
+            "title": "Sichere Automatisierung",
+            "description": "Skripte und Low-Code-Flows mit einem zuverlässigen Encoder speisen, um Pipeline-Fehler zu vermeiden."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den URL-Encoder/Decoder",
+        "description": "Vier Schritte reichen aus, um URLs regelkonform zu kodieren oder zu entschlüsseln.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Modus auswählen",
+            "description": "Entscheiden Sie, ob Sie Text kodieren oder eine bestehende, Prozent-kodierte URL dekodieren möchten."
+          },
+          {
+            "step": 2,
+            "title": "Eingabe hinzufügen",
+            "description": "Text, URL oder Parameterfeld einfügen. Alternativ eine Datei hochladen oder Beispielwerte nutzen."
+          },
+          {
+            "step": 3,
+            "title": "Kodierungsart konfigurieren",
+            "description": "Wählen Sie Komponenten-, vollständige URI- oder Formkodierung und aktivieren Sie bei Bedarf Reservierungsoptionen."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis prüfen & kopieren",
+            "description": "Ausgabe kontrollieren, Analytics ansehen und das Resultat kopieren, herunterladen oder als Referenz speichern."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Praxisbeispiele für URL-Kodierung",
+        "description": "So verändern sich unterschiedliche Eingaben beim Kodieren.",
+        "items": [
+          {
+            "title": "Query-Parameter",
+            "input": "name=Max Mustermann&email=max@example.com",
+            "output": "name%3DMax%20Mustermann%26email%3Dmax%40example.com"
+          },
+          {
+            "title": "Sonderzeichen & Symbole",
+            "input": "Hallo Welt! & Spezialzeichen",
+            "output": "Hallo%20Welt%21%20%26%20Spezialzeichen"
+          },
+          {
+            "title": "Unicode-Text",
+            "input": "café & grüße",
+            "output": "caf%C3%A9%20%26%20gr%C3%BC%C3%9Fe"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses URL-Tool verwenden?",
+        "content": "Ein professioneller Encoder/Decoder spart Zeit, verhindert Fehler und schützt Workflows.",
+        "items": [
+          "Sofortige Umwandlung in beide Richtungen",
+          "Unterstützung aller gängigen Kodierungsstandards",
+          "Saubere Behandlung von Unicode und Sonderzeichen",
+          "Live-Statistiken zu Eingabe, Ausgabe und Sicherheit",
+          "Robuste Fehlermeldungen bei ungültigen Sequenzen",
+          "Alle Berechnungen laufen privat im Browser",
+          "Kostenlos, ohne Anmeldung oder Limits",
+          "Ideal für Dev-, QA- und Marketing-Teams"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Worin besteht der Unterschied zwischen encodeURI und encodeURIComponent?",
+          "answer": "encodeURI eignet sich für vollständige URLs und lässt Zeichen wie :, /, ?, # unverändert. encodeURIComponent ist strenger, kodiert diese Sonderzeichen ebenfalls und ist daher ideal für einzelne Parameter oder Query-Strings."
+        },
+        {
+          "question": "Wann sollte ich Form- bzw. x-www-form-urlencoded-Kodierung nutzen?",
+          "answer": "Immer dann, wenn Daten im Kontext klassischer HTML-Formulare oder APIs gesendet werden, die Leerzeichen als + erwarten. Viele Legacy-Endpunkte verlassen sich auf dieses Format."
+        },
+        {
+          "question": "Wie geht das Tool mit Unicode um?",
+          "answer": "Alle Eingaben werden als UTF-8 behandelt. Zeichen wie ä, ü oder Emojis werden zuverlässig in Prozentfolgen gewandelt und können genauso wieder dekodiert werden."
+        },
+        {
+          "question": "Kann ich beschädigte URLs wiederherstellen?",
+          "answer": "Ja. Das Tool versucht, fehlerhafte Sequenzen zu dekodieren und zeigt Warnungen an, falls Bytes fehlen oder doppelt kodiert wurden."
+        },
+        {
+          "question": "Gibt es eine Längenbegrenzung?",
+          "answer": "Nein – Sie können beliebig lange URLs oder Textblöcke verarbeiten. Beachten Sie jedoch, dass Browser und Server häufig eigene Limits zwischen 2.000 und 8.000 Zeichen haben."
+        }
+      ],
+      "relatedTools": {
+        "title": "Passende Tools für Web & Daten",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Daten als Base64 kodieren oder aus Base64 zurückholen",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "JSON Stringify",
+            "description": "JSON formatieren, minimieren und validieren",
+            "href": "/de/tools/json-stringify"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zeichen, Wörter und Absätze in Texten analysieren",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "CSV-zu-JSON-Konverter",
+            "description": "CSV-Daten präzise in JSON umwandeln – und zurück",
+            "href": "/de/tools/csv-to-json"
+          }
+        ]
+      }
+    }
   }
 }

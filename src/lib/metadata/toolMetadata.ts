@@ -1192,6 +1192,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'URL Конвертер — Безопасное Кодирование/Декодирование',
         description: 'Кодируйте или декодируйте URL и строки запросов безопасно. Избегайте битых ссылок и недопустимых символов. Мгновенная проверка.',
         shortDescription: 'Кодирование/декодирование URL.',
+      },
+      de: {
+        title: 'URL-Konverter – URLs sicher kodieren & dekodieren',
+        description: 'Kodieren oder dekodieren Sie URLs und Query-Strings in Sekunden. Verhindern Sie defekte Links, beseitigen Sie ungültige Zeichen und kopieren Sie validierte Ergebnisse sofort.',
+        shortDescription: 'URLs, Parameter und Formdaten zuverlässig kodieren oder dekodieren.',
       }
     },
     schema: createAdvancedSchema('url-converter', ['Encode/decode', 'Validation'], 'URL Input', 'Encoded/Decoded URL', 4.6, 678),

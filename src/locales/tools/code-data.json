@@ -1916,6 +1916,82 @@
         "wordCount": "Wörter"
       }
     },
+    "url": {
+      "title": "URL-Encoder/Decoder",
+      "description": "Kodieren und dekodieren Sie URLs, Parameter und Formularwerte sicher – ideal für Webentwicklung, APIs und Marketing-Links.",
+      "labels": {
+        "plainText": "Klartext",
+        "encodedUrl": "Kodierte URL"
+      },
+      "placeholders": {
+        "encode": "Text eingeben, der URL-kodiert werden soll...",
+        "decode": "Kodierte URL eingeben, die dekodiert werden soll..."
+      },
+      "modes": {
+        "encode": "URL kodieren",
+        "decode": "URL dekodieren"
+      },
+      "accordion": {
+        "title": "URL-Kodierungsoptionen"
+      },
+      "sections": {
+        "encoding": "Kodierungskonfiguration"
+      },
+      "actions": {
+        "clear": "Leeren",
+        "example": "Beispiel"
+      },
+      "options": {
+        "title": "Kodierungsoptionen",
+        "encodeType": "Kodierungsart",
+        "types": {
+          "component": "Komponente (encodeURIComponent)",
+          "uri": "Komplette URI (encodeURI)",
+          "form": "Formulardaten (application/x-www-form-urlencoded)"
+        },
+        "preserveSpaces": "Leerzeichen als + beibehalten",
+        "encodeReserved": "Reservierte Zeichen kodieren"
+      },
+      "errors": {
+        "encodeFailed": "URL konnte nicht kodiert werden",
+        "decodeFailed": "URL konnte nicht dekodiert werden",
+        "invalidUrl": "Ungültiges URL-Format",
+        "malformedUri": "Fehlerhafte URI-Sequenz",
+        "conversionFailed": "Konvertierung fehlgeschlagen"
+      },
+      "messages": {
+        "encodeSuccess": "URL erfolgreich kodiert",
+        "decodeSuccess": "URL erfolgreich dekodiert"
+      },
+      "info": {
+        "description": "URL-Kodierung ersetzt Sonderzeichen durch Prozentfolgen (%XX), damit Links sicher übertragen werden können.",
+        "encodingNote": "Komponenten-Kodierung ist strenger und für einzelne Parameter gedacht, URI-Kodierung belässt wichtige Trennzeichen.",
+        "decodingNote": "Beim Dekodieren werden Prozentfolgen zurück in lesbare Zeichen gewandelt."
+      },
+      "stats": {
+        "inputLength": "Eingabelänge",
+        "outputLength": "Ausgabelänge",
+        "encodedChars": "Kodierte Zeichen",
+        "specialChars": "Sonderzeichen"
+      },
+      "analytics": {
+        "title": "URL-Konverter-Analyse",
+        "inputLength": "Eingabelänge",
+        "outputLength": "Ausgabelänge",
+        "encodedChars": "Kodierte Zeichen",
+        "specialChars": "Sonderzeichen",
+        "compressionRatio": "Größenänderung",
+        "safetyImprovement": "Sicherheitsgewinn"
+      },
+      "examples": {
+        "title": "Häufige Beispiele",
+        "email": "email@domain.com",
+        "path": "/pfad/zu/datei name.html",
+        "query": "search=grüße welt&lang=de",
+        "special": "Sonderzeichen: !@#$%^&*()",
+        "unicode": "Unicode: こんにちは"
+      }
+    },
     "jsonFormatter": {
       "title": "Online JSON-Formatter & Validator",
       "intro": "Formatieren, validieren und analysieren Sie JSON in Sekunden. Fügen Sie Roh-JSON ein oder laden Sie eine .json-/.txt-Datei hoch und erhalten Sie sofort eine lesbare Ausgabe mit Syntax-Highlighting. Ändern Sie Einrückung, sortieren Sie Schlüssel, aktivieren Sie NDJSON oder ent-escapen Sie Zeichenketten – alles passiert lokal in Ihrem Browser.",
