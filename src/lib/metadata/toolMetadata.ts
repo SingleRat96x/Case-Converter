@@ -857,6 +857,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер Даты в Римские Цифры — Сегодняшняя Дата',
         description: 'Преобразуйте любую дату в римские цифры и обратно. Подходит для свадебных дат, табличек и проектов. Несколько форматов.',
         shortDescription: 'Даты ↔ римские цифры.',
+      },
+      de: {
+        title: 'Römischer Datums-Konverter — Moderne Daten ↔ römische Zahlen',
+        description: 'Wandeln Sie beliebige Kalenderdaten in elegante römische Schreibweisen und wieder zurück. Ideal für Einladungen, Gravuren, historische Unterlagen und klassische Designprojekte mit mehreren Formatstilen.',
+        shortDescription: 'Moderne Daten ↔ römische Zahlformate.',
       }
     },
     schema: createAdvancedSchema('roman-numeral-date', ['Both directions', 'Multiple formats'], 'Date Input', 'Roman Numerals', 4.2, 321),

@@ -420,5 +420,216 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Römischer Datums-Konverter - Moderne Daten im klassischen Format",
+    "metaDescription": "Konvertieren Sie moderne Kalenderdaten blitzschnell in römische Zahlformate und zurück. Ideal für Einladungen, Gravuren, historische Dokumente und klassisches Design mit mehreren Stiloptionen.",
+    "sections": {
+      "intro": {
+        "title": "Moderne Daten präzise in römische Zahlen übertragen",
+        "content": "Unser Konverter verwandelt jede Kalenderangabe in elegante römische Schreibweisen - wahlweise klassisch, mittelalterlich, minimal oder dekorativ. Perfekt für Hochzeitseinladungen, monumentale Gravuren, historische Reproduktionen oder edle Branding-Projekte. Dank Echtzeitvorschau, Fehlerprüfung und Umkehrfunktion erhalten Sie in Sekunden professionelle Ergebnisse."
+      },
+      "features": {
+        "title": "Funktionsumfang für professionelle Anwendungen",
+        "items": [
+          {
+            "title": "Zwei-Wege-Konvertierung",
+            "description": "Modernes Datum in römische Zahlen und römische Zahlen zurück in das ISO-Format umwandeln"
+          },
+          {
+            "title": "Vier Formatstile",
+            "description": "Klassisch, mittelalterlich, minimal und dekorativ - passend für jeden Gestaltungszweck"
+          },
+          {
+            "title": "Historische Genauigkeit",
+            "description": "Authentische lateinische Monatsnamen, korrekte Schreibweise und Gültigkeit für Jahre 1-3999"
+          },
+          {
+            "title": "Intelligente Eingabeanalyse",
+            "description": "Unterstützt ISO (YYYY-MM-DD), US (MM/DD/YYYY), EU (DD/MM/YYYY) und weitere Schreibweisen"
+          },
+          {
+            "title": "Live-Vorschau & Validierung",
+            "description": "Konvertierung in Echtzeit inkl. Fehlerhinweisen bei ungültigen Eingaben"
+          },
+          {
+            "title": "Dateiupload & Batch-Modus",
+            "description": "Mehrere Daten auf einmal konvertieren und als Textdatei herunterladen"
+          },
+          {
+            "title": "Vorbereitete Beispiele",
+            "description": "Historische Ereignisse mit einem Klick übernehmen und anpassen"
+          },
+          {
+            "title": "Copy-ready Ausgabe",
+            "description": "Ergebnisse sofort in Einladungen, Verträgen oder Designdateien einfügen"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert die Konvertierung",
+        "description": "Vier Schritte reichen für perfekte Ergebnisse:",
+        "steps": [
+          {
+            "step": "1",
+            "title": "Modus wählen",
+            "description": "Automatisch erkennen lassen oder explizit Modern → Römisch bzw. Römisch → Modern wählen."
+          },
+          {
+            "step": "2",
+            "title": "Datum eingeben",
+            "description": "Modernes Datum tippen oder aus dem Kalender wählen - alternativ römische Schreibweise einfügen."
+          },
+          {
+            "step": "3",
+            "title": "Format bestimmen",
+            "description": "Zwischen klassisch, mittelalterlich, minimal oder dekorativ wechseln, um das Layout anzupassen."
+          },
+          {
+            "step": "4",
+            "title": "Konvertieren & nutzen",
+            "description": "Ergebnis kopieren, herunterladen oder als Grundlage für Gravuren, Drucke und Projekte verwenden."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für römische Datumsformate",
+        "description": "Beliebte Ereignisse in verschiedenen Stilen:",
+        "items": [
+          {
+            "input": "2024-12-25",
+            "output": "XXV DECEMBER MMXXIV",
+            "description": "Weihnachten 2024 im klassischen Format"
+          },
+          {
+            "input": "1776-07-04",
+            "output": "IV DIE IULIUS ANNO DOMINI MDCCLXXVI",
+            "description": "US-Unabhängigkeitstag im mittelalterlichen Stil"
+          },
+          {
+            "input": "2000-01-01",
+            "output": "I.IAN.MM",
+            "description": "Millennium in minimaler Darstellung"
+          },
+          {
+            "input": "1969-07-20",
+            "output": "ⅩⅩ • IULIUS • ⅯⅭⅯⅬⅩⅨ",
+            "description": "Mondlandung als dekoratives Layout"
+          },
+          {
+            "input": "44-03-15",
+            "output": "XV MARTIUS XLIV",
+            "description": "Iden des März (Caesars Ermordung) im klassischen Stil"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Einsatzmöglichkeiten für römische Datumsschreibweisen",
+        "description": "So profitieren verschiedene Projekte:",
+        "items": [
+          {
+            "title": "Hochzeit & Events",
+            "description": "Save-the-Date-Karten, Einladungen und Programmhefte mit stilvoller Datumsdarstellung"
+          },
+          {
+            "title": "Historische Editionen",
+            "description": "Reproduktionen, Chroniken und wissenschaftliche Veröffentlichungen authentisch gestalten"
+          },
+          {
+            "title": "Gravuren & Monumente",
+            "description": "Ecksteine, Gedenktafeln, Skulpturen oder Signets mit klassischen Zahlen versehen"
+          },
+          {
+            "title": "Architektur & Design",
+            "description": "Pläne, Renderings oder Corporate Designs mit traditionellem Flair aufwerten"
+          },
+          {
+            "title": "Bildung & Workshops",
+            "description": "Geschichtsunterricht, Sprachprojekte oder Maker-Kurse mit praktischen Beispielen bereichern"
+          },
+          {
+            "title": "Premium-Branding",
+            "description": "Jubiläen, limitierte Editionen und Luxusprodukte mit römischen Datumsmarken versehen"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieser Konverter?",
+        "items": [
+          "Historisch korrekte Umwandlung zwischen modernem Datum und römischer Schreibweise",
+          "Vier Formatstile für unterschiedliche Layouts und Designvorgaben",
+          "Unterstützung mehrerer Eingabeformate inklusive ISO, US und EU",
+          "Bidirektionale Konvertierung sowie automatische Formaterkennung",
+          "Echtzeitvorschau mit sofortiger Validierung und Fehlermeldungen",
+          "Batch-Verarbeitung über Datei-Upload und Download",
+          "Detailierte Beispiele berühmter Ereignisse als Inspiration",
+          "Responsive Oberfläche für Desktop, Tablet und Smartphone",
+          "Komplett browserbasiert - keine Installation oder Anmeldung nötig",
+          "Kostenfreie Nutzung ohne Limits oder Wasserzeichen",
+          "Privacy-by-Design: sämtliche Berechnungen laufen lokal im Browser",
+          "Ideal für Gravuren, Drucksachen, Vertragswerke und Branding"
+        ]
+      },
+      "relatedTools": {
+        "title": "Passende Werkzeuge",
+        "description": "Weitere Tools für Daten, Zahlen und klassische Typografie:",
+        "items": [
+          {
+            "name": "Zufalls-Datum Generator",
+            "href": "/de/tools/random-date",
+            "description": "Beliebige Daten für Tests, Beispiele oder Storytelling erzeugen"
+          },
+          {
+            "name": "Number Sorter",
+            "href": "/de/tools/number-sorter",
+            "description": "Zahlenlisten aufsteigend oder absteigend sortieren"
+          },
+          {
+            "name": "Textzähler",
+            "href": "/de/tools/text-counter",
+            "description": "Zeichen, Wörter und Textstatistiken analysieren"
+          },
+          {
+            "name": "ASCII Art Generator",
+            "href": "/de/tools/ascii-art-generator",
+            "description": "Dekorative Schriftzüge und klassische Illustrationen gestalten"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Datumsbereiche werden unterstützt?",
+          "answer": "Der Konverter deckt das praktische Spektrum römischer Zahlen ab - alle Jahre von 1 bis 3999 n. Chr."
+        },
+        {
+          "question": "Welche römischen Formate stehen zur Auswahl?",
+          "answer": "Sie können zwischen klassisch, mittelalterlich, minimal und dekorativ wechseln, je nach gewünschter Darstellung."
+        },
+        {
+          "question": "Kann ich römische Daten zurück in moderne Schreibweisen umwandeln?",
+          "answer": "Ja. Einfach das römische Datum eingeben - das Tool liefert die ISO-Schreibweise (YYYY-MM-DD)."
+        },
+        {
+          "question": "Welche modernen Datumsformate akzeptiert das Tool?",
+          "answer": "ISO (YYYY-MM-DD), US (MM/DD/YYYY), EU (DD/MM/YYYY) sowie Varianten mit Bindestrichen oder Punkten."
+        },
+        {
+          "question": "Sind die lateinischen Monatsnamen authentisch?",
+          "answer": "Ja. Wir verwenden klassische Bezeichnungen wie IANUARIUS, FEBRUARIUS, MARTIUS usw."
+        },
+        {
+          "question": "Eignet sich der Konverter für Einladungen oder Gravuren?",
+          "answer": "Absolut. Die Ausgabe ist kopierfertig und bietet mehrere Layoutstile für professionelle Anwendungen."
+        },
+        {
+          "question": "Funktioniert das Tool auf mobilen Geräten?",
+          "answer": "Die Oberfläche ist vollständig responsive und lässt sich bequem auf Smartphones und Tablets bedienen."
+        },
+        {
+          "question": "Kann ich mehrere Daten gleichzeitig umwandeln?",
+          "answer": "Ja. Laden Sie einfach eine Textdatei mit mehreren Datumszeilen hoch und laden Sie das Ergebnis gesammelt wieder herunter."
+        }
+      ]
+    }
   }
 }

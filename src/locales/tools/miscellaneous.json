@@ -1309,6 +1309,125 @@
         "wordCount": "Wortanzahl",
         "compressionRatio": "Erweiterungsfaktor"
       }
+    },
+    "romanNumeralDate": {
+      "title": "Konverter für römische Datumsangaben",
+      "description": "Wandeln Sie moderne Kalenderdaten in römische Zahlformate und zurück. Perfekt für historische Dokumente, Hochzeitseinladungen, Gravuren und klassische Gestaltung.",
+      "inputLabel": "Datumseingabe",
+      "outputLabel": "Konvertiertes Datum",
+      "inputPlaceholder": "Modernes Datum (2024-12-25) oder römisches Datum (XXV DECEMBER MMXXIV) eingeben...",
+      "uploadDescription": "Textdatei mit Datumsangaben zur Konvertierung hochladen",
+      "downloadFileName": "roemische-daten.txt",
+      "convertButton": "Datum konvertieren",
+      "options": {
+        "conversionMode": "Konvertierungsmodus",
+        "outputFormat": "Romaner Formatstil",
+        "showExamples": "Beispiele anzeigen"
+      },
+      "modes": {
+        "auto": "Automatisch erkennen",
+        "modernToRoman": "Modern → Römisch",
+        "romanToModern": "Römisch → Modern"
+      },
+      "formats": {
+        "classical": "Klassisch (XIX APRILIS MMXXIV)",
+        "medieval": "Mittelalterlich (XIX DIE APRILIS ANNO DOMINI MMXXIV)",
+        "minimal": "Minimal (XIX.APR.MMXXIV)",
+        "decorative": "Dekorativ (ⅩⅨ • APRILIS • ⅯⅯⅩⅩⅣ)"
+      },
+      "quickInput": {
+        "title": "Schnellauswahl",
+        "today": "Heute",
+        "allFormats": "Alle Formate anzeigen"
+      },
+      "examples": {
+        "title": "Historische Datumsbeispiele",
+        "description": "Klicken Sie auf ein Beispiel, um es als Eingabe zu übernehmen"
+      },
+      "formatInfo": {
+        "title": "Unterstützte Formate & Einschränkungen",
+        "inputFormats": "Eingabeformate",
+        "limitations": "Einschränkungen",
+        "yearRange": "Nur Jahre 1-3999 n. Chr.",
+        "ceOnly": "Nur Daten der gemeinsamen Zeitrechnung",
+        "validDates": "Nur gültige Kalenderdaten"
+      },
+      "help": {
+        "conversionMode": "Wählen Sie, in welche Richtung konvertiert werden soll: automatisch, modern → römisch oder römisch → modern.",
+        "outputFormat": "Bestimmen Sie den gewünschten Stil für die Ausgabe.",
+        "quickInput": "Nutzen Sie Datumsauswahl oder Schnellbuttons für häufige Werte."
+      },
+      "errors": {
+        "noInput": "Bitte geben Sie ein Datum zur Konvertierung ein.",
+        "invalidDate": "Ungültiges Datumsformat. Nutzen Sie YYYY-MM-DD, MM/DD/YYYY oder DD/MM/YYYY.",
+        "invalidRomanDate": "Ungültige römische Datumsschreibweise. Bitte Eingabe prüfen.",
+        "dateOutOfRange": "Datum muss zwischen 1 und 3999 n. Chr. liegen.",
+        "conversionFailed": "Konvertierung fehlgeschlagen. Bitte Eingabeformat prüfen."
+      },
+      "reference": {
+        "title": "Referenz für römische Zahlen",
+        "sections": {
+          "basicSymbols": "Grundsymbole",
+          "numbers1to20": "Zahlen 1-20",
+          "commonYears": "Häufige Jahreszahlen",
+          "romanMonths": "Römische Monate"
+        },
+        "basicSymbols": {
+          "one": "Eins",
+          "five": "Fünf",
+          "ten": "Zehn",
+          "fifty": "Fünfzig",
+          "hundred": "Hundert",
+          "fiveHundred": "Fünfhundert",
+          "thousand": "Tausend"
+        },
+        "months": {
+          "january": "Januar",
+          "february": "Februar",
+          "march": "März",
+          "april": "April",
+          "may": "Mai",
+          "june": "Juni",
+          "july": "Juli",
+          "august": "August",
+          "september": "September",
+          "october": "Oktober",
+          "november": "November",
+          "december": "Dezember"
+        }
+      },
+      "toggleLabels": {
+        "modernToRoman": "Modern → Römisch",
+        "romanToModern": "Römisch → Modern"
+      },
+      "formatLabels": {
+        "classical": "Klassisch",
+        "medieval": "Mittelalterlich",
+        "minimal": "Minimal",
+        "decorative": "Dekorativ"
+      },
+      "formatDescriptions": {
+        "classical": "Ausgeschrieben",
+        "medieval": "Traditionell",
+        "minimal": "Schlicht",
+        "decorative": "Verziert"
+      },
+      "inputLabels": {
+        "modernInput": "Datumseingabe",
+        "romanInput": "Römische Datumseingabe"
+      },
+      "placeholders": {
+        "romanInput": "Römisches Datum eingeben (z. B. XXII SEPTEMBER MMXXV)",
+        "selectDate": "Datum auswählen, um das römische Format zu sehen"
+      },
+      "actions": {
+        "hideReference": "Referenz ausblenden",
+        "showReference": "Referenz anzeigen",
+        "copyTooltip": "Römische Schreibweise kopieren",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "copiedMessage": "In Zwischenablage kopiert!"
+      }
     }
   }
 }
