@@ -270,5 +270,109 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Satzschreibweise-Konverter – Perfekte Satzkapitalisierung",
+    "metaDescription": "Wandeln Sie Text automatisch in Satzschreibweise um, korrigieren Sie Groß-/Kleinschreibung pro Satz und verbessern Sie Grammatik sowie Lesbarkeit – kostenlos, sicher und ohne Anmeldung.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Satzschreibweise-Konverter – Perfekte Satzkapitalisierung",
+        "content": "Bringen Sie jeden Text mit einem Klick in die richtige Satzschreibweise. Unser kostenloser Satzschreibweise-Konverter korrigiert Groß-/Kleinschreibung Satz für Satz, verbessert Grammatik und sorgt für ein professionelles Schriftbild – komplett im Browser und ohne Datenweitergabe."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für Satzschreibweise",
+        "items": [
+          { "title": "Echtzeit-Konvertierung", "description": "Sofortige Umwandlung in Satzschreibweise beim Tippen oder Einfügen" },
+          { "title": "Datei-Upload", "description": "Laden Sie Textdateien hoch und konvertieren Sie komplette Dokumente automatisch" },
+          { "title": "Kopieren & Download", "description": "Übernehmen Sie Ergebnisse direkt per Klick oder laden Sie sie als TXT-Datei herunter" },
+          { "title": "Eingebaute Textanalyse", "description": "Erhalten Sie Live-Statistiken zu Zeichen, Wörtern, Sätzen und Lesedauer" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert mit Umlauten, Sonderzeichen und mehrsprachigen Texten" },
+          { "title": "Datenschutzfreundlich", "description": "100 % lokal im Browser – keine Speicherung oder Übertragung Ihrer Inhalte" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle für Satzschreibweise",
+        "description": "Korrigieren Sie inkonsistente Großschreibung in jedem Kontext – vom Blogartikel bis zum Support-Ticket.",
+        "items": [
+          { "title": "Grammatik-Korrektur", "description": "Beheben Sie versehentliches Caps-Lock oder falsch formatierte Sätze" },
+          { "title": "Content & Blogging", "description": "Verbessern Sie Lesbarkeit und Stil in Artikeln, Newslettern und Landingpages" },
+          { "title": "Business-Kommunikation", "description": "Standardisieren Sie E-Mails, Angebote und Reports für einheitliche Sprache" },
+          { "title": "Academic Writing", "description": "Formatieren Sie Bachelorarbeiten, Essays und Forschungsberichte korrekt" },
+          { "title": "Datenbereinigung", "description": "Normalisieren Sie textbasierte Datensätze vor Analyse oder Import" },
+          { "title": "Kundensupport", "description": "Bereiten Sie Chat- oder Ticket-Transkripte professionell auf" },
+          { "title": "Social Media Planung", "description": "Erstellen Sie gut lesbare Captions und Threads mit korrekter Großschreibung" },
+          { "title": "Übersetzungen", "description": "Bringen Sie mehrsprachige Übersetzungen in konsistente Satzstruktur" }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie Text in Satzschreibweise",
+        "description": "In vier einfachen Schritten zum sauber formatierten Text.",
+        "steps": [
+          { "step": 1, "title": "Text einfügen oder hochladen", "description": "Tippen Sie direkt in das Eingabefeld, fügen Sie Text ein oder laden Sie eine Datei hoch." },
+          { "step": 2, "title": "Automatische Umwandlung", "description": "Die Konvertierung in Satzschreibweise passiert sofort – keine zusätzlichen Klicks nötig." },
+          { "step": 3, "title": "Analyse prüfen", "description": "Nutzen Sie Zeichen-, Wort- und Satzstatistiken zur Qualitätskontrolle." },
+          { "step": 4, "title": "Ergebnis exportieren", "description": "Kopieren Sie den Text oder laden Sie ihn als Datei herunter, um ihn weiterzuverwenden." }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Satzschreibweise",
+        "description": "So sehen verschiedene Ausgangstexte nach der Umwandlung aus.",
+        "items": [
+          { "title": "Großbuchstaben-Text", "input": "DIESER TEXT IST KOMPLETT GROSS.", "output": "Dieser text ist komplett gross." },
+          { "title": "Gemischte Eingabe", "input": "dAs iSt EiN bEiSpIeL. mIt vIeLeN fEhLeRn.", "output": "Das ist ein beispiel. Mit vielen fehlern." },
+          { "title": "Mehrere Sätze", "input": "erstes statement. zweiter satz! fragezeichen?", "output": "Erstes statement. Zweiter satz! Fragezeichen?" },
+          { "title": "Listen & Zahlen", "input": "punkt 1: EINSTIEG. punkt 2: AUSFÜHRUNG.", "output": "Punkt 1: Einstieg. Punkt 2: Ausführung." }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unser Satzschreibweise-Konverter?",
+        "content": "Optimiert für professionelle Workflows und höchste Textqualität.",
+        "items": [
+          "Kostenlos und ohne Nutzungslimits",
+          "Keine Registrierung oder Anmeldung erforderlich",
+          "Lokale Verarbeitung für maximale Datensicherheit",
+          "Kompatibel mit langen Texten und großen Dateien",
+          "Saubere Ergebnisse für jede Sprache",
+          "Integrierte Textstatistiken und Kopierfunktionen",
+          "Responsives Design für Desktop, Tablet und Smartphone",
+          "Direkte Verlinkung zu weiteren Case-Convertern"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was bedeutet Satzschreibweise?",
+          "answer": "Satzschreibweise (Sentence Case) bedeutet, dass nur der erste Buchstabe eines Satzes großgeschrieben wird, während alle weiteren Wörter klein bleiben – der Standard für die meisten redaktionellen und geschäftlichen Texte."
+        },
+        {
+          "question": "Funktioniert das Tool auch mit Umlauten und Sonderzeichen?",
+          "answer": "Ja. Der Konverter unterstützt vollständige Unicode-Zeichen – inklusive Umlaute, Eszett, Akzente, kyrillische oder asiatische Zeichen."
+        },
+        {
+          "question": "Kann ich Dateien verarbeiten?",
+          "answer": "Sie können Textdateien wie .txt, .md, .json, .js, .ts, .html oder .css hochladen. Der Inhalt wird komplett in Satzschreibweise umgewandelt."
+        },
+        {
+          "question": "Bleibt mein Text privat?",
+          "answer": "Absolut. Alle Berechnungen passieren in Ihrem Browser. Wir speichern oder übertragen keine Daten an Server – perfekter Datenschutz für vertrauliche Inhalte."
+        },
+        {
+          "question": "Wie geht das Tool mit Satzzeichen um?",
+          "answer": "Es erkennt Punkt, Ausrufe- und Fragezeichen sowie Doppelpunkte und setzt die korrekte Großschreibung hinter jedem Satzzeichen."
+        },
+        {
+          "question": "Gibt es Limits für Textlänge?",
+          "answer": "Nein. Sie können beliebig lange Texte eingeben oder hochladen. Die Verarbeitung erfolgt performant selbst bei großen Dokumenten."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Konverter",
+        "items": [
+          { "name": "Großbuchstaben-Konverter", "description": "Text vollständig in Großbuchstaben verwandeln", "href": "/de/tools/uppercase" },
+          { "name": "Kleinbuchstaben-Konverter", "description": "Konsistente Kleinbuchstaben für Code, URLs und Content", "href": "/de/tools/lowercase" },
+          { "name": "Title Case Konverter", "description": "Titel, Überschriften und Headlines korrekt kapitalisieren", "href": "/de/tools/title-case" },
+          { "name": "Alternating Case Konverter", "description": "Kreative Wechsel-Großschreibung für Memes und Social Posts", "href": "/de/tools/alternating-case" }
+        ]
+      }
+    }
   }
 }

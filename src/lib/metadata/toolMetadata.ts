@@ -1473,6 +1473,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Sentence case — Капитализация Предложений',
         description: 'Преобразуйте текст в Sentence case мгновенно. Исправляйте регистр на уровне предложений и приводите текст к порядку.',
         shortDescription: 'Sentence case для текста.',
+      },
+      de: {
+        title: 'Sentence Case Konverter — Sätze korrekt kapitalisieren',
+        description: 'Konvertieren Sie Text sofort in Satzschreibweise, korrigieren Sie Groß-/Kleinschreibung pro Satz und bringen Sie unruhige Inhalte in Form – kostenlos, privat und ohne Limits.',
+        shortDescription: 'Text automatisch in Satzschreibweise umwandeln.',
       }
     },
     schema: createAdvancedSchema('sentence-case', ['Instant convert', 'Cleanup'], 'Text Input', 'Sentence Case Text', 4.6, 678),
