@@ -38,6 +38,7 @@
       },
       "howToUse": {
         "title": "How to Use the Random Date Generator",
+        "description": "Follow these simple steps to configure your date generation options and export results.",
         "steps": [
           {
             "title": "Set Date Range",
@@ -57,12 +58,13 @@
           },
           {
             "title": "Generate & Export",
-            "description": "Click 'Generate Random Dates' to create your date list. Copy to clipboard or download as a text file."
+            "description": "Click \"Generate Random Dates\" to create your date list. Copy to clipboard or download as a text file."
           }
         ]
       },
       "examples": {
         "title": "Random Date Generation Examples",
+        "description": "See how different configurations affect your output.",
         "items": [
           {
             "title": "Testing Data",
@@ -83,123 +85,125 @@
       },
       "useCases": {
         "title": "Common Use Cases for Random Date Generation",
+        "description": "Popular workflows that benefit from unbiased random date output.",
         "items": [
           {
             "title": "Software Testing",
-            "description": "Generate random dates for testing date fields, validating date ranges, and ensuring proper date handling in applications"
+            "description": "Generate random dates for testing date fields, validating date ranges, and ensuring proper date handling in applications."
           },
           {
             "title": "Data Generation",
-            "description": "Create sample datasets with realistic date distributions for database testing, analytics, and development"
+            "description": "Create sample datasets with realistic date distributions for database testing, analytics, and development."
           },
           {
             "title": "Simulation & Modeling",
-            "description": "Provide random dates for event simulations, scheduling models, and temporal data analysis"
+            "description": "Provide random dates for event simulations, scheduling models, and temporal data analysis."
           },
           {
             "title": "Research & Analysis",
-            "description": "Generate date samples for statistical research, trend analysis, and academic studies requiring temporal data"
+            "description": "Generate date samples for statistical research, trend analysis, and academic studies requiring temporal data."
           },
           {
             "title": "Game Development",
-            "description": "Create random dates for game events, historical scenarios, and time-based gameplay mechanics"
+            "description": "Create random dates for game events, historical scenarios, and time-based gameplay mechanics."
           },
           {
             "title": "Content Creation",
-            "description": "Generate random dates for blog posts, social media content, and creative projects requiring realistic timestamps"
+            "description": "Generate random dates for blog posts, social media content, and creative projects requiring realistic timestamps."
           }
         ]
       },
       "benefits": {
         "title": "Why Choose Our Random Date Generator",
         "items": [
-          "Cryptographically secure generation ensures truly random, unbiased results for critical applications",
-          "Generate unlimited random dates with no usage restrictions or subscription requirements",
-          "Multiple output formats accommodate different systems, regions, and presentation needs",
-          "Instant generation even for large quantities with optimized algorithms for maximum performance",
-          "Copy to clipboard or download as text file for seamless integration with your workflow",
-          "All generation happens locally in your browser - no data is sent to servers or stored"
+          "Cryptographically secure generation ensures truly random, unbiased results for critical applications.",
+          "Generate unlimited random dates with no usage restrictions or subscription requirements.",
+          "Multiple output formats accommodate different systems, regions, and presentation needs.",
+          "Instant generation even for large quantities with optimized algorithms for maximum performance.",
+          "Copy to clipboard or download as text file for seamless integration with your workflow.",
+          "All generation happens locally in your browser - no data is sent to servers or stored."
         ]
       },
       "relatedTools": {
         "title": "Related Tools You Might Find Useful",
+        "description": "Continue working with other randomization and formatting utilities.",
         "items": [
           {
             "name": "Random Number Generator",
-            "description": "Generate random numbers within specified ranges",
+            "description": "Generate random numbers within specified ranges.",
             "href": "/tools/random-number"
           },
           {
             "name": "Random Letter Generator",
-            "description": "Generate random letters with case and format options",
+            "description": "Generate random letters with case and format options.",
             "href": "/tools/random-letter"
           },
           {
             "name": "Random Month Generator",
-            "description": "Generate random months with different formats",
+            "description": "Generate random months with different formats.",
             "href": "/tools/random-month"
           },
           {
             "name": "Text Case Converter",
-            "description": "Convert text to uppercase, lowercase, title case and more",
+            "description": "Convert text to uppercase, lowercase, title case and more.",
             "href": "/tools/uppercase"
           },
           {
             "name": "Binary Code Translator",
-            "description": "Convert text to binary and binary to text",
+            "description": "Convert text to binary and binary to text.",
             "href": "/tools/binary-code-translator"
           },
           {
             "name": "Base64 Encoder Decoder",
-            "description": "Encode and decode text using Base64 encoding",
+            "description": "Encode and decode text using Base64 encoding.",
             "href": "/tools/base64-encoder-decoder"
           },
           {
             "name": "JSON Stringify Tool",
-            "description": "Format and stringify JSON data with proper indentation",
+            "description": "Format and stringify JSON data with proper indentation.",
             "href": "/tools/json-stringify"
           },
           {
             "name": "OCR Image to Text",
-            "description": "Extract text from images using OCR technology",
+            "description": "Extract text from images using OCR technology.",
             "href": "/tools/image-to-text"
           }
         ]
       },
       "faqs": [
-          {
-            "question": "How random are the generated dates?",
-            "answer": "Our generator uses crypto.getRandomValues(), which provides cryptographically secure random dates. This ensures true randomness suitable for security applications, testing, and any scenario requiring unbiased random date generation."
-          },
-          {
-            "question": "What date formats are supported?",
-            "answer": "We support four formats: ISO (YYYY-MM-DD) for databases, US format (MM/DD/YYYY), EU format (DD/MM/YYYY), and readable format (Month DD, YYYY) for presentations."
-          },
-          {
-            "question": "Can I generate dates without duplicates?",
-            "answer": "Yes! Toggle the 'Allow Duplicate Dates' option to prevent duplicates. When disabled, the quantity cannot exceed the number of days in your selected date range."
-          },
-          {
-            "question": "What's the maximum date range I can use?",
-            "answer": "You can set any date range from 1900 to 2100. The tool handles both short periods (days/weeks) and long historical or future ranges spanning decades."
-          },
-          {
-            "question": "How many dates can I generate at once?",
-            "answer": "You can generate up to 10,000 random dates in a single operation. This limit ensures optimal performance while accommodating most use cases."
-          },
-          {
-            "question": "Are the dates sorted in any particular order?",
-            "answer": "Yes, generated dates are automatically sorted chronologically from earliest to latest for better organization and easier analysis."
-          },
-          {
-            "question": "Can I use these dates for commercial purposes?",
-            "answer": "Yes! The generated dates are completely free to use for any purpose, including commercial applications, testing, research, or any other project."
-          },
-          {
-            "question": "Is my data secure and private?",
-            "answer": "Absolutely! All random date generation happens locally in your browser. No data is transmitted to servers, stored, or tracked. Your generated dates remain completely private."
-          }
-        ],
+        {
+          "question": "How random are the generated dates?",
+          "answer": "Our generator uses crypto.getRandomValues(), which provides cryptographically secure random dates. This ensures true randomness suitable for security applications, testing, and any scenario requiring unbiased random date generation."
+        },
+        {
+          "question": "What date formats are supported?",
+          "answer": "We support four formats: ISO (YYYY-MM-DD) for databases, US format (MM/DD/YYYY), EU format (DD/MM/YYYY), and readable format (Month DD, YYYY) for presentations."
+        },
+        {
+          "question": "Can I generate dates without duplicates?",
+          "answer": "Yes! Toggle the \"Allow Duplicate Dates\" option to prevent duplicates. When disabled, the quantity cannot exceed the number of days in your selected date range."
+        },
+        {
+          "question": "What's the maximum date range I can use?",
+          "answer": "You can set any date range from 1900 to 2100. The tool handles both short periods (days/weeks) and long historical or future ranges spanning decades."
+        },
+        {
+          "question": "How many dates can I generate at once?",
+          "answer": "You can generate up to 10,000 random dates in a single operation. This limit ensures optimal performance while accommodating most use cases."
+        },
+        {
+          "question": "Are the dates sorted in any particular order?",
+          "answer": "Yes, generated dates are automatically sorted chronologically from earliest to latest for better organization and easier analysis."
+        },
+        {
+          "question": "Can I use these dates for commercial purposes?",
+          "answer": "Yes! The generated dates are completely free to use for any purpose, including commercial applications, testing, research, or any other project."
+        },
+        {
+          "question": "Is my data secure and private?",
+          "answer": "Absolutely! All random date generation happens locally in your browser. No data is transmitted to servers, stored, or tracked. Your generated dates remain completely private."
+        }
+      ],
       "tips": {
         "title": "Tips for Effective Random Date Generation",
         "items": [
@@ -240,32 +244,33 @@
         "items": [
           {
             "title": "Криптографически Безопасный",
-            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая беспристрастную и непредсказуемую генерацию дат"
+            "description": "Использует crypto.getRandomValues() для истинной случайности, обеспечивая беспристрастную и непредсказуемую генерацию дат."
           },
           {
             "title": "Гибкие Диапазоны Дат",
-            "description": "Установите любые начальную и конечную даты с 1900 по 2100 год, получив полный контроль над диапазоном дат"
+            "description": "Установите любые начальную и конечную даты с 1900 по 2100 год, получив полный контроль над диапазоном дат."
           },
           {
             "title": "Множественные Форматы Вывода",
-            "description": "Выберите из ISO (YYYY-MM-DD), US (MM/DD/YYYY), EU (DD/MM/YYYY) или читаемых форматов"
+            "description": "Выберите из ISO (YYYY-MM-DD), US (MM/DD/YYYY), EU (DD/MM/YYYY) или читаемых форматов."
           },
           {
             "title": "Массовая Генерация",
-            "description": "Генерируйте до 10 000 случайных дат одновременно для крупномасштабного тестирования и генерации данных"
+            "description": "Генерируйте до 10 000 случайных дат одновременно для крупномасштабного тестирования и генерации данных."
           },
           {
             "title": "Управление Дубликатами",
-            "description": "Выберите разрешение или предотвращение дублирующихся дат в зависимости от ваших конкретных требований"
+            "description": "Выберите разрешение или предотвращение дублирующихся дат в зависимости от ваших конкретных требований."
           },
           {
             "title": "Автоматическая Сортировка",
-            "description": "Сгенерированные даты автоматически сортируются хронологически для лучшей организации и читаемости"
+            "description": "Сгенерированные даты автоматически сортируются хронологически для лучшей организации и читаемости."
           }
         ]
       },
       "howToUse": {
         "title": "Как Использовать Генератор Случайных Дат",
+        "description": "Настройте свои параметры и экспортируйте результат в пару кликов.",
         "steps": [
           {
             "title": "Установите Диапазон Дат",
@@ -285,276 +290,374 @@
           },
           {
             "title": "Генерируйте и Экспортируйте",
-            "description": "Нажмите 'Генерировать Случайные Даты', чтобы создать список дат. Скопируйте в буфер обмена или скачайте как текстовый файл."
+            "description": "Нажмите «Генерировать Случайные Даты», чтобы создать список. Скопируйте в буфер обмена или скачайте как текстовый файл."
           }
         ]
       },
       "examples": {
         "title": "Примеры Генерации Случайных Дат",
+        "description": "Популярные сценарии использования инструмента.",
         "items": [
           {
             "title": "Тестовые Данные",
-            "input": "Диапазон: 2020-01-01 до 2024-12-31, Количество: 5, ISO Формат",
+            "input": "Диапазон: 2020-01-01 до 2024-12-31, Количество: 5, ISO формат",
             "output": "2021-03-15\n2022-07-22\n2023-01-08\n2023-09-14\n2024-05-30"
           },
           {
             "title": "Планирование Мероприятий",
-            "input": "Диапазон: 2024-06-01 до 2024-08-31, Количество: 3, Читаемый Формат",
+            "input": "Диапазон: 2024-06-01 до 2024-08-31, Количество: 3, Читаемый формат",
             "output": "15 июня 2024\n8 июля 2024\n22 августа 2024"
           },
           {
             "title": "Исторический Анализ",
-            "input": "Диапазон: 1990-01-01 до 2000-12-31, Количество: 4, US Формат",
+            "input": "Диапазон: 1990-01-01 до 2000-12-31, Количество: 4, US формат",
             "output": "3/12/1992\n7/25/1995\n11/8/1997\n2/14/1999"
           }
         ]
       },
       "useCases": {
-        "title": "Распространенные Случаи Использования Генерации Случайных Дат",
+        "title": "Распространенные Случаи Использования",
+        "description": "Сферы, где случайные даты экономят время и усилия.",
         "items": [
           {
-            "title": "Тестирование Программного Обеспечения",
-            "description": "Генерируйте случайные даты для тестирования полей дат, проверки диапазонов дат и обеспечения правильной обработки дат в приложениях"
+            "title": "Тестирование ПО",
+            "description": "Генерируйте случайные даты для тестирования полей ввода, проверки диапазонов и edge-case сценариев."
           },
           {
             "title": "Генерация Данных",
-            "description": "Создавайте образцы наборов данных с реалистичным распределением дат для тестирования баз данных, аналитики и разработки"
+            "description": "Создавайте выборки с реалистичным распределением дат для аналитики и разработки."
           },
           {
-            "title": "Симуляция и Моделирование",
-            "description": "Предоставляйте случайные даты для симуляций событий, моделей планирования и анализа временных данных"
+            "title": "Симуляции и Модели",
+            "description": "Используйте случайные даты для моделирования событий, расписаний и планирования ресурсов."
           },
           {
-            "title": "Исследования и Анализ",
-            "description": "Генерируйте образцы дат для статистических исследований, анализа трендов и академических исследований, требующих временных данных"
+            "title": "Исследования",
+            "description": "Формируйте случайные временные выборки для статистики и академических работ."
           },
           {
             "title": "Разработка Игр",
-            "description": "Создавайте случайные даты для игровых событий, исторических сценариев и игровой механики, основанной на времени"
+            "description": "Наполняйте игровые сценарии историческими или будущими датами."
           },
           {
-            "title": "Создание Контента",
-            "description": "Генерируйте случайные даты для блог-постов, контента социальных сетей и творческих проектов, требующих реалистичных временных меток"
+            "title": "Контент и Маркетинг",
+            "description": "Создавайте необычные подборки дат для блогов, соцсетей и рассылок."
           }
         ]
       },
       "benefits": {
-        "title": "Почему Стоит Выбрать Наш Генератор Случайных Дат",
+        "title": "Почему Стоит Выбрать Наш Генератор",
         "items": [
-          "Криптографически безопасная генерация обеспечивает действительно случайные, беспристрастные результаты для критических приложений",
-          "Генерируйте неограниченное количество случайных дат без ограничений использования или требований подписки",
-          "Множественные форматы вывода подходят для различных систем, регионов и потребностей представления",
-          "Мгновенная генерация даже для больших количеств с оптимизированными алгоритмами для максимальной производительности",
-          "Копирование в буфер обмена или скачивание как текстовый файл для бесшовной интеграции с вашим рабочим процессом",
-          "Вся генерация происходит локально в вашем браузере - никакие данные не отправляются на серверы и не сохраняются"
+          "Криптографически безопасная генерация обеспечивает действительно случайные и непредсказуемые результаты.",
+          "Неограниченное количество запусков без регистрации и подписок.",
+          "Поддержка ISO, US, EU и читаемого формата.",
+          "Мгновенная работа даже при 10 000 записях благодаря оптимизированным алгоритмам.",
+          "Экспорт в буфер обмена или TXT-файл в один клик.",
+          "Вся обработка происходит локально в браузере – данные не отправляются на сервер."
         ]
       },
       "relatedTools": {
-        "title": "Связанные Инструменты Которые Могут Быть Полезны",
+        "title": "Связанные Инструменты",
+        "description": "Расширьте рабочий процесс дополнительными генераторами.",
         "items": [
           {
             "name": "Генератор Случайных Чисел",
-            "description": "Генерируйте случайные числа в заданных диапазонах",
+            "description": "Получайте числа в заданных диапазонах.",
             "href": "/tools/random-number"
           },
           {
             "name": "Генератор Случайных Букв",
-            "description": "Генерируйте случайные буквы с опциями регистра и формата",
+            "description": "Формируйте наборы букв с опциями регистра.",
             "href": "/tools/random-letter"
           },
           {
             "name": "Генератор Случайных Месяцев",
-            "description": "Генерируйте случайные месяцы с различными форматами",
+            "description": "Выводите месяцы в текстовом и числовом формате.",
             "href": "/tools/random-month"
           },
           {
             "name": "Конвертер Регистра Текста",
-            "description": "Конвертируйте текст в верхний, нижний, заглавный регистр и другие",
+            "description": "Быстро меняйте регистр текста онлайн.",
             "href": "/tools/text-case-converter"
           },
           {
-            "name": "Переводчик Двоичного Кода",
-            "description": "Конвертируйте текст в двоичный код и обратно",
+            "name": "Binary Translator",
+            "description": "Преобразуйте текст в двоичный код и обратно.",
             "href": "/tools/binary-translator"
-          },
-          {
-            "name": "Кодировщик Декодировщик Base64",
-            "description": "Кодируйте и декодируйте текст используя кодировку Base64",
-            "href": "/tools/base64-encoder-decoder"
-          },
-          {
-            "name": "Инструмент JSON Stringify",
-            "description": "Форматируйте и преобразуйте JSON данные с правильными отступами",
-            "href": "/tools/json-stringify"
-          },
-          {
-            "name": "OCR Изображение в Текст",
-            "description": "Извлекайте текст из изображений с помощью технологии OCR",
-            "href": "/tools/ocr-image-to-text"
           }
         ]
       },
       "faqs": [
-          {
-            "question": "Насколько случайны сгенерированные даты?",
-            "answer": "Наш генератор использует crypto.getRandomValues(), который обеспечивает криптографически безопасные случайные даты. Это гарантирует истинную случайность, подходящую для приложений безопасности, тестирования и любых сценариев, требующих беспристрастной генерации случайных дат."
-          },
-          {
-            "question": "Какие форматы дат поддерживаются?",
-            "answer": "Мы поддерживаем четыре формата: ISO (YYYY-MM-DD) для баз данных, US формат (MM/DD/YYYY), EU формат (DD/MM/YYYY) и читаемый формат (Месяц ДД, ГГГГ) для презентаций."
-          },
-          {
-            "question": "Могу ли я генерировать даты без дубликатов?",
-            "answer": "Да! Переключите опцию 'Разрешить Повторяющиеся Даты', чтобы предотвратить дубликаты. При отключении количество не может превышать количество дней в выбранном диапазоне дат."
-          },
-          {
-            "question": "Какой максимальный диапазон дат я могу использовать?",
-            "answer": "Вы можете установить любой диапазон дат с 1900 по 2100 год. Инструмент обрабатывает как короткие периоды (дни/недели), так и длинные исторические или будущие диапазоны, охватывающие десятилетия."
-          },
-          {
-            "question": "Сколько дат я могу сгенерировать за раз?",
-            "answer": "Вы можете сгенерировать до 10 000 случайных дат за одну операцию. Это ограничение обеспечивает оптимальную производительность, удовлетворяя большинство случаев использования."
-          },
-          {
-            "question": "Сортируются ли даты в каком-либо определенном порядке?",
-            "answer": "Да, сгенерированные даты автоматически сортируются хронологически от самых ранних к самым поздним для лучшей организации и более легкого анализа."
-          },
-          {
-            "question": "Могу ли я использовать эти даты в коммерческих целях?",
-            "answer": "Да! Сгенерированные даты абсолютно бесплатны для использования в любых целях, включая коммерческие приложения, тестирование, исследования или любые другие проекты."
-          },
-          {
-            "question": "Безопасны ли мои данные и конфиденциальны?",
-            "answer": "Абсолютно! Вся генерация случайных дат происходит локально в вашем браузере. Никакие данные не передаются на серверы, не сохраняются и не отслеживаются. Ваши сгенерированные даты остаются полностью конфиденциальными."
-          }
-        ],
+        {
+          "question": "Насколько случайны сгенерированные даты?",
+          "answer": "Генератор использует crypto.getRandomValues(), обеспечивая криптографически стойкую случайность."
+        },
+        {
+          "question": "Какие форматы дат поддерживаются?",
+          "answer": "ISO, US, EU и читаемый формат вида «15 июня 2024»."
+        },
+        {
+          "question": "Можно ли отключить дубликаты?",
+          "answer": "Да. При выключенной опции «Разрешить дубликаты» каждая дата появляется только один раз."
+        },
+        {
+          "question": "Какой диапазон дат доступен?",
+          "answer": "Любой период между 1900 и 2100 годами, от нескольких дней до десятилетий."
+        },
+        {
+          "question": "Сколько дат можно получить за один раз?",
+          "answer": "До 10 000 записей, что покрывает большинство сценариев."
+        },
+        {
+          "question": "Сортируются ли даты автоматически?",
+          "answer": "Да, результаты выводятся от самой ранней даты к самой поздней."
+        },
+        {
+          "question": "Можно ли использовать результаты коммерчески?",
+          "answer": "Конечно. Даты свободны для личных и коммерческих проектов."
+        },
+        {
+          "question": "Куда отправляются мои данные?",
+          "answer": "Никуда – вся генерация выполняется локально в браузере."
+        }
+      ],
       "tips": {
-        "title": "Советы для Эффективной Генерации Случайных Дат",
+        "title": "Полезные Советы",
         "items": [
           {
-            "title": "Выбирайте Подходящие Диапазоны Дат",
-            "description": "Выбирайте диапазоны дат, которые соответствуют вашим конкретным потребностям. Более широкие диапазоны обеспечивают больше разнообразия, а более узкие фокусируются на конкретных периодах."
+            "title": "Подбирайте реалистичный диапазон",
+            "description": "Широкие диапазоны дают больше вариативности, узкие – сфокусированные выборки."
           },
           {
-            "title": "Учитывайте Формат Вывода",
-            "description": "Используйте ISO формат для баз данных и API, региональные форматы для местных приложений и читаемый формат для презентаций и отчетов."
+            "title": "Выбирайте формат под задачу",
+            "description": "ISO подходит для API, EU/US – для региональных UI, читаемый формат – для презентаций."
           },
           {
-            "title": "Разумно Управляйте Дубликатами",
-            "description": "Разрешите дубликаты для истинной случайной выборки или отключите для уникальных наборов дат при создании расписаний или списков событий."
+            "title": "Следите за количеством без дубликатов",
+            "description": "Количество не должно превышать число дней в выбранном интервале."
           },
           {
-            "title": "Проверяйте Размер Диапазона Дат",
-            "description": "Когда дубликаты отключены, убедитесь, что ваше количество не превышает количество дней в диапазоне дат, чтобы избежать ошибок генерации."
+            "title": "Сохраняйте важные результаты",
+            "description": "Экспортируйте TXT-файл, чтобы зафиксировать конкретную выборку."
           },
           {
-            "title": "Сохраняйте Важные Результаты",
-            "description": "Скачивайте сгенерированные даты как текстовые файлы для важных проектов, где вам нужно сохранить точную последовательность дат."
+            "title": "Комбинируйте с другими генераторами",
+            "description": "Используйте случайные числа или месяцы, чтобы формировать более сложные сценарии."
           }
         ]
+      }
+    }
   },
   "de": {
-    "title": "Zufallsdatums-Generator – Flexible Bereiche & Ausgabeformate",
-    "metaDescription": "Erzeugen Sie zufällige Daten in Sekunden: individuelle Zeiträume, ISO/US/EU/lesbare Formate, Duplikatkontrolle und bis zu 10.000 Einträge. Ideal für Tests, Simulationen und Datenaufbereitung.",
+    "title": "Zufallsdatums-Generator – Termine für Tests, Planung und Analysen",
+    "metaDescription": "Generieren Sie zufällige Daten in jedem Zeitraum mit ISO/US/EU-Formaten, Duplikatkontrolle und bis zu 10.000 Einträgen. Ideal für QA, Simulationen und Datenaufbereitung.",
     "sections": {
       "intro": {
-        "title": "Professioneller Zufallsdatums-Generator",
-        "content": "Mit unserem Random-Date-Generator erstellen Sie kryptografisch sichere Daten für Tests, Analytics, Simulationen oder kreative Projekte. Legen Sie Start- und Enddatum fest, wählen Sie das Ausgabeformat, begrenzen Sie die Menge und entscheiden Sie, ob Duplikate erlaubt sind – alles lokal im Browser und ohne Limit."
+        "title": "Zufällige Termine in Sekunden",
+        "content": "Der Zufallsdatums-Generator liefert auf Knopfdruck neue Termine für QA-Tests, Planungs-Szenarien oder Daten-Samples. Sie bestimmen Zeitraum, Format und Menge – wir erzeugen kryptografisch sichere Ergebnisse direkt im Browser, ohne Upload oder Limits."
       },
       "features": {
-        "title": "Leistungsstarke Funktionen",
+        "title": "Starke Funktionen für Profis",
         "items": [
-          { "title": "Sichere Zufallsquelle", "description": "crypto.getRandomValues() sorgt für echte Zufälligkeit und reproduzierbar faire Ergebnisse." },
-          { "title": "Flexible Zeiträume", "description": "Wählen Sie beliebige Bereiche zwischen 1900 und 2100 – egal ob Tage, Monate oder Jahrzehnte." },
-          { "title": "Viele Ausgabeformate", "description": "ISO (YYYY-MM-DD), US, EU oder ein lesbares Format für Präsentationen." },
-          { "title": "Bis zu 10.000 Daten", "description": "Große Serien auf Knopfdruck für Massentests oder Sampling." },
-          { "title": "Duplikate steuern", "description": "Wahlweise echte Zufallsstichproben mit Wiederholungen oder eindeutige Datensätze." },
-          { "title": "Chronologische Sortierung", "description": "Ergebnisse werden automatisch vom frühesten zum spätesten Datum sortiert." }
+          {
+            "title": "Beliebige Zeitfenster",
+            "description": "Wählen Sie Start- und Enddatum zwischen 1900 und 2100 – egal ob einzelne Wochen oder mehrere Jahrzehnte."
+          },
+          {
+            "title": "Mehrere Ausgabeformate",
+            "description": "ISO (YYYY-MM-DD), EU, US oder ein lesbares Format für Präsentationen und Berichte."
+          },
+          {
+            "title": "Duplikate steuern",
+            "description": "Echte Zufallsstichproben mit Wiederholung oder eindeutige Listen ohne doppelte Tage."
+          },
+          {
+            "title": "Große Mengen",
+            "description": "Bis zu 10.000 Datensätze pro Lauf für Massentests und Data Seeding."
+          },
+          {
+            "title": "Sortierte Ergebnisse",
+            "description": "Die Ausgabe wird automatisch chronologisch sortiert und ist sofort weiterverwendbar."
+          },
+          {
+            "title": "100 % lokal",
+            "description": "Alle Berechnungen passieren im Browser – keine Speicherung, kein Tracking."
+          }
         ]
       },
       "howToUse": {
-        "title": "So funktioniert es",
+        "title": "So nutzen Sie den Generator",
+        "description": "Konfigurieren Sie Zeitraum, Format und Optionen in fünf einfachen Schritten.",
         "steps": [
-          { "title": "1. Zeitraum wählen", "description": "Start- und Enddatum festlegen – der Generator nutzt genau diesen Bereich." },
-          { "title": "2. Menge definieren", "description": "Angeben, wie viele Zufallsdaten erzeugt werden sollen (1–10.000)." },
-          { "title": "3. Format bestimmen", "description": "Zwischen ISO, US, EU oder lesbarer Ausgabe wechseln – passend zum Zielsystem." },
-          { "title": "4. Duplikate konfigurieren", "description": "Aktivieren für echte Zufallsstichproben oder deaktivieren für eindeutige Listen." },
-          { "title": "5. Generieren & exportieren", "description": "Button klicken, Ergebnis kopieren oder als Textdatei herunterladen." }
+          {
+            "title": "Zeitraum definieren",
+            "description": "Start- und Enddatum eintragen. Der Generator berücksichtigt nur dieses Intervall."
+          },
+          {
+            "title": "Menge festlegen",
+            "description": "Anzahl der benötigten Daten (1–10.000) wählen. Ohne Duplikate darf die Menge die verfügbaren Tage nicht überschreiten."
+          },
+          {
+            "title": "Format wählen",
+            "description": "ISO für Systeme, EU/US für regionale Workflows oder lesbares Format für Dokumente."
+          },
+          {
+            "title": "Duplikate konfigurieren",
+            "description": "Bei aktivierter Option können Termine mehrfach auftreten, sonst nur einmal."
+          },
+          {
+            "title": "Ergebnis sichern",
+            "description": "Liste kopieren oder als TXT-Datei exportieren und weiterverarbeiten."
+          }
         ]
       },
       "examples": {
-        "title": "Typische Beispiele",
+        "title": "Anwendungsbeispiele",
+        "description": "Realistische Szenarien aus QA, Planung und Datenarbeit.",
         "items": [
           {
-            "title": "Testdaten",
-            "input": "Bereich: 2020-01-01 bis 2024-12-31, Menge: 5, ISO",
-            "output": "2021-03-15\n2022-07-22\n2023-01-08\n2023-09-14\n2024-05-30"
+            "title": "Test-Seed-Daten",
+            "input": "Zeitraum: 2021-01-01 – 2023-12-31, Menge: 5, ISO",
+            "output": "2021-04-19\n2022-11-08\n2022-12-27\n2023-05-05\n2023-09-14"
           },
           {
-            "title": "Eventplanung",
-            "input": "Bereich: 2024-06-01 bis 2024-08-31, Menge: 3, Lesbar",
-            "output": "15. Juni 2024\n8. Juli 2024\n22. August 2024"
+            "title": "Eventkalender",
+            "input": "Zeitraum: 2024-06-01 – 2024-08-31, Menge: 3, Lesbar",
+            "output": "10. Juni 2024\n29. Juli 2024\n21. August 2024"
           },
           {
-            "title": "Historische Analyse",
-            "input": "Bereich: 1990-01-01 bis 2000-12-31, Menge: 4, EU",
-            "output": "12.03.1992\n25.07.1995\n08.11.1997\n14.02.1999"
+            "title": "Historische Stichprobe",
+            "input": "Zeitraum: 1995-01-01 – 2000-12-31, Menge: 4, EU",
+            "output": "04.02.1995\n17.09.1996\n08.03.1998\n22.11.2000"
           }
         ]
       },
       "useCases": {
-        "title": "Einsatzgebiete",
+        "title": "Typische Einsatzgebiete",
+        "description": "Wo der Zufallsdatums-Generator täglich Zeit spart.",
         "items": [
-          { "title": "Softwaretests", "description": "Datumsfelder, Validierungen und Randfälle automatisiert prüfen." },
-          { "title": "Daten- & Mustererzeugung", "description": "Realistische Datensätze für Datenbanken, Machine-Learning oder Demos." },
-          { "title": "Simulationen & Modelle", "description": "Zufällige Ereigniszeitpunkte für Planung oder Forschung einspeisen." },
-          { "title": "Studien & Reports", "description": "Stichproben für statistische Auswertungen oder Trendanalysen generieren." },
-          { "title": "Game- & Story-Design", "description": "Zufällige Ereignisse, historische Szenarien oder In-Game-Kalender erstellen." },
-          { "title": "Content & Marketing", "description": "Zufällige Termine für Social-Media-Serien, Blogideen oder Kampagnen." }
+          {
+            "title": "Quality Assurance",
+            "description": "Datumseingaben, Randfälle und Validierungen automatisiert testen."
+          },
+          {
+            "title": "Simulation & Modeling",
+            "description": "Zufällige Ereignisse für Zeitachsen, Ressourcenplanung oder Szenario-Simulationen."
+          },
+          {
+            "title": "Daten- & Analytics-Teams",
+            "description": "Realistische Sample-Daten erzeugen und Datenpipelines validieren."
+          },
+          {
+            "title": "Bildung & Forschung",
+            "description": "Statistische Beispiele, Übungsaufgaben oder Studienmaterial erstellen."
+          },
+          {
+            "title": "Game- und Story-Design",
+            "description": "Historische oder fiktive Ereignisse zufällig verteilen."
+          },
+          {
+            "title": "Marketing & Content",
+            "description": "Zufällige Termine für Social-Media-Serien, Newsletter oder Challenges."
+          }
         ]
       },
       "benefits": {
-        "title": "Ihre Vorteile",
+        "title": "Vorteile auf einen Blick",
         "items": [
-          "Sichere, lokale Generierung – keine Server, kein Tracking.",
-          "Unbegrenzte Nutzung ohne Login oder Gebühren.",
-          "Mehrere Formate für Datenbanken, Berichte oder Präsentationen.",
-          "Schnelle Ergebnisse auch bei großen Mengen.",
-          "Direkt kopieren oder als Datei speichern.",
-          "Duplikat- und Bereichskontrolle für präzise Sets."
+          "Kryptografisch sichere Zufallsquelle ohne externe Services.",
+          "Komplett kostenlos, ohne Accounts oder Limits.",
+          "Alle gängigen Datumsformate verfügbar.",
+          "Automatische Sortierung sowie Copy/Download-Funktion.",
+          "Direkt einsatzbereit für QA, Planung und Data Seeding."
         ]
       },
       "relatedTools": {
-        "title": "Weitere hilfreiche Tools",
+        "title": "Passende Ergänzungen",
+        "description": "Weitere Generatoren und Zufallshelfer für Ihren Workflow.",
         "items": [
-          { "name": "Zufallszahlengenerator", "description": "Zahlen in beliebigen Bereichen erzeugen", "href": "/de/tools/random-number" },
-          { "name": "Zufallsbuchstaben-Generator", "description": "Buchstaben mit unterschiedlichen Formaten generieren", "href": "/de/tools/random-letter" },
-          { "name": "Zufallsmonat-Generator", "description": "Monate in verschiedenen Schreibweisen ausgeben", "href": "/de/tools/random-month" },
-          { "name": "Random Choice Picker", "description": "Zufällige Auswahl aus eigenen Listen treffen", "href": "/de/tools/random-choice" }
+          {
+            "name": "Zufallszahlengenerator",
+            "description": "Zahlen in beliebigen Bereichen erzeugen.",
+            "href": "/de/tools/random-number"
+          },
+          {
+            "name": "Zufallsbuchstaben-Generator",
+            "description": "Buchstaben für Spiele, Unterricht oder Aufgaben generieren.",
+            "href": "/de/tools/random-letter"
+          },
+          {
+            "name": "Zufallsmonat-Generator",
+            "description": "Monate mit kurzem, langem oder numerischem Format ausgeben.",
+            "href": "/de/tools/random-month"
+          },
+          {
+            "name": "Random Choice Picker",
+            "description": "Zufällige Auswahl aus eigenen Listen treffen.",
+            "href": "/de/tools/random-choice"
+          }
         ]
       },
       "faqs": [
-        { "question": "Wie zufällig sind die Daten?", "answer": "Wir nutzen die Browser-API crypto.getRandomValues(), die kryptografisch sichere Zufälligkeit bietet. Ideal für Tests und faire Stichproben." },
-        { "question": "Welche Formate gibt es?", "answer": "ISO, US, EU oder ein lesbares Format (z. B. 15. Juni 2024). So passen die Daten zu jedem Zielsystem." },
-        { "question": "Kann ich Duplikate ausschließen?", "answer": "Ja. Wenn Duplikate deaktiviert sind, muss die Menge innerhalb der verfügbaren Tage des Zeitraums bleiben." },
-        { "question": "Wie groß darf der Zeitraum sein?", "answer": "Beliebig zwischen 1900 und 2100 – kurze Intervalle oder Jahrzehnte sind gleichermaßen möglich." },
-        { "question": "Wie viele Daten kann ich generieren?", "answer": "Bis zu 10.000 pro Durchlauf – ausreichend für die meisten Test- oder Sampling-Szenarien." },
-        { "question": "Werden die Ergebnisse sortiert?", "answer": "Ja, die Liste wird automatisch chronologisch sortiert, damit Sie sie direkt weiterverwenden können." },
-        { "question": "Sind die Daten für den kommerziellen Einsatz nutzbar?", "answer": "Selbstverständlich – generierte Daten sind frei nutzbar für Business, Forschung oder Produkte." },
-        { "question": "Bleiben meine Eingaben privat?", "answer": "Alle Berechnungen laufen nur im Browser. Nichts wird übertragen oder gespeichert." }
+        {
+          "question": "Wie wird die Zufälligkeit erzeugt?",
+          "answer": "Über die Browser-API crypto.getRandomValues(). Dadurch entstehen nicht vorhersagbare, kryptografisch sichere Ergebnisse."
+        },
+        {
+          "question": "Welche Formate unterstützt das Tool?",
+          "answer": "ISO (YYYY-MM-DD), EU (DD/MM/YYYY), US (MM/DD/YYYY) sowie ein lesbares Format wie „15. Juni 2024“."
+        },
+        {
+          "question": "Kann ich doppelte Daten verhindern?",
+          "answer": "Ja. Wenn Duplikate deaktiviert sind, erzeugt das Tool nur eindeutige Tage innerhalb Ihres Zeitraums."
+        },
+        {
+          "question": "Wie groß darf der Zeitraum sein?",
+          "answer": "Beliebig. Sie können sowohl wenige Tage als auch Jahrzehnte abdecken, solange sie zwischen 1900 und 2100 liegen."
+        },
+        {
+          "question": "Wie viele Daten kann ich maximal erzeugen?",
+          "answer": "Bis zu 10.000 pro Durchlauf – genug für QA, Simulation und Forschung."
+        },
+        {
+          "question": "Sind die Ergebnisse sortiert?",
+          "answer": "Ja, wir sortieren automatisch vom frühesten zum spätesten Datum, damit Sie nichts nacharbeiten müssen."
+        },
+        {
+          "question": "Darf ich die Daten kommerziell nutzen?",
+          "answer": "Natürlich. Die generierten Werte sind frei verwendbar – egal ob intern, für Kundenprojekte oder Forschung."
+        },
+        {
+          "question": "Bleiben meine Eingaben privat?",
+          "answer": "Alle Berechnungen finden in Ihrem Browser statt. Es werden keine Daten hochgeladen oder gespeichert."
+        }
       ],
       "tips": {
-        "title": "Tipps für bessere Resultate",
+        "title": "Praxis-Tipps",
         "items": [
-          { "title": "Passende Zeiträume wählen", "description": "Engere Bereiche liefern fokussierte Ergebnisse, weite Bereiche mehr Varianz." },
-          { "title": "Format nach Ziel wählen", "description": "ISO für APIs, regionale Formate für lokale Projekte, lesbar für Präsentationen." },
-          { "title": "Duplikate bewusst steuern", "description": "Für echte Zufallsstichproben aktivieren, für eindeutige Listen deaktivieren." },
-          { "title": "Mengenlimit beachten", "description": "Ohne Duplikate darf die Menge die Anzahl möglicher Tage nicht überschreiten." },
-          { "title": "Ergebnisse sichern", "description": "Bei wichtigen Runs direkt herunterladen oder versionieren." }
+          {
+            "title": "Zeiträume passend wählen",
+            "description": "Schmale Intervalle eignen sich für zielgerichtete Tests, weite Intervalle für breite Samples."
+          },
+          {
+            "title": "Format nach Einsatzzweck",
+            "description": "ISO für Backends, EU/US für lokale Oberflächen, lesbar für Präsentationen."
+          },
+          {
+            "title": "Duplikate bewusst einsetzen",
+            "description": "Aktivieren für statistische Stichproben, deaktivieren für einmalige Ereignislisten."
+          },
+          {
+            "title": "Maximalmenge beachten",
+            "description": "Ohne Duplikate darf die Menge die Anzahl verfügbarer Tage nicht übersteigen."
+          },
+          {
+            "title": "Ergebnisse archivieren",
+            "description": "Bei wichtigen Läufen direkt herunterladen oder versionieren, damit die Reihenfolge erhalten bleibt."
+          }
         ]
-      }
-    }
       }
     }
   }
 }
+
