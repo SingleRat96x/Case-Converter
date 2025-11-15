@@ -518,6 +518,79 @@
         "allowDuplicates": "Wenn aktiviert, kann derselbe Monat mehrfach vorkommen",
         "sortResults": "Sortiert die Ausgabe chronologisch, wenn diese Option aktiv ist"
       }
+    },
+    "randomNumber": {
+      "title": "Zufallszahl-Generator",
+      "description": "Generieren Sie kryptografisch sichere Zufallszahlen mit frei definierbaren Bereichen, Mengen, Duplikaten und Sortierung – ideal für Spiele, Tests, Statistik und Forschung.",
+      "outputLabel": "Generierte Zufallszahlen",
+      "generateButton": "Zufallszahlen erzeugen",
+      "options": {
+        "minValue": "Minimaler Wert",
+        "maxValue": "Maximaler Wert",
+        "quantity": "Wie viele Zahlen",
+        "allowDuplicates": "Doppelte Zahlen erlauben",
+        "sortResults": "Ergebnisse sortieren",
+        "sortOrder": "Sortierreihenfolge",
+        "ascending": "Aufsteigend (1, 2, 3...)",
+        "descending": "Absteigend (3, 2, 1...)",
+        "none": "Keine Sortierung"
+      },
+      "placeholders": {
+        "minValue": "Minimalwert eingeben (z. B. 1)",
+        "maxValue": "Maximalwert eingeben (z. B. 100)",
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "minRequired": "Minimaler Wert ist erforderlich",
+        "maxRequired": "Maximaler Wert ist erforderlich",
+        "quantityRequired": "Menge ist erforderlich",
+        "minMaxInvalid": "Der Maximalwert muss größer als der Minimalwert sein",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die Spannweite (max - min + 1) nicht überschreiten",
+        "invalidNumber": "Bitte geben Sie eine gültige Zahl ein",
+        "rangeTooBig": "Der Bereich ist zu groß. Verwenden Sie eine kleinere Spanne oder erlauben Sie Duplikate"
+      },
+      "downloadFileName": "random-numbers.txt",
+      "copiedMessage": "Zufallszahlen wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Zahl(en) generiert!",
+      "help": {
+        "minValue": "Der kleinste Wert, der generiert werden darf",
+        "maxValue": "Der größte Wert, der generiert werden darf",
+        "quantity": "Wie viele Zufallszahlen erzeugt werden (maximal 10.000)",
+        "allowDuplicates": "Wenn aktiviert, können dieselben Zahlen mehrfach erscheinen",
+        "sortResults": "Legt fest, ob die Ergebnisse sortiert oder im ursprünglichen Zufallsreihenfolge bleiben"
+      }
+    },
+    "uuidGenerator": {
+      "title": "UUID-Generator",
+      "description": "Generieren Sie einzigartige UUIDs der Versionen 1 (zeitbasiert) und 4 (zufällig) mit flexiblen Ausgabe- und Formatierungsoptionen – perfekt für Apps, Tests und Datenbanken.",
+      "outputLabel": "Generierte UUIDs",
+      "generateButton": "UUIDs erzeugen",
+      "downloadFileName": "generated-uuids.txt",
+      "options": {
+        "version": "UUID-Version",
+        "format": "Ausgabeformat",
+        "quantity": "Anzahl der UUIDs",
+        "formatting": "Formatierungsoptionen",
+        "uppercase": "Großbuchstaben verwenden",
+        "removeDashes": "Bindestriche entfernen"
+      },
+      "versions": {
+        "v1": "Version 1 (zeitbasiert)",
+        "v4": "Version 4 (zufällig)"
+      },
+      "formats": {
+        "standard": "Standard (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)",
+        "compact": "Kompakt (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)",
+        "braced": "Mit Klammern ({xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx})",
+        "urn": "URN (urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+      },
+      "help": {
+        "version": "UUID v4 ist vollständig zufällig, v1 enthält Zeitstempel-Informationen – wählen Sie die Variante, die Ihr Anwendungsfall benötigt.",
+        "format": "Bestimmen Sie, in welchem Format die UUIDs ausgegeben werden sollen.",
+        "uppercase": "Schaltet die Ausgabe zwischen Groß- und Kleinschreibung um.",
+        "removeDashes": "Entfernt Bindestriche aus dem Standardformat, um eine kompakte Darstellung zu erhalten."
+      }
     }
   },
   "ru": {

@@ -2,8 +2,8 @@
 
 **Start Date:** 2025-11-07  
 **Status:** IN PROGRESS  
-**Current Phase:** Phase 3  
-**Completion:** 57/75 tools (76.0%)
+**Current Phase:** Phase 6  
+**Completion:** 60/75 tools (80.0%)
 
 ---
 
@@ -11,9 +11,9 @@
 
 ```
 Total Tools: 75
-Completed:   57  [█████████████████████████] 76.0%
+Completed:   60  [███████████████████████████] 80.0%
 In Progress:  0
-Remaining:   18
+Remaining:   15
 ```
 
 ---
@@ -77,6 +77,9 @@ Remaining:   18
 - [x] **random-ip** (random-generator) - Completed 2025-11-14
 - [x] **random-letter** (random-generator) - Completed 2025-11-15
 - [x] **random-month** (random-generator) - Completed 2025-11-15
+- [x] **random-number** (random-generator) - Completed 2025-11-15
+- [x] **uuid-generator** (random-generator) - Completed 2025-11-15
+- [x] **lowercase** (text-transform) - Completed 2025-11-16
 
 ---
 
@@ -664,7 +667,7 @@ Each subtask = specific work item for that tool
 
 **Category:** `random-generator`  
 **Component File:** `tools/random-generators.json`  
-**Progress:** 2/7 tools (28.6%)
+**Progress:** 7/7 tools (100%)
 
 ---
 
@@ -721,23 +724,23 @@ Each subtask = specific work item for that tool
 
 ---
 
-## ⬜ Task 5.6: random-number
-- [ ] Add German metadata to `toolMetadata.ts`
-- [ ] Add German SEO content to `seo-content/random-number.json`
-- [ ] Verify/add German translations in `tools/random-generators.json`
-- [ ] Create page file `/de/tools/random-number/page.tsx`
-- [ ] Run lint/types/build checks
-- **Status:** PENDING
+## ✅ Task 5.6: random-number
+- [x] Add German metadata to `toolMetadata.ts`
+- [x] Add German SEO content to `seo-content/random-number.json` (inkl. Tipps-Abschnitt & `/de/`-Links)
+- [x] Add German translations (alle Optionen, Validierungen & Hilfetexte) in `tools/random-generators.json`
+- [x] Create page file `/de/tools/random-number/page.tsx`
+- [x] Run lint/types/build checks
+- **Status:** COMPLETED 2025-11-15
 
 ---
 
-## ⬜ Task 5.7: uuid-generator
-- [ ] Add German metadata to `toolMetadata.ts`
-- [ ] Add German SEO content to `seo-content/uuid-generator.json`
-- [ ] Verify/add German translations in `tools/random-generators.json`
-- [ ] Create page file `/de/tools/uuid-generator/page.tsx`
-- [ ] Run lint/types/build checks
-- **Status:** PENDING
+## ✅ Task 5.7: uuid-generator
+- [x] Add German metadata to `toolMetadata.ts`
+- [x] Add German SEO content to `seo-content/uuid-generator.json`
+- [x] Add German translations (Optionen, Hilfetexte) in `tools/random-generators.json`
+- [x] Create page file `/de/tools/uuid-generator/page.tsx`
+- [x] Run lint (`npm run lint`), type-check (`npx tsc --noEmit`) & build (`npm run build`)
+- **Status:** COMPLETED 2025-11-15
 
 ---
 
@@ -745,17 +748,17 @@ Each subtask = specific work item for that tool
 
 **Category:** `text-transform`  
 **Component File:** `tools/case-converters.json` ✅ (Already has DE)  
-**Progress:** 0/4 tools (0%)
+**Progress:** 1/4 tools (25%)
 
 ---
 
-## ⬜ Task 6.1: lowercase
-- [ ] Add German metadata to `toolMetadata.ts`
-- [ ] Add German SEO content to `seo-content/lowercase.json`
-- [ ] Verify German translations in `tools/case-converters.json` ✅
-- [ ] Create page file `/de/tools/lowercase/page.tsx`
-- [ ] Run lint/types/build checks
-- **Status:** PENDING
+## ✅ Task 6.1: lowercase
+- [x] Add German metadata to `toolMetadata.ts`
+- [x] Add German SEO content to `seo-content/lowercase.json`
+- [x] Verify German translations in `tools/case-converters.json` ✅
+- [x] Create page file `/de/tools/lowercase/page.tsx`
+- [x] Run lint (`npm run lint`), type-check (`npx tsc --noEmit`) & build (`npm run build`)
+- **Status:** COMPLETED 2025-11-16
 
 ---
 
@@ -949,8 +952,8 @@ Each subtask = specific work item for that tool
 | 2 | Text Modification | 24 | 24 (100%) | 0 |
 | 3 | Code & Data | 14 | 14 (100%) | 0 |
 | 4 | Image Tools | 9 | 9 (100%) | 0 |
-| 5 | Random Generators | 7 | 5 (71.4%) | 2 |
-| 6 | Text Transform | 4 | 0 (0%) | 4 |
+| 5 | Random Generators | 7 | 7 (100%) | 0 |
+| 6 | Text Transform | 4 | 1 (25%) | 3 |
 | 7 | Social Media | 3 | 0 (0%) | 3 |
 | 8 | Security | 3 | 0 (0%) | 3 |
 | 9 | Misc Utility | 3 | 0 (0%) | 3 |
@@ -961,9 +964,9 @@ Each subtask = specific work item for that tool
 
 ## 🎯 NEXT TOOL TO IMPLEMENT
 
-**Task:** 5.6 - random-number  
-**Category:** random-generator  
-**Component File:** tools/random-generators.json
+**Task:** 6.2 - sentence-case  
+**Category:** text-transform  
+**Component File:** tools/case-converters.json  
 **Status:** Awaiting approval to start
 
 ---

@@ -101,6 +101,11 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Генерируйте безопасные случайные числа в заданном диапазоне. Подходит для игр, тестирования, анализа и выборок. Массовая генерация без ограничений.',
         shortDescription: 'Безопасные случайные числа в любом диапазоне. Массово, без лимитов.',
       },
+      de: {
+        title: 'Zufallszahl-Generator — Sicherer RNG für Tests & Spiele',
+        description: 'Generieren Sie kryptografisch sichere Zufallszahlen in jedem Bereich. Ideal für Spiele, Tests, Analysen und Stichproben mit Massen-Output ohne Limits.',
+        shortDescription: 'Sichere Zufallszahlen in frei wählbaren Bereichen ohne Begrenzung.',
+      },
     },
     schema: createAdvancedSchema('random-number', ['Custom ranges', 'Bulk generation', 'No limits'], 'Number Input', 'Random Numbers', 4.8, 1250),
     relatedTools: ['random-letter', 'random-date', 'random-choice'],
@@ -378,6 +383,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор UUID — Идентификаторы v1/v4',
         description: 'Генерируйте UUID v1 (по времени) и v4 (случайные). Копирование, скачивание и массовая генерация для приложений и БД.',
         shortDescription: 'UUID v1/v4 генерация.',
+      },
+      de: {
+        title: 'UUID-Generator – Einzigartige IDs v1/v4',
+        description: 'Erzeugen Sie sichere UUIDs der Versionen 1 und 4 mit Format-, Groß-/Kleinschreibung- und Bulk-Optionen für Apps, Tests und Datenbanken.',
+        shortDescription: 'UUIDs (v1/v4) sicher online generieren.',
       }
     },
     schema: createAdvancedSchema('uuid-generator', ['v1/v4', 'Bulk'], 'Number Input', 'UUID Identifiers', 4.7, 789),
@@ -1418,6 +1428,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер в нижний регистр — lowercase',
         description: 'Преобразуйте текст в нижний регистр мгновенно. Вставьте или введите — получите результат. Удобно для нормализации.',
         shortDescription: 'Текст в нижний регистр.',
+      },
+      de: {
+        title: 'Kleinbuchstaben-Konverter – Text sofort kleinschreiben',
+        description: 'Wandeln Sie jeden Text in Sekunden komplett in Kleinbuchstaben um – ideal für Datenbereinigung, SEO oder einheitliche Formatierung.',
+        shortDescription: 'Text automatisch in Kleinbuchstaben.',
       }
     },
     schema: createAdvancedSchema('lowercase', ['Instant convert', 'Cleanup'], 'Text Input', 'Lowercase Text', 4.7, 789),
