@@ -408,6 +408,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'UTM Конструктор — Корректная Разметка Ссылок',
         description: 'Создавайте ссылки с UTM‑метками надёжно. Проверяйте и копируйте для аналитики. Избегайте опечаток и несогласованности.',
         shortDescription: 'Создание и проверка UTM‑ссылок.',
+      },
+      de: {
+        title: 'UTM Builder — Kampagnen-URLs Korrekt Markieren',
+        description: 'Erstellen Sie Kampagnen-URLs mit UTM-Parametern zuverlässig. Validieren und kopieren Sie Links für Analysen. Verhindern Sie Tippfehler und inkonsistente Markierungen.',
+        shortDescription: 'UTM-Links erstellen und validieren.',
       }
     },
     schema: createAdvancedSchema('utm-builder', ['UTM validation', 'Copy links'], 'URL Input', 'UTM Tagged URLs', 4.5, 567),
@@ -478,6 +483,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Переводчик Pig Latin — Английский ↔ Поросячий Латынь',
         description: 'Переводите английский в Pig Latin и обратно для развлечения и обучения. Вставляйте текст и копируйте результат.',
         shortDescription: 'Английский ↔ Pig Latin.',
+      },
+      de: {
+        title: 'Pig Latin Übersetzer — Englisch ↔ Pig Latin',
+        description: 'Übersetzen Sie Englisch in Pig Latin und zurück zum Spaß oder Lernen. Text einfügen und Ergebnisse sofort kopieren. Kostenlos und unbegrenzt.',
+        shortDescription: 'Englisch ↔ Pig Latin übersetzen.',
       }
     },
     schema: createAdvancedSchema('pig-latin', ['Two-way translation'], 'Text Input', 'Pig Latin Text', 4.2, 321),
@@ -498,6 +508,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Фонетическое Написание — Чёткое Произношение',
         description: 'Создавайте фонетические написания имен и слов для чёткого произношения. Полезно для звонков, встреч и транскрипций.',
         shortDescription: 'Фонетические написания.',
+      },
+      de: {
+        title: 'Phonetische Schreibweise — Namen Klar Aussprechen',
+        description: 'Generieren Sie phonetische Schreibweisen für Namen und Wörter, um eine klare Aussprache zu gewährleisten. Nützlich für Anrufe, Meetings und Transkripte.',
+        shortDescription: 'Phonetische Schreibweisen generieren.',
       }
     },
     schema: createAdvancedSchema('phonetic-spelling', ['Names/words', 'Pronunciation'], 'Text Input', 'Phonetic Spelling', 4.1, 298),
@@ -593,6 +608,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Паролей — Надёжные Случайные Пароли Онлайн',
         description: 'Создавайте надёжные уникальные пароли с настраиваемыми правилами. Безопасно по умолчанию. Копируйте или скачивайте. Бесплатно, без лимитов.',
         shortDescription: 'Надёжные пароли с правилами. Бесплатно и без ограничений.',
+      },
+      de: {
+        title: 'Sicherer Passwort-Generator — Starke Zufallspasswörter Online',
+        description: 'Erstellen Sie starke, einzigartige Passwörter mit anpassbaren Regeln. Sicher standardmäßig. Kopieren oder herunterladen. Kostenlos, unbegrenzt.',
+        shortDescription: 'Starke Zufallspasswörter mit benutzerdefinierten Regeln. Kostenlos und unbegrenzt.',
       },
     },
     schema: createAdvancedSchema('password-generator', ['Custom length', 'Character sets', 'Strength meter'], 'Settings Input', 'Secure Password', 4.8, 1234),
@@ -882,6 +902,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Онлайн Блокнот — Просто, Надёжно, Бесплатно',
         description: 'Пишите и сохраняйте заметки в браузере. Автосохранение, тёмная тема и приватность. Идеально для быстрых черновиков и копирования.',
         shortDescription: 'Быстрый блокнот с автосохранением.',
+      },
+      de: {
+        title: 'Online Notizblock — Einfach, Sicher, Kostenlos',
+        description: 'Schreiben und speichern Sie Notizen in Ihrem Browser. Autospeicherung, Dunkelmodus und datenschutzfreundlich. Perfekt für schnelle Entwürfe und Kopier-/Einfüge-Aufgaben.',
+        shortDescription: 'Schneller Browser-Notizblock mit Autospeicherung.',
       }
     },
     schema: createAdvancedSchema('online-notepad', ['Autosave', 'Dark mode'], 'Text Input', 'Saved Notes', 4.6, 678),
@@ -1002,6 +1027,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Сортировка Чисел — По Возрастанию/Убыванию, Без Дубликатов',
         description: 'Быстро сортируйте числа по возрастанию или убыванию и удаляйте дубликаты. Вставьте список и получите чистый результат.',
         shortDescription: 'Сортировка чисел и удаление дублей.',
+      },
+      de: {
+        title: 'Zahlensortierer — Zahlen Auf-/Absteigend Sortieren, Duplikate Entfernen',
+        description: 'Sortieren Sie Zahlen schnell auf- oder absteigend und entfernen Sie Duplikate. Fügen Sie Ihre Liste ein und erhalten Sie saubere Ergebnisse für Tabellen oder Code.',
+        shortDescription: 'Zahlen sortieren und Duplikate entfernen.',
       }
     },
     schema: createAdvancedSchema('number-sorter', ['Asc/Desc', 'Deduplicate'], 'Number List Input', 'Sorted Numbers', 4.3, 389),
@@ -1097,6 +1127,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Шрифтов Instagram — Стиль для Био и Подписей',
         description: 'Создавайте стильные шрифты и символы для био и подписей в Instagram. Предпросмотр и копирование в один клик. Бесплатно.',
         shortDescription: 'Стильные IG‑шрифты для био и подписей.',
+      },
+      de: {
+        title: 'Instagram Schriftarten-Generator — Stylische Schriftarten für Bios & Beschriftungen',
+        description: 'Erstellen Sie stylische Instagram-Schriftarten für Bios und Beschriftungen. Vorschau, kopieren & einfügen mit einem Klick. Kostenlos, schnell, keine Limits.',
+        shortDescription: 'Stylische IG-Schriftarten für Bios & Beschriftungen.',
       }
     },
     schema: createAdvancedSchema('instagram-fonts', ['Stylish fonts', 'Copy & paste'], 'Text Input', 'Instagram Font', 4.5, 567),
@@ -1337,6 +1372,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'MD5 Хэш — Генератор Контрольных Сумм',
         description: 'Генерируйте MD5‑хэши из текста или файлов для быстрых проверок и целостности. Копируйте или скачивайте результаты. Быстро бесплатно.',
         shortDescription: 'MD5 хэши и контрольные суммы.',
+      },
+      de: {
+        title: 'MD5 Hash-Generator — MD5 Checksums Erstellen',
+        description: 'Generieren Sie MD5-Hashes aus Text oder Dateien für schnelle Checksums und Integritätstests. Ergebnisse kopieren oder herunterladen. Kostenlos und schnell.',
+        shortDescription: 'MD5-Hashes und Checksums generieren.',
       }
     },
     schema: createAdvancedSchema('md5-hash', ['Text/file input', 'Copy/download'], 'Data Input', 'MD5 Hash', 4.8, 1234),
@@ -1359,6 +1399,12 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Генерируйте SHA-1 хэши онлайн за секунды. Получите SHA1 контрольную сумму для проверки файлов, интеграций и разработки.',
         shortDescription: 'Генерация SHA-1 хэшей из любого текста',
         alternateTitle: 'Онлайн Калькулятор SHA1 Хэша'
+      },
+      de: {
+        title: 'SHA-1 Hash-Generator – Online SHA1 Hash-Rechner',
+        description: 'Generieren Sie SHA-1 Hashes online in Sekunden. Erhalten Sie SHA1 Prüfsummen für Dateiverifizierung, Legacy-Integrationen und Entwicklung.',
+        shortDescription: 'Generieren Sie SHA-1 Hashes aus jedem Text',
+        alternateTitle: 'Online SHA1 Hash-Rechner'
       }
     },
     schema: createAdvancedSchema(
@@ -2004,6 +2050,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Извлечение Email из PDF — Бесплатный Экстрактор Email из PDF',
         description: 'Загружайте PDF файлы и извлекайте email адреса с помощью нашего бесплатного онлайн инструмента. Обрабатывайте документы до 10МБ с расширенными возможностями фильтрации, проверки и экспорта.',
         shortDescription: 'Извлекайте и проверяйте email из PDF файлов с расширенной обработкой.',
+      },
+      de: {
+        title: 'E-Mails aus PDF Extrahieren — Kostenloser PDF-E-Mail-Extraktor',
+        description: 'Laden Sie PDF-Dateien hoch und extrahieren Sie E-Mail-Adressen mit unserem kostenlosen Online-Tool. Verarbeiten Sie Dokumente bis zu 10MB mit erweiterten Filter-, Validierungs- und Exportoptionen.',
+        shortDescription: 'E-Mails aus PDF-Dateien mit erweiterter Verarbeitung extrahieren und validieren.',
       }
     },
     schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),

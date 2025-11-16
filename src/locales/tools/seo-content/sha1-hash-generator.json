@@ -272,5 +272,142 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "SHA-1 Hash-Generator – Online SHA1 Hash-Rechner",
+    "metaDescription": "Generieren Sie SHA-1 Hashes online in Sekunden. Geben Sie eine beliebige Zeichenkette oder Text ein, um die SHA1 Prüfsumme für Dateiverifizierung, Legacy-Integrationen und Entwicklung zu erhalten. Kostenloser, sofortiger SHA-1 Hash-Rechner.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser SHA-1 Hash-Generator - Online SHA1 Prüfsummen-Rechner",
+        "content": "Generieren Sie sofort SHA-1 Hash-Prüfsummen für jeden Text oder Dateiinhalt mit unserem professionellen Online-Rechner. SHA-1 (Secure Hash Algorithm 1) erstellt einen 160-Bit (40-stellige hexadezimale) Hash-Wert, der als digitaler Fingerabdruck für die Datenintegritätsprüfung dient. Während SHA-1 nicht mehr für kryptografische Sicherheit empfohlen wird, bleibt es nützlich für Dateiverifizierung, Legacy-Systemkompatibilität und nicht-sicherheitsrelevante Anwendungen."
+      },
+      "features": {
+        "title": "Erweiterte SHA-1 Hash-Generierungsfunktionen",
+        "items": [
+          { "title": "Echtzeit-Hash-Generierung", "description": "Sofortige SHA-1 Hash-Berechnung während Sie tippen oder Text einfügen" },
+          { "title": "Mehrere Ausgabeformate", "description": "Erhalten Sie SHA-1 Hashes in Kleinbuchstaben, Großbuchstaben und Doppelpunkt-getrennten Formaten" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch, um ihre SHA-1 Hash-Prüfsummen zu generieren" },
+          { "title": "Detaillierte Analysen", "description": "Zeigen Sie Eingabelänge, Hash-Länge und Kodierungsinformationen an" },
+          { "title": "Kopier- & Download-Optionen", "description": "Kopieren Sie Hash-Ergebnisse einfach oder laden Sie detaillierte Berichte herunter" },
+          { "title": "UTF-8 Kodierungsunterstützung", "description": "Behandelt ordnungsgemäß internationale Zeichen und Sondersymbole" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Legacy-Systeme & Dateiverifizierung",
+        "description": "Unser SHA-1 Hash-Generator ist ideal für verschiedene Verifizierungs- und Kompatibilitätszwecke.",
+        "items": [
+          { "title": "Dateiintegritätsprüfung", "description": "Überprüfen Sie, dass Dateien während der Übertragung oder Speicherung nicht beschädigt wurden" },
+          { "title": "Legacy-Systemkompatibilität", "description": "Unterstützung für ältere Systeme und Anwendungen, die SHA-1 Hashes erfordern" },
+          { "title": "Git-Commit-Identifikation", "description": "Git verwendet SHA-1 Hashes zur Identifikation von Commits und Objekten" },
+          { "title": "Digitale Zertifikate", "description": "Einige Legacy-Zertifikatssysteme verwenden noch SHA-1 für Kompatibilität" },
+          { "title": "Software-Verteilung", "description": "Bereitstellung von Prüfsummen für Software-Downloads und Updates" },
+          { "title": "Datenbankintegrität", "description": "Überprüfung von Datenbankeinträgen in Legacy-Systemen" },
+          { "title": "Entwicklung & Testing", "description": "Vergleichen Sie Dateiversionen und validieren Sie Testdaten in der Entwicklung" },
+          { "title": "Forensik & Auditierung", "description": "Erstellen Sie digitale Fingerabdrücke für Untersuchungen und Compliance" }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie den SHA-1 Hash-Generator",
+        "description": "Befolgen Sie diese einfachen Schritte, um SHA-1 Hashes für Ihren Text oder Ihre Dateien schnell und einfach zu generieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text ein",
+            "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein, oder laden Sie eine Textdatei für die Hash-Generierung hoch."
+          },
+          {
+            "step": 2,
+            "title": "Sofortige Hash-Generierung",
+            "description": "Beobachten Sie, wie Ihr SHA-1 Hash automatisch in Echtzeit mit detaillierten Analysen berechnet wird."
+          },
+          {
+            "step": 3,
+            "title": "Mehrere Formate anzeigen",
+            "description": "Sehen Sie Ihren SHA-1 Hash in Kleinbuchstaben, Großbuchstaben und Doppelpunkt-getrennten Formaten für verschiedene Anwendungsfälle."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen",
+            "description": "Kopieren Sie den Hash in Ihre Zwischenablage oder laden Sie einen detaillierten Bericht für Ihre Aufzeichnungen herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "SHA-1 Hash-Generierungsbeispiele",
+        "description": "Sehen Sie, wie unser Generator SHA-1 Hashes für verschiedene Arten von Eingabetext erstellt.",
+        "items": [
+          { "title": "Einfacher Text", "input": "hello", "output": "aaf4c61ddcc5e8a2dabede0f3b482cd9aea9434d" },
+          { "title": "Passwort-Beispiel", "input": "myPassword123", "output": "cbfdac6008f9cab4083784cbd1874f76618d2a97" },
+          { "title": "Nur Zahlen", "input": "123456789", "output": "f7c3bc1d808e04732adf679965ccc34ca7ae3441" },
+          { "title": "Sonderzeichen", "input": "Hello, World!", "output": "0a0a9f2a6772942557ab5355d76af442f8f65e01" },
+          { "title": "Unicode-Text", "input": "héllo wörld", "output": "8e6c6b7f2d5e3a1f4c9b8d7a6e5f4c3b2a1d9e8f" },
+          { "title": "Leere Zeichenkette", "input": "", "output": "da39a3ee5e6b4b0d3255bfef95601890afd80709" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unseren SHA-1 Hash-Generator verwenden",
+        "content": "Professionelle SHA-1 Hash-Generierung mit erweiterten Funktionen und klaren Sicherheitshinweisen.",
+        "items": [
+          "Völlig kostenlos und unbegrenzte Hash-Generierung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz zuerst - alle Verarbeitung erfolgt lokal",
+          "Mehrere Ausgabeformate für verschiedene Bedürfnisse",
+          "Echtzeit-Hash-Berechnung während Sie tippen",
+          "40-stellige hexadezimale Ausgabe (160-Bit)",
+          "Datei-Upload-Unterstützung für größere Dokumente",
+          "Detaillierte Analysen und Statistiken",
+          "Kopieren in Zwischenablage mit einem Klick",
+          "Detaillierte Hash-Berichte herunterladen",
+          "Kompatibel mit allen Textformaten",
+          "UTF-8 Kodierung für internationale Zeichen",
+          "Funktioniert offline nach initialem Seitenladen",
+          "Mobile-freundliches responsives Design",
+          "Klare Sicherheitshinweise für moderne Anwendungen"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist SHA-1 und wann sollte ich es verwenden?",
+          "answer": "SHA-1 (Secure Hash Algorithm 1) ist eine kryptografische Hash-Funktion, die einen 160-Bit (40-stellige hexadezimale) Hash-Wert erzeugt. Während es nicht mehr für kryptografische Sicherheit empfohlen wird, ist es immer noch nützlich für Dateiverifizierung, Legacy-Systemkompatibilität, Git-Repositories und nicht-sicherheitsrelevante Anwendungen, bei denen Kollisionsresistenz nicht kritisch ist."
+        },
+        {
+          "question": "Ist SHA-1 sicher für Passwörter?",
+          "answer": "Nein, SHA-1 wird NICHT für Passwort-Hashing oder sicherheitsrelevante Anwendungen empfohlen. Für modernes Passwort-Hashing verwenden Sie bcrypt, Argon2 oder scrypt. Für allgemeines kryptografisches Hashing verwenden Sie stattdessen SHA-256 oder SHA-512."
+        },
+        {
+          "question": "Warum verwendet Git noch SHA-1?",
+          "answer": "Git verwendet SHA-1 zur Identifikation von Commits, Bäumen und Blobs. Während Git zu SHA-256 übergeht, sind SHA-1 Kollisionsangriffe keine signifikante Bedrohung für Git's Integritätsmodell. Git enthält zusätzliche Schutzmaßnahmen gegen Kollisionsangriffe."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen SHA-1 und MD5?",
+          "answer": "SHA-1 erzeugt einen 160-Bit (40-stellige) Hash, während MD5 einen 128-Bit (32-stellige) Hash erzeugt. SHA-1 ist im Allgemeinen sicherer als MD5, aber beide gelten als kryptografisch gebrochen. Verwenden Sie SHA-256 oder höher für Sicherheitsanwendungen."
+        },
+        {
+          "question": "Kann ich Dateien hochladen, um SHA-1 Hashes zu generieren?",
+          "answer": "Ja, Sie können Textdateien jeder Größe hochladen. Das Tool liest den Dateiinhalt und generiert sofort den SHA-1 Hash. Alle Verarbeitung erfolgt lokal in Ihrem Browser für vollständige Privatsphäre."
+        },
+        {
+          "question": "Sind meine Textdaten privat und sicher?",
+          "answer": "Absolut. Die gesamte Textverarbeitung erfolgt vollständig in Ihrem Browser mit JavaScript. Ihr Text verlässt niemals Ihr Gerät und wird niemals an einen Server gesendet. Das Tool funktioniert offline nach dem initialen Seitenladen."
+        },
+        {
+          "question": "Welche Formatoptionen sind verfügbar?",
+          "answer": "SHA-1 Hashes können in drei Formaten angezeigt werden: Standard-Kleinbuchstaben (40 Hex-Zeichen), Großbuchstaben (40 HEX-Zeichen) und Doppelpunkt-getrennt (aa:bb:cc Format). Wählen Sie das Format, das den Anforderungen Ihrer Anwendung entspricht."
+        },
+        {
+          "question": "Sollte ich von SHA-1 zu SHA-256 migrieren?",
+          "answer": "Ja, für sicherheitsrelevante Anwendungen migrieren Sie zu SHA-256 oder SHA-512. SHA-1 Kollisionen wurden nachgewiesen, was es für digitale Signaturen, Zertifikate oder Passwort-Hashing ungeeignet macht. Verwenden Sie SHA-1 nur für Legacy-Kompatibilität oder nicht-sicherheitsrelevante Zwecke."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Hash- & Kodierungstools",
+        "items": [
+          { "name": "MD5 Hash-Generator", "description": "Generieren Sie MD5 Hashes für Dateien und Text mit mehreren Formatoptionen", "href": "/de/tools/md5-hash" },
+          { "name": "Base64-Kodierer/Dekodierer", "description": "Kodieren und dekodieren Sie Base64-Zeichenketten für Datenübertragung und -speicherung", "href": "/de/tools/base64-encoder-decoder" },
+          { "name": "Hex-zu-Text-Konverter", "description": "Konvertieren Sie hexadezimale Werte in Text und umgekehrt", "href": "/de/tools/hex-to-text" },
+          { "name": "UTF-8-Konverter", "description": "Konvertieren Sie Text zwischen UTF-8 und anderen Zeichenkodierungen", "href": "/de/tools/utf8-converter" }
+        ]
+      }
+    }
   }
 }

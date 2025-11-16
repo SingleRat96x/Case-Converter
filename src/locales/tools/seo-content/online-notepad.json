@@ -364,5 +364,188 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Kostenloser Online Notizblock - Professioneller Webbasierter Texteditor",
+    "metaDescription": "Professioneller Online-Notizblock mit Rich-Text-Formatierung, Autospeicherung, Dateiunterstützung und erweiterten Bearbeitungsfunktionen. Kostenloser webbasierter Texteditor für Notizen, Dokumente und Schreiben.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Online Notizblock & Texteditor",
+        "content": "Erleben Sie die Leistungsfähigkeit eines voll ausgestatteten Online-Texteditors mit unserem professionellen Notizblock-Tool. Erstellen, bearbeiten und formatieren Sie Dokumente mit Rich-Text-Bearbeitung, Autospeicher-Funktionalität, Datei-Import/Export und erweiterten Funktionen wie Suchen & Ersetzen. Perfekt für Schriftsteller, Studenten, Fachleute und alle, die einen zuverlässigen webbasierten Texteditor benötigen."
+      },
+      "features": {
+        "title": "Hauptfunktionen Unseres Online Notizblocks",
+        "items": [
+          {
+            "title": "Autospeicher-Funktionalität",
+            "description": "Ihre Notizen werden automatisch im lokalen Speicher Ihres Browsers gespeichert, sodass Sie Ihre Arbeit nie verlieren."
+          },
+          {
+            "title": "Download-Optionen",
+            "description": "Speichern Sie Ihre Notizen als TXT- oder Markdown-Dateien für Offline-Zugriff und Austausch."
+          },
+          {
+            "title": "Mobiloptimiert",
+            "description": "Vollständig responsives Design, das perfekt auf Smartphones, Tablets und Desktop-Computern funktioniert."
+          },
+          {
+            "title": "Vollbildmodus",
+            "description": "Ablenkungsfreie Schreiberfahrung mit unserem Vollbild-Bearbeitungsmodus."
+          },
+          {
+            "title": "Wort- & Zeichenzählung",
+            "description": "Echtzeitstatistiken, die Wortanzahl, Zeichenanzahl und Zeilennummern anzeigen."
+          },
+          {
+            "title": "Druckunterstützung",
+            "description": "Drucken Sie Ihre Notizen direkt aus dem Browser mit ordnungsgemäß formatiertem Output."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Wie Man Den Online Notizblock Verwendet",
+        "description": "Die Verwendung unseres Online-Notizblocks ist einfach und intuitiv:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Mit Dem Tippen Beginnen",
+            "description": "Klicken Sie in den Textbereich und beginnen Sie mit dem Tippen Ihrer Notizen. Der Notizblock speichert Ihre Arbeit automatisch während Sie tippen."
+          },
+          {
+            "step": 2,
+            "title": "Zusätzliche Funktionen Verwenden",
+            "description": "Greifen Sie auf Vollbildmodus, Vorschau und Download-Optionen über die Symbolleisten-Schaltflächen zu."
+          },
+          {
+            "step": 3,
+            "title": "Ihre Arbeit Speichern",
+            "description": "Laden Sie Ihre Notizen als TXT- oder Markdown-Dateien herunter oder verlassen Sie sich einfach auf die Autospeicherung für zukünftige Sitzungen."
+          },
+          {
+            "step": 4,
+            "title": "Drucken Oder Teilen",
+            "description": "Verwenden Sie die Druckfunktion, um eine Hardcopy zu erstellen oder kopieren Sie Ihren Text zum Teilen an anderer Stelle."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Anwendungsfälle Für Den Online Notizblock",
+        "description": "Hier sind einige Beispiele, wie Sie unseren Online-Notizblock verwenden können:",
+        "items": [
+          {
+            "input": "Besprechungsnotizen - Projekt Alpha",
+            "output": "• Q4-Ziele besprechen\n• Budgetzuweisung überprüfen\n• Aufgaben zuweisen\n• Nachfolgebesprechung planen",
+            "description": "Perfekt für strukturierte Besprechungsnotizen"
+          },
+          {
+            "input": "Einkaufsliste",
+            "output": "Lebensmittel:\n- Milch\n- Brot\n- Eier\n- Äpfel\n\nHaushaltswaren:\n- Waschmittel\n- Küchenpapier",
+            "description": "Erstellen Sie organisierte Einkaufs- und Aufgabenlisten"
+          },
+          {
+            "input": "Blog-Entwurf",
+            "output": "# Wie Man Produktiv Bleibt Beim Arbeiten Von Zuhause\n\nArbeiten von zu Hause kann herausfordernd sein...\n\n## Tipps Für Erfolg\n1. Einen dedizierten Arbeitsplatz schaffen\n2. Eine Routine etablieren",
+            "description": "Blog-Beiträge und Artikel mit Markdown-Formatierung entwerfen"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Wer Verwendet Online Notizblöcke?",
+        "description": "Unser Online-Notizblock ist perfekt für verschiedene Benutzer und Szenarien:",
+        "items": [
+          {
+            "title": "Studenten",
+            "description": "Nehmen Sie Vorlesungsnotizen auf, entwerfen Sie Aufsätze und organisieren Sie Studienmaterialien, ohne Software auf Schulcomputern installieren zu müssen."
+          },
+          {
+            "title": "Fachleute",
+            "description": "Erfassen Sie Besprechungsnotizen, brainstormen Sie Ideen und erstellen Sie schnelle Entwürfe während geschäftiger Arbeitstage."
+          },
+          {
+            "title": "Schriftsteller",
+            "description": "Entwerfen Sie Blog-Beiträge, Artikel und Geschichten in einer ablenkungsfreien Schreibumgebung."
+          },
+          {
+            "title": "Entwickler",
+            "description": "Notieren Sie schnell Code-Snippets, Debug-Protokolle und technische Notizen während der Arbeit."
+          },
+          {
+            "title": "Reisende",
+            "description": "Greifen Sie auf Ihre Notizen von jedem Gerät zu, ohne Synchronisationsprobleme oder App-Installationen."
+          },
+          {
+            "title": "Datenschutzbewusste Benutzer",
+            "description": "Behalten Sie Notizen lokal in Ihrem Browser, ohne sie auf Drittanbieter-Cloud-Dienste hochzuladen."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile Der Verwendung Unseres Online Notizblocks",
+        "items": [
+          "Keine Softwareinstallation erforderlich",
+          "Funktioniert auf allen Geräten und Browsern",
+          "Automatisches Speichern verhindert Datenverlust",
+          "Datenschutzorientiert - Notizen bleiben in Ihrem Browser",
+          "Saubere, ablenkungsfreie Oberfläche",
+          "Mehrere Exportformate verfügbar",
+          "Vollbildmodus für fokussiertes Schreiben",
+          "Echtzeit-Wort- und Zeichenzählung",
+          "Druckfunktion integriert",
+          "Völlig kostenlos zu verwenden"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Texttools",
+        "description": "Verbessern Sie Ihren Textbearbeitungs-Workflow mit diesen ergänzenden Tools:",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Wörter, Zeichen und analysieren Sie Ihren Text im Detail",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Text Ersetzen",
+            "description": "Suchen und ersetzen Sie Textmuster in großen Dokumenten",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Zeilenumbrüche Entfernen",
+            "description": "Bereinigen Sie die Formatierung, indem Sie unerwünschte Zeilenumbrüche entfernen",
+            "href": "/de/tools/remove-line-breaks"
+          },
+          {
+            "name": "Plain Text Konverter",
+            "description": "Entfernen Sie Formatierungen und konvertieren Sie in Klartext",
+            "href": "/de/tools/plain-text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Sind Meine Daten Sicher Beim Verwenden Des Online Notizblocks?",
+          "answer": "Ja, Ihre Notizen werden lokal im Speicher Ihres Browsers gespeichert und nicht an unsere Server übertragen. Ihre Daten bleiben privat und sicher auf Ihrem Gerät."
+        },
+        {
+          "question": "Kann Ich Von Verschiedenen Geräten Auf Meine Notizen Zugreifen?",
+          "answer": "Notizen werden lokal in jedem Browser gespeichert, sodass sie nicht automatisch zwischen Geräten synchronisiert werden. Sie können jedoch Ihre Notizen herunterladen und manuell übertragen."
+        },
+        {
+          "question": "In Welche Dateiformate Kann Ich Exportieren?",
+          "answer": "Sie können Ihre Notizen als Klartext-Dateien (.txt) oder Markdown-Dateien (.md) herunterladen, um sie mit anderen Anwendungen zu verwenden."
+        },
+        {
+          "question": "Funktioniert Der Notizblock Offline?",
+          "answer": "Einmal geladen, funktioniert der Notizblock offline. Ihre vorhandenen Notizen sind verfügbar und neue Notizen werden lokal gespeichert."
+        },
+        {
+          "question": "Gibt Es Eine Begrenzung Für Die Textmenge, Die Ich Schreiben Kann?",
+          "answer": "Die Begrenzung hängt von der Kapazität des lokalen Speichers Ihres Browsers ab, die typischerweise mehrere Megabyte beträgt - mehr als genug für die meisten Textdokumente."
+        },
+        {
+          "question": "Kann Ich Meine Notizen Drucken?",
+          "answer": "Ja, verwenden Sie die Drucktaste, um einen formatierten Ausdruck Ihrer Notizen mit ordnungsgemäßem Styling und Seitenzahlen zu erstellen."
+        }
+      ]
+    }
   }
 }

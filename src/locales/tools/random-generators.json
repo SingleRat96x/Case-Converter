@@ -591,6 +591,42 @@
         "uppercase": "Schaltet die Ausgabe zwischen Groß- und Kleinschreibung um.",
         "removeDashes": "Entfernt Bindestriche aus dem Standardformat, um eine kompakte Darstellung zu erhalten."
       }
+    },
+    "passwordGenerator": {
+      "title": "Sicherer Passwort-Generator",
+      "description": "Generieren Sie kryptografisch sichere Passwörter mit anpassbarer Länge und Zeichensätzen. Perfekt zum Erstellen starker, einzigartiger Passwörter für Konten, Anwendungen und Sicherheitszwecke.",
+      "outputLabel": "Generiertes Passwort",
+      "generateButton": "Sicheres Passwort generieren",
+      "options": {
+        "length": "Passwort-Länge",
+        "includeUppercase": "Großbuchstaben einschließen (A-Z)",
+        "includeLowercase": "Kleinbuchstaben einschließen (a-z)",
+        "includeNumbers": "Zahlen einschließen (0-9)",
+        "includeSymbols": "Symbole einschließen (!@#$%^&*)",
+        "excludeAmbiguous": "Mehrdeutige Zeichen ausschließen",
+        "requireAllTypes": "Alle ausgewählten Zeichentypen erforderlich",
+        "characterTypes": "Verwendete Zeichen:"
+      },
+      "placeholders": {
+        "length": "Länge eingeben (4-128)"
+      },
+      "validation": {
+        "lengthRequired": "Passwort-Länge ist erforderlich",
+        "lengthInvalid": "Passwort-Länge muss zwischen 4 und 128 Zeichen liegen",
+        "noCharacterSets": "Mindestens ein Zeichensatz muss ausgewählt sein"
+      },
+      "downloadFileName": "secure-password.txt",
+      "copiedMessage": "Sicheres Passwort in die Zwischenablage kopiert!",
+      "generatedMessage": "Sicheres Passwort erfolgreich generiert!",
+      "help": {
+        "length": "Wählen Sie die Passwort-Länge zwischen 4 und 128 Zeichen. Längere Passwörter sind sicherer",
+        "includeUppercase": "Großbuchstaben (A-Z) für zusätzliche Sicherheit und Komplexität einschließen",
+        "includeLowercase": "Kleinbuchstaben (a-z) für grundlegende alphabetische Zeichen einschließen",
+        "includeNumbers": "Zahlen (0-9) einschließen, um die Passwort-Stärke zu erhöhen",
+        "includeSymbols": "Sonderzeichen (!@#$%^&*) für maximale Sicherheit einschließen",
+        "excludeAmbiguous": "Visuell ähnliche Zeichen wie 0/O, l/1/I ausschließen für bessere Lesbarkeit",
+        "requireAllTypes": "Sicherstellen, dass das Passwort mindestens ein Zeichen aus jedem ausgewählten Typ enthält"
+      }
     }
   },
   "ru": {

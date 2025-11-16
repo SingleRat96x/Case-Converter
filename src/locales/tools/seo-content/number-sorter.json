@@ -370,5 +370,191 @@
         }
       ]
     }
+  },
+  "de": {
+    "sections": {
+      "intro": {
+        "title": "Professionelles Zahlensortier-Tool - Kostenlos & Schnell",
+        "content": "Sortieren Sie Zahlen effizient mit unserem erweiterten Zahlensortier-Tool. Ob Sie aufsteigende oder absteigende Reihenfolge, numerische oder lexikografische Sortierung benötigen, unser Tool verarbeitet alle Formate einschließlich komma-, leerzeichen- und zeilenumbruchgetrennten Zahlen. Perfekt für Datenanalyse, mathematische Operationen und die Organisation numerischer Datensätze."
+      },
+      "features": {
+        "title": "Hauptfunktionen",
+        "items": [
+          {
+            "title": "Mehrere Sortiermethoden",
+            "description": "Wählen Sie zwischen numerischer Sortierung (1, 2, 10, 20) und lexikografischer Sortierung (1, 10, 2, 20) basierend auf Ihren Bedürfnissen."
+          },
+          {
+            "title": "Flexible Eingabeformate",
+            "description": "Unterstützt komma-, leerzeichen- und zeilenumbruchgetrennte Zahleneingaben für maximalen Komfort."
+          },
+          {
+            "title": "Aufsteigende & Absteigende Reihenfolge",
+            "description": "Sortieren Sie Zahlen in aufsteigender (kleinste zu größte) oder absteigender (größte zu kleinste) Reihenfolge mit einem Klick."
+          },
+          {
+            "title": "Duplikatentfernung",
+            "description": "Optionale Duplikatentfernung, um Ihren Datensatz zu bereinigen und nur eindeutige Zahlen zu behalten."
+          },
+          {
+            "title": "Format-Erhaltung",
+            "description": "Wählen Sie, ob Sie Ihr ursprüngliches Eingabeformat beibehalten oder das optimierte Zeilenumbruch-Format für bessere Lesbarkeit verwenden möchten."
+          },
+          {
+            "title": "Echtzeit-Analysen",
+            "description": "Erhalten Sie sofortige Statistiken einschließlich Anzahl, Minimum, Maximum, Bereich, Summe und Durchschnitt Ihrer Zahlen."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie den Zahlensortierer",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihre Zahlen zu sortieren:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihre Zahlen ein",
+            "description": "Fügen Sie Ihre Zahlen in das Eingabefeld ein oder tippen Sie sie ein. Verwenden Sie Kommas, Leerzeichen oder neue Zeilen, um sie zu trennen."
+          },
+          {
+            "step": 2,
+            "title": "Sortieroptionen konfigurieren",
+            "description": "Wählen Sie Ihre bevorzugte Sortierreihenfolge (aufsteigend/absteigend), Sortiertyp (numerisch/lexikografisch) und andere Optionen."
+          },
+          {
+            "step": 3,
+            "title": "Sortierte Ergebnisse anzeigen",
+            "description": "Das Tool sortiert Ihre Zahlen automatisch und zeigt die Ergebnisse mit detaillierten Statistiken an."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen",
+            "description": "Kopieren Sie die sortierten Zahlen in die Zwischenablage oder laden Sie sie als Textdatei für die weitere Verwendung herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Zahlensortier-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Sortieroptionen mit echten Beispielen funktionieren:",
+        "items": [
+          {
+            "input": "42, 10, 7, 100, 3, 15, 8, 25",
+            "output": "3\n7\n8\n10\n15\n25\n42\n100",
+            "description": "Numerische aufsteigende Sortierung - Zahlen von kleinste zu größte angeordnet"
+          },
+          {
+            "input": "5.7, 2.3, 8.1, 1.9, 6.4",
+            "output": "8.1\n6.4\n5.7\n2.3\n1.9",
+            "description": "Dezimalzahlen in absteigender Reihenfolge - größte zu kleinste"
+          },
+          {
+            "input": "100, 20, 3, 1",
+            "output": "1, 100, 20, 3",
+            "description": "Lexikografische Sortierung behandelt Zahlen als Text und behält das ursprüngliche Komma-Format bei"
+          },
+          {
+            "input": "5, 3, 8, 3, 2, 8, 1",
+            "output": "1\n2\n3\n5\n8",
+            "description": "Aufsteigende Sortierung mit entfernten Duplikaten (3 und 8 erscheinen nur einmal)"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Häufige Anwendungsfälle",
+        "description": "Unser Zahlensortierer ist perfekt für verschiedene Szenarien:",
+        "items": [
+          {
+            "title": "Datenanalyse",
+            "description": "Sortieren Sie numerische Datensätze für statistische Analysen, Musterfindung und Identifizierung von Ausreißern in Ihren Daten."
+          },
+          {
+            "title": "Akademische Forschung",
+            "description": "Organisieren Sie Forschungsdaten, Umfrageergebnisse und experimentelle Messungen für wissenschaftliche Arbeiten und Berichte."
+          },
+          {
+            "title": "Finanzplanung",
+            "description": "Sortieren Sie Ausgabenlisten, Einkommenszahlen und Budgetzuweisungen, um Finanzmuster besser zu verstehen."
+          },
+          {
+            "title": "Lagerverwaltung",
+            "description": "Organisieren Sie Produktmengen, Preise und Lagerbestände für effizientes Lagerverfolgung und -management."
+          },
+          {
+            "title": "Notenverarbeitung",
+            "description": "Sortieren Sie Schülerpunkte und Noten für Bildungsbewertung und Ranking-Zwecke."
+          },
+          {
+            "title": "Datenbankvorbereitung",
+            "description": "Vorab-Sortierung numerischer Daten vor dem Import in Datenbanken oder Tabellenkalkulationsanwendungen."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unseren Zahlensortierer wählen?",
+        "items": [
+          "Schneller und effizienter Sortieralgorithmus",
+          "Keine Dateigrößenbeschränkungen",
+          "Funktioniert mit ganzen Zahlen, Dezimalzahlen und gemischten Formaten",
+          "Sofortige Ergebnisse mit Echtzeit-Verarbeitung",
+          "Mobile-freundliches responsives Design",
+          "Keine Registrierung oder Softwareinstallation erforderlich",
+          "Völlig kostenlos mit unbegrenzter Nutzung",
+          "Datenschutzorientiert - keine Daten auf Servern gespeichert",
+          "Exportieren Sie Ergebnisse in mehreren Formaten",
+          "Professionelle Genauigkeit und Zuverlässigkeit"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Zahlen-Tools",
+        "description": "Entdecken Sie weitere Tools für die Arbeit mit Zahlen:",
+        "items": [
+          {
+            "name": "Zufallszahl-Generator",
+            "description": "Generieren Sie Zufallszahlen für Tests und Simulationen",
+            "href": "/de/tools/random-number"
+          },
+          {
+            "name": "Text-Zähler",
+            "description": "Zählen Sie Zeichen, Wörter und Zeilen in Ihrem Text",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Wortfrequenz-Analysator",
+            "description": "Analysieren Sie Wortfrequenz und Textstatistiken",
+            "href": "/de/tools/word-frequency"
+          },
+          {
+            "name": "Online-Notizblock",
+            "description": "Einfacher Notizblock zur Organisation Ihrer Daten",
+            "href": "/de/tools/online-notepad"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Zahlenformate werden unterstützt?",
+          "answer": "Unser Tool unterstützt ganze Zahlen (1, 2, 3), Dezimalzahlen (1.5, 2.7), negative Zahlen (-5, -10) und wissenschaftliche Notation (1e10, 2.5e-3). Gemischte Formate werden auch in derselben Eingabe unterstützt."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen numerischer und lexikografischer Sortierung?",
+          "answer": "Numerische Sortierung behandelt Werte als Zahlen (1, 2, 10, 20), während lexikografische Sortierung sie als Textzeichenketten behandelt (1, 10, 2, 20). Wählen Sie numerisch für mathematische Operationen und lexikografisch für string-basierte Sortierung."
+        },
+        {
+          "question": "Wie viele Zahlen kann ich auf einmal sortieren?",
+          "answer": "Es gibt keine strenge Begrenzung für die Anzahl der Einträge, die Sie sortieren können. Das Tool ist optimiert, um große Datensätze effizient zu verarbeiten, aber die Leistung kann je nach den Fähigkeiten Ihres Geräts variieren."
+        },
+        {
+          "question": "Kann ich eine Datei mit Zahlen hochladen?",
+          "answer": "Ja! Sie können Textdateien (.txt) mit Zahlen hochladen. Das Tool erkennt automatisch das Format und analysiert die Zahlen für die Sortierung."
+        },
+        {
+          "question": "Sind meine Daten sicher?",
+          "answer": "Absolut. Die gesamte Verarbeitung erfolgt in Ihrem Browser - keine Daten werden an externe Server gesendet. Ihre Zahlen bleiben vollständig privat und sicher."
+        },
+        {
+          "question": "Kann ich Zahlen mit Textbeschriftungen sortieren?",
+          "answer": "Das Tool extrahiert und sortiert reine Zahlen. Textbeschriftungen werden während der Verarbeitung herausgefiltert. Für gemischten Inhalt sollten Sie die lexikografische Sortierung verwenden."
+        }
+      ]
+    }
   }
 }

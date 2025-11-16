@@ -1528,6 +1528,17 @@
       "selectStyle": "Facebook-Schriftarten-Stil Auswählen",
       "preview": "Vorschau"
     },
+    "instagramFonts": {
+      "title": "Instagram Schriftarten-Generator - Stylischer Text für Social Media",
+      "description": "Generieren Sie stylische Unicode-Schriftarten für Instagram-Bios, Beschriftungen, Stories und Posts. Erstellen Sie auffälligen Text mit fetten Serifen, kursiven, skriptartigen und monospaced Stilen, die überall funktionieren.",
+      "outputLabel": "Instagram Stylisierter Text",
+      "copiedMessage": "Instagram-Schriftart in Zwischenablage kopiert!",
+      "downloadFileName": "instagram-fonts.txt",
+      "convertButton": "Instagram-Schriftarten Generieren",
+      "uploadDescription": "Laden Sie eine Textdatei hoch, um sie in Instagram-Schriftarten zu konvertieren",
+      "selectStyle": "Instagram-Schriftarten-Stil Auswählen",
+      "preview": "Vorschau"
+    },
     "textReplace": {
       "title": "Text Suchen und Ersetzen",
       "description": "Suchen und ersetzen Sie Text mit leistungsstarken Optionen für Groß-/Kleinschreibungsbeachtung und Ganzes-Wort-Suche. Perfekt für Massentextbearbeitung und Korrekturen.",
@@ -1612,6 +1623,30 @@
       "error": "Fehler",
       "errorInvalidInput": "Ungültige Eingabe",
       "errorConversion": "Konvertierung fehlgeschlagen"
+    },
+    "phoneticSpelling": {
+      "title": "Phonetischer Schreibweise-Generator",
+      "description": "Konvertieren Sie Text in phonetische Schreibweise und umgekehrt. Unterstützung für mehrere Formate, einschließlich IPA, einfachen Buchstabennamen, lautbasierter Schreibweise und NATO-Phonetischem Alphabet. Perfekt für Ausspracheführer und klare Kommunikation.",
+      "outputLabel": "Phonetische Schreibweise",
+      "phoneticOutputLabel": "Phonetische Schreibweise",
+      "phoneticInputLabel": "Phonetischer Texteingabe",
+      "inputPlaceholder": "Text eingeben, um in phonetische Schreibweise zu konvertieren...",
+      "phoneticInputPlaceholder": "Phonetischen Text eingeben, um zurück in normalen Text zu konvertieren...",
+      "copiedMessage": "Phonetische Schreibweise in Zwischenablage kopiert!",
+      "downloadFileName": "phonetische-schreibweise.txt",
+      "convertButton": "In Phonetisch Konvertieren"
+    },
+    "pigLatin": {
+      "title": "Pig Latin Übersetzer",
+      "description": "Konvertieren Sie Text in Pig Latin und umgekehrt. Lustiges Sprachspiel-Tool, perfekt für Unterhaltung, Bildung und geheime Nachrichten. Verarbeitet Konsonanten-Cluster und behält Groß-/Kleinschreibung bei.",
+      "outputLabel": "Pig Latin Text",
+      "pigLatinOutputLabel": "Pig Latin Text",
+      "pigLatinInputLabel": "Pig Latin Eingabe",
+      "inputPlaceholder": "Text eingeben, um in Pig Latin zu konvertieren...",
+      "pigLatinInputPlaceholder": "Pig Latin Text eingeben, um zurück in normalen Text zu konvertieren...",
+      "copiedMessage": "Pig Latin Text in Zwischenablage kopiert!",
+      "downloadFileName": "pig-latin.txt",
+      "convertButton": "In Pig Latin Konvertieren"
     }
   }
 }

@@ -86,5 +86,49 @@
       "duplicatesFound": "Найдены дубликаты",
       "duplicatesHint": "Включите 'Удалить дубликаты' чтобы отфильтровать дублированные email адреса."
     }
+  },
+  "de": {
+    "pdfEmailExtractor": {
+      "title": "E-Mails aus PDF Extrahieren",
+      "description": "Laden Sie eine PDF-Datei hoch und extrahieren Sie E-Mail-Adressen mit erweiterten Filter- und Validierungsoptionen. Unterstützt Dokumente bis zu 10MB.",
+      "uploadArea": "PDF-Datei Hochladen",
+      "dragDrop": "Ziehen Sie Ihre PDF-Datei hierher oder klicken Sie zum Durchsuchen",
+      "supportedFormats": "Unterstützt PDF-Dateien bis zu 10MB",
+      "replace": "Ersetzen",
+      "clear": "Löschen",
+      "processing": "PDF wird verarbeitet...",
+      "results": "Extrahierte E-Mails",
+      "noEmailsFound": "Keine E-Mail-Adressen in der PDF-Datei gefunden.",
+      "settings": "Extraktionseinstellungen",
+      "sortBy": "Sortieren nach",
+      "sortTooltip": "Wählen Sie, wie die extrahierten E-Mail-Adressen sortiert werden sollen",
+      "sortOptions": {
+        "alphabetical": "Alphabetisch",
+        "domain": "Domäne",
+        "position": "Position",
+        "validity": "Gültigkeit"
+      },
+      "processingOptions": "Verarbeitungsoptionen",
+      "removeDuplicates": "Duplikate Entfernen",
+      "validateEmails": "E-Mails Validieren",
+      "duplicatesTooltip": "Entfernen Sie doppelte E-Mail-Adressen aus den Ergebnissen",
+      "validationTooltip": "Führen Sie RFC-konforme Validierung für extrahierte E-Mails durch",
+      "stats": {
+        "totalFound": "Gesamt Gefunden",
+        "unique": "Eindeutig",
+        "valid": "Gültig",
+        "invalid": "Ungültig"
+      },
+      "uniqueDomains": "Eindeutige Domänen",
+      "validityRate": "Gültigkeitsrate",
+      "pages": "Seiten",
+      "fileSize": "Dateigröße",
+      "processingTime": "Verarbeitungszeit",
+      "filename": "Dateiname",
+      "topDomains": "Top-Domänen",
+      "domainsHint": "Häufigste E-Mail-Domänen, die in der PDF gefunden wurden",
+      "duplicatesFound": "Duplikate Gefunden",
+      "duplicatesHint": "Aktivieren Sie 'Duplikate Entfernen', um doppelte E-Mail-Adressen herauszufiltern."
+    }
   }
 }

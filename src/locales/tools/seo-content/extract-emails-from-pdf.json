@@ -398,5 +398,209 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "E-Mails aus PDF-Dateien Extrahieren",
+    "metaDescription": "Laden Sie PDF-Dateien hoch und extrahieren Sie E-Mail-Adressen mit unserem kostenlosen Online-Tool. Verarbeiten Sie Dokumente bis zu 10MB mit erweiterten Filter-, Validierungs- und Exportoptionen.",
+    "sections": {
+      "intro": {
+        "title": "Professionelles PDF-E-Mail-Extraktions-Tool",
+        "content": "Unser PDF-E-Mail-Extraktor ist ein leistungsstarkes Online-Tool, das Ihnen hilft, schnell und effizient E-Mail-Adressen aus PDF-Dokumenten zu extrahieren. Egal, ob Sie Geschäftsberichte, Kontaktlisten oder Forschungsarbeiten verarbeiten, unser Tool kann PDF-Dateien bis zu 10MB verarbeiten und alle E-Mail-Adressen mit hoher Genauigkeit extrahieren."
+      },
+      "advanced": {
+        "title": "Erweiterte PDF-Verarbeitungsfunktionen",
+        "content": "Im Gegensatz zu einfachen textbasierten Extraktoren kann unser PDF-Tool komplexe Dokumentlayouts, mehrere Seiten und verschiedene PDF-Formate verarbeiten. Das Tool verwendet fortschrittliche PDF-Parsing-Technologie, um Textinhalte zu extrahieren und dabei den Kontext und die Struktur von E-Mail-Adressen im Dokument zu erhalten."
+      },
+      "features": {
+        "title": "Hauptfunktionen",
+        "items": [
+          {
+            "title": "Drag & Drop PDF-Upload",
+            "description": "Ziehen Sie einfach Ihre PDF-Datei per Drag & Drop oder klicken Sie, um zu suchen und Ihr Dokument auszuwählen"
+          },
+          {
+            "title": "Unterstützung für große Dateien",
+            "description": "Verarbeiten Sie PDF-Dateien bis zu 10MB Größe mit schneller Verarbeitungsgeschwindigkeit"
+          },
+          {
+            "title": "Mehrseitige Verarbeitung",
+            "description": "Extrahieren Sie E-Mails automatisch von allen Seiten Ihres PDF-Dokuments"
+          },
+          {
+            "title": "E-Mail-Validierung",
+            "description": "Integrierte RFC-konforme E-Mail-Validierung zur Gewährleistung der Genauigkeit"
+          },
+          {
+            "title": "Duplikatentfernung",
+            "description": "Entfernen Sie automatisch doppelte E-Mail-Adressen aus den Ergebnissen"
+          },
+          {
+            "title": "Mehrere Exportformate",
+            "description": "Exportieren Sie Ergebnisse als TXT-, CSV- oder JSON-Formate für einfache Integration"
+          },
+          {
+            "title": "Domänenanalyse",
+            "description": "Erhalten Sie Einblicke in E-Mail-Domänen und Verteilungsmuster"
+          },
+          {
+            "title": "Verarbeitungsstatistiken",
+            "description": "Zeigen Sie detaillierte Statistiken zu Dateigröße, Verarbeitungszeit und Ergebnissen an"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Anwendungsfälle",
+        "items": [
+          {
+            "title": "Geschäftskontakt-Extraktion",
+            "description": "Extrahieren Sie Kontaktinformationen aus Geschäftsberichten, Vorschlägen und Präsentationen"
+          },
+          {
+            "title": "Forschungsdatenverarbeitung",
+            "description": "Verarbeiten Sie akademische Arbeiten und Forschungsdokumente, um Autoren- und Kontaktinformationen zu extrahieren"
+          },
+          {
+            "title": "Marketing-Listenaufbau",
+            "description": "Erstellen Sie E-Mail-Listen aus PDF-Broschüren, Katalogen und Marketingmaterialien"
+          },
+          {
+            "title": "Dokumentendigitalisierung",
+            "description": "Konvertieren Sie gedruckte Kontaktlisten und Verzeichnisse in digitales Format"
+          },
+          {
+            "title": "Datenmigration",
+            "description": "Extrahieren Sie E-Mail-Daten aus Legacy-PDF-Dokumenten für Systemmigrationen"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie das Tool",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Laden Sie Ihre PDF-Datei hoch",
+            "description": "Ziehen Sie Ihre PDF-Datei per Drag & Drop in den Upload-Bereich oder klicken Sie, um zu suchen und Ihr Dokument auszuwählen. Dateien bis zu 10MB werden unterstützt."
+          },
+          {
+            "step": 2,
+            "title": "Konfigurieren Sie die Einstellungen",
+            "description": "Passen Sie Extraktionseinstellungen wie Duplikatentfernung, E-Mail-Validierung und Sortierpräferenzen im Einstellungsbereich an."
+          },
+          {
+            "step": 3,
+            "title": "Verarbeiten Sie das Dokument",
+            "description": "Das Tool verarbeitet automatisch Ihr PDF, extrahiert Textinhalte und identifiziert alle E-Mail-Adressen im Dokument."
+          },
+          {
+            "step": 4,
+            "title": "Überprüfen Sie die Ergebnisse",
+            "description": "Zeigen Sie die extrahierten E-Mail-Adressen im Ergebnisbereich zusammen mit Statistiken zu Verarbeitung und Validierungsergebnissen an."
+          },
+          {
+            "step": 5,
+            "title": "Exportieren oder Kopieren",
+            "description": "Kopieren Sie die Ergebnisse in Ihre Zwischenablage oder exportieren Sie sie im TXT-, CSV- oder JSON-Format zur Verwendung in anderen Anwendungen."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für PDF-E-Mail-Extraktion",
+        "description": "Sehen Sie, wie verschiedene Arten von PDF-Dokumenten verarbeitet werden, um E-Mail-Adressen zu extrahieren.",
+        "items": [
+          {
+            "title": "Geschäftsbericht-Verarbeitung",
+            "input": "Quartalsbericht-Q3-2024.pdf (Enthält: Kontakt: sales@company.com, Support: help@business.org)",
+            "output": "sales@company.com\nhelp@business.org"
+          },
+          {
+            "title": "Konferenzmaterialien",
+            "input": "Akademische-Konferenz-2024.pdf (Enthält: Dr. Smith (john.smith@university.edu), Prof. Johnson (m.johnson@research.ac.uk))",
+            "output": "john.smith@university.edu\nm.johnson@research.ac.uk"
+          },
+          {
+            "title": "Marketingmaterialien",
+            "input": "Produktbroschüre.pdf (Enthält: Info: info@startup.com, Verkauf: contact@newcompany.io, Support: help@service.net)",
+            "output": "info@startup.com\ncontact@newcompany.io\nhelp@service.net"
+          },
+          {
+            "title": "Kontaktverzeichnis",
+            "input": "Mitarbeiterverzeichnis.pdf (Enthält mehrere Abteilungen mit verschiedenen E-Mail-Formaten)",
+            "output": "admin@company.com\nhr@company.com\nfinance@company.com\nit.support@company.com"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile",
+        "content": "Professionelle PDF-E-Mail-Extraktion mit umfassenden Funktionen und universeller Kompatibilität.",
+        "items": [
+          "Zeitersparnis durch Automatisierung - eliminieren Sie manuelles Kopieren und Tippen von E-Mail-Adressen",
+          "Hohe Genauigkeit - fortschrittliches PDF-Parsing gewährleistet genaue Extraktion aus komplexen Layouts",
+          "Stapelverarbeitung - verarbeiten Sie mehrseitige Dokumente und extrahieren Sie alle E-Mails in einem Vorgang",
+          "Datenqualität - integrierte Validierung und Duplikatentfernung gewährleisten saubere Ergebnisse",
+          "Datenschutz - alle Verarbeitungen erfolgen clientseitig in Ihrem Browser",
+          "Keine Softwareinstallation - funktioniert direkt in Ihrem Webbrowser"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche maximale PDF-Dateigröße wird unterstützt?",
+          "answer": "Unser Tool unterstützt PDF-Dateien bis zu 10MB Größe. Dies ist für die meisten Geschäftsdokumente, Berichte und Präsentationen ausreichend und gewährleistet gleichzeitig schnelle Verarbeitungsgeschwindigkeiten."
+        },
+        {
+          "question": "Funktioniert das Tool mit passwortgeschützten PDFs?",
+          "answer": "Derzeit funktioniert das Tool mit Standard-PDF-Dateien, die nicht passwortgeschützt sind. Wenn Sie eine passwortgeschützte PDF haben, müssen Sie zuerst den Passwortschutz entfernen."
+        },
+        {
+          "question": "Wie genau ist die E-Mail-Extraktion?",
+          "answer": "Unser Tool verwendet fortschrittliche PDF-Parsing- und E-Mail-Erkennungsalgorithmen, um hohe Genauigkeit zu erreichen. Es kann verschiedene E-Mail-Formate und komplexe Dokumentlayouts verarbeiten und dabei falsche Positive minimieren."
+        },
+        {
+          "question": "Kann ich mehrere PDF-Dateien gleichzeitig verarbeiten?",
+          "answer": "Derzeit verarbeitet das Tool eine PDF-Datei nach der anderen. Sie können jedoch mehrere Dateien schnell verarbeiten, indem Sie sie nacheinander hochladen."
+        },
+        {
+          "question": "Was passiert mit meinen hochgeladenen PDF-Dateien?",
+          "answer": "Alle PDF-Verarbeitungen erfolgen lokal in Ihrem Browser. Ihre Dateien werden nicht auf unsere Server hochgeladen, was vollständige Privatsphäre und Sicherheit Ihrer Dokumente gewährleistet."
+        },
+        {
+          "question": "Kann ich die extrahierten E-Mails exportieren?",
+          "answer": "Ja, Sie können die extrahierten E-Mail-Adressen in mehreren Formaten exportieren, einschließlich Klartext (TXT), kommagetrennte Werte (CSV) und JSON-Format für einfache Integration mit anderen Tools."
+        },
+        {
+          "question": "Entfernt das Tool doppelte E-Mail-Adressen?",
+          "answer": "Ja, das Tool enthält eine Option zum automatischen Entfernen doppelter E-Mail-Adressen aus den Ergebnissen. Sie können diese Funktion im Einstellungsbereich aktivieren oder deaktivieren."
+        },
+        {
+          "question": "Welche Arten von PDF-Dokumenten funktionieren am besten?",
+          "answer": "Das Tool funktioniert am besten mit textbasierten PDF-Dokumenten wie Geschäftsberichten, akademischen Arbeiten und Präsentationen. Gescannte PDFs oder bildbasierte Dokumente können möglicherweise nicht optimale Ergebnisse liefern."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "description": "Entdecken Sie andere nützliche Textverarbeitungs- und Extraktionstools, um Ihren Workflow zu verbessern.",
+        "items": [
+          {
+            "name": "E-Mails aus Text Extrahieren",
+            "description": "Extrahieren Sie E-Mail-Adressen aus Klartext-Inhalten mit erweiterten Filteroptionen",
+            "href": "/de/tools/extract-emails-from-text"
+          },
+          {
+            "name": "Bild zu Text OCR",
+            "description": "Konvertieren Sie Bilder mit Text in bearbeitbares Textformat",
+            "href": "/de/tools/image-to-text"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen, Wörter, Sätze und Absätze in Ihrem Text",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Textformatierung Entfernen",
+            "description": "Bereinigen und entfernen Sie Formatierungen aus kopierten Textinhalten",
+            "href": "/de/tools/remove-text-formatting"
+          }
+        ]
+      }
+    }
   }
 }
