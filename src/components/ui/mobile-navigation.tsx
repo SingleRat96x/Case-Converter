@@ -634,7 +634,7 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           </div>
 
           {/* Bottom Controls */}
-          <div className="flex-shrink-0 border-t border-border p-4 space-y-3 bg-background">
+          <div className="flex-shrink-0 border-t border-border p-4 space-y-3 bg-background mobile-menu-bottom-controls">
             {/* Theme Toggle */}
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm font-medium text-muted-foreground">

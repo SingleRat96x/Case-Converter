@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import Script from "next/script";
 import { headers } from "next/headers";
@@ -54,6 +54,13 @@ export const metadata: Metadata = {
     title: "Text Case Converter - Professional Text Transformation Tools",
     description: "Transform your text into different cases with ease. Perfect for developers, writers, and content creators.",
   },
+};
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 5,
+  viewportFit: 'cover', // Enable safe area insets for iOS devices
 };
 
 export default async function RootLayout({
