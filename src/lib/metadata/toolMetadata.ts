@@ -952,6 +952,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Шрифтов Facebook — Стиль для Постов и Био',
         description: 'Создавайте стильные шрифты для постов, био и комментариев в Facebook. Копируйте и вставляйте мгновенно. Бесплатно.',
         shortDescription: 'Стильные FB‑шрифты для постов и био.',
+      },
+      de: {
+        title: 'Facebook Schriftarten-Generator — Stylischer Text für Posts & Bios',
+        description: 'Generieren Sie stylische Facebook-Schriftarten für Posts, Bios und Kommentare. Sofort kopieren & einfügen. Kostenlos, schnell, keine Limits.',
+        shortDescription: 'Stylische FB-Schriftarten für Posts & Bios.',
       }
     },
     schema: createAdvancedSchema('facebook-font', ['Stylish text', 'Copy & paste'], 'Text Input', 'Facebook Font', 4.5, 567),
@@ -972,6 +977,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Шрифтов Discord — Красивые Шрифты и Ники',
         description: 'Создавайте красивые шрифты для чатов и ников в Discord. Копируйте и вставляйте мгновенно. Подходит для каналов и био.',
         shortDescription: 'Красивые шрифты для Discord.',
+      },
+      de: {
+        title: 'Discord Schriftarten-Generator — Stylische Chat-Schriftarten & Nickname-Stile',
+        description: 'Erstellen Sie stylische Discord-Schriftarten für Chats und Nicknames. Sofort kopieren & einfügen. Funktioniert für Kanäle, Bios und Server.',
+        shortDescription: 'Stylische Discord-Schriftarten für Chats & Namen.',
       }
     },
     schema: createAdvancedSchema('discord-font', ['Stylish fonts', 'Copy & paste'], 'Text Input', 'Discord Font', 4.4, 456),
@@ -1408,6 +1418,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер В ВЕРХНИЙ РЕГИСТР — Uppercase',
         description: 'Преобразуйте текст в ВЕРХНИЙ РЕГИСТР мгновенно. Вставьте или введите — результат сразу готов. Поддержка больших текстов.',
         shortDescription: 'Текст в ВЕРХНИЙ РЕГИСТР.',
+      },
+      de: {
+        title: 'Großbuchstaben-Konverter – Text sofort in GROSSBUCHSTABEN',
+        description: 'Wandeln Sie jeden Text in Sekunden komplett in Großbuchstaben um – ideal für Überschriften, Hervorhebungen oder Coding-Standards.',
+        shortDescription: 'Text in GROSSBUCHSTABEN umwandeln.',
       }
     },
     schema: createAdvancedSchema('uppercase', ['Instant convert', 'Large input'], 'Text Input', 'Uppercase Text', 4.6, 678),
@@ -1453,6 +1468,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Title Case — Правильная Капитализация Заголовков',
         description: 'Преобразуйте текст в корректный Title Case по общим правилам. Исправляйте регистр в заголовках и документах.',
         shortDescription: 'Корректная капитализация заголовков.',
+      },
+      de: {
+        title: 'Title Case Konverter – Titel korrekt kapitalisieren',
+        description: 'Wandeln Sie Text in korrekte Titel-Schreibweise um. Perfekt für Überschriften, Dokumente und Artikel mit professioneller Groß-/Kleinschreibung.',
+        shortDescription: 'Text in Titel-Schreibweise umwandeln.',
       }
     },
     schema: createAdvancedSchema('title-case', ['Style rules', 'Headline ready'], 'Text Input', 'Title Case Text', 4.8, 1234),

@@ -1506,6 +1506,28 @@
       "avgDomainLength": "Durchschn. Domain-Länge",
       "uniqueDomains": "Einzigartige Domains"
     },
+    "discordFonts": {
+      "title": "Discord Schriftarten-Generator - Gaming Textstile",
+      "description": "Generieren Sie einzigartige Unicode-Schriftarten für Discord-Nachrichten, Benutzernamen und Kanalnamen. Erstellen Sie gaming-inspirierten Text mit fetten, kursiven, monospaced und speziellen Zeichen-Stilen, perfekt für Discord-Communities.",
+      "outputLabel": "Discord Stylisierter Text",
+      "copiedMessage": "Discord-Schriftart in Zwischenablage kopiert!",
+      "downloadFileName": "discord-fonts.txt",
+      "convertButton": "Discord-Schriftarten Generieren",
+      "uploadDescription": "Laden Sie eine Textdatei hoch, um sie in Discord-Schriftarten zu konvertieren",
+      "selectStyle": "Discord-Schriftarten-Stil Auswählen",
+      "preview": "Vorschau"
+    },
+    "facebookFonts": {
+      "title": "Facebook Schriftarten-Generator - Stylischer Text für Social Media",
+      "description": "Generieren Sie stylische Unicode-Schriftarten für Facebook-Posts, Kommentare, Stories und Profil-Updates. Erstellen Sie auffälligen Text mit fetten Serifen, kursiven, skriptartigen und monospaced Stilen, die überall funktionieren.",
+      "outputLabel": "Facebook Stylisierter Text",
+      "copiedMessage": "Facebook-Schriftart in Zwischenablage kopiert!",
+      "downloadFileName": "facebook-fonts.txt",
+      "convertButton": "Facebook-Schriftarten Generieren",
+      "uploadDescription": "Laden Sie eine Textdatei hoch, um sie in Facebook-Schriftarten zu konvertieren",
+      "selectStyle": "Facebook-Schriftarten-Stil Auswählen",
+      "preview": "Vorschau"
+    },
     "textReplace": {
       "title": "Text Suchen und Ersetzen",
       "description": "Suchen und ersetzen Sie Text mit leistungsstarken Optionen für Groß-/Kleinschreibungsbeachtung und Ganzes-Wort-Suche. Perfekt für Massentextbearbeitung und Korrekturen.",

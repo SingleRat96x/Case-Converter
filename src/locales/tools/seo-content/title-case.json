@@ -270,5 +270,109 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Title Case Konverter – Titel korrekt kapitalisieren",
+    "metaDescription": "Wandeln Sie Text automatisch in Titel-Schreibweise um. Perfekt für Überschriften, Buchtitel, Artikel-Headlines und professionelle Formatierung – kostenlos, sicher und ohne Anmeldung.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Title Case Konverter – Titel korrekt kapitalisieren",
+        "content": "Bringen Sie jeden Text mit einem Klick in die richtige Titel-Schreibweise. Unser kostenloser Title Case Konverter wandelt Überschriften, Buchtitel, Artikel-Headlines und jeden anderen Text in professionelle Titel-Schreibweise um – komplett im Browser und ohne Datenweitergabe."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für Titel-Schreibweise",
+        "items": [
+          { "title": "Echtzeit-Konvertierung", "description": "Sofortige Umwandlung in Titel-Schreibweise beim Tippen oder Einfügen" },
+          { "title": "Datei-Upload", "description": "Laden Sie Textdateien hoch und konvertieren Sie komplette Dokumente automatisch" },
+          { "title": "Kopieren & Download", "description": "Übernehmen Sie Ergebnisse direkt per Klick oder laden Sie sie als TXT-Datei herunter" },
+          { "title": "Eingebaute Textanalyse", "description": "Erhalten Sie Live-Statistiken zu Zeichen, Wörtern, Sätzen und Lesedauer" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert mit Umlauten, Sonderzeichen und mehrsprachigen Texten" },
+          { "title": "Datenschutzfreundlich", "description": "100 % lokal im Browser – keine Speicherung oder Übertragung Ihrer Inhalte" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle für Titel-Schreibweise",
+        "description": "Korrigieren Sie Groß-/Kleinschreibung in Überschriften, Titeln und Headlines – vom Blogartikel bis zur wissenschaftlichen Arbeit.",
+        "items": [
+          { "title": "Artikel-Überschriften", "description": "Formatieren Sie Blog-Post-Titel und News-Headlines professionell" },
+          { "title": "Bücher & Filme", "description": "Wenden Sie korrekte Groß-/Kleinschreibung auf Buchtitel, Filmtitel und Publikationen an" },
+          { "title": "Marketing-Materialien", "description": "Erstellen Sie überzeugende Headlines für Werbung und Promo-Content" },
+          { "title": "Website-Header", "description": "Formatieren Sie Seitentitel, Abschnittsüberschriften und Navigationsmenüs" },
+          { "title": "Wissenschaftliche Arbeiten", "description": "Wenden Sie korrekte Titel-Formatierung auf Forschungsarbeiten und Zitate an" },
+          { "title": "Social Media Posts", "description": "Machen Sie Social-Media-Content mit korrekter Titel-Formatierung ansprechender" },
+          { "title": "Business-Dokumente", "description": "Formatieren Sie Report-Titel, Präsentations-Header und professionelle Dokumente" },
+          { "title": "SEO-Optimierung", "description": "Erstellen Sie korrekt formatierte Meta-Titel und Seiten-Header für Suchmaschinen" }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie Text in Titel-Schreibweise",
+        "description": "In vier einfachen Schritten zum perfekt formatierten Titel.",
+        "steps": [
+          { "step": 1, "title": "Text einfügen oder hochladen", "description": "Tippen Sie direkt in das Eingabefeld, fügen Sie Text ein oder laden Sie eine Datei hoch." },
+          { "step": 2, "title": "Automatische Umwandlung", "description": "Die Konvertierung in Titel-Schreibweise passiert sofort – keine zusätzlichen Klicks nötig." },
+          { "step": 3, "title": "Analyse prüfen", "description": "Nutzen Sie Zeichen-, Wort- und Satzstatistiken zur Qualitätskontrolle." },
+          { "step": 4, "title": "Ergebnis exportieren", "description": "Kopieren Sie den Text oder laden Sie ihn als Datei herunter, um ihn weiterzuverwenden." }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Titel-Schreibweise",
+        "description": "So sehen verschiedene Ausgangstexte nach der Umwandlung aus.",
+        "items": [
+          { "title": "Einfacher Text", "input": "hallo welt", "output": "Hallo Welt" },
+          { "title": "Artikel-Titel", "input": "der komplette leitfaden zur webentwicklung", "output": "Der Komplette Leitfaden Zur Webentwicklung" },
+          { "title": "Gemischte Eingabe", "input": "dAs iSt EiN bEiSpIeL", "output": "Das Ist Ein Beispiel" },
+          { "title": "Mit Satzzeichen", "input": "willkommen auf unserer website!", "output": "Willkommen Auf Unserer Website!" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unser Title Case Konverter?",
+        "content": "Optimiert für professionelle Workflows und höchste Textqualität.",
+        "items": [
+          "Kostenlos und ohne Nutzungslimits",
+          "Keine Registrierung oder Anmeldung erforderlich",
+          "Lokale Verarbeitung für maximale Datensicherheit",
+          "Kompatibel mit langen Texten und großen Dateien",
+          "Saubere Ergebnisse für jede Sprache",
+          "Integrierte Textstatistiken und Kopierfunktionen",
+          "Responsives Design für Desktop, Tablet und Smartphone",
+          "Direkte Verlinkung zu weiteren Case-Convertern"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was bedeutet Titel-Schreibweise?",
+          "answer": "Titel-Schreibweise (Title Case) bedeutet, dass der erste Buchstabe jedes wichtigen Wortes großgeschrieben wird, während Artikel, Präpositionen und Konjunktionen normalerweise klein bleiben (außer sie stehen am Anfang oder Ende). Standard für Überschriften, Headlines und Titel."
+        },
+        {
+          "question": "Funktioniert das Tool auch mit Umlauten und Sonderzeichen?",
+          "answer": "Ja. Der Konverter unterstützt vollständige Unicode-Zeichen – inklusive Umlaute, Eszett, Akzente, kyrillische oder asiatische Zeichen."
+        },
+        {
+          "question": "Kann ich Dateien verarbeiten?",
+          "answer": "Sie können Textdateien wie .txt, .md, .json, .js, .ts, .html oder .css hochladen. Der Inhalt wird komplett in Titel-Schreibweise umgewandelt."
+        },
+        {
+          "question": "Bleibt mein Text privat?",
+          "answer": "Absolut. Alle Berechnungen passieren in Ihrem Browser. Wir speichern oder übertragen keine Daten an Server – perfekter Datenschutz für vertrauliche Inhalte."
+        },
+        {
+          "question": "Welche Dateiformate werden unterstützt?",
+          "answer": "Sie können verschiedene Textformate hochladen, darunter .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html und andere Klartext-Dateien."
+        },
+        {
+          "question": "Wie geht das Tool mit Artikeln und Präpositionen um?",
+          "answer": "Unser Title Case Konverter kapitalisiert den ersten Buchstaben jedes Wortes – der gängigste und weithin akzeptierte Ansatz für digitalen Content und Web-Formatierung."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Konverter",
+        "items": [
+          { "name": "Großbuchstaben-Konverter", "description": "Text vollständig in Großbuchstaben verwandeln", "href": "/de/tools/uppercase" },
+          { "name": "Kleinbuchstaben-Konverter", "description": "Konsistente Kleinbuchstaben für Code, URLs und Content", "href": "/de/tools/lowercase" },
+          { "name": "Satzschreibweise-Konverter", "description": "Nur den ersten Buchstaben eines Satzes großschreiben", "href": "/de/tools/sentence-case" },
+          { "name": "Alternating Case Konverter", "description": "Kreative Wechsel-Großschreibung für Memes und Social Posts", "href": "/de/tools/alternating-case" }
+        ]
+      }
+    }
   }
 }
