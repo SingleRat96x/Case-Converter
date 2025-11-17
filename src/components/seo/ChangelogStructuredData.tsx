@@ -7,18 +7,56 @@ export function ChangelogStructuredData() {
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
   const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
-  const url = locale === 'en' ? `${baseUrl}/changelog` : `${baseUrl}/ru/changelog`;
+
+  const url =
+    locale === 'en'
+      ? `${baseUrl}/changelog`
+      : locale === 'ru'
+        ? `${baseUrl}/ru/changelog`
+        : `${baseUrl}/de/changelog`;
+
+  const localeConfig =
+    locale === 'en'
+      ? {
+          name: 'Product Changelog - Text Case Converter',
+          description:
+            'Stay up-to-date with the latest changes, new tools, and improvements to our platform. Track new features, bug fixes, and enhancements.',
+          inLanguage: 'en-US',
+          homeLabel: 'Home',
+          updatesName: 'Product Updates',
+          updatesDescription: 'A chronological list of product updates, new features, and improvements',
+          homeUrl: baseUrl
+        }
+      : locale === 'ru'
+        ? {
+            name: 'История Изменений - Конвертер Регистра Текста',
+            description:
+              'Будьте в курсе последних изменений, новых инструментов и улучшений платформы. Отслеживайте новые функции, исправления и улучшения.',
+            inLanguage: 'ru-RU',
+            homeLabel: 'Главная',
+            updatesName: 'Обновления Продукта',
+            updatesDescription: 'Хронологический список обновлений продукта, новых функций и улучшений',
+            homeUrl: `${baseUrl}/ru`
+          }
+        : {
+            name: 'Produkt-Änderungsprotokoll - Text Case Converter',
+            description:
+              'Bleiben Sie auf dem Laufenden über die neuesten Änderungen, neuen Werkzeuge und Verbesserungen unserer Plattform. Verfolgen Sie neue Funktionen, Fehlerbehebungen und Verbesserungen.',
+            inLanguage: 'de-DE',
+            homeLabel: 'Startseite',
+            updatesName: 'Produktupdates',
+            updatesDescription: 'Eine chronologische Liste von Produktupdates, neuen Funktionen und Verbesserungen',
+            homeUrl: `${baseUrl}/de`
+          };
 
   const structuredData = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
     '@id': url,
     url: url,
-    name: locale === 'en' ? 'Product Changelog - Text Case Converter' : 'История Изменений - Конвертер Регистра Текста',
-    description: locale === 'en' 
-      ? 'Stay up-to-date with the latest changes, new tools, and improvements to our platform. Track new features, bug fixes, and enhancements.'
-      : 'Будьте в курсе последних изменений, новых инструментов и улучшений платформы. Отслеживайте новые функции, исправления и улучшения.',
-    inLanguage: locale === 'en' ? 'en-US' : 'ru-RU',
+    name: localeConfig.name,
+    description: localeConfig.description,
+    inLanguage: localeConfig.inLanguage,
     isPartOf: {
       '@type': 'WebSite',
       '@id': `${baseUrl}/#website`,
@@ -44,23 +82,26 @@ export function ChangelogStructuredData() {
         {
           '@type': 'ListItem',
           position: 1,
-          name: locale === 'en' ? 'Home' : 'Главная',
-          item: locale === 'en' ? baseUrl : `${baseUrl}/ru`
+          name: localeConfig.homeLabel,
+          item: localeConfig.homeUrl
         },
         {
           '@type': 'ListItem',
           position: 2,
-          name: locale === 'en' ? 'Changelog' : 'История Изменений',
+          name:
+            locale === 'en'
+              ? 'Changelog'
+              : locale === 'ru'
+                ? 'История Изменений'
+                : 'Änderungsprotokoll',
           item: url
         }
       ]
     },
     mainEntity: {
       '@type': 'ItemList',
-      name: locale === 'en' ? 'Product Updates' : 'Обновления Продукта',
-      description: locale === 'en' 
-        ? 'A chronological list of product updates, new features, and improvements'
-        : 'Хронологический список обновлений продукта, новых функций и улучшений',
+      name: localeConfig.updatesName,
+      description: localeConfig.updatesDescription,
       itemListOrder: 'https://schema.org/ItemListOrderDescending'
     }
   };

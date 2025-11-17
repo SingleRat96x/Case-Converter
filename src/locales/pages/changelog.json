@@ -29,6 +29,12 @@
       "month1": {
         "title": "November 2025",
         "entries": {
+          "0": {
+            "type": "new",
+            "title": "Website Now Available in German",
+            "description": "The entire site now supports German with localized tools, navigation, and SEO pages.",
+            "date": "Nov 16, 2025"
+          },
           "1": {
             "type": "new",
             "title": "SHA-1 Hash Generator",
@@ -162,6 +168,12 @@
       "month1": {
         "title": "Ноябрь 2025",
         "entries": {
+          "0": {
+            "type": "new",
+            "title": "Сайт Теперь Доступен на Немецком",
+            "description": "Весь сайт теперь поддерживает немецкий язык: инструменты, навигация и SEO-страницы.",
+            "date": "16 ноя 2025"
+          },
           "1": {
             "type": "new",
             "title": "Генератор SHA-1 Хеша",
@@ -295,6 +307,12 @@
       "month1": {
         "title": "November 2025",
         "entries": {
+          "0": {
+            "type": "new",
+            "title": "Website jetzt auch auf Deutsch",
+            "description": "Die gesamte Website unterstützt jetzt Deutsch – inklusive Tools, Navigation und SEO-Seiten.",
+            "date": "16. Nov 2025"
+          },
           "1": {
             "type": "new",
             "title": "SHA-1 Hash-Generator",

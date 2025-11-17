@@ -17,6 +17,13 @@ export async function GET() {
   // German Changelog data
   const changelogEntries = [
     {
+      id: 'nov-2025-german-launch',
+      title: 'Website jetzt auch auf Deutsch',
+      description: 'Die gesamte Website unterstützt jetzt Deutsch – inklusive Tools, Navigation und SEO-Seiten.',
+      date: new Date('2025-11-16').toUTCString(),
+      category: 'Neue Funktion'
+    },
+    {
       id: 'nov-2025-sha1-hash',
       title: 'SHA-1 Hash-Generator',
       description: 'Generieren Sie SHA-1-Hashes online mit Dateiüberprüfungsunterstützung und Legacy-Systemkompatibilität. Enthält Sicherheitshinweise für moderne Anwendungen',
