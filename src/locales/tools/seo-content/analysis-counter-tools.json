@@ -268,5 +268,150 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Textanalyse & Zähler-Werkzeuge - Erweiterte Textanalytik für Content-Erstellung",
+    "metaDescription": "Professionelle Textanalyse- und Zähler-Werkzeuge für Schriftsteller, Redakteure und Content-Ersteller. Zählen Sie Zeichen, Wörter, Sätze, analysieren Sie Häufigkeitsmuster und optimieren Sie Ihren Content.",
+    "sections": {
+      "intro": {
+        "title": "Erweiterte Textanalyse & Zähler-Werkzeuge für Content-Profis",
+        "content": "Verbessern Sie Ihr Schreiben und Ihre Content-Erstellung mit unserer umfassenden Suite von Textanalyse- und Zähler-Werkzeugen. Von einfacher Zeichen- und Wortzählung bis hin zu fortgeschrittener Frequenzanalyse und Satzstrukturbewertung bieten diese Werkzeuge detaillierte Einblicke in Ihre Textkomposition. Perfekt für Schriftsteller, Redakteure, Content-Ersteller, SEO-Spezialisten und alle, die präzise Textanalysen für professionelle oder akademische Zwecke benötigen."
+      },
+      "features": {
+        "title": "Umfassende Textanalyse-Funktionen",
+        "items": [
+          {
+            "title": "Zeichen- & Wortzählung",
+            "description": "Genaue Zeichen-, Wort- und Zeilenzählung mit Unterstützung verschiedener Textformate und Kodierungen"
+          },
+          {
+            "title": "Frequenzanalyse",
+            "description": "Erweiterte Wortfrequenzanalyse zur Identifizierung von Mustern, Wiederholungen und Keyword-Dichte"
+          },
+          {
+            "title": "Satzanalyse",
+            "description": "Detaillierte Satzzählung und Strukturanalyse für Lesbarkeitsoptimierung"
+          },
+          {
+            "title": "Echtzeit-Verarbeitung",
+            "description": "Sofortige Analyse während des Tippens mit Live-Updates und unmittelbarem Feedback"
+          },
+          {
+            "title": "Export & Download",
+            "description": "Exportieren Sie Analyseergebnisse in verschiedenen Formaten für Berichte und Dokumentation"
+          },
+          {
+            "title": "Mehrsprachige Unterstützung",
+            "description": "Genaue Zählung und Analyse für Texte in mehreren Sprachen und Schriftsystemen"
+          },
+          {
+            "title": "Professionelle Einblicke",
+            "description": "Detaillierte Statistiken und Metriken für Content-Optimierung und Qualitätsbewertung"
+          },
+          {
+            "title": "Datenschutz",
+            "description": "Alle Textanalysen werden lokal in Ihrem Browser ohne Datenübertragung durchgeführt"
+          }
+        ]
+      },
+      "toolsList": {
+        "title": "Verfügbare Textanalyse-Werkzeuge",
+        "items": [
+          {
+            "name": "Textzähler",
+            "href": "/de/tools/text-counter",
+            "description": "Umfassender Zeichen-, Wort- und Zeilenzähler mit detaillierten Statistiken und Formatanalyse"
+          },
+          {
+            "name": "Wortfrequenz-Analysator",
+            "href": "/de/tools/word-frequency",
+            "description": "Erweitertes Wortfrequenz-Analysetool zur Identifizierung von Mustern, Wiederholungen und Keyword-Dichte"
+          },
+          {
+            "name": "Satzzähler",
+            "href": "/de/tools/sentence-counter",
+            "description": "Professionelles Satzzählwerkzeug mit Strukturanalyse und Lesbarkeitsmetriken"
+          },
+          {
+            "name": "Zahlen Extrahieren",
+            "href": "/de/tools/extract-numbers",
+            "description": "Extrahieren Sie alle Zahlen aus Text mit erweiterten Optionen für Dezimalzahlen, Währungen und Prozentsätze"
+          },
+          {
+            "name": "Lesezeit-Schätzer",
+            "href": "/de/tools/reading-time-estimator",
+            "description": "Schätzen Sie die Lesezeit für Text, Artikel und JSON-Daten mit anpassbaren Lesegeschwindigkeiten"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Häufige Anwendungsfälle für Textanalyse-Werkzeuge",
+        "items": [
+          {
+            "title": "Content-Schreiben & Bearbeitung",
+            "description": "Optimieren Sie Artikellänge, überprüfen Sie Wortzahlen für Publikationen und stellen Sie die richtige Textstruktur sicher"
+          },
+          {
+            "title": "SEO-Optimierung",
+            "description": "Analysieren Sie Keyword-Dichte, optimieren Sie Content-Länge und verbessern Sie Suchmaschinen-Rankings"
+          },
+          {
+            "title": "Akademisches Schreiben",
+            "description": "Erfüllen Sie Wortzahl-Anforderungen, analysieren Sie Schreibmuster und verbessern Sie akademische Textqualität"
+          },
+          {
+            "title": "Social Media Management",
+            "description": "Stellen Sie sicher, dass Posts Plattform-Zeichenlimits einhalten und optimieren Sie Engagement durch Textanalyse"
+          },
+          {
+            "title": "Übersetzung & Lokalisierung",
+            "description": "Vergleichen Sie Textlängen über Sprachen hinweg und stellen Sie konsistente Content-Struktur sicher"
+          },
+          {
+            "title": "Qualitätssicherung",
+            "description": "Überprüfen Sie Content-Spezifikationen, suchen Sie nach sich wiederholenden Mustern und halten Sie Schreibstandards ein"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unsere Textanalyse-Werkzeuge Wählen",
+        "items": [
+          "Professionelle Textanalyse mit 5 spezialisierten Werkzeugen für alle Zähl- und Analyseanforderungen",
+          "Echtzeit-Zeichen-, Wort- und Satzzählung mit sofortigem Feedback und Live-Updates",
+          "Erweiterte Wortfrequenzanalyse zur Identifizierung von Mustern, Keyword-Dichte und Content-Optimierungsmöglichkeiten",
+          "Detaillierte Satzstrukturanalyse für verbesserte Lesbarkeit und Schreibqualitätsbewertung",
+          "Mehrsprachige Unterstützung mit genauer Zählung für internationalen Content und vielfältige Textformate",
+          "Exportfunktionen für Analyseergebnisse, Berichte und Dokumentation in verschiedenen Dateiformaten",
+          "Datenschutzorientiertes Design mit lokaler Verarbeitung ohne Datenübertragung oder -speicherung",
+          "Mobil-responsive Oberfläche, die perfekt auf allen Geräten und Bildschirmgrößen funktioniert",
+          "Völlig kostenlos mit unbegrenzter Nutzung und ohne Registrierung, Abonnements oder Funktionseinschränkungen"
+        ]
+      },
+      "relatedCategories": {
+        "title": "Verwandte Werkzeug-Kategorien",
+        "items": [
+          {
+            "name": "Textmodifikation & Formatierung",
+            "href": "/de/category/text-modification-formatting",
+            "description": "Formatieren und transformieren Sie Textinhalte mit Stil- und Modifikationswerkzeugen"
+          },
+          {
+            "name": "Social Media Text-Generatoren",
+            "href": "/de/category/social-media-text-generators",
+            "description": "Erstellen Sie stilisierten Text für Social-Media-Plattformen und Online-Content"
+          },
+          {
+            "name": "Verschiedene Werkzeuge",
+            "href": "/de/category/misc-tools",
+            "description": "Wesentliche Utilities und spezialisierte Werkzeuge für verschiedene professionelle Bedürfnisse"
+          },
+          {
+            "name": "Code & Daten-Übersetzung",
+            "href": "/de/category/code-data-translation",
+            "description": "Konvertieren Sie zwischen Datenformaten und handhaben Sie verschiedene Kodierungsschemata"
+          }
+        ]
+      }
+    }
   }
 }

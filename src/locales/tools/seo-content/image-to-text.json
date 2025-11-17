@@ -350,7 +350,184 @@
             "href": "/ru/tools/image-resizer"
           }
         ]
+  },
+  "de": {
+    "title": "Kostenloser Bild-zu-Text-OCR – Text aus Bildern online extrahieren",
+    "metaDescription": "Extrahieren Sie Text aus Bildern mit präziser OCR-Technologie. Kostenloses Online-Tool mit mehrsprachiger Unterstützung für Fotos, Scans und Screenshots.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Bild-zu-Text-OCR – Text aus Bildern online extrahieren",
+        "content": "Extrahieren Sie Text aus jedem Bild mithilfe moderner OCR-Technologie (Optical Character Recognition). Unterstützt mehrere Sprachen, liefert hohe Genauigkeit und verarbeitet Fotos, Screenshots, gescannte Dokumente und vieles mehr. Ideal, um Belege zu digitalisieren, Zitate aus Bildern zu sichern oder visuellen Text in editierbare Inhalte zu verwandeln."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für OCR-Textextraktion",
+        "items": [
+          {
+            "title": "Mehrsprachige Unterstützung",
+            "description": "Erkennt Text in Englisch, Spanisch, Französisch, Deutsch, Russisch, Chinesisch, Japanisch und Arabisch mit hoher Präzision."
+          },
+          {
+            "title": "Hohe OCR-Genauigkeit",
+            "description": "Tesseract.js-Engine mit Konfidenzwerten und anpassbaren Schwellen sorgt für verlässliche Ergebnisse."
+          },
+          {
+            "title": "Formatierung beibehalten",
+            "description": "Übernimmt Layout, Abstände und Struktur, damit Tabellen oder Absätze erhalten bleiben."
+          },
+          {
+            "title": "Automatische Ausrichtung",
+            "description": "Erkennt gedrehte oder geneigte Bilder und korrigiert sie vor der Erkennung automatisch."
+          },
+          {
+            "title": "Analysen in Echtzeit",
+            "description": "Verfolgen Sie Fortschritt und Kennzahlen wie Wortanzahl, Zeilen und Konfidenz in Live-Auswertungen."
+          },
+          {
+            "title": "Datenschutzfreundliche Verarbeitung",
+            "description": "Die gesamte OCR findet lokal im Browser statt – keine Uploads, keine Speicherung auf Servern."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Wichtige Anwendungsfälle für Bild-zu-Text",
+        "description": "Wandeln Sie visuellen Text für berufliche und private Workflows in ein bearbeitbares Format um.",
+        "items": [
+          {
+            "title": "Dokumente digitalisieren",
+            "description": "Überführen Sie Scans, Quittungen, Visitenkarten oder Notizen in editierbaren Text."
+          },
+          {
+            "title": "Text aus Screenshots",
+            "description": "Kopieren Sie Inhalte aus Screenshots, Fehlermeldungen, Social Posts oder Web-Apps."
+          },
+          {
+            "title": "Unterstützung für Studium & Forschung",
+            "description": "Digitalisieren Sie Textstellen aus Büchern, Papers, Archiven oder historischen Quellen."
+          },
+          {
+            "title": "Übersetzungs-Workflows",
+            "description": "Extrahieren Sie fremdsprachige Inhalte und übergeben Sie sie an Übersetzungs-Tools."
+          },
+          {
+            "title": "Automatisierte Datenerfassung",
+            "description": "Übernehmen Sie Inhalte aus Formularen, Rechnungen oder Zertifikaten direkt in Ihre Systeme."
+          },
+          {
+            "title": "Barrierefreiheit verbessern",
+            "description": "Bereiten Sie bildbasierte Texte für Screenreader auf und erhöhen Sie die Zugänglichkeit."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den Bild-zu-Text-OCR",
+        "description": "Befolgen Sie diese Schritte, um Text mit maximaler Genauigkeit zu extrahieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Bild hochladen",
+            "description": "Klicken oder ziehen Sie Ihre Datei in das Tool. Unterstützt JPG, PNG, GIF, WebP, BMP und TIFF bis 10 MB."
+          },
+          {
+            "step": 2,
+            "title": "OCR-Einstellungen wählen",
+            "description": "Bestimmen Sie Erkennungssprache, Konfidenz-Schwelle und optional die Formatierungs- oder Ausrichtungsoptionen."
+          },
+          {
+            "step": 3,
+            "title": "Text extrahieren",
+            "description": "Starten Sie die OCR. Das Tool analysiert das Bild und holt den gesamten lesbaren Text heraus."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis prüfen & exportieren",
+            "description": "Prüfen Sie Text und Kennzahlen, kopieren Sie den Inhalt oder laden Sie ihn als TXT-Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für extrahierten Text",
+        "description": "So verarbeitet unsere OCR verschiedene Bild- und Dokumenttypen.",
+        "items": [
+          {
+            "title": "Gescanntes Dokument",
+            "input": "PDF-Scan mit gedrucktem Text",
+            "output": "Sauber formatierter Text mit erhaltenem Layout"
+          },
+          {
+            "title": "Screenshot",
+            "input": "Screenshot einer Website oder App",
+            "output": "Extrahierte UI-Texte und Inhalte"
+          },
+          {
+            "title": "Handschriftliche Notiz",
+            "input": "Foto eines Notizzettels",
+            "output": "Digitaler Text mit hoher Genauigkeit"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Bild-zu-Text-Tool?",
+        "content": "Professionelle OCR-Funktionen, Datenschutz by Design und flexible Workflows.",
+        "items": [
+          "Unterstützung für 8+ Sprachen mit hoher Erkennungsrate",
+          "Fortschrittliche Tesseract.js-Engine mit Konfidenzbewertung",
+          "Formattreue Ausgabe für strukturierte Dokumente",
+          "Automatische Ausrichtung für gedrehte oder geneigte Bilder",
+          "Live-Verarbeitung mit Fortschrittsanzeigen",
+          "Detaillierte Analysemetriken für jeden Lauf",
+          "100 % lokal im Browser – keine Datenübertragung",
+          "Keine Registrierung oder Nutzungslimits"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Bildformate werden unterstützt?",
+          "answer": "JPG/JPEG, PNG, GIF, WebP, BMP und TIFF bis 10 MB. Für beste Ergebnisse sollten die Bilder hochauflösend und kontrastreich sein."
+        },
+        {
+          "question": "Wie genau ist die Texterkennung?",
+          "answer": "Die Genauigkeit hängt von Bildqualität, Textklarheit und Sprache ab. In der Regel erreichen wir 85–99 % bei gedrucktem Text und 70–90 % bei gut lesbarer Handschrift."
+        },
+        {
+          "question": "Kann das Tool Handschrift verarbeiten?",
+          "answer": "Ja, Lesbarkeit und Beleuchtung sind entscheidend. Klare, deutlich geschriebene Texte liefern die besten Resultate."
+        },
+        {
+          "question": "Welche Sprachen sind verfügbar?",
+          "answer": "Englisch, Spanisch, Französisch, Deutsch, Russisch, Chinesisch (vereinfacht), Japanisch und Arabisch. Die Erkennung wird automatisch auf die ausgewählte Sprache optimiert."
+        },
+        {
+          "question": "Sind meine Daten bei der Nutzung sicher?",
+          "answer": "Ja. Alles läuft lokal in Ihrem Browser, es werden keine Bilder oder Texte hochgeladen oder gespeichert."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Bild- und Text-Tools",
+        "items": [
+          {
+            "name": "Bild-Zuschneider",
+            "description": "Bild zuschneiden und optimieren, bevor Sie OCR starten",
+            "href": "/de/tools/image-cropper"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Statistiken und Wortanzahl für extrahierten Text analysieren",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Formatierung entfernen",
+            "description": "Extrahierten Text schnell säubern und vereinheitlichen",
+            "href": "/de/tools/remove-text-formatting"
+          },
+          {
+            "name": "Bildgrößenänderer",
+            "description": "Bildgröße optimieren, um OCR-Ergebnisse zu verbessern",
+            "href": "/de/tools/image-resizer"
+          }
+        ]
       }
+    }
+  }
     }
   }
 }

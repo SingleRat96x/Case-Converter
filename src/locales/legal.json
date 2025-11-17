@@ -1050,5 +1050,580 @@
       "yes": "Да",
       "no": "Нет"
     }
+  },
+  "de": {
+    "privacy": {
+      "title": "Datenschutzrichtlinie",
+      "lastUpdated": "Zuletzt aktualisiert: {date}",
+      "version": "Version {version}",
+      "effectiveDate": "Gültig ab: {date}",
+      "summary": {
+        "title": "Zusammenfassung in einfacher Sprache",
+        "intro": "Wir respektieren Ihre Privatsphäre und entwickeln Werkzeuge mit Datenschutz als Standard.",
+        "points": [
+          "Die meisten Werkzeuge verarbeiten Daten vollständig in Ihrem Browser",
+          "Wir benötigen keine Registrierung und sammeln keine personenbezogenen Daten",
+          "Grundlegende Analysen helfen uns, die Leistung der Website zu verbessern",
+          "Drittanbieterdienste können Cookies für Werbung und Analysen setzen"
+        ]
+      },
+      "tableOfContents": {
+        "title": "Inhaltsverzeichnis"
+      },
+      "examples": "Beispiele:",
+      "sections": {
+        "introduction": {
+          "title": "Einführung & Geltungsbereich",
+          "content": "Diese Datenschutzrichtlinie beschreibt, wie {companyName} (\"wir\", \"uns\" oder \"unser\") Informationen verarbeitet, wenn Sie unsere Textkonvertierungswerkzeuge und -dienste unter {domain} nutzen. Diese Richtlinie gilt für alle Interaktionen mit unserer Website und unseren Werkzeugen. Wir verpflichten uns, Ihre Privatsphäre durch Privacy-by-Design-Prinzipien und transparente Datenverarbeitungspraktiken zu schützen."
+        },
+        "dataProcessing": {
+          "title": "Daten, die wir verarbeiten",
+          "subtitle": "Wir verarbeiten minimale Daten, um unsere Dienste bereitzustellen und zu verbessern:",
+          "categories": {
+            "0": {
+              "title": "Werkzeug-Eingabedaten",
+              "description": "Text und Dateien, die Sie in unsere Werkzeuge eingeben, werden nach Möglichkeit clientseitig in Ihrem Browser verarbeitet. Diese Daten werden nicht an unsere Server übertragen, es sei denn, dies ist für die Funktionalität des Werkzeugs erforderlich.",
+              "examples": "Text für Fallkonvertierung, Dateien für Formatkonvertierung, Benutzerinhalte"
+            },
+            "1": {
+              "title": "Nutzungsanalysen",
+              "description": "Wir sammeln aggregierte Nutzungsdaten, um zu verstehen, wie unsere Werkzeuge verwendet werden, und um die Leistung zu verbessern.",
+              "examples": "Angezeigte Seiten, Häufigkeit der Werkzeugnutzung, ungefährer geografischer Standort (Land/Region), Gerätetyp, Browserinformationen"
+            },
+            "2": {
+              "title": "Technische Daten",
+              "description": "Automatisch erfasste Informationen zur Gewährleistung der ordnungsgemäßen Funktionalität und Sicherheit der Website.",
+              "examples": "IP-Adresse, User-Agent-String, Referrer, Sitzungsdauer, Fehlerprotokolle"
+            },
+            "3": {
+              "title": "Cookies & lokaler Speicher",
+              "description": "Kleine Datendateien, die auf Ihrem Gerät gespeichert werden, um Präferenzen zu speichern und Analysen zu ermöglichen.",
+              "examples": "Spracheinstellungen, Theme-Auswahl, Analyse-Kennungen"
+            }
+          },
+          "noAccountData": {
+            "title": "Keine Kontodaten",
+            "description": "Wir benötigen keine Benutzerkonten. Sie können alle Werkzeuge nutzen, ohne persönliche Informationen wie Namen, E-Mail-Adressen oder Passwörter anzugeben."
+          }
+        },
+        "legalBases": {
+          "title": "Rechtsgrundlagen für die Verarbeitung (DSGVO)",
+          "intro": "Gemäß der Datenschutz-Grundverordnung (DSGVO) verarbeiten wir Daten auf folgenden rechtlichen Grundlagen:",
+          "bases": {
+            "0": {
+              "title": "Berechtigtes Interesse",
+              "description": "Für Analysen, Betrugsprävention und Sicherheitsüberwachung zum Betrieb und zur Verbesserung unserer Dienste"
+            },
+            "1": {
+              "title": "Einwilligung",
+              "description": "Für optionale Cookies und Werbedienste (wo gesetzlich vorgeschrieben)"
+            },
+            "2": {
+              "title": "Vertragserfüllung",
+              "description": "Um die von Ihnen angeforderte spezifische Werkzeugfunktionalität bereitzustellen"
+            }
+          }
+        },
+        "dataUse": {
+          "title": "Wie wir Daten verwenden",
+          "purposes": {
+            "0": "Bereitstellung und Betrieb unserer Textkonvertierungswerkzeuge",
+            "1": "Analyse von Nutzungsmustern zur Verbesserung der Werkzeugleistung und -zuverlässigkeit",
+            "2": "Erkennung und Verhinderung von Betrug, Missbrauch und Sicherheitsbedrohungen",
+            "3": "Einhaltung gesetzlicher Verpflichtungen und Beantwortung rechtlicher Anfragen",
+            "4": "Entwicklung neuer Funktionen und Werkzeuge basierend auf Benutzerbedürfnissen"
+          },
+          "noSelling": "Wir verkaufen, vermieten oder tauschen Ihre personenbezogenen Daten nicht an Dritte für deren Marketingzwecke."
+        },
+        "dataSharing": {
+          "title": "Datenweitergabe & Dritte",
+          "intro": "Wir teilen begrenzte Daten mit vertrauenswürdigen Dienstleistern, die uns beim Betrieb unserer Website helfen:",
+          "vendors": "Siehe detaillierte Anbieterinformationen in unserer Cookie-Tabelle unten.",
+          "circumstances": {
+            "title": "Wir können Daten auch unter folgenden Umständen weitergeben:",
+            "items": {
+              "0": "Rechtliche Compliance: Wenn gesetzlich, durch Verordnung oder Gerichtsbeschluss erforderlich",
+              "1": "Sicherheitsschutz: Zum Schutz der Rechte, des Eigentums oder der Sicherheit unserer Nutzer oder anderer",
+              "2": "Unternehmensübertragung: Im Zusammenhang mit einer Fusion, Übernahme oder dem Verkauf von Vermögenswerten"
+            }
+          }
+        },
+        "internationalTransfers": {
+          "title": "Internationale Datenübertragungen",
+          "description": "Einige unserer Dienstleister können sich außerhalb Ihres Landes befinden. Bei internationalen Datenübertragungen verwenden wir geeignete Schutzmaßnahmen wie:",
+          "safeguards": {
+            "0": "Standardvertragsklauseln, die von der Europäischen Kommission genehmigt wurden",
+            "1": "Angemessenheitsbeschlüsse für Länder mit ausreichenden Datenschutzgesetzen",
+            "2": "Datenschutzzertifizierungen und -verpflichtungen von Anbietern"
+          }
+        },
+        "retention": {
+          "title": "Datenspeicherung",
+          "intro": "Wir speichern Daten nur so lange, wie es für die in dieser Richtlinie beschriebenen Zwecke erforderlich ist:",
+          "periods": {
+            "0": "Analysedaten: {analyticsRetention} Tage",
+            "1": "Server-Protokolle: {logsRetention} Tage",
+            "2": "Cookie-Daten: Bis zu {cookiesRetention} Tage",
+            "3": "Kontaktformular-Nachrichten: {contactRetention} Tage"
+          },
+          "criteria": "Daten werden gemäß automatisierten Aufbewahrungsfristen gelöscht, es sei denn, eine längere Aufbewahrung ist gesetzlich vorgeschrieben oder für legitime Geschäftszwecke erforderlich."
+        },
+        "security": {
+          "title": "Sicherheitsmaßnahmen",
+          "intro": "Wir implementieren angemessene technische und organisatorische Maßnahmen zum Schutz Ihrer Daten:",
+          "measures": {
+            "0": "Transport Layer Security (TLS) Verschlüsselung für alle Datenübertragungen",
+            "1": "Regelmäßige Sicherheitsbewertungen und -überwachung",
+            "2": "Zugriffskontrollen und Prinzip der geringsten Rechte für unsere Systeme",
+            "3": "Sichere Codierungspraktiken und regelmäßige Sicherheitsupdates",
+            "4": "Verfahren zur Reaktion auf Vorfälle bei potenziellen Datenschutzverletzungen"
+          }
+        },
+        "rights": {
+          "title": "Ihre Datenschutzrechte",
+          "intro": "Abhängig von Ihrem Standort können Sie folgende Rechte in Bezug auf Ihre Daten haben:",
+          "list": {
+            "0": "Zugang: Anforderung von Informationen über die von uns gespeicherten Daten",
+            "1": "Berichtigung: Korrektur ungenauer oder unvollständiger Daten",
+            "2": "Löschung: Anforderung der Löschung Ihrer Daten (\"Recht auf Vergessenwerden\")",
+            "3": "Einschränkung: Einschränkung der Verarbeitung Ihrer Daten",
+            "4": "Portabilität: Erhalt Ihrer Daten in einem maschinenlesbaren Format",
+            "5": "Widerspruch: Widerspruch gegen bestimmte Arten der Datenverarbeitung"
+          },
+          "exercise": {
+            "title": "Ausübung Ihrer Rechte",
+            "description": "Um diese Rechte auszuüben, kontaktieren Sie uns unter {privacyEmail}. Wir antworten innerhalb von {responseDays} Tagen. Sie haben möglicherweise auch das Recht, eine Beschwerde bei Ihrer örtlichen Datenschutzbehörde einzureichen."
+          }
+        },
+        "optOut": {
+          "title": "Opt-Out-Optionen",
+          "analytics": {
+            "title": "Opt-Out für Analysen",
+            "description": "Sie können das Google Analytics-Tracking deaktivieren, indem Sie das Google Analytics Opt-out Browser-Add-on installieren oder Cookie-Präferenzen konfigurieren."
+          },
+          "advertising": {
+            "title": "Werbeverwaltung",
+            "description": "Verwalten Sie Werbe-Cookies über Browsereinstellungen oder besuchen Sie die Opt-out-Seite der Digital Advertising Alliance."
+          },
+          "cookies": {
+            "title": "Cookie-Verwaltung",
+            "description": "Die meisten Browser ermöglichen die Verwaltung von Cookies über die Einstellungen. Beachten Sie, dass das Deaktivieren bestimmter Cookies die Funktionalität der Website beeinträchtigen kann."
+          }
+        },
+        "children": {
+          "title": "Datenschutz für Kinder",
+          "description": "Unsere Dienste richten sich nicht an Kinder unter {minimumAge} Jahren. Wir sammeln wissentlich keine persönlichen Informationen von Kindern unter {minimumAge}. Wenn Sie glauben, dass ein Kind uns persönliche Informationen zur Verfügung gestellt hat, kontaktieren Sie uns bitte umgehend."
+        },
+        "contact": {
+          "title": "Kontaktinformationen",
+          "intro": "Für datenschutzbezogene Fragen kontaktieren Sie uns:",
+          "email": "E-Mail: {privacyEmail}",
+          "postal": "Postanschrift: {postalAddress}"
+        },
+        "changes": {
+          "title": "Änderungen dieser Richtlinie",
+          "description": "Wir können diese Datenschutzrichtlinie regelmäßig aktualisieren, um Änderungen in unseren Praktiken oder geltenden Gesetzen widerzuspiegeln. Wir werden Nutzer über wesentliche Änderungen informieren, indem wir die aktualisierte Richtlinie mit einem neuen Gültigkeitsdatum auf unserer Website veröffentlichen. Die weitere Nutzung unserer Dienste nach Richtlinienänderungen gilt als Annahme der Änderungen."
+        }
+      }
+    },
+    "terms": {
+      "title": "Nutzungsbedingungen",
+      "lastUpdated": "Zuletzt aktualisiert: {date}",
+      "version": "Version {version}",
+      "effectiveDate": "Gültig ab: {date}",
+      "tableOfContents": {
+        "title": "Inhaltsverzeichnis"
+      },
+      "prohibitedActivities": "Verbotene Aktivitäten",
+      "ownership": "Eigentum",
+      "licenseGrant": "Lizenzgewährung",
+      "yourResponsibility": "Ihre Verantwortung",
+      "importantDisclaimer": "Wichtiger Haftungsausschluss",
+      "liabilityLimitation": "Haftungsbeschränkung",
+      "sections": {
+        "acceptance": {
+          "title": "Annahme der Bedingungen",
+          "content": "Durch den Zugriff auf oder die Nutzung der {companyName}-Dienste unter {domain} erklären Sie sich mit diesen Nutzungsbedingungen und unserer Datenschutzrichtlinie einverstanden. Wenn Sie diesen Bedingungen nicht zustimmen, nutzen Sie bitte unsere Dienste nicht."
+        },
+        "description": {
+          "title": "Dienstbeschreibung",
+          "content": "Wir bieten Textkonvertierungswerkzeuge und Dienstprogramme zum Konvertieren, Formatieren und Bearbeiten von Text und Daten. Unsere Dienste werden \"wie besehen\" bereitgestellt und die meisten Werkzeuge verarbeiten Daten lokal in Ihrem Browser für Datenschutz und Geschwindigkeit. Einige Funktionen erfordern möglicherweise serverseitige Verarbeitung, was deutlich angegeben wird."
+        },
+        "acceptableUse": {
+          "title": "Akzeptable Nutzung",
+          "intro": "Sie verpflichten sich, unsere Dienste verantwortungsvoll und rechtmäßig zu nutzen. Verbotene Aktivitäten umfassen:",
+          "prohibited": {
+            "0": "Verwendung von Werkzeugen für illegale Zwecke oder Verletzung geltender Gesetze",
+            "1": "Versuch, Ratenlimits, Sicherheitsmaßnahmen oder Zugriffskontrollen zu umgehen",
+            "2": "Hochladen von bösartigem Code, Viren oder schädlichem Inhalt",
+            "3": "Scraping oder automatisierter Zugriff mit missbräuchlichen Raten, die die Serviceleistung beeinträchtigen können",
+            "4": "Verletzung der geistigen Eigentumsrechte anderer",
+            "5": "Verbreitung von Spam, beleidigendem oder schädlichem Inhalt",
+            "6": "Versuch, unbefugten Zugriff auf unsere Systeme oder Daten anderer Nutzer zu erhalten"
+          },
+          "enforcement": "Wir behalten uns das Recht vor, den Zugang bei Verstößen gegen diese Bedingungen auszusetzen oder zu beenden."
+        },
+        "userContent": {
+          "title": "Benutzerinhalte & Lizenz",
+          "ownership": "Sie behalten das Eigentum an allen Inhalten, die Sie in unsere Werkzeuge eingeben. Bei Werkzeugen, die Daten clientseitig verarbeiten, werden Ihre Inhalte nicht auf unseren Servern gespeichert.",
+          "license": "Durch die Nutzung unserer Dienste gewähren Sie uns eine begrenzte, nicht-exklusive Lizenz zur Verarbeitung Ihrer Inhalte ausschließlich zur Bereitstellung der angeforderten Werkzeugfunktionalität.",
+          "responsibility": "Sie sind dafür verantwortlich, sicherzustellen, dass Sie die erforderlichen Rechte an allen von Ihnen übermittelten Inhalten haben und dass diese den geltenden Gesetzen entsprechen."
+        },
+        "intellectualProperty": {
+          "title": "Geistiges Eigentum",
+          "content": "Die {companyName}-Website, Werkzeuge und zugehörigen Inhalte sind durch Urheberrechte, Markenrechte und andere Rechte des geistigen Eigentums geschützt. Unsere Marken und unser Branding dürfen ohne Erlaubnis nicht verwendet werden. Wir respektieren die Rechte des geistigen Eigentums und erwarten dasselbe von den Nutzern."
+        },
+        "availability": {
+          "title": "Dienstverfügbarkeit & Änderungen",
+          "content": "Wir bemühen uns um einen zuverlässigen Service, können jedoch keine 100%ige Betriebszeit garantieren. Wir behalten uns das Recht vor, jede Funktion oder jeden Dienst jederzeit ohne Vorankündigung zu ändern, auszusetzen oder einzustellen. Wir können auch Nutzungslimits oder -beschränkungen festlegen, um die Servicequalität aufrechtzuerhalten."
+        },
+        "disclaimers": {
+          "title": "Haftungsausschlüsse",
+          "content": "Unsere Dienste werden \"wie besehen\" und \"wie verfügbar\" ohne jegliche Garantien, ausdrücklich oder stillschweigend, bereitgestellt. Wir schließen alle Garantien aus, einschließlich, aber nicht beschränkt auf Marktgängigkeit, Eignung für einen bestimmten Zweck und Nichtverletzung. Wir garantieren nicht, dass unsere Dienste fehlerfrei, sicher oder unterbrechungsfrei sein werden."
+        },
+        "liability": {
+          "title": "Haftungsbeschränkung",
+          "content": "Im gesetzlich zulässigen Umfang ist unsere Haftung für Schäden, die sich aus Ihrer Nutzung unserer Dienste ergeben, auf den Betrag beschränkt, den Sie uns in den letzten 12 Monaten gezahlt haben (oder 100 €, wenn Sie uns nichts gezahlt haben). Wir haften nicht für indirekte, zufällige, Folge- oder Strafschäden."
+        },
+        "indemnification": {
+          "title": "Schadloshaltung",
+          "content": "Sie verpflichten sich, uns von allen Ansprüchen, Schäden oder Kosten freizustellen und schadlos zu halten, die sich aus Ihrer Nutzung unserer Dienste, der Verletzung dieser Bedingungen oder der Verletzung von Rechten Dritter ergeben."
+        },
+        "governingLaw": {
+          "title": "Anwendbares Recht & Gerichtsstand",
+          "content": "Diese Bedingungen unterliegen den Gesetzen von {governingLaw}. Alle Streitigkeiten werden vor den Gerichten von {governingLaw} beigelegt. Sollte eine Bestimmung dieser Bedingungen für nicht durchsetzbar befunden werden, bleiben die übrigen Bestimmungen in Kraft."
+        },
+        "dmca": {
+          "title": "DMCA-Mitteilungsverfahren",
+          "content": "Wenn Sie glauben, dass Inhalte auf unserer Website Ihr Urheberrecht verletzen, senden Sie bitte eine DMCA-Mitteilung an {contactEmail} mit: (1) Identifizierung des urheberrechtlich geschützten Werks, (2) Identifizierung des verletzenden Materials, (3) Ihren Kontaktinformationen, (4) einer Erklärung des guten Glaubens und (5) einer Erklärung der Richtigkeit unter Strafe des Meineids."
+        },
+        "age": {
+          "title": "Altersanforderungen",
+          "content": "Sie müssen mindestens {minimumAge} Jahre alt sein, um unsere Dienste zu nutzen. Wenn Sie unter {minimumAge} sind, dürfen Sie unsere Dienste nur mit elterlicher Zustimmung und Aufsicht nutzen."
+        },
+        "changes": {
+          "title": "Änderungen der Bedingungen",
+          "content": "Wir können diese Bedingungen regelmäßig aktualisieren. Wesentliche Änderungen werden auf unserer Website mit einem aktualisierten Gültigkeitsdatum veröffentlicht. Die weitere Nutzung nach Änderungen gilt als Annahme der neuen Bedingungen."
+        },
+        "contact": {
+          "title": "Kontaktinformationen",
+          "content": "Bei Fragen zu diesen Bedingungen kontaktieren Sie uns unter {contactEmail} oder {postalAddress}."
+        }
+      }
+    },
+    "about": {
+      "title": "Über uns",
+      "subtitle": "Professionelle Text-Werkzeuge, entwickelt mit Fokus auf Datenschutz und Leistung",
+      "tableOfContents": {
+        "title": "Auf dieser Seite"
+      },
+      "responseTime": "Antwortzeit:",
+      "sections": {
+        "mission": {
+          "title": "Unsere Mission & unser Wertversprechen",
+          "content": "Wir glauben, dass Textkonvertierungswerkzeuge schnell, privat und für alle zugänglich sein sollten. Unsere Mission ist es, professionelle Text-Dienstprogramme bereitzustellen, die Ihre Privatsphäre durch clientseitige Verarbeitung respektieren, blitzschnelle Leistung liefern und die höchsten Standards in Bezug auf Barrierefreiheit und Benutzererfahrung einhalten.",
+          "values": {
+            "0": {
+              "title": "Datenschutz durch Design",
+              "description": "Die meisten Werkzeuge verarbeiten Daten vollständig in Ihrem Browser und stellen sicher, dass Ihre Inhalte Ihr Gerät nicht unnötig verlassen."
+            },
+            "1": {
+              "title": "Geschwindigkeit & Leistung",
+              "description": "Optimierte Algorithmen und clientseitige Verarbeitung liefern sofortige Ergebnisse für die meisten Operationen."
+            },
+            "2": {
+              "title": "Universelle Barrierefreiheit",
+              "description": "Vollständige Tastaturnavigation, Bildschirmlesegerät-Unterstützung und WCAG AA-Konformität stellen sicher, dass unsere Werkzeuge für alle funktionieren."
+            },
+            "3": {
+              "title": "Kein Konto erforderlich",
+              "description": "Beginnen Sie sofort mit der Nutzung eines beliebigen Werkzeugs, ohne Konten zu erstellen oder persönliche Informationen anzugeben."
+            }
+          }
+        },
+        "howItWorks": {
+          "title": "Wie unsere Werkzeuge funktionieren",
+          "intro": "Das Verständnis unseres technischen Ansatzes hilft Ihnen, unsere Werkzeuge effektiver zu nutzen:",
+          "clientSide": {
+            "title": "Clientseitige Verarbeitung",
+            "description": "Die meisten Texttransformationen erfolgen vollständig in Ihrem Browser mit JavaScript. Das bedeutet:",
+            "benefits": {
+              "0": "Ihre Daten verlassen niemals Ihr Gerät",
+              "1": "Sofortige Ergebnisse ohne Serververzögerungen",
+              "2": "Funktioniert auch offline nach dem ersten Laden",
+              "3": "Keine Datenschutzbedenken bei sensiblen Inhalten"
+            },
+            "examples": "Beispiele für clientseitige Werkzeuge: Fallkonvertierung, Textformatierung, Sortierung, grundlegende Verschlüsselung"
+          },
+          "serverSide": {
+            "title": "Serverseitige Verarbeitung",
+            "description": "Einige erweiterte Funktionen erfordern Serververarbeitung, darunter:",
+            "examples": {
+              "0": "Große Dateikonvertierungen (>10MB)",
+              "1": "Komplexe Bildverarbeitungsoperationen",
+              "2": "OCR (Optische Zeichenerkennung)",
+              "3": "Erweiterte Formatkonvertierungen"
+            },
+            "privacy": "Bei serverseitiger Verarbeitung werden Daten sofort verarbeitet und nicht dauerhaft gespeichert."
+          }
+        },
+        "privacy": {
+          "title": "Datenschutz & Sicherheit",
+          "content": "Datenschutz ist keine Funktion - es ist unser Grundprinzip. Hier ist unser Ansatz:",
+          "principles": {
+            "0": {
+              "title": "Client-First-Architektur",
+              "description": "Wenn möglich, verarbeiten wir Ihre Daten lokal. Über 75% unserer Werkzeuge benötigen niemals eine Serverinteraktion."
+            },
+            "1": {
+              "title": "Keine Datenaufbewahrung",
+              "description": "Wir speichern keine hochgeladenen Dateien oder verarbeiteten Inhalte. Daten, die unsere Server erreichen, werden sofort nach der Verarbeitung gelöscht."
+            },
+            "2": {
+              "title": "Minimale Analysen",
+              "description": "Wir sammeln nur das, was wir brauchen: aggregierte Nutzungsmuster zur Verbesserung der Tools. Keine persönliche Identifizierung, keine detaillierte Verfolgung."
+            },
+            "3": {
+              "title": "Transparente Praktiken",
+              "description": "Unsere Datenschutzrichtlinie ist in einfacher Sprache verfasst. Keine rechtlichen Tricks, keine versteckten Klauseln."
+            }
+          }
+        },
+        "accessibility": {
+          "title": "Barrierefreiheitsverpflichtung",
+          "intro": "Wir glauben, dass Werkzeuge für alle funktionieren sollten. Unsere Barrierefreiheitsfunktionen umfassen:",
+          "features": {
+            "0": {
+              "title": "Vollständige Tastaturnavigation",
+              "description": "Alle Funktionen sind ohne Maus zugänglich. Verwenden Sie Tab, Enter und Pfeiltasten, um zu navigieren."
+            },
+            "1": {
+              "title": "Bildschirmlesegerät-Unterstützung",
+              "description": "Semantisches HTML und ARIA-Labels sorgen dafür, dass Screenreader alle Informationen genau vermitteln."
+            },
+            "2": {
+              "title": "Farbkontrast",
+              "description": "Text erfüllt WCAG AA-Standards mit einem Mindestverhältnis von 4,5:1 für Lesbarkeit."
+            },
+            "3": {
+              "title": "Responsives Design",
+              "description": "Funktioniert auf allen Bildschirmgrößen, von Smartphones bis zu 4K-Monitoren."
+            },
+            "4": {
+              "title": "Fokusindikatoren",
+              "description": "Klare visuelle Indikatoren zeigen, welches Element fokussiert ist, während Sie mit der Tastatur navigieren."
+            }
+          },
+          "feedback": "Wenn Sie auf Barrierefreiheitsprobleme stoßen, kontaktieren Sie uns bitte unter {contactEmail}. Wir sind der kontinuierlichen Verbesserung verpflichtet."
+        },
+        "roadmap": {
+          "title": "Entwicklungs-Roadmap",
+          "intro": "Kommende Funktionen und Verbesserungen basierend auf Nutzerfeedback:",
+          "upcoming": {
+            "0": {
+              "title": "Erweiterte Dateiverarbeitung",
+              "description": "Unterstützung für größere Dateien und zusätzliche Formatkonvertierungen",
+              "timeline": "Q2 2026"
+            },
+            "1": {
+              "title": "Batch-Operationen",
+              "description": "Mehrere Dateien oder Textblöcke gleichzeitig verarbeiten",
+              "timeline": "Q2 2026"
+            },
+            "2": {
+              "title": "Benutzerdefinierte Werkzeug-Workflows",
+              "description": "Mehrere Werkzeuge für komplexe Transformationen verketten",
+              "timeline": "Q3 2026"
+            },
+            "3": {
+              "title": "API-Zugang",
+              "description": "Programmatischer Zugriff für Entwickler und Automatisierung",
+              "timeline": "Q4 2026"
+            }
+          },
+          "feedback": "Haben Sie Ideen für neue Funktionen? Teilen Sie sie über unsere Kontaktseite."
+        },
+        "contact": {
+          "title": "Kontakt & Partnerschaft",
+          "intro": "Wir freuen uns über Feedback, Vorschläge und Partnerschaftsmöglichkeiten:",
+          "purposes": {
+            "0": {
+              "title": "Allgemeines Feedback",
+              "description": "Verbesserungsvorschläge, Fehlerberichte oder Funktionsanfragen"
+            },
+            "1": {
+              "title": "Geschäftspartnerschaft",
+              "description": "Integrationsmöglichkeiten, White-Label-Lösungen oder Enterprise-Lizenzen"
+            },
+            "2": {
+              "title": "Technischer Support",
+              "description": "Hilfe zu spezifischen Werkzeugen oder Barrierefreiheitsfragen"
+            },
+            "3": {
+              "title": "Medien & Presse",
+              "description": "Presseanfragen, Interviews oder Rezensionsanfragen"
+            }
+          },
+          "response": "Wir antworten in der Regel innerhalb von 1-2 Werktagen auf Anfragen."
+        }
+      }
+    },
+    "contact": {
+      "title": "Kontaktieren Sie uns",
+      "subtitle": "Haben Sie Fragen oder Feedback? Wir sind hier, um zu helfen.",
+      "reasons": {
+        "title": "Häufige Gründe, uns zu kontaktieren:",
+        "items": {
+          "0": {
+            "title": "Technischer Support",
+            "description": "Melden Sie Fehler oder technische Probleme"
+          },
+          "1": {
+            "title": "Funktionsanfragen",
+            "description": "Schlagen Sie neue Werkzeuge oder Verbesserungen vor"
+          },
+          "2": {
+            "title": "Datenschutzfragen",
+            "description": "Fragen zu Datenpraktiken oder Datenschutzrichtlinien"
+          },
+          "3": {
+            "title": "Geschäftsanfragen",
+            "description": "Partnerschaften oder kommerzielle Nutzung"
+          },
+          "4": {
+            "title": "Barrierefreiheitsprobleme",
+            "description": "Melden Sie Probleme mit der Barrierefreiheit"
+          },
+          "5": {
+            "title": "Allgemeines Feedback",
+            "description": "Teilen Sie Ihre Gedanken oder Vorschläge"
+          }
+        }
+      },
+      "form": {
+        "title": "Senden Sie uns eine Nachricht",
+        "fields": {
+          "name": {
+            "label": "Name",
+            "placeholder": "Ihr vollständiger Name",
+            "required": true
+          },
+          "email": {
+            "label": "E-Mail-Adresse",
+            "placeholder": "ihre.email@beispiel.de",
+            "required": true
+          },
+          "category": {
+            "label": "Kategorie",
+            "placeholder": "Wählen Sie eine Kategorie",
+            "required": true,
+            "options": {
+              "general-inquiry": "Allgemeine Anfrage",
+              "bug-report": "Fehlerbericht",
+              "feature-request": "Funktionsanfrage",
+              "business-partnership": "Geschäftspartnerschaft",
+              "privacy-request": "Datenschutzanfrage",
+              "other": "Sonstiges"
+            }
+          },
+          "message": {
+            "label": "Nachricht",
+            "placeholder": "Beschreiben Sie Ihre Frage oder Ihr Feedback im Detail...",
+            "required": true
+          }
+        },
+        "submit": "Nachricht senden",
+        "submitting": "Wird gesendet...",
+        "privacy": "Mit dem Absenden dieses Formulars stimmen Sie unserer {privacyLink} zu.",
+        "privacyLinkText": "Datenschutzrichtlinie"
+      },
+      "success": {
+        "title": "Nachricht erfolgreich gesendet!",
+        "description": "Vielen Dank für Ihre Kontaktaufnahme. Wir antworten innerhalb von 1-2 Werktagen.",
+        "sendAnother": "Weitere Nachricht senden"
+      },
+      "errors": {
+        "required": "Dieses Feld ist erforderlich",
+        "invalidEmail": "Bitte geben Sie eine gültige E-Mail-Adresse ein",
+        "rateLimited": "Zu viele Anfragen. Bitte warten Sie, bevor Sie eine weitere Nachricht senden.",
+        "serverError": "Nachricht konnte nicht gesendet werden. Bitte versuchen Sie es später erneut.",
+        "networkError": "Netzwerkfehler. Bitte überprüfen Sie Ihre Verbindung und versuchen Sie es erneut."
+      },
+      "direct": {
+        "title": "Direktkontakt",
+        "email": "E-Mail: {contactEmail}",
+        "response": "Antwortzeit: 1-2 Werktage"
+      },
+      "additional": {
+        "title": "Benötigen Sie sofortige Hilfe?",
+        "description1": "Bei dringenden technischen Problemen versuchen Sie zunächst, unsere Werkzeugdokumentation oder häufige Fehlerbehebungsschritte zu überprüfen.",
+        "description2": "Die meisten Probleme können durch Aktualisieren der Seite oder Löschen des Browser-Cache gelöst werden."
+      },
+      "privacy": {
+        "title": "Datenschutzhinweis",
+        "description": "Wir respektieren Ihre Privatsphäre. Kontaktformular-Übermittlungen werden nur zur Beantwortung Ihrer Anfrage verwendet und nicht an Dritte weitergegeben."
+      }
+    },
+    "cookies": {
+      "title": "Cookie-Richtlinie",
+      "intro": "Wir verwenden Cookies und ähnliche Technologien, um Ihre Präferenzen zu speichern und unsere Dienste zu verbessern.",
+      "table": {
+        "headers": {
+          "name": "Cookie-Name",
+          "purpose": "Zweck",
+          "type": "Typ",
+          "duration": "Dauer",
+          "provider": "Anbieter"
+        }
+      },
+      "manage": "Sie können Cookies über Ihre Browsereinstellungen verwalten.",
+      "essential": "Erforderlich",
+      "analytics": "Analysen",
+      "advertising": "Werbung",
+      "categories": {
+        "essential": "Erforderliche Cookies sind für die grundlegende Funktionalität notwendig.",
+        "analytics": "Analyse-Cookies helfen uns zu verstehen, wie unsere Website genutzt wird.",
+        "advertising": "Werbe-Cookies werden verwendet, um relevante Anzeigen bereitzustellen."
+      },
+      "types": {
+        "session": "Sitzungscookies werden nach dem Schließen Ihres Browsers gelöscht.",
+        "persistent": "Persistente Cookies verbleiben auf Ihrem Gerät für einen festgelegten Zeitraum.",
+        "firstParty": "Erstanbieter-Cookies werden von unserer Website gesetzt.",
+        "thirdParty": "Drittanbieter-Cookies werden von externen Diensten gesetzt, die wir verwenden."
+      }
+    },
+    "common": {
+      "learnMore": "Mehr erfahren",
+      "backToTop": "Nach oben",
+      "tableOfContents": "Inhaltsverzeichnis",
+      "lastModified": "Zuletzt geändert",
+      "effectiveFrom": "Gültig ab",
+      "companyName": "Text Case Converter",
+      "domain": "textcaseconverter.net",
+      "contactEmail": "contact@textcaseconverter.net",
+      "privacyEmail": "privacy@textcaseconverter.net",
+      "supportEmail": "support@textcaseconverter.net",
+      "analyticsRetention": "90",
+      "logsRetention": "30",
+      "cookiesRetention": "365",
+      "contactRetention": "180",
+      "responseDays": "48",
+      "minimumAge": "13",
+      "responseTime": "innerhalb von 24–48 Stunden",
+      "governingLaw": "Deutschland",
+      "postalAddress": "Text Case Converter, Deutschland",
+      "sharePage": "Diese Seite teilen",
+      "copyLink": "Link kopieren",
+      "linkCopied": "Link in die Zwischenablage kopiert",
+      "readMore": "Mehr lesen",
+      "showLess": "Weniger anzeigen",
+      "loading": "Lädt...",
+      "error": "Fehler",
+      "retry": "Wiederholen",
+      "close": "Schließen",
+      "open": "Öffnen",
+      "yes": "Ja",
+      "no": "Nein"
+    }
   }
 }

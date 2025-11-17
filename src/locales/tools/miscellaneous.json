@@ -39,7 +39,7 @@
         "new": "New",
         "open": "Open",
         "saveTxt": "Save as TXT",
-        "saveMd": "Save as MD", 
+        "saveMd": "Save as MD",
         "print": "Print",
         "exit": "Exit",
         "undo": "Undo",
@@ -128,6 +128,10 @@
     "asciiArtGenerator": {
       "title": "ASCII Art Generator - Text & Image to ASCII Art Converter",
       "description": "Create stunning ASCII art from text and images. Convert your text into decorative ASCII fonts or transform images into beautiful ASCII art with customizable options.",
+      "modeSelector": {
+        "title": "Choose Generation Mode",
+        "description": "Select whether you want to convert text or images into ASCII art"
+      },
       "modes": {
         "text": "Text to ASCII",
         "image": "Image to ASCII",
@@ -140,7 +144,8 @@
         "fontLabel": "ASCII Font",
         "alignmentLabel": "Text Alignment",
         "spacingLabel": "Character Spacing",
-        "widthLabel": "Output Width"
+        "widthLabel": "Output Width",
+        "settingsLabel": "ASCII Settings"
       },
       "imagePanel": {
         "uploadLabel": "Upload Image",
@@ -152,7 +157,8 @@
         "widthLabel": "ASCII Width",
         "contrastLabel": "Contrast",
         "brightnessLabel": "Brightness",
-        "invertLabel": "Invert Colors"
+        "invertLabel": "Invert Colors",
+        "settingsLabel": "ASCII Settings"
       },
       "output": {
         "label": "ASCII Art Output",
@@ -183,7 +189,7 @@
       },
       "presets": {
         "detailed": "Detailed",
-        "simple": "Simple", 
+        "simple": "Simple",
         "blocks": "Blocks",
         "minimal": "Minimal"
       },
@@ -451,7 +457,7 @@
       "source": "Source",
       "sourcePlaceholder": "google, facebook, newsletter",
       "medium": "Medium",
-      "mediumPlaceholder": "email, social, cpc, organic", 
+      "mediumPlaceholder": "email, social, cpc, organic",
       "campaign": "Campaign",
       "campaignPlaceholder": "spring_sale, product_launch, holiday_promo",
       "term": "Term",
@@ -651,6 +657,10 @@
     "asciiArtGenerator": {
       "title": "Генератор ASCII Арт - Конвертер Текста и Изображений в ASCII",
       "description": "Создавайте потрясающее ASCII искусство из текста и изображений. Конвертируйте текст в декоративные ASCII шрифты или преобразуйте изображения в красивое ASCII искусство с настраиваемыми опциями.",
+      "modeSelector": {
+        "title": "Выберите Режим Генерации",
+        "description": "Выберите, хотите ли вы конвертировать текст или изображения в ASCII арт"
+      },
       "modes": {
         "text": "Текст в ASCII",
         "image": "Изображение в ASCII",
@@ -663,7 +673,8 @@
         "fontLabel": "ASCII Шрифт",
         "alignmentLabel": "Выравнивание Текста",
         "spacingLabel": "Интервал Символов",
-        "widthLabel": "Ширина Вывода"
+        "widthLabel": "Ширина Вывода",
+        "settingsLabel": "Настройки ASCII"
       },
       "imagePanel": {
         "uploadLabel": "Загрузить Изображение",
@@ -675,374 +686,8 @@
         "widthLabel": "Ширина ASCII",
         "contrastLabel": "Контраст",
         "brightnessLabel": "Яркость",
-        "invertLabel": "Инвертировать Цвета"
-      },
-      "output": {
-        "label": "Вывод ASCII Арт",
-        "placeholder": "Ваше ASCII искусство появится здесь...",
-        "copySuccess": "ASCII арт скопирован в буфер обмена!",
-        "copyError": "Не удалось скопировать в буфер обмена",
-        "downloadFileName": "ascii-art.txt",
-        "previewLabel": "Предпросмотр"
-      },
-      "options": {
-        "title": "Опции ASCII Арт",
-        "addBorder": "Добавить Границу",
-        "borderChar": "Символ Границы",
-        "realTimePreview": "Предпросмотр в Реальном Времени"
-      },
-      "stats": {
-        "lines": "Строки",
-        "characters": "Символы",
-        "maxLineLength": "Макс Длина Строки",
-        "avgLineLength": "Средняя Длина Строки",
-        "originalSize": "Исходный Размер",
-        "outputSize": "Размер Вывода"
-      },
-      "fonts": {
-        "standard": "Стандартный",
-        "block": "Блочный",
-        "small": "Маленький"
-      },
-      "presets": {
-        "detailed": "Детальный",
-        "simple": "Простой",
-        "blocks": "Блоки",
-        "minimal": "Минимальный"
-      },
-      "alignment": {
-        "left": "Слева",
-        "center": "По центру",
-        "right": "Справа"
-      },
-      "errors": {
-        "invalidFile": "Неверный тип файла. Пожалуйста, загрузите файл изображения.",
-        "fileTooLarge": "Файл слишком большой. Пожалуйста, загрузите изображение размером менее 10МБ.",
-        "processingFailed": "Не удалось обработать изображение. Пожалуйста, попробуйте еще раз.",
-        "emptyText": "Пожалуйста, введите текст для конвертации.",
-        "loadingFailed": "Не удалось загрузить изображение. Пожалуйста, попробуйте другой файл."
-      }
-    },
-    "natoPhonetic": {
-      "title": "Конвертер Фонетического Алфавита НАТО",
-      "description": "Конвертируйте текст в фонетический алфавит НАТО и обратно. Идеально для четкой коммуникации в военных, авиационных и профессиональных условиях.",
-      "inputLabel": "Текст для Конвертации",
-      "outputLabel": "Результат НАТО Фонетический",
-      "inputPlaceholder": "Введите ваш текст здесь или введите фонетические слова НАТО...",
-      "uploadDescription": "Загрузите текстовый файл для конвертации (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
-      "downloadFileName": "конвертация-нато-фонетический.txt",
-      "modes": {
-        "auto": "Авто-определение",
-        "textToPhonetic": "Текст → НАТО Фонетический",
-        "phoneticToText": "НАТО Фонетический → Текст"
-      },
-      "phoneticTable": {
-        "title": "Справочник Фонетического Алфавита НАТО",
-        "letterColumn": "Буква",
-        "phoneticColumn": "Фонетическое Слово",
-        "numberColumn": "Цифра",
-        "copyTooltip": "Нажмите для копирования",
-        "lettersSection": "Буквы (A-Z)",
-        "numbersSection": "Цифры (0-9)"
-      },
-      "actions": {
-        "convertText": "Конвертировать Текст",
-        "clearAll": "Очистить Все",
-        "copyResult": "Копировать Результат",
-        "downloadResult": "Скачать Результат",
-        "copyPhonetic": "Копировать Фонетическое",
-        "showTable": "Показать Справочную Таблицу",
-        "hideTable": "Скрыть Справочную Таблицу"
-      },
-      "messages": {
-        "conversionComplete": "Конвертация завершена!",
-        "textCopied": "Текст скопирован в буфер обмена!",
-        "phoneticCopied": "Фонетическое слово скопировано!",
-        "noTextProvided": "Пожалуйста, введите текст для конвертации.",
-        "invalidPhoneticText": "Текст не похож на корректный формат НАТО фонетический.",
-        "autoDetectedMode": "Авто-определен режим конвертации"
-      },
-      "stats": {
-        "originalLength": "Исходная Длина",
-        "convertedLength": "Конвертированная Длина",
-        "wordCount": "Количество Слов",
-        "compressionRatio": "Коэффициент Расширения"
-      }
-    },
-    "romanNumeralDate": {
-      "title": "Конвертер Дат в Римские Цифры",
-      "description": "Конвертируйте современные даты в формат римских цифр и обратно. Идеально для исторических документов, свадебных приглашений, памятников и классических дизайн-проектов.",
-      "inputLabel": "Ввод Даты",
-      "outputLabel": "Конвертированная Дата",
-      "inputPlaceholder": "Введите современную дату (2024-12-25) или римскую дату (XXV DECEMBER MMXXIV)...",
-      "uploadDescription": "Загрузите текстовый файл с датами для конвертации",
-      "downloadFileName": "римские-даты.txt",
-      "convertButton": "Конвертировать Дату",
-      "options": {
-        "conversionMode": "Режим Конвертации",
-        "outputFormat": "Стиль Римского Формата",
-        "showExamples": "Показать Примеры"
-      },
-      "modes": {
-        "auto": "Авто-определение",
-        "modernToRoman": "Современная → Римская",
-        "romanToModern": "Римская → Современная"
-      },
-      "formats": {
-        "classical": "Классический (XIX APRILIS MMXXIV)",
-        "medieval": "Средневековый (XIX DIE APRILIS ANNO DOMINI MMXXIV)",
-        "minimal": "Минимальный (XIX.APR.MMXXIV)",
-        "decorative": "Декоративный (ⅩⅨ • APRILIS • ⅯⅯⅩⅩⅣ)"
-      },
-      "quickInput": {
-        "title": "Быстрый Выбор Даты",
-        "today": "Сегодня",
-        "allFormats": "Показать Все Форматы"
-      },
-      "examples": {
-        "title": "Примеры Исторических Дат",
-        "description": "Нажмите на любой пример для использования"
-      },
-      "formatInfo": {
-        "title": "Поддерживаемые Форматы и Ограничения",
-        "inputFormats": "Форматы Ввода",
-        "limitations": "Ограничения",
-        "yearRange": "Только годы 1-3999 н.э.",
-        "ceOnly": "Только даты нашей эры",
-        "validDates": "Только действительные календарные даты"
-      },
-      "help": {
-        "conversionMode": "Выберите способ конвертации дат: авто-определение, современная в римскую или римская в современную",
-        "outputFormat": "Выберите стиль формата римских цифр для вывода",
-        "quickInput": "Используйте выбор даты или кнопки для быстрого выбора даты"
-      },
-      "errors": {
-        "noInput": "Пожалуйста, введите дату для конвертации",
-        "invalidDate": "Неверный формат даты. Используйте YYYY-MM-DD, MM/DD/YYYY или DD/MM/YYYY",
-        "invalidRomanDate": "Неверный формат римской даты. Проверьте ввод",
-        "dateOutOfRange": "Дата должна быть между 1 и 3999 годом н.э.",
-        "conversionFailed": "Конвертация не удалась. Проверьте формат ввода"
-      },
-      "reference": {
-        "title": "Справочник Римских Цифр",
-        "sections": {
-          "basicSymbols": "Основные Символы",
-          "numbers1to20": "Числа 1-20",
-          "commonYears": "Распространенные Годы",
-          "romanMonths": "Римские Месяцы"
-        },
-        "basicSymbols": {
-          "one": "Один",
-          "five": "Пять",
-          "ten": "Десять",
-          "fifty": "Пятьдесят",
-          "hundred": "Сто",
-          "fiveHundred": "Пятьсот",
-          "thousand": "Тысяча"
-        },
-        "months": {
-          "january": "Январь",
-          "february": "Февраль",
-          "march": "Март",
-          "april": "Апрель",
-          "may": "Май",
-          "june": "Июнь",
-          "july": "Июль",
-          "august": "Август",
-          "september": "Сентябрь",
-          "october": "Октябрь",
-          "november": "Ноябрь",
-          "december": "Декабрь"
-        }
-      },
-      "toggleLabels": {
-        "modernToRoman": "Современная → Римская",
-        "romanToModern": "Римская → Современная"
-      },
-      "formatLabels": {
-        "classical": "Классический",
-        "medieval": "Средневековый",
-        "minimal": "Минимальный",
-        "decorative": "Декоративный"
-      },
-      "formatDescriptions": {
-        "classical": "Полный Римский",
-        "medieval": "Традиционный",
-        "minimal": "Простой",
-        "decorative": "Орнаментальный"
-      },
-      "inputLabels": {
-        "modernInput": "Ввод Даты",
-        "romanInput": "Ввод Римской Даты"
-      },
-      "placeholders": {
-        "romanInput": "Введите римскую дату (например, XXII SEPTEMBER MMXXV)",
-        "selectDate": "Выберите дату для отображения в римских цифрах"
-      },
-      "actions": {
-        "hideReference": "Скрыть Справочник",
-        "showReference": "Показать Справочник",
-        "copyTooltip": "Скопировать римскую цифру",
-        "copy": "Копировать",
-        "copied": "Скопировано!",
-        "copiedMessage": "Скопировано в буфер обмена!"
-      }
-    }
-  },
-  "ru": {
-    "onlineNotepad": {
-      "title": "Онлайн Блокнот - Бесплатный Веб-Редактор Текста",
-      "description": "Простой и эффективный онлайн блокнот для создания заметок, редактирования текста и создания документов. Функции автосохранения, загрузки и мобильный интерфейс.",
-      "inputPlaceholder": "Начните печатать свои заметки здесь...",
-      "uploadDescription": "Загрузите текстовый файл для редактирования в блокноте",
-      "downloadFileName": "блокнот.txt",
-      "printTitle": "Онлайн Блокнот",
-      "printDate": "Дата печати:",
-      "newFileTitle": "Создать Новый Файл",
-      "newFileDescription": "Вы уверены, что хотите создать новый файл? Все несохраненные изменения будут потеряны.",
-      "newFileConfirm": "Создать Новый",
-      "newFileCancel": "Отмена",
-      "textNotFound": "Текст не найден",
-      "statusLabels": {
-        "words": "Слова",
-        "characters": "Символы",
-        "lines": "Строки",
-        "selected": "Выбрано",
-        "line": "Стр",
-        "column": "Кол",
-        "encoding": "Кодировка",
-        "lastSaved": "Сохранено",
-        "neverSaved": "Никогда не сохранялось",
-        "justSaved": "Только что сохранено",
-        "minuteAgo": "минуту назад",
-        "minutesAgo": "минут назад",
-        "hourAgo": "час назад",
-        "hoursAgo": "часов назад",
-        "saving": "Сохранение...",
-        "notSaved": "Не сохранено"
-      },
-      "menu": {
-        "file": "Файл",
-        "edit": "Правка",
-        "view": "Вид",
-        "help": "Справка",
-        "new": "Новый",
-        "open": "Открыть",
-        "saveTxt": "Сохранить как TXT",
-        "saveMd": "Сохранить как MD",
-        "print": "Печать",
-        "exit": "Выход",
-        "undo": "Отменить",
-        "redo": "Повторить",
-        "cut": "Вырезать",
-        "copy": "Копировать",
-        "paste": "Вставить",
-        "selectAll": "Выбрать все",
-        "findReplace": "Найти и заменить",
-        "fullscreen": "Полный экран",
-        "preview": "Предварительный просмотр",
-        "wordWrap": "Перенос слов",
-        "keyboardShortcuts": "Горячие клавиши",
-        "about": "О программе",
-        "insert": "Вставка",
-        "dateTime": "Дата и время"
-      },
-      "dialogs": {
-        "keyboardShortcuts": {
-          "title": "Горячие клавиши",
-          "description": "Полный список горячих клавиш для работы с Онлайн Блокнотом",
-          "categories": {
-            "fileOperations": "Операции с файлами",
-            "editOperations": "Операции редактирования",
-            "viewOperations": "Операции просмотра",
-            "navigation": "Навигация"
-          },
-          "shortcuts": {
-            "newFile": "Новый файл",
-            "openFile": "Открыть файл",
-            "saveTxt": "Сохранить как TXT",
-            "saveMd": "Сохранить как Markdown",
-            "print": "Печать документа",
-            "undo": "Отменить",
-            "redo": "Повторить",
-            "cut": "Вырезать",
-            "copy": "Копировать",
-            "paste": "Вставить",
-            "selectAll": "Выделить все",
-            "fullscreen": "Переключить полноэкранный режим",
-            "preview": "Переключить предпросмотр",
-            "insertDateTime": "Вставить дату и время",
-            "tab": "Вставить символ табуляции",
-            "escape": "Закрыть меню и диалоги"
-          },
-          "tip": "💡 Совет: Используйте эти горячие клавиши для более эффективной работы с документами."
-        },
-        "about": {
-          "title": "О Онлайн Блокноте",
-          "description": "Современный, многофункциональный текстовый редактор для всех ваших потребностей в создании заметок",
-          "appName": "Онлайн Блокнот",
-          "version": "Версия 1.0.0",
-          "featuresTitle": "Ключевые функции",
-          "features": {
-            "richText": "Редактирование форматированного текста с параметрами форматирования",
-            "autoSave": "Функция автосохранения",
-            "printExport": "Возможности печати и экспорта",
-            "preview": "Режим предпросмотра и полноэкранное редактирование"
-          },
-          "footer": {
-            "builtWith": "Создано с использованием современных веб-технологий для лучшего пользовательского опыта.",
-            "copyright": "© 2024 Text Case Converter Tools"
-          }
-        },
-        "findReplace": {
-          "title": "Найти и заменить",
-          "description": "Поиск и замена текста в вашем документе",
-          "findLabel": "Найти",
-          "replaceLabel": "Заменить на",
-          "findPlaceholder": "Введите текст для поиска...",
-          "replacePlaceholder": "Введите текст для замены...",
-          "matchCase": "Учитывать регистр",
-          "wholeWord": "Целое слово",
-          "useRegex": "Использовать регулярные выражения",
-          "findNext": "Найти далее",
-          "findPrevious": "Найти предыдущий",
-          "replace": "Заменить",
-          "replaceAll": "Заменить все",
-          "close": "Закрыть",
-          "notFound": "Текст не найден",
-          "replaced": "Заменено {count} вхождений",
-          "noMatches": "Совпадения не найдены"
-        }
-      }
-    },
-    "asciiArtGenerator": {
-      "title": "Генератор ASCII Арт - Конвертер Текста и Изображений в ASCII",
-      "description": "Создавайте потрясающее ASCII искусство из текста и изображений. Конвертируйте текст в декоративные ASCII шрифты или преобразуйте изображения в красивое ASCII искусство с настраиваемыми опциями.",
-      "modes": {
-        "text": "Текст в ASCII",
-        "image": "Изображение в ASCII",
-        "textDescription": "Конвертировать текст в декоративные ASCII шрифты",
-        "imageDescription": "Преобразовать изображения в ASCII символьное искусство"
-      },
-      "textPanel": {
-        "inputLabel": "Введите ваш текст",
-        "inputPlaceholder": "Введите ваш текст здесь...",
-        "fontLabel": "ASCII Шрифт",
-        "alignmentLabel": "Выравнивание Текста",
-        "spacingLabel": "Интервал Символов",
-        "widthLabel": "Ширина Вывода"
-      },
-      "imagePanel": {
-        "uploadLabel": "Загрузить Изображение",
-        "uploadDescription": "Загрузите изображение для конвертации в ASCII арт",
-        "dragDropLabel": "Перетащите изображение сюда или нажмите для выбора",
-        "supportedFormats": "Поддерживаемые форматы: JPEG, PNG, GIF, BMP, WebP (макс 10МБ)",
-        "presetLabel": "Предустановка ASCII Стиля",
-        "charsetLabel": "Набор Символов",
-        "widthLabel": "Ширина ASCII",
-        "contrastLabel": "Контраст",
-        "brightnessLabel": "Яркость",
-        "invertLabel": "Инвертировать Цвета"
+        "invertLabel": "Инвертировать Цвета",
+        "settingsLabel": "Настройки ASCII"
       },
       "output": {
         "label": "Вывод ASCII Арт",
@@ -1341,7 +986,7 @@
       "source": "Источник",
       "sourcePlaceholder": "google, facebook, newsletter",
       "medium": "Канал",
-      "mediumPlaceholder": "email, social, cpc, organic", 
+      "mediumPlaceholder": "email, social, cpc, organic",
       "campaign": "Кампания",
       "campaignPlaceholder": "spring_sale, product_launch, holiday_promo",
       "term": "Термин",
@@ -1409,6 +1054,535 @@
         "validCampaign": "Корректная кампания",
         "properlyConfigured": "UTM URL правильно настроен",
         "needsAttention": "Некоторые параметры требуют внимания"
+      }
+    }
+  },
+  "de": {
+    "onlineNotepad": {
+      "title": "Online Notizblock - Kostenloser Webbasierter Texteditor",
+      "description": "Ein einfacher und effizienter Online-Notizblock zum Erstellen von Notizen, Bearbeiten von Text und Erstellen von Dokumenten. Funktionen: Autospeicherung, Download-Optionen und mobiloptimierte Oberfläche.",
+      "inputPlaceholder": "Beginnen Sie hier mit dem Tippen Ihrer Notizen...",
+      "uploadDescription": "Laden Sie eine Textdatei zum Bearbeiten im Notizblock hoch",
+      "downloadFileName": "notizblock.txt",
+      "printTitle": "Online Notizblock",
+      "printDate": "Gedruckt am:",
+      "newFileTitle": "Neue Datei Erstellen",
+      "newFileDescription": "Sind Sie sicher, dass Sie eine neue Datei erstellen möchten? Alle nicht gespeicherten Änderungen gehen verloren.",
+      "newFileConfirm": "Neu Erstellen",
+      "newFileCancel": "Abbrechen",
+      "textNotFound": "Text nicht gefunden",
+      "statusLabels": {
+        "words": "Wörter",
+        "characters": "Zeichen",
+        "lines": "Zeilen",
+        "selected": "Ausgewählt",
+        "line": "Zeile",
+        "column": "Spalte",
+        "encoding": "Kodierung",
+        "lastSaved": "Zuletzt gespeichert",
+        "neverSaved": "Nie gespeichert",
+        "justSaved": "Gerade gespeichert",
+        "minuteAgo": "Minute zuvor",
+        "minutesAgo": "Minuten zuvor",
+        "hourAgo": "Stunde zuvor",
+        "hoursAgo": "Stunden zuvor",
+        "saving": "Speichern...",
+        "notSaved": "Nicht gespeichert"
+      },
+      "menu": {
+        "file": "Datei",
+        "edit": "Bearbeiten",
+        "view": "Ansicht",
+        "help": "Hilfe",
+        "new": "Neu",
+        "open": "Öffnen",
+        "saveTxt": "Als TXT speichern",
+        "saveMd": "Als MD speichern",
+        "print": "Drucken",
+        "exit": "Beenden",
+        "undo": "Rückgängig",
+        "redo": "Wiederholen",
+        "cut": "Ausschneiden",
+        "copy": "Kopieren",
+        "paste": "Einfügen",
+        "selectAll": "Alles auswählen",
+        "findReplace": "Suchen und Ersetzen",
+        "fullscreen": "Vollbild",
+        "preview": "Vorschau",
+        "wordWrap": "Zeilenumbruch",
+        "keyboardShortcuts": "Tastenkürzel",
+        "about": "Über",
+        "insert": "Einfügen",
+        "dateTime": "Datum und Uhrzeit"
+      },
+      "dialogs": {
+        "keyboardShortcuts": {
+          "title": "Tastenkürzel",
+          "description": "Vollständige Liste der im Online Notizblock verfügbaren Tastenkürzel",
+          "categories": {
+            "fileOperations": "Dateioperationen",
+            "editOperations": "Bearbeitungsoperationen",
+            "viewOperations": "Ansichtsoperationen",
+            "navigation": "Navigation"
+          },
+          "shortcuts": {
+            "newFile": "Neue Datei",
+            "openFile": "Datei öffnen",
+            "saveTxt": "Als TXT speichern",
+            "saveMd": "Als Markdown speichern",
+            "print": "Dokument drucken",
+            "undo": "Rückgängig",
+            "redo": "Wiederholen",
+            "cut": "Ausschneiden",
+            "copy": "Kopieren",
+            "paste": "Einfügen",
+            "selectAll": "Alles auswählen",
+            "fullscreen": "Vollbild umschalten",
+            "preview": "Vorschau umschalten",
+            "insertDateTime": "Datum und Uhrzeit einfügen",
+            "tab": "Tabulatorzeichen einfügen",
+            "escape": "Menüs und Dialoge schließen"
+          },
+          "tip": "💡 Tipp: Verwenden Sie diese Tastenkürzel, um effizienter mit Ihren Dokumenten zu arbeiten."
+        },
+        "about": {
+          "title": "Über Online Notizblock",
+          "description": "Ein moderner, funktionsreicher Texteditor für alle Ihre Notizanforderungen",
+          "appName": "Online Notizblock",
+          "version": "Version 1.0.0",
+          "featuresTitle": "Hauptfunktionen",
+          "features": {
+            "richText": "Rich-Text-Bearbeitung mit Formatierungsoptionen",
+            "autoSave": "Autospeicher-Funktionalität",
+            "printExport": "Druck- und Exportfunktionen",
+            "preview": "Vorschaumodus und Vollbildbearbeitung"
+          },
+          "footer": {
+            "builtWith": "Erstellt mit modernen Webtechnologien für die beste Benutzererfahrung.",
+            "copyright": "© 2024 Text Case Converter Tools"
+          }
+        },
+        "findReplace": {
+          "title": "Suchen und Ersetzen",
+          "description": "Text in Ihrem Dokument suchen und ersetzen",
+          "findLabel": "Suchen",
+          "replaceLabel": "Ersetzen durch",
+          "findPlaceholder": "Zu suchenden Text eingeben...",
+          "replacePlaceholder": "Ersetzungstext eingeben...",
+          "matchCase": "Groß-/Kleinschreibung beachten",
+          "wholeWord": "Ganzes Wort",
+          "useRegex": "Reguläre Ausdrücke verwenden",
+          "findNext": "Weitersuchen",
+          "findPrevious": "Zurücksuchen",
+          "replace": "Ersetzen",
+          "replaceAll": "Alle ersetzen",
+          "close": "Schließen",
+          "notFound": "Text nicht gefunden",
+          "replaced": "{count} Vorkommen ersetzt",
+          "noMatches": "Keine Übereinstimmungen gefunden"
+        }
+      }
+    },
+    "utmBuilder": {
+      "title": "UTM-Parameter-Builder - Marketingkampagnen Verfolgen",
+      "description": "Erstellen Sie UTM-Parameter für Google Analytics-Kampagnenverfolgung. Generieren Sie nachverfolgbare URLs mit Source-, Medium-, Campaign-, Term- und Content-Parametern für genaue Marketing-Attribution.",
+      "formTitle": "UTM-Parameter",
+      "baseUrl": "Basis-URL",
+      "baseUrlPlaceholder": "https://example.com/landing-page",
+      "baseUrlInvalid": "Bitte geben Sie eine gültige URL ein",
+      "source": "Source",
+      "sourcePlaceholder": "google, facebook, newsletter",
+      "medium": "Medium",
+      "mediumPlaceholder": "email, social, cpc, organic",
+      "campaign": "Campaign",
+      "campaignPlaceholder": "spring_sale, product_launch, holiday_promo",
+      "term": "Term",
+      "termPlaceholder": "laufschuhe, beste_angebote",
+      "termOptional": "(Optional)",
+      "content": "Content",
+      "contentPlaceholder": "header_banner, sidebar_ad",
+      "contentOptional": "(Optional)",
+      "presets": "Schnellvoreinstellungen",
+      "presetEmailCampaign": "E-Mail-Kampagne",
+      "presetFacebook": "Facebook",
+      "presetGoogleAds": "Google Ads",
+      "presetDisplayAd": "Display-Anzeige",
+      "generate": "URL Generieren",
+      "copy": "URL Kopieren",
+      "download": "Herunterladen",
+      "clear": "Alles Löschen",
+      "generateFirst": "Bitte generieren Sie zuerst eine UTM-URL",
+      "urlCopied": "UTM-URL in Zwischenablage kopiert!",
+      "downloadSuccess": "UTM-Parameter erfolgreich heruntergeladen!",
+      "allFieldsCleared": "Alle Felder gelöscht",
+      "generatedUrlTitle": "Generierte UTM-URL",
+      "urlPreview": "UTM-URL-Vorschau",
+      "noUrlGenerated": "Geben Sie Ihre Basis-URL und UTM-Parameter ein, um eine nachverfolgbare URL zu generieren, die hier erscheint.",
+      "copyUrl": "URL Kopieren",
+      "previewUrl": "Vorschau",
+      "showDetails": "Details",
+      "urlComponents": "URL-Komponenten",
+      "trackingInsights": "Tracking-Insights",
+      "usageTips": "Nutzungstipps",
+      "characters": "Zeichen",
+      "utmParameters": "UTM-Parameter",
+      "urlSafe": "URL Sicher",
+      "tooLong": "Zu Lang",
+      "copied": "Kopiert!",
+      "analytics": {
+        "title": "UTM-Analyse",
+        "totalParams": "Gesamt Parameter",
+        "required": "Erforderlich",
+        "optional": "Optional",
+        "urlLength": "URL-Länge",
+        "parameterValidation": "Parameter-Validierung",
+        "platformCompatibility": "Plattform-Kompatibilität",
+        "twitter": "Twitter (280 Zeichen)",
+        "facebookLinkedin": "Facebook/LinkedIn",
+        "generalWeb": "Allgemeines Web (2083 Zeichen)",
+        "compatible": "Kompatibel",
+        "bestPractices": "Beste Praktiken",
+        "practiceOne": "Verwenden Sie Kleinbuchstaben und Unterstriche statt Leerzeichen",
+        "practiceTwo": "Halten Sie Parameterwerte beschreibend aber prägnant",
+        "practiceThree": "Verwenden Sie konsistente Namenskonventionen über Kampagnen hinweg",
+        "practiceFour": "Testen Sie URLs vor dem Start von Kampagnen",
+        "enterParameters": "Geben Sie UTM-Parameter ein, um Analysen zu sehen",
+        "urlRequired": "URL ist erforderlich",
+        "invalidUrl": "Ungültiges URL-Format",
+        "mustUseHttp": "URL muss HTTP oder HTTPS verwenden",
+        "validUrl": "Gültiges URL-Format",
+        "sourceRequired": "Source ist erforderlich",
+        "mediumRequired": "Medium ist erforderlich",
+        "campaignRequired": "Campaign ist erforderlich",
+        "tooShort": "sollte mindestens 2 Zeichen lang sein",
+        "noSpaces": "sollte keine Leerzeichen enthalten",
+        "validSource": "Gültige Source",
+        "validMedium": "Gültiges Medium",
+        "validCampaign": "Gültige Campaign",
+        "properlyConfigured": "UTM-URL ist korrekt konfiguriert",
+        "needsAttention": "Einige Parameter benötigen Aufmerksamkeit"
+      }
+    },
+    "asciiArtGenerator": {
+      "title": "ASCII Art Generator - Text & Bild zu ASCII Art Konverter",
+      "description": "Erstellen Sie beeindruckende ASCII-Kunst aus Text und Bildern. Konvertieren Sie Ihren Text in dekorative ASCII-Schriftarten oder transformieren Sie Bilder in schöne ASCII-Kunst mit anpassbaren Optionen.",
+      "modeSelector": {
+        "title": "Generierungsmodus Wählen",
+        "description": "Wählen Sie, ob Sie Text oder Bilder in ASCII-Kunst konvertieren möchten"
+      },
+      "modes": {
+        "text": "Text zu ASCII",
+        "image": "Bild zu ASCII",
+        "textDescription": "Text in dekorative ASCII-Kunst-Schriftarten konvertieren",
+        "imageDescription": "Bilder in ASCII-Zeichen-Kunst transformieren"
+      },
+      "textPanel": {
+        "inputLabel": "Geben Sie Ihren Text ein",
+        "inputPlaceholder": "Geben Sie Ihren Text hier ein...",
+        "fontLabel": "ASCII-Schriftart",
+        "alignmentLabel": "Textausrichtung",
+        "spacingLabel": "Zeichenabstand",
+        "widthLabel": "Ausgabebreite",
+        "settingsLabel": "ASCII-Einstellungen"
+      },
+      "imagePanel": {
+        "uploadLabel": "Bild Hochladen",
+        "uploadDescription": "Laden Sie ein Bild hoch, um es in ASCII-Kunst zu konvertieren",
+        "dragDropLabel": "Bild hier hineinziehen oder klicken zum Auswählen",
+        "supportedFormats": "Unterstützt: JPEG, PNG, GIF, BMP, WebP (max 10MB)",
+        "presetLabel": "ASCII-Stil-Voreinstellung",
+        "charsetLabel": "Zeichensatz",
+        "widthLabel": "ASCII-Breite",
+        "contrastLabel": "Kontrast",
+        "brightnessLabel": "Helligkeit",
+        "invertLabel": "Farben Invertieren",
+        "settingsLabel": "ASCII-Einstellungen"
+      },
+      "output": {
+        "label": "ASCII Art Ausgabe",
+        "placeholder": "Ihre ASCII-Kunst wird hier erscheinen...",
+        "copySuccess": "ASCII-Kunst in Zwischenablage kopiert!",
+        "copyError": "Fehler beim Kopieren in Zwischenablage",
+        "downloadFileName": "ascii-art.txt",
+        "previewLabel": "Vorschau"
+      },
+      "options": {
+        "title": "ASCII Art Optionen",
+        "addBorder": "Rahmen Hinzufügen",
+        "borderChar": "Rahmenzeichen",
+        "realTimePreview": "Echtzeit-Vorschau"
+      },
+      "stats": {
+        "lines": "Zeilen",
+        "characters": "Zeichen",
+        "maxLineLength": "Max Zeilenlänge",
+        "avgLineLength": "Durchschn. Zeilenlänge",
+        "originalSize": "Originalgröße",
+        "outputSize": "Ausgabegröße"
+      },
+      "fonts": {
+        "standard": "Standard",
+        "block": "Block",
+        "small": "Klein"
+      },
+      "presets": {
+        "detailed": "Detailliert",
+        "simple": "Einfach",
+        "blocks": "Blöcke",
+        "minimal": "Minimal"
+      },
+      "alignment": {
+        "left": "Links",
+        "center": "Zentriert",
+        "right": "Rechts"
+      },
+      "errors": {
+        "invalidFile": "Ungültiger Dateityp. Bitte laden Sie eine Bilddatei hoch.",
+        "fileTooLarge": "Datei zu groß. Bitte laden Sie ein Bild unter 10MB hoch.",
+        "processingFailed": "Bildverarbeitung fehlgeschlagen. Bitte versuchen Sie es erneut.",
+        "emptyText": "Bitte geben Sie Text zur Konvertierung ein.",
+        "loadingFailed": "Bild konnte nicht geladen werden. Bitte versuchen Sie eine andere Datei."
+      }
+    },
+    "natoPhonetic": {
+      "title": "NATO-Funkalphabet Konverter",
+      "description": "Konvertieren Sie Text in das NATO-Funkalphabet und zurück. Ideal für klare Kommunikation in Militär, Luftfahrt und professionellen Teams.",
+      "inputLabel": "Text zur Konvertierung",
+      "outputLabel": "NATO-Funkalphabet Ergebnis",
+      "inputPlaceholder": "Text eingeben oder bereits phonetische Wörter hinzufügen...",
+      "uploadDescription": "Textdatei zur Konvertierung hochladen (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "nato-funkalphabet-umwandlung.txt",
+      "modes": {
+        "auto": "Automatisch erkennen",
+        "textToPhonetic": "Text → NATO-Funkalphabet",
+        "phoneticToText": "NATO-Funkalphabet → Text"
+      },
+      "phoneticTable": {
+        "title": "NATO-Funkalphabet Referenz",
+        "letterColumn": "Buchstabe",
+        "phoneticColumn": "Codewort",
+        "numberColumn": "Zahl",
+        "copyTooltip": "Zum Kopieren klicken",
+        "lettersSection": "Buchstaben (A-Z)",
+        "numbersSection": "Zahlen (0-9)"
+      },
+      "actions": {
+        "convertText": "Text konvertieren",
+        "clearAll": "Alles löschen",
+        "copyResult": "Ergebnis kopieren",
+        "downloadResult": "Ergebnis herunterladen",
+        "copyPhonetic": "Codewort kopieren",
+        "showTable": "Referenztabelle anzeigen",
+        "hideTable": "Referenztabelle verbergen"
+      },
+      "messages": {
+        "conversionComplete": "Konvertierung abgeschlossen!",
+        "textCopied": "Text in Zwischenablage kopiert!",
+        "phoneticCopied": "Codewort kopiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Konvertierung ein.",
+        "invalidPhoneticText": "Die Eingabe scheint kein gültiges NATO-Funkalphabet zu sein.",
+        "autoDetectedMode": "Konvertierungsmodus automatisch erkannt"
+      },
+      "stats": {
+        "originalLength": "Länge Originaltext",
+        "convertedLength": "Länge nach Konvertierung",
+        "wordCount": "Wortanzahl",
+        "compressionRatio": "Erweiterungsfaktor"
+      }
+    },
+    "romanNumeralDate": {
+      "title": "Konverter für römische Datumsangaben",
+      "description": "Wandeln Sie moderne Kalenderdaten in römische Zahlformate und zurück. Perfekt für historische Dokumente, Hochzeitseinladungen, Gravuren und klassische Gestaltung.",
+      "inputLabel": "Datumseingabe",
+      "outputLabel": "Konvertiertes Datum",
+      "inputPlaceholder": "Modernes Datum (2024-12-25) oder römisches Datum (XXV DECEMBER MMXXIV) eingeben...",
+      "uploadDescription": "Textdatei mit Datumsangaben zur Konvertierung hochladen",
+      "downloadFileName": "roemische-daten.txt",
+      "convertButton": "Datum konvertieren",
+      "options": {
+        "conversionMode": "Konvertierungsmodus",
+        "outputFormat": "Romaner Formatstil",
+        "showExamples": "Beispiele anzeigen"
+      },
+      "modes": {
+        "auto": "Automatisch erkennen",
+        "modernToRoman": "Modern → Römisch",
+        "romanToModern": "Römisch → Modern"
+      },
+      "formats": {
+        "classical": "Klassisch (XIX APRILIS MMXXIV)",
+        "medieval": "Mittelalterlich (XIX DIE APRILIS ANNO DOMINI MMXXIV)",
+        "minimal": "Minimal (XIX.APR.MMXXIV)",
+        "decorative": "Dekorativ (ⅩⅨ • APRILIS • ⅯⅯⅩⅩⅣ)"
+      },
+      "quickInput": {
+        "title": "Schnellauswahl",
+        "today": "Heute",
+        "allFormats": "Alle Formate anzeigen"
+      },
+      "examples": {
+        "title": "Historische Datumsbeispiele",
+        "description": "Klicken Sie auf ein Beispiel, um es als Eingabe zu übernehmen"
+      },
+      "formatInfo": {
+        "title": "Unterstützte Formate & Einschränkungen",
+        "inputFormats": "Eingabeformate",
+        "limitations": "Einschränkungen",
+        "yearRange": "Nur Jahre 1-3999 n. Chr.",
+        "ceOnly": "Nur Daten der gemeinsamen Zeitrechnung",
+        "validDates": "Nur gültige Kalenderdaten"
+      },
+      "help": {
+        "conversionMode": "Wählen Sie, in welche Richtung konvertiert werden soll: automatisch, modern → römisch oder römisch → modern.",
+        "outputFormat": "Bestimmen Sie den gewünschten Stil für die Ausgabe.",
+        "quickInput": "Nutzen Sie Datumsauswahl oder Schnellbuttons für häufige Werte."
+      },
+      "errors": {
+        "noInput": "Bitte geben Sie ein Datum zur Konvertierung ein.",
+        "invalidDate": "Ungültiges Datumsformat. Nutzen Sie YYYY-MM-DD, MM/DD/YYYY oder DD/MM/YYYY.",
+        "invalidRomanDate": "Ungültige römische Datumsschreibweise. Bitte Eingabe prüfen.",
+        "dateOutOfRange": "Datum muss zwischen 1 und 3999 n. Chr. liegen.",
+        "conversionFailed": "Konvertierung fehlgeschlagen. Bitte Eingabeformat prüfen."
+      },
+      "reference": {
+        "title": "Referenz für römische Zahlen",
+        "sections": {
+          "basicSymbols": "Grundsymbole",
+          "numbers1to20": "Zahlen 1-20",
+          "commonYears": "Häufige Jahreszahlen",
+          "romanMonths": "Römische Monate"
+        },
+        "basicSymbols": {
+          "one": "Eins",
+          "five": "Fünf",
+          "ten": "Zehn",
+          "fifty": "Fünfzig",
+          "hundred": "Hundert",
+          "fiveHundred": "Fünfhundert",
+          "thousand": "Tausend"
+        },
+        "months": {
+          "january": "Januar",
+          "february": "Februar",
+          "march": "März",
+          "april": "April",
+          "may": "Mai",
+          "june": "Juni",
+          "july": "Juli",
+          "august": "August",
+          "september": "September",
+          "october": "Oktober",
+          "november": "November",
+          "december": "Dezember"
+        }
+      },
+      "toggleLabels": {
+        "modernToRoman": "Modern → Römisch",
+        "romanToModern": "Römisch → Modern"
+      },
+      "formatLabels": {
+        "classical": "Klassisch",
+        "medieval": "Mittelalterlich",
+        "minimal": "Minimal",
+        "decorative": "Dekorativ"
+      },
+      "formatDescriptions": {
+        "classical": "Ausgeschrieben",
+        "medieval": "Traditionell",
+        "minimal": "Schlicht",
+        "decorative": "Verziert"
+      },
+      "inputLabels": {
+        "modernInput": "Datumseingabe",
+        "romanInput": "Römische Datumseingabe"
+      },
+      "placeholders": {
+        "romanInput": "Römisches Datum eingeben (z. B. XXII SEPTEMBER MMXXV)",
+        "selectDate": "Datum auswählen, um das römische Format zu sehen"
+      },
+      "actions": {
+        "hideReference": "Referenz ausblenden",
+        "showReference": "Referenz anzeigen",
+        "copyTooltip": "Römische Schreibweise kopieren",
+        "copy": "Kopieren",
+        "copied": "Kopiert!",
+        "copiedMessage": "In Zwischenablage kopiert!"
+      }
+    },
+    "md5Hash": {
+      "title": "MD5 Hash-Generator - Sicherer Text- & Datei-Hash-Rechner",
+      "description": "Generieren Sie sofort MD5 Hash-Checksums für Text und Dateien. Professioneller MD5 Hash-Rechner mit mehreren Ausgabeformaten und Echtzeit-Hash-Generierung.",
+      "inputLabel": "Text zum Hashen",
+      "inputPlaceholder": "Geben Sie Text ein, um MD5-Hash zu generieren...",
+      "outputPlaceholder": "Ihr MD5-Hash wird hier erscheinen",
+      "uploadDescription": "Laden Sie eine Textdatei hoch, um ihren MD5-Hash zu generieren",
+      "downloadFileName": "md5-hash-bericht.txt",
+      "reportText": "Bericht Herunterladen",
+      "analytics": {
+        "inputLength": "Eingabelänge",
+        "hashLength": "Hash-Länge",
+        "encoding": "Kodierung"
+      },
+      "report": {
+        "title": "MD5 Hash-Analysebericht",
+        "generatedAt": "Generiert",
+        "originalText": "Originaltext",
+        "hashResults": "Hash-Ergebnisse"
+      },
+      "formats": {
+        "standard": "Standard",
+        "uppercase": "Großbuchstaben",
+        "colonSeparated": "Doppelpunkt-getrennt",
+        "spaceSeparated": "Leerzeichen-getrennt",
+        "copied": "Hash in Zwischenablage kopiert!",
+        "outputFormat": "Ausgabeformat"
+      },
+      "stats": {
+        "title": "MD5 Hash-Analyse",
+        "inputChars": "Eingabezeichen",
+        "hashChars": "Hash-Zeichen",
+        "encoding": "Kodierung",
+        "valid": "Gültiger Hash"
+      }
+    },
+    "sha1Hash": {
+      "title": "SHA-1 Hash-Generator",
+      "description": "Generieren Sie SHA-1 Hash-Prüfsummen für Text und Dateien sofort. 40-stellige hexadezimale Hash-Ausgabe mit mehreren Formaten und Echtzeit-Generierung.",
+      "inputLabel": "Text zum Hashen",
+      "inputPlaceholder": "Geben Sie Text ein, um SHA-1-Hash zu generieren...",
+      "outputPlaceholder": "Ihr SHA-1-Hash wird hier erscheinen",
+      "uploadDescription": "Laden Sie eine Textdatei hoch, um ihren SHA-1-Hash zu generieren",
+      "downloadFileName": "sha1-hash-bericht.txt",
+      "reportText": "Bericht Herunterladen",
+      "securityWarning": {
+        "title": "Sicherheitshinweis",
+        "message": "SHA-1 wird nicht mehr für moderne kryptografische Sicherheit empfohlen. Für sichere Anwendungen verwenden Sie stattdessen SHA-256 oder SHA-512."
+      },
+      "analytics": {
+        "inputLength": "Eingabelänge",
+        "hashLength": "Hash-Länge",
+        "encoding": "Kodierung"
+      },
+      "report": {
+        "title": "SHA-1 Hash-Analysebericht",
+        "generatedAt": "Generiert",
+        "originalText": "Originaltext",
+        "hashResults": "Hash-Ergebnisse"
+      },
+      "formats": {
+        "standard": "Standard",
+        "uppercase": "Großbuchstaben",
+        "colonSeparated": "Doppelpunkt-getrennt",
+        "spaceSeparated": "Leerzeichen-getrennt",
+        "copied": "Hash in Zwischenablage kopiert!",
+        "outputFormat": "Ausgabeformat"
+      },
+      "stats": {
+        "title": "SHA-1 Hash-Analyse",
+        "inputChars": "Eingabezeichen",
+        "hashChars": "Hash-Zeichen",
+        "encoding": "Kodierung",
+        "valid": "Gültiger Hash"
       }
     }
   }

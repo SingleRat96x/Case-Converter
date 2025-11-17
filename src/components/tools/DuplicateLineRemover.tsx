@@ -134,7 +134,7 @@ export function DuplicateLineRemover() {
       },
       {
         key: 'percentage',
-        label: 'Duplicate %',
+        label: tool('duplicateLineRemover.stats.duplicatePercent'),
         value: duplicatePercentage > 0 ? duplicatePercentage.toFixed(1) : '0.0',
         icon: Percent,
         color: 'text-orange-600 dark:text-orange-400',
@@ -142,7 +142,7 @@ export function DuplicateLineRemover() {
       },
       {
         key: 'compression',
-        label: 'Size Ratio',
+        label: tool('duplicateLineRemover.stats.sizeRatio'),
         value: compressionRatio > 0 ? compressionRatio.toFixed(2) : '1.00',
         icon: FileDown,
         color: 'text-purple-600 dark:text-purple-400',
@@ -150,7 +150,7 @@ export function DuplicateLineRemover() {
       },
       {
         key: 'efficiency',
-        label: 'Efficiency',
+        label: tool('duplicateLineRemover.stats.efficiency'),
         value: stats.original > 0 ? ((stats.unique / stats.original) * 100).toFixed(1) : '100.0',
         icon: Hash,
         color: 'text-cyan-600 dark:text-cyan-400',

@@ -360,5 +360,186 @@
         }
       ]
     }
+  },
+  "de": {
+    "sections": {
+      "intro": {
+        "title": "Professioneller ASCII Art Generator - Text & Bild zu ASCII Konverter",
+        "content": "Verwandeln Sie Ihren Text und Ihre Bilder in atemberaubende ASCII-Kunst mit unserem professionellen ASCII Art Generator. Erstellen Sie dekorative Text-Banner, konvertieren Sie Fotos in Zeichen-Kunst und generieren Sie auffällige ASCII-Designs für soziale Medien, Programmier-Projekte und digitale Kunst. Unser Tool unterstützt mehrere ASCII-Schriftarten, anpassbare Zeichensätze und Echtzeit-Vorschau für sowohl Text- als auch Bildkonvertierung."
+      },
+      "features": {
+        "title": "Leistungsstarke ASCII Art Generierungs-Funktionen",
+        "items": [
+          {
+            "title": "Text zu ASCII Art",
+            "description": "Konvertieren Sie beliebigen Text in schöne ASCII-Kunst mit mehreren Schriftstilen, einschließlich Standard-, Block- und kleinen Schriftarten. Perfekt zum Erstellen von Bannern, Logos und dekorativen Überschriften."
+          },
+          {
+            "title": "Bild zu ASCII Art",
+            "description": "Transformieren Sie Fotos und Bilder in detaillierte ASCII-Zeichen-Kunst. Laden Sie JPEG-, PNG-, GIF- oder WebP-Bilder hoch und konvertieren Sie sie in textbasierte Kunstwerke mit anpassbarer Dichte und Kontrast."
+          },
+          {
+            "title": "Mehrere ASCII-Schriftarten",
+            "description": "Wählen Sie aus verschiedenen ASCII-Schriftstilen, einschließlich klassischer Standard-Schrift, fetten Block-Zeichen und kompakter kleiner Schrift für unterschiedliche künstlerische Effekte."
+          },
+          {
+            "title": "Anpassbare Zeichensätze",
+            "description": "Verwenden Sie verschiedene Zeichensätze von einfachen Symbolen bis zu erweiterten ASCII-Zeichen für unterschiedliche Detailgrade in Ihren ASCII-Kunst-Kreationen."
+          },
+          {
+            "title": "Echtzeit-Vorschau",
+            "description": "Sehen Sie Ihre ASCII-Kunst sofort aktualisiert, während Sie tippen oder Einstellungen anpassen. Kein Warten - sehen Sie Ihre Kreationen in Echtzeit für sofortiges Feedback."
+          },
+          {
+            "title": "Export & Teilen-Optionen",
+            "description": "Kopieren Sie ASCII-Kunst in die Zwischenablage, laden Sie als Textdateien herunter oder speichern Sie für die Verwendung in Social-Media-Posts, Code-Kommentaren, E-Mail-Signaturen und digitalen Projekten."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So Erstellen Sie ASCII-Kunst",
+        "description": "ASCII-Kunst zu erstellen ist einfach mit unserem Generator. Wählen Sie zwischen Text- oder Bildmodus, passen Sie Ihre Einstellungen an und exportieren Sie Ihre Kreation.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Modus Wählen",
+            "description": "Wählen Sie entweder 'Text zu ASCII' zum Konvertieren von Text in dekorative Schriftarten oder 'Bild zu ASCII' zum Transformieren von Fotos in Zeichen-Kunst."
+          },
+          {
+            "step": 2,
+            "title": "Inhalt Eingeben",
+            "description": "Für den Textmodus tippen Sie Ihre Nachricht ein. Für den Bildmodus laden Sie Ihr Foto hoch (JPEG-, PNG-, GIF- oder WebP-Dateien bis 10MB)."
+          },
+          {
+            "step": 3,
+            "title": "Einstellungen Anpassen",
+            "description": "Passen Sie Schriftstil, Ausrichtung, Zeichenabstand für Text an oder ändern Sie Breite, Kontrast und Zeichensatz für Bilder, um Ihren gewünschten Effekt zu erzielen."
+          },
+          {
+            "step": 4,
+            "title": "Vorschau und Export",
+            "description": "Beobachten Sie, wie Ihre ASCII-Kunst in Echtzeit generiert wird, dann kopieren Sie in die Zwischenablage oder laden Sie als Textdatei für die Verwendung in Ihren Projekten herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "ASCII Art Beispiele",
+        "description": "Sehen Sie, was Sie mit unserem ASCII Art Generator erstellen können:",
+        "items": [
+          {
+            "input": "HALLO",
+            "output": " _   _    _    _     _     ___  \n| | | |  / \\  | |   | |   / _ \\ \n| |_| | / _ \\ | |   | |  | | | |\n|  _  |/ ___ \\| |___| |__| |_| |\n|_| |_/_/   \\_\\_____|_____\\___/ ",
+            "description": "Standard-ASCII-Schrift perfekt für Überschriften und Banner"
+          },
+          {
+            "input": "Portrait-Foto",
+            "output": "       ..:::::..       \n    .:'         ':.    \n   /   ^     ^   \\   \n  |  (o)     (o)  |  \n   \\      <      /   \n    '.    ---   .'    \n      ':......:'      ",
+            "description": "Bild in ASCII-Kunst konvertiert mit erhaltenen Gesichtszügen"
+          },
+          {
+            "input": "LOGO",
+            "output": "██╗      ██████╗  ██████╗  ██████╗ \n██║     ██╔═══██╗██╔════╝ ██╔═══██╗\n██║     ██║   ██║██║  ███╗██║   ██║\n██║     ██║   ██║██║   ██║██║   ██║\n███████╗╚██████╔╝╚██████╔╝╚██████╔╝\n╚══════╝ ╚═════╝  ╚═════╝  ╚═════╝ ",
+            "description": "Block-Schriftstil ideal für fette, eindrucksvolle Designs"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "ASCII Art Anwendungsfälle",
+        "description": "Entdecken Sie die vielen Wege, wie ASCII-Kunst Ihre digitalen Projekte verbessern kann:",
+        "items": [
+          {
+            "title": "Social Media Posts",
+            "description": "Erstellen Sie auffällige ASCII-Kunst für Twitter, Discord, Reddit und andere Plattformen, wo einfacher Text hervorsticht."
+          },
+          {
+            "title": "Code-Kommentare & Dokumentation",
+            "description": "Fügen Sie dekorative Überschriften, Trennlinien und Banner zu Ihrem Quellcode, README-Dateien und technischer Dokumentation hinzu."
+          },
+          {
+            "title": "E-Mail-Signaturen",
+            "description": "Entwerfen Sie einzigartige ASCII-Kunst-Signaturen für E-Mails, Forum-Posts und professionelle Kommunikation."
+          },
+          {
+            "title": "Terminal & CLI-Anwendungen",
+            "description": "Verbessern Sie Befehlszeilenschnittstellen mit ASCII-Logos, Ladescreens und dekorativen Elementen."
+          },
+          {
+            "title": "Gaming & Foren",
+            "description": "Erstellen Sie benutzerdefinierte ASCII-Avatare, Signaturen und Kunstwerke für Gaming-Communities und Online-Foren."
+          },
+          {
+            "title": "Digitale Kunstprojekte",
+            "description": "Erkunden Sie ASCII als künstlerisches Medium zur Erstellung von Porträts, Landschaften und abstrakten Designs mit nur Textzeichen."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren ASCII Art Generator Wählen",
+        "items": [
+          "Duale Funktionalität: Konvertieren Sie sowohl Text als auch Bilder zu ASCII-Kunst",
+          "Mehrere ASCII-Schriftstile für verschiedene ästhetische Bedürfnisse",
+          "Echtzeit-Vorschau mit sofortigen Updates während Sie tippen oder Einstellungen anpassen",
+          "Anpassbare Zeichensätze von einfach bis komplex für unterschiedliche Detailgrade",
+          "Hochwertige Bildverarbeitung mit einstellbarem Kontrast und Helligkeit",
+          "Mobil-optimierte Oberfläche, die perfekt auf Telefonen und Tablets funktioniert",
+          "Einfache Export-Optionen: in Zwischenablage kopieren oder als Textdateien herunterladen",
+          "Kostenlos zu verwenden ohne Registrierung erforderlich",
+          "Unterstützung für gängige Bildformate: JPEG, PNG, GIF, WebP",
+          "Professionelle Ergebnisse geeignet für kommerzielle und persönliche Projekte"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Text & Bild Tools",
+        "description": "Erkunden Sie weitere kreative Tools für Texttransformation und Bildkonvertierung:",
+        "items": [
+          {
+            "name": "Text Case Konverter",
+            "description": "Konvertieren Sie Text zwischen verschiedenen Schreibweisen: Großbuchstaben, Kleinbuchstaben, Title Case und mehr",
+            "href": "/de/tools/uppercase"
+          },
+          {
+            "name": "Bubble Text Generator",
+            "description": "Erstellen Sie dekorativen Blasentext mit Unicode-Zeichen für soziale Medien",
+            "href": "/de/tools/bubble-text"
+          },
+          {
+            "name": "Bildgrößen-Änderung",
+            "description": "Ändern Sie Bildgröße auf bestimmte Abmessungen unter Beibehaltung der Qualität",
+            "href": "/de/tools/image-resizer"
+          },
+          {
+            "name": "Fetter Text Generator",
+            "description": "Generieren Sie fetten Unicode-Text für soziale Medien und Messaging",
+            "href": "/de/tools/bold-text"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Bildformate werden für ASCII-Kunst-Konvertierung unterstützt?",
+          "answer": "Unser ASCII Art Generator unterstützt JPEG-, PNG-, GIF-, BMP- und WebP-Bildformate. Dateien müssen unter 10MB groß sein für optimale Verarbeitungsgeschwindigkeit und Qualität."
+        },
+        {
+          "question": "Kann ich den Zeichensatz für Bild-zu-ASCII-Konvertierung anpassen?",
+          "answer": "Ja! Sie können voreingestellte Zeichensätze (Einfach, Detailliert, Blöcke, Minimal) verwenden oder Ihren eigenen benutzerdefinierten Zeichensatz erstellen. Mehr Zeichen bieten feinere Details, während weniger Zeichen fette, hochkontrastige ASCII-Kunst erstellen."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen ASCII-Schriftstilen?",
+          "answer": "Standard-Schrift bietet klassische ASCII-Kunst mit sauberen Linien, Block-Schrift verwendet Unicode-Box-Zeichen für fette Designs, und kleine Schrift erstellt kompakte 3-Zeilen-ASCII-Kunst, perfekt für platzeingeschränkte Verwendungen."
+        },
+        {
+          "question": "Wie bekomme ich die besten Ergebnisse beim Konvertieren von Bildern zu ASCII-Kunst?",
+          "answer": "Für beste Ergebnisse verwenden Sie hochkontrastige Bilder mit klaren Motiven. Porträts und einfache Grafiken funktionieren besser als komplexe Szenen. Passen Sie die Breiteneinstellung (40-120 Zeichen) an und experimentieren Sie mit Kontrast- und Helligkeitsreglern."
+        },
+        {
+          "question": "Kann ich die generierte ASCII-Kunst kommerziell verwenden?",
+          "answer": "Ja, alle mit unserem Generator erstellte ASCII-Kunst kann sowohl für persönliche als auch kommerzielle Projekte verwendet werden. Das Tool ist kostenlos zu verwenden ohne Lizenzeinschränkungen auf die Ausgabe."
+        },
+        {
+          "question": "Funktioniert der ASCII Art Generator auf mobilen Geräten?",
+          "answer": "Absolut! Unser ASCII Art Generator ist vollständig für mobile Geräte optimiert. Sie können ASCII-Kunst von Ihrem Smartphone oder Tablet mit derselben Funktionalität wie die Desktop-Version erstellen, in der Vorschau anzeigen und exportieren."
+        }
+      ]
+    }
   }
 }

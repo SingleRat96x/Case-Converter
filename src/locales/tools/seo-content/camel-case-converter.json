@@ -396,5 +396,204 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Camel Case Converter – Text & JSON-Schlüssel (Snake → camelCase Online)",
+    "metaDescription": "Konvertieren Sie Text, Bezeichner und JSON-Schlüssel online in camelCase. Fügen Sie Text oder JSON ein, verarbeiten Sie verschachtelte Objekte/Arrays, behalten Sie Akronyme bei und wechseln Sie zwischen snake_case, kebab-case, PascalCase und camelCase.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Online Camel Case Converter",
+        "content": "Konvertieren Sie snake_case, kebab-case oder Text mit Leerzeichen sofort in camelCase mit unserem entwicklerorientierten Konvertierungstool. Perfekt zum Transformieren von Variablennamen, JSON-API-Antworten, Datenbankfeldern und Code-Bezeichnern. Verarbeiten Sie tief verschachtelte JSON-Objekte und Arrays, bewahren Sie Akronyme wie ID und URL, wechseln Sie zwischen camelCase und PascalCase oder konvertieren Sie zurück zu snake_case. Alle Verarbeitung erfolgt lokal in Ihrem Browser für vollständige Privatsphäre."
+      },
+      "features": {
+        "title": "Erweiterte Camel-Case-Konvertierungsfunktionen",
+        "items": [
+          {
+            "title": "Mehrere Eingabetypen",
+            "description": "Konvertieren Sie einfache Textbezeichner, JSON mit verschachtelten Schlüsseln oder CSV-Header alles in einem Tool mit Registerkarten-Interface."
+          },
+          {
+            "title": "Tiefe JSON-Verarbeitung",
+            "description": "Rekursiv alle Schlüssel in verschachtelten JSON-Objekten und Arrays konvertieren, während Datenstruktur und Werte erhalten bleiben."
+          },
+          {
+            "title": "Mehrere Konvertierungsmodi",
+            "description": "Unterstützung für snake_case → camelCase, kebab-case → camelCase, Title Case → camelCase und Umkehr camelCase → snake_case."
+          },
+          {
+            "title": "PascalCase-Unterstützung",
+            "description": "Wechseln Sie zwischen camelCase (Kleinbuchstabe am Anfang) und PascalCase (Großbuchstabe am Anfang) mit einem Schalter."
+          },
+          {
+            "title": "Akronym-Bewahrung",
+            "description": "Intelligentes Erkennen und Bewahren von Akronymen wie userID, XMLHttpRequest und APIKey ohne sie zu zerstören."
+          },
+          {
+            "title": "JSONPath-Ausschlüsse",
+            "description": "Bestimmte JSON-Pfade von der Konvertierung ausschließen mit JSONPath-Notation mit Wildcard-Unterstützung."
+          },
+          {
+            "title": "Pretty-Print JSON",
+            "description": "JSON-Ausgabe mit korrekter Einrückung für Lesbarkeit formatieren oder für Produktion minimieren."
+          },
+          {
+            "title": "Sichere Zeichenbehandlung",
+            "description": "Optional Nicht-ASCII-Zeichen entfernen und diakritische Zeichen für sichere Variablennamen normalisieren."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Häufige Anwendungsfälle für Camel-Case-Konvertierung",
+        "description": "Camel-Case-Konvertierung ist essentiell für JavaScript-Entwicklung, API-Integration, Code-Refactoring und Datentransformationsaufgaben.",
+        "items": [
+          { "title": "JavaScript-Entwicklung", "description": "snake_case Datenbankfelder in camelCase JavaScript-Konventionen transformieren" },
+          { "title": "API-Antwort-Transformation", "description": "API-Antworten von snake_case oder kebab-case in camelCase für Frontend transformieren" },
+          { "title": "Code-Refactoring", "description": "Variablennamen massenhaft konvertieren bei Migration zwischen Namenskonventionen" },
+          { "title": "JSON-Daten-Mapping", "description": "JSON-Schlüssel vom Backend-Format in Frontend-Namensstandards transformieren" },
+          { "title": "GraphQL-Integration", "description": "GraphQL-Feldnamen mit camelCase JavaScript-Konventionen ausrichten" },
+          { "title": "TypeScript-Schnittstellen", "description": "TypeScript-Schnittstellen mit korrekten camelCase-Eigenschaftsnamen generieren" },
+          { "title": "Datenbank-Migration", "description": "Datenbankspaltennamen konvertieren beim Wechsel von ORM- oder Framework-Konventionen" },
+          { "title": "Code-Generierung", "description": "Vorlagenvariablen in gültige JavaScript-Bezeichner transformieren" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Konvertieren Sie in Camel Case",
+        "description": "Befolgen Sie diese Schritte, um Text, Bezeichner oder JSON in camelCase-Format zu transformieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Eingabetyp Wählen",
+            "description": "Wählen Sie die passende Registerkarte: Text/Bezeichner für Variablennamen, JSON für API-Antworten oder CSV für Header."
+          },
+          {
+            "step": 2,
+            "title": "Daten Einfügen",
+            "description": "Fügen Sie Text, JSON-Objekt oder CSV-Daten in den Eingabebereich ein. Für JSON überprüft das Tool automatisch die Syntax."
+          },
+          {
+            "step": 3,
+            "title": "Optionen Anpassen",
+            "description": "Wählen Sie Konvertierungsmodus (snake→camel, kebab→camel usw.), Schreibweise (camelCase oder PascalCase) und schalten Sie Optionen wie Akronym-Bewahrung oder nur sichere Zeichen um."
+          },
+          {
+            "step": 4,
+            "title": "Konvertieren und Kopieren",
+            "description": "Klicken Sie 'In camelCase konvertieren' oder drücken Sie Ctrl/Cmd+Enter. Überprüfen Sie das Ergebnis und kopieren Sie in die Zwischenablage oder laden Sie als Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Camel-Case-Konvertierungs-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Namenskonventionen mit verschiedenen Optionen in camelCase konvertiert werden.",
+        "items": [
+          { 
+            "title": "Text → camelCase",
+            "input": "user_name\napi_endpoint_url\nmax_file_size",
+            "output": "userName\napiEndpointUrl\nmaxFileSize"
+          },
+          { 
+            "title": "JSON-Schlüssel → camelCase",
+            "input": "{\n  \"user_profile\": {\n    \"first_name\": \"Anna\",\n    \"last_name\": \"Schmidt\",\n    \"api_key\": \"abc123\"\n  }\n}",
+            "output": "{\n  \"userProfile\": {\n    \"firstName\": \"Anna\",\n    \"lastName\": \"Schmidt\",\n    \"apiKey\": \"abc123\"\n  }\n}"
+          },
+          { 
+            "title": "kebab-case → camelCase",
+            "input": "user-profile-page\napi-base-url\nmax-file-size",
+            "output": "userProfilePage\napiBaseUrl\nmaxFileSize"
+          },
+          { 
+            "title": "PascalCase-Ausgabe",
+            "input": "user_name\napi_key\nfile_size",
+            "output": "UserName\nApiKey\nFileSize"
+          },
+          { 
+            "title": "Umkehrung (camelCase → snake_case)",
+            "input": "userName\napiEndpointUrl\nmaxFileSize",
+            "output": "user_name\napi_endpoint_url\nmax_file_size"
+          },
+          { 
+            "title": "Verschachteltes JSON mit Arrays",
+            "input": "{\n  \"user_list\": [\n    {\"user_id\": 1, \"user_name\": \"Anna\"},\n    {\"user_id\": 2, \"user_name\": \"Maria\"}\n  ]\n}",
+            "output": "{\n  \"userList\": [\n    {\"userId\": 1, \"userName\": \"Anna\"},\n    {\"userId\": 2, \"userName\": \"Maria\"}\n  ]\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Camel-Case-Converter Verwenden",
+        "content": "Professionelle Camel-Case-Konvertierung mit erweiterten Funktionen für Entwickler, Zeit sparen bei manueller Refactoring und konsistente Namenskonventionen sicherstellen.",
+        "items": [
+          "Vollständig kostenlos ohne Limits oder Registrierung",
+          "Datenschutz zuerst - alle Verarbeitung im Browser",
+          "Unterstützung für Text-, JSON- und CSV-Formate",
+          "Verarbeitung tief verschachtelter Objekte und Arrays",
+          "Intelligente Akronym-Bewahrung (userID, XMLHttpRequest)",
+          "Mehrere Konvertierungsmodi (snake, kebab, title, umkehren)",
+          "PascalCase und camelCase Ausgabeoptionen",
+          "JSONPath-Ausschlüsse für selektive Konvertierung",
+          "JSON-Ausgabe formatieren oder minimieren",
+          "Tastaturkürzel für schnellen Workflow (Ctrl/Cmd+Enter)"
+        ]
+      },
+      "faqs": [
+        { 
+          "question": "Wird verschachteltes JSON unterstützt?", 
+          "answer": "Ja! Das Tool verarbeitet rekursiv alle Schlüssel in verschachtelten JSON-Objekten und Arrays, unabhängig von der Verschachtelungstiefe. Es bewahrt die vollständige Datenstruktur und Werte während nur Schlüssel konvertiert werden (oder Schlüssel und Werte je nach Einstellungen)."
+        },
+        { 
+          "question": "Was ist der Unterschied zwischen camelCase und PascalCase?", 
+          "answer": "camelCase beginnt mit einem Kleinbuchstaben (userName, apiKey), während PascalCase mit einem Großbuchstaben beginnt (UserName, ApiKey). Beide verwenden das gleiche Muster mit großgeschriebenen nachfolgenden Wörtern. Verwenden Sie den Schreibweise-Schalter zum Wechseln zwischen ihnen."
+        },
+        { 
+          "question": "Wie funktioniert die Akronym-Bewahrung?", 
+          "answer": "Wenn aktiviert, erkennt das Tool aufeinanderfolgende Großbuchstaben (ID, URL, XML, API) und bewahrt sie in Großschreibung in der Ausgabe. Zum Beispiel wird user_id zu userID (nicht userId), und xml_http_request wird zu xmlHttpRequest. Dies folgt gängigen JavaScript-Konventionen."
+        },
+        { 
+          "question": "Kann ich bestimmte JSON-Pfade von der Konvertierung ausschließen?", 
+          "answer": "Ja! Verwenden Sie die 'Pfade ausschließen'-Option mit JSONPath-Notation. Zum Beispiel behält $.data.items[*].url alle 'url'-Schlüssel im items-Array unverändert während alles andere konvertiert wird. Wildcards (*) werden für flexible Übereinstimmung unterstützt."
+        },
+        { 
+          "question": "Was ist der Umkehr-Modus?", 
+          "answer": "Der Umkehr-Modus konvertiert camelCase zurück in snake_case. Zum Beispiel wird userName zu user_name, und getUserProfile wird zu get_user_profile. Dies ist nützlich wenn Frontend-Code zurück in Datenbank-Namenskonventionen konvertiert werden muss."
+        },
+        { 
+          "question": "Wie werden Title Case oder Leerzeichen behandelt?", 
+          "answer": "Wählen Sie den 'Title Case → camelCase'-Modus um Text mit Leerzeichen in camelCase zu konvertieren. Zum Beispiel wird 'User Profile Settings' zu 'userProfileSettings'. Das Tool trennt nach Leerzeichen und großschreibt entsprechend jedes Wort."
+        },
+        { 
+          "question": "Was bedeutet 'Nur Schlüssel konvertieren' für JSON?", 
+          "answer": "Wenn aktiviert (Standard), werden nur JSON-Objektschlüssel konvertiert während Werte unverändert bleiben. Wenn deaktiviert, werden sowohl Schlüssel als auch Zeichenfolgenwerte verarbeitet. Dies ist wichtig wenn Sie Zeichenfolgeninhalte in Werten bewahren möchten."
+        },
+        { 
+          "question": "Kann ich CSV-Header konvertieren?", 
+          "answer": "Ja! Wechseln Sie zur CSV-Registerkarte und fügen Sie CSV-Daten ein. Das Tool konvertiert nur die Header-Zeile in camelCase und lässt alle Datenzeilen unverändert. Dies ist ideal zur Vorbereitung von CSV-Daten für Import in JavaScript."
+        },
+        { 
+          "question": "Was macht 'Nur sichere Zeichen'?", 
+          "answer": "Diese Option entfernt Nicht-ASCII-Zeichen und normalisiert diakritische Zeichen (é→e, ñ→n). Sie stellt sicher, dass die Ausgabe nur standardmäßige englische Buchstaben, Zahlen und Unterstriche enthält, die für Variablennamen in den meisten Programmiersprachen sicher sind."
+        },
+        { 
+          "question": "Werden meine Daten gespeichert oder an einen Server gesendet?", 
+          "answer": "Nein. Alle Konvertierung erfolgt vollständig in Ihrem Browser mit JavaScript. Ihr Text und JSON werden niemals auf unsere Server hochgeladen und gewährleisten vollständige Privatsphäre für sensiblen Code und API-Antworten."
+        },
+        { 
+          "question": "Funktioniert es mit großen JSON-Dateien?", 
+          "answer": "Ja. Das Tool kann große JSON-Strukturen effizient verarbeiten. Für sehr große Dateien (>10KB) kann die Verarbeitung einen Moment dauern, wird aber ohne Einfrieren Ihres Browsers abgeschlossen."
+        },
+        { 
+          "question": "Welche Tastaturkürzel sind verfügbar?", 
+          "answer": "Drücken Sie Ctrl+Enter (oder Cmd+Enter auf Mac) um schnell die Konvertierung auszulösen. Dies ermöglicht einen schnellen Workflow bei der Verarbeitung mehrerer Konvertierungen hintereinander."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textkonvertierungs-Tools",
+        "description": "Erkunden Sie weitere Tools für Texttransformation, Case-Konvertierung und Code-Formatierung.",
+        "items": [
+          { "name": "Interpunktion Entfernen", "description": "Satzzeichen entfernen während Wörter und benutzerdefinierte Symbole bewahrt werden", "href": "/de/tools/remove-punctuation" },
+          { "name": "Slugify URL", "description": "Text in URL-freundliche Slugs mit anpassbaren Trennzeichen konvertieren", "href": "/de/tools/slugify-url" },
+          { "name": "Text Ersetzen", "description": "Erweiterte Suchen und Ersetzen mit Mustererkennung und Regex-Unterstützung", "href": "/de/tools/text-replace" },
+          { "name": "Klartext-Konverter", "description": "Alle Formatierungen entfernen und in Klartext konvertieren", "href": "/de/tools/plain-text" }
+        ]
+      }
+    }
   }
 }

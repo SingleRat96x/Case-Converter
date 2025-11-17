@@ -54,7 +54,7 @@
           },
           {
             "name": "ASCII Art Generator",
-            "href": "/tools/ascii-art-generator", 
+            "href": "/tools/ascii-art-generator",
             "description": "Create stunning ASCII art from text with multiple font styles and customization options"
           },
           {
@@ -219,7 +219,7 @@
           },
           {
             "name": "Генератор ASCII Арт",
-            "href": "/ru/tools/ascii-art-generator", 
+            "href": "/ru/tools/ascii-art-generator",
             "description": "Создавайте потрясающее ASCII искусство из текста с множественными стилями шрифтов и опциями настройки"
           },
           {
@@ -324,6 +324,71 @@
             "name": "Инструменты Изображений",
             "href": "/ru/category/image-tools",
             "description": "Обрабатывайте, конвертируйте и манипулируйте изображениями для различных случаев использования"
+          }
+        ]
+      }
+    }
+  },
+  "de": {
+    "title": "Verschiedene Werkzeuge - Nützliche Online-Utilities",
+    "metaDescription": "Sammlung nützlicher Online-Werkzeuge: Online-Notizblock, Zahlensortierer, ASCII-Kunst, NATO-Phonetik, MD5/SHA1-Hash-Generatoren und mehr. Kostenlose professionelle Utilities.",
+    "sections": {
+      "intro": {
+        "title": "Wesentliche Online-Utilities & Spezialwerkzeuge",
+        "content": "Entdecken Sie unsere Sammlung wesentlicher Utilities und spezialisierter Werkzeuge für verschiedene professionelle und persönliche Bedürfnisse. Von Online-Notizen über ASCII-Kunst-Generierung bis hin zu Hash-Generatoren und phonetischer Buchstabierung - diese Werkzeuge bieten praktische Lösungen für alltägliche Aufgaben und spezialisierte Anforderungen."
+      },
+      "toolsList": {
+        "title": "Verfügbare Verschiedene Werkzeuge",
+        "items": [
+          {
+            "name": "Online-Notizblock",
+            "href": "/de/tools/online-notepad",
+            "description": "Einfacher Online-Texteditor mit automatischer Speicherung"
+          },
+          {
+            "name": "Zahlensortierer",
+            "href": "/de/tools/number-sorter",
+            "description": "Sortieren Sie Zahlen aufsteigend, absteigend oder benutzerdefiniert"
+          },
+          {
+            "name": "ASCII-Kunst-Generator",
+            "href": "/de/tools/ascii-art-generator",
+            "description": "Erstellen Sie ASCII-Kunst und große Textbanner mit verschiedenen Schriftarten"
+          },
+          {
+            "name": "NATO-Phonetisches Alphabet",
+            "href": "/de/tools/nato-phonetic",
+            "description": "Konvertieren Sie Text in NATO-phonetische Buchstabierung"
+          },
+          {
+            "name": "MD5-Hash",
+            "href": "/de/tools/md5-hash",
+            "description": "Generieren Sie MD5-Hashes für Text und Daten"
+          },
+          {
+            "name": "SHA1-Hash-Generator",
+            "href": "/de/tools/sha1-hash-generator",
+            "description": "Erstellen Sie SHA1-Hashes für Sicherheit und Datenintegrität"
+          },
+          {
+            "name": "Phonetische Rechtschreibung",
+            "href": "/de/tools/phonetic-spelling",
+            "description": "Konvertieren Sie Text in phonetische Rechtschreibung"
+          },
+          {
+            "name": "Pig Latin",
+            "href": "/de/tools/pig-latin",
+            "description": "Übersetzen Sie Text in Pig Latin Sprachspiel"
+          },
+          {
+            "name": "Römische Zahlendatum",
+            "href": "/de/tools/roman-numeral-date",
+            "description": "Konvertieren Sie Daten in römische Ziffern"
+          },
+          {
+            "name": "UTM-Builder",
+            "href": "/de/tools/utm-builder",
+            "description": "Erstellen Sie UTM-Parameter für Kampagnen-Tracking"
           }
         ]
       }

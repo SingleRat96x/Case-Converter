@@ -270,5 +270,141 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Text Suchen und Ersetzen Tool - Erweiterte Textsuche & -ersetzung",
+    "metaDescription": "Suchen und ersetzen Sie Text mit leistungsstarken Optionen einschließlich Groß-/Kleinschreibungsbeachtung, Ganzes-Wort-Suche und regulären Ausdrücken. Perfekt für Massentextbearbeitung, Code-Korrekturen und Content-Management.",
+    "sections": {
+      "intro": {
+        "title": "Erweitertes Text Suchen und Ersetzen Tool",
+        "content": "Führen Sie anspruchsvolle Textsuche und -ersetzungsoperationen mit unserem erweiterten Tool durch. Funktionen umfassen groß-/kleinschreibungsabhängige Suche, Ganzes-Wort-Suche, Unterstützung für reguläre Ausdrücke und Echtzeit-Vorschau. Perfekt für Content-Bearbeitung, Code-Refactoring, Datenbereinigung und Massentextänderungen."
+      },
+      "features": {
+        "title": "Suchen und Ersetzen Funktionen",
+        "items": [
+          { "title": "Groß-/Kleinschreibungsabhängige Suche", "description": "Groß-/Kleinschreibung für präzise oder flexible Textsuche umschalten" },
+          { "title": "Ganzes-Wort-Suche", "description": "Nur vollständige Wörter finden, um Teilersetzungen zu vermeiden" },
+          { "title": "Unterstützung für Reguläre Ausdrücke", "description": "Regex-Muster für komplexe Such- und Ersetzungsoperationen verwenden" },
+          { "title": "Echtzeit-Übereinstimmungszähler", "description": "Sehen Sie sofort beim Tippen, wie viele Übereinstimmungen gefunden wurden" },
+          { "title": "Suchmuster-Hervorhebung", "description": "Visuelle Vorschau mit hervorgehobenen Übereinstimmungen im Originaltext" },
+          { "title": "Schnelle Tausch-Funktion", "description": "Tauschen Sie Such- und Ersetzungsbegriffe mit einem Klick" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und führen Sie Massen-Such- und Ersetzungsoperationen durch" },
+          { "title": "Sofortiger Download", "description": "Speichern Sie geänderten Text als Dateien für die Verwendung in anderen Anwendungen" },
+          { "title": "Mobil Optimiert", "description": "Responsives Design mit optimiertem mobilen Button-Layout" }
+        ]
+      },
+      "useCases": {
+        "title": "Praktische Anwendungen für Suchen und Ersetzen",
+        "description": "Textersetzung hat zahlreiche praktische Anwendungen in verschiedenen Bereichen und Branchen.",
+        "items": [
+          { "title": "Content-Bearbeitung", "description": "Terminologie aktualisieren, Tippfehler korrigieren oder Formatierung in Dokumenten standardisieren" },
+          { "title": "Code-Refactoring", "description": "Variablen umbenennen, Funktionsnamen aktualisieren oder Code-Muster ändern" },
+          { "title": "Datenbereinigung", "description": "Daten bereinigen und standardisieren, indem inkonsistente Formate ersetzt werden" },
+          { "title": "URL-Updates", "description": "URLs, Links oder Referenzen in Dokumentation massenweise aktualisieren" },
+          { "title": "Übersetzungsvorbereitung", "description": "Platzhalter ersetzen oder Text für Übersetzung standardisieren" },
+          { "title": "Format-Konvertierung", "description": "Zwischen verschiedenen Textformaten oder Markup-Sprachen konvertieren" },
+          { "title": "Konfigurations-Updates", "description": "Konfigurationsdateien, Einstellungen oder Umgebungsvariablen aktualisieren" },
+          { "title": "Content-Standardisierung", "description": "Einheitliche Terminologie und Formatierung über mehrere Dokumente sicherstellen" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Verwenden Sie Suchen und Ersetzen",
+        "description": "Befolgen Sie diese Schritte, um Textsuche und -ersetzungsoperationen durchzuführen.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text Eingeben",
+            "description": "Tippen oder fügen Sie den zu ändernden Text ein, oder laden Sie eine Textdatei für Massenoperationen hoch."
+          },
+          {
+            "step": 2,
+            "title": "Suchparameter Festlegen",
+            "description": "Geben Sie den zu suchenden Text und den Ersetzungstext ein. Konfigurieren Sie Optionen wie Groß-/Kleinschreibungsbeachtung, Ganzes-Wort-Suche oder Regex."
+          },
+          {
+            "step": 3,
+            "title": "Übereinstimmungen Überprüfen",
+            "description": "Sehen Sie die Übereinstimmungszahl und Vorschau der hervorgehobenen Übereinstimmungen zur Überprüfung Ihres Suchmusters."
+          },
+          {
+            "step": 4,
+            "title": "Anwenden und Herunterladen",
+            "description": "Überprüfen Sie den ersetzten Text und kopieren oder laden Sie die Ergebnisse für Ihre Projekte herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Suchen und Ersetzen Beispiele",
+        "description": "Sehen Sie, wie verschiedene Optionen Such- und Ersetzungsoperationen beeinflussen.",
+        "items": [
+          { "title": "Einfache Ersetzung", "input": "Suchen: 'Katze' → Ersetzen: 'Hund'", "output": "Ändert alle Instanzen von 'Katze' zu 'Hund'" },
+          { "title": "Groß-/Kleinschreibung Beachten", "input": "Suchen: 'API' (groß-/kleinschreibungsabhängig)", "output": "Findet nur 'API', nicht 'api' oder 'Api'" },
+          { "title": "Ganzes Wort", "input": "Suchen: 'Haus' (ganzes Wort)", "output": "Findet 'Haus', aber nicht 'Hausmeister' oder 'Haushalt'" },
+          { "title": "Regex-Muster", "input": "Suchen: '\\d{3}-\\d{3}-\\d{4}' → Ersetzen: '[TELEFON]'", "output": "Ersetzt Telefonnummern durch Platzhalter" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unser Suchen und Ersetzen Tool Verwenden",
+        "content": "Professionelle Textersetzung mit erweiterten Funktionen und Echtzeit-Feedback.",
+        "items": [
+          "Groß-/kleinschreibungsabhängige und -unabhängige Suche",
+          "Ganzes-Wort-Suche zur Vermeidung von Teilersetzungen",
+          "Unterstützung für reguläre Ausdrücke für komplexe Muster",
+          "Echtzeit-Übereinstimmungszähler und Hervorhebung",
+          "Schnelle Tausch-Funktion für Such-/Ersetzungsbegriffe",
+          "Datei-Upload- und Download-Unterstützung",
+          "Mobil-optimiertes responsives Design",
+          "Datenschutz-First: Alle Verarbeitung erfolgt lokal",
+          "Keine Registrierung erforderlich - völlig kostenlos"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist der Unterschied zwischen groß-/kleinschreibungsabhängiger und -unabhängiger Suche?",
+          "answer": "Groß-/kleinschreibungsabhängige Suche findet Text genau wie eingegeben, einschließlich Groß- und Kleinbuchstaben. Groß-/kleinschreibungsunabhängige Suche ignoriert Großschreibung, sodass 'Hallo', 'HALLO' und 'hallo' alle übereinstimmen."
+        },
+        {
+          "question": "Wie funktioniert die Ganzes-Wort-Suche?",
+          "answer": "Ganzes-Wort-Suche stellt sicher, dass Ihr Suchbegriff nur vollständigen Wörtern entspricht, nicht Teilen größerer Wörter. Zum Beispiel würde die Suche nach 'Haus' mit aktiviertem Ganzem Wort 'Haus' finden, aber nicht 'Hausmeister' oder 'Haushalt'."
+        },
+        {
+          "question": "Kann ich reguläre Ausdrücke verwenden?",
+          "answer": "Ja! Aktivieren Sie den Regex-Modus, um leistungsstarke Mustererkennung zu nutzen. Sie können nach Mustern wie Telefonnummern (\\d{3}-\\d{3}-\\d{4}), E-Mail-Adressen oder beliebigen komplexen Textmustern suchen."
+        },
+        {
+          "question": "Gibt es eine Grenze für die Textmenge, die ich verarbeiten kann?",
+          "answer": "Das Tool kann große Textmengen verarbeiten, aber sehr große Dateien können die Browser-Performance beeinträchtigen. Für optimale Erfahrung empfehlen wir die Verarbeitung von Dateien unter 1MB."
+        },
+        {
+          "question": "Kann ich eine Ersetzungsoperation rückgängig machen?",
+          "answer": "Das Tool zeigt Ihnen die Ergebnisse, bevor Sie sie kopieren oder herunterladen. Wenn Sie rückgängig machen müssen, ändern Sie einfach Ihre Suchbegriffe oder laden Sie Ihren Originaltext neu. Erstellen Sie immer Backups wichtiger Dateien."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textverarbeitungs-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen, Wörter und analysieren Sie Textstatistiken",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Text Wiederholen", 
+            "description": "Wiederholen Sie Text mehrmals mit benutzerdefinierten Trennzeichen",
+            "href": "/de/tools/repeat-text"
+          },
+          {
+            "name": "Textformatierung Entfernen",
+            "description": "Bereinigen Sie Text durch Entfernen unerwünschter Formatierung",
+            "href": "/de/tools/remove-text-formatting"
+          },
+          {
+            "name": "Binärcode-Übersetzer",
+            "description": "Konvertieren Sie Text in Binärcode und zurück",
+            "href": "/de/tools/binary-code-translator"
+          }
+        ]
+      }
+    }
   }
 }

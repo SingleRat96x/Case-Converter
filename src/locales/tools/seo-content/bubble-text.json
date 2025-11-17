@@ -160,6 +160,87 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Blasentext Generator - Unicode Blasenbuchstaben",
+    "metaDescription": "Verwandeln Sie Ihren Text in Blasenbuchstaben mit Unicode-Zeichen. Perfekt für lustige Social-Media-Posts, kreative Nachrichten und spielerisches Styling.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Blasentext Generator - Unicode Blasenbuchstaben",
+        "content": "Erstellen Sie sofort spielerischen Blasenbuchstaben-Text mit unserem kostenlosen Generator. Perfekt für Social Media, Chats und kreativen Content, der mit einem lustigen, abgerundeten Stil heraussticht."
+      },
+      "features": {
+        "title": "Blasentext-Funktionen",
+        "items": [
+          { "title": "Sofortige Konvertierung", "description": "Echtzeit-Blasentext-Konvertierung während Sie tippen oder einfügen" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und konvertieren Sie den gesamten Inhalt in Blasentext" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie Ergebnisse oder laden Sie sie als Textdatei herunter" },
+          { "title": "Text-Analytik", "description": "Sehen Sie Zeichen- und Wortzahlen für Ihren Blasentext" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert auf allen Plattformen und Geräten" },
+          { "title": "Datenschutz zuerst", "description": "Alles läuft lokal in Ihrem Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Verwendungen für Blasentext",
+        "description": "Fügen Sie einen spielerischen Ton und visuelles Flair zu Ihrem Content hinzu.",
+        "items": [
+          { "title": "Social-Media-Bildunterschriften", "description": "Machen Sie Bildunterschriften und Bios lustiger und aufmerksamkeitsstärker." },
+          { "title": "Messaging & Chat", "description": "Senden Sie spielerische Nachrichten, die in Chats und DMs herausstechen." },
+          { "title": "Kreativer Content", "description": "Dekorieren Sie Poster, Notizen und Grafiken mit Blasenbuchstaben." },
+          { "title": "Benutzernamen & Handles", "description": "Erstellen Sie einzigartig aussehende Benutzernamen mit Blasenzeichen." },
+          { "title": "Überschriften & Callouts", "description": "Fügen Sie lustige Überschriften für Social Cards und Banner hinzu." },
+          { "title": "Kinder & Bildung", "description": "Erstellen Sie ansprechende Materialien für Kinder und Lerninhalte." }
+        ]
+      },
+      "howToUse": {
+        "title": "So Erstellen Sie Blasentext",
+        "description": "Konvertieren Sie Ihren Text in wenigen Schritten in Blasenbuchstaben.",
+        "steps": [
+          { "step": 1, "title": "Text Eingeben", "description": "Tippen oder fügen Sie Ihren Text ein oder laden Sie eine Datei hoch." },
+          { "step": 2, "title": "Automatische Konvertierung", "description": "Ihr Text wird sofort zu Blasenbuchstaben." },
+          { "step": 3, "title": "Analytik Überprüfen", "description": "Überprüfen Sie Zählungen und Statistiken für Ihren Blasentext." },
+          { "step": 4, "title": "Kopieren oder Herunterladen", "description": "In Zwischenablage kopieren oder als Textdatei herunterladen." }
+        ]
+      },
+      "examples": {
+        "title": "Blasentext-Beispiele",
+        "description": "Sehen Sie Blasenbuchstaben auf gängige Phrasen angewendet.",
+        "items": [
+          { "title": "Begrüßung", "input": "Hallo Welt", "output": "ⓗⓐⓛⓛⓞ ⓦⓔⓛⓣ" },
+          { "title": "Bildunterschrift", "input": "So viel Spaß!", "output": "ⓢⓞ ⓥⓘⓔⓛ ⓢⓟⓐß!" },
+          { "title": "Benutzername", "input": "cooler_user", "output": "ⓒⓞⓞⓛⓔⓡ_ⓤⓢⓔⓡ" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Blasentext-Generator Verwenden",
+        "content": "Lustige, schnelle und datenschutzorientierte Blasenbuchstaben-Konvertierung.",
+        "items": [
+          "Kostenlos und unbegrenzte Nutzung",
+          "Keine Anmeldung erforderlich",
+          "Nur lokale Verarbeitung für Datenschutz",
+          "Unterstützt mehrere Dateiformate",
+          "Echtzeit-Konvertierung",
+          "Analytik enthalten",
+          "Responsives Design",
+          "Funktioniert mit allen Sprachen"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist Blasentext?", "answer": "Blasentext verwendet abgerundete, eingeschlossene Unicode-Zeichen, um ein spielerisches Aussehen zu erzeugen, während es einfacher Text bleibt." },
+        { "question": "Funktioniert es auf allen Plattformen?", "answer": "Ja, Blasenzeichen sind Unicode und werden überall angezeigt, wo Unicode-Schriftarten unterstützt werden." },
+        { "question": "Kann ich Dateien konvertieren?", "answer": "Ja, laden Sie eine Textdatei hoch, um den gesamten Inhalt in Blasentext zu konvertieren." },
+        { "question": "Sind meine Daten privat?", "answer": "Alle Konvertierungen erfolgen in Ihrem Browser; nichts wird hochgeladen." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Styling-Tools",
+        "items": [
+          { "name": "Fetter Text Generator", "description": "Generieren Sie fetten Unicode-Text, der überall funktioniert", "href": "/de/tools/bold-text" },
+          { "name": "Kursivtext Generator", "description": "Erstellen Sie kursiven Unicode-Text für Betonung und Styling", "href": "/de/tools/italic-text" },
+          { "name": "Facebook Schriftarten Generator", "description": "Erstellen Sie auffällige Schriftarten für Facebook-Posts und Profile", "href": "/de/tools/facebook-font" },
+          { "name": "Instagram Schriftarten Generator", "description": "Generieren Sie stilvolle Schriftarten perfekt für Instagram-Bios und Posts", "href": "/de/tools/instagram-fonts" }
+        ]
+      }
+    }
   }
 }
 

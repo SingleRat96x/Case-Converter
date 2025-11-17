@@ -51,7 +51,7 @@ export function AboutUsContent() {
           title={t('about.title')}
           subtitle={t('about.subtitle')}
           breadcrumbs={[
-            { label: 'Home', href: currentLocale === 'en' ? '/' : '/ru' },
+            { label: 'Home', href: currentLocale === 'en' ? '/' : `/${currentLocale}` },
             { label: t('about.title') }
           ]}
         />

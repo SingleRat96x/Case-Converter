@@ -7,8 +7,8 @@ import { X, ChevronDown, ChevronRight, Globe, Sun, Moon, Monitor, Type, Palette,
 import { useNavigationTranslations } from '@/lib/i18n/hooks';
 
 interface MobileNavigationProps {
-  locale: 'en' | 'ru';
-  onLocaleChange: (locale: 'en' | 'ru') => void;
+  locale: 'en' | 'ru' | 'de';
+  onLocaleChange: (locale: 'en' | 'ru' | 'de') => void;
 }
 
 export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationProps) {
@@ -91,42 +91,42 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.uppercase'),
-          href: locale === 'en' ? '/tools/uppercase' : '/ru/tools/uppercase',
+          href: locale === 'en' ? '/tools/uppercase' : locale === 'ru' ? '/ru/tools/uppercase' : '/de/tools/uppercase',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.lowercase'),
-          href: locale === 'en' ? '/tools/lowercase' : '/ru/tools/lowercase',
+          href: locale === 'en' ? '/tools/lowercase' : locale === 'ru' ? '/ru/tools/lowercase' : '/de/tools/lowercase',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.titleCase'),
-          href: locale === 'en' ? '/tools/title-case' : '/ru/tools/title-case',
+          href: locale === 'en' ? '/tools/title-case' : locale === 'ru' ? '/ru/tools/title-case' : '/de/tools/title-case',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.sentenceCase'),
-          href: locale === 'en' ? '/tools/sentence-case' : '/ru/tools/sentence-case',
+          href: locale === 'en' ? '/tools/sentence-case' : locale === 'ru' ? '/ru/tools/sentence-case' : '/de/tools/sentence-case',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.alternatingCase'),
-          href: locale === 'en' ? '/tools/alternating-case' : '/ru/tools/alternating-case',
+          href: locale === 'en' ? '/tools/alternating-case' : locale === 'ru' ? '/ru/tools/alternating-case' : '/de/tools/alternating-case',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.camelCaseConverter'),
-          href: locale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter',
+          href: locale === 'en' ? '/tools/camel-case-converter' : locale === 'ru' ? '/ru/tools/camel-case-converter' : '/de/tools/camel-case-converter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.snakeCaseConverter'),
-          href: locale === 'en' ? '/tools/snake-case-converter' : '/ru/tools/snake-case-converter',
+          href: locale === 'en' ? '/tools/snake-case-converter' : locale === 'ru' ? '/ru/tools/snake-case-converter' : '/de/tools/snake-case-converter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.kebabCaseConverter'),
-          href: locale === 'en' ? '/tools/kebab-case-converter' : '/ru/tools/kebab-case-converter',
+          href: locale === 'en' ? '/tools/kebab-case-converter' : locale === 'ru' ? '/ru/tools/kebab-case-converter' : '/de/tools/kebab-case-converter',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -138,27 +138,27 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.textCounter'),
-          href: locale === 'en' ? '/tools/text-counter' : '/ru/tools/text-counter',
+          href: locale === 'en' ? '/tools/text-counter' : locale === 'ru' ? '/ru/tools/text-counter' : '/de/tools/text-counter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.sentenceCounter'),
-          href: locale === 'en' ? '/tools/sentence-counter' : '/ru/tools/sentence-counter',
+          href: locale === 'en' ? '/tools/sentence-counter' : locale === 'ru' ? '/ru/tools/sentence-counter' : '/de/tools/sentence-counter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.wordFrequency'),
-          href: locale === 'en' ? '/tools/word-frequency' : '/ru/tools/word-frequency',
+          href: locale === 'en' ? '/tools/word-frequency' : locale === 'ru' ? '/ru/tools/word-frequency' : '/de/tools/word-frequency',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.extractNumbers'),
-          href: locale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers',
+          href: locale === 'en' ? '/tools/extract-numbers' : locale === 'ru' ? '/ru/tools/extract-numbers' : '/de/tools/extract-numbers',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.readingTimeEstimator'),
-          href: locale === 'en' ? '/tools/reading-time-estimator' : '/ru/tools/reading-time-estimator',
+          href: locale === 'en' ? '/tools/reading-time-estimator' : locale === 'ru' ? '/ru/tools/reading-time-estimator' : '/de/tools/reading-time-estimator',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -170,17 +170,17 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.instagramFonts'),
-          href: locale === 'en' ? '/tools/instagram-fonts' : '/ru/tools/instagram-fonts',
+          href: locale === 'en' ? '/tools/instagram-fonts' : locale === 'ru' ? '/ru/tools/instagram-fonts' : '/de/tools/instagram-fonts',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.facebookFont'),
-          href: locale === 'en' ? '/tools/facebook-font' : '/ru/tools/facebook-font',
+          href: locale === 'en' ? '/tools/facebook-font' : locale === 'ru' ? '/ru/tools/facebook-font' : '/de/tools/facebook-font',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.discordFont'),
-          href: locale === 'en' ? '/tools/discord-font' : '/ru/tools/discord-font',
+          href: locale === 'en' ? '/tools/discord-font' : locale === 'ru' ? '/ru/tools/discord-font' : '/de/tools/discord-font',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -192,97 +192,97 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.invisibleText'),
-          href: locale === 'en' ? '/tools/invisible-text' : '/ru/tools/invisible-text',
+          href: locale === 'en' ? '/tools/invisible-text' : locale === 'ru' ? '/ru/tools/invisible-text' : '/de/tools/invisible-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.repeatText'),
-          href: locale === 'en' ? '/tools/repeat-text' : '/ru/tools/repeat-text',
+          href: locale === 'en' ? '/tools/repeat-text' : locale === 'ru' ? '/ru/tools/repeat-text' : '/de/tools/repeat-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.textReplace'),
-          href: locale === 'en' ? '/tools/text-replace' : '/ru/tools/text-replace',
+          href: locale === 'en' ? '/tools/text-replace' : locale === 'ru' ? '/ru/tools/text-replace' : '/de/tools/text-replace',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.removeLineBreaks'),
-          href: locale === 'en' ? '/tools/remove-line-breaks' : '/ru/tools/remove-line-breaks',
+          href: locale === 'en' ? '/tools/remove-line-breaks' : locale === 'ru' ? '/ru/tools/remove-line-breaks' : '/de/tools/remove-line-breaks',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.removeTextFormatting'),
-          href: locale === 'en' ? '/tools/remove-text-formatting' : '/ru/tools/remove-text-formatting',
+          href: locale === 'en' ? '/tools/remove-text-formatting' : locale === 'ru' ? '/ru/tools/remove-text-formatting' : '/de/tools/remove-text-formatting',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.duplicateLineRemover'),
-          href: locale === 'en' ? '/tools/duplicate-line-remover' : '/ru/tools/duplicate-line-remover',
+          href: locale === 'en' ? '/tools/duplicate-line-remover' : locale === 'ru' ? '/ru/tools/duplicate-line-remover' : '/de/tools/duplicate-line-remover',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.removePunctuation'),
-          href: locale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation',
+          href: locale === 'en' ? '/tools/remove-punctuation' : locale === 'ru' ? '/ru/tools/remove-punctuation' : '/de/tools/remove-punctuation',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.boldText'),
-          href: locale === 'en' ? '/tools/bold-text' : '/ru/tools/bold-text',
+          href: locale === 'en' ? '/tools/bold-text' : locale === 'ru' ? '/ru/tools/bold-text' : '/de/tools/bold-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.italicText'),
-          href: locale === 'en' ? '/tools/italic-text' : '/ru/tools/italic-text',
+          href: locale === 'en' ? '/tools/italic-text' : locale === 'ru' ? '/ru/tools/italic-text' : '/de/tools/italic-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.subscriptText'),
-          href: locale === 'en' ? '/tools/subscript-text' : '/ru/tools/subscript-text',
+          href: locale === 'en' ? '/tools/subscript-text' : locale === 'ru' ? '/ru/tools/subscript-text' : '/de/tools/subscript-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.bigText'),
-          href: locale === 'en' ? '/tools/big-text' : '/ru/tools/big-text',
+          href: locale === 'en' ? '/tools/big-text' : locale === 'ru' ? '/ru/tools/big-text' : '/de/tools/big-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.bubbleText'),
-          href: locale === 'en' ? '/tools/bubble-text' : '/ru/tools/bubble-text',
+          href: locale === 'en' ? '/tools/bubble-text' : locale === 'ru' ? '/ru/tools/bubble-text' : '/de/tools/bubble-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.cursedText'),
-          href: locale === 'en' ? '/tools/cursed-text' : '/ru/tools/cursed-text',
+          href: locale === 'en' ? '/tools/cursed-text' : locale === 'ru' ? '/ru/tools/cursed-text' : '/de/tools/cursed-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.mirrorText'),
-          href: locale === 'en' ? '/tools/mirror-text' : '/ru/tools/mirror-text',
+          href: locale === 'en' ? '/tools/mirror-text' : locale === 'ru' ? '/ru/tools/mirror-text' : '/de/tools/mirror-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.sortWords'),
-          href: locale === 'en' ? '/tools/sort-words' : '/ru/tools/sort-words',
+          href: locale === 'en' ? '/tools/sort-words' : locale === 'ru' ? '/ru/tools/sort-words' : '/de/tools/sort-words',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.plainText'),
-          href: locale === 'en' ? '/tools/plain-text' : '/ru/tools/plain-text',
+          href: locale === 'en' ? '/tools/plain-text' : locale === 'ru' ? '/ru/tools/plain-text' : '/de/tools/plain-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.extractEmailsFromText'),
-          href: locale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text',
+          href: locale === 'en' ? '/tools/extract-emails-from-text' : locale === 'ru' ? '/ru/tools/extract-emails-from-text' : '/de/tools/extract-emails-from-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.addLineNumbers'),
-          href: locale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text',
+          href: locale === 'en' ? '/tools/add-line-numbers-to-text' : locale === 'ru' ? '/ru/tools/add-line-numbers-to-text' : '/de/tools/add-line-numbers-to-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.addPrefixSuffix'),
-          href: locale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : '/ru/tools/add-prefix-and-suffix-to-lines',
+          href: locale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : locale === 'ru' ? '/ru/tools/add-prefix-and-suffix-to-lines' : '/de/tools/add-prefix-and-suffix-to-lines',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -294,43 +294,43 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.randomNumber'),
-          href: locale === 'en' ? '/tools/random-number' : '/ru/tools/random-number',
+          href: locale === 'en' ? '/tools/random-number' : locale === 'ru' ? '/ru/tools/random-number' : '/de/tools/random-number',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.randomLetter'),
-          href: locale === 'en' ? '/tools/random-letter' : '/ru/tools/random-letter',
+          href: locale === 'en' ? '/tools/random-letter' : locale === 'ru' ? '/ru/tools/random-letter' : '/de/tools/random-letter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.randomDate'),
-          href: locale === 'en' ? '/tools/random-date' : '/ru/tools/random-date',
+          href: locale === 'en' ? '/tools/random-date' : locale === 'ru' ? '/ru/tools/random-date' : '/de/tools/random-date',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.randomMonth'),
-          href: locale === 'en' ? '/tools/random-month' : '/ru/tools/random-month',
+          href: locale === 'en' ? '/tools/random-month' : locale === 'ru' ? '/ru/tools/random-month' : '/de/tools/random-month',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.randomIP'),
-          href: locale === 'en' ? '/tools/random-ip' : '/ru/tools/random-ip',
+          href: locale === 'en' ? '/tools/random-ip' : locale === 'ru' ? '/ru/tools/random-ip' : '/de/tools/random-ip',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.randomChoice'),
-          href: locale === 'en' ? '/tools/random-choice' : '/ru/tools/random-choice',
+          href: locale === 'en' ? '/tools/random-choice' : locale === 'ru' ? '/ru/tools/random-choice' : '/de/tools/random-choice',
           icon: <ChevronRight className="h-4 w-4" />
         }
         ,
         {
           title: t('navigation.passwordGenerator'),
-          href: locale === 'en' ? '/tools/password-generator' : '/ru/tools/password-generator',
+          href: locale === 'en' ? '/tools/password-generator' : locale === 'ru' ? '/ru/tools/password-generator' : '/de/tools/password-generator',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.uuidGenerator'),
-          href: locale === 'en' ? '/tools/uuid-generator' : '/ru/tools/uuid-generator',
+          href: locale === 'en' ? '/tools/uuid-generator' : locale === 'ru' ? '/ru/tools/uuid-generator' : '/de/tools/uuid-generator',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -342,62 +342,62 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.base64EncoderDecoder'),
-          href: locale === 'en' ? '/tools/base64-encoder-decoder' : '/ru/tools/base64-encoder-decoder',
+          href: locale === 'en' ? '/tools/base64-encoder-decoder' : locale === 'ru' ? '/ru/tools/base64-encoder-decoder' : '/de/tools/base64-encoder-decoder',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.binaryCodeTranslator'),
-          href: locale === 'en' ? '/tools/binary-code-translator' : '/ru/tools/binary-code-translator',
+          href: locale === 'en' ? '/tools/binary-code-translator' : locale === 'ru' ? '/ru/tools/binary-code-translator' : '/de/tools/binary-code-translator',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.hexToText'),
-          href: locale === 'en' ? '/tools/hex-to-text' : '/ru/tools/hex-to-text',
+          href: locale === 'en' ? '/tools/hex-to-text' : locale === 'ru' ? '/ru/tools/hex-to-text' : '/de/tools/hex-to-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.morseCode'),
-          href: locale === 'en' ? '/tools/morse-code' : '/ru/tools/morse-code',
+          href: locale === 'en' ? '/tools/morse-code' : locale === 'ru' ? '/ru/tools/morse-code' : '/de/tools/morse-code',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.caesarCipher'),
-          href: locale === 'en' ? '/tools/caesar-cipher' : '/ru/tools/caesar-cipher',
+          href: locale === 'en' ? '/tools/caesar-cipher' : locale === 'ru' ? '/ru/tools/caesar-cipher' : '/de/tools/caesar-cipher',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.rot13'),
-          href: locale === 'en' ? '/tools/rot13' : '/ru/tools/rot13',
+          href: locale === 'en' ? '/tools/rot13' : locale === 'ru' ? '/ru/tools/rot13' : '/de/tools/rot13',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.csvToJson'),
-          href: locale === 'en' ? '/tools/csv-to-json' : '/ru/tools/csv-to-json',
+          href: locale === 'en' ? '/tools/csv-to-json' : locale === 'ru' ? '/ru/tools/csv-to-json' : '/de/tools/csv-to-json',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.jsonStringify'),
-          href: locale === 'en' ? '/tools/json-stringify' : '/ru/tools/json-stringify',
+          href: locale === 'en' ? '/tools/json-stringify' : locale === 'ru' ? '/ru/tools/json-stringify' : '/de/tools/json-stringify',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.jsonFormatter'),
-          href: locale === 'en' ? '/tools/json-formatter' : '/ru/tools/json-formatter',
+          href: locale === 'en' ? '/tools/json-formatter' : locale === 'ru' ? '/ru/tools/json-formatter' : '/de/tools/json-formatter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.urlConverter'),
-          href: locale === 'en' ? '/tools/url-converter' : '/ru/tools/url-converter',
+          href: locale === 'en' ? '/tools/url-converter' : locale === 'ru' ? '/ru/tools/url-converter' : '/de/tools/url-converter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.utf8Converter'),
-          href: locale === 'en' ? '/tools/utf8-converter' : '/ru/tools/utf8-converter',
+          href: locale === 'en' ? '/tools/utf8-converter' : locale === 'ru' ? '/ru/tools/utf8-converter' : '/de/tools/utf8-converter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.slugifyUrl'),
-          href: locale === 'en' ? '/tools/slugify-url' : '/ru/tools/slugify-url',
+          href: locale === 'en' ? '/tools/slugify-url' : locale === 'ru' ? '/ru/tools/slugify-url' : '/de/tools/slugify-url',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -409,47 +409,47 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.imageCropper'),
-          href: locale === 'en' ? '/tools/image-cropper' : '/ru/tools/image-cropper',
+          href: locale === 'en' ? '/tools/image-cropper' : locale === 'ru' ? '/ru/tools/image-cropper' : '/de/tools/image-cropper',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.imageResizer'),
-          href: locale === 'en' ? '/tools/image-resizer' : '/ru/tools/image-resizer',
+          href: locale === 'en' ? '/tools/image-resizer' : locale === 'ru' ? '/ru/tools/image-resizer' : '/de/tools/image-resizer',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.imageToText'),
-          href: locale === 'en' ? '/tools/image-to-text' : '/ru/tools/image-to-text',
+          href: locale === 'en' ? '/tools/image-to-text' : locale === 'ru' ? '/ru/tools/image-to-text' : '/de/tools/image-to-text',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.jpgToPng'),
-          href: locale === 'en' ? '/tools/jpg-to-png' : '/ru/tools/jpg-to-png',
+          href: locale === 'en' ? '/tools/jpg-to-png' : locale === 'ru' ? '/ru/tools/jpg-to-png' : '/de/tools/jpg-to-png',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.jpgToWebp'),
-          href: locale === 'en' ? '/tools/jpg-to-webp' : '/ru/tools/jpg-to-webp',
+          href: locale === 'en' ? '/tools/jpg-to-webp' : locale === 'ru' ? '/ru/tools/jpg-to-webp' : '/de/tools/jpg-to-webp',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.pngToJpg'),
-          href: locale === 'en' ? '/tools/png-to-jpg' : '/ru/tools/png-to-jpg',
+          href: locale === 'en' ? '/tools/png-to-jpg' : locale === 'ru' ? '/ru/tools/png-to-jpg' : '/de/tools/png-to-jpg',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.pngToWebp'),
-          href: locale === 'en' ? '/tools/png-to-webp' : '/ru/tools/png-to-webp',
+          href: locale === 'en' ? '/tools/png-to-webp' : locale === 'ru' ? '/ru/tools/png-to-webp' : '/de/tools/png-to-webp',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.webpToJpg'),
-          href: locale === 'en' ? '/tools/webp-to-jpg' : '/ru/tools/webp-to-jpg',
+          href: locale === 'en' ? '/tools/webp-to-jpg' : locale === 'ru' ? '/ru/tools/webp-to-jpg' : '/de/tools/webp-to-jpg',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.webpToPng'),
-          href: locale === 'en' ? '/tools/webp-to-png' : '/ru/tools/webp-to-png',
+          href: locale === 'en' ? '/tools/webp-to-png' : locale === 'ru' ? '/ru/tools/webp-to-png' : '/de/tools/webp-to-png',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -461,57 +461,57 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
       items: [
         {
           title: t('navigation.onlineNotepad'),
-          href: locale === 'en' ? '/tools/online-notepad' : '/ru/tools/online-notepad',
+          href: locale === 'en' ? '/tools/online-notepad' : locale === 'ru' ? '/ru/tools/online-notepad' : '/de/tools/online-notepad',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.numberSorter'),
-          href: locale === 'en' ? '/tools/number-sorter' : '/ru/tools/number-sorter',
+          href: locale === 'en' ? '/tools/number-sorter' : locale === 'ru' ? '/ru/tools/number-sorter' : '/de/tools/number-sorter',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.asciiArtGenerator'),
-          href: locale === 'en' ? '/tools/ascii-art-generator' : '/ru/tools/ascii-art-generator',
+          href: locale === 'en' ? '/tools/ascii-art-generator' : locale === 'ru' ? '/ru/tools/ascii-art-generator' : '/de/tools/ascii-art-generator',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.natoPhonetic'),
-          href: locale === 'en' ? '/tools/nato-phonetic' : '/ru/tools/nato-phonetic',
+          href: locale === 'en' ? '/tools/nato-phonetic' : locale === 'ru' ? '/ru/tools/nato-phonetic' : '/de/tools/nato-phonetic',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.md5Hash'),
-          href: locale === 'en' ? '/tools/md5-hash' : '/ru/tools/md5-hash',
+          href: locale === 'en' ? '/tools/md5-hash' : locale === 'ru' ? '/ru/tools/md5-hash' : '/de/tools/md5-hash',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.sha1HashGenerator'),
-          href: locale === 'en' ? '/tools/sha1-hash-generator' : '/ru/tools/sha1-hash-generator',
+          href: locale === 'en' ? '/tools/sha1-hash-generator' : locale === 'ru' ? '/ru/tools/sha1-hash-generator' : '/de/tools/sha1-hash-generator',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.phoneticSpelling'),
-          href: locale === 'en' ? '/tools/phonetic-spelling' : '/ru/tools/phonetic-spelling',
+          href: locale === 'en' ? '/tools/phonetic-spelling' : locale === 'ru' ? '/ru/tools/phonetic-spelling' : '/de/tools/phonetic-spelling',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.pigLatin'),
-          href: locale === 'en' ? '/tools/pig-latin' : '/ru/tools/pig-latin',
+          href: locale === 'en' ? '/tools/pig-latin' : locale === 'ru' ? '/ru/tools/pig-latin' : '/de/tools/pig-latin',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.romanNumeralDate'),
-          href: locale === 'en' ? '/tools/roman-numeral-date' : '/ru/tools/roman-numeral-date',
+          href: locale === 'en' ? '/tools/roman-numeral-date' : locale === 'ru' ? '/ru/tools/roman-numeral-date' : '/de/tools/roman-numeral-date',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.utmBuilder'),
-          href: locale === 'en' ? '/tools/utm-builder' : '/ru/tools/utm-builder',
+          href: locale === 'en' ? '/tools/utm-builder' : locale === 'ru' ? '/ru/tools/utm-builder' : '/de/tools/utm-builder',
           icon: <ChevronRight className="h-4 w-4" />
         },
         {
           title: t('navigation.extractEmailsFromPdf'),
-          href: locale === 'en' ? '/tools/extract-emails-from-pdf' : '/ru/tools/extract-emails-from-pdf',
+          href: locale === 'en' ? '/tools/extract-emails-from-pdf' : locale === 'ru' ? '/ru/tools/extract-emails-from-pdf' : '/de/tools/extract-emails-from-pdf',
           icon: <ChevronRight className="h-4 w-4" />
         }
       ]
@@ -634,7 +634,7 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
           </div>
 
           {/* Bottom Controls */}
-          <div className="flex-shrink-0 border-t border-border p-4 space-y-3 bg-background">
+          <div className="flex-shrink-0 border-t border-border p-4 space-y-3 bg-background mobile-menu-bottom-controls">
             {/* Theme Toggle */}
             <div className="space-y-2">
               <div className="flex items-center space-x-2 text-sm font-medium text-muted-foreground">
@@ -694,6 +694,14 @@ export function MobileNavigation({ locale, onLocaleChange }: MobileNavigationPro
                   onClick={() => onLocaleChange('ru')}
                 >
                   RU
+                </Button>
+                <Button
+                  variant={locale === 'de' ? 'default' : 'outline'}
+                  size="sm"
+                  className="flex-1 transition-colors"
+                  onClick={() => onLocaleChange('de')}
+                >
+                  DE
                 </Button>
               </div>
             </div>

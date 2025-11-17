@@ -338,5 +338,175 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Hex-zu-Text-Konverter – Hexadezimal in Text & Text in Hex",
+    "metaDescription": "Wandeln Sie Hexadezimal (Hex) sofort in Text um und zurück. Kostenloser Online-Konverter mit anpassbaren Trennzeichen, 0x-Präfixen und Groß-/Kleinschreibung. Ideal für Programmierung, Debugging und Datenkodierung.",
+    "sections": {
+      "intro": {
+        "title": "Hex-zu-Text-Konverter",
+        "content": "Konvertieren Sie Hexadezimalwerte und Text mühelos hin und her. Unser leistungsstarker Hex-Konverter unterstützt Entwickler, Analysten und Lernende dabei, Datenformate zu verstehen, zu debuggen und effizient zu bearbeiten."
+      },
+      "features": {
+        "title": "Umfangreiche Hex-Konvertierungsfunktionen",
+        "items": [
+          {
+            "title": "Bidirektionale Konvertierung",
+            "description": "Wandeln Sie Text in Hex um oder dekodieren Sie Hex sofort zurück in Text – inklusive Moduswechsel in Echtzeit."
+          },
+          {
+            "title": "Flexible Formatierung",
+            "description": "Wählen Sie zwischen Leerzeichen, Doppelpunkten oder ohne Trennzeichen und fügen Sie optional 0x-Präfixe sowie Groß- oder Kleinschreibung hinzu."
+          },
+          {
+            "title": "Intelligente Hex-Erkennung",
+            "description": "Erkennt automatisch verschiedene Hex-Formate, inklusive 0x-Präfixen, delimitierter Werte oder kontinuierlicher Zeichenfolgen."
+          },
+          {
+            "title": "Datei-Uploads",
+            "description": "Verarbeiten Sie umfangreiche Text- oder Hex-Dateien direkt über die Upload-Funktion – ideal für Logfiles und Datenexports."
+          },
+          {
+            "title": "Live-Analysen",
+            "description": "Erhalten Sie Kennzahlen zu Hex-Zeichen, Byte-Anzahl und Konvertierungsmetriken in Echtzeit."
+          },
+          {
+            "title": "Fehlerprüfung",
+            "description": "Verlässliche Validierung mit klaren Fehlermeldungen für ungültige Hex-Werte oder Zeichencodierungsprobleme."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien",
+        "description": "Hex- und Text-Konvertierung ist in vielen technischen Bereichen unverzichtbar.",
+        "items": [
+          { "title": "Programmierung & Entwicklung", "description": "Analysieren Sie Datenrepräsentationen, arbeiten Sie mit Speicher-Dumps oder Debugging-Ausgaben." },
+          { "title": "Netzwerk- und Protokollanalyse", "description": "Untersuchen Sie Paketdaten, MAC-Adressen und Kommunikationsformate." },
+          { "title": "Datenkodierung", "description": "Konvertieren Sie Inhalte für APIs, Datenbanken oder dateibasierte Integrationen." },
+          { "title": "Reverse Engineering", "description": "Analysieren Sie Firmware, Binärdateien und Forensikdaten." },
+          { "title": "Lehre & Ausbildung", "description": "Verstehen Sie Hexadezimal-Konzepte, Bytefolgen und Zeichencodierungen." },
+          { "title": "Webentwicklung", "description": "Arbeiten Sie mit Farbwerten, URL-Kodierungen und Zeichensätzen." },
+          { "title": "Systemadministration", "description": "Debuggen Sie Konfigurationsdateien, Log-Ausgaben oder Registry-Einträge." },
+          { "title": "Security & Forensik", "description": "Analysieren Sie Malware, Prüfsummen und sicherheitsrelevante Artefakte." }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert die Konvertierung",
+        "description": "Fünf Schritte führen Sie sicher durch die Hex-zu-Text-Verarbeitung.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Daten eingeben",
+            "description": "Text oder Hex-Code in das Eingabefeld einfügen oder optional eine Datei hochladen."
+          },
+          {
+            "step": 2,
+            "title": "Modus wählen",
+            "description": "Per Umschalter zwischen „Text zu Hex“ und „Hex zu Text“ wechseln."
+          },
+          {
+            "step": 3,
+            "title": "Optionen einstellen",
+            "description": "Trennzeichen, Groß-/Kleinschreibung und 0x-Präfixe nach Bedarf konfigurieren."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnis prüfen",
+            "description": "Konvertiertes Ergebnis inklusive Validierung und Statistiken betrachten."
+          },
+          {
+            "step": 5,
+            "title": "Exportieren",
+            "description": "Ergebnis kopieren oder als Datei herunterladen – bereit für den nächsten Arbeitsschritt."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Hex-Konvertierungsbeispiele",
+        "items": [
+          {
+            "input": "Hallo Welt",
+            "output": "48 61 6C 6C 6F 20 57 65 6C 74",
+            "description": "Der Text „Hallo Welt“ wird in Hex (Großbuchstaben) mit Leerzeichen als Trenner umgewandelt."
+          },
+          {
+            "input": "C",
+            "output": "0x43",
+            "description": "Ein einzelnes Zeichen mit 0x-Präfix im Hex-Format."
+          },
+          {
+            "input": "48656C6C6F",
+            "output": "Hello",
+            "description": "Eine kontinuierliche Hex-Zeichenfolge wird zurück in Text dekodiert."
+          },
+          {
+            "input": "Entwicklung",
+            "output": "45:6E:74:77:69:63:6B:6C:75:6E:67",
+            "description": "Text wird in Hex mit Doppelpunkt-Trennzeichen im Kleinbuchstabenformat konvertiert."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile unseres Hex-Konverters",
+        "items": [
+          "Kostenlos und ohne Nutzungslimits",
+          "Präzise Hex-zu-Text- und Text-zu-Hex-Algorithmen",
+          "Unterstützung gängiger Hex-Formatierungsstandards",
+          "Optimal für Schulung, Entwicklung und Analyse",
+          "Datenschutzfreundlich: Verarbeitung erfolgt vollständig lokal",
+          "Responsives UI für Desktop, Tablet und Smartphone",
+          "Ohne Registrierung oder Installation nutzbar",
+          "Professionelle Validierung und Fehlermeldungen"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist Hexadezimal und warum wird es verwendet?",
+          "answer": "Hexadezimal (Hex) ist ein Zahlensystem mit Basis 16 und den Zeichen 0-9 sowie A-F. Es wird genutzt, weil es binäre Daten kompakt und gut lesbar darstellt – jede Hex-Ziffer steht für genau vier Bits."
+        },
+        {
+          "question": "Wofür dienen die verschiedenen Trennzeichen?",
+          "answer": "Leerzeichen (48 65 6C) erhöhen die Lesbarkeit, Doppelpunkte (48:65:6C) sind in Protokollen und MAC-Adressen verbreitet, während ohne Trennzeichen (48656C) in Code oder Hashes üblich ist."
+        },
+        {
+          "question": "Wann sollte ich das 0x-Präfix aktivieren?",
+          "answer": "Das Präfix 0x markiert eine Zahl explizit als hexadezimal. Viele Programmiersprachen wie C, JavaScript oder Python nutzen es, um Hex-Werte von Dezimalzahlen zu unterscheiden."
+        },
+        {
+          "question": "Werden Unicode-Zeichen korrekt konvertiert?",
+          "answer": "Ja, der Konverter nutzt UTF-8-Bytefolgen. Dadurch werden internationale Zeichen, Emojis und Sonderzeichen korrekt in Hex und zurück übertragen."
+        },
+        {
+          "question": "Bleiben meine Daten beim Konvertieren privat?",
+          "answer": "Absolut. Alle Berechnungen laufen lokal im Browser. Es werden keine Daten an Server übertragen, sodass Ihre Eingaben vertraulich bleiben."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Code- & Daten-Tools",
+        "description": "Weitere praktische Werkzeuge für Encoding, Analyse und Formatumwandlung.",
+        "items": [
+          {
+            "name": "Binärcode-Übersetzer",
+            "href": "/de/tools/binary-code-translator",
+            "description": "Text in Binär konvertieren und Binärfolgen dekodieren"
+          },
+          {
+            "name": "Base64-Encoder/Decoder",
+            "href": "/de/tools/base64-encoder-decoder",
+            "description": "Text mit Base64 kodieren oder dekodieren"
+          },
+          {
+            "name": "ASCII-Art-Generator",
+            "href": "/de/tools/ascii-art-generator",
+            "description": "ASCII-Kunst aus Text oder Bildern erstellen"
+          },
+          {
+            "name": "URL-Konverter",
+            "href": "/de/tools/url-converter",
+            "description": "URLs für Webanwendungen kodieren und dekodieren"
+          }
+        ]
+      }
+    }
   }
 }

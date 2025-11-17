@@ -11,8 +11,8 @@ export default function NotFoundText() {
   const { tSync: t, isLoaded } = useCommonTranslations();
   const pathname = usePathname();
   const locale = getLocaleFromPathname(pathname);
-  const homeHref = locale === 'en' ? '/' : '/ru/';
-  const toolsHref = locale === 'en' ? '/tools' : '/ru/tools';
+  const homeHref = locale === 'en' ? '/' : `/${locale}/`;
+  const toolsHref = locale === 'en' ? '/tools' : `/${locale}/tools`;
 
   return (
     <div className="max-w-xl mx-auto text-center space-y-6">

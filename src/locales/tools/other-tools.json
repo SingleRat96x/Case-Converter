@@ -212,5 +212,112 @@
         "isViewAll": true
       }
     ]
+  },
+  "de": {
+    "section": {
+      "title": "Weitere Werkzeuge",
+      "description": "Entdecken Sie unsere Sammlung von Text- und Utility-Werkzeugen"
+    },
+    "pigLatin": {
+      "title": "Pig Latin Übersetzer",
+      "description": "Konvertieren Sie Text sofort in Pig Latin. Verwandeln Sie Ihre Wörter in dieses unterhaltsame Sprachspielformat, perfekt für Unterhaltung, Bildung und geheime Nachrichten.",
+      "outputLabel": "Pig Latin Text",
+      "inputPlaceholder": "Text eingeben, um in Pig Latin zu konvertieren...",
+      "copiedMessage": "Pig Latin Text in die Zwischenablage kopiert!",
+      "downloadFileName": "pig-latin.txt",
+      "uploadDescription": ""
+    },
+    "tools": [
+      {
+        "id": "text-counter",
+        "title": "Textzähler",
+        "description": "Zählen Sie Zeichen, Wörter, Zeilen und analysieren Sie Ihren Text",
+        "icon": "📊",
+        "href": "/de/tools/text-counter",
+        "isPopular": true
+      },
+      {
+        "id": "instagram-fonts",
+        "title": "Instagram-Schriftarten",
+        "description": "Generieren Sie stilvolle Schriftarten für Instagram-Posts und Bio",
+        "icon": "📱",
+        "href": "/de/tools/instagram-fonts",
+        "isPopular": true
+      },
+      {
+        "id": "uppercase",
+        "title": "GROSSBUCHSTABEN-Konverter",
+        "description": "Konvertieren Sie Text sofort in Großbuchstaben",
+        "icon": "🔠",
+        "href": "/de/tools/uppercase",
+        "isPopular": true
+      },
+      {
+        "id": "password-generator",
+        "title": "Passwort-Generator",
+        "description": "Generieren Sie sichere Zufallspasswörter mit benutzerdefinierten Optionen",
+        "icon": "🔐",
+        "href": "/de/tools/password-generator",
+        "isPopular": true
+      },
+      {
+        "id": "base64-encoder-decoder",
+        "title": "Base64 Encoder/Decoder",
+        "description": "Kodieren und dekodieren Sie Text im Base64-Format",
+        "icon": "🔄",
+        "href": "/de/tools/base64-encoder-decoder",
+        "isPopular": true
+      },
+      {
+        "id": "image-resizer",
+        "title": "Bildgrößenänderung",
+        "description": "Ändern Sie die Bildgröße auf bestimmte Abmessungen bei Qualitätserhaltung",
+        "icon": "🖼️",
+        "href": "/de/tools/image-resizer"
+      },
+      {
+        "id": "ascii-art-generator",
+        "title": "ASCII-Kunst-Generator",
+        "description": "Konvertieren Sie Text und Bilder in ASCII-Kunst",
+        "icon": "🎨",
+        "href": "/de/tools/ascii-art-generator"
+      },
+      {
+        "id": "bubble-text",
+        "title": "Blasentext-Generator",
+        "description": "Verwandeln Sie Text in lustige Blasenbuchstaben",
+        "icon": "🔵",
+        "href": "/de/tools/bubble-text"
+      },
+      {
+        "id": "json-stringify",
+        "title": "JSON Stringify",
+        "description": "Formatieren und stringifizieren Sie JSON-Daten mit richtiger Einrückung",
+        "icon": "📄",
+        "href": "/de/tools/json-stringify"
+      },
+      {
+        "id": "random-number",
+        "title": "Zufallszahlen-Generator",
+        "description": "Generieren Sie sichere Zufallszahlen mit benutzerdefinierten Bereichen",
+        "icon": "🎲",
+        "href": "/de/tools/random-number"
+      },
+      {
+        "id": "cursed-text",
+        "title": "Verfluchter-Text-Generator",
+        "description": "Erstellen Sie glitchy, zalgo-artigen verfluchten Text",
+        "icon": "👻",
+        "href": "/de/tools/cursed-text"
+      },
+      {
+        "id": "view-all-tools",
+        "title": "Alle Werkzeuge Anzeigen",
+        "description": "Entdecken Sie unsere vollständige Sammlung von Text- und Utility-Werkzeugen",
+        "icon": "🔧",
+        "href": "/de/tools",
+        "isViewAll": true
+      }
+    ]
   }
 }

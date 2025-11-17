@@ -346,5 +346,179 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "WebP-zu-JPG-Konverter – WebP-Bilder online in JPEG umwandeln",
+    "metaDescription": "Konvertieren Sie WebP-Bilder kostenlos in JPG/JPEG, behalten Sie Qualität und Hintergrundfarben im Griff und sichern Sie volle Browser-Kompatibilität – direkt im Browser.",
+    "sections": {
+      "intro": {
+        "title": "WebP-zu-JPG-Konverter",
+        "content": "Unser WebP-zu-JPG-Konverter wandelt moderne WebP-Dateien sekundenschnell in universell kompatible JPG/JPEG-Bilder um. Ideal, wenn CMS, Shops, E-Mail-Clients oder ältere Browser das WebP-Format noch nicht unterstützen. Stellen Sie Qualität, Kompression und Hintergrundfarbe gezielt ein und behalten Sie alle Dateien lokal im Browser."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen",
+        "items": [
+          {
+            "title": "Qualitätssteuerung",
+            "description": "Wählen Sie zwischen Max, Hoch, Mittel oder Niedrig, um das optimale Verhältnis aus Dateigröße und Bildschärfe zu erreichen."
+          },
+          {
+            "title": "Batch-Konvertierung",
+            "description": "Verarbeiten Sie mehrere WebP-Bilder gleichzeitig und sparen Sie wertvolle Zeit bei großen Bildserien."
+          },
+          {
+            "title": "Kompressionsprofile",
+            "description": "Schalten Sie zwischen Schnell, Standard oder Beste um, um Konvertierungsdauer und Ausgabequalität zu steuern."
+          },
+          {
+            "title": "Hintergrundfarben wählen",
+            "description": "Ersetzen Sie transparente Bereiche wahlweise durch Weiß, Markenfarben oder individuelle HEX-Werte."
+          },
+          {
+            "title": "Sofortige Vorschau",
+            "description": "Sehen Sie das konvertierte JPG direkt im Browser, bevor Sie es herunterladen oder kopieren."
+          },
+          {
+            "title": "100 % privat",
+            "description": "Alle Berechnungen laufen lokal – keine Uploads, kein Tracking, keine Wasserzeichen oder Limits."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie WebP in JPG",
+        "steps": [
+          {
+            "step": 1,
+            "description": "Klicken oder ziehen Sie Ihr WebP-Bild in den Upload-Bereich."
+          },
+          {
+            "step": 2,
+            "description": "Wählen Sie Qualität und Kompressionsprofil passend zu Ihrem Einsatzzweck."
+          },
+          {
+            "step": 3,
+            "description": "Definieren Sie bei Bedarf eine Hintergrundfarbe für transparente Bereiche."
+          },
+          {
+            "step": 4,
+            "description": "Prüfen Sie die Vorschau – die Konvertierung erfolgt automatisch im Browser."
+          },
+          {
+            "step": 5,
+            "description": "Laden Sie das JPG herunter oder kopieren Sie es direkt in die Zwischenablage."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für WebP-zu-JPG-Konvertierungen",
+        "description": "So verändern verschiedene Einstellungen Dateigröße und Kompatibilität:",
+        "items": [
+          {
+            "input": "Transparentes WebP 1500 × 800 px (450 KB)",
+            "output": "JPG mit weißem Hintergrund 1500 × 800 px (280 KB)",
+            "description": "Ausfallsichere Darstellung für Newsletter und ältere Browser."
+          },
+          {
+            "input": "Produktfoto WebP 1800 × 1800 px (950 KB)",
+            "output": "Optimiertes JPG für Shops 1800 × 1800 px (310 KB)",
+            "description": "Schnellere Produktseiten ohne Qualitätsverlust."
+          },
+          {
+            "input": "Hero-Grafik WebP 2400 × 1600 px (1,2 MB)",
+            "output": "Komprimiertes JPG 2400 × 1600 px (420 KB)",
+            "description": "Performante Titelbilder für Landingpages und Blogs."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien",
+        "description": "Wann lohnt sich die Konvertierung von WebP zu JPG?",
+        "items": [
+          {
+            "title": "Legacy-Browser & Apps",
+            "description": "Sichern Sie Fallbacks für Kunden, deren Browser oder native Apps WebP noch nicht unterstützen."
+          },
+          {
+            "title": "CMS & E-Commerce",
+            "description": "Viele Content-Systeme akzeptieren nur JPG – konvertieren Sie Assets ohne zusätzliche Tools."
+          },
+          {
+            "title": "E-Mail-Kampagnen",
+            "description": "Verhindern Sie gebrochene Bilder in Newslettern, indem Sie kompatible JPGs versenden."
+          },
+          {
+            "title": "Social-Media-Uploads",
+            "description": "Bereiten Sie Grafiken für Plattformen vor, die WebP ablehnen oder automatisch umwandeln."
+          },
+          {
+            "title": "Archivierung & Weitergabe",
+            "description": "Speichern und teilen Sie Dateien in einem Format, das jedes Betriebssystem sofort lesen kann."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieser WebP-zu-JPG-Konverter?",
+        "items": [
+          "Kostenlos, ohne Registrierung und ohne Wasserzeichen",
+          "Konvertierung zu 100 % lokal im Browser – Ihre Dateien verlassen nie Ihr Gerät",
+          "Kompatibel mit jedem Betriebssystem, Browser und Workflow",
+          "Hintergrundfarben frei definieren, um Transparenz sauber zu ersetzen",
+          "Qualitäts- und Kompressionsregler für pixelgenaue Ergebnisse",
+          "Direkte Vorschau und Sofort-Download ohne Wartezeiten",
+          "Batch-Support für große Bildmengen und Produktfeeds",
+          "Touch-optimiertes Interface für Smartphones und Tablets",
+          "Kopieren Funktion für schnelle Weitergabe in Chats oder Designs",
+          "Professionelle Resultate für Web, Print, Social Media und Dokumentation"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Bild-Tools",
+        "description": "Weitere nützliche Konverter für Ihren Workflow",
+        "items": [
+          {
+            "name": "PNG-zu-JPG-Konverter",
+            "description": "PNG-Dateien mit Hintergrundfarbe in JPG umwandeln",
+            "href": "/de/tools/png-to-jpg"
+          },
+          {
+            "name": "JPG-zu-PNG-Konverter",
+            "description": "JPEGs in transparente PNGs übertragen",
+            "href": "/de/tools/jpg-to-png"
+          },
+          {
+            "name": "WebP-zu-PNG-Konverter",
+            "description": "WebP mit voller Transparenz in PNG exportieren",
+            "href": "/de/tools/webp-to-png"
+          },
+          {
+            "name": "Bildgrößen-Änderer",
+            "description": "Bilder skalieren und optimieren ohne Qualitätsverlust",
+            "href": "/de/tools/image-resizer"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was passiert mit transparenten Flächen?",
+          "answer": "Da JPG keine Transparenz unterstützt, ersetzen wir transparente Bereiche automatisch durch die von Ihnen gewählte Hintergrundfarbe."
+        },
+        {
+          "question": "Gibt es eine Upload-Grenze?",
+          "answer": "Ja, einzelne WebP-Dateien dürfen maximal 10 MB groß sein, damit die Konvertierung stabil und schnell bleibt."
+        },
+        {
+          "question": "Bleibt die Bildqualität erhalten?",
+          "answer": "Sie entscheiden selbst: Höhere Qualitätsstufen bewahren mehr Details, niedrigere Werte liefern kleinere Dateien."
+        },
+        {
+          "question": "Kann ich mehrere Dateien gleichzeitig konvertieren?",
+          "answer": "Natürlich – ziehen Sie einfach mehrere WebP-Bilder hinein und lassen Sie sie in einem Durchlauf verarbeiten."
+        },
+        {
+          "question": "Sind meine Daten sicher?",
+          "answer": "Ja, alle Berechnungen laufen lokal im Browser. Es findet kein Upload auf externe Server statt, daher bleiben Ihre Bilder vertraulich."
+        }
+      ]
+    }
   }
 }

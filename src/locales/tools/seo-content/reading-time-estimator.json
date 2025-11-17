@@ -166,5 +166,89 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Lesezeit-Rechner – Kostenloser Lesedauer-Kalkulator für Text & JSON",
+    "metaDescription": "Berechnen Sie die Lesezeit sofort für Artikel, Blogbeiträge und Dokumente. Unterstützt Texteingabe, JSON-Extraktion und anpassbare Lesegeschwindigkeiten (still, laut). Kostenlos und datenschutzfreundlich.",
+    "sections": {
+      "intro": {
+        "title": "Lesezeit für Beliebige Inhalte Schätzen",
+        "content": "Berechnen Sie, wie lange das Lesen Ihres Textes, Artikels oder Dokuments dauert, mit unserem kostenlosen Lesezeit-Rechner. Perfekt für Content-Ersteller, Redner und Verleger, die genaue Zeitschätzungen benötigen. Fügen Sie einfach Ihren Text oder JSON-Daten ein und erhalten Sie sofortige Ergebnisse mit anpassbaren Lesegeschwindigkeiten für verschiedene Szenarien."
+      },
+      "features": {
+        "title": "Hauptfunktionen",
+        "items": [
+          { "title": "Mehrere Eingabeoptionen", "description": "Fügen Sie Text direkt ein oder extrahieren Sie Inhalte aus JSON-Daten mit automatischer Schlüsselerkennung für gängige Felder wie 'content', 'body' oder 'text'." },
+          { "title": "Doppelte Lesegeschwindigkeits-Schieberegler", "description": "Passen Sie unabhängig die stille Lesegeschwindigkeit (150-250 WpM) und die Laut-Lese-Geschwindigkeit (100-150 WpM) mit praktischen Voreinstellungen an." },
+          { "title": "Echtzeit-Analyse", "description": "Sehen Sie sofortige Lesezeit im Format Stunden:Min:Sek mit automatischer Wort- und Zeichenzählung sowie doppelten Zeitschätzungen." },
+          { "title": "Zeilen-für-Zeile-Editor", "description": "Erweiterter Texteditor mit Zeilennummern, JSON-Syntax-Hervorhebung und Unterstützung für Datei-Uploads in mehreren Formaten." },
+          { "title": "Intelligenter JSON-Parser", "description": "Extrahiert automatisch Text aus JSON-Strukturen, validiert die Syntax und liefert detaillierte Fehlermeldungen bei ungültigen Daten." },
+          { "title": "Datenschutz-Orientiert", "description": "Alle Berechnungen erfolgen lokal in Ihrem Browser. Keine Textdaten werden an Server gesendet oder gespeichert—vollständige Privatsphäre garantiert." }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt Für",
+        "description": "Unverzichtbar für Content-Ersteller, Verleger und Redner in verschiedenen Anwendungsfällen.",
+        "items": [
+          { "title": "Blogbeiträge & Artikel", "description": "Zeigen Sie genaue Lesezeitschätzungen an, um Lesererwartungen zu setzen und Engagement-Metriken auf Ihrer Website zu verbessern." },
+          { "title": "Präsentationen & Reden", "description": "Timen Sie Ihre Präsentationen präzise mit der Laut-Lese-Geschwindigkeit, um innerhalb der zugewiesenen Zeit zu bleiben und perfekt getaktete Vorträge zu halten." },
+          { "title": "Bücher & E-Books", "description": "Berechnen Sie Kapitel- und Gesamtlesezeiten für Bücher, E-Books und lange Artikel, um Lesern bei der Planung ihrer Lesesitzungen zu helfen." },
+          { "title": "Technische Dokumentation", "description": "Verwenden Sie langsamere Lesegeschwindigkeiten für genaue Schätzungen bei komplexen technischen Handbüchern, API-Dokumentationen und Entwicklerleitfäden." },
+          { "title": "Content-Marketing", "description": "Optimieren Sie E-Mail-Newsletter, Landingpages und Marketingtexte, indem Sie die genauen Lesezeiten für Ihre Zielgruppe verstehen." },
+          { "title": "API & CMS-Inhalte", "description": "Extrahieren und analysieren Sie Text aus JSON-API-Antworten, CMS-Datenexporten und strukturierten Inhalten für dynamische Lesezeitanzeigen." }
+        ]
+      },
+      "howToUse": {
+        "title": "Verwendung",
+        "description": "Berechnen Sie die Lesezeit in drei einfachen Schritten.",
+        "steps": [
+          { "step": 1, "title": "Eingabemodus Wählen", "description": "Wählen Sie 'Text', um Inhalte direkt einzufügen, oder 'JSON', um Text aus strukturierten Daten zu extrahieren." },
+          { "step": 2, "title": "Lesegeschwindigkeit Anpassen", "description": "Verwenden Sie die Schieberegler, um Ihre stille Lesegeschwindigkeit (150-250 WpM) und Laut-Lese-Geschwindigkeit (100-150 WpM) einzustellen. Klicken Sie auf Voreinstellungen für schnelle Auswahl." },
+          { "step": 3, "title": "Ergebnisse Anzeigen", "description": "Sehen Sie sofortige Lesezeitschätzungen mit detaillierter Analyse einschließlich Wortzahl, Zeichenzahl und Zeitaufschlüsselungen." }
+        ]
+      },
+      "examples": {
+        "title": "Lesezeitbeispiele",
+        "description": "Typische Lesezeiten für verschiedene Inhaltslängen.",
+        "items": [
+          { "title": "Kurzer Artikel (500 Wörter)", "input": "500 Wörter bei 200 WpM", "output": "2:30 Lesezeit" },
+          { "title": "Mittlerer Artikel (1.500 Wörter)", "input": "1.500 Wörter bei 200 WpM", "output": "7:30 Lesezeit" },
+          { "title": "Langer Inhalt (3.000 Wörter)", "input": "3.000 Wörter bei 250 WpM (schnell)", "output": "12:00 Lesezeit" },
+          { "title": "Präsentationsskript (1.200 Wörter)", "input": "1.200 Wörter bei 120 WpM (laut)", "output": "10:00 Sprechzeit" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Lesezeit-Rechner Verwenden",
+        "content": "Professionelle Lesezeitberechnung mit genauen Schätzungen und flexiblen Eingabeoptionen.",
+        "items": [
+          "Vollständig kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Mehrere Eingabemodi: Text und JSON",
+          "Anpassbare Lesegeschwindigkeiten für verschiedene Szenarien",
+          "Automatische Wortzählung und Textextraktion",
+          "Datenschutz zuerst - alle Berechnungen lokal",
+          "Laut-Lese-Schätzungen für Präsentationen",
+          "Zeit im Format Stunden:Min:Sek angezeigt",
+          "Funktioniert mit allen Sprachen und Zeichensätzen"
+        ]
+      },
+      "faqs": [
+        { "question": "Wie genau sind die Lesezeitschätzungen?", "answer": "Unsere Schätzungen verwenden gut erforschte durchschnittliche Lesegeschwindigkeiten: 200 WpM für normales Lesen, 250 WpM für schnelle Leser, 150 WpM für technische Inhalte und 120 WpM für lautes Lesen. Die tatsächliche Lesezeit variiert je nach Inhaltskomplexität und Vertrautheit des Lesers." },
+        { "question": "Was ist der Unterschied zwischen stillem und lautem Lesen?", "answer": "Stilles Lesen ist normalerweise schneller (200-250 WpM), während lautes Sprechen langsamer ist (100-150 WpM). Verwenden Sie Laut-Lese-Schätzungen für Präsentationen, Reden, Podcasts und Erzählungen." },
+        { "question": "Wie funktioniert die JSON-Textextraktion?", "answer": "Das Tool erkennt automatisch gängige Inhaltsfelder in Ihren JSON-Daten (wie 'content', 'body', 'text'). Es durchsucht rekursiv die JSON-Struktur, um alle Textinhalte für die Analyse zu extrahieren." },
+        { "question": "Werden meine Textdaten gespeichert oder an einen Server gesendet?", "answer": "Nein. Alle Berechnungen erfolgen lokal in Ihrem Browser mit JavaScript. Ihre Text- und JSON-Daten verlassen niemals Ihr Gerät und gewährleisten vollständige Privatsphäre." },
+        { "question": "Kann ich das für Bücher und lange Inhalte verwenden?", "answer": "Ja! Das Tool verarbeitet Inhalte jeder Länge. Ein typischer Roman mit 80.000 Wörtern würde bei durchschnittlicher Geschwindigkeit etwa 6-7 Stunden zum Lesen benötigen." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "description": "Entdecken Sie weitere Textanalyse- und Formatierungstools zur Verbesserung Ihres Workflows.",
+        "items": [
+          { "name": "Textzähler", "description": "Zählen Sie Wörter, Zeichen, Sätze und Absätze mit detaillierter Analyse", "href": "/de/tools/text-counter" },
+          { "name": "Worthäufigkeits-Analysator", "description": "Analysieren Sie Worthäufigkeit und finden Sie die häufigsten Wörter in Ihrem Text", "href": "/de/tools/word-frequency" },
+          { "name": "Satzzähler", "description": "Zählen Sie Sätze und analysieren Sie Satzstrukturen mit detaillierten Metriken", "href": "/de/tools/sentence-counter" },
+          { "name": "JSON-Formatierer", "description": "Formatieren, validieren und verschönern Sie JSON-Daten mit Syntax-Hervorhebung", "href": "/de/tools/json-formatter" }
+        ]
+      }
+    }
   }
 }

@@ -76,7 +76,8 @@
         "quantityInvalid": "Quantity must be between 1 and 10,000",
         "customRangeRequired": "Custom range is required",
         "invalidCIDR": "Please enter a valid CIDR notation (e.g., 192.168.1.0/24)",
-        "invalidSubnetMask": "Subnet mask must be between 1 and 32 for IPv4"
+        "invalidSubnetMask": "Subnet mask must be between 1 and 32 for IPv4",
+        "generationError": "An error occurred while generating IP addresses. Please try again."
       },
       "downloadFileName": "random-ip-addresses.txt",
       "help": {
@@ -112,7 +113,8 @@
       "validation": {
         "quantityRequired": "Quantity is required",
         "quantityInvalid": "Quantity must be between 1 and 10,000",
-        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed available letters (26 for single case, 52 for mixed case)"
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed available letters (26 for single case, 52 for mixed case)",
+        "generationError": "An error occurred while generating letters. Please try again."
       },
       "downloadFileName": "random-letters.txt",
       "copiedMessage": "Random letters copied to clipboard!",
@@ -153,7 +155,8 @@
         "invalidYear": "Please enter a valid year between 1900 and 2100",
         "endBeforeStart": "End year must be after or equal to start year",
         "quantityInvalid": "Quantity must be between 1 and 10,000",
-        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the total months in the year range"
+        "quantityTooLarge": "When duplicates are not allowed, quantity cannot exceed the total months in the year range",
+        "generationError": "An error occurred while generating months. Please try again."
       },
       "downloadFileName": "random-months.txt",
       "copiedMessage": "Random months copied to clipboard!",
@@ -311,6 +314,321 @@
       }
     }
   },
+  "de": {
+    "randomChoice": {
+      "title": "Zufalls-Auswahlgenerator",
+      "description": "Wählen Sie zufällige Einträge aus Ihrer eigenen Liste – perfekt für Entscheidungen, Verlosungen, Teamaufteilungen und kreative Inspiration.",
+      "outputLabel": "Ausgewählte Optionen",
+      "generateButton": "Zufallswahl treffen",
+      "options": {
+        "choices": "Ihre Optionen (eine pro Zeile)",
+        "quantity": "Wie viele Optionen auswählen",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Duplikate erlauben",
+        "removeBlanks": "Leere Zeilen entfernen",
+        "lines": "Zeilenumbruch (Option1\\nOption2)",
+        "comma": "Kommagetrennt (Option1, Option2)",
+        "numbered": "Nummerierte Liste (1. Option)",
+        "bulleted": "Aufzählungsliste (• Option)"
+      },
+      "placeholders": {
+        "choices": "Pizza\\nBurger\\nSushi\\nTacos\\nSalat",
+        "quantity": "Menge eingeben (1-1000)"
+      },
+      "validation": {
+        "choicesRequired": "Bitte geben Sie mindestens eine Option ein",
+        "noValidChoices": "Nach der Verarbeitung wurden keine gültigen Optionen gefunden",
+        "needMoreChoices": "Es werden mehr Optionen benötigt, um die gewünschte Menge auszuwählen",
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 1.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die Anzahl verfügbarer Optionen nicht überschreiten"
+      },
+      "downloadFileName": "random-choices.txt",
+      "help": {
+        "choices": "Tragen Sie jede Option in eine eigene Zeile ein. Jede Zeile wird als eigenständige Auswahl behandelt.",
+        "quantity": "Anzahl der zufälligen Auswahlen aus Ihrer Liste (maximal 1.000)",
+        "outputFormat": "Bestimmen Sie, wie die ausgewählten Optionen ausgegeben werden sollen",
+        "allowDuplicates": "Wenn aktiviert, kann dieselbe Option mehrfach gezogen werden",
+        "removeBlanks": "Ignoriert leere oder nur aus Leerzeichen bestehende Zeilen"
+      }
+    },
+    "randomDate": {
+      "title": "Zufallsdatums-Generator",
+      "description": "Generieren Sie zufällige Daten in beliebigen Zeiträumen und Ausgabeformaten – ideal für Tests, Simulationen, Planungen oder Kreativprojekte.",
+      "outputLabel": "Zufällig erzeugte Daten",
+      "generateButton": "Zufallsdaten erzeugen",
+      "options": {
+        "startDate": "Startdatum",
+        "endDate": "Enddatum",
+        "quantity": "Wie viele Daten",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte Daten erlauben",
+        "iso": "ISO-Format (YYYY-MM-DD)",
+        "us": "US-Format (MM/DD/YYYY)",
+        "eu": "EU-Format (DD/MM/YYYY)",
+        "readable": "Lesbares Format (Monat TT, JJJJ)"
+      },
+      "placeholders": {
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "startDateRequired": "Startdatum ist erforderlich",
+        "endDateRequired": "Enddatum ist erforderlich",
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "endBeforeStart": "Enddatum muss nach dem Startdatum liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die Anzahl verfügbarer Tage nicht überschreiten",
+        "invalidDate": "Bitte geben Sie ein gültiges Datum ein"
+      },
+      "downloadFileName": "random-dates.txt",
+      "copiedMessage": "Zufallsdaten wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Datum/Datumswerte erstellt!",
+      "help": {
+        "startDate": "Frühestes Datum, das erzeugt werden darf",
+        "endDate": "Spätestes Datum, das erzeugt werden darf",
+        "quantity": "Wie viele zufällige Daten generiert werden (maximal 10.000)",
+        "outputFormat": "Format, in dem die Ergebnisse angezeigt werden",
+        "allowDuplicates": "Wenn aktiviert, kann dasselbe Datum mehrfach auftreten"
+      }
+    },
+    "randomIP": {
+      "title": "Zufälliger IP-Adressgenerator",
+      "description": "Generieren Sie zufällige IPv4- und IPv6-Adressen für Netzwerktests, Entwicklung und Simulation. Unterstützt benutzerdefinierte Bereiche, private/öffentliche Netze sowie mehrere Ausgabeformate.",
+      "outputLabel": "Generierte IP-Adressen",
+      "generateButton": "Zufällige IPs erzeugen",
+      "options": {
+        "ipVersion": "IP-Version",
+        "ipType": "IP-Adress-Typ",
+        "quantity": "Wie viele IP-Adressen",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte IPs erlauben",
+        "sortResults": "Ergebnisse sortieren",
+        "customRange": "Benutzerdefinierter IP-Bereich",
+        "subnetMask": "Subnetzmaske",
+        "ipv4": "IPv4",
+        "ipv6": "IPv6",
+        "any": "Beliebige IP-Adresse",
+        "private": "Nur private IPs",
+        "public": "Nur öffentliche IPs",
+        "custom": "Benutzerdefinierter Bereich",
+        "standard": "Standard (192.168.1.1)",
+        "cidr": "CIDR-Notation (192.168.1.1/24)",
+        "hex": "Hexadezimal",
+        "binary": "Binär"
+      },
+      "placeholders": {
+        "quantity": "Menge eingeben (1-10000)",
+        "customRange": "z. B. 192.168.1.0/24"
+      },
+      "validation": {
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "customRangeRequired": "Ein benutzerdefinierter Bereich ist erforderlich",
+        "invalidCIDR": "Bitte geben Sie eine gültige CIDR-Notation ein (z. B. 192.168.1.0/24)",
+        "invalidSubnetMask": "Die Subnetzmaske muss zwischen 1 und 32 für IPv4 liegen",
+        "generationError": "Beim Erzeugen der IP-Adressen ist ein Fehler aufgetreten. Bitte erneut versuchen."
+      },
+      "downloadFileName": "zufalls-ip-adressen.txt",
+      "help": {
+        "ipVersion": "Wählen Sie zwischen IPv4 (32 Bit) und IPv6 (128 Bit) Adressen",
+        "ipType": "Bestimmen Sie, welche IPs generiert werden sollen: beliebig, nur private, nur öffentliche oder ein eigener Bereich",
+        "quantity": "Wie viele zufällige IP-Adressen generiert werden (maximal 10.000)",
+        "outputFormat": "Wählen Sie, wie die generierten IPs dargestellt werden: Standard, CIDR, Hex oder Binär",
+        "allowDuplicates": "Wenn aktiviert, kann dieselbe IP-Adresse mehrfach erscheinen",
+        "sortResults": "Sortiert die IP-Adressen numerisch",
+        "customRange": "CIDR-Bereich angeben, innerhalb dessen IP-Adressen erstellt werden sollen"
+      }
+    },
+    "randomLetter": {
+      "title": "Zufalls-Buchstabengenerator",
+      "description": "Erzeugen Sie zufällige Buchstaben mit frei wählbarer Groß-/Kleinschreibung und Ausgabeformaten. Perfekt für Spiele, Unterricht, Tests und kreative Projekte.",
+      "outputLabel": "Generierte Buchstaben",
+      "generateButton": "Zufällige Buchstaben erzeugen",
+      "options": {
+        "quantity": "Wie viele Buchstaben",
+        "caseType": "Schreibweise",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte Buchstaben erlauben",
+        "mixed": "Gemischt (A-Z, a-z)",
+        "uppercase": "Nur Großbuchstaben (A-Z)",
+        "lowercase": "Nur Kleinbuchstaben (a-z)",
+        "spaced": "Mit Leerzeichen (A B C)",
+        "continuous": "Zusammenhängend (ABC)",
+        "lines": "Mit Zeilenumbrüchen (A\\nB\\nC)"
+      },
+      "placeholders": {
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "quantityRequired": "Menge ist erforderlich",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die verfügbaren Buchstaben nicht überschreiten (26 je Register, 52 gemischt)",
+        "generationError": "Beim Generieren der Buchstaben ist ein Fehler aufgetreten. Bitte erneut versuchen."
+      },
+      "downloadFileName": "zufalls-buchstaben.txt",
+      "copiedMessage": "Zufallsbuchstaben wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Buchstaben erzeugt!",
+      "help": {
+        "quantity": "Wie viele Buchstaben erzeugt werden sollen (maximal 10.000)",
+        "caseType": "Wählen Sie zwischen Groß-, Klein- oder Mischschreibung",
+        "outputFormat": "Bestimmen Sie, wie die Buchstaben im Output dargestellt werden",
+        "allowDuplicates": "Wenn aktiviert, kann derselbe Buchstabe mehrmals erscheinen"
+      }
+    },
+    "randomMonth": {
+      "title": "Zufalls-Monatsgenerator",
+      "description": "Generieren Sie zufällige Monate in beliebigen Jahrbereichen und Ausgabeformaten – perfekt für Planung, Tests, Zeitachsen und Datengenerierung.",
+      "outputLabel": "Generierte Monate",
+      "generateButton": "Zufällige Monate erzeugen",
+      "options": {
+        "startYear": "Startjahr",
+        "endYear": "Endjahr",
+        "quantity": "Wie viele Monate",
+        "outputFormat": "Ausgabeformat",
+        "allowDuplicates": "Doppelte Monate erlauben",
+        "sortResults": "Chronologisch sortieren",
+        "numeric": "Numerisch (01, 02, 03...)",
+        "short": "Kurz (Jan, Feb, Mär...)",
+        "long": "Lang (Januar, Februar, März...)",
+        "yearMonth": "Jahr + Monat (Januar 2024, Februar 2024...)"
+      },
+      "placeholders": {
+        "startYear": "Startjahr eingeben (z. B. 2020)",
+        "endYear": "Endjahr eingeben (z. B. 2030)",
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "startYearRequired": "Startjahr ist erforderlich",
+        "endYearRequired": "Endjahr ist erforderlich",
+        "quantityRequired": "Menge ist erforderlich",
+        "invalidYear": "Bitte geben Sie ein gültiges Jahr zwischen 1900 und 2100 ein",
+        "endBeforeStart": "Das Endjahr muss größer oder gleich dem Startjahr sein",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die verfügbaren Monate im Jahrbereich nicht überschreiten",
+        "generationError": "Beim Generieren der Monate ist ein Fehler aufgetreten. Bitte erneut versuchen."
+      },
+      "downloadFileName": "zufalls-monate.txt",
+      "copiedMessage": "Zufallsmonate wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Monate erzeugt!",
+      "help": {
+        "startYear": "Frühestes Jahr, aus dem Monate erzeugt werden dürfen",
+        "endYear": "Spätestes Jahr, aus dem Monate erzeugt werden dürfen",
+        "quantity": "Wie viele zufällige Monate erzeugt werden sollen (maximal 10.000)",
+        "outputFormat": "Wählen Sie, in welchem Format die Monate angezeigt werden",
+        "allowDuplicates": "Wenn aktiviert, kann derselbe Monat mehrfach vorkommen",
+        "sortResults": "Sortiert die Ausgabe chronologisch, wenn diese Option aktiv ist"
+      }
+    },
+    "randomNumber": {
+      "title": "Zufallszahl-Generator",
+      "description": "Generieren Sie kryptografisch sichere Zufallszahlen mit frei definierbaren Bereichen, Mengen, Duplikaten und Sortierung – ideal für Spiele, Tests, Statistik und Forschung.",
+      "outputLabel": "Generierte Zufallszahlen",
+      "generateButton": "Zufallszahlen erzeugen",
+      "options": {
+        "minValue": "Minimaler Wert",
+        "maxValue": "Maximaler Wert",
+        "quantity": "Wie viele Zahlen",
+        "allowDuplicates": "Doppelte Zahlen erlauben",
+        "sortResults": "Ergebnisse sortieren",
+        "sortOrder": "Sortierreihenfolge",
+        "ascending": "Aufsteigend (1, 2, 3...)",
+        "descending": "Absteigend (3, 2, 1...)",
+        "none": "Keine Sortierung"
+      },
+      "placeholders": {
+        "minValue": "Minimalwert eingeben (z. B. 1)",
+        "maxValue": "Maximalwert eingeben (z. B. 100)",
+        "quantity": "Menge eingeben (1-10000)"
+      },
+      "validation": {
+        "minRequired": "Minimaler Wert ist erforderlich",
+        "maxRequired": "Maximaler Wert ist erforderlich",
+        "quantityRequired": "Menge ist erforderlich",
+        "minMaxInvalid": "Der Maximalwert muss größer als der Minimalwert sein",
+        "quantityInvalid": "Menge muss zwischen 1 und 10.000 liegen",
+        "quantityTooLarge": "Wenn Duplikate deaktiviert sind, darf die Menge die Spannweite (max - min + 1) nicht überschreiten",
+        "invalidNumber": "Bitte geben Sie eine gültige Zahl ein",
+        "rangeTooBig": "Der Bereich ist zu groß. Verwenden Sie eine kleinere Spanne oder erlauben Sie Duplikate"
+      },
+      "downloadFileName": "random-numbers.txt",
+      "copiedMessage": "Zufallszahlen wurden in die Zwischenablage kopiert!",
+      "generatedMessage": "Erfolgreich {count} zufällige Zahl(en) generiert!",
+      "help": {
+        "minValue": "Der kleinste Wert, der generiert werden darf",
+        "maxValue": "Der größte Wert, der generiert werden darf",
+        "quantity": "Wie viele Zufallszahlen erzeugt werden (maximal 10.000)",
+        "allowDuplicates": "Wenn aktiviert, können dieselben Zahlen mehrfach erscheinen",
+        "sortResults": "Legt fest, ob die Ergebnisse sortiert oder im ursprünglichen Zufallsreihenfolge bleiben"
+      }
+    },
+    "uuidGenerator": {
+      "title": "UUID-Generator",
+      "description": "Generieren Sie einzigartige UUIDs der Versionen 1 (zeitbasiert) und 4 (zufällig) mit flexiblen Ausgabe- und Formatierungsoptionen – perfekt für Apps, Tests und Datenbanken.",
+      "outputLabel": "Generierte UUIDs",
+      "generateButton": "UUIDs erzeugen",
+      "downloadFileName": "generated-uuids.txt",
+      "options": {
+        "version": "UUID-Version",
+        "format": "Ausgabeformat",
+        "quantity": "Anzahl der UUIDs",
+        "formatting": "Formatierungsoptionen",
+        "uppercase": "Großbuchstaben verwenden",
+        "removeDashes": "Bindestriche entfernen"
+      },
+      "versions": {
+        "v1": "Version 1 (zeitbasiert)",
+        "v4": "Version 4 (zufällig)"
+      },
+      "formats": {
+        "standard": "Standard (xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)",
+        "compact": "Kompakt (xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx)",
+        "braced": "Mit Klammern ({xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx})",
+        "urn": "URN (urn:uuid:xxxxxxxx-xxxx-xxxx-xxxx-xxxxxxxxxxxx)"
+      },
+      "help": {
+        "version": "UUID v4 ist vollständig zufällig, v1 enthält Zeitstempel-Informationen – wählen Sie die Variante, die Ihr Anwendungsfall benötigt.",
+        "format": "Bestimmen Sie, in welchem Format die UUIDs ausgegeben werden sollen.",
+        "uppercase": "Schaltet die Ausgabe zwischen Groß- und Kleinschreibung um.",
+        "removeDashes": "Entfernt Bindestriche aus dem Standardformat, um eine kompakte Darstellung zu erhalten."
+      }
+    },
+    "passwordGenerator": {
+      "title": "Sicherer Passwort-Generator",
+      "description": "Generieren Sie kryptografisch sichere Passwörter mit anpassbarer Länge und Zeichensätzen. Perfekt zum Erstellen starker, einzigartiger Passwörter für Konten, Anwendungen und Sicherheitszwecke.",
+      "outputLabel": "Generiertes Passwort",
+      "generateButton": "Sicheres Passwort generieren",
+      "options": {
+        "length": "Passwort-Länge",
+        "includeUppercase": "Großbuchstaben einschließen (A-Z)",
+        "includeLowercase": "Kleinbuchstaben einschließen (a-z)",
+        "includeNumbers": "Zahlen einschließen (0-9)",
+        "includeSymbols": "Symbole einschließen (!@#$%^&*)",
+        "excludeAmbiguous": "Mehrdeutige Zeichen ausschließen",
+        "requireAllTypes": "Alle ausgewählten Zeichentypen erforderlich",
+        "characterTypes": "Verwendete Zeichen:"
+      },
+      "placeholders": {
+        "length": "Länge eingeben (4-128)"
+      },
+      "validation": {
+        "lengthRequired": "Passwort-Länge ist erforderlich",
+        "lengthInvalid": "Passwort-Länge muss zwischen 4 und 128 Zeichen liegen",
+        "noCharacterSets": "Mindestens ein Zeichensatz muss ausgewählt sein"
+      },
+      "downloadFileName": "secure-password.txt",
+      "copiedMessage": "Sicheres Passwort in die Zwischenablage kopiert!",
+      "generatedMessage": "Sicheres Passwort erfolgreich generiert!",
+      "help": {
+        "length": "Wählen Sie die Passwort-Länge zwischen 4 und 128 Zeichen. Längere Passwörter sind sicherer",
+        "includeUppercase": "Großbuchstaben (A-Z) für zusätzliche Sicherheit und Komplexität einschließen",
+        "includeLowercase": "Kleinbuchstaben (a-z) für grundlegende alphabetische Zeichen einschließen",
+        "includeNumbers": "Zahlen (0-9) einschließen, um die Passwort-Stärke zu erhöhen",
+        "includeSymbols": "Sonderzeichen (!@#$%^&*) für maximale Sicherheit einschließen",
+        "excludeAmbiguous": "Visuell ähnliche Zeichen wie 0/O, l/1/I ausschließen für bessere Lesbarkeit",
+        "requireAllTypes": "Sicherstellen, dass das Passwort mindestens ein Zeichen aus jedem ausgewählten Typ enthält"
+      }
+    }
+  },
   "ru": {
     "randomNumber": {
       "title": "Генератор Случайных Чисел",
@@ -377,7 +695,8 @@
       "validation": {
         "quantityRequired": "Количество обязательно",
         "quantityInvalid": "Количество должно быть от 1 до 10 000",
-        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать доступные буквы (26 для одного регистра, 52 для смешанного)"
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать доступные буквы (26 для одного регистра, 52 для смешанного)",
+        "generationError": "Произошла ошибка при генерации букв. Пожалуйста, попробуйте еще раз."
       },
       "downloadFileName": "random-letters.txt",
       "copiedMessage": "Случайные буквы скопированы в буфер обмена!",
@@ -418,7 +737,8 @@
         "invalidYear": "Пожалуйста, введите действительный год между 1900 и 2100",
         "endBeforeStart": "Конечный год должен быть после или равен начальному году",
         "quantityInvalid": "Количество должно быть от 1 до 10 000",
-        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать общее количество месяцев в диапазоне лет"
+        "quantityTooLarge": "Когда повторения не разрешены, количество не может превышать общее количество месяцев в диапазоне лет",
+        "generationError": "Произошла ошибка при генерации месяцев. Пожалуйста, попробуйте еще раз."
       },
       "downloadFileName": "random-months.txt",
       "copiedMessage": "Случайные месяцы скопированы в буфер обмена!",
@@ -466,7 +786,8 @@
         "quantityInvalid": "Количество должно быть от 1 до 10 000",
         "customRangeRequired": "Настраиваемый диапазон обязателен",
         "invalidCIDR": "Пожалуйста, введите действительную CIDR нотацию (например, 192.168.1.0/24)",
-        "invalidSubnetMask": "Маска подсети должна быть от 1 до 32 для IPv4"
+        "invalidSubnetMask": "Маска подсети должна быть от 1 до 32 для IPv4",
+        "generationError": "Произошла ошибка при генерации IP-адресов. Пожалуйста, попробуйте еще раз."
       },
       "downloadFileName": "random-ip-addresses.txt",
       "help": {

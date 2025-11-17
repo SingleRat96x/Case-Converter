@@ -176,6 +176,183 @@
       }
     }
   },
+  "de": {
+    "title": "Kostenloser ROT13-Encoder & Decoder – Symmetrischer Buchstabentausch",
+    "metaDescription": "Kodieren oder dekodieren Sie Text mit der ROT13-Verschiebung. Kostenloses Online-ROT13-Tool mit Alphabetreferenz, Erhaltungsoptionen und Echtzeit-Analyse.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser ROT13-Encoder & Decoder – Symmetrischer Buchstabentausch",
+        "content": "Verwandeln Sie Text mit dem beliebten ROT13-Verfahren in Sekundenschnelle. Unser Tool bietet symmetrisches Kodieren/Dekodieren, eine interaktive Alphabet-Demonstration, flexible Beibehaltungsoptionen und detaillierte Analysen – ideal für Obfuskation, Forenbeiträge und den Einstieg in die Kryptografie."
+      },
+      "features": {
+        "title": "Leistungsstarke ROT13-Funktionen",
+        "items": [
+          {
+            "title": "Symmetrische Operation",
+            "description": "ROT13 ist symmetrisch – dieselbe Operation verschlüsselt und entschlüsselt, perfekt für reversible Textverschleierung."
+          },
+          {
+            "title": "Alphabet-Demonstration",
+            "description": "Visualisierung des Alphabets, die zeigt, wie jeder Buchstabe verschoben wird – inklusive Copy-Funktion für Referenzzwecke."
+          },
+          {
+            "title": "Option für doppelte Kodierung",
+            "description": "Wenden Sie ROT13 zweimal an (ROT26), um den Originaltext wiederherzustellen und die Mathematik dahinter zu demonstrieren."
+          },
+          {
+            "title": "Feingranulare Beibehaltung",
+            "description": "Steuern Sie, ob Groß-/Kleinschreibung, Zahlen oder Symbole während der Transformation erhalten bleiben sollen."
+          },
+          {
+            "title": "Analyse in Echtzeit",
+            "description": "Erhalten Sie Kennzahlen wie Buchstabenanzahl, Rotationsart und alphabetischen Anteil sofort während der Eingabe."
+          },
+          {
+            "title": "Sofort nutzbare Beispiele",
+            "description": "Probieren Sie vordefinierte Beispiele aus, um Muster zu verstehen und ROT13 mit gängigen Phrasen zu testen."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Anwendungsfälle für ROT13",
+        "description": "ROT13 wird häufig für einfache Obfuskation und Unterrichtszwecke in unterschiedlichen Szenarien verwendet.",
+        "items": [
+          {
+            "title": "Spoiler in Foren verbergen",
+            "description": "Verstecken Sie Antworten, Rätsellösungen oder sensible Hinweise in Community-Posts und Newsgroups."
+          },
+          {
+            "title": "E-Mail-Adressen schützen",
+            "description": "Kodieren Sie Adressen in Webseiten oder PDFs, damit Bots sie schwerer auslesen können."
+          },
+          {
+            "title": "Grundlagen der Kryptografie lehren",
+            "description": "Veranschaulichen Sie in Schule und Studium das Prinzip symmetrischer Verschlüsselung mit minimalem Aufwand."
+          },
+          {
+            "title": "Rätsel & Schatzsuchen",
+            "description": "Erstellen Sie einfache Chiffren für Schnitzeljagden, Escape Rooms oder Quizze, die leicht rückgängig gemacht werden können."
+          },
+          {
+            "title": "Textspiele & Chats",
+            "description": "Erzeugen Sie spielerische Geheimsprachen in Chats, Rollenspielen oder Wortspielen ohne komplexe Kryptografie."
+          },
+          {
+            "title": "Inhalt filtern",
+            "description": "Umgehen Sie simple Textfilter oder deuten Sie Begriffe nur an, ohne die Lesbarkeit ganz zu verlieren."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie das ROT13-Tool",
+        "description": "Befolgen Sie diese Schritte, um Text zu kodieren oder zu dekodieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text eingeben",
+            "description": "Tippen, einfügen oder optional eine Textdatei hochladen, die transformiert werden soll."
+          },
+          {
+            "step": 2,
+            "title": "Optionen einstellen",
+            "description": "Beibehaltungsoptionen wählen und bei Bedarf die doppelte Kodierung aktivieren."
+          },
+          {
+            "step": 3,
+            "title": "Ergebnis prüfen",
+            "description": "Die ROT13-Transformation erscheint sofort – inklusive Vorschau und Alphabetreferenz."
+          },
+          {
+            "step": 4,
+            "title": "Analysieren & exportieren",
+            "description": "Statistiken prüfen, Text kopieren oder herunterladen und Beispiele für weitere Tests verwenden."
+          }
+        ]
+      },
+      "examples": {
+        "title": "ROT13-Beispiele",
+        "description": "So verändern sich unterschiedliche Texte mit ROT13.",
+        "items": [
+          {
+            "title": "Einfaches Beispiel",
+            "input": "Hello World",
+            "output": "Uryyb Jbeyq"
+          },
+          {
+            "title": "Spoiler im Forum",
+            "input": "The answer is 42",
+            "output": "Gur nafjre vf 42"
+          },
+          {
+            "title": "E-Mail schützen",
+            "input": "contact@example.com",
+            "output": "pbagnpg@rknzcyr.pbz"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses ROT13-Tool?",
+        "content": "Professionelle ROT13-Implementierung mit Lern- und Komfortfunktionen.",
+        "items": [
+          "Sofortiges, symmetrisches Kodieren und Dekodieren",
+          "Visuelle Alphabet-Demonstration mit Kopierfunktion",
+          "Auswahl, welche Zeichen unverändert bleiben",
+          "Statistiken und Analytics in Echtzeit",
+          "Doppelte Kodierung (ROT26) für Demonstrationen",
+          "Schnell abrufbare Beispieltexte",
+          "Datenschutzfreundlich – alles läuft lokal im Browser",
+          "Kostenlos und ohne Anmeldung nutzbar"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist ROT13 und warum wird es genutzt?",
+          "answer": "ROT13 ersetzt jeden Buchstaben durch den 13 Positionen später. Es ist beliebt, weil es symmetrisch ist und Texte schnell verschleiert, ohne kompliziert zu sein."
+        },
+        {
+          "question": "Wie unterscheidet sich ROT13 von anderen Caesar-Codes?",
+          "answer": "ROT13 ist ein spezieller Caesar-Shift mit fixem Wert 13. Durch zweimaliges Anwenden (13+13) entsteht eine vollständige Rotation über 26 Buchstaben."
+        },
+        {
+          "question": "Kann ich Zahlen und Symbole beibehalten?",
+          "answer": "Ja. Aktivieren oder deaktivieren Sie getrennte Optionen für Groß-/Kleinschreibung, Zahlen und Sonderzeichen – nur Buchstaben werden verschoben."
+        },
+        {
+          "question": "Was bewirkt die doppelte Kodierung?",
+          "answer": "ROT26 entspricht einer zweimaligen Anwendung und bringt den Originaltext zurück. Ideal, um die Symmetrie des Verfahrens zu zeigen."
+        },
+        {
+          "question": "Ist ROT13 für sensible Daten geeignet?",
+          "answer": "Nein. ROT13 bietet keine echte Sicherheit. Nutzen Sie es für Spoiler, Spielereien oder Lernzwecke, nicht für vertrauliche Informationen."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Kryptografie- & Text-Tools",
+        "items": [
+          {
+            "name": "Caesar-Verschlüsselung",
+            "description": "Verschlüsseln Sie Text mit frei wählbaren Verschiebungen und erweiterten Optionen",
+            "href": "/de/tools/caesar-cipher"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Text oder Dateien im Browser in Base64 kodieren und dekodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binärcode-Übersetzer",
+            "description": "Text in Binär und zurück umwandeln, inklusive Statistikfunktionen",
+            "href": "/de/tools/binary-code-translator"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zeichen-, Wort- und Absatzstatistiken für beliebige Eingaben berechnen",
+            "href": "/de/tools/text-counter"
+          }
+        ]
+      }
+    }
+  },
   "ru": {
     "title": "Бесплатный Кодировщик и Декодировщик ROT13 - Симметричный Шифр Замещения Букв",
     "metaDescription": "Кодируйте и декодируйте текст используя шифр ROT13. Бесплатный онлайн инструмент ROT13 с демонстрацией алфавита, опциями сохранения и функциями симметричного шифрования.",

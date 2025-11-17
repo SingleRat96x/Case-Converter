@@ -436,5 +436,220 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "NATO-Funkalphabet Konverter – Militär- & Luftfahrt-Kommunikationswerkzeug",
+    "metaDescription": "Konvertieren Sie Text in das NATO-Funkalphabet und zurück. Professionelles Tool mit vollständiger Referenztabelle – ideal für Funk, Luftfahrt und klare Sprachkommunikation.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller NATO-Funkalphabet Konverter für klare Kommunikation",
+        "content": "Transformieren Sie Ihren Text in das standardisierte NATO-Funkalphabet, das weltweit von Militär, Luftfahrt und Einsatzkräften verwendet wird. Unser umfassender Konverter unterstützt die bidirektionale Umwandlung zwischen Klartext und phonischer Schreibweise, inklusive interaktiver Referenztabelle für alle 26 Buchstaben und Zahlen. Unverzichtbar für Funkkommunikation, Kundenservice und jede Situation, in der eindeutige Buchstabierung zählt."
+      },
+      "features": {
+        "title": "Erweiterte Funktionen des NATO-Funkalphabet-Konverters",
+        "items": [
+          {
+            "title": "Bidirektionale Umwandlung",
+            "description": "Konvertieren Sie Text in NATO-Codewörter und wandeln Sie phonetische Begriffe wieder in Klartext um – der intelligente Modus erkennt die Richtung automatisch"
+          },
+          {
+            "title": "Vollständige Referenztabelle",
+            "description": "Interaktive Übersicht aller 26 Buchstaben von Alpha bis Zulu sowie der Zahlen Null bis Neun"
+          },
+          {
+            "title": "Verarbeitung in Echtzeit",
+            "description": "Live-Ergebnisse während der Eingabe mit sofortigem Vorschau-Panel für effiziente Abläufe"
+          },
+          {
+            "title": "Auto-Erkennung",
+            "description": "Schaltet je nach Eingabe automatisch zwischen Text→NATO und NATO→Text um"
+          },
+          {
+            "title": "Militär- & Luftfahrtstandard",
+            "description": "Hält sich an offizielle ICAO-, ITU- und NATO-Richtlinien für professionelle Sprachkommunikation"
+          },
+          {
+            "title": "Mobil optimiert",
+            "description": "Responsives Interface für Smartphones, Tablets und Desktop-Arbeitsplätze"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den NATO-Funkalphabet-Konverter",
+        "description": "Folgen Sie diesen Schritten, um zwischen Text und NATO-Funkalphabet zu wechseln:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text eingeben",
+            "description": "Tippen oder fügen Sie Klartext ein – oder geben Sie bereits phonetisch buchstabierte Wörter ein"
+          },
+          {
+            "step": 2,
+            "title": "Modus auswählen",
+            "description": "Verwenden Sie Auto-Erkennung oder wählen Sie manuell zwischen Text→NATO und NATO→Text"
+          },
+          {
+            "step": 3,
+            "title": "Ergebnisse prüfen",
+            "description": "Betrachten Sie die sofortige Ausgabe inklusive detaillierter Markierungen und Zählwerte"
+          },
+          {
+            "step": 4,
+            "title": "Referenztabelle öffnen",
+            "description": "Blenden Sie die NATO-Referenz ein, um Buchstaben, Zahlen und ihre Codewörter mit einem Klick zu kopieren"
+          },
+          {
+            "step": 5,
+            "title": "Kopieren oder herunterladen",
+            "description": "Übernehmen Sie das Ergebnis in die Zwischenablage oder speichern Sie es als Textdatei für Ihre Kommunikation"
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für NATO-Funkalphabet-Konvertierungen",
+        "description": "So werden unterschiedliche Textarten in NATO-Codewörter übertragen:",
+        "items": [
+          {
+            "input": "ABC123",
+            "output": "Alpha Bravo Charlie One Two Three",
+            "description": "Einfaches alphanumerisches Beispiel mit Buchstaben und Zahlen"
+          },
+          {
+            "input": "HELP",
+            "output": "Hotel Echo Lima Papa",
+            "description": "Notfallkommunikation – eindeutige Buchstabierung dringender Meldungen"
+          },
+          {
+            "input": "Alpha Bravo Charlie",
+            "output": "ABC",
+            "description": "Umwandlung phonetischer Wörter zurück in Klartext"
+          },
+          {
+            "input": "Call Sign Delta-7",
+            "output": "Charlie Alpha Lima Lima [SPACE] Sierra India Golf November [SPACE] Delta Echo Lima Tango Alpha [-] Seven",
+            "description": "Komplexe Zeichenfolge mit Leerzeichen und Sonderzeichen"
+          },
+          {
+            "input": "GPS: N40 W74",
+            "output": "Golf Papa Sierra [:] [SPACE] November Four Zero [SPACE] Whiskey Seven Four",
+            "description": "Koordinaten und technische Daten mit speziellen Markierungen"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Professionelle Einsatzgebiete des NATO-Funkalphabets",
+        "description": "Essenzielle Anwendungsszenarien, die klare Sprachkommunikation verlangen:",
+        "items": [
+          {
+            "title": "Militärische Funkkommunikation",
+            "description": "Operationsbefehle, Rufzeichen und Koordinaten mit absolut eindeutiger Buchstabierung übermitteln"
+          },
+          {
+            "title": "Aviation & Air Traffic",
+            "description": "Pilot:innen, Flugnummern, Flughafen-Codes und Navigationsansagen standardkonform übermitteln"
+          },
+          {
+            "title": "Blaulicht- und Einsatzdienste",
+            "description": "Polizei, Feuerwehr und Rettungskräfte sorgen für fehlerfreie Kommunikation in kritischen Momenten"
+          },
+          {
+            "title": "Kundenservice & Support",
+            "description": "Namen, Adressen und Bestellnummern am Telefon problemlos buchstabieren"
+          },
+          {
+            "title": "Seefahrt & Schifffahrt",
+            "description": "Schiff-zu-Land-Kommunikation, Identifikationen und Navigationsmeldungen klar transportieren"
+          },
+          {
+            "title": "Amateurfunk & Hobby",
+            "description": "Funkamateure nutzen die NATO-Tabelle für eindeutige Rufzeichen und Wettbewerbe"
+          },
+          {
+            "title": "Unternehmenskommunikation",
+            "description": "Globale Teams und Konferenzschaltungen minimieren Rückfragen bei wichtigen Informationen"
+          },
+          {
+            "title": "Ausbildung & Training",
+            "description": "Schulungen zu Sprechfunkprotokollen, militärischen Abläufen und professioneller Kommunikation"
+          }
+        ]
+      },
+      "phoneticTable": {
+        "title": "Komplette Referenz des NATO-Funkalphabets",
+        "description": "Offizielle Codewörter mit Hinweisen zur Aussprache und praktischen Nutzung:",
+        "content": "Das NATO-Funkalphabet, auch als International Radiotelephony Spelling Alphabet bekannt, weist jedem Buchstaben und jeder Zahl ein eindeutiges Codewort zu, damit Nachrichten über Funk oder Telefon unter schwierigen Bedingungen verstanden werden.\n\n**Buchstaben A-Z:**\nA = Alpha, B = Bravo, C = Charlie, D = Delta, E = Echo, F = Foxtrot, G = Golf, H = Hotel, I = India, J = Juliet, K = Kilo, L = Lima, M = Mike, N = November, O = Oscar, P = Papa, Q = Quebec, R = Romeo, S = Sierra, T = Tango, U = Uniform, V = Victor, W = Whiskey, X = X-ray, Y = Yankee, Z = Zulu\n\n**Zahlen 0-9:**\n0 = Zero, 1 = One, 2 = Two, 3 = Three, 4 = Four, 5 = Five, 6 = Six, 7 = Seven, 8 = Eight, 9 = Nine\n\n**Aussprache-Hinweise:**\n- AL-fah\n- BRAH-voh\n- CHAR-lee\n- DELL-tah\n- ECK-oh\n- FOKS-trot\n- GOLF\n- hoh-TELL\n- IN-dee-ah\n- JEW-lee-ett\n- KEE-loh\n- LEE-mah\n- MIKE\n- no-VEM-ber\n- OSS-car\n- pah-PAH\n- keh-BECK\n- ROW-me-oh\n- see-AIR-rah\n- TANG-go\n- YOU-nee-form\n- VIK-ter\n- WISS-key\n- ECKS-ray\n- YANG-key\n- ZOO-loo"
+      },
+      "benefits": {
+        "title": "Warum unser NATO-Funkalphabet-Konverter überzeugt",
+        "items": [
+          "Professionelle Umsetzung nach ICAO-, ITU- und NATO-Standards",
+          "Bidirektionale Konvertierung mit intelligenter Auto-Erkennung",
+          "Interaktive Referenztabelle mit allen Buchstaben und Zahlen",
+          "Sofortiges Feedback und Statistiken für schnelle Arbeitsabläufe",
+          "Click-to-Copy für einzelne Codewörter und komplette Ergebnisse",
+          "Vollständig responsives Interface für jede Bildschirmgröße",
+          "Unterstützung für Zahlen, Sonderzeichen und markierte Leerzeichen",
+          "Datenschutzfreundliche Verarbeitung direkt im Browser",
+          "Kostenlose Nutzung ohne Registrierung oder Limitierungen",
+          "Wichtige Hilfe für Militär, Luftfahrt, Rettungsdienste und Business-Kommunikation"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Kommunikations- und Textwerkzeuge",
+        "description": "Weitere Tools, die Ihre Sprach- und Textarbeit unterstützen:",
+        "items": [
+          {
+            "name": "Textzähler",
+            "href": "/de/tools/text-counter",
+            "description": "Zeichen, Wörter und Sätze erfassen – inklusive detaillierter Textstatistiken"
+          },
+          {
+            "name": "Online-Notizblock",
+            "href": "/de/tools/online-notepad",
+            "description": "Schnelles webbasiertes Notizbuch mit Autospeicher und Dark Mode"
+          },
+          {
+            "name": "ASCII-Art-Generator",
+            "href": "/de/tools/ascii-art-generator",
+            "description": "Text und Bilder in ASCII-Grafiken für kreative Projekte umwandeln"
+          },
+          {
+            "name": "Wortfrequenz-Analyse",
+            "href": "/de/tools/word-frequency",
+            "description": "Häufigste Wörter und Muster in beliebigen Texten identifizieren"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist das NATO-Funkalphabet und warum wird es genutzt?",
+          "answer": "Das NATO-Funkalphabet ist ein internationaler Satz von Codewörtern, der Buchstaben und Zahlen eindeutig repräsentiert. Es stellt sicher, dass Sprache über Funk, Telefon oder in lauten Umgebungen klar verstanden wird. Jedes Wort wurde so gewählt, dass es sich deutlich von anderen unterscheidet und Missverständnisse in kritischen Situationen verhindert."
+        },
+        {
+          "question": "Wie zuverlässig arbeitet dieser NATO-Konverter?",
+          "answer": "Der Konverter folgt exakt den offiziellen Richtlinien von ICAO, ITU und NATO. Er liefert präzise Ergebnisse in beide Richtungen und kennzeichnet Zahlen sowie Sonderzeichen eindeutig."
+        },
+        {
+          "question": "Kann ich NATO-Codewörter zurück in normalen Text verwandeln?",
+          "answer": "Ja, die Umwandlung funktioniert bidirektional. Geben Sie einfach Codewörter wie \"Alpha Bravo Charlie\" ein und erhalten Sie automatisch \"ABC\" zurück – inklusive automatischer Erkennung des Eingabetyps."
+        },
+        {
+          "question": "Unterstützt das Tool Zahlen und Sonderzeichen?",
+          "answer": "Natürlich. Zahlen 0-9 werden mit ihren phonetischen Entsprechungen ausgegeben, und Sonderzeichen bleiben erhalten. Leerzeichen oder Satzzeichen werden klar markiert, damit nichts verloren geht."
+        },
+        {
+          "question": "Ist das NATO-Funkalphabet weltweit identisch?",
+          "answer": "Ja, das alphabetische System wird weltweit von Militär, Luftfahrt, Rettungsdiensten und vielen Unternehmen eingesetzt. Die Standardisierung ermöglicht reibungslose Kommunikation über Länder- und Sprachgrenzen hinweg."
+        },
+        {
+          "question": "Eignet sich der Konverter auch für Kundenservice und Bürokommunikation?",
+          "answer": "Definitiv. Kundendienst-Teams nutzen das Funkalphabet, um Namen, Adressen oder Codes fehlerfrei zu buchstabieren. Unser Tool liefert sofortige Ergebnisse und lässt sich problemlos in Arbeitsabläufe integrieren."
+        },
+        {
+          "question": "Bleiben meine Daten beim Konvertieren privat?",
+          "answer": "Ja. Alle Eingaben werden ausschließlich im Browser verarbeitet; es findet keine Übertragung auf Server statt. Sensible Informationen bleiben auf Ihrem Gerät."
+        }
+      ]
+    }
   }
 }

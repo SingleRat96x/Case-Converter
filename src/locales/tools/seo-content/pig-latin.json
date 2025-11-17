@@ -278,5 +278,145 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Pig Latin Übersetzer & Textkonverter",
+    "metaDescription": "Konvertieren Sie Text sofort in Pig Latin mit unserem kostenlosen Online-Übersetzer. Lustiges Sprachspiel-Tool, perfekt für Unterhaltung, Bildung und geheime Nachrichten. Funktioniert mit jeder Texteingabe.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Pig Latin Übersetzer & Textkonverter",
+        "content": "Verwandeln Sie Ihren Text sofort in Pig Latin mit unserem professionellen Online-Übersetzer. Dieses lustige Sprachspiel-Tool konvertiert englische Wörter, indem Konsonanten-Laute verschoben und spezielle Endungen hinzugefügt werden. Perfekt für Unterhaltung, Bildungsaktivitäten, Kinderspiele und die Erstellung spielerischer geheimer Nachrichten."
+      },
+      "features": {
+        "title": "Erweiterte Pig Latin Konvertierungsfunktionen",
+        "items": [
+          { "title": "Echtzeit-Textübersetzung", "description": "Sofortige Pig Latin-Konvertierung während der Eingabe oder beim Einfügen von Text" },
+          { "title": "Groß-/Kleinschreibung Beibehalten", "description": "Behält ursprüngliche Groß-/Kleinschreibungsmuster und Formatierung bei" },
+          { "title": "Interpunktion Verarbeiten", "description": "Verarbeitet Satzzeichen und Sonderzeichen korrekt" },
+          { "title": "Konsonanten-Cluster-Unterstützung", "description": "Verarbeitet Wörter, die mit mehreren Konsonanten beginnen, korrekt" },
+          { "title": "Vokal-Wort-Verarbeitung", "description": "Genaue Konvertierung für Wörter, die mit Vokalen beginnen" },
+          { "title": "Stapel-Textverarbeitung", "description": "Konvertieren Sie große Textmengen in einem Vorgang" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Sprachspiele & Bildung",
+        "description": "Unser Pig Latin Übersetzer ist ideal für verschiedene Bildungs- und Unterhaltungszwecke.",
+        "items": [
+          { "title": "Bildungssprachspiele", "description": "Bringen Sie Kindern Sprachstruktur und Phonetik bei" },
+          { "title": "Kinderunterhaltung", "description": "Erstellen Sie lustige Geheimsprachen für Kinder und Spielgruppen" },
+          { "title": "Sprachlernhilfe", "description": "Helfen Sie, englische Konsonanten- und Vokalmuster zu verstehen" },
+          { "title": "Geheime Nachrichtenerstellung", "description": "Kodieren Sie Nachrichten in einem spielerischen, entschlüsselbaren Format" },
+          { "title": "Kreative Schreibprojekte", "description": "Fügen Sie verspielte Elemente zu Geschichten und kreativen Inhalten hinzu" },
+          { "title": "Partyspiele & Aktivitäten", "description": "Verwenden Sie in Wortspielen und sozialen Aktivitäten" },
+          { "title": "Linguistische Forschung", "description": "Studieren Sie Sprachtransformationsmuster" },
+          { "title": "Content-Erstellung", "description": "Generieren Sie einzigartige Inhalte für soziale Medien und Unterhaltung" }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie den Pig Latin Übersetzer",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihren Text schnell und genau in Pig Latin zu konvertieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text ein",
+            "description": "Geben Sie Ihren englischen Text in den Eingabebereich ein oder fügen Sie ihn ein, oder laden Sie eine Textdatei zur Konvertierung hoch."
+          },
+          {
+            "step": 2,
+            "title": "Sofortige Übersetzung",
+            "description": "Beobachten Sie, wie Ihr Text automatisch in Echtzeit mit korrekter Formatierung in Pig Latin konvertiert wird."
+          },
+          {
+            "step": 3,
+            "title": "Ergebnisse Überprüfen",
+            "description": "Überprüfen Sie den konvertierten Pig Latin-Text mit beibehaltener Groß-/Kleinschreibung und Interpunktion."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen",
+            "description": "Kopieren Sie den übersetzten Text in Ihre Zwischenablage oder laden Sie ihn als Datei für die spätere Verwendung herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Pig Latin Übersetzungsbeispiele",
+        "description": "Sehen Sie, wie unser Übersetzer verschiedene Arten englischer Wörter und Phrasen verarbeitet.",
+        "items": [
+          { "title": "Einfache Wörter", "input": "Hello World", "output": "Ello-hay Orld-way" },
+          { "title": "Vokal-Wörter", "input": "Apple Orange", "output": "Apple-way Orange-way" },
+          { "title": "Konsonanten-Cluster", "input": "String Theory", "output": "Ing-stray Eory-thay" },
+          { "title": "Gemischte Groß-/Kleinschreibung", "input": "Programming Code", "output": "Ogramming-pray Ode-cay" },
+          { "title": "Mit Interpunktion", "input": "Hello, world!", "output": "Ello-hay, orld-way!" },
+          { "title": "Vollständiger Satz", "input": "This is fun to use.", "output": "Is-thay is-way un-fay o-tay use-way." }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Pig Latin Übersetzer Verwenden",
+        "content": "Professionelle Pig Latin-Konvertierung mit erweiterten Funktionen und perfekter Genauigkeit.",
+        "items": [
+          "Völlig kostenlose und unbegrenzte Übersetzungen",
+          "Keine Registrierung oder Anmeldung erforderlich",
+          "Datenschutz zuerst - alle Verarbeitungen erfolgen lokal",
+          "Genaue Konsonanten-Cluster-Verarbeitung",
+          "Behält ursprüngliche Textformatierung bei",
+          "Echtzeit-Übersetzung mit sofortigen Ergebnissen",
+          "Unterstützt Datei-Upload und -Download",
+          "Mobil-responsive Design für alle Geräte",
+          "Funktioniert mit jeder Textlänge",
+          "Bildungs- und Unterhaltungswert"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist Pig Latin und wie funktioniert es?",
+          "answer": "Pig Latin ist ein Sprachspiel, bei dem englische Wörter verändert werden, indem Konsonanten-Laute an das Ende verschoben und 'ay' (für mit Konsonanten beginnende Wörter) oder 'way' (für mit Vokalen beginnende Wörter) hinzugefügt werden. Zum Beispiel wird 'hello' zu 'ello-hay' und 'apple' wird zu 'apple-way'."
+        },
+        {
+          "question": "Verarbeitet der Übersetzer mehrere Konsonanten?",
+          "answer": "Ja, unser Übersetzer verarbeitet Konsonanten-Cluster korrekt. Wörter wie 'string' werden zu 'ing-stray', indem der gesamte 'str'-Cluster an das Ende verschoben wird, bevor 'ay' hinzugefügt wird."
+        },
+        {
+          "question": "Wird die Groß-/Kleinschreibung bei der Übersetzung beibehalten?",
+          "answer": "Absolut! Unser Tool behält das ursprüngliche Groß-/Kleinschreibungsmuster bei. Wenn der erste Buchstabe großgeschrieben ist, beginnt das übersetzte Wort ebenfalls mit einem Großbuchstaben."
+        },
+        {
+          "question": "Kann ich große Textmengen übersetzen?",
+          "answer": "Ja, Sie können große Textblöcke einfügen oder Textdateien hochladen. Der Übersetzer verarbeitet alles und behält dabei Formatierung, Interpunktion und Zeilenumbrüche bei."
+        },
+        {
+          "question": "Werden meine Textdaten gespeichert oder geteilt?",
+          "answer": "Nein, die gesamte Pig Latin-Übersetzung erfolgt lokal in Ihrem Browser. Ihr Text wird niemals auf unseren Servern gespeichert, an Dritte übertragen oder für andere Zwecke verwendet."
+        },
+        {
+          "question": "Kann ich den übersetzten Text herunterladen?",
+          "answer": "Ja, klicken Sie auf die Schaltfläche 'Herunterladen', um Ihren Pig Latin-Text als .txt-Datei für die Offline-Verwendung oder zum Teilen zu speichern."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Sprach- & Kodierungstools",
+        "items": [
+          {
+            "name": "Morse-Code-Übersetzer",
+            "description": "Konvertieren Sie Text in Morse-Code und zurück für Kommunikation",
+            "href": "/de/tools/morse-code"
+          },
+          {
+            "name": "Caesar-Verschlüsselung",
+            "description": "Kodieren und dekodieren Sie Text mit Caesar-Verschlüsselung",
+            "href": "/de/tools/caesar-cipher"
+          },
+          {
+            "name": "Binärcode-Übersetzer",
+            "description": "Konvertieren Sie Text in Binärcode und zurück in Text",
+            "href": "/de/tools/binary-code-translator"
+          },
+          {
+            "name": "NATO-Phonetisches Alphabet",
+            "description": "Konvertieren Sie Text in NATO-phonetische Schreibweise",
+            "href": "/de/tools/nato-phonetic"
+          }
+        ]
+      }
+    }
   }
 }

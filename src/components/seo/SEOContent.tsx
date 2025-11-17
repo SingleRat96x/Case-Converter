@@ -86,7 +86,7 @@ export function SEOContent({
         <div key={index} className="bg-card border rounded-lg p-6 hover:shadow-sm transition-shadow">
           <div className="space-y-3">
             <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
-              <span>Input:</span>
+              <span>{tSync('labels.input', 'Input')}:</span>
             </div>
             <div className="bg-muted p-3 rounded font-mono text-sm border">
               {example.input}
@@ -94,7 +94,7 @@ export function SEOContent({
             
             <div className="flex items-center gap-2 text-sm font-medium text-muted-foreground">
               <ArrowRight className="h-4 w-4" />
-              <span>Output:</span>
+              <span>{tSync('labels.output', 'Output')}:</span>
             </div>
             <div className="bg-primary/10 p-3 rounded font-mono text-sm border border-primary/20">
               {example.output}

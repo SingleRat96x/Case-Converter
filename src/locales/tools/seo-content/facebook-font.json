@@ -280,5 +280,146 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Facebook Schriftarten-Generator - Stylischer Unicode-Text für Social Media",
+    "metaDescription": "Generieren Sie stylische Facebook-Schriftarten mit unserem Unicode-Text-Generator. Erstellen Sie fetten, kursiven, skriptartigen und monospaced Schriftarten für Facebook-Posts, Kommentare, Stories und Profile. Überall kopieren und einfügen!",
+    "sections": {
+      "intro": {
+        "title": "Facebook Schriftarten-Generator - Stylischer Unicode-Text für Social Media",
+        "content": "Verwandeln Sie Ihren normalen Text in auffällige Facebook-Schriftarten mit unserem erweiterten Unicode-Schriftarten-Generator. Erstellen Sie stylischen Text für Facebook-Posts, Kommentare, Stories und Profil-Updates mit fetten Serifen, kursiven, skriptartigen, serifenlosen und monospaced Stilen. Perfekt für Unternehmen, Content-Ersteller und alle, die ihren Facebook-Content mit einzigartiger Typografie hervorheben möchten."
+      },
+      "features": {
+        "title": "Erweiterte Facebook Schriftarten-Generator Funktionen",
+        "items": [
+          { "title": "6 Stylische Schriftarten-Stile", "description": "Fette Serifen, kursiv, fett kursiv, serifenlos fett, monospaced und elegante Skript-Schriftarten" },
+          { "title": "Universelle Kompatibilität", "description": "Funktioniert auf allen Plattformen - Facebook, Instagram, Twitter, LinkedIn und mehr" },
+          { "title": "Echtzeit-Vorschau", "description": "Sehen Sie Ihren Text sofort transformiert, während Sie tippen" },
+          { "title": "Ein-Klick-Kopieren", "description": "Kopieren Sie Ihren gestylten Text mit einem Klick in die Zwischenablage" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch, um große Textmengen auf einmal zu konvertieren" },
+          { "title": "Mobile-Freundlich", "description": "Optimiert für mobile Geräte - perfekt für Content-Erstellung unterwegs" },
+          { "title": "Keine Registrierung Erforderlich", "description": "Beginnen Sie sofort mit der Erstellung stylischer Schriftarten ohne Anmeldung" },
+          { "title": "Datenschutz-First", "description": "Alle Schriftarten-Konvertierung erfolgt lokal - Ihr Text verlässt nie Ihr Gerät" },
+          { "title": "Download-Optionen", "description": "Speichern Sie Ihren konvertierten Text als Dateien für spätere Verwendung" },
+          { "title": "Mehrsprachige Unterstützung", "description": "Funktioniert mit jeder Sprache und Sonderzeichen" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Facebook & Social Media Content",
+        "description": "Unser Facebook-Schriftarten-Generator ist unerlässlich für die Erstellung ansprechender Social-Media-Inhalte auf allen Plattformen.",
+        "items": [
+          { "title": "Facebook-Posts", "description": "Lassen Sie Ihre Facebook-Posts mit einzigartiger Typografie hervorstechen" },
+          { "title": "Facebook-Kommentare", "description": "Erstellen Sie auffällige Kommentare, die bemerkt werden" },
+          { "title": "Facebook-Stories", "description": "Fügen Sie stylischen Text zu Ihren Facebook-Stories und Highlights hinzu" },
+          { "title": "Business-Seiten", "description": "Behalten Sie konsistente Markenästhetik mit benutzerdefinierten Schriftarten bei" },
+          { "title": "Content-Marketing", "description": "Unterscheiden Sie Ihren Content mit einzigartiger Text-Stylisierung" },
+          { "title": "Event-Promotionen", "description": "Erstellen Sie aufmerksamkeitsstarken Text für Event-Ankündigungen" },
+          { "title": "Produkt-Ankündigungen", "description": "Verbessern Sie Produktlisten mit stylischen Schriftarten-Variationen" },
+          { "title": "Persönliches Branding", "description": "Entwickeln Sie eine einzigartige persönliche Marke mit konsistenter Typografie" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Verwenden Sie den Facebook Schriftarten-Generator",
+        "description": "Folgen Sie diesen einfachen Schritten, um in Sekunden stylische Facebook-Schriftarten zu erstellen.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text Ein",
+            "description": "Tippen oder fügen Sie Ihren Text in das Eingabefeld ein, oder laden Sie eine Textdatei für die Batch-Konvertierung hoch."
+          },
+          {
+            "step": 2,
+            "title": "Wählen Sie Schriftarten-Stil",
+            "description": "Wählen Sie aus 6 verschiedenen Facebook-Schriftarten-Stilen, einschließlich fetter Serifen, kursiv, Skript und monospaced."
+          },
+          {
+            "step": 3,
+            "title": "Vorschau und Kopieren",
+            "description": "Sehen Sie Ihren Text in Echtzeit transformiert und kopieren Sie ihn mit einem Klick in Ihre Zwischenablage."
+          },
+          {
+            "step": 4,
+            "title": "Auf Facebook Einfügen",
+            "description": "Fügen Sie Ihren stylischen Text direkt in Facebook-Posts, Kommentare, Stories oder auf jeder Social-Media-Plattform ein."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Facebook Schriftarten-Stil Beispiele",
+        "description": "Sehen Sie, wie verschiedene Schriftarten-Stile Ihren Text für Facebook und Social Media transformieren.",
+        "items": [
+          { "title": "Fette Serifen", "input": "Like and Share this post", "output": "𝐋𝐢𝐤𝐞 𝐚𝐧𝐝 𝐒𝐡𝐚𝐫𝐞 𝐭𝐡𝐢𝐬 𝐩𝐨𝐬𝐭", "description": "Perfekt für Überschriften und wichtige Ankündigungen" },
+          { "title": "Kursiver Stil", "input": "New product launching soon", "output": "𝑁𝑒𝑤 𝑝𝑟𝑜𝑑𝑢𝑐𝑡 𝑙𝑎𝑢𝑛𝑐ℎ𝑖𝑛𝑔 𝑠𝑜𝑜𝑛", "description": "Großartig für subtile Betonung und Zitate" },
+          { "title": "Skript-Schriftart", "input": "Content Creator", "output": "𝒞𝑜𝓃𝓉𝑒𝓃𝓉 𝒞𝓇𝑒𝒶𝓉𝑜𝓇", "description": "Elegant und stylisch für persönliche Marken" },
+          { "title": "Monospaced", "input": "Follow • Like • Share", "output": "𝙵𝚘𝚕𝚕𝚘𝚠 • 𝙻𝚒𝚔𝚎 • 𝚂𝚑𝚊𝚛𝚎", "description": "Technische und moderne Ästhetik" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Facebook Schriftarten-Generator Verwenden",
+        "content": "Professionelle Facebook-Schriftarten-Generierung mit erweiterten Unicode-Styling und Social-Media-Optimierung.",
+        "items": [
+          "Völlig kostenlos mit unbegrenzten Konvertierungen",
+          "Keine Registrierung oder Konto erforderlich",
+          "Funktioniert auf allen Geräten und Plattformen",
+          "Datenschutz-orientiert - keine Datensammlung",
+          "6 verschiedene professionelle Schriftarten-Stile",
+          "Echtzeit-Vorschau und sofortiges Kopieren",
+          "Datei-Upload-Unterstützung für Batch-Verarbeitung",
+          "Kompatibel mit allen Social-Media-Plattformen"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Funktionieren Facebook-Schriftarten auf allen Social-Media-Plattformen?",
+          "answer": "Ja! Unsere Facebook-Schriftarten verwenden Unicode-Zeichen, die auf allen großen Plattformen unterstützt werden, einschließlich Facebook, Instagram, Twitter, LinkedIn, TikTok und mehr. Die Schriftarten werden konsistent auf verschiedenen Geräten und Betriebssystemen angezeigt."
+        },
+        {
+          "question": "Sind Facebook-Schriftarten sicher in meinen Posts und Kommentaren zu verwenden?",
+          "answer": "Absolut! Unsere Facebook-Schriftarten verwenden Standard-Unicode-Zeichen, die offiziell von Social-Media-Plattformen unterstützt werden. Sie verursachen keine Probleme mit Ihrem Konto und sind sicher in Posts, Kommentaren und Profil-Updates zu verwenden."
+        },
+        {
+          "question": "Kann ich diese Schriftarten für Geschäfts- und Marketingzwecke verwenden?",
+          "answer": "Ja, Sie können unsere Facebook-Schriftarten sowohl für persönliche als auch für kommerzielle Zwecke verwenden. Sie sind perfekt für Business-Seiten, Marketing-Kampagnen, Content-Erstellung und Markenkonsistenz auf Social-Media-Plattformen."
+        },
+        {
+          "question": "Warum erscheinen einige Zeichen nicht in bestimmten Schriftarten-Stilen?",
+          "answer": "Einige Unicode-Schriftarten-Stile haben keine Entsprechungen für alle Zeichen, insbesondere Zahlen und Sonderzeichen. Wenn ein Zeichen keine stilisierte Version hat, wird das ursprüngliche Zeichen beibehalten, um die Lesbarkeit zu erhalten."
+        },
+        {
+          "question": "Kann ich meine bevorzugten Schriftarten-Stile speichern?",
+          "answer": "Während unser Tool keine Präferenzen speichert, können Sie die Seite als Lesezeichen speichern und die Download-Funktion verwenden, um konvertierte Textdateien zu speichern. Das Tool merkt sich Ihren zuletzt ausgewählten Stil während Ihrer aktuellen Sitzung."
+        },
+        {
+          "question": "Funktionieren die Schriftarten auf mobilen Geräten?",
+          "answer": "Ja! Unser Facebook-Schriftarten-Generator ist vollständig für mobile Geräte optimiert. Die Unicode-Schriftarten werden perfekt auf iOS, Android und allen mobilen Browsern angezeigt, was es perfekt für die Content-Erstellung unterwegs macht."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Styling-Tools",
+        "description": "Entdecken Sie weitere Text-Transformations-Tools, um Ihren Social-Media-Content zu verbessern.",
+        "items": [
+          {
+            "name": "Instagram Schriftarten-Generator",
+            "description": "Stylische Schriftarten, speziell optimiert für Instagram-Posts und Profile",
+            "href": "/de/tools/instagram-fonts"
+          },
+          {
+            "name": "Discord Schriftarten-Generator",
+            "description": "Einzigartige Textstile für Discord-Nachrichten und Benutzernamen",
+            "href": "/de/tools/discord-font"
+          },
+          {
+            "name": "Fetter Text Generator",
+            "description": "Generieren Sie fetten Unicode-Text, der überall funktioniert",
+            "href": "/de/tools/bold-text"
+          },
+          {
+            "name": "Kursiver Text Generator",
+            "description": "Erstellen Sie kursiven Unicode-Text für Betonung und Stil",
+            "href": "/de/tools/italic-text"
+          }
+        ]
+      }
+    }
   }
 }

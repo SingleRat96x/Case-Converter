@@ -137,7 +137,7 @@ export function RandomLetterGenerator() {
       
     } catch (error) {
       console.error('Error generating random letters:', error);
-      setValidationErrors({ quantity: 'An error occurred while generating letters' });
+      setValidationErrors({ quantity: tool('randomLetter.validation.generationError') });
     } finally {
       setIsGenerating(false);
     }

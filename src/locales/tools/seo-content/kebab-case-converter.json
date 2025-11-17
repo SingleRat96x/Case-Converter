@@ -400,5 +400,206 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kebab Case Konverter – Text & JSON in kebab-case Online Konvertieren",
+    "metaDescription": "Kostenloser Online-Kebab-Case-Konverter für Text und JSON-Schlüssel. Konvertieren Sie camelCase, snake_case, PascalCase und Title Case in kebab-case Format. Text oder JSON einfügen, sofort konvertieren.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Online Kebab Case Konverter",
+        "content": "Konvertieren Sie jeden Text sofort in kebab-case mit unserem intelligenten Auto-Erkennungs-Tool. Perfekt für URL-Slugs, CSS-Klassennamen, HTML-Attribute, Dateinamenskonventionen und Code-Identifikatoren. Erkennt automatisch camelCase, snake_case, PascalCase und Title Case Eingaben. Verarbeiten Sie tief verschachtelte JSON-Objekte und Arrays oder batch-verarbeiten Sie CSV-Header. Alle Verarbeitung erfolgt lokal in Ihrem Browser für vollständige Privatsphäre."
+      },
+      "features": {
+        "title": "Erweiterte Kebab Case Konvertierungs-Funktionen",
+        "items": [
+          {
+            "title": "Intelligente Auto-Erkennung",
+            "description": "Erkennt automatisch das Eingabeformat (camelCase, snake_case, PascalCase, Title Case) und konvertiert in kebab-case."
+          },
+          {
+            "title": "Mehrere Eingabetypen",
+            "description": "Konvertieren Sie einfache Text-Identifikatoren, JSON mit verschachtelten Schlüsseln oder CSV-Header alles in einem Tool mit Tab-Oberfläche."
+          },
+          {
+            "title": "Tiefe JSON-Verarbeitung",
+            "description": "Rekursiv konvertieren Sie alle Schlüssel in verschachtelten JSON-Objekten und Arrays, während Datenstruktur und Werte erhalten bleiben."
+          },
+          {
+            "title": "Datei-Upload-Unterstützung",
+            "description": "Laden Sie .txt oder .json Dateien hoch, um das Eingabefeld sofort zu füllen und große Datensätze effizient zu konvertieren."
+          },
+          {
+            "title": "Akronym-Erhaltung",
+            "description": "Intelligent erkennen und bewahren Sie Akronyme wie API, URL und HTTP, ohne sie zu brechen."
+          },
+          {
+            "title": "Ziffern-Grenz-Erkennung",
+            "description": "Behandeln Sie Zahlen als Wortgrenzen für korrekte kebab-case Formatierung (z.B. api-2-response)."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Häufige Anwendungsfälle für Kebab Case Konvertierung",
+        "description": "Kebab-Case-Konvertierung ist essenziell für Webentwicklung, URL-Generierung, CSS-Styling und Dateiverwaltung.",
+        "items": [
+          { "title": "URL-Slugs", "description": "Konvertieren Sie Seitentitel und Artikelnamen in SEO-freundliche kebab-case URLs" },
+          { "title": "CSS-Klassennamen", "description": "Transformieren Sie Komponentennamen in BEM-Methodik oder Utility-First Klassennamensgebung" },
+          { "title": "HTML Data-Attribute", "description": "Konvertieren Sie Data-Attributnamen in HTML5-konformes kebab-case Format" },
+          { "title": "Dateinamensgebung", "description": "Generieren Sie konsistente kebab-case Dateinamen für Skripte, Komponenten und Assets" },
+          { "title": "API-Endpunkte", "description": "Konvertieren Sie REST-API-Endpunktnamen in kebab-case Konvention" },
+          { "title": "Konfigurations-Schlüssel", "description": "Transformieren Sie Config-Property-Namen in kebab-case Format" },
+          { "title": "Git-Branch-Namen", "description": "Generieren Sie kebab-case Branch-Namen aus Feature-Beschreibungen" },
+          { "title": "NPM-Paketnamen", "description": "Konvertieren Sie Modulnamen in NPM-kompatibles kebab-case Format" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Konvertieren Sie in Kebab Case",
+        "description": "Folgen Sie diesen Schritten, um Ihren Text, Identifikatoren oder JSON in kebab-case Format zu konvertieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Eingabetyp Wählen",
+            "description": "Wählen Sie Text/Identifikatoren für Variablennamen, JSON für API-Antworten oder CSV-Header für Datendateien."
+          },
+          {
+            "step": 2,
+            "title": "Daten Einfügen oder Hochladen",
+            "description": "Fügen Sie Text direkt ein oder laden Sie eine .txt/.json Datei hoch. Das Tool erkennt automatisch Ihr Eingabeformat und validiert JSON-Syntax automatisch."
+          },
+          {
+            "step": 3,
+            "title": "Optionen Konfigurieren",
+            "description": "Schalten Sie Optionen wie Akronym-Erhaltung, Ziffern-Grenzen und JSON-spezifische Einstellungen nach Bedarf um."
+          },
+          {
+            "step": 4,
+            "title": "Konvertieren & Herunterladen",
+            "description": "Klicken Sie 'In kebab-case konvertieren' oder drücken Sie Strg/Cmd+Enter. Ergebnis kopieren oder als Datei herunterladen."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Kebab Case Konvertierungs-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Namenskonventionen mit verschiedenen Optionen in kebab-case konvertiert werden.",
+        "items": [
+          { 
+            "title": "camelCase → kebab-case",
+            "input": "userName\napiEndpointUrl\nmaxFileSize\ngetUserProfile",
+            "output": "user-name\napi-endpoint-url\nmax-file-size\nget-user-profile"
+          },
+          { 
+            "title": "snake_case → kebab-case",
+            "input": "user_profile\napi_response_time\nmax_retry_count\nget_active_users",
+            "output": "user-profile\napi-response-time\nmax-retry-count\nget-active-users"
+          },
+          { 
+            "title": "PascalCase → kebab-case",
+            "input": "UserProfile\nApiEndpoint\nHttpClient\nDatabaseConnection",
+            "output": "user-profile\napi-endpoint\nhttp-client\ndatabase-connection"
+          },
+          { 
+            "title": "JSON-Schlüssel → kebab-case",
+            "input": "{\n  \"userProfile\": {\n    \"firstName\": \"Max\",\n    \"lastName\": \"Mustermann\",\n    \"emailAddress\": \"max@beispiel.de\"\n  }\n}",
+            "output": "{\n  \"user-profile\": {\n    \"first-name\": \"Max\",\n    \"last-name\": \"Mustermann\",\n    \"email-address\": \"max@beispiel.de\"\n  }\n}"
+          },
+          { 
+            "title": "Title Case → kebab-case",
+            "input": "User Profile Settings\nAPI Response Handler\nMax File Size Limit\nGet Active Users",
+            "output": "user-profile-settings\napi-response-handler\nmax-file-size-limit\nget-active-users"
+          },
+          {
+            "title": "Mit Ziffern-Grenzen",
+            "input": "api2Response\nuser123Profile\nversion2Update",
+            "output": "api-2-response\nuser-123-profile\nversion-2-update"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Kebab Case Konverter Verwenden",
+        "content": "Professionelle kebab-case Konvertierung mit intelligenter Auto-Erkennung und erweiterten Funktionen für Entwickler, spart Zeit bei manueller Formatierung und stellt konsistente Namenskonventionen sicher.",
+        "items": [
+          "Intelligente Auto-Erkennung des Eingabeformats (camelCase, snake_case, PascalCase, Title Case)",
+          "Erweiterte JSON-Verarbeitung mit tiefer verschachtelter Objekt-Unterstützung und Pfad-Ausschlüssen",
+          "Datei-Upload-Unterstützung für Batch-Verarbeitung von .txt und .json Dateien",
+          "Intelligente Akronym-Erhaltung und Ziffern-Grenz-Erkennung",
+          "CSV-Header-Konvertierung für Datendatei-Vorbereitung",
+          "Echtzeit-JSON-Validierung mit detaillierten Fehlermeldungen und Zeilennummern",
+          "Kontextabhängige Downloads mit korrekten Dateierweiterungen (.txt, .json, .csv)",
+          "Völlig kostenlos, Browser-basierte Verarbeitung, keine Server-Uploads",
+          "Mobil-optimierte Oberfläche mit Tastaturkürzeln für Desktop-Benutzer"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was ist kebab-case und wann sollte ich es verwenden?",
+          "answer": "Kebab-case (auch dash-case oder hyphen-case genannt) verwendet Bindestriche zur Trennung von Wörtern in Kleinbuchstaben, wie 'user-profile-settings'. Es wird häufig für URL-Slugs, CSS-Klassennamen, HTML-Data-Attribute, Dateinamen und API-Endpunkte verwendet. Es ist besonders beliebt in der Webentwicklung, weil Bindestriche URL-sicher und CSS-kompatibel sind."
+        },
+        {
+          "question": "Kann ich von kebab-case in andere Formate konvertieren?",
+          "answer": "Dieses Tool konvertiert IN kebab-case Format. Es erkennt automatisch, ob Ihre Eingabe camelCase, snake_case, PascalCase oder Title Case ist und konvertiert sie in kebab-case. Wenn Sie kebab-case in andere Formate konvertieren müssen, schauen Sie sich unsere Camel Case oder Snake Case Konverter an."
+        },
+        {
+          "question": "Wie funktioniert die Auto-Erkennungs-Funktion?",
+          "answer": "Das Tool analysiert Ihre Eingabe, um Unterstriche (snake_case), gemischte Groß-/Kleinschreibung (camelCase/PascalCase) oder Leerzeichen (Title Case) zu erkennen, und konvertiert sie dann automatisch in kebab-case Format. Keine manuelle Format-Auswahl erforderlich."
+        },
+        {
+          "question": "Wie funktioniert die Ziffern-Grenz-Erkennung?",
+          "answer": "Aktivieren Sie 'Ziffern als Wortgrenzen behandeln', um Zahlen richtig zu handhaben. Zum Beispiel wird 'api2Response' zu 'api-2-response' statt 'api2-response'. Dies ist nützlich für Versionsnummern, IDs und nummerierte Identifikatoren."
+        },
+        {
+          "question": "Funktioniert es mit verschachtelten JSON-Objekten?",
+          "answer": "Ja. Aktivieren Sie 'Tief verschachtelte Objekte transformieren', um rekursiv alle Schlüssel in verschachtelten Objekten und Arrays zu konvertieren. Ihre Datenwerte bleiben unverändert—nur die Schlüssel werden konvertiert."
+        },
+        {
+          "question": "Kann ich bestimmte JSON-Pfade von der Konvertierung ausschließen?",
+          "answer": "Ja. Verwenden Sie die Option 'JSONPath-Muster ausschließen' mit JSONPath-Notation. Zum Beispiel überspringt '$.config.urls,$.meta.*' die Konvertierung für diese spezifischen Pfade, während alles andere konvertiert wird."
+        },
+        {
+          "question": "Wie lade ich eine Datei hoch?",
+          "answer": "Klicken Sie auf die 'Hochladen'-Schaltfläche im Eingabebereich oder ziehen Sie eine .txt oder .json Datei per Drag & Drop. Das Tool unterstützt Dateien bis 10MB. Ihr Dateiinhalt füllt das Eingabefeld und ist bereit zur Konvertierung."
+        },
+        {
+          "question": "Werden meine Daten an einen Server gesendet?",
+          "answer": "Nein. Alle Konvertierung erfolgt lokal in Ihrem Browser mit JavaScript. Ihre Daten verlassen niemals Ihr Gerät und gewährleisten vollständige Privatsphäre und Sicherheit."
+        },
+        {
+          "question": "Kann ich CSV-Dateien verarbeiten?",
+          "answer": "Ja. Wechseln Sie zum 'CSV-Header'-Tab, um die erste Zeile Ihrer CSV-Datei zu konvertieren. Dies ist nützlich zur Normalisierung von Spaltennamen beim Import/Export von Daten zwischen Systemen."
+        },
+        {
+          "question": "Welche Dateiformate kann ich herunterladen?",
+          "answer": "Das Tool setzt automatisch die korrekte Dateierweiterung basierend auf Ihrem Eingabetyp: .txt für Textmodus, .json für JSON-Modus und .csv für CSV-Modus. Alle Downloads enthalten Ihren konvertierten Inhalt."
+        },
+        {
+          "question": "Kann ich dies für API-Antwort-Transformation verwenden?",
+          "answer": "Absolut! Viele APIs erfordern kebab-case für Endpunkte oder Parameter. Verwenden Sie dieses Tool, um camelCase oder snake_case Identifikatoren in kebab-case Format für API-Anfragen zu konvertieren. Für umgekehrte Konvertierung (kebab-case in andere Formate) schauen Sie sich unsere Camel Case oder Snake Case Konverter an."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Case-Konvertierungs-Tools",
+        "items": [
+          {
+            "name": "Camel Case Konverter",
+            "href": "/de/tools/camel-case-converter",
+            "description": "Konvertieren Sie in camelCase oder PascalCase für JavaScript-Entwicklung"
+          },
+          {
+            "name": "Snake Case Konverter",
+            "href": "/de/tools/snake-case-converter",
+            "description": "Konvertieren Sie in snake_case oder UPPER_SNAKE_CASE für Python und Datenbanken"
+          },
+          {
+            "name": "Title Case Konverter",
+            "href": "/de/tools/title-case",
+            "description": "Konvertieren Sie in korrekten Title Case für Überschriften"
+          },
+          {
+            "name": "Slugify URL",
+            "href": "/de/tools/slugify-url",
+            "description": "Konvertieren Sie Text in URL-freundliche Slugs"
+          }
+        ]
+      }
+    }
   }
 }

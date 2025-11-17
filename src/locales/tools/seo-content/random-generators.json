@@ -54,7 +54,7 @@
           },
           {
             "name": "Random Letter Generator",
-            "href": "/tools/random-letter", 
+            "href": "/tools/random-letter",
             "description": "Generate random letters, alphabets, and character sequences"
           },
           {
@@ -146,7 +146,7 @@
             "description": "Format, style, and transform text content with various tools"
           },
           {
-            "name": "Analysis & Counter Tools", 
+            "name": "Analysis & Counter Tools",
             "href": "/category/text-analysis",
             "description": "Analyze and count text content, words, characters, and statistics"
           },
@@ -214,7 +214,7 @@
           },
           {
             "name": "Генератор Случайных Букв",
-            "href": "/ru/tools/random-letter", 
+            "href": "/ru/tools/random-letter",
             "description": "Генерируйте случайные буквы, алфавиты и последовательности символов"
           },
           {
@@ -306,7 +306,7 @@
             "description": "Форматируйте, стилизуйте и преобразуйте текстовый контент с различными инструментами"
           },
           {
-            "name": "Инструменты Анализа и Подсчета", 
+            "name": "Инструменты Анализа и Подсчета",
             "href": "/ru/category/text-analysis",
             "description": "Анализируйте и считайте текстовый контент, слова, символы и статистику"
           },
@@ -314,6 +314,61 @@
             "name": "Инструменты Изображений",
             "href": "/ru/category/image-tools",
             "description": "Обрабатывайте, конвертируйте и манипулируйте изображениями для веб-разработки"
+          }
+        ]
+      }
+    }
+  },
+  "de": {
+    "title": "Zufallsgeneratoren - Zufallszahlen, Buchstaben, Daten & Mehr",
+    "metaDescription": "Kostenlose Zufallsgeneratoren: Zahlen, Buchstaben, Daten, Monate, IP-Adressen, Passwörter, UUIDs. Generieren Sie sichere Zufallsdaten für Tests und Entwicklung.",
+    "sections": {
+      "intro": {
+        "title": "Professionelle Zufallsdaten-Generatoren",
+        "content": "Generieren Sie sichere Zufallsdaten für Tests, Entwicklung und verschiedene Anwendungen mit unserer umfassenden Suite von Zufallsgeneratoren. Von einfachen Zufallszahlen und Buchstaben bis hin zu sicheren Passwörtern und UUIDs - unsere Werkzeuge bieten kryptographisch sichere Zufälligkeit für professionelle und persönliche Bedürfnisse."
+      },
+      "toolsList": {
+        "title": "Verfügbare Zufallsgeneratoren",
+        "items": [
+          {
+            "name": "Zufallszahlen-Generator",
+            "href": "/de/tools/random-number",
+            "description": "Generieren Sie sichere Zufallszahlen in benutzerdefinierten Bereichen"
+          },
+          {
+            "name": "Zufallsbuchstaben-Generator",
+            "href": "/de/tools/random-letter",
+            "description": "Generieren Sie zufällige Buchstaben für Tests und Spiele"
+          },
+          {
+            "name": "Zufallsdatum-Generator",
+            "href": "/de/tools/random-date",
+            "description": "Generieren Sie zufällige Daten in benutzerdefinierten Bereichen"
+          },
+          {
+            "name": "Zufallsmonat-Generator",
+            "href": "/de/tools/random-month",
+            "description": "Generieren Sie zufällige Monate für Kalenderanwendungen"
+          },
+          {
+            "name": "Zufalls-IP-Generator",
+            "href": "/de/tools/random-ip",
+            "description": "Generieren Sie zufällige IPv4 und IPv6-Adressen"
+          },
+          {
+            "name": "Zufallsauswahl",
+            "href": "/de/tools/random-choice",
+            "description": "Wählen Sie zufällige Elemente aus Listen und Optionen"
+          },
+          {
+            "name": "Passwort-Generator",
+            "href": "/de/tools/password-generator",
+            "description": "Erstellen Sie sichere, starke Passwörter mit anpassbaren Optionen"
+          },
+          {
+            "name": "UUID-Generator",
+            "href": "/de/tools/uuid-generator",
+            "description": "Generieren Sie eindeutige UUIDs für Datenbanken und APIs"
           }
         ]
       }

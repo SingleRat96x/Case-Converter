@@ -264,5 +264,138 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Professioneller Satzzähler & Analyse-Tool",
+    "metaDescription": "Zählen Sie Sätze und analysieren Sie die Satzstruktur in Ihrem Text sofort. Professionelles Satzanalyse-Tool mit detaillierten Statistiken für Autoren und Content-Ersteller.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Satzzähler & Analyse-Tool",
+        "content": "Erhalten Sie sofortige, detaillierte Satzanalysen mit unserem professionellen Satzzähler-Tool. Zählen Sie Sätze, analysieren Sie die Satzstruktur und erhalten Sie umfassende Statistiken einschließlich Satztypen, Komplexität und Lesbarkeitsmetriken. Perfekt für Autoren, Redakteure und Content-Ersteller, die präzise Satzanalysen benötigen."
+      },
+      "features": {
+        "title": "Umfassende Satzanalyse-Funktionen",
+        "items": [
+          { "title": "Satzzählung", "description": "Genaue Satzzählung mit erweitertem Text-Parsing für alle Satztypen" },
+          { "title": "Satztyp-Analyse", "description": "Automatische Identifizierung von Aussage-, Frage- und Ausrufesätzen" },
+          { "title": "Längenstatistiken", "description": "Berechnung der durchschnittlichen, kürzesten und längsten Satzlängen in Wörtern" },
+          { "title": "Erkennung Komplexer Sätze", "description": "Identifizierung komplexer Sätze mit mehreren Nebensätzen und Konjunktionen" },
+          { "title": "Lesbarkeitsmetriken", "description": "Bewertung der Textlesbarkeit basierend auf Satzstruktur und Komplexität" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Analysieren Sie Textdateien in gängigen Formaten direkt in Ihrem Browser" },
+          { "title": "Berichte Exportieren", "description": "Laden Sie professionelle Satzanalyse-Berichte für die Dokumentation herunter" },
+          { "title": "Mehrsprachige Unterstützung", "description": "Funktioniert mit jeder Sprache und Unicode-Zeichen" },
+          { "title": "Datenschutz Zuerst", "description": "Alle Analysen laufen lokal – keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Autoren & Content-Ersteller",
+        "description": "Unser Satzzähler-Tool ist unverzichtbar für verschiedene Schreib- und Bearbeitungsaufgaben.",
+        "items": [
+          { "title": "Content-Erstellung", "description": "Verbessern Sie die Lesbarkeit durch ausgewogene Satzlängen und -typen" },
+          { "title": "Akademisches Schreiben", "description": "Stellen Sie angemessene Satzvielfalt und Komplexität in Aufsätzen sicher" },
+          { "title": "Technisches Schreiben", "description": "Bewahren Sie Klarheit mit angemessener Satzstruktur" },
+          { "title": "Lektorat", "description": "Identifizieren Sie übermäßig komplexe oder einfache Satzmuster" },
+          { "title": "SEO-Content", "description": "Optimieren Sie die Content-Lesbarkeit für bessere Suchrankings" },
+          { "title": "Kreatives Schreiben", "description": "Variieren Sie die Satzstruktur für besseren Fluss und Engagement" },
+          { "title": "ESL-Lernen", "description": "Üben und verbessern Sie die englische Satzkonstruktion" },
+          { "title": "Korrekturlesen", "description": "Überprüfen Sie die Konsistenz der Satzstruktur in Dokumenten" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Verwenden Sie den Satzzähler",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihre Sätze zu analysieren und Ergebnisse zu exportieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text Ein",
+            "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein oder laden Sie eine Textdatei zur Analyse hoch."
+          },
+          {
+            "step": 2,
+            "title": "Echtzeit-Analyse Anzeigen",
+            "description": "Beobachten Sie, wie das Tool automatisch Sätze zählt und die Struktur analysiert, während Sie tippen."
+          },
+          {
+            "step": 3,
+            "title": "Satzstatistiken Überprüfen",
+            "description": "Sehen Sie detaillierte Aufschlüsselung von Satztypen, Längen und Komplexitätsmetriken."
+          },
+          {
+            "step": 4,
+            "title": "Analysebericht Exportieren",
+            "description": "Laden Sie einen umfassenden Satzanalysebericht herunter oder kopieren Sie die Ergebnisse."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Satzanalyse-Beispiele",
+        "description": "Sehen Sie, wie unser Satzzähler verschiedene Schreibstile analysiert.",
+        "items": [
+          { "title": "Nachrichtenartikel", "input": "25 Sätze", "output": "Durchschn. 18 Wörter/Satz, ausgewogene Vielfalt" },
+          { "title": "Wissenschaftliche Arbeit", "input": "15 Sätze", "output": "Durchschn. 25 Wörter/Satz, hohe Komplexität" },
+          { "title": "Blogbeitrag", "input": "30 Sätze", "output": "Durchschn. 15 Wörter/Satz, umgangssprachlich" },
+          { "title": "Technische Anleitung", "input": "20 Sätze", "output": "Durchschn. 12 Wörter/Satz, klare Struktur" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Satzzähler Verwenden",
+        "content": "Professionelle Satzanalyse mit genauen Ergebnissen und umfassenden Statistiken.",
+        "items": [
+          "Vollständig kostenlos und unbegrenzte Nutzung",
+          "Keine Registrierung oder Anmeldung erforderlich",
+          "Datenschutz zuerst - alle Analysen erfolgen lokal",
+          "Unterstützt mehrere Dateiformate",
+          "Echtzeit-Analyse beim Tippen",
+          "Ergebnisse für Dokumentation exportieren"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wie genau ist die Satzzählung?",
+          "answer": "Unser Satzzählalgorithmus ist hochpräzise und verwendet erweiterte Textanalyse, um Satzgrenzen korrekt zu identifizieren, Abkürzungen zu behandeln und verschiedene Interpunktionsstile zu berücksichtigen."
+        },
+        {
+          "question": "Was definiert einen komplexen Satz?",
+          "answer": "Komplexe Sätze werden als solche mit mehr als 15 Wörtern oder mit nebenordnenden/unterordnenden Konjunktionen wie 'und', 'aber', 'weil', 'obwohl' usw. identifiziert."
+        },
+        {
+          "question": "Wie wird der Satztyp bestimmt?",
+          "answer": "Satztypen werden durch Endpunktzeichen bestimmt: Aussagesätze (.), Fragesätze (?) und Ausrufesätze (!). Das Tool analysiert den Originaltext, um den Kontext zu bewahren."
+        },
+        {
+          "question": "Werden meine Textdaten gespeichert oder geteilt?",
+          "answer": "Nein, alle Satzanalysen erfolgen lokal in Ihrem Browser. Ihr Text wird niemals auf unseren Servern gespeichert oder mit Dritten geteilt."
+        },
+        {
+          "question": "Kann ich nicht-englischen Text analysieren?",
+          "answer": "Ja, unser Satzzähler funktioniert mit jeder Sprache und jedem Zeichensatz, obwohl die Satztypenerkennung am besten mit Sprachen funktioniert, die ähnliche Interpunktionssysteme verwenden."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textanalyse-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen, Wörter, Zeilen und Absätze in Ihrem Text",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Worthäufigkeits-Analysator",
+            "description": "Analysieren Sie die Worthäufigkeit und finden Sie die häufigsten Wörter in Ihrem Text",
+            "href": "/de/tools/word-frequency"
+          },
+          {
+            "name": "Text-Ersetzungs-Tool",
+            "description": "Suchen und ersetzen Sie Text mit erweiterter Mustererkennung",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Duplikat-Zeilen-Entferner",
+            "description": "Entfernen Sie doppelte Zeilen aus Ihrem Text effizient",
+            "href": "/de/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
   }
 }

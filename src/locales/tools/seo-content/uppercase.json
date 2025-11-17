@@ -270,5 +270,109 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Großbuchstaben-Konverter – Text sofort in GROSSBUCHSTABEN",
+    "metaDescription": "Konvertieren Sie Text sekundenschnell komplett in Großbuchstaben – perfekt für Überschriften, Hervorhebungen, Coding-Standards und professionelle Formatierung.",
+    "sections": {
+      "intro": {
+        "title": "Was macht der Großbuchstaben-Konverter?",
+        "content": "Unser kostenloses Tool wandelt jeden Text vollständig in Großbuchstaben um – direkt im Browser, ohne Upload und mit Unterstützung für alle Sprachen. Ideal für auffällige Überschriften, Coding-Konstanten, Warnhinweise oder einfach ALL-CAPS-Formatierung."
+      },
+      "features": {
+        "title": "Funktionen für professionelle Workflows",
+        "items": [
+          { "title": "Live-Konvertierung", "description": "Während Sie tippen oder einfügen, erscheint sofort die großgeschriebene Ausgabe." },
+          { "title": "Datei-Upload", "description": "Ganze .txt-, .md-, .json-, .js- oder .css-Dateien hochladen und komplett konvertieren." },
+          { "title": "Kopieren & Download", "description": "Ergebnis direkt in die Zwischenablage kopieren oder als TXT speichern." },
+          { "title": "Text-Analytics", "description": "Automatische Statistiken zu Zeichen, Wörtern, Sätzen und mehr." },
+          { "title": "Unicode & Emojis", "description": "Kompatibel mit Umlauten, Akzenten, Emojis und jedem Unicode-Zeichen." },
+          { "title": "100 % privat", "description": "Alle Berechnungen laufen lokal – keine Daten verlassen Ihren Browser." }
+        ]
+      },
+      "useCases": {
+        "title": "Wo Großbuchstaben unverzichtbar sind",
+        "description": "Typische Einsatzgebiete für ALL-CAPS-Formatierung:",
+        "items": [
+          { "title": "Überschriften & Titel", "description": "Auffällige Headlines, Buttons oder Call-to-Action-Text erstellen" },
+          { "title": "Coding-Standards", "description": "Konstanten, Enums oder Config-Werte in UPPERCASE umwandeln" },
+          { "title": "Rechtliche Dokumente", "description": "Wichtige Abschnitte oder Haftungsausschlüsse hervorheben" },
+          { "title": "Warnhinweise", "description": "Alerts, Fehlermeldungen oder Sicherheitshinweise betonen" },
+          { "title": "Markennamen & Akronyme", "description": "Firmennamen oder Abkürzungen konsistent formatieren" },
+          { "title": "Datenbank-Felder", "description": "Spaltennamen oder Datenbank-Einträge standardisieren" },
+          { "title": "E-Mail-Betreffzeilen", "description": "Betreffzeilen in Marketing-Kampagnen betonen" },
+          { "title": "Social Media", "description": "Posts, Captions oder Hashtags hervorheben" }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie Text in Großbuchstaben",
+        "description": "Vier Schritte bis zur perfekt großgeschriebenen Ausgabe:",
+        "steps": [
+          { "step": 1, "title": "Text eingeben oder hochladen", "description": "Fügen Sie Text ein, tippen Sie ihn ein oder laden Sie eine Datei hoch." },
+          { "step": 2, "title": "Automatisch großschreiben lassen", "description": "Die Ausgabe aktualisiert sich sofort, sobald Sie Text ändern." },
+          { "step": 3, "title": "Analytics prüfen", "description": "Überblick über Zeichen-, Wort-, Satzanzahl und mehr gewinnen." },
+          { "step": 4, "title": "Ergebnis exportieren", "description": "Per Klick kopieren oder als `grossbuchstaben-text.txt` herunterladen." }
+        ]
+      },
+      "examples": {
+        "title": "Praxisbeispiele",
+        "description": "Ein Blick auf typische Umwandlungen:",
+        "items": [
+          { "title": "Einfacher Text", "input": "hallo welt", "output": "HALLO WELT" },
+          { "title": "Mixed Case", "input": "ThIs Is MiXeD cAsE", "output": "THIS IS MIXED CASE" },
+          { "title": "Mit Zahlen", "input": "version 2.5.1", "output": "VERSION 2.5.1" },
+          { "title": "Sonderzeichen", "input": "hallo@example.com", "output": "HALLO@EXAMPLE.COM" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "content": "Für Entwickler:innen, Redaktionen und Marketing-Teams optimiert:",
+        "items": [
+          "Unbegrenzt kostenlos nutzbar",
+          "Keine Anmeldung, kein Tracking",
+          "Client-side only – DSGVO-konform",
+          "Sofortige Ergebnisse ohne Reload",
+          "Mehrsprachig & emoji-sicher",
+          "Inklusive Text-Statistiken",
+          "Responsives UI für Desktop & Mobile",
+          "Funktioniert offline im Browser (PWA-kompatibel)"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Verändert der Konverter Zahlen oder Symbole?",
+          "answer": "Nein. Es werden ausschließlich Buchstaben in Großbuchstaben überführt – Zahlen, Emojis und Sonderzeichen bleiben unverändert."
+        },
+        {
+          "question": "Kann ich komplette Dateien umwandeln?",
+          "answer": "Ja. Laden Sie eine beliebige Textdatei hoch (.txt, .md, .json, .js, .css usw.) und wir konvertieren den gesamten Inhalt."
+        },
+        {
+          "question": "Unterstützt das Tool Umlaute und Unicode?",
+          "answer": "Absolut. Egal ob Deutsch, Französisch, Arabisch oder Emojis – alle Unicode-Zeichen werden korrekt verarbeitet."
+        },
+        {
+          "question": "Bleiben meine Daten privat?",
+          "answer": "Ja. Die komplette Verarbeitung geschieht lokal im Browser. Es werden keine Daten an Server übertragen."
+        },
+        {
+          "question": "Gibt es Limits oder Werbung?",
+          "answer": "Nein. Sie können das Tool ohne Limits, Werbung oder Registrierung unbegrenzt oft einsetzen."
+        },
+        {
+          "question": "Was ist mit bereits großgeschriebenem Text?",
+          "answer": "Bereits großgeschriebene Buchstaben bleiben identisch, es gibt also keine Formatverluste."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          { "name": "Kleinbuchstaben-Konverter", "description": "Text für konsistente URLs, Variablennamen oder Datenbereinigung in Kleinbuchstaben wandeln", "href": "/de/tools/lowercase" },
+          { "name": "Titel-Konverter", "description": "Jedes Wort automatisch mit Großbuchstaben beginnen lassen", "href": "/de/tools/title-case" },
+          { "name": "Satz-Konverter", "description": "Nur den ersten Buchstaben eines Satzes großschreiben", "href": "/de/tools/sentence-case" },
+          { "name": "Alternating Case", "description": "Kreative AbWeChSeLnDe Schreibweisen erzeugen", "href": "/de/tools/alternating-case" }
+        ]
+      }
+    }
   }
 }

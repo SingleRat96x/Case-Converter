@@ -143,7 +143,10 @@
         "title": "Processing Statistics",
         "original": "Original Lines",
         "unique": "Unique Lines",
-        "removed": "Duplicates Removed"
+        "removed": "Duplicates Removed",
+        "duplicatePercent": "Duplicate %",
+        "sizeRatio": "Size Ratio",
+        "efficiency": "Efficiency"
       },
       "info": {
         "caseSensitive": "",
@@ -180,6 +183,11 @@
         "custom": "Custom"
       },
       "customSeparatorPlaceholder": "Enter custom separator...",
+      "sectionTitles": {
+        "sortConfig": "Sort Configuration",
+        "separatorOptions": "Separator Options",
+        "advancedOptions": "Advanced Options"
+      },
       "options": {
         "title": "Advanced Options",
         "caseSensitive": "Case Sensitive",
@@ -502,7 +510,10 @@
         "title": "Статистика Обработки",
         "original": "Исходные Строки",
         "unique": "Уникальные Строки",
-        "removed": "Дубликаты Удалены"
+        "removed": "Дубликаты Удалены",
+        "duplicatePercent": "Процент Дубликатов",
+        "sizeRatio": "Соотношение Размера",
+        "efficiency": "Эффективность"
       },
       "info": {
         "caseSensitive": "",
@@ -539,6 +550,11 @@
         "custom": "Пользовательский"
       },
       "customSeparatorPlaceholder": "Введите пользовательский разделитель...",
+      "sectionTitles": {
+        "sortConfig": "Конфигурация Сортировки",
+        "separatorOptions": "Опции Разделителя",
+        "advancedOptions": "Расширенные Опции"
+      },
       "options": {
         "title": "Расширенные Опции",
         "caseSensitive": "Учитывать Регистр",
@@ -714,6 +730,373 @@
         "suffixPlaceholder": "Текст для добавления после каждой строки...",
         "ignoreEmptyLabel": "Игнорировать пустые строки",
         "ignoreEmptyDescription": "Не добавлять префикс/суффикс к пустым строкам"
+      }
+    }
+  },
+  "de": {
+    "plainText": {
+      "title": "Klartext-Konverter – HTML, Markdown & Formatierung entfernen",
+      "description": "Konvertieren Sie formatierten Text in sauberen Klartext, indem Sie HTML-Tags, Markdown, URLs, E-Mails und Sonderzeichen entfernen.",
+      "inputLabel": "Formatierter Text",
+      "outputLabel": "Klartext",
+      "inputPlaceholder": "Fügen Sie hier Ihren formatierten Text ein (HTML, Markdown usw.)...",
+      "uploadDescription": "",
+      "downloadFileName": "klartext.txt",
+      "accordion": {
+        "title": "Klartext-Konvertierungsoptionen"
+      },
+      "tabs": {
+        "formatRemoval": "Format entfernen",
+        "contentFiltering": "Inhaltsfilter",
+        "textProcessing": "Textverarbeitung"
+      },
+      "options": {
+        "common": "Allgemeine Optionen",
+        "contentRemoval": "Inhalt entfernen",
+        "lineBreaks": "Zeilenumbruch-Optionen",
+        "removeHtml": "HTML-Tags entfernen",
+        "removeMarkdown": "Markdown entfernen",
+        "removeUrls": "URLs entfernen",
+        "removeEmails": "E-Mail-Adressen entfernen",
+        "removeNumbers": "Zahlen entfernen",
+        "removeSpecialChars": "Sonderzeichen entfernen",
+        "removePunctuation": "Satzzeichen entfernen",
+        "removeEmojis": "Emojis entfernen",
+        "removeExtraSpaces": "Mehrfach-Leerzeichen entfernen",
+        "normalizeWhitespace": "Leerzeichen normalisieren",
+        "preserveLineBreaks": "Zeilenumbrüche beibehalten",
+        "trimLines": "Leerzeichen in Zeilen kürzen"
+      },
+      "warning": "Warnung: Aggressive Optionen können wichtigen Inhalt entfernen. Prüfen Sie das Ergebnis sorgfältig.",
+      "stats": {
+        "removed": "{{count}} Zeichen entfernt",
+        "original": "Original",
+        "result": "Ergebnis"
+      },
+      "analytics": {
+        "title": "Klartext-Konvertierungsanalyse",
+        "originalLength": "Originallänge",
+        "plainLength": "Klartext-Länge",
+        "charactersRemoved": "Entfernte Zeichen",
+        "reductionPercentage": "Reduktion %",
+        "htmlElements": "HTML-Elemente",
+        "markdownElements": "Markdown-Elemente",
+        "urlsRemoved": "Entfernte URLs",
+        "emailsRemoved": "Entfernte E-Mails"
+      }
+    },
+    "sentenceCounter": {
+      "title": "Satzzähler & Analyse-Tool",
+      "description": "Analysieren Sie die Satzstruktur, zählen Sie Sätze und erhalten Sie detaillierte Satzstatistiken. Perfekt für Autoren, Redakteure und Content-Ersteller.",
+      "inputLabel": "Zu Analysierender Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um die Satzstruktur zu analysieren...",
+      "uploadDescription": "Laden Sie eine Textdatei zur Analyse hoch (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "satzanalyse-bericht.txt",
+      "report": {
+        "title": "Satzanalysebericht",
+        "generatedAt": "Generiert",
+        "summary": "Zusammenfassung",
+        "originalText": "Originaltext"
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "realTimeTitle": "Echtzeit-Analyse"
+      },
+      "analytics": {
+        "totalSentences": "Sätze Insgesamt",
+        "averageWordsPerSentence": "Durchschnittliche Wörter pro Satz",
+        "shortestSentence": "Kürzester Satz",
+        "longestSentence": "Längster Satz",
+        "declarativeSentences": "Aussagesätze",
+        "questionSentences": "Fragesätze",
+        "exclamatorySentences": "Ausrufesätze",
+        "complexSentences": "Komplexe Sätze"
+      },
+      "actions": {
+        "analyzeFile": "Datei Analysieren",
+        "exportReport": "Bericht Exportieren",
+        "clearText": "Text Löschen",
+        "copyResults": "Ergebnisse Kopieren"
+      },
+      "messages": {
+        "analysisComplete": "Satzanalyse abgeschlossen!",
+        "resultsCopied": "Analyseergebnisse in die Zwischenablage kopiert!",
+        "fileAnalyzed": "Datei erfolgreich analysiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
+        "sentencesFound": "Sätze gefunden"
+      }
+    },
+    "wordFrequency": {
+      "title": "Worthäufigkeits-Analysator - Häufigste Wörter Finden",
+      "description": "Analysieren Sie die Worthäufigkeit und entdecken Sie die häufigsten Wörter in Ihrem Text. Perfekt für Content-Analyse, Schreiboptimierung und linguistische Forschung.",
+      "inputLabel": "Zu Analysierender Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um die Worthäufigkeit zu analysieren...",
+      "uploadDescription": "Laden Sie eine Textdatei zur Analyse hoch (.txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html)",
+      "downloadFileName": "worthäufigkeitsanalyse.txt",
+      "report": {
+        "title": "Worthäufigkeitsanalysebericht",
+        "generatedAt": "Generiert",
+        "summary": "Zusammenfassung",
+        "originalText": "Originaltext",
+        "topWordsTitle": "Häufigste Wörter"
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "realTimeTitle": "Echtzeit-Analyse"
+      },
+      "analytics": {
+        "totalWords": "Wörter Insgesamt",
+        "uniqueWords": "Eindeutige Wörter",
+        "mostCommon": "Am Häufigsten",
+        "averageLength": "Durchschnittliche Länge",
+        "rank": "Rang",
+        "word": "Wort",
+        "count": "Anzahl",
+        "percentage": "Prozentsatz"
+      },
+      "actions": {
+        "analyzeFile": "Datei Analysieren",
+        "exportReport": "Bericht Exportieren",
+        "clearText": "Text Löschen",
+        "copyResults": "Ergebnisse Kopieren"
+      },
+      "messages": {
+        "analysisComplete": "Worthäufigkeitsanalyse abgeschlossen!",
+        "resultsCopied": "Analyseergebnisse in die Zwischenablage kopiert!",
+        "fileAnalyzed": "Datei erfolgreich analysiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
+        "wordsAnalyzed": "Wörter analysiert"
+      }
+    },
+    "wordSorter": {
+      "title": "Wörter Sortieren - Alphabetisches & Längen-Sortierungs-Tool",
+      "description": "Sortieren Sie Wörter alphabetisch, nach Länge oder zufällig mit erweiterten Optionen. Perfekt für Datenorganisation und Textverarbeitung.",
+      "inputLabel": "Zu Sortierender Text",
+      "outputLabel": "Sortierte Wörter",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um Wörter zu sortieren...",
+      "uploadDescription": "",
+      "downloadFileName": "sortierte-wörter.txt",
+      "sortMode": "Sortiermodus",
+      "sortOrder": "Sortierreihenfolge",
+      "separator": "Trennzeichen",
+      "modes": {
+        "alphabetical": "Alphabetisch",
+        "length": "Länge",
+        "reverse": "Umkehren"
+      },
+      "orders": {
+        "ascending": "Aufsteigend",
+        "descending": "Absteigend",
+        "random": "Zufällig"
+      },
+      "separators": {
+        "space": "Leerzeichen",
+        "newline": "Zeilenumbruch",
+        "comma": "Komma",
+        "custom": "Benutzerdefiniert"
+      },
+      "customSeparatorPlaceholder": "Benutzerdefiniertes Trennzeichen eingeben...",
+      "sectionTitles": {
+        "sortConfig": "Sortier-Konfiguration",
+        "separatorOptions": "Trennzeichen-Optionen",
+        "advancedOptions": "Erweiterte Optionen"
+      },
+      "options": {
+        "title": "Erweiterte Optionen",
+        "caseSensitive": "Groß-/Kleinschreibung Beachten",
+        "removeDuplicates": "Duplikate Entfernen",
+        "trimWhitespace": "Leerzeichen Trimmen"
+      },
+      "stats": {
+        "original": "Original-Wörter",
+        "sorted": "Sortierte Wörter",
+        "duplicates": "Duplikate Entfernt",
+        "mode": "Sortiermodus",
+        "order": "Sortierreihenfolge",
+        "separator": "Trennzeichen"
+      },
+      "wordCount": "{{count}} Wörter sortiert",
+      "duplicatesRemoved": "{{count}} Duplikate entfernt"
+    },
+    "addLineNumbers": {
+      "title": "Zeilennummern zu Text Hinzufügen",
+      "description": "Fügen Sie Zeilennummern zu Text mit anpassbaren Formaten, Trennzeichen und Nummerierungsoptionen hinzu. Perfekt für Code, Skripte und Dokumente.",
+      "inputLabel": "Ihr Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um Zeilennummern hinzuzufügen...",
+      "outputLabel": "Nummerierter Text",
+      "helperText": "Fügen Sie Ihren Text oben ein, passen Sie die Nummerierungsoptionen unten an und klicken Sie dann auf 'Zeilennummern hinzufügen' zum Verarbeiten.",
+      "addButton": "Zeilennummern hinzufügen",
+      "processing": "Verarbeitung...",
+      "applied": "Angewendet!",
+      "reapplyButton": "Zeilennummern Erneut Anwenden",
+      "resetButton": "Zurücksetzen",
+      "successMessage": "Zeilennummern erfolgreich hinzugefügt! Sie können das Ergebnis jetzt kopieren oder herunterladen.",
+      "optionsChangedMessage": "Sie haben die Nummerierungsoptionen geändert. Klicken Sie auf \"Zeilennummern Erneut Anwenden\", um die Änderungen zu sehen.",
+      "stats": {
+        "line": "Zeile",
+        "lines": "Zeilen",
+        "word": "Wort",
+        "words": "Wörter",
+        "char": "Zeichen",
+        "chars": "Zeichen"
+      },
+      "uploadDescription": "",
+      "downloadFileName": "nummerierter-text.txt",
+      "options": {
+        "title": "Nummerierungsoptionen",
+        "tabBasic": "Basis",
+        "tabFormat": "Format",
+        "tabSeparator": "Trennzeichen",
+        "startAt": "Starten bei",
+        "step": "Schritt",
+        "format": "Nummernformat",
+        "separator": "Trennzeichen",
+        "applyTo": "Anwenden auf",
+        "skipLinesStartingWith": "Zeilen überspringen, die beginnen mit",
+        "nonEmptyLabel": "Nur nicht-leere Zeilen nummerieren",
+        "nonEmptyDescription": "Leere Zeilen bei Nummerierung überspringen",
+        "skipPatternsPlaceholder": "z.B., //, #, ;",
+        "skipPatternsDescription": "Durch Komma getrennte Muster zum Überspringen (z.B., \"//, #\" für Kommentare)"
+      },
+      "formats": {
+        "numeric": "1, 2, 3",
+        "padded2": "01, 02, 03",
+        "padded3": "001, 002, 003",
+        "alphaUpper": "A, B, C",
+        "alphaLower": "a, b, c",
+        "romanUpper": "I, II, III",
+        "romanLower": "i, ii, iii"
+      },
+      "formatLabels": {
+        "standard": "Standard",
+        "twoDigit": "2-stellig",
+        "threeDigit": "3-stellig",
+        "uppercase": "Großbuchstaben",
+        "lowercase": "Kleinbuchstaben"
+      },
+      "separators": {
+        "periodSpace": ". (Punkt + Leerzeichen)",
+        "parenSpace": ") (Klammer + Leerzeichen)",
+        "colonSpace": ": (Doppelpunkt + Leerzeichen)",
+        "hyphenSpace": " - (Bindestrich + Leerzeichen)",
+        "pipe": "| (Vertikaler Strich)",
+        "tab": "Tabulator-Zeichen"
+      },
+      "separatorLabels": {
+        "period": "Punkt",
+        "paren": "Klammer",
+        "colon": "Doppelpunkt",
+        "hyphen": "Bindestrich",
+        "pipe": "Vertikaler Strich",
+        "tab": "Tab"
+      },
+      "applyToOptions": {
+        "all": "Alle Zeilen",
+        "nonEmpty": "Nur nicht-leere Zeilen"
+      }
+    },
+    "addPrefixSuffix": {
+      "title": "Präfix und Suffix zu Zeilen Hinzufügen",
+      "description": "Möchten Sie schnell ein Präfix und Suffix zu jeder Zeile Ihres Textes hinzufügen? Fügen Sie Ihren Inhalt ein, geben Sie ein beliebiges Präfix und Suffix ein, und dieses Tool aktualisiert sofort jede Zeile für Sie. Es ist perfekt für Code-Kommentare, Aufzählungslisten, Markdown-Zitate und Tagging von Log-Zeilen.",
+      "inputLabel": "Ihr Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein...",
+      "helperText": "Fügen Sie Ihren Text oben ein, legen Sie Präfix/Suffix-Optionen unten fest, dann klicken Sie auf 'Präfix/Suffix Anwenden'.",
+      "addButton": "Präfix/Suffix Anwenden",
+      "processing": "Verarbeitung...",
+      "applied": "Angewendet!",
+      "reapplyButton": "Präfix/Suffix Erneut Anwenden",
+      "resetButton": "Zurücksetzen",
+      "successMessage": "Präfix und Suffix erfolgreich hinzugefügt! Sie können das Ergebnis jetzt kopieren oder herunterladen.",
+      "optionsChangedMessage": "Sie haben die Optionen geändert. Klicken Sie auf \"Präfix/Suffix Erneut Anwenden\", um die Änderungen zu sehen.",
+      "stats": {
+        "line": "Zeile",
+        "lines": "Zeilen",
+        "word": "Wort",
+        "words": "Wörter",
+        "character": "Zeichen",
+        "characters": "Zeichen"
+      },
+      "downloadFileName": "präfix-suffix-text.txt",
+      "options": {
+        "title": "Präfix & Suffix Optionen",
+        "prefix": "Präfix",
+        "prefixPlaceholder": "Text vor jeder Zeile hinzufügen...",
+        "suffix": "Suffix",
+        "suffixPlaceholder": "Text nach jeder Zeile hinzufügen...",
+        "ignoreEmptyLabel": "Leere Zeilen ignorieren",
+        "ignoreEmptyDescription": "Präfix/Suffix nicht zu Leerzeilen hinzufügen"
+      }
+    },
+    "textCounter": {
+      "title": "Textzähler - Zeichen-, Wort- & Zeilenzähler",
+      "description": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Perfekt für Autoren, Studenten und Content-Ersteller.",
+      "inputLabel": "Zu analysierender Text",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um ihn zu analysieren...",
+      "uploadDescription": "",
+      "downloadFileName": "textanalyse-bericht.txt",
+      "report": {
+        "title": "Textanalyse-Bericht",
+        "generatedAt": "Erstellt",
+        "summary": "Zusammenfassung",
+        "originalText": "Originaltext"
+      },
+      "results": {
+        "title": "Analyseergebnisse",
+        "realTimeTitle": "Echtzeit-Analyse"
+      },
+      "analytics": {
+        "characters": "Zeichen",
+        "charactersNoSpaces": "Zeichen (ohne Leerzeichen)",
+        "words": "Wörter",
+        "sentences": "Sätze",
+        "lines": "Zeilen",
+        "paragraphs": "Absätze",
+        "readingTime": "Lesezeit",
+        "speakingTime": "Sprechzeit"
+      },
+      "actions": {
+        "analyzeFile": "Datei Analysieren",
+        "exportReport": "Bericht Exportieren",
+        "clearText": "Text Löschen",
+        "copyResults": "Ergebnisse Kopieren"
+      },
+      "messages": {
+        "analysisComplete": "Textanalyse abgeschlossen!",
+        "resultsCopied": "Analyseergebnisse in die Zwischenablage kopiert!",
+        "fileAnalyzed": "Datei erfolgreich analysiert!",
+        "noTextProvided": "Bitte geben Sie Text zur Analyse ein.",
+        "estimatedReadingTime": "Minuten Lesezeit",
+        "estimatedSpeakingTime": "Minuten Sprechzeit"
+      }
+    },
+    "duplicateLineRemover": {
+      "title": "Doppelte Zeilen Entfernen - Text Bereinigungstool",
+      "description": "Entfernen Sie doppelte Zeilen aus Ihrem Text mit erweiterten Optionen. Perfekt für Datenbereinigung, Duplikate entfernen und Textverarbeitung.",
+      "inputLabel": "Text zur Verarbeitung",
+      "outputLabel": "Einzigartige Zeilen",
+      "inputPlaceholder": "Geben Sie Ihren Text hier ein oder fügen Sie ihn ein, um doppelte Zeilen zu entfernen...",
+      "uploadDescription": "",
+      "downloadFileName": "einzigartige-zeilen.txt",
+      "options": {
+        "caseSensitive": "Groß-/Kleinschreibung Beachten",
+        "trimLines": "Zeilen Trimmen",
+        "keepFirst": "Erste Behalten",
+        "preserveOrder": "Reihenfolge Bewahren"
+      },
+      "stats": {
+        "title": "Verarbeitungsstatistiken",
+        "original": "Original-Zeilen",
+        "unique": "Einzigartige Zeilen",
+        "removed": "Duplikate Entfernt",
+        "duplicatePercent": "Duplikat %",
+        "sizeRatio": "Größenverhältnis",
+        "efficiency": "Effizienz"
+      },
+      "info": {
+        "caseSensitive": "",
+        "trimLines": "",
+        "keepFirst": "",
+        "keepLast": "Behalten Sie das letzte Vorkommen doppelter Zeilen"
       }
     }
   }

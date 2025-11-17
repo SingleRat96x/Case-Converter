@@ -119,7 +119,7 @@ export function SentenceCounterAnalytics({ text, showTitle = true, variant = 'de
     },
     {
       key: 'averageWordsPerSentence',
-      label: 'Avg Words/Sentence',
+      label: tSync('analytics.avgWordsPerSentence', 'Avg Words/Sentence'),
       value: stats.averageWordsPerSentence,
       icon: BarChart3,
       color: 'text-green-600 dark:text-green-400',
@@ -127,42 +127,42 @@ export function SentenceCounterAnalytics({ text, showTitle = true, variant = 'de
     },
     {
       key: 'shortestSentence',
-      label: 'Shortest (words)',
+      label: tSync('analytics.shortestSentence', 'Shortest (words)'),
       value: stats.shortestSentence,
       icon: Hash,
       color: 'text-purple-600 dark:text-purple-400'
     },
     {
       key: 'longestSentence',
-      label: 'Longest (words)',
+      label: tSync('analytics.longestSentence', 'Longest (words)'),
       value: stats.longestSentence,
       icon: Type,
       color: 'text-orange-600 dark:text-orange-400'
     },
     {
       key: 'declarativeSentences',
-      label: 'Declarative (.)',
+      label: tSync('analytics.declarativeSentences', 'Declarative (.)'),
       value: stats.declarativeSentences,
       icon: FileText,
       color: 'text-gray-600 dark:text-gray-400'
     },
     {
       key: 'questionSentences',
-      label: 'Questions (?)',
+      label: tSync('analytics.questionSentences', 'Questions (?)'),
       value: stats.questionSentences,
       icon: HelpCircle,
       color: 'text-cyan-600 dark:text-cyan-400'
     },
     {
       key: 'exclamatorySentences',
-      label: 'Exclamatory (!)',
+      label: tSync('analytics.exclamatorySentences', 'Exclamatory (!)'),
       value: stats.exclamatorySentences,
       icon: AlertCircle,
       color: 'text-red-600 dark:text-red-400'
     },
     {
       key: 'complexSentences',
-      label: 'Complex Sentences',
+      label: tSync('analytics.complexSentences', 'Complex Sentences'),
       value: stats.complexSentences,
       icon: AlignLeft,
       color: 'text-indigo-600 dark:text-indigo-400'

@@ -403,6 +403,11 @@ body {
   animation-timing-function: ease;
 }
 
+/* Mobile Navigation Safe Area Support */
+.mobile-menu-bottom-controls {
+  padding-bottom: calc(1rem + env(safe-area-inset-bottom, 0px)) !important;
+}
+
 /* Ensure the viewport uses full width when needed */
 [data-radix-navigation-menu-viewport] {
   width: var(--radix-navigation-menu-viewport-width);

@@ -264,5 +264,138 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Professioneller Textzähler & Analyse-Tool",
+    "metaDescription": "Zählen Sie sofort Zeichen, Wörter, Zeilen, Sätze und Absätze in Ihrem Text. Professionelles Textanalyse-Tool mit Lesezeitschätzungen für Autoren und Content-Ersteller.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Textzähler & Analyse-Tool",
+        "content": "Erhalten Sie sofortige, präzise Textanalyse mit unserem professionellen Textzähler-Tool. Zählen Sie Zeichen, Wörter, Zeilen, Sätze und Absätze und erhalten Sie gleichzeitig Lesezeitschätzungen. Perfekt für Autoren, Studenten und Content-Ersteller, die präzise Textanalysen benötigen."
+      },
+      "features": {
+        "title": "Umfassende Textanalyse-Funktionen",
+        "items": [
+          { "title": "Zeichenzählung", "description": "Echtzeit-Zeichenzählung, mit und ohne Leerzeichen, für genaue Limits" },
+          { "title": "Wort- & Satzerkennung", "description": "Präzise Zählung von Wörtern und Sätzen mit robuster Textanalyse" },
+          { "title": "Absatz- & Zeilenzählung", "description": "Strukturmessung mit Absatz- und Zeilenzählung" },
+          { "title": "Lesezeit", "description": "Schätzung der Lesezeit basierend auf durchschnittlich 200 WpM" },
+          { "title": "Sprechzeit", "description": "Schätzung der Sprechzeit basierend auf durchschnittlich 130 WpM" },
+          { "title": "Datei-Upload", "description": "Analysieren Sie Textdateien in gängigen Formaten direkt im Browser" },
+          { "title": "Berichte Exportieren", "description": "Laden Sie professionelle Analyseberichte für die Dokumentation herunter" },
+          { "title": "Mehrsprachig", "description": "Funktioniert mit jeder Sprache und Unicode-Zeichen" },
+          { "title": "Datenschutz-Orientiert", "description": "Alle Analysen laufen lokal—keine Daten verlassen Ihren Browser" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Content-Ersteller & Autoren",
+        "description": "Unser Textzähler-Tool ist unverzichtbar für verschiedene Schreib- und Content-Erstellungsaufgaben.",
+        "items": [
+          { "title": "Artikel & Blogs", "description": "Schreiben Sie präzise unter strengen Zeichenlimits" },
+          { "title": "Soziale Medien", "description": "Optimieren Sie Texte für Twitter, LinkedIn und mehr" },
+          { "title": "Akademisches Schreiben", "description": "Erfüllen Sie Essay-Längenanforderungen mit Vertrauen" },
+          { "title": "SEO-Inhalte", "description": "Optimieren Sie Meta-Beschreibungen und Titel für Suchmaschinen" },
+          { "title": "E-Mail-Marketing", "description": "Balancieren Sie Betreffzeilenlänge für Engagement" },
+          { "title": "Bücher & Manuskripte", "description": "Verfolgen Sie Wortzahlen über Entwürfe und Kapitel hinweg" },
+          { "title": "Code-Dokumentation", "description": "Überprüfen Sie Kommentar- und Dokumentationslängen" },
+          { "title": "Lokalisierung", "description": "Vergleichen Sie Textlängen über Sprachen hinweg" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Verwenden Sie den Textzähler",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihren Text zu analysieren und Ergebnisse zu exportieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Text Ein",
+            "description": "Tippen oder fügen Sie Ihren Text in den Eingabebereich ein, oder laden Sie eine Textdatei zur Analyse hoch."
+          },
+          {
+            "step": 2,
+            "title": "Sehen Sie Echtzeit-Analyse",
+            "description": "Beobachten Sie, wie das Tool automatisch Zeichen, Wörter, Zeilen und mehr zählt, während Sie tippen."
+          },
+          {
+            "step": 3,
+            "title": "Erhalten Sie Leseschätzungen",
+            "description": "Sehen Sie geschätzte Lese- und Sprechzeiten basierend auf Ihrer Textlänge."
+          },
+          {
+            "step": 4,
+            "title": "Ergebnisse Exportieren",
+            "description": "Laden Sie einen detaillierten Analysebericht herunter oder kopieren Sie die Ergebnisse in die Zwischenablage."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Textanalyse-Beispiele",
+        "description": "Sehen Sie, wie unser Textzähler verschiedene Inhaltstypen analysiert.",
+        "items": [
+          { "title": "Blogbeitrag", "input": "500 Wörter", "output": "~2 Minuten Lesezeit" },
+          { "title": "Tweet", "input": "Max. 280 Zeichen", "output": "Passt in Social-Media-Limits" },
+          { "title": "E-Mail-Betreff", "input": "50 Zeichen", "output": "Empfohlen für höhere Öffnungsraten" },
+          { "title": "Meta-Beschreibung", "input": "150–160 Zeichen", "output": "Optimal für Suchergebnis-Snippets" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Textzähler Verwenden",
+        "content": "Professionelle Textanalyse mit präzisen Ergebnissen und umfassenden Statistiken.",
+        "items": [
+          "Vollständig kostenlos und unbegrenzte Nutzung",
+          "Keine Registrierung oder Anmeldung erforderlich",
+          "Datenschutz zuerst - alle Analysen lokal durchgeführt",
+          "Unterstützt mehrere Dateiformate",
+          "Echtzeit-Analyse beim Tippen",
+          "Ergebnisse für Dokumentation exportieren"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wie genau ist die Wortzählung?",
+          "answer": "Unser Wortzählalgorithmus ist hochpräzise und verwendet fortschrittliche Textanalyse, um Wörter korrekt zu identifizieren, Interpunktion zu verarbeiten und verschiedene Sprachen und Schreibstile zu berücksichtigen."
+        },
+        {
+          "question": "Welche Dateiformate werden unterstützt?",
+          "answer": "Sie können .txt, .md, .js, .ts, .jsx, .tsx, .json, .css, .html Dateien und andere textbasierte Formate zur Analyse hochladen."
+        },
+        {
+          "question": "Wie wird die Lesezeit berechnet?",
+          "answer": "Die Lesezeit wird basierend auf einer durchschnittlichen Lesegeschwindigkeit von 200-250 Wörtern pro Minute berechnet. Die Sprechzeit verwendet einen Durchschnitt von 130-150 Wörtern pro Minute."
+        },
+        {
+          "question": "Werden meine Textdaten gespeichert oder geteilt?",
+          "answer": "Nein, alle Textanalysen erfolgen lokal in Ihrem Browser. Ihr Text wird niemals auf unseren Servern gespeichert oder mit Dritten geteilt."
+        },
+        {
+          "question": "Kann ich dies für nicht-englischen Text verwenden?",
+          "answer": "Ja, unser Textzähler funktioniert mit jeder Sprache und jedem Zeichensatz, einschließlich Sonderzeichen, Emojis und Unicode-Text."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textanalyse-Tools",
+        "items": [
+          {
+            "name": "Worthäufigkeits-Analysator",
+            "description": "Analysieren Sie Worthäufigkeit und finden Sie die häufigsten Wörter in Ihrem Text",
+            "href": "/de/tools/word-frequency"
+          },
+          {
+            "name": "Satzzähler",
+            "description": "Zählen Sie Sätze und analysieren Sie Satzstrukturen in Ihrem Text",
+            "href": "/de/tools/sentence-counter"
+          },
+          {
+            "name": "Text-Ersetzen-Tool",
+            "description": "Finden und ersetzen Sie Text mit erweiterter Musterübereinstimmung",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Duplikatzeilen-Entferner",
+            "description": "Entfernen Sie effizient doppelte Zeilen aus Ihrem Text",
+            "href": "/de/tools/duplicate-line-remover"
+          }
+        ]
+      }
+    }
   }
 }

@@ -282,5 +282,221 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser UTM-Parameter-Builder - Marketingkampagnen Effektiv Verfolgen",
+    "metaDescription": "Erstellen Sie UTM-Parameter für Google Analytics-Kampagnenverfolgung. Generieren Sie nachverfolgbare URLs mit benutzerdefinierten UTM-Tags, um Marketing-Attribution, Kampagnenleistung und Traffic-Quellen genau zu messen.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller UTM-Parameter-Builder & Kampagnenverfolgungs-Tool",
+        "content": "Erstellen Sie genaue UTM-Parameter für umfassende Marketingkampagnen-Verfolgung mit unserem professionellen UTM-Parameter-Builder. Generieren Sie nachverfolgbare URLs mit Source-, Medium-, Campaign-, Term- und Content-Parametern, die nahtlos mit Google Analytics und anderen Analyseplattformen integrieren. Perfekt für Vermarkter, digitale Agenturen und Unternehmen, die präzise Attributionsdaten und Kampagnenleistungs-Insights benötigen."
+      },
+      "features": {
+        "title": "Erweiterte UTM-Parameter-Builder-Funktionen",
+        "items": [
+          {
+            "title": "Vollständige UTM-Parameter-Unterstützung",
+            "description": "Erstellen Sie alle fünf UTM-Parameter: Source, Medium, Campaign, Term und Content für umfassende Verfolgung"
+          },
+          {
+            "title": "Echtzeit-URL-Generierung",
+            "description": "Sofortige UTM-URL-Generierung mit Live-Vorschau während Sie Kampagnenparameter eingeben"
+          },
+          {
+            "title": "Kampagnen-Validierung",
+            "description": "Integrierte Validierung stellt ordnungsgemäße UTM-Parameter-Formatierung und URL-Struktur sicher"
+          },
+          {
+            "title": "Schnelle Kampagnen-Voreinstellungen",
+            "description": "Vorkonfigurierte Vorlagen für gängige Marketingkanäle wie E-Mail, Social Media, Anzeigen und Organisch"
+          },
+          {
+            "title": "URL-Kompatibilitätsprüfung",
+            "description": "Überprüfen Sie die URL-Kompatibilität mit wichtigen Plattformen einschließlich Twitter, Facebook und LinkedIn"
+          },
+          {
+            "title": "Parameter-Analyse-Dashboard",
+            "description": "Visuelle Insights in URL-Struktur, Parameteranzahl und Kampagnenkonfiguration"
+          },
+          {
+            "title": "Kampagnen-Export-Optionen",
+            "description": "Laden Sie UTM-Parameter und generierte URLs für Dokumentation und Team-Sharing herunter"
+          },
+          {
+            "title": "Social-Media-Optimierung",
+            "description": "URL-Längenoptimierung für Social-Media-Plattformen mit Zeichenlimit-Warnungen"
+          },
+          {
+            "title": "Marketing-Attributions-Insights",
+            "description": "Vorschau, wie UTM-Parameter in Google Analytics-Berichten erscheinen werden"
+          },
+          {
+            "title": "Mobil-responsives Interface",
+            "description": "Touch-optimierte Formularfelder und Steuerelemente funktionieren perfekt auf allen Geräten"
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Unverzichtbar Für Marketingkampagnen-Verfolgung",
+        "description": "Unser UTM-Parameter-Builder ist unverzichtbar für genaue Marketing-Attribution und Kampagnenleistungsmessung.",
+        "items": [
+          {
+            "title": "E-Mail-Marketingkampagnen",
+            "description": "Verfolgen Sie Newsletter-Leistung, Werbe-E-Mails und automatisierte E-Mail-Sequenzen"
+          },
+          {
+            "title": "Social-Media-Marketing",
+            "description": "Messen Sie Engagement von Facebook-, Twitter-, LinkedIn-, Instagram- und YouTube-Kampagnen"
+          },
+          {
+            "title": "Bezahlte Werbe-Verfolgung",
+            "description": "Überwachen Sie Google Ads-, Facebook Ads-, LinkedIn Ads- und andere PPC-Kampagnenleistung"
+          },
+          {
+            "title": "Content-Marketing-Attribution",
+            "description": "Verfolgen Sie Traffic von Blog-Beiträgen, Gastartikeln und Content-Syndication-Bemühungen"
+          },
+          {
+            "title": "Influencer-Marketing-ROI",
+            "description": "Messen Sie die Effektivität von Influencer-Partnerschaften und gesponserten Inhalten"
+          },
+          {
+            "title": "Affiliate-Programm-Verfolgung",
+            "description": "Überwachen Sie Affiliate-Partner-Leistung und kommissionsgenerierende Traffic-Quellen"
+          },
+          {
+            "title": "PR und Media Outreach",
+            "description": "Verfolgen Sie Erwähnungen, Pressemitteilungen und Medienberichterstattung, die Website-Traffic generieren"
+          },
+          {
+            "title": "Cross-Channel-Attribution",
+            "description": "Vergleichen Sie Leistung über verschiedene Marketingkanäle und Kampagnen hinweg"
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "Wie Man UTM-Parameter Erstellt",
+        "description": "Folgen Sie diesen Schritten, um professionelle UTM-Parameter für genaue Kampagnenverfolgung zu erstellen.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihre Landing-Page-URL Ein",
+            "description": "Beginnen Sie mit der Ziel-URL, wo Sie Besucher verfolgen möchten, die von Ihren Marketingkampagnen kommen."
+          },
+          {
+            "step": 2,
+            "title": "Konfigurieren Sie Kampagnenparameter",
+            "description": "Füllen Sie UTM Source (Traffic-Herkunft), Medium (Marketingkanal) und Kampagnenname zur Identifikation aus."
+          },
+          {
+            "step": 3,
+            "title": "Fügen Sie Optionale Parameter Hinzu",
+            "description": "Fügen Sie UTM Term (für bezahlte Keywords) und UTM Content (für A/B-Tests) hinzu, falls für Ihre Kampagne benötigt."
+          },
+          {
+            "step": 4,
+            "title": "Überprüfen Und Kopieren Sie UTM-URL",
+            "description": "Überprüfen Sie die generierte UTM-URL, prüfen Sie die Analyse-Vorschau und kopieren Sie für die Verwendung in Ihren Marketingkampagnen."
+          }
+        ]
+      },
+      "examples": {
+        "title": "UTM-Parameter-Erstellungsbeispiele",
+        "description": "Sehen Sie, wie Sie UTM-Parameter für verschiedene Marketing-Szenarien und Kampagnentypen erstellen.",
+        "items": [
+          {
+            "title": "E-Mail-Newsletter",
+            "input": "utm_source=newsletter&utm_medium=email&utm_campaign=weekly_digest",
+            "output": "Verfolgen Sie Newsletter-Abonnenten, die auf Ihre Website klicken",
+            "description": "Perfekt für die Messung von E-Mail-Marketing-Engagement"
+          },
+          {
+            "title": "Facebook-Anzeigenkampagne",
+            "input": "utm_source=facebook&utm_medium=cpc&utm_campaign=spring_sale",
+            "output": "Verfolgen Sie bezahlte Facebook-Werbeleistung",
+            "description": "Ideal für die Messung von Social-Media-Werbe-ROI"
+          },
+          {
+            "title": "Blog-Content-Marketing",
+            "input": "utm_source=blog&utm_medium=organic&utm_campaign=seo_article",
+            "output": "Verfolgen Sie Content-Marketing-Attribution",
+            "description": "Unverzichtbar für die Messung der Content-Marketing-Effektivität"
+          },
+          {
+            "title": "Affiliate-Partnerschaft",
+            "input": "utm_source=partner_site&utm_medium=affiliate&utm_campaign=product_review",
+            "output": "Verfolgen Sie Affiliate- und Partner-Traffic",
+            "description": "Kritisch für die Messung von Partnerschafts-ROI"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren UTM-Parameter-Builder Verwenden",
+        "content": "Professionelle UTM-Parameter-Generierung mit umfassender Analyse und Marketing-Insights.",
+        "items": [
+          "Völlig kostenloser UTM-Parameter-Builder mit unbegrenzter Kampagnenerstellung",
+          "Keine Registrierung erforderlich - beginnen Sie sofort mit der Erstellung von UTM-Parametern",
+          "Echtzeit-Validierung stellt ordnungsgemäß formatierte UTM-Parameter sicher",
+          "Kampagnen-Voreinstellungsvorlagen für schnellere UTM-Parameter-Generierung",
+          "Social-Media-Kompatibilitätsprüfung für optimales URL-Sharing",
+          "Visuelles Analyse-Dashboard zeigt Parameterstruktur und Insights",
+          "Export-Funktionalität für Team-Zusammenarbeit und Kampagnendokumentation",
+          "Mobil-responsives Interface funktioniert perfekt auf Smartphones und Tablets",
+          "Datenschutzorientiertes Tool - keine UTM-Parameter werden auf unseren Servern gespeichert",
+          "Google Analytics-Integrationsanleitung und Best Practices enthalten"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was Sind UTM-Parameter Und Warum Sind Sie Wichtig?",
+          "answer": "UTM-Parameter sind Tags, die zu URLs hinzugefügt werden und helfen, die Effektivität von Marketingkampagnen zu verfolgen. Sie teilen Analyseplattformen wie Google Analytics genau mit, woher Ihr Website-Traffic kommt, sodass Sie ROI messen und Marketingausgaben über verschiedene Kanäle optimieren können."
+        },
+        {
+          "question": "Welche UTM-Parameter Sind Erforderlich Vs. Optional?",
+          "answer": "Drei UTM-Parameter sind erforderlich: utm_source (Traffic-Quelle), utm_medium (Marketingkanal) und utm_campaign (Kampagnen-Identifikator). Zwei sind optional: utm_term (für bezahlte Keywords) und utm_content (für A/B-Tests verschiedener Anzeigen oder Links)."
+        },
+        {
+          "question": "Wie Erscheinen UTM-Parameter In Google Analytics?",
+          "answer": "UTM-Parameter füllen die Akquisitionsberichte in Google Analytics unter Quelle/Medium, Kampagnen und anderen Attributionsberichten. Sie helfen Ihnen zu sehen, welche Marketingbemühungen Traffic, Konversionen und Umsatz generieren."
+        },
+        {
+          "question": "Können UTM-Parameter Die SEO Meiner Website Beeinflussen?",
+          "answer": "UTM-Parameter beeinflussen SEO-Rankings nicht direkt, können aber bei SEO-Verfolgung und -Analyse helfen. Sie werden von Suchmaschinen für Ranking-Zwecke ignoriert, liefern aber wertvolle Daten für die Messung der Leistung organischer und bezahlter Kampagnen."
+        },
+        {
+          "question": "Was Sind Best Practices Für UTM-Parameter-Namensgebung?",
+          "answer": "Verwenden Sie konsistente, kleingeschriebene Namenskonventionen. Vermeiden Sie Leerzeichen (verwenden Sie stattdessen Unterstriche oder Bindestriche), halten Sie Namen beschreibend aber prägnant und etablieren Sie Standard-Namenskonventionen in Ihrem Team, um Datenkonsistenz in Analyseberichten sicherzustellen."
+        },
+        {
+          "question": "Wie Kann Ich UTM-Parameter-Leistung Verfolgen?",
+          "answer": "Zeigen Sie UTM-Parameter-Leistung in Google Analytics unter Akquisition > Kampagnen > Alle Kampagnen an. Sie können auch benutzerdefinierte Berichte und Dashboards erstellen, um spezifische UTM-Parameter-Kombinationen zu verfolgen und Kampagnen-ROI über verschiedene Kanäle zu messen."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Marketing- & Analyse-Tools",
+        "items": [
+          {
+            "name": "URL-Kodierer/Dekodierer",
+            "description": "Kodieren und dekodieren Sie URLs für ordnungsgemäße Formatierung und Kompatibilität",
+            "href": "/de/tools/url-converter"
+          },
+          {
+            "name": "URL-Slug-Generator",
+            "description": "Erstellen Sie SEO-freundliche URL-Slugs für Landing-Pages und Inhalte",
+            "href": "/de/tools/slugify-url"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen in UTM-Parametern und Kampagnenbeschreibungen",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Online Notizblock",
+            "description": "Dokumentieren und organisieren Sie Ihre UTM-Parameter-Strategien",
+            "href": "/de/tools/online-notepad"
+          }
+        ]
+      }
+    }
   }
 }

@@ -98,5 +98,60 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Fall-Konvertierungs-Werkzeuge - Text-Case Online Ändern",
+    "metaDescription": "Kostenlose Online-Text-Case-Konverter: GROSSBUCHSTABEN, kleinbuchstaben, Titel-Fall, Satzfall, camelCase, snake_case und AbWeChSlUnGsfall. Konvertieren Sie Text sofort mit professionellen Formatierungswerkzeugen.",
+    "sections": {
+      "intro": {
+        "title": "Professionelle Text-Fall-Konvertierungs-Werkzeuge",
+        "content": "Transformieren Sie Text sofort zwischen verschiedenen Case-Stilen mit unserer umfassenden Sammlung von Fall-Konvertierungswerkzeugen. Ob Sie Text in GROSSBUCHSTABEN für Betonung, kleinbuchstaben für Konsistenz, Titel-Fall für Überschriften oder spezialisierte Formate wie camelCase und snake_case für Programmierung konvertieren müssen - unsere Werkzeuge machen es mühelos. Alle Verarbeitung erfolgt in Ihrem Browser für vollständige Privatsphäre und Geschwindigkeit."
+      },
+      "toolsList": {
+        "title": "Verfügbare Fall-Konvertierungs-Werkzeuge",
+        "items": [
+          {
+            "name": "GROSSBUCHSTABEN-Konverter",
+            "href": "/de/tools/uppercase",
+            "description": "Konvertieren Sie allen Text sofort in GROSSBUCHSTABEN-Format - perfekt für Kopfzeilen, Betonung und Standardisierung"
+          },
+          {
+            "name": "kleinbuchstaben-Konverter",
+            "href": "/de/tools/lowercase",
+            "description": "Transformieren Sie allen Text in kleinbuchstaben-Format - ideal zum Normalisieren von Text und Erstellen konsistenter Ausgabe"
+          },
+          {
+            "name": "Titel-Fall-Konverter",
+            "href": "/de/tools/title-case",
+            "description": "Konvertieren Sie Text in richtiges Titel-Fall-Format mit intelligenter Wortgroßschreibung für Schlagzeilen und Titel"
+          },
+          {
+            "name": "Satzfall-Konverter",
+            "href": "/de/tools/sentence-case",
+            "description": "Konvertieren Sie Text in richtigen Satzfall mit großgeschriebenem erstem Buchstaben - perfekt für natürliche Textformatierung"
+          },
+          {
+            "name": "AbWeChSlUnGsfall-Konverter",
+            "href": "/de/tools/alternating-case",
+            "description": "Erstellen Sie abwechselnden Fall-Text für kreative Effekte und Social Media - wechselt zwischen Groß- und Kleinschreibung"
+          },
+          {
+            "name": "Camel-Case-Konverter",
+            "href": "/de/tools/camel-case-converter",
+            "description": "Konvertieren Sie Text und JSON-Schlüssel in camelCase oder PascalCase - unverzichtbar für JavaScript und Programmierung"
+          },
+          {
+            "name": "Snake-Case-Konverter",
+            "href": "/de/tools/snake-case-converter",
+            "description": "Transformieren Sie Text in snake_case oder UPPER_SNAKE_CASE - perfekt für Python, Datenbanken und Konstanten"
+          },
+          {
+            "name": "Kebab-Case-Konverter",
+            "href": "/de/tools/kebab-case-converter",
+            "description": "Konvertieren Sie Text in kebab-case-Format - ideal für URLs, CSS-Klassen und Dateinamen"
+          }
+        ]
+      }
+    }
   }
 }

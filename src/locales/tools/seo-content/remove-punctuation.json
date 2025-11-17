@@ -333,6 +333,96 @@
           { "name": "Найти и Заменить Текст", "description": "Продвинутая замена текста с учетом регистра и сопоставлением паттернов", "href": "/ru/tools/text-replace" }
         ]
       }
+  },
+  "de": {
+    "title": "Satzzeichen Entfernen – Kostenloser Online-Punktuations-Entferner",
+    "metaDescription": "Fügen Sie Text ein und entfernen Sie Satzzeichen (.,!?;:) sofort, während Wörter erhalten bleiben. Behalten Sie ausgewählte Zeichen, Zahlen und Zeilenumbrüche nach Bedarf.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Online-Satzzeichen-Entferner",
+        "content": "Bereinigen Sie Text von störenden Satzzeichen – ganz gleich ob für Datenverarbeitung, SEO-Slugs, Keyword-Analysen oder bessere Lesbarkeit. Unser Tool entfernt Punktuationszeichen gezielt und bietet flexible Optionen, um wichtige Zeichen, Zahlen und Zeilenumbrüche beizubehalten."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen zum Entfernen von Satzzeichen",
+        "items": [
+          { "title": "Selektive Entfernung", "description": "Bestimmen Sie genau, welche Zeichen erhalten bleiben sollen – z. B. Apostrophe in Kontraktionen, Bindestriche oder Unterstriche." },
+          { "title": "Eigene Behalten-Liste", "description": "Fügen Sie beliebige weitere Zeichen hinzu, die nicht entfernt werden dürfen, und behalten Sie so die volle Kontrolle." },
+          { "title": "Schutz für E-Mails & URLs", "description": "Option, um Punktuation in E-Mail-Adressen und URLs zu erhalten, damit Links intakt bleiben." },
+          { "title": "Live-Vorschau", "description": "Sehen Sie Änderungen sofort, während Sie Text einfügen oder Optionen anpassen." },
+          { "title": "Batch-fähig", "description": "Verarbeiten Sie lange Texte, Artikel oder Datensätze schnell und zuverlässig." },
+          { "title": "Kopieren & Herunterladen", "description": "Übernehmen Sie das Ergebnis direkt in die Zwischenablage oder speichern Sie es als Textdatei." }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Anwendungsfälle",
+        "description": "Punktuation entfernen ist in vielen Content- und Daten-Workflows nützlich.",
+        "items": [
+          { "title": "SEO & URL-Slugs", "description": "Erstellen Sie saubere Slugs für suchmaschinenfreundliche URLs." },
+          { "title": "Datenaufbereitung", "description": "Bereiten Sie Textdaten für Analysen, NLP oder Machine Learning vor." },
+          { "title": "Textvereinfachung", "description": "Verbessern Sie Lesbarkeit oder erstellen Sie vereinfachte Versionen für definierte Zielgruppen." },
+          { "title": "Keyword-Extraktion", "description": "Entfernen Sie Satzzeichen, um reine Schlüsselwörter für SEO oder Analysen zu gewinnen." },
+          { "title": "Datenbank-Importe", "description": "Verhindern Sie, dass Punktuation beim Import in Datenbanken Fehler verursacht." },
+          { "title": "Code & Variablen", "description": "Bereinigen Sie Text für Variablennamen, Identifier oder Kommentare in Code." },
+          { "title": "Social-Media-Texte", "description": "Entfernen Sie unerwünschte Zeichen vor dem Posten und behalten Sie wichtige Symbole." },
+          { "title": "Übersetzungs-Workflows", "description": "Liefern Sie Übersetzern Text ohne unnötige Satzzeichen für effizientere Verarbeitung." }
+        ]
+      },
+      "howToUse": {
+        "title": "Satzzeichen in vier Schritten entfernen",
+        "description": "So einfach bereinigen Sie Ihren Text.",
+        "steps": [
+          { "step": 1, "title": "Text eingeben", "description": "Fügen Sie Text ein oder laden Sie eine Datei mit zu entfernender Punktuation hoch." },
+          { "step": 2, "title": "Erhaltungsoptionen wählen", "description": "Bestimmen Sie, ob Apostrophe, Bindestriche, Zahlen oder Zeilenumbrüche erhalten bleiben sollen." },
+          { "step": 3, "title": "Eigene Zeichen definieren", "description": "Tragen Sie zusätzliche Zeichen in die individuelle Behalten-Liste ein (z. B. @#&%/)." },
+          { "step": 4, "title": "Ergebnis übernehmen", "description": "Kopieren Sie den bereinigten Text oder laden Sie ihn als .txt-Datei herunter." }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für die Satzzeichen-Entfernung",
+        "description": "So wirkt sich die Reinigung auf unterschiedliche Texte aus.",
+        "items": [
+          { "title": "Einfacher Satz", "input": "Hallo, Welt! Wie geht’s dir?", "output": "Hallo Welt Wie geht’s dir" },
+          { "title": "Mit Apostrophen", "input": "Don't worry, it's fine!", "output": "Don't worry it's fine" },
+          { "title": "E-Mail bleibt erhalten", "input": "Kontakt: user@example.com jetzt!", "output": "Kontakt user@example.com jetzt" },
+          { "title": "Slug-Erstellung", "input": "So entfernen Sie Satzzeichen: Eine Anleitung!", "output": "So entfernen Sie Satzzeichen Eine Anleitung" },
+          { "title": "Zahlen behalten", "input": "Rufen Sie 123-456-7890 noch heute an!", "output": "Rufen Sie 1234567890 noch heute an" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unser Tool verwenden?",
+        "content": "Flexibles, schnelles und datenschutzfreundliches Entfernen von Satzzeichen.",
+        "items": [
+          "Jederzeit kostenlos nutzbar",
+          "Keine Anmeldung erforderlich",
+          "Datenschutz: Verarbeitung findet lokal im Browser statt",
+          "Unterstützt große Textmengen",
+          "Selektive Entfernung dank umfangreicher Optionen",
+          "Sofortiges Ergebnis ohne Wartezeit",
+          "Responsive Oberfläche für Desktop & Mobil",
+          "Kompatibel mit allen Sprachen und Zeichensätzen"
+        ]
+      },
+      "faqs": [
+        { "question": "Welche Satzzeichen werden entfernt?", "answer": "Standardmäßig werden Punkte, Kommata, Ausrufe- und Fragezeichen, Semikolons, Doppelpunkte, Anführungszeichen, Gedankenstriche, Klammern und weitere Symbole entfernt. Über die Optionen können Sie gezielt definieren, was erhalten bleiben soll." },
+        { "question": "Kann ich Apostrophe in Wörtern wie don't behalten?", "answer": "Ja, aktivieren Sie die Option „Apostrophe in Kontraktionen behalten“, damit Wörter wie don't, it's oder we'll unverändert bleiben." },
+        { "question": "Wie bleiben E-Mail-Adressen und URLs intakt?", "answer": "Setzen Sie das Häkchen bei „Punktuation in E-Mails/URLs behalten“, damit @, Punkte, Schrägstriche und andere notwendige Zeichen nicht entfernt werden." },
+        { "question": "Was, wenn ich spezielle Zeichen behalten möchte?", "answer": "Nutzen Sie das Feld „Eigene Behalten-Liste“, um zusätzliche Zeichen wie @#&%/ festzulegen, die nicht entfernt werden sollen." },
+        { "question": "Werden Zahlen entfernt?", "answer": "Zahlen bleiben erhalten, sofern Sie die Option „Zahlen beibehalten“ aktiv lassen. Deaktivieren Sie sie, wenn auch Ziffern entfernt werden sollen." },
+        { "question": "Kann ich lange Texte oder Dokumente verarbeiten?", "answer": "Ja, das Tool ist für große Textmengen ausgelegt und verarbeitet auch umfangreiche Dokumente performant." },
+        { "question": "Werden meine Daten gespeichert?", "answer": "Nein. Alle Berechnungen passieren im Browser. Es werden keine Daten übertragen oder gespeichert." },
+        { "question": "Funktioniert das Tool mit anderen Sprachen?", "answer": "Ja, es arbeitet unabhängig von der Sprache, da Satzzeichen universell entfernt werden. Zeichen aus beliebigen Alphabeten bleiben erhalten." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Reinigungs-Tools",
+        "description": "Weitere Helfer für das Bereinigen und Formatieren von Text.",
+        "items": [
+          { "name": "Zeilenumbrüche entfernen", "description": "Zeilenumbrüche und überflüssige Leerzeichen aus Text entfernen", "href": "/de/tools/remove-line-breaks" },
+          { "name": "Formatierung entfernen", "description": "Formatierten Text in reinen Klartext verwandeln", "href": "/de/tools/remove-text-formatting" },
+          { "name": "Klartext-Konverter", "description": "Alle Formatierungen entfernen und Text bereinigen", "href": "/de/tools/plain-text" },
+          { "name": "Text ersetzen", "description": "Erweiterte Suchen-und-Ersetzen-Funktionen für Text", "href": "/de/tools/text-replace" }
+        ]
+      }
+    }
     }
   }
 }

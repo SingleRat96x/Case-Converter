@@ -54,7 +54,7 @@
           },
           {
             "name": "Italic Text Generator",
-            "href": "/tools/italic-text", 
+            "href": "/tools/italic-text",
             "description": "Transform text into italic Unicode format for emphasis"
           },
           {
@@ -180,7 +180,7 @@
             "description": "Specialized text generators for Instagram, Facebook, Discord, and other platforms"
           },
           {
-            "name": "Analysis & Counter Tools", 
+            "name": "Analysis & Counter Tools",
             "href": "/category/text-analysis",
             "description": "Count characters, words, sentences, and analyze text content statistics"
           },
@@ -248,7 +248,7 @@
           },
           {
             "name": "Генератор Курсивного Текста",
-            "href": "/ru/tools/italic-text", 
+            "href": "/ru/tools/italic-text",
             "description": "Преобразуйте текст в курсивный Unicode формат для выделения"
           },
           {
@@ -374,7 +374,7 @@
             "description": "Специализированные генераторы текста для Instagram, Facebook, Discord и других платформ"
           },
           {
-            "name": "Инструменты Анализа и Подсчета", 
+            "name": "Инструменты Анализа и Подсчета",
             "href": "/ru/category/text-analysis",
             "description": "Считайте символы, слова, предложения и анализируйте статистику текстового контента"
           },
@@ -382,6 +382,161 @@
             "name": "Перевод Кода и Данных",
             "href": "/ru/category/code-data-tools",
             "description": "Кодируйте, декодируйте и конвертируйте между различными форматами данных и кодировками"
+          }
+        ]
+      }
+    }
+  },
+  "de": {
+    "title": "Textmodifikations- & Formatierungswerkzeuge - Textformatierung & Styling",
+    "metaDescription": "Umfassende Textmodifikations- und Formatierungswerkzeuge: Fett, kursiv, durchgestrichen, gespiegelt, umgekehrt, Sonderzeichen entfernen und mehr. Formatieren und transformieren Sie Text sofort.",
+    "sections": {
+      "intro": {
+        "title": "Professionelle Textmodifikations- und Formatierungswerkzeuge",
+        "content": "Transformieren und formatieren Sie Text mit unserer umfassenden Sammlung von Modifikations- und Styling-Werkzeugen. Von einfacher Fett-/Kursiv-Formatierung bis hin zu erweiterten Transformationen wie gespiegeltem Text, umgekehrtem Text und speziellen Unicode-Effekten - unsere Werkzeuge bieten vielfältige Optionen für Textmanipulation und kreativen Ausdruck."
+      },
+      "toolsList": {
+        "title": "Verfügbare Textmodifikations-Werkzeuge",
+        "items": [
+          {
+            "name": "Fettschrift",
+            "href": "/de/tools/bold-text",
+            "description": "Konvertieren Sie Text in fette Unicode-Zeichen"
+          },
+          {
+            "name": "Kursivtext",
+            "href": "/de/tools/italic-text",
+            "description": "Transformieren Sie Text in kursive Unicode-Zeichen"
+          },
+          {
+            "name": "Tiefgestellter Text",
+            "href": "/de/tools/subscript-text",
+            "description": "Konvertieren Sie Text in tiefgestellte Zeichen"
+          },
+          {
+            "name": "Hochgestellter Text",
+            "href": "/de/tools/superscript-text",
+            "description": "Transformieren Sie Text in hochgestellte Zeichen"
+          },
+          {
+            "name": "Durchgestrichener Text",
+            "href": "/de/tools/strikethrough-text",
+            "description": "Fügen Sie Durchstreichungen zu Text hinzu"
+          },
+          {
+            "name": "Unterstrichener Text",
+            "href": "/de/tools/underline-text",
+            "description": "Unterstreichen Sie Text mit Unicode-Zeichen"
+          },
+          {
+            "name": "Großer Text",
+            "href": "/de/tools/big-text",
+            "description": "Erstellen Sie großen, fetten Text für Überschriften"
+          },
+          {
+            "name": "Kleine Kapitälchen",
+            "href": "/de/tools/small-caps",
+            "description": "Konvertieren Sie Text in kleine Kapitälchen"
+          },
+          {
+            "name": "Blasentext",
+            "href": "/de/tools/bubble-text",
+            "description": "Erstellen Sie blasenförmigen, eingekreisten Text"
+          },
+          {
+            "name": "Verfluchter Text",
+            "href": "/de/tools/cursed-text",
+            "description": "Generieren Sie gruseligen, gestörten Text-Effekt"
+          },
+          {
+            "name": "Spiegeltext",
+            "href": "/de/tools/mirror-text",
+            "description": "Spiegeln Sie Text horizontal"
+          },
+          {
+            "name": "Auf-dem-Kopf-Text",
+            "href": "/de/tools/upside-down-text",
+            "description": "Drehen Sie Text auf den Kopf"
+          },
+          {
+            "name": "Unsichtbarer Text",
+            "href": "/de/tools/invisible-text",
+            "description": "Erstellen Sie unsichtbare Unicode-Zeichen"
+          },
+          {
+            "name": "Breiter Text",
+            "href": "/de/tools/wide-text",
+            "description": "Konvertieren Sie Text in Vollbreiten-Zeichen"
+          },
+          {
+            "name": "Text Wiederholen",
+            "href": "/de/tools/repeat-text",
+            "description": "Wiederholen Sie Text mehrmals mit Trennzeichen"
+          },
+          {
+            "name": "Text Ersetzen",
+            "href": "/de/tools/text-replace",
+            "description": "Finden und ersetzen Sie Text in Masse"
+          },
+          {
+            "name": "Text Umkehren",
+            "href": "/de/tools/reverse-text",
+            "description": "Kehren Sie die Reihenfolge von Zeichen um"
+          },
+          {
+            "name": "Zeilenumbrüche Entfernen",
+            "href": "/de/tools/remove-line-breaks",
+            "description": "Entfernen Sie alle Zeilenumbrüche aus Text"
+          },
+          {
+            "name": "Textformatierung Entfernen",
+            "href": "/de/tools/remove-text-formatting",
+            "description": "Entfernen Sie alle Formatierung und Sonderzeichen"
+          },
+          {
+            "name": "Doppelte Zeilen Entfernen",
+            "href": "/de/tools/duplicate-line-remover",
+            "description": "Entfernen Sie doppelte Zeilen aus Text"
+          },
+          {
+            "name": "Zeilen Sortieren",
+            "href": "/de/tools/sort-lines",
+            "description": "Sortieren Sie Textzeilen alphabetisch"
+          },
+          {
+            "name": "Wörter Sortieren",
+            "href": "/de/tools/sort-words",
+            "description": "Sortieren Sie Wörter alphabetisch"
+          },
+          {
+            "name": "Nur Text",
+            "href": "/de/tools/plain-text",
+            "description": "Konvertieren Sie formatierten Text in reinen Text"
+          },
+          {
+            "name": "Satzzeichen Entfernen",
+            "href": "/de/tools/remove-punctuation",
+            "description": "Entfernen Sie alle Satzzeichen aus Text"
+          },
+          {
+            "name": "E-Mails aus Text Extrahieren",
+            "href": "/de/tools/extract-emails-from-text",
+            "description": "Extrahieren Sie alle E-Mail-Adressen aus Text"
+          },
+          {
+            "name": "E-Mails aus PDF Extrahieren",
+            "href": "/de/tools/extract-emails-from-pdf",
+            "description": "Extrahieren Sie E-Mail-Adressen aus PDF-Dokumenten"
+          },
+          {
+            "name": "Zeilennummern Hinzufügen",
+            "href": "/de/tools/add-line-numbers-to-text",
+            "description": "Fügen Sie Zeilennummern zu Text hinzu"
+          },
+          {
+            "name": "Präfix und Suffix Hinzufügen",
+            "href": "/de/tools/add-prefix-and-suffix-to-lines",
+            "description": "Fügen Sie Präfix und Suffix zu jeder Zeile hinzu"
           }
         ]
       }

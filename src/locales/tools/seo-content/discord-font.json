@@ -280,5 +280,146 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Discord Schriftarten-Generator - Gaming Textstile für Nachrichten & Benutzernamen",
+    "metaDescription": "Generieren Sie einzigartige Discord-Schriftarten mit fetten, kursiven, monospaced und gaming-inspirierten Stilen. Perfekt für Discord-Nachrichten, Benutzernamen, Kanalnamen und Gaming-Communities. Kopieren und einfügen Sie Unicode-Schriftarten, die überall funktionieren!",
+    "sections": {
+      "intro": {
+        "title": "Discord Schriftarten-Generator - Gaming Textstile für Nachrichten & Benutzernamen",
+        "content": "Verwandeln Sie Ihren normalen Text in einzigartige Discord-Schriftarten mit unserem spezialisierten Unicode-Schriftarten-Generator. Erstellen Sie gaming-inspirierten Text für Discord-Nachrichten, Benutzernamen, Kanalnamen und Gaming-Communities mit fetten, kursiven, monospaced, serifenlosen und doppelt gestrichenen Stilen. Perfekt für Gamer, Streamer und Discord-Server-Besitzer, die ihren Content mit markanter Typografie hervorheben möchten."
+      },
+      "features": {
+        "title": "Erweiterte Discord Schriftarten-Generator Funktionen",
+        "items": [
+          { "title": "6 Gaming-Schriftarten-Stile", "description": "Fett, kursiv, monospaced, serifenlos, serifenlos fett und doppelt gestrichene Schriftarten, optimiert für Gaming-Communities" },
+          { "title": "Discord-Kompatibel", "description": "Funktioniert perfekt in Discord-Nachrichten, Benutzernamen, Kanalnamen und Server-Beschreibungen" },
+          { "title": "Echtzeit-Vorschau", "description": "Sehen Sie Ihren Text sofort transformiert, während Sie tippen, mit Live-Gaming-fokussierten Vorschauen" },
+          { "title": "Ein-Klick-Kopieren", "description": "Kopieren Sie Ihren gestylten Discord-Text mit einem Klick in die Zwischenablage" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch, um gesamte Gaming-Ankündigungen und Content auf einmal zu konvertieren" },
+          { "title": "Mobile Gaming Bereit", "description": "Optimiert für die mobile Discord-App - perfekt für Gaming unterwegs" },
+          { "title": "Keine Registrierung Erforderlich", "description": "Beginnen Sie sofort mit der Erstellung von Discord-Schriftarten ohne Anmeldung" },
+          { "title": "Datenschutz-First Gaming", "description": "Alle Schriftarten-Konvertierung erfolgt lokal - Ihr Discord-Content verlässt nie Ihr Gerät" },
+          { "title": "Gaming-Content Herunterladen", "description": "Speichern Sie Ihren konvertierten Discord-Text als Dateien für Server-Ankündigungen" },
+          { "title": "Gaming-Zeichen-Unterstützung", "description": "Funktioniert mit Gaming-Terminologie und Sonderzeichen" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Discord Gaming-Communities",
+        "description": "Unser Discord-Schriftarten-Generator ist unerlässlich für die Erstellung ansprechender Gaming-Inhalte und Community-Management.",
+        "items": [
+          { "title": "Discord Benutzernamen", "description": "Erstellen Sie einzigartige Discord-Benutzernamen, die auf Gaming-Servern hervorstechen" },
+          { "title": "Gaming-Nachrichten", "description": "Machen Sie wichtige Ankündigungen und Nachrichten in Discord-Kanälen auffälliger" },
+          { "title": "Kanalnamen", "description": "Stylen Sie Discord-Kanalnamen und -beschreibungen für bessere Server-Organisation" },
+          { "title": "Server-Regeln", "description": "Formatieren Sie Server-Regeln und Richtlinien mit auffälligen Discord-Schriftarten" },
+          { "title": "Gaming-Clan-Tags", "description": "Erstellen Sie markante Textstile für Gaming-Clan-Namen und Mitglieder-Tags" },
+          { "title": "Turnier-Ankündigungen", "description": "Lassen Sie E-Sports- und Gaming-Turnier-Ankündigungen hervorstechen" },
+          { "title": "Bot-Befehle", "description": "Formatieren Sie Discord-Bot-Befehle und -Antworten mit monospaced Schriftarten" },
+          { "title": "Community-Events", "description": "Erstellen Sie aufmerksamkeitsstarken Text für Gaming-Events und Treffen" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Verwenden Sie den Discord Schriftarten-Generator",
+        "description": "Folgen Sie diesen einfachen Schritten, um in Sekunden einzigartige Discord-Schriftarten für Ihre Gaming-Community zu erstellen.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Geben Sie Ihren Discord-Text Ein",
+            "description": "Tippen oder fügen Sie Ihren Text in das Eingabefeld ein, oder laden Sie eine Textdatei für die Batch-Konvertierung von Gaming-Content hoch."
+          },
+          {
+            "step": 2,
+            "title": "Wählen Sie Gaming-Schriftarten-Stil",
+            "description": "Wählen Sie aus 6 gaming-inspirierten Schriftarten-Stilen, einschließlich fett, kursiv, monospaced, serifenlos, serifenlos fett und doppelt gestrichen."
+          },
+          {
+            "step": 3,
+            "title": "Vorschau und Kopieren",
+            "description": "Sehen Sie Ihren Text in Echtzeit transformiert und kopieren Sie ihn mit einem Klick in Ihre Zwischenablage."
+          },
+          {
+            "step": 4,
+            "title": "In Discord Einfügen",
+            "description": "Fügen Sie Ihren stylischen Discord-Text direkt in Nachrichten, Benutzernamen, Kanalnamen oder Server-Beschreibungen ein."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Discord Schriftarten-Stil Beispiele",
+        "description": "Sehen Sie, wie verschiedene Discord-Schriftarten-Stile Ihren Text für Gaming-Communities transformieren.",
+        "items": [
+          { "title": "Fetter Gaming-Text", "input": "GamerTag123", "output": "𝐆𝐚𝐦𝐞𝐫𝐓𝐚𝐠𝟏𝟐𝟑", "description": "Perfekt für Discord-Benutzernamen und wichtige Gaming-Ankündigungen" },
+          { "title": "Monospaced Befehle", "input": "!help discord", "output": "𝚑𝚎𝚕𝚙 𝚍𝚒𝚜𝚌𝚘𝚛𝚍", "description": "Ideal für Discord-Bot-Befehle und Code-Snippets auf Gaming-Servern" },
+          { "title": "Kursive Kanalnamen", "input": "general-chat", "output": "𝑔𝑒𝑛𝑒𝑟𝑎𝑙-𝑐ℎ𝑎𝑡", "description": "Großartig für Discord-Kanal-Beschreibungen und Server-Kategorien" },
+          { "title": "Doppelt Gestrichener Sieg", "input": "VICTORY", "output": "𝕍𝕀ℂ𝕋𝕆ℝ𝕐", "description": "Perfekt zum Feiern von Siegen auf Gaming-Discord-Servern" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Discord Schriftarten-Generator Verwenden",
+        "content": "Professionelle Discord-Schriftarten-Generierung mit erweiterten Unicode-Styling und Gaming-Community-Optimierung.",
+        "items": [
+          "Völlig kostenlos mit unbegrenzten Konvertierungen",
+          "Keine Registrierung oder Konto erforderlich",
+          "Funktioniert auf allen Geräten und Discord-Plattformen",
+          "Datenschutz-orientiert - keine Datensammlung",
+          "6 verschiedene gaming-inspirierte Schriftarten-Stile",
+          "Echtzeit-Vorschau und sofortiges Kopieren",
+          "Datei-Upload-Unterstützung für Batch-Verarbeitung",
+          "Kompatibel mit allen Discord-Textbereichen"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Funktionieren Discord-Schriftarten in allen Discord-Kanälen?",
+          "answer": "Ja! Unser Discord-Schriftarten-Generator erstellt Unicode-Zeichen, die in allen Discord-Textbereichen funktionieren, einschließlich Nachrichten, Benutzernamen, Kanalnamen, Server-Beschreibungen und mehr."
+        },
+        {
+          "question": "Kann ich Discord-Schriftarten auf mobilen Geräten verwenden?",
+          "answer": "Absolut! Discord-Schriftarten, die von unserem Tool generiert werden, funktionieren perfekt auf Discord-Mobil-Apps für iOS und Android sowie in der Web-Version auf mobilen Browsern."
+        },
+        {
+          "question": "Verstoßen Discord-Schriftarten gegen die Nutzungsbedingungen von Discord?",
+          "answer": "Nein, Discord-Schriftarten verwenden Standard-Unicode-Zeichen und sind vollständig erlaubt. Es sind nur alternative Darstellungen von Text, keine Modifikationen an Discord selbst."
+        },
+        {
+          "question": "Funktionieren Discord-Schriftarten mit Discord-Bots?",
+          "answer": "Ja, Discord-Bots können Text mit Discord-Schriftarten anzeigen und verarbeiten. Die Schriftarten erscheinen normal für Bots und Benutzer gleichermaßen, da es Standard-Unicode-Zeichen sind."
+        },
+        {
+          "question": "Kann ich Discord-Schriftarten für Server-Namen verwenden?",
+          "answer": "Ja, Discord-Schriftarten funktionieren großartig für Server-Namen, Kanalnamen, Rollen-Namen und alle anderen Textfelder innerhalb von Discord-Servern und Gaming-Communities."
+        },
+        {
+          "question": "Warum erscheinen einige Zeichen nicht in bestimmten Schriftarten-Stilen?",
+          "answer": "Einige Unicode-Schriftarten-Stile haben keine Entsprechungen für alle Zeichen, insbesondere Zahlen und Sonderzeichen. Wenn ein Zeichen keine stilisierte Version hat, wird das ursprüngliche Zeichen beibehalten, um die Lesbarkeit zu erhalten."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Gaming-Text-Tools",
+        "description": "Entdecken Sie weitere Text-Transformations-Tools, um Ihren Discord-Gaming-Content zu verbessern.",
+        "items": [
+          {
+            "name": "Instagram Schriftarten-Generator",
+            "description": "Stylische Schriftarten, speziell optimiert für Instagram-Gaming-Content und E-Sports-Promotion",
+            "href": "/de/tools/instagram-fonts"
+          },
+          {
+            "name": "Facebook Schriftarten-Generator",
+            "description": "Auffällige Schriftarten für Facebook-Gaming-Gruppen und E-Sports-Posts",
+            "href": "/de/tools/facebook-font"
+          },
+          {
+            "name": "Fetter Text Generator",
+            "description": "Generieren Sie fetten Unicode-Text für Gaming-Hervorhebung und Ankündigungen",
+            "href": "/de/tools/bold-text"
+          },
+          {
+            "name": "Kursiver Text Generator",
+            "description": "Erstellen Sie kursiven Unicode-Text für Gaming-Ästhetik und Stil",
+            "href": "/de/tools/italic-text"
+          }
+        ]
+      }
+    }
   }
 }

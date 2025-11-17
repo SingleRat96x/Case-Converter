@@ -352,5 +352,182 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Klartext-Konverter – HTML, Markdown & Formatierung online entfernen",
+    "metaDescription": "Konvertieren Sie formatierten Text in Klartext, entfernen Sie HTML-Tags, Markdown, Links, E-Mails und Sonderzeichen direkt im Browser. Kostenloses Online-Tool.",
+    "sections": {
+      "intro": {
+        "title": "Formatierten Text in Klartext umwandeln",
+        "content": "Verwandeln Sie strukturierten oder kopierten Text in sauberen Klartext. Entfernen Sie HTML-Tags, Markdown-Syntax, Links, E-Mails, Zahlen, Sonderzeichen und Emojis, während der Inhalt erhalten bleibt – ideal für Content-Migration, Datenbereinigung und Textverarbeitung."
+      },
+      "features": {
+        "title": "Funktionen des Klartext-Konverters",
+        "items": [
+          {
+            "title": "HTML-Tags entfernen",
+            "description": "Entfernt automatisch alle HTML-Tags, konvertiert Struktur-Tags in passende Zeilenumbrüche und behält den Textinhalt bei."
+          },
+          {
+            "title": "Markdown bereinigen",
+            "description": "Löscht Markdown-Syntax wie Überschriften, Fett/Kursiv, Links, Codeblöcke, Listen und Tabellen und lässt lesbaren Text zurück."
+          },
+          {
+            "title": "URLs & E-Mails erkennen",
+            "description": "Erkennt und entfernt Weblinks, E-Mail-Adressen und Domains zuverlässig aus dem Text."
+          },
+          {
+            "title": "Sonderzeichen filtern",
+            "description": "Bereinigt Sonderzeichen, Zahlen, Satzzeichen und Emojis entsprechend Ihren gewählten Optionen."
+          },
+          {
+            "title": "Leerzeichen normalisieren",
+            "description": "Normalisiert verschiedene Leerzeichen-Typen, reduziert Mehrfach-Leerzeichen und behält gleichzeitig die Textstruktur bei."
+          },
+          {
+            "title": "Kontrolle über Zeilenumbrüche",
+            "description": "Entscheiden Sie, ob Absätze und Zeilenumbrüche erhalten bleiben oder zu fortlaufendem Text zusammengeführt werden."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien für Klartext",
+        "description": "Bereinigen Sie formatierten Text für unterschiedliche Workflows und Anwendungen.",
+        "items": [
+          {
+            "title": "Content-Migration",
+            "description": "Konvertieren Sie HTML-Inhalte in Klartext, um sie zwischen Plattformen oder CMS-Systemen zu übertragen."
+          },
+          {
+            "title": "Datenbereinigung",
+            "description": "Bereiten Sie kopierten Web- oder Dokumententext für Analysen, Reports oder Automatisierungen auf."
+          },
+          {
+            "title": "Dokumentation",
+            "description": "Wandeln Sie Markdown-Dokumente in Klartext um, um sie mit anderen Tools kompatibel zu machen."
+          },
+          {
+            "title": "Social-Media-Vorbereitung",
+            "description": "Entfernen Sie Formatierungen, bevor Texte auf Social-Media-Plattformen veröffentlicht werden."
+          },
+          {
+            "title": "Barrierefreiheit & Lesbarkeit",
+            "description": "Erstellen Sie klar strukturierte Texte, die Screenreader und Assistenzsysteme problemlos verarbeiten können."
+          },
+          {
+            "title": "Vorbereitung für NLP & KI",
+            "description": "Liefern Sie saubere Textdaten für Natural-Language-Processing, Machine-Learning-Modelle oder Chatbots."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie Text in Klartext",
+        "description": "In vier Schritten zu sauberem, formatfreiem Text.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text eingeben",
+            "description": "Fügen Sie formatierten Text in das Eingabefeld ein oder laden Sie eine Textdatei hoch."
+          },
+          {
+            "step": 2,
+            "title": "Optionen konfigurieren",
+            "description": "Wählen Sie aus, welche Formatierungen und Inhalte entfernt werden sollen, und passen Sie die Einstellungen an."
+          },
+          {
+            "step": 3,
+            "title": "Analyse prüfen",
+            "description": "Beobachten Sie die Konvertierung in Echtzeit und sehen Sie in der Analyse, was entfernt wurde."
+          },
+          {
+            "step": 4,
+            "title": "Text übernehmen",
+            "description": "Kopieren Sie den bereinigten Text in die Zwischenablage oder laden Sie ihn als .txt-Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für die Klartext-Konvertierung",
+        "description": "So werden unterschiedliche Formatierungen in sauberen Klartext überführt.",
+        "items": [
+          {
+            "title": "HTML zu Klartext",
+            "input": "<h1>Willkommen</h1><p>Das ist <strong>fetter</strong> Text mit einem <a href=\"#\">Link</a>.</p>",
+            "output": "Willkommen\\n\\nDas ist fetter Text mit einem Link."
+          },
+          {
+            "title": "Markdown bereinigen",
+            "input": "# Überschrift\\n\\nDas ist **fett** und *kursiv* mit einem [Link](https://beispiel.de).",
+            "output": "Überschrift\\n\\nDas ist fett und kursiv mit einem Link."
+          },
+          {
+            "title": "Gemischte Inhalte",
+            "input": "Kontaktieren Sie uns unter info@example.com oder besuchen Sie https://example.com für mehr Informationen!",
+            "output": "Kontaktieren Sie uns unter oder besuchen Sie für mehr Informationen!"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unseren Klartext-Konverter nutzen?",
+        "content": "Schnelle, zuverlässige und datenschutzfreundliche Textbereinigung mit umfassenden Optionen.",
+        "items": [
+          "Sofortige Konvertierung mit Live-Vorschau",
+          "Umfangreiche Optionen zur Format- und Inhaltsentfernung",
+          "Bewahrt Lesbarkeit und Struktur des Textes",
+          "Verarbeitet mehrere Eingabeformate parallel",
+          "Keine Größenbeschränkung oder Nutzungslimits",
+          "Komplett lokal – keine Daten verlassen Ihren Browser",
+          "Responsives Design für Desktop und Mobilgeräte",
+          "Kostenlos nutzbar, keine Registrierung erforderlich"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Formatierungen können entfernt werden?",
+          "answer": "Sie können HTML-Tags, Markdown-Syntax, URLs, E-Mail-Adressen, Zahlen, Sonderzeichen, Satzzeichen, Emojis und verschiedene Leerzeichenarten entfernen – wahlweise selektiv oder komplett."
+        },
+        {
+          "question": "Bleibt die Textstruktur erhalten?",
+          "answer": "Ja. Sie entscheiden, ob Zeilenumbrüche und Absätze erhalten bleiben. Überschriften und Absätze werden in passende Klartext-Strukturen umgewandelt."
+        },
+        {
+          "question": "Kann ich große Textmengen konvertieren?",
+          "answer": "Ja, Sie können große Textblöcke einfügen oder Dateien hochladen. Die Konvertierung erfolgt performant und zeigt Ergebnisse in Echtzeit."
+        },
+        {
+          "question": "Sind meine Daten sicher?",
+          "answer": "Absolut. Die Verarbeitung findet ausschließlich lokal in Ihrem Browser statt. Es werden keine Daten übertragen oder gespeichert."
+        },
+        {
+          "question": "Welche Dateiformate kann ich hochladen?",
+          "answer": "Sie können Klartext-Dateien (.txt) hochladen. Der Konverter verarbeitet jedes textbasierte Format, unabhängig von der ursprünglichen Quelle."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zählt Zeichen, Wörter, Sätze und Absätze in Ihrem Text",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Zeilenumbrüche entfernen",
+            "description": "Unnötige Zeilenumbrüche entfernen und Text normalisieren",
+            "href": "/de/tools/remove-line-breaks"
+          },
+          {
+            "name": "Text ersetzen",
+            "description": "Texte mit erweiterten Suchen-und-Ersetzen-Optionen bearbeiten",
+            "href": "/de/tools/text-replace"
+          },
+          {
+            "name": "Worthäufigkeit",
+            "description": "Häufige Wörter analysieren und Statistiken erzeugen",
+            "href": "/de/tools/word-frequency"
+          }
+        ]
+      }
+    }
   }
 }

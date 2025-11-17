@@ -54,7 +54,7 @@
           },
           {
             "name": "Binary Code Translator",
-            "href": "/tools/binary-code-translator", 
+            "href": "/tools/binary-code-translator",
             "description": "Convert text to binary code and binary to text with ASCII support"
           },
           {
@@ -161,7 +161,7 @@
             "description": "Generate random data, passwords, UUIDs, and other development resources"
           },
           {
-            "name": "Analysis & Counter Tools", 
+            "name": "Analysis & Counter Tools",
             "href": "/category/text-analysis",
             "description": "Analyze text content, count characters, and extract statistical information"
           },
@@ -229,7 +229,7 @@
           },
           {
             "name": "Переводчик Двоичного Кода",
-            "href": "/ru/tools/binary-code-translator", 
+            "href": "/ru/tools/binary-code-translator",
             "description": "Конвертируйте текст в двоичный код и двоичный код в текст с поддержкой ASCII"
           },
           {
@@ -336,7 +336,7 @@
             "description": "Генерируйте случайные данные, пароли, UUID и другие ресурсы для разработки"
           },
           {
-            "name": "Инструменты Анализа и Подсчета", 
+            "name": "Инструменты Анализа и Подсчета",
             "href": "/ru/category/text-analysis",
             "description": "Анализируйте текстовый контент, считайте символы и извлекайте статистическую информацию"
           },
@@ -344,6 +344,81 @@
             "name": "Инструменты Изображений",
             "href": "/ru/category/image-tools",
             "description": "Обрабатывайте, конвертируйте и манипулируйте изображениями для веб-разработки и создания контента"
+          }
+        ]
+      }
+    }
+  },
+  "de": {
+    "title": "Code & Datenübersetzungs-Werkzeuge - Encoder, Decoder & Format-Konverter",
+    "metaDescription": "Kostenlose Online-Code- und Datenübersetzungs-Werkzeuge: Base64, Binary, Hex, Morse-Code, ROT13, Caesar-Cipher, JSON, CSV und UTF-8-Konverter. Konvertieren Sie sofort zwischen Datenformaten.",
+    "sections": {
+      "intro": {
+        "title": "Professionelle Code- & Datenübersetzungs-Werkzeuge",
+        "content": "Konvertieren Sie Daten zwischen verschiedenen Formaten und Kodierungen mit unserer umfassenden Suite von Code- und Datenübersetzungswerkzeugen. Von Base64-Kodierung über binäre Übersetzung bis hin zu JSON-Formatierung und CSV-Konvertierung - unsere Werkzeuge handhaben alle gängigen Datenformate und Kodierungsschemata. Alle Verarbeitung erfolgt lokal in Ihrem Browser für vollständigen Datenschutz."
+      },
+      "toolsList": {
+        "title": "Verfügbare Code- & Datenübersetzungs-Werkzeuge",
+        "items": [
+          {
+            "name": "Base64 Encoder/Decoder",
+            "href": "/de/tools/base64-encoder-decoder",
+            "description": "Kodieren und dekodieren Sie Base64-Daten für E-Mail-Anhänge, Datenübertragung und API-Integration"
+          },
+          {
+            "name": "Binärcode-Übersetzer",
+            "href": "/de/tools/binary-code-translator",
+            "description": "Konvertieren Sie Text in Binärcode und umgekehrt für digitale Kommunikation und Programmierung"
+          },
+          {
+            "name": "Hex zu Text",
+            "href": "/de/tools/hex-to-text",
+            "description": "Konvertieren Sie hexadezimale Werte in Text und umgekehrt für Datenanalyse und Debugging"
+          },
+          {
+            "name": "Morse-Code",
+            "href": "/de/tools/morse-code",
+            "description": "Übersetzen Sie Text in Morse-Code und umgekehrt mit Audio-Wiedergabe"
+          },
+          {
+            "name": "Caesar-Verschlüsselung",
+            "href": "/de/tools/caesar-cipher",
+            "description": "Verschlüsseln und entschlüsseln Sie Text mit Caesar-Verschiebungs-Verschlüsselung"
+          },
+          {
+            "name": "ROT13",
+            "href": "/de/tools/rot13",
+            "description": "Kodieren und dekodieren Sie Text mit ROT13-Substitutions-Verschlüsselung"
+          },
+          {
+            "name": "CSV zu JSON",
+            "href": "/de/tools/csv-to-json",
+            "description": "Konvertieren Sie CSV-Daten in JSON-Format für API-Integration und Datenverarbeitung"
+          },
+          {
+            "name": "JSON Stringify",
+            "href": "/de/tools/json-stringify",
+            "description": "Konvertieren Sie JSON-Objekte in Strings mit konfigurierbarer Formatierung"
+          },
+          {
+            "name": "JSON-Formatierer",
+            "href": "/de/tools/json-formatter",
+            "description": "Formatieren, validieren und prettify JSON-Daten mit Syntaxhervorhebung"
+          },
+          {
+            "name": "URL-Konverter",
+            "href": "/de/tools/url-converter",
+            "description": "Kodieren und dekodieren Sie URLs für Web-Entwicklung und API-Aufrufe"
+          },
+          {
+            "name": "UTF-8-Konverter",
+            "href": "/de/tools/utf8-converter",
+            "description": "Konvertieren Sie zwischen UTF-8 und anderen Zeichenkodierungen"
+          },
+          {
+            "name": "URL Slugify",
+            "href": "/de/tools/slugify-url",
+            "description": "Erstellen Sie SEO-freundliche URL-Slugs aus Text"
           }
         ]
       }

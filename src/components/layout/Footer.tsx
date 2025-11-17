@@ -12,327 +12,333 @@ export function Footer() {
   const { tSync: t } = useNavigationTranslations();
   const { tSync: tCommon } = useCommonTranslations();
 
+  // Helper function to generate tool href based on locale
+  const getToolHref = (toolPath: string) => {
+    if (currentLocale === 'en') return toolPath;
+    return `/${currentLocale}${toolPath}`;
+  };
+
   const convertCaseTools = [
     {
       title: t('navigation.uppercase'),
-      href: currentLocale === 'en' ? '/tools/uppercase' : '/ru/tools/uppercase'
+      href: getToolHref('/tools/uppercase')
     },
     {
       title: t('navigation.lowercase'),
-      href: currentLocale === 'en' ? '/tools/lowercase' : '/ru/tools/lowercase'
+      href: getToolHref('/tools/lowercase')
     },
     {
       title: t('navigation.titleCase'),
-      href: currentLocale === 'en' ? '/tools/title-case' : '/ru/tools/title-case'
+      href: getToolHref('/tools/title-case')
     },
     {
       title: t('navigation.sentenceCase'),
-      href: currentLocale === 'en' ? '/tools/sentence-case' : '/ru/tools/sentence-case'
+      href: getToolHref('/tools/sentence-case')
     },
     {
       title: t('navigation.alternatingCase'),
-      href: currentLocale === 'en' ? '/tools/alternating-case' : '/ru/tools/alternating-case'
+      href: getToolHref('/tools/alternating-case')
     },
     {
       title: t('navigation.camelCaseConverter'),
-      href: currentLocale === 'en' ? '/tools/camel-case-converter' : '/ru/tools/camel-case-converter'
+      href: getToolHref('/tools/camel-case-converter')
     },
     {
       title: t('navigation.snakeCaseConverter'),
-      href: currentLocale === 'en' ? '/tools/snake-case-converter' : '/ru/tools/snake-case-converter'
+      href: getToolHref('/tools/snake-case-converter')
     },
     {
       title: t('navigation.kebabCaseConverter'),
-      href: currentLocale === 'en' ? '/tools/kebab-case-converter' : '/ru/tools/kebab-case-converter'
+      href: getToolHref('/tools/kebab-case-converter')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const analysisCounterTools = [
     {
       title: t('navigation.textCounter'),
-      href: currentLocale === 'en' ? '/tools/text-counter' : '/ru/tools/text-counter'
+      href: getToolHref('/tools/text-counter')
     },
     {
       title: t('navigation.sentenceCounter'),
-      href: currentLocale === 'en' ? '/tools/sentence-counter' : '/ru/tools/sentence-counter'
+      href: getToolHref('/tools/sentence-counter')
     },
     {
       title: t('navigation.wordFrequency'),
-      href: currentLocale === 'en' ? '/tools/word-frequency' : '/ru/tools/word-frequency'
+      href: getToolHref('/tools/word-frequency')
     },
     {
       title: t('navigation.extractNumbers'),
-      href: currentLocale === 'en' ? '/tools/extract-numbers' : '/ru/tools/extract-numbers'
+      href: getToolHref('/tools/extract-numbers')
     },
     {
       title: t('navigation.readingTimeEstimator'),
-      href: currentLocale === 'en' ? '/tools/reading-time-estimator' : '/ru/tools/reading-time-estimator'
+      href: getToolHref('/tools/reading-time-estimator')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const textFormattingTools = [
     {
       title: t('navigation.invisibleText'),
-      href: currentLocale === 'en' ? '/tools/invisible-text' : '/ru/tools/invisible-text'
+      href: getToolHref('/tools/invisible-text')
     },
     {
       title: t('navigation.repeatText'),
-      href: currentLocale === 'en' ? '/tools/repeat-text' : '/ru/tools/repeat-text'
+      href: getToolHref('/tools/repeat-text')
     },
     {
       title: t('navigation.textReplace'),
-      href: currentLocale === 'en' ? '/tools/text-replace' : '/ru/tools/text-replace'
+      href: getToolHref('/tools/text-replace')
     },
     {
       title: t('navigation.removeLineBreaks'),
-      href: currentLocale === 'en' ? '/tools/remove-line-breaks' : '/ru/tools/remove-line-breaks'
+      href: getToolHref('/tools/remove-line-breaks')
     },
     {
       title: t('navigation.removePunctuation'),
-      href: currentLocale === 'en' ? '/tools/remove-punctuation' : '/ru/tools/remove-punctuation'
+      href: getToolHref('/tools/remove-punctuation')
     },
     {
       title: t('navigation.removeTextFormatting'),
-      href: currentLocale === 'en' ? '/tools/remove-text-formatting' : '/ru/tools/remove-text-formatting'
+      href: getToolHref('/tools/remove-text-formatting')
     },
     {
       title: t('navigation.duplicateLineRemover'),
-      href: currentLocale === 'en' ? '/tools/duplicate-line-remover' : '/ru/tools/duplicate-line-remover'
+      href: getToolHref('/tools/duplicate-line-remover')
     },
     {
       title: t('navigation.boldText'),
-      href: currentLocale === 'en' ? '/tools/bold-text' : '/ru/tools/bold-text'
+      href: getToolHref('/tools/bold-text')
     },
     {
       title: t('navigation.italicText'),
-      href: currentLocale === 'en' ? '/tools/italic-text' : '/ru/tools/italic-text'
+      href: getToolHref('/tools/italic-text')
     },
     {
       title: t('navigation.subscriptText'),
-      href: currentLocale === 'en' ? '/tools/subscript-text' : '/ru/tools/subscript-text'
+      href: getToolHref('/tools/subscript-text')
     },
     {
       title: t('navigation.bigText'),
-      href: currentLocale === 'en' ? '/tools/big-text' : '/ru/tools/big-text'
+      href: getToolHref('/tools/big-text')
     },
     {
       title: t('navigation.bubbleText'),
-      href: currentLocale === 'en' ? '/tools/bubble-text' : '/ru/tools/bubble-text'
+      href: getToolHref('/tools/bubble-text')
     },
     {
       title: t('navigation.cursedText'),
-      href: currentLocale === 'en' ? '/tools/cursed-text' : '/ru/tools/cursed-text'
+      href: getToolHref('/tools/cursed-text')
     },
     {
       title: t('navigation.mirrorText'),
-      href: currentLocale === 'en' ? '/tools/mirror-text' : '/ru/tools/mirror-text'
+      href: getToolHref('/tools/mirror-text')
     },
     {
       title: t('navigation.sortWords'),
-      href: currentLocale === 'en' ? '/tools/sort-words' : '/ru/tools/sort-words'
+      href: getToolHref('/tools/sort-words')
     },
     {
       title: t('navigation.plainText'),
-      href: currentLocale === 'en' ? '/tools/plain-text' : '/ru/tools/plain-text'
+      href: getToolHref('/tools/plain-text')
     },
     {
       title: t('navigation.extractEmailsFromText'),
-      href: currentLocale === 'en' ? '/tools/extract-emails-from-text' : '/ru/tools/extract-emails-from-text'
+      href: getToolHref('/tools/extract-emails-from-text')
     },
     {
       title: t('navigation.addLineNumbers'),
-      href: currentLocale === 'en' ? '/tools/add-line-numbers-to-text' : '/ru/tools/add-line-numbers-to-text'
+      href: getToolHref('/tools/add-line-numbers-to-text')
     },
     {
       title: t('navigation.addPrefixSuffix'),
-      href: currentLocale === 'en' ? '/tools/add-prefix-and-suffix-to-lines' : '/ru/tools/add-prefix-and-suffix-to-lines'
+      href: getToolHref('/tools/add-prefix-and-suffix-to-lines')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const codeDataTools = [
     {
       title: t('navigation.base64EncoderDecoder'),
-      href: currentLocale === 'en' ? '/tools/base64-encoder-decoder' : '/ru/tools/base64-encoder-decoder'
+      href: getToolHref('/tools/base64-encoder-decoder')
     },
     {
       title: t('navigation.binaryCodeTranslator'),
-      href: currentLocale === 'en' ? '/tools/binary-code-translator' : '/ru/tools/binary-code-translator'
+      href: getToolHref('/tools/binary-code-translator')
     },
     {
       title: t('navigation.hexToText'),
-      href: currentLocale === 'en' ? '/tools/hex-to-text' : '/ru/tools/hex-to-text'
+      href: getToolHref('/tools/hex-to-text')
     },
     {
       title: t('navigation.morseCode'),
-      href: currentLocale === 'en' ? '/tools/morse-code' : '/ru/tools/morse-code'
+      href: getToolHref('/tools/morse-code')
     },
     {
       title: t('navigation.caesarCipher'),
-      href: currentLocale === 'en' ? '/tools/caesar-cipher' : '/ru/tools/caesar-cipher'
+      href: getToolHref('/tools/caesar-cipher')
     },
     {
       title: t('navigation.rot13'),
-      href: currentLocale === 'en' ? '/tools/rot13' : '/ru/tools/rot13'
+      href: getToolHref('/tools/rot13')
     },
     {
       title: t('navigation.csvToJson'),
-      href: currentLocale === 'en' ? '/tools/csv-to-json' : '/ru/tools/csv-to-json'
+      href: getToolHref('/tools/csv-to-json')
     },
     {
       title: t('navigation.jsonStringify'),
-      href: currentLocale === 'en' ? '/tools/json-stringify' : '/ru/tools/json-stringify'
+      href: getToolHref('/tools/json-stringify')
     },
     {
       title: t('navigation.jsonFormatter'),
-      href: currentLocale === 'en' ? '/tools/json-formatter' : '/ru/tools/json-formatter'
+      href: getToolHref('/tools/json-formatter')
     },
     {
       title: t('navigation.urlConverter'),
-      href: currentLocale === 'en' ? '/tools/url-converter' : '/ru/tools/url-converter'
+      href: getToolHref('/tools/url-converter')
     },
     {
       title: t('navigation.utf8Converter'),
-      href: currentLocale === 'en' ? '/tools/utf8-converter' : '/ru/tools/utf8-converter'
+      href: getToolHref('/tools/utf8-converter')
     },
     {
       title: t('navigation.slugifyUrl'),
-      href: currentLocale === 'en' ? '/tools/slugify-url' : '/ru/tools/slugify-url'
+      href: getToolHref('/tools/slugify-url')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const imageTools = [
     {
       title: t('navigation.imageCropper'),
-      href: currentLocale === 'en' ? '/tools/image-cropper' : '/ru/tools/image-cropper'
+      href: getToolHref('/tools/image-cropper')
     },
     {
       title: t('navigation.imageResizer'),
-      href: currentLocale === 'en' ? '/tools/image-resizer' : '/ru/tools/image-resizer'
+      href: getToolHref('/tools/image-resizer')
     },
     {
       title: t('navigation.imageToText'),
-      href: currentLocale === 'en' ? '/tools/image-to-text' : '/ru/tools/image-to-text'
+      href: getToolHref('/tools/image-to-text')
     },
     {
       title: t('navigation.jpgToPng'),
-      href: currentLocale === 'en' ? '/tools/jpg-to-png' : '/ru/tools/jpg-to-png'
+      href: getToolHref('/tools/jpg-to-png')
     },
     {
       title: t('navigation.jpgToWebp'),
-      href: currentLocale === 'en' ? '/tools/jpg-to-webp' : '/ru/tools/jpg-to-webp'
+      href: getToolHref('/tools/jpg-to-webp')
     },
     {
       title: t('navigation.pngToJpg'),
-      href: currentLocale === 'en' ? '/tools/png-to-jpg' : '/ru/tools/png-to-jpg'
+      href: getToolHref('/tools/png-to-jpg')
     },
     {
       title: t('navigation.pngToWebp'),
-      href: currentLocale === 'en' ? '/tools/png-to-webp' : '/ru/tools/png-to-webp'
+      href: getToolHref('/tools/png-to-webp')
     },
     {
       title: t('navigation.webpToJpg'),
-      href: currentLocale === 'en' ? '/tools/webp-to-jpg' : '/ru/tools/webp-to-jpg'
+      href: getToolHref('/tools/webp-to-jpg')
     },
     {
       title: t('navigation.webpToPng'),
-      href: currentLocale === 'en' ? '/tools/webp-to-png' : '/ru/tools/webp-to-png'
+      href: getToolHref('/tools/webp-to-png')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const randomGenerators = [
     {
       title: t('navigation.randomNumber'),
-      href: currentLocale === 'en' ? '/tools/random-number' : '/ru/tools/random-number'
+      href: getToolHref('/tools/random-number')
     },
     {
       title: t('navigation.randomLetter'),
-      href: currentLocale === 'en' ? '/tools/random-letter' : '/ru/tools/random-letter'
+      href: getToolHref('/tools/random-letter')
     },
     {
       title: t('navigation.randomDate'),
-      href: currentLocale === 'en' ? '/tools/random-date' : '/ru/tools/random-date'
+      href: getToolHref('/tools/random-date')
     },
     {
       title: t('navigation.randomMonth'),
-      href: currentLocale === 'en' ? '/tools/random-month' : '/ru/tools/random-month'
+      href: getToolHref('/tools/random-month')
     },
     {
       title: t('navigation.randomIP'),
-      href: currentLocale === 'en' ? '/tools/random-ip' : '/ru/tools/random-ip'
+      href: getToolHref('/tools/random-ip')
     },
     {
       title: t('navigation.randomChoice'),
-      href: currentLocale === 'en' ? '/tools/random-choice' : '/ru/tools/random-choice'
+      href: getToolHref('/tools/random-choice')
     },
     {
       title: t('navigation.passwordGenerator'),
-      href: currentLocale === 'en' ? '/tools/password-generator' : '/ru/tools/password-generator'
+      href: getToolHref('/tools/password-generator')
     },
     {
       title: t('navigation.uuidGenerator'),
-      href: currentLocale === 'en' ? '/tools/uuid-generator' : '/ru/tools/uuid-generator'
+      href: getToolHref('/tools/uuid-generator')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const socialMediaTools = [
     {
       title: t('navigation.instagramFonts'),
-      href: currentLocale === 'en' ? '/tools/instagram-fonts' : '/ru/tools/instagram-fonts'
+      href: getToolHref('/tools/instagram-fonts')
     },
     {
       title: t('navigation.facebookFont'),
-      href: currentLocale === 'en' ? '/tools/facebook-font' : '/ru/tools/facebook-font'
+      href: getToolHref('/tools/facebook-font')
     },
     {
       title: t('navigation.discordFont'),
-      href: currentLocale === 'en' ? '/tools/discord-font' : '/ru/tools/discord-font'
+      href: getToolHref('/tools/discord-font')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
   const miscellaneousTools = [
     {
       title: t('navigation.onlineNotepad'),
-      href: currentLocale === 'en' ? '/tools/online-notepad' : '/ru/tools/online-notepad'
+      href: getToolHref('/tools/online-notepad')
     },
     {
       title: t('navigation.numberSorter'),
-      href: currentLocale === 'en' ? '/tools/number-sorter' : '/ru/tools/number-sorter'
+      href: getToolHref('/tools/number-sorter')
     },
     {
       title: t('navigation.asciiArtGenerator'),
-      href: currentLocale === 'en' ? '/tools/ascii-art-generator' : '/ru/tools/ascii-art-generator'
+      href: getToolHref('/tools/ascii-art-generator')
     },
     {
       title: t('navigation.natoPhonetic'),
-      href: currentLocale === 'en' ? '/tools/nato-phonetic' : '/ru/tools/nato-phonetic'
+      href: getToolHref('/tools/nato-phonetic')
     },
     {
       title: t('navigation.md5Hash'),
-      href: currentLocale === 'en' ? '/tools/md5-hash' : '/ru/tools/md5-hash'
+      href: getToolHref('/tools/md5-hash')
     },
     {
       title: t('navigation.sha1HashGenerator'),
-      href: currentLocale === 'en' ? '/tools/sha1-hash-generator' : '/ru/tools/sha1-hash-generator'
+      href: getToolHref('/tools/sha1-hash-generator')
     },
     {
       title: t('navigation.phoneticSpelling'),
-      href: currentLocale === 'en' ? '/tools/phonetic-spelling' : '/ru/tools/phonetic-spelling'
+      href: getToolHref('/tools/phonetic-spelling')
     },
     {
       title: t('navigation.pigLatin'),
-      href: currentLocale === 'en' ? '/tools/pig-latin' : '/ru/tools/pig-latin'
+      href: getToolHref('/tools/pig-latin')
     },
     {
       title: t('navigation.romanNumeralDate'),
-      href: currentLocale === 'en' ? '/tools/roman-numeral-date' : '/ru/tools/roman-numeral-date'
+      href: getToolHref('/tools/roman-numeral-date')
     },
     {
       title: t('navigation.utmBuilder'),
-      href: currentLocale === 'en' ? '/tools/utm-builder' : '/ru/tools/utm-builder'
+      href: getToolHref('/tools/utm-builder')
     },
     {
       title: t('navigation.extractEmailsFromPdf'),
-      href: currentLocale === 'en' ? '/tools/extract-emails-from-pdf' : '/ru/tools/extract-emails-from-pdf'
+      href: getToolHref('/tools/extract-emails-from-pdf')
     }
   ].sort((a, b) => a.title.localeCompare(b.title));
 
@@ -524,7 +530,7 @@ export function Footer() {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        href={currentLocale === 'en' ? '/about-us' : '/ru/about-us'}
+                        href={getToolHref('/about-us')}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {t('footer.links.aboutUs')}
@@ -532,7 +538,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href={currentLocale === 'en' ? '/contact-us' : '/ru/contact-us'}
+                        href={getToolHref('/contact-us')}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {t('footer.links.contactUs')}
@@ -540,7 +546,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href={currentLocale === 'en' ? '/changelog' : '/ru/changelog'}
+                        href={getToolHref('/changelog')}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {t('footer.links.changelog')}
@@ -555,7 +561,7 @@ export function Footer() {
                   <ul className="space-y-2">
                     <li>
                       <Link
-                        href={currentLocale === 'en' ? '/privacy-policy' : '/ru/privacy-policy'}
+                        href={getToolHref('/privacy-policy')}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {t('footer.links.privacyPolicy')}
@@ -563,7 +569,7 @@ export function Footer() {
                     </li>
                     <li>
                       <Link
-                        href={currentLocale === 'en' ? '/terms-of-service' : '/ru/terms-of-service'}
+                        href={getToolHref('/terms-of-service')}
                         className="text-sm text-muted-foreground hover:text-foreground transition-colors"
                       >
                         {t('footer.links.termsOfService')}
@@ -592,6 +598,7 @@ export function Footer() {
               <span className="text-sm text-muted-foreground">{tCommon('footer.availableIn')}</span>
               <span className="text-sm">{tCommon('footer.languages.en')}</span>
               <span className="text-sm">{tCommon('footer.languages.ru')}</span>
+              <span className="text-sm">{tCommon('footer.languages.de')}</span>
             </div>
           </div>
         </div>

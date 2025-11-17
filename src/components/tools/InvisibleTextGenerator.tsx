@@ -193,29 +193,6 @@ export function InvisibleTextGenerator() {
           showTitle={false}
         />
 
-        {/* Copy Invisible Text Button */}
-        {invisibleText && (
-          <div className="flex justify-center">
-            <Button
-              variant="secondary"
-              size="lg"
-              onClick={handleCopyInvisible}
-              className="gap-2"
-            >
-              {copied ? (
-                <>
-                  <Check className="h-4 w-4" />
-                  {tool('invisibleText.copied')}
-                </>
-              ) : (
-                <>
-                  <Copy className="h-4 w-4" />
-                  {tool('invisibleText.copyInvisible')}
-                </>
-              )}
-            </Button>
-          </div>
-        )}
       </div>
     </BaseTextConverter>
   );

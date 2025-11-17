@@ -176,6 +176,182 @@
       }
     }
   },
+  "de": {
+    "title": "URL-Slug-Generator – SEO-freundliche Links erstellen",
+    "metaDescription": "Wandle Überschriften oder Produktnamen in saubere, SEO-optimierte Slugs um. Separatoren wählen, Länge begrenzen, Stopwörter filtern und Slugs wieder humanisieren.",
+    "sections": {
+      "intro": {
+        "title": "URL-Slug-Generator – SEO-freundliche Links erstellen",
+        "content": "Erstellen Sie mit wenigen Klicks saubere, suchmaschinenfreundliche Slugs für Blogs, Produktseiten oder CMS-Inhalte. Wählen Sie Trennzeichen, begrenzen Sie die Länge, entfernen Sie Stopwörter und nutzen Sie den Humanize-Modus, um bestehende Slugs wieder in lesbaren Text zu verwandeln."
+      },
+      "features": {
+        "title": "Funktionen für perfekte Slugs",
+        "items": [
+          {
+            "title": "Bidirektionale Umwandlung",
+            "description": "Text zu Slug und Slug zurück zu Text – wechseln Sie jederzeit zwischen beiden Modi."
+          },
+          {
+            "title": "Flexible Trennzeichen",
+            "description": "Hyphen, Unterstrich oder Punkt – passen Sie das Separator-Schema an Ihr URL-Konzept an."
+          },
+          {
+            "title": "Längen- und Qualitätskontrolle",
+            "description": "Definieren Sie das maximale Limit und nutzen Sie die SEO-Wertung, um perfekte Slug-Längen zu erzielen."
+          },
+          {
+            "title": "Stopwort- und Zeichenfilter",
+            "description": "Entfernen Sie Füllwörter, Sonderzeichen und unerwünschte Symbole automatisch für schlanke URLs."
+          },
+          {
+            "title": "Internationalisierung",
+            "description": "Transliteriert internationale Zeichen und sorgt für sichere ASCII-Slugs – ideal für mehrsprachige Projekte."
+          },
+          {
+            "title": "Analytics in Echtzeit",
+            "description": "Beobachten Sie Eingabe- und Ausgabelänge, Wortanzahl, Kompression und Separator-Häufigkeit live."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Einsatzmöglichkeiten",
+        "description": "Perfekt für jede Situation, in der strukturierte, SEO-optimierte Links benötigt werden.",
+        "items": [
+          {
+            "title": "Blog- und Magazinartikel",
+            "description": "Erzeugen Sie lesbare Permalinks für redaktionelle Inhalte und verbessern Sie Klickrate sowie Ranking."
+          },
+          {
+            "title": "Produkt- und Kategorieseiten",
+            "description": "Versehen Sie Shop-URLs mit relevanten Keywords und schaffen Sie Vertrauen bei Nutzer:innen."
+          },
+          {
+            "title": "CMS-Workflows",
+            "description": "Automatisieren Sie die Slug-Erstellung in Redaktionssystemen und halten Sie die URL-Struktur konsistent."
+          },
+          {
+            "title": "API- und Dokumentationspfade",
+            "description": "Benennen Sie Endpoints, Referenzen oder Dokumente eindeutig und nachvollziehbar."
+          },
+          {
+            "title": "Datei- und Asset-Benennung",
+            "description": "Generieren Sie einheitliche Dateinamen für Downloads, Medien oder technische Assets."
+          },
+          {
+            "title": "Social Media & Kampagnen",
+            "description": "Bereiten Sie kurze, lesbare Links für Postings oder Landingpages vor."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert der Generator",
+        "description": "Vier einfache Schritte zu Ihrem neuen Slug.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text einfügen",
+            "description": "Titel, Produktname oder beliebigen Text eingeben bzw. einfügen."
+          },
+          {
+            "step": 2,
+            "title": "Optionen wählen",
+            "description": "Separator wählen, Längengrenze setzen, Stopwörter entfernen oder Zahlen beibehalten."
+          },
+          {
+            "step": 3,
+            "title": "Slug generieren",
+            "description": "Slug erscheint sofort inklusive SEO-Wertung und Analytics."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder humanisieren",
+            "description": "Slug kopieren, weiterverwenden oder per Humanize-Modus wieder in Text zurückverwandeln."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele",
+        "description": "Typische Eingaben und resultierende Slugs.",
+        "items": [
+          {
+            "title": "Blogpost",
+            "input": "So planst du deine Content-Strategie 2024",
+            "output": "so-planst-du-deine-content-strategie-2024"
+          },
+          {
+            "title": "Produktseite",
+            "input": "AirPods Pro 3 – 128 GB Weiß",
+            "output": "airpods-pro-3-128-gb-weiss"
+          },
+          {
+            "title": "Titel mit Sonderzeichen",
+            "input": "Der ultimative SEO-Guide: Tipps & Tricks!",
+            "output": "der-ultimative-seo-guide-tipps-tricks"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile",
+        "content": "Alles, was Sie für konsistente, professionelle URLs brauchen.",
+        "items": [
+          "Sofortiges Slugging und Humanizing",
+          "Mehrere Separatoren und Längenkontrolle",
+          "Stopwort-Filter und Sonderzeichenbereinigung",
+          "Transliteration internationaler Zeichen",
+          "SEO-Score und Analytics in Echtzeit",
+          "Keine Datenübertragung – alles passiert im Browser",
+          "Kostenlos, ohne Registrierung"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Wie lang sollte ein Slug sein?",
+          "answer": "Ideal sind 30–60 Zeichen mit 3–5 Wörtern. Unser Tool zeigt Ihnen Länge und SEO-Score an."
+        },
+        {
+          "question": "Welches Trennzeichen ist am besten?",
+          "answer": "Hyphen gelten als SEO-Best-Practice. Sie können aber auch Unterstrich oder Punkt wählen, falls Ihr System das erfordert."
+        },
+        {
+          "question": "Unterstützt das Tool Umlaute und andere Zeichen?",
+          "answer": "Ja. Umlaute und internationale Zeichen werden automatisch transliteriert, damit URLs sauber bleiben."
+        },
+        {
+          "question": "Was machen Stopwörter?",
+          "answer": "Allgemeine Füllwörter wie „und“, „der“, „die“ werden entfernt, um Slugs kürzer und fokussierter zu halten."
+        },
+        {
+          "question": "Kann ich bestehende Slugs wieder in Text umwandeln?",
+          "answer": "Ja. Aktivieren Sie den Humanize-Modus und unser Tool rekonstruierte den Text mit korrekter Großschreibung."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          {
+            "name": "URL-Konverter",
+            "description": "URLs sicher kodieren und dekodieren",
+            "href": "/de/tools/url-converter"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zeichen-, Wort- und Absatzstatistiken messen",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Lowercase-Konverter",
+            "description": "Text konsistent in Kleinbuchstaben umwandeln",
+            "href": "/de/tools/lowercase"
+          },
+          {
+            "name": "Formatierung entfernen",
+            "description": "HTML, Sonderzeichen und Formatierungen bereinigen",
+            "href": "/de/tools/remove-text-formatting"
+          }
+        ]
+      }
+    }
+  },
   "ru": {
     "title": "Бесплатный Генератор URL Слагов - Инструмент Создания SEO-Дружественных URL",
     "metaDescription": "Генерируйте SEO-дружественные URL слаги из текста мгновенно. Бесплатный онлайн генератор слагов с настраиваемыми разделителями, ограничениями длины и расширенными опциями для чистых, читаемых URL.",

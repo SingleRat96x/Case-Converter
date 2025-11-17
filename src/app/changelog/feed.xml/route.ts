@@ -17,6 +17,13 @@ export async function GET() {
   // Changelog data - in production, you'd fetch this from your data source
   const changelogEntries = [
     {
+      id: 'nov-2025-german-launch',
+      title: 'Website Now Available in German',
+      description: 'The entire site now supports German with localized tools, navigation, and SEO pages.',
+      date: new Date('2025-11-16').toUTCString(),
+      category: 'New Feature'
+    },
+    {
       id: 'nov-2025-sha1-hash',
       title: 'SHA-1 Hash Generator',
       description: 'Generate SHA-1 hashes online with file verification support and legacy system compatibility. Includes security notices for modern applications',

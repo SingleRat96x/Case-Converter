@@ -148,6 +148,82 @@
         { "question": "Можно ли конвертировать несколько файлов?", "answer": "Да. Добавьте несколько WebP и скачайте все PNG одним ZIP." }
       ]
     }
+  },
+  "de": {
+    "title": "WebP-zu-PNG-Konverter – Transparenz & Qualität bewahren",
+    "metaDescription": "Wandeln Sie WebP-Bilder kostenlos in PNG mit vollständiger Transparenz um. Ideal für Design-Tools, Styleguides und Asset-Pipelines. Läuft zu 100 % im Browser.",
+    "sections": {
+      "intro": {
+        "title": "Lossless WebP-zu-PNG-Konverter",
+        "content": "Konvertieren Sie moderne WebP-Grafiken in verlustfreie PNG-Dateien, ohne Transparenz oder Details einzubüßen. Perfekt für UI-Kits, Logos, Illustrationen und jede Plattform, die explizit PNG benötigt. Die Verarbeitung findet komplett lokal statt – keine Uploads, kein Tracking."
+      },
+      "features": {
+        "title": "Wichtige Funktionen",
+        "items": [
+          { "title": "Alpha-Transparenz erhalten", "description": "PNG übernimmt den kompletten Alpha-Kanal – ideal für Overlays und Mockups." },
+          { "title": "Verlustfreie Ausgabe", "description": "Keine zusätzlichen Artefakte – perfekte Grundlage für weitere Bearbeitung." },
+          { "title": "Qualitäts- & Kompressionsprofile", "description": "Steuern Sie Geschwindigkeit und Dateigröße mit Max/Hoch/Mittel/Niedrig sowie None/Fast/Best." },
+          { "title": "Batch-tauglich", "description": "Mehrere WebP-Dateien in einem Durchlauf verarbeiten und gesammelt herunterladen." },
+          { "title": "Live-Vorschau", "description": "Ergebnis sofort prüfen, bevor Sie speichern oder teilen." },
+          { "title": "Touch-optimiertes UI", "description": "Große Drop-Zonen und Buttons für Mobile- und Tablet-Workflows." }
+        ]
+      },
+      "howToUse": {
+        "title": "So funktioniert die WebP-zu-PNG-Konvertierung",
+        "description": "In wenigen Schritten zum PNG:",
+        "steps": [
+          { "step": 1, "title": "WebP hinzufügen", "description": "Datei per Drag-and-drop ablegen oder über den Dateidialog auswählen (max. 10 MB)." },
+          { "step": 2, "title": "Optionen anpassen", "description": "Qualitäts- und Kompressionsprofil wählen – oder bei den Standardeinstellungen bleiben." },
+          { "step": 3, "title": "Vorschau prüfen", "description": "PNG-Ausgabe direkt im Browser begutachten und Dateigröße vergleichen." },
+          { "step": 4, "title": "PNG herunterladen", "description": "Einzelnes PNG speichern oder alle Ergebnisse als ZIP exportieren." }
+        ]
+      },
+      "examples": {
+        "title": "Typische Konvertierungen",
+        "description": "Beispiele aus realen Workflows:",
+        "items": [
+          { "input": "App-Icon WebP 512×512 (320 KB)", "output": "PNG 512×512 (410 KB)", "description": "Pixelgenaue Assets für iOS/Android-Launcher." },
+          { "input": "Illustration WebP 1600×1200 (900 KB)", "output": "PNG 1600×1200 (1,6 MB)", "description": "Lossless-Datei für Druck oder Vektor-Nachbearbeitung." },
+          { "input": "Logo WebP mit Alpha (180 KB)", "output": "Transparente PNG-Datei (260 KB)", "description": "Sofort einsatzbereit für Präsentationen und Folien." }
+        ]
+      },
+      "useCases": {
+        "title": "Wann PNG die bessere Wahl ist",
+        "description": "Häufige Szenarien aus Design & Development:",
+        "items": [
+          { "title": "Kompatibilität mit Design-Tools", "description": "Figma, Sketch, Photoshop oder Keynote erwarten PNG mit Transparenz." },
+          { "title": "Asset-Pipelines", "description": "Build-Systeme oder Game-Engines benötigen PNG-Quellen unabhängig vom Web-Format." },
+          { "title": "Brand- und Styleguides", "description": "Logos und Icons werden als lossless PNG verteilt, damit Farben unverändert bleiben." }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile",
+        "items": [
+          "100 % privat – Dateien verlassen niemals den Browser",
+          "Schnell & zuverlässig – keine Upload-Wartezeiten",
+          "Lossless-Export mit echter Transparenz",
+          "Single- und Batch-Konvertierung in einem Interface",
+          "Optimiert für Desktop und Mobile",
+          "ZIP-Export für komplette Serien"
+        ]
+      },
+      "relatedTools": {
+        "title": "Weitere Bild-Tools",
+        "description": "Konvertieren Sie auch andere Formate:",
+        "items": [
+          { "name": "JPG-zu-PNG-Konverter", "description": "JPEGs mit Hintergrundfarbe in transparente PNGs verwandeln", "href": "/de/tools/jpg-to-png" },
+          { "name": "PNG-zu-JPG-Konverter", "description": "PNG-Dateien komprimieren und als JPG exportieren", "href": "/de/tools/png-to-jpg" },
+          { "name": "Bildgrößen-Änderer", "description": "Pixel-genau skalieren und optimieren", "href": "/de/tools/image-resizer" },
+          { "name": "Bild-Zuschneider", "description": "Ausschnitte und Seitenverhältnisse festlegen", "href": "/de/tools/image-cropper" }
+        ]
+      },
+      "faqs": [
+        { "question": "Bleibt die Transparenz erhalten?", "answer": "Ja, PNG unterstützt volle Alpha-Transparenz. Transparente Pixel aus der WebP-Datei werden unverändert übernommen." },
+        { "question": "Ist die Konvertierung wirklich verlustfrei?", "answer": "PNG speichert die Pixel exakt so, wie sie aus dem WebP-Dekoder kommen. Zusätzliche Artefakte entstehen nicht." },
+        { "question": "Muss ich Dateien hochladen?", "answer": "Nein, alles passiert lokal im Browser. Ihre Bilder werden weder gespeichert noch übertragen." },
+        { "question": "Kann ich mehrere Dateien gleichzeitig umwandeln?", "answer": "Ja, fügen Sie mehrere WebP-Bilder hinzu und laden Sie alle PNGs gesammelt als ZIP herunter." }
+      ]
+    }
   }
 }
 

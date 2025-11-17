@@ -272,5 +272,142 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Präfix und Suffix zu Zeilen Hinzufügen Online – Kostenloser Text-Formatierer",
+    "metaDescription": "Fügen Sie sofort benutzerdefinierte Präfixe und Suffixe zu jeder Zeile hinzu. Perfekt für Formatierung von Code-Kommentaren, Aufzählungslisten und Markdown. Kostenloses browserbasiertes Tool.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Online Präfix und Suffix Zeilen-Formatierer",
+        "content": "Möchten Sie schnell ein Präfix und Suffix zu jeder Zeile Ihres Textes hinzufügen? Fügen Sie Ihren Inhalt ein, geben Sie ein beliebiges Präfix und Suffix ein, und dieses Tool aktualisiert sofort jede Zeile für Sie. Es ist perfekt für Code-Kommentare, Aufzählungslisten, Markdown-Zitate und Tagging von Log-Zeilen. Verarbeiten Sie Text lokal in Ihrem Browser mit vollständiger Privatsphäre—keine Daten werden jemals an einen Server gesendet."
+      },
+      "features": {
+        "title": "Leistungsstarke Präfix & Suffix Funktionen",
+        "items": [
+          { "title": "Benutzerdefinierte Präfix-Eingabe", "description": "Fügen Sie beliebigen Text vor jeder Zeile hinzu: Code-Kommentarsymbole, Aufzählungszeichen, Klammern oder benutzerdefinierte Tags" },
+          { "title": "Benutzerdefinierte Suffix-Eingabe", "description": "Fügen Sie beliebigen Text nach jeder Zeile hinzu: schließende Klammern, Interpunktion oder Zeilenabschlüsse" },
+          { "title": "Leere Zeilen Ignorieren", "description": "Option zum Überspringen von Leerzeilen und Beibehaltung der vertikalen Abstände Ihres Dokuments" },
+          { "title": "Echtzeit-Vorschau", "description": "Sehen Sie Ergebnisse sofort aktualisiert, während Sie Ihr Präfix und Suffix eingeben" },
+          { "title": "Kopieren & Herunterladen", "description": "Kopieren Sie formatierten Text einfach in die Zwischenablage oder laden Sie als .txt-Datei herunter" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Laden Sie Textdateien hoch und formatieren Sie ganze Dokumente mit Präfix und Suffix" },
+          { "title": "Universelle Kompatibilität", "description": "Funktioniert mit Code, Markdown, CSV, Logs und jedem Klartextformat" },
+          { "title": "Datenschutz-First", "description": "Alle Verarbeitung erfolgt lokal in Ihrem Browser—Ihr Text verlässt niemals Ihr Gerät" }
+        ]
+      },
+      "useCases": {
+        "title": "Wann Präfix und Suffix Formatierung Verwenden",
+        "description": "Fügen Sie Struktur und Formatierung zu Text für verschiedene professionelle und kreative Anwendungen hinzu.",
+        "items": [
+          { "title": "Code-Kommentare", "description": "Fügen Sie // oder # vor Zeilen hinzu, um Code-Blöcke schnell auszukommentieren" },
+          { "title": "Markdown-Listen", "description": "Formatieren Sie Zeilen mit > für Blockzitate, - oder * für Aufzählungslisten, oder 1. für nummerierte Listen" },
+          { "title": "CSV-Umschließung", "description": "Umschließen Sie Datenfelder mit Anführungszeichen oder Klammern für CSV/TSV-Datei-Formatierung" },
+          { "title": "XML/HTML-Tags", "description": "Umschließen Sie jede Zeile mit öffnenden und schließenden HTML- oder XML-Tags" },
+          { "title": "Log-Datei-Tagging", "description": "Fügen Sie Zeitstempel, Labels oder Schweregrade zu Log-Einträgen hinzu" },
+          { "title": "Array-Formatierung", "description": "Konvertieren Sie einfache Zeilen in Array-Syntax mit Klammern und Kommas" },
+          { "title": "Gedicht-Formatierung", "description": "Fügen Sie Einrückungen oder Anführungszeichen zu Gedichtzeilen hinzu" },
+          { "title": "Konfigurationsdateien", "description": "Fügen Sie Kommentarsyntax oder Formatierung zu Konfigurationsdateizeilen hinzu" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Fügen Sie Präfix und Suffix zu Zeilen Hinzu",
+        "description": "Befolgen Sie diese einfachen Schritte, um Ihre Textzeilen mit benutzerdefiniertem Präfix und Suffix zu formatieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text Einfügen oder Hochladen",
+            "description": "Geben Sie Ihren Text in den Eingabebereich ein, oder laden Sie eine Textdatei hoch, um ein ganzes Dokument zu formatieren."
+          },
+          {
+            "step": 2,
+            "title": "Präfix Eingeben",
+            "description": "Geben Sie den Text ein, den Sie vor jeder Zeile im Präfix-Feld hinzufügen möchten. Häufige Beispiele: //, #, >, -, *, [, oder benutzerdefinierte Tags."
+          },
+          {
+            "step": 3,
+            "title": "Suffix Eingeben",
+            "description": "Geben Sie den Text ein, den Sie nach jeder Zeile im Suffix-Feld hinzufügen möchten. Häufige Beispiele: ;, ], ,, oder schließende Tags."
+          },
+          {
+            "step": 4,
+            "title": "Anwenden und Herunterladen",
+            "description": "Klicken Sie auf 'Präfix/Suffix Anwenden', um Ihren Text zu formatieren, dann in die Zwischenablage kopieren oder als Datei herunterladen."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Präfix und Suffix Beispiele",
+        "description": "Sehen Sie, wie verschiedene Präfix- und Suffix-Kombinationen Ihren Text transformieren.",
+        "items": [
+          { "title": "Code-Kommentare (JavaScript)", "input": "console.log('test');\nalert('hello');", "output": "// console.log('test');\n// alert('hello');" },
+          { "title": "Markdown-Zitat", "input": "Dies ist ein Zitat\nVon einem berühmten Autor", "output": "> Dies ist ein Zitat\n> Von einem berühmten Autor" },
+          { "title": "Array-Elemente", "input": "apfel\nbanane\nkirsche", "output": "['apfel'],\n['banane'],\n['kirsche']," },
+          { "title": "HTML-Listenelemente", "input": "Erstes Element\nZweites Element\nDrittes Element", "output": "<li>Erstes Element</li>\n<li>Zweites Element</li>\n<li>Drittes Element</li>" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unser Präfix und Suffix Tool Verwenden",
+        "content": "Professionelle Textformatierung mit sofortigen Ergebnissen und vollständigem Datenschutz.",
+        "items": [
+          "Komplett kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz-First - alle Verarbeitung lokal",
+          "Funktioniert offline nach initialem Seitenladen",
+          "Unterstützt beliebigen Präfix- und Suffix-Text",
+          "Option zum Ignorieren leerer Zeilen für saubere Formatierung",
+          "Schnelle Verarbeitung großer Dokumente",
+          "Ein-Klick Kopieren in Zwischenablage",
+          "Download von formatiertem Text als .txt-Datei",
+          "Kompatibel mit allen Textformaten",
+          "Perfekt für Entwickler und Schreiber",
+          "Responsives Design für mobile Geräte",
+          "Funktioniert in allen modernen Browsern",
+          "Keine Dateigrößenbeschränkungen",
+          "Echtzeit-Vorschau während der Eingabe"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was kann ich als Präfix oder Suffix verwenden?",
+          "answer": "Sie können beliebigen Text als Präfix oder Suffix verwenden, einschließlich Leerzeichen, Sonderzeichen, Code-Kommentarsymbole (//, #, /*), Markdown-Syntax (>, -, *), Klammern ([, ], {, }), Anführungszeichen, HTML-Tags oder benutzerdefinierten Text. Das Tool akzeptiert alle Zeichen, die Sie eingeben."
+        },
+        {
+          "question": "Wie füge ich Code-Kommentarsyntax zu mehreren Zeilen hinzu?",
+          "answer": "Geben Sie einfach die Kommentarsyntax Ihrer Programmiersprache in das Präfix-Feld ein. Zum Beispiel verwenden Sie // für JavaScript/C++, # für Python/Ruby, oder <!-- für HTML. Lassen Sie das Suffix leer, wenn Sie keine schließende Syntax wie */ benötigen."
+        },
+        {
+          "question": "Kann ich Zeilen mit HTML- oder XML-Tags umschließen?",
+          "answer": "Ja! Geben Sie das öffnende Tag in das Präfix-Feld ein (z.B., <li>) und das schließende Tag in das Suffix-Feld (z.B., </li>). Jede Zeile wird mit Ihren benutzerdefinierten Tags umschlossen."
+        },
+        {
+          "question": "Was macht die Option 'Leere Zeilen ignorieren'?",
+          "answer": "Wenn aktiviert (Standard), erhalten leere oder Leerzeichen-Zeilen kein Präfix oder Suffix. Dies bewahrt vertikale Abstände in Ihrem Dokument. Deaktivieren Sie diese Option, wenn Sie jede Zeile formatieren möchten, einschließlich leerer."
+        },
+        {
+          "question": "Kann ich Dateien zum Formatieren hochladen?",
+          "answer": "Ja, Sie können .txt-Dateien beliebiger Größe hochladen. Das Tool lädt den gesamten Dateiinhalt, wendet Ihr Präfix und Suffix auf jede Zeile an und ermöglicht das Herunterladen des formatierten Ergebnisses."
+        },
+        {
+          "question": "Sind meine Textdaten vertraulich und sicher?",
+          "answer": "Absolut. Alle Textverarbeitung erfolgt vollständig in Ihrem Browser mit JavaScript. Ihr Text verlässt niemals Ihr Gerät und wird niemals an einen Server gesendet. Das Tool funktioniert offline nach dem initialen Seitenladen."
+        },
+        {
+          "question": "Wie formatiere ich Markdown-Listen?",
+          "answer": "Für Aufzählungslisten verwenden Sie - oder * als Präfix. Für Zitate verwenden Sie > als Präfix. Für nummerierte Listen verwenden Sie zuerst unser 'Zeilennummern Hinzufügen' Tool, dann fügen Sie die entsprechende Markdown-Syntax hinzu."
+        },
+        {
+          "question": "Kann ich mehrere Zeichen als Präfix oder Suffix hinzufügen?",
+          "answer": "Ja! Sie können Text beliebiger Länge in beide Präfix- und Suffix-Felder eingeben. Zum Beispiel können Sie [Element: als Präfix und ] ENDE als Suffix für komplexe Formatierung verwenden."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textformatierungs-Tools",
+        "items": [
+          { "name": "Zeilennummern zu Text Hinzufügen", "description": "Fügen Sie anpassbare Zeilennummern mit mehreren Formaten und Trennzeichen hinzu", "href": "/de/tools/add-line-numbers-to-text" },
+          { "name": "Text Suchen und Ersetzen", "description": "Suchen und ersetzen Sie Text mit Regex-Muster-Unterstützung und mehrfachen Ersetzungen", "href": "/de/tools/text-replace" },
+          { "name": "Zeilenumbrüche Entfernen", "description": "Entfernen Sie unerwünschte Zeilenumbrüche und kombinieren Sie Zeilen zu einem einzelnen Absatz", "href": "/de/tools/remove-line-breaks" },
+          { "name": "Doppelte Zeilen Entfernen", "description": "Automatisch doppelte Zeilen aus Text erkennen und entfernen", "href": "/de/tools/duplicate-line-remover" }
+        ]
+      }
+    }
   }
 }

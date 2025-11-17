@@ -17,6 +17,13 @@ export async function GET() {
   // Changelog data in Russian
   const changelogEntries = [
     {
+      id: 'nov-2025-german-launch',
+      title: 'Сайт Теперь Доступен на Немецком',
+      description: 'Весь сайт теперь поддерживает немецкий язык: инструменты, навигация и SEO-страницы.',
+      date: new Date('2025-11-16').toUTCString(),
+      category: 'Новая Функция'
+    },
+    {
       id: 'nov-2025-sha1-hash',
       title: 'Генератор SHA-1 Хеша',
       description: 'Генерируйте SHA-1 хэши онлайн с поддержкой проверки файлов и совместимостью с устаревшими системами. Включает уведомления о безопасности',

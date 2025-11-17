@@ -160,6 +160,87 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Spiegeltext-Generator – Text rückwärts schreiben",
+    "metaDescription": "Spiegeln Sie Text rückwärts für kreative Designs, Rätsel oder Spiegel-Effekte. Komplett kostenlos, online und lokal im Browser.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Spiegeltext-Generator – Text rückwärts schreiben",
+        "content": "Spiegeln Sie Ihren Text in Sekunden und erstellen Sie rückwärts geschriebene Nachrichten. Ideal für kreative Designs, Rätsel, visuelle Effekte und verspielte Botschaften – funktioniert als normaler Unicode-Text."
+      },
+      "features": {
+        "title": "Spiegeltext Funktionen",
+        "items": [
+          { "title": "Sofortige Umkehrung", "description": "Text wird während der Eingabe automatisch gespiegelt" },
+          { "title": "Datei-Upload", "description": "Komplette Textdateien spiegeln und verarbeiten" },
+          { "title": "Kopieren & Herunterladen", "description": "Spiegeltext direkt kopieren oder als Datei speichern" },
+          { "title": "Textanalyse", "description": "Zeichen- und Wortzählung im Blick behalten" },
+          { "title": "Unicode-Unterstützung", "description": "Funktioniert in allen Apps, Chats und Plattformen" },
+          { "title": "Datenschutz", "description": "Verarbeitung findet ausschließlich lokal im Browser statt" }
+        ]
+      },
+      "useCases": {
+        "title": "Beliebte Einsätze für Spiegeltext",
+        "description": "Nutzen Sie Spiegeltext für kreative, spielerische oder lehrreiche Zwecke.",
+        "items": [
+          { "title": "Grafikdesign", "description": "Gestalten Sie gespiegelt wirkende Überschriften und Elemente." },
+          { "title": "Rätsel & Escape Rooms", "description": "Erstellen Sie Geheimnachrichten und Spiegelaufgaben." },
+          { "title": "Social Media", "description": "Teilen Sie verspielte, rückwärts geschriebene Bildunterschriften." },
+          { "title": "Print & Merch", "description": "Bereiten Sie spiegelverkehrte Motive für Druckprodukte vor." },
+          { "title": "UI-Experimente", "description": "Prototypen für gespiegelte Interfaces und Animationen erstellen." },
+          { "title": "Bildung & Unterricht", "description": "Symmetrie und Spiegelungen anschaulich vermitteln." }
+        ]
+      },
+      "howToUse": {
+        "title": "So erzeugen Sie Spiegeltext",
+        "description": "In wenigen Schritten zu rückwärts geschriebenem Text.",
+        "steps": [
+          { "step": 1, "title": "Text eingeben", "description": "Text tippen, einfügen oder Datei hochladen." },
+          { "step": 2, "title": "Automatisch spiegeln", "description": "Der Inhalt wird sofort rückwärts dargestellt." },
+          { "step": 3, "title": "Analysen prüfen", "description": "Zeichen- und Wortstatistiken kontrollieren." },
+          { "step": 4, "title": "Kopieren oder speichern", "description": "In Zwischenablage kopieren oder als Textdatei speichern." }
+        ]
+      },
+      "examples": {
+        "title": "Spiegeltext-Beispiele",
+        "description": "Typische Phrasen, gespiegelt für kreative Effekte.",
+        "items": [
+          { "title": "Begrüßung", "input": "Hallo Welt", "output": "tleW ollaH" },
+          { "title": "Aufforderung", "input": "Lies das", "output": "sad seiL" },
+          { "title": "Satz mit Abstand", "input": "Nie war es so weit", "output": "tiaw os se raw eiN" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum unseren Spiegeltext-Generator nutzen?",
+        "content": "Schnelle Ergebnisse mit höchster Sicherheit und flexiblen Exportoptionen.",
+        "items": [
+          "Kostenlose Nutzung ohne Limits",
+          "Keine Registrierung notwendig",
+          "100 % lokale Verarbeitung",
+          "Datei-Upload und -Download",
+          "Umkehrung in Echtzeit",
+          "Integrierte Textstatistiken",
+          "Optimiert für Desktop & Mobil",
+          "Kompatibel mit allen Sprachen"
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist Spiegeltext?", "answer": "Spiegeltext ist normaler Text, dessen Zeichenreihenfolge umgedreht wird, sodass er rückwärts erscheint." },
+        { "question": "Funktioniert der Text überall?", "answer": "Ja, das Ergebnis ist regulärer Unicode-Text und kann in allen Programmen verwendet werden." },
+        { "question": "Kann ich komplette Dateien spiegeln?", "answer": "Ja, laden Sie einfach eine Textdatei hoch und spiegeln Sie den gesamten Inhalt." },
+        { "question": "Bleiben meine Daten privat?", "answer": "Alle Berechnungen laufen lokal im Browser. Es werden keine Daten hochgeladen." }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Text-Tools",
+        "items": [
+          { "name": "Fetter Text Generator", "description": "Unicode-Text in fetter Schrift erzeugen", "href": "/de/tools/bold-text" },
+          { "name": "Kursivtext Generator", "description": "Kursiven Unicode-Text erstellen", "href": "/de/tools/italic-text" },
+          { "name": "Formatierung entfernen", "description": "Formatierungen aus Text entfernen", "href": "/de/tools/remove-text-formatting" },
+          { "name": "Doppelte Zeilen entfernen", "description": "Doppelte Zeilen aus Textblöcken entfernen", "href": "/de/tools/duplicate-line-remover" }
+        ]
+      }
+    }
   }
 }
 

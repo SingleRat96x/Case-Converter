@@ -46,7 +46,7 @@ export function ContactUsContent() {
           title={t('contact.title')}
           subtitle={t('contact.subtitle')}
           breadcrumbs={[
-            { label: 'Home', href: currentLocale === 'en' ? '/' : '/ru' },
+            { label: 'Home', href: currentLocale === 'en' ? '/' : `/${currentLocale}` },
             { label: t('contact.title') }
           ]}
         />

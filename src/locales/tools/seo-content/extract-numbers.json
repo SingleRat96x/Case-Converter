@@ -370,5 +370,191 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Zahlen aus Text Extrahieren – Kostenloser Online-Zahlenextraktor",
+    "metaDescription": "Fügen Sie Text ein und extrahieren Sie sofort Zahlen (Ganzzahlen, Dezimalzahlen, negative Zahlen, Währungen, Prozentsätze). Optionen für eindeutige Werte, CSV-Export, Summe/Durchschnitt und Telefonnummer-Extraktion.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloses Online-Zahlenextraktions-Tool",
+        "content": "Extrahieren Sie Zahlen aus jedem Text sofort mit unserem leistungsstarken Zahlenextraktions-Tool. Ob Sie Daten aus Dokumenten extrahieren, numerische Inhalte analysieren, Telefonnummern extrahieren, Währungswerte verarbeiten oder Statistiken berechnen müssen – unser Tool bietet flexible Optionen, um Zahlen genau so zu extrahieren und zu formatieren, wie Sie sie benötigen."
+      },
+      "features": {
+        "title": "Erweiterte Zahlenextraktions-Funktionen",
+        "items": [
+          {
+            "title": "Intelligente Zahlenerkennung",
+            "description": "Erkennen und extrahieren Sie automatisch Ganzzahlen, Dezimalzahlen, negative Zahlen, Prozentsätze, Währungswerte und wissenschaftliche Notation."
+          },
+          {
+            "title": "Telefonnummer-Extraktion",
+            "description": "Spezialisierter Telefonnummern-Modus zur Erkennung von E.164-, US-, UK-, EU- und internationalen Telefonnummernformaten mit Normalisierung."
+          },
+          {
+            "title": "Währungssymbol-Unterstützung",
+            "description": "Extrahieren Sie Zahlen mit Währungssymbolen einschließlich $, €, £, ¥, ₹, ₽, TND und mehr mit optionaler Symbolbeibehaltung."
+          },
+          {
+            "title": "Prozentsatz-Handhabung",
+            "description": "Wählen Sie, ob Prozentsymbole beibehalten, entfernt oder Prozentsätze in Dezimalformat konvertiert werden sollen (z.B. 25% zu 0,25)."
+          },
+          {
+            "title": "Statistische Analyse",
+            "description": "Erhalten Sie sofortige Statistiken einschließlich Summe, Durchschnitt, Minimum, Maximum, Anzahl und Bereich der extrahierten Zahlen."
+          },
+          {
+            "title": "Mehrere Exportformate",
+            "description": "Exportieren Sie extrahierte Zahlen als einfache Listen (eine pro Zeile) oder im CSV-Format für Tabellenimporte."
+          },
+          {
+            "title": "Eindeutige Werte Option",
+            "description": "Optional doppelte Zahlen entfernen, um nur eindeutige Werte aus Ihrem Text zu erhalten."
+          },
+          {
+            "title": "Tausendertrennzeichen-Unterstützung",
+            "description": "Berücksichtigen Sie Tausendertrennzeichen in US- (1.234,56) und EU- (1,234.56) Formaten für genaue Extraktion."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Häufige Anwendungsfälle für Zahlenextraktion",
+        "description": "Zahlenextraktion hat praktische Anwendungen in Datenanalyse, Finanzen, Forschung und Content-Verarbeitung.",
+        "items": [
+          { "title": "Daten-Mining und Analyse", "description": "Extrahieren Sie numerische Daten aus Berichten, Artikeln und Dokumenten zur Analyse und Visualisierung" },
+          { "title": "Finanz dokumenten-Verarbeitung", "description": "Extrahieren Sie Preise, Beträge und Währungswerte aus Rechnungen, Quittungen und Finanzberichten" },
+          { "title": "Telefonnummer-Extraktion", "description": "Extrahieren und normalisieren Sie Telefonnummern aus Kontaktlisten, Verzeichnissen und Geschäftsdokumenten" },
+          { "title": "Statistische Forschung", "description": "Sammeln Sie numerische Daten aus wissenschaftlichen Arbeiten, Umfragen und Forschungsergebnissen für Berechnungen" },
+          { "title": "Preisvergleich", "description": "Extrahieren Sie Preise aus Produktlisten, Katalogen und Vergleichsdokumenten" },
+          { "title": "Datenvorbereitung für Tabellen", "description": "Extrahieren Sie Zahlen aus Text für Import in Excel, Google Sheets oder andere Tabellentools" },
+          { "title": "Wissenschaftliche Datenextraktion", "description": "Extrahieren Sie numerische Werte und Messungen aus wissenschaftlichen Artikeln und technischen Dokumenten" },
+          { "title": "Web-Scraping-Daten", "description": "Extrahieren Sie Zahlen aus Web-Inhalten für Datenbankimport und Analyse" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Extrahieren Sie Zahlen aus Text",
+        "description": "Befolgen Sie diese einfachen Schritte, um Zahlen aus Text zu extrahieren und sofortige Statistiken zu erhalten.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text Eingeben",
+            "description": "Fügen Sie Text in den Eingabebereich ein oder geben Sie ihn ein, oder laden Sie eine Textdatei mit zu extrahierenden Zahlen hoch."
+          },
+          {
+            "step": 2,
+            "title": "Extraktionsoptionen Anpassen",
+            "description": "Wählen Sie, welche Zahlentypen beibehalten werden sollen: Dezimalzahlen, negative Zahlen, Prozentsätze, Währungswerte und wissenschaftliche Notation. Legen Sie Präferenzen für Prozentsätze und Ausgabeformat fest."
+          },
+          {
+            "step": 3,
+            "title": "Zahlen Extrahieren Klicken",
+            "description": "Klicken Sie auf die Schaltfläche 'Zahlen extrahieren', um den Text zu verarbeiten und alle übereinstimmenden Zahlen basierend auf den gewählten Optionen zu extrahieren."
+          },
+          {
+            "step": 4,
+            "title": "Statistiken Anzeigen und Exportieren",
+            "description": "Sehen Sie sich die extrahierten Zahlen an, überprüfen Sie automatische Statistiken (Summe, Durchschnitt, Min, Max) und kopieren Sie dann die Liste oder laden Sie sie als CSV herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Zahlenextraktions-Beispiele",
+        "description": "Sehen Sie, wie verschiedene Zahlentypen aus unterschiedlichen Textformaten extrahiert werden.",
+        "items": [
+          { 
+            "title": "Grundzahlen",
+            "input": "Bericht zeigt 42 Benutzer, 123 Sitzungen und 7 Konversionen.",
+            "output": "42\n123\n7"
+          },
+          { 
+            "title": "Mit Dezimalzahlen und Negativen",
+            "input": "Temperatur: -5,5°C, Wachstum: 12,8%, Rückgang: -3,2%",
+            "output": "-5,5\n12,8\n-3,2"
+          },
+          { 
+            "title": "Währungswerte",
+            "input": "Preis: 49,99€, Steuer: 4,50€, Gesamt: 54,49€",
+            "output": "49,99\n4,50\n54,49"
+          },
+          { 
+            "title": "Telefonnummern",
+            "input": "Rufen Sie (555) 123-4567 oder +1-800-555-0199 für Support an.",
+            "output": "+15551234567\n+18005550199"
+          },
+          { 
+            "title": "Wissenschaftliche Notation",
+            "input": "Entfernung: 1,496e8 km, Masse: 5,972e24 kg",
+            "output": "1,496e8\n5,972e24"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Zahlenextraktor Verwenden",
+        "content": "Professionelle Zahlenextraktion mit umfassenden Optionen, sofortigen Statistiken und mehreren Exportformaten für alle Datenverarbeitungsaufgaben.",
+        "items": [
+          "Vollständig kostenlos mit unbegrenzter Nutzung",
+          "Keine Registrierung oder Konto erforderlich",
+          "Datenschutz zuerst - alle Verarbeitung lokal im Browser",
+          "Unterstützung mehrerer Zahlenformate und -notationen",
+          "Sofortige statistische Berechnungen (Summe, Durchschnitt, Min, Max)",
+          "Telefonnummer-Erkennung und -Normalisierung",
+          "Währungs- und Prozentsatz-Handhabungsoptionen",
+          "CSV-Export für Tabellenkalkulations-Kompatibilität",
+          "Eindeutige Werte-Filterung",
+          "Mobil-optimiertes responsives Design"
+        ]
+      },
+      "faqs": [
+        { 
+          "question": "Welche Zahlentypen können extrahiert werden?", 
+          "answer": "Das Tool kann Ganzzahlen (42), Dezimalzahlen (123,45), negative Zahlen (-17), Prozentsätze (25%), Währungswerte (49,99€), wissenschaftliche Notation (1,2e6), Zahlen mit Tausendertrennzeichen (1.234) und Telefonnummern in verschiedenen Formaten extrahieren."
+        },
+        { 
+          "question": "Wie funktioniert der Telefonnummern-Modus?", 
+          "answer": "Wenn der Telefonnummern-Modus aktiviert ist, sucht das Tool speziell nach Telefonnummernmustern einschließlich E.164-Format (+15551234567), US-Formate wie (555) 123-4567 und internationale Formate. Nummern werden im E.164-Format in der Ausgabe normalisiert."
+        },
+        { 
+          "question": "Kann ich nur eindeutige Zahlen extrahieren?", 
+          "answer": "Ja! Aktivieren Sie die Option 'Nur eindeutige', um doppelte Zahlen automatisch aus den Ergebnissen zu entfernen und nur das erste Vorkommen jedes eindeutigen Werts beizubehalten."
+        },
+        { 
+          "question": "Wie werden Prozentsätze behandelt?", 
+          "answer": "Sie haben drei Optionen: (1) % Symbol behalten - Ausgabe als 25%, (2) % Symbol entfernen - Ausgabe als 25, (3) In Dezimal konvertieren - Ausgabe als 0,25. Wählen Sie je nachdem, wie Sie die Daten verwenden müssen."
+        },
+        { 
+          "question": "Welche Währungssymbole werden unterstützt?", 
+          "answer": "Das Tool unterstützt wichtige Währungssymbole einschließlich $ (Dollar), € (Euro), £ (Pfund), ¥ (Yen), ₹ (Rupie), ₽ (Rubel), TND (Tunesischer Dinar) und د.ت (Arabischer Dinar). Wählen Sie aus, welche bei der Extraktion erkannt werden sollen."
+        },
+        { 
+          "question": "Welche Statistiken werden berechnet?", 
+          "answer": "Nach der Extraktion erhalten Sie automatische Statistiken: Summe (Gesamtsumme aller Zahlen), Durchschnitt (Mittelwert), Minimum (kleinste Zahl), Maximum (größte Zahl), Anzahl (wie viele Zahlen) und Bereich (Differenz zwischen Min und Max)."
+        },
+        { 
+          "question": "Wie exportiere ich nach CSV?", 
+          "answer": "Klicken Sie nach der Extraktion auf die Schaltfläche 'CSV Herunterladen'. Die CSV-Datei enthält eine Zahl pro Zeile mit Kopfzeile, was den Import in Excel, Google Sheets oder andere Tabellenanwendungen erleichtert."
+        },
+        { 
+          "question": "Was sind Tausendertrennzeichen?", 
+          "answer": "Tausendertrennzeichen sind Kommas oder Punkte, die zur Gruppierung von Ziffern verwendet werden (z.B. 1.234,56 oder 1,234.56). Wenn diese Option aktiviert ist, interpretiert das Tool sie korrekt als eine Zahl und nicht als mehrere separate Zahlen."
+        },
+        { 
+          "question": "Funktioniert dies mit wissenschaftlicher Notation?", 
+          "answer": "Ja! Aktivieren Sie 'Wissenschaftliche Notation akzeptieren', um Zahlen im Exponentialformat wie 1,2e6 (1.200.000) oder 3,5E-4 (0,00035) zu extrahieren. Dies ist nützlich für wissenschaftliche und technische Dokumente."
+        },
+        { 
+          "question": "Werden meine Daten irgendwo gespeichert?", 
+          "answer": "Nein. Alle Textverarbeitung und Zahlenextraktion erfolgt lokal in Ihrem Browser mit JavaScript. Ihr Text wird niemals auf unsere Server hochgeladen und nirgendwo gespeichert."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Analyse- & Daten-Tools",
+        "description": "Erkunden Sie weitere Tools für Textanalyse, Datenextraktion und Content-Verarbeitung.",
+        "items": [
+          { "name": "Textzähler", "description": "Zählen Sie Zeichen, Wörter, Zeilen, Sätze mit detaillierten Statistiken", "href": "/de/tools/text-counter" },
+          { "name": "Worthäufigkeits-Analysator", "description": "Analysieren Sie Worthäufigkeit und identifizieren Sie Muster im Text", "href": "/de/tools/word-frequency" },
+          { "name": "Satzzähler", "description": "Zählen Sie Sätze mit Strukturanalyse und Metriken", "href": "/de/tools/sentence-counter" },
+          { "name": "E-Mails aus Text Extrahieren", "description": "Extrahieren und validieren Sie E-Mail-Adressen aus jedem Text", "href": "/de/tools/extract-emails-from-text" }
+        ]
+      }
+    }
   }
 }

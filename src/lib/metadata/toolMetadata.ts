@@ -101,6 +101,11 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Генерируйте безопасные случайные числа в заданном диапазоне. Подходит для игр, тестирования, анализа и выборок. Массовая генерация без ограничений.',
         shortDescription: 'Безопасные случайные числа в любом диапазоне. Массово, без лимитов.',
       },
+      de: {
+        title: 'Zufallszahl-Generator — Sicherer RNG für Tests & Spiele',
+        description: 'Generieren Sie kryptografisch sichere Zufallszahlen in jedem Bereich. Ideal für Spiele, Tests, Analysen und Stichproben mit Massen-Output ohne Limits.',
+        shortDescription: 'Sichere Zufallszahlen in frei wählbaren Bereichen ohne Begrenzung.',
+      },
     },
     schema: createAdvancedSchema('random-number', ['Custom ranges', 'Bulk generation', 'No limits'], 'Number Input', 'Random Numbers', 4.8, 1250),
     relatedTools: ['random-letter', 'random-date', 'random-choice'],
@@ -120,6 +125,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Калькулятор Времени Чтения — Бесплатный Оценщик для Текста и JSON',
         description: 'Вставьте текст, введите количество слов или предоставьте JSON и мгновенно получите оценку времени чтения. Выберите слов-в-минуту для обычного, быстрого или чтения вслух и посмотрите минуты, секунды и время чтения для статей, писем и книг.',
         shortDescription: 'Рассчитайте время чтения для текста, количества слов или JSON.',
+      },
+      de: {
+        title: 'Lesezeit-Rechner – Kostenloser Lesedauer-Kalkulator für Text & JSON',
+        description: 'Fügen Sie Text ein, geben Sie eine Wortzahl ein oder stellen Sie JSON bereit und erhalten Sie sofort eine geschätzte Lesezeit. Wählen Sie Wörter pro Minute für normales, schnelles oder lautes Lesen und sehen Sie Minuten, Sekunden und Lesezeit für Artikel, E-Mails und Bücher.',
+        shortDescription: 'Berechnen Sie die Lesezeit für Text, Wortanzahl oder JSON-Daten.',
       },
     },
     schema: createAdvancedSchema(
@@ -148,6 +158,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Обрезка Изображений — Точный Размер и Пропорции',
         description: 'Обрезайте изображения до точных размеров или пропорций. Перетаскивание, предпросмотр и скачивание. В браузере, без хранения.',
         shortDescription: 'Обрезка по размеру/пропорциям.',
+      },
+      de: {
+        title: 'Bild-Zuschneider – Bilder präzise zuschneiden & exportieren',
+        description: 'Ziehen, zuschneiden, drehen und exportieren Sie Bilder exakt im gewünschten Seitenverhältnis. Live-Vorschau, Qualitätskontrolle und Formatwahl – alles lokal im Browser ohne Upload auf Server.',
+        shortDescription: 'Bilder pixelgenau zuschneiden und optimieren.',
       }
     },
     schema: createAdvancedSchema('image-cropper', ['Fixed size', 'Aspect ratios'], 'Image Input', 'Cropped Image', 4.7, 892),
@@ -168,6 +183,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Изменение Размеров Изображений — По Ширине/Высоте',
         description: 'Меняйте размер изображений по ширине/высоте или процентам. Сохранение пропорций и качества. Быстро и приватно.',
         shortDescription: 'Изменение размеров по размеру/процентам.',
+      },
+      de: {
+        title: 'Bildgrößenänderer – Fotos per Breite/Höhe oder Prozent skalieren',
+        description: 'Skalieren Sie Bilder nach Pixelmaßen oder Prozentsatz, halten Sie das Seitenverhältnis automatisch ein und wählen Sie Qualität sowie Ausgabeformat – alles lokal und blitzschnell im Browser.',
+        shortDescription: 'Bilder verlustarm skalieren und optimieren.',
       }
     },
     schema: createAdvancedSchema('image-resizer', ['Keep aspect', 'Quality'], 'Image Input', 'Resized Image', 4.6, 743),
@@ -188,6 +208,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Изображение в Текст (OCR) — Распознавание Текста',
         description: 'Преобразуйте изображения в текст с помощью OCR. Вставляйте или загружайте и копируйте результат. Для чеков, сканов и скриншотов.',
         shortDescription: 'Распознавание текста в изображениях.',
+      },
+      de: {
+        title: 'Bild zu Text (OCR) — Text aus Bildern extrahieren',
+        description: 'Extrahieren Sie Text aus Bildern mit präziser OCR. Laden oder fügen Sie Dateien ein und kopieren Sie das Ergebnis – ideal für Belege, Scans und Screenshots.',
+        shortDescription: 'Text mit OCR aus Bildern gewinnen.',
       }
     },
     schema: createAdvancedSchema('image-to-text', ['OCR', 'Copy results'], 'Image Input', 'Extracted Text', 4.5, 634),
@@ -208,6 +233,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'JPG → PNG — Конвертация Фото в PNG с Прозрачностью',
         description: 'Конвертируйте JPG в PNG с поддержкой прозрачности. Перетаскивайте несколько файлов и скачивайте быстро. Приватно.',
         shortDescription: 'JPG → PNG конвертация.',
+      },
+      de: {
+        title: 'JPG zu PNG — Fotos in transparente PNGs umwandeln',
+        description: 'Konvertieren Sie JPG/JPEG-Bilder online in PNG mit Transparenz, Farbkontrolle und verlustfreier Qualität. Ideal für Webdesign, Logos und Produktfotos.',
+        shortDescription: 'JPG/JPEG in PNG umwandeln.',
       }
     },
     schema: createAdvancedSchema('jpg-to-png', ['Batch convert', 'Transparency'], 'Image Input', 'PNG Image', 4.4, 567),
@@ -228,6 +258,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'JPG → WebP — Меньший Размер с Отличным Качеством',
         description: 'Конвертируйте JPG в WebP для меньшего размера при хорошем качестве. Быстрая конверсия в браузере. Пакетная обработка.',
         shortDescription: 'JPG → WebP быстро.',
+      },
+      de: {
+        title: 'JPG zu WebP — Kleinere Dateien bei hoher Qualität',
+        description: 'Konvertieren Sie JPG/JPEG-Bilder in moderne WebP-Dateien, reduzieren Sie die Größe drastisch und behalten Sie dennoch gestochen scharfe Ergebnisse – schnell, lokal und sicher.',
+        shortDescription: 'JPG/JPEG in WebP umwandeln.',
       }
     },
     schema: createAdvancedSchema('jpg-to-webp', ['Batch', 'Quality'], 'Image Input', 'WebP Image', 4.3, 498),
@@ -248,6 +283,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'PNG → JPG — Конвертация Прозрачных PNG в JPG',
         description: 'Конвертируйте PNG в JPG для совместимости. Настройка качества, пакетная обработка в браузере, быстрое скачивание.',
         shortDescription: 'PNG → JPG конвертация.',
+      },
+      de: {
+        title: 'PNG zu JPG — Transparente PNGs kompatibel machen',
+        description: 'Wandeln Sie PNG-Dateien in JPG um, um kleinere Dateien und maximale Kompatibilität zu erhalten. Qualität und Kompression lassen sich flexibel in Sekunden direkt im Browser anpassen.',
+        shortDescription: 'PNG-Bilder in JPG konvertieren.',
       }
     },
     schema: createAdvancedSchema('png-to-jpg', ['Quality control', 'Batch'], 'Image Input', 'JPG Image', 4.2, 432),
@@ -268,6 +308,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'WebP → JPG — Совместимый Формат',
         description: 'Конвертируйте WebP обратно в JPG для приложений без поддержки WebP. Перетаскивание и быстрое скачивание. Приватно.',
         shortDescription: 'WebP → JPG конвертация.',
+      },
+      de: {
+        title: 'WebP-zu-JPG-Konverter — Kompatible JPEGs erzeugen',
+        description: 'Wandeln Sie WebP-Bilder lokal in JPG/JPEG um, sichern Sie volle Browser-Kompatibilität und behalten Sie Kontrolle über Qualität, Hintergrundfarbe und Dateigröße.',
+        shortDescription: 'WebP-Bilder in kompatible JPG/JPEG-Dateien umwandeln.',
       }
     },
     schema: createAdvancedSchema('webp-to-jpg', ['Compatibility', 'Batch'], 'Image Input', 'JPG Image', 4.1, 389),
@@ -288,6 +333,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'WebP → PNG — Сохранение Прозрачности',
         description: 'Конвертируйте WebP в PNG с сохранением прозрачности. В браузере, пакетно и быстрое скачивание.',
         shortDescription: 'WebP → PNG конвертация.',
+      },
+      de: {
+        title: 'WebP-zu-PNG-Konverter — Transparenz erhalten',
+        description: 'Wandeln Sie WebP-Dateien lokal in PNG um, behalten Sie transparente Pixel und lossless-Qualität und exportieren Sie kompatible Assets für Design, Apps und Shops.',
+        shortDescription: 'WebP-Bilder verlustfrei in PNG mit Transparenz konvertieren.',
       }
     },
     schema: createAdvancedSchema('webp-to-png', ['Transparency', 'Batch'], 'Image Input', 'PNG Image', 4.0, 356),
@@ -308,6 +358,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Base64 Кодер/Декодер — Текст и Файлы',
         description: 'Кодируйте/декодируйте Base64 для текста и файлов. Копируйте, загружайте и проверяйте. Полезно для data URI и отладки.',
         shortDescription: 'Base64 для текста/файлов.',
+      },
+      de: {
+        title: 'Base64 Encoder/Decoder – Text & Dateien umwandeln',
+        description: 'Kodieren oder dekodieren Sie Text und Dateien in Base64 – sicher, datenschutzfreundlich und direkt im Browser. Ideal für Data-URIs, APIs, Debugging und Tests mit Download- und Analysefunktionen.',
+        shortDescription: 'Base64 für Text und Dateien kodieren/decodieren.',
       }
     },
     schema: createAdvancedSchema('base64-encoder-decoder', ['Text/file', 'Copy/download'], 'Data Input', 'Base64 Encoded/Decoded', 4.6, 678),
@@ -328,6 +383,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор UUID — Идентификаторы v1/v4',
         description: 'Генерируйте UUID v1 (по времени) и v4 (случайные). Копирование, скачивание и массовая генерация для приложений и БД.',
         shortDescription: 'UUID v1/v4 генерация.',
+      },
+      de: {
+        title: 'UUID-Generator – Einzigartige IDs v1/v4',
+        description: 'Erzeugen Sie sichere UUIDs der Versionen 1 und 4 mit Format-, Groß-/Kleinschreibung- und Bulk-Optionen für Apps, Tests und Datenbanken.',
+        shortDescription: 'UUIDs (v1/v4) sicher online generieren.',
       }
     },
     schema: createAdvancedSchema('uuid-generator', ['v1/v4', 'Bulk'], 'Number Input', 'UUID Identifiers', 4.7, 789),
@@ -348,6 +408,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'UTM Конструктор — Корректная Разметка Ссылок',
         description: 'Создавайте ссылки с UTM‑метками надёжно. Проверяйте и копируйте для аналитики. Избегайте опечаток и несогласованности.',
         shortDescription: 'Создание и проверка UTM‑ссылок.',
+      },
+      de: {
+        title: 'UTM Builder — Kampagnen-URLs Korrekt Markieren',
+        description: 'Erstellen Sie Kampagnen-URLs mit UTM-Parametern zuverlässig. Validieren und kopieren Sie Links für Analysen. Verhindern Sie Tippfehler und inkonsistente Markierungen.',
+        shortDescription: 'UTM-Links erstellen und validieren.',
       }
     },
     schema: createAdvancedSchema('utm-builder', ['UTM validation', 'Copy links'], 'URL Input', 'UTM Tagged URLs', 4.5, 567),
@@ -368,6 +433,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Случайный Выбор — Честный Выбор Варианта',
         description: 'Выбирайте случайные варианты из списка честно. Исключайте повторы, задавайте количество и экспортируйте результат.',
         shortDescription: 'Случайный выбор из списка.',
+      },
+      de: {
+        title: 'Random-Choice-Generator — Faire Entscheidungen',
+        description: 'Lassen Sie den Zufall entscheiden: Geben Sie beliebige Optionen ein, ziehen Sie ein oder mehrere Ergebnisse mit oder ohne Wiederholung und exportieren Sie die Liste für Verlosungen, Teams oder Alltagsentscheidungen.',
+        shortDescription: 'Zufällige Auswahl aus eigenen Listen treffen.',
       }
     },
     schema: createAdvancedSchema('random-choice', ['No duplicates', 'Export'], 'List Input', 'Random Choice', 4.4, 456),
@@ -388,6 +458,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных Букв — Верхний/Нижний Регистр',
         description: 'Генерируйте случайные буквы: верхний, нижний или смешанный регистр. Контроль количества и исключение повторов.',
         shortDescription: 'Случайные буквы (А–Я).',
+      },
+      de: {
+        title: 'Zufalls-Buchstabengenerator — Groß/Klein & Sets',
+        description: 'Erzeugen Sie zufällige Buchstaben in Groß-, Klein- oder Mischschreibung. Steuern Sie Menge, Format und Duplikate und kopieren Sie Ergebnisse sofort.',
+        shortDescription: 'Zufällige Buchstaben (A–Z) generieren.',
       }
     },
     schema: createAdvancedSchema('random-letter', ['Upper/lower', 'No repeats'], 'Number Input', 'Random Letters', 4.3, 389),
@@ -408,6 +483,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Переводчик Pig Latin — Английский ↔ Поросячий Латынь',
         description: 'Переводите английский в Pig Latin и обратно для развлечения и обучения. Вставляйте текст и копируйте результат.',
         shortDescription: 'Английский ↔ Pig Latin.',
+      },
+      de: {
+        title: 'Pig Latin Übersetzer — Englisch ↔ Pig Latin',
+        description: 'Übersetzen Sie Englisch in Pig Latin und zurück zum Spaß oder Lernen. Text einfügen und Ergebnisse sofort kopieren. Kostenlos und unbegrenzt.',
+        shortDescription: 'Englisch ↔ Pig Latin übersetzen.',
       }
     },
     schema: createAdvancedSchema('pig-latin', ['Two-way translation'], 'Text Input', 'Pig Latin Text', 4.2, 321),
@@ -428,6 +508,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Фонетическое Написание — Чёткое Произношение',
         description: 'Создавайте фонетические написания имен и слов для чёткого произношения. Полезно для звонков, встреч и транскрипций.',
         shortDescription: 'Фонетические написания.',
+      },
+      de: {
+        title: 'Phonetische Schreibweise — Namen Klar Aussprechen',
+        description: 'Generieren Sie phonetische Schreibweisen für Namen und Wörter, um eine klare Aussprache zu gewährleisten. Nützlich für Anrufe, Meetings und Transkripte.',
+        shortDescription: 'Phonetische Schreibweisen generieren.',
       }
     },
     schema: createAdvancedSchema('phonetic-spelling', ['Names/words', 'Pronunciation'], 'Text Input', 'Phonetic Spelling', 4.1, 298),
@@ -448,6 +533,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Hex ↔ Текст — Конвертация Шестнадцатеричных Строк',
         description: 'Преобразуйте шестнадцатеричные строки в читаемый текст и обратно. Полезно для отладки и конвертаций данных.',
         shortDescription: 'Hex ↔ текст.',
+      },
+      de: {
+        title: 'Hex-zu-Text-Konverter – Hexadezimal ↔ Text',
+        description: 'Wandeln Sie Hexadezimal-Zeichenfolgen in lesbaren Text und umgekehrt. Ideal für Debugging, Kodierungen und Datenkonvertierungen.',
+        shortDescription: 'Hex ↔ Text konvertieren.',
       }
     },
     schema: createAdvancedSchema('hex-to-text', ['Two-way', 'Debugging'], 'Hex Input', 'Text Output', 4.0, 267),
@@ -468,6 +558,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Азбука Морзе — Перевод Текста в Морзе (С Аудио)',
         description: 'Переводите текст в азбуку Морзе и обратно. Опциональное аудио для обучения и практики. Мгновенное копирование.',
         shortDescription: 'Текст ↔ код Морзе.',
+      },
+      de: {
+        title: 'Morsecode-Übersetzer — Text ↔ Morse mit Audio & Analyse',
+        description: 'Übersetzen Sie Klartext binnen Sekunden in Morsecode und wieder zurück. Inklusive Audio-Wiedergabe, Tempo- und Frequenzsteuerung sowie Live-Statistiken für Training und Kommunikation.',
+        shortDescription: 'Text ↔ Morse mit Audio- und Analysefunktionen.',
       }
     },
     schema: createAdvancedSchema('morse-code', ['Audio', 'Two-way translation'], 'Text Input', 'Morse Code', 3.9, 234),
@@ -488,6 +583,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Шифр Цезаря — Кодирование/Декодирование Со Сдвигом',
         description: 'Кодируйте или декодируйте текст шифром Цезаря. Управляйте величиной сдвига, копируйте результаты и изучайте шифры.',
         shortDescription: 'Шифр Цезаря для текста.',
+      },
+      de: {
+        title: 'Caesar-Verschlüsselung – Text mit Verschiebung codieren',
+        description: 'Verschlüsseln oder entschlüsseln Sie Text mit dem klassischen Caesar-Shift. Stellen Sie den Verschiebewert ein, kopieren Sie Ergebnisse und entdecken Sie einfache Substitutionsverfahren.',
+        shortDescription: 'Text mit Caesar-Shift codieren oder decodieren.',
       }
     },
     schema: createAdvancedSchema('caesar-cipher', ['Shift control', 'Instant copy'], 'Text Input', 'Encrypted Text', 3.8, 201),
@@ -509,6 +609,11 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Создавайте надёжные уникальные пароли с настраиваемыми правилами. Безопасно по умолчанию. Копируйте или скачивайте. Бесплатно, без лимитов.',
         shortDescription: 'Надёжные пароли с правилами. Бесплатно и без ограничений.',
       },
+      de: {
+        title: 'Sicherer Passwort-Generator — Starke Zufallspasswörter Online',
+        description: 'Erstellen Sie starke, einzigartige Passwörter mit anpassbaren Regeln. Sicher standardmäßig. Kopieren oder herunterladen. Kostenlos, unbegrenzt.',
+        shortDescription: 'Starke Zufallspasswörter mit benutzerdefinierten Regeln. Kostenlos und unbegrenzt.',
+      },
     },
     schema: createAdvancedSchema('password-generator', ['Custom length', 'Character sets', 'Strength meter'], 'Settings Input', 'Secure Password', 4.8, 1234),
     relatedTools: ['uuid-generator', 'random-letter'],
@@ -529,6 +634,11 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Генерируйте случайные IPv4/IPv6 адреса для разработки и тестов. CIDR диапазоны, приватные/публичные, массовый вывод.',
         shortDescription: 'Случайные IPv4/IPv6 с CIDR и массовой генерацией.',
       },
+      de: {
+        title: 'Zufalls-IP-Generator — IPv4 & IPv6 für Netzwerktests',
+        description: 'Generieren Sie zufällige IPv4/IPv6-Adressen für Entwicklung und Tests. Unterstützt CIDR-Bereiche, private/öffentliche Netze und Massenausgabe.',
+        shortDescription: 'Zufällige IPv4/IPv6-Adressen mit CIDR- und Bulk-Optionen.',
+      },
     },
     schema: createAdvancedSchema('random-ip', ['IPv4', 'IPv6', 'CIDR ranges', 'Bulk'], 'Settings Input', 'Random IP Addresses', 4.6, 567),
     relatedTools: ['random-number', 'uuid-generator'],
@@ -548,6 +658,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор ASCII Арта — Стильные Текстовые Баннеры',
         description: 'Создавайте ASCII-баннеры во множестве шрифтов. Копируйте или скачивайте. Отлично для терминалов, README и развлечения!',
         shortDescription: 'ASCII-баннеры в разных шрифтах. Бесплатно.',
+      },
+      de: {
+        title: 'ASCII Art Generator — Stilvolle Text-Banner (Kostenlos)',
+        description: 'Erstellen Sie ASCII-Text-Banner in vielen Schriftarten. Sofort kopieren oder herunterladen. Perfekt für Terminals, READMEs und Spaß!',
+        shortDescription: 'ASCII-Text-Banner in vielen Schriftarten erstellen. Kostenlos.',
       },
     },
     schema: createAdvancedSchema('ascii-art-generator', ['Many fonts', 'Copy/Download', 'Instant output'], 'Text Input', 'ASCII Art', 4.4, 456),
@@ -712,6 +827,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Счётчик Предложений — Быстро и Точно',
         description: 'Мгновенно считайте предложения в тексте с высокой точностью. Счётчики слов/символов и время чтения. Бесплатно и без ограничений.',
         shortDescription: 'Счётчик предложений и метрики текста.',
+      },
+      de: {
+        title: 'Satzzähler — Sätze Schnell & Genau Zählen',
+        description: 'Zählen Sie Sätze in Ihrem Text sofort mit hoher Genauigkeit. Enthält Wort-/Zeichenstatistiken und Lesezeit. Kostenlos und unbegrenzt.',
+        shortDescription: 'Sätze mit genauen Textstatistiken zählen.',
       }
     },
     schema: createAdvancedSchema('sentence-counter', ['Sentence counting', 'Reading time', 'Text stats'], 'Text Input', 'Text Statistics', 4.5, 567),
@@ -732,6 +852,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных Дат — Любые Диапазоны',
         description: 'Генерируйте случайные даты в заданных диапазонах. Выбирайте форматы, исключайте выходные, создавайте списки. Идеально для тестов и выборок.',
         shortDescription: 'Случайные даты в любом диапазоне и формате.',
+      },
+      de: {
+        title: 'Zufallsdatums-Generator — Daten in jedem Bereich ziehen',
+        description: 'Erstellen Sie zufällige Termine in beliebigen Zeiträumen, wählen Sie Formate, schließen Sie Wochenenden aus und generieren Sie ganze Listen für Tests, Sampling oder Planung.',
+        shortDescription: 'Zufällige Daten in jedem Bereich und Format erzeugen.',
       }
     },
     schema: createAdvancedSchema('random-date', ['Custom ranges', 'Date formats', 'Bulk output'], 'Date Input', 'Random Dates', 4.4, 456),
@@ -750,8 +875,13 @@ const overrides: Array<ToolMetadataConfig> = [
       },
       ru: {
         title: 'Переводчик НАТО-Фонетического Алфавита — Слова‑коды',
-        description: 'Преобразуйте текст в фонетический алфавит НАТО и обратно. Удобно для чёткого произношения по телефону/рации. Мгновальное копирование.',
+        description: 'Преобразуйте текст в фонетический алфавит НАТО и обратно. Удобно для чёткого произношения по телефону/рации. Мгновенное копирование.',
         shortDescription: 'Текст ↔ фонетический алфавит НАТО.',
+      },
+      de: {
+        title: 'NATO-Funkalphabet Übersetzer – Text ↔ Codewörter',
+        description: 'Wandeln Sie Text in das NATO-Funkalphabet und zurück. Ideal für klare Buchstabierung über Telefon oder Funk, mit sofortigem Kopieren und flexiblen Optionen.',
+        shortDescription: 'Text ↔ NATO-Codewörter übersetzen.',
       }
     },
     schema: createAdvancedSchema('nato-phonetic', ['Text to code words', 'Reverse translation'], 'Text Input', 'NATO Phonetic', 4.3, 389),
@@ -772,6 +902,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Онлайн Блокнот — Просто, Надёжно, Бесплатно',
         description: 'Пишите и сохраняйте заметки в браузере. Автосохранение, тёмная тема и приватность. Идеально для быстрых черновиков и копирования.',
         shortDescription: 'Быстрый блокнот с автосохранением.',
+      },
+      de: {
+        title: 'Online Notizblock — Einfach, Sicher, Kostenlos',
+        description: 'Schreiben und speichern Sie Notizen in Ihrem Browser. Autospeicherung, Dunkelmodus und datenschutzfreundlich. Perfekt für schnelle Entwürfe und Kopier-/Einfüge-Aufgaben.',
+        shortDescription: 'Schneller Browser-Notizblock mit Autospeicherung.',
       }
     },
     schema: createAdvancedSchema('online-notepad', ['Autosave', 'Dark mode'], 'Text Input', 'Saved Notes', 4.6, 678),
@@ -792,6 +927,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Жирного Текста — Копируйте Стильный Bold',
         description: 'Создавайте жирный Unicode‑текст для соцсетей, чатов и био. Пишите, просматривайте и копируйте мгновенно. Бесплатно без лимитов.',
         shortDescription: 'Жирный Unicode‑текст для соцсетей.',
+      },
+      de: {
+        title: 'Fetter Text Generator — Kopieren & Einfügen Stilvoller Fettdruck',
+        description: 'Erstellen Sie fetten Unicode-Text für Social Media, Chats und Bios. Tippen, Vorschau anzeigen und sofort kopieren. Kostenlos ohne Limits.',
+        shortDescription: 'Fetten Unicode-Text für Social Media erstellen.',
       }
     },
     schema: createAdvancedSchema('bold-text', ['Unicode bold', 'Instant copy'], 'Text Input', 'Bold Text', 4.7, 789),
@@ -812,6 +952,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер Даты в Римские Цифры — Сегодняшняя Дата',
         description: 'Преобразуйте любую дату в римские цифры и обратно. Подходит для свадебных дат, табличек и проектов. Несколько форматов.',
         shortDescription: 'Даты ↔ римские цифры.',
+      },
+      de: {
+        title: 'Römischer Datums-Konverter — Moderne Daten ↔ römische Zahlen',
+        description: 'Wandeln Sie beliebige Kalenderdaten in elegante römische Schreibweisen und wieder zurück. Ideal für Einladungen, Gravuren, historische Unterlagen und klassische Designprojekte mit mehreren Formatstilen.',
+        shortDescription: 'Moderne Daten ↔ römische Zahlformate.',
       }
     },
     schema: createAdvancedSchema('roman-numeral-date', ['Both directions', 'Multiple formats'], 'Date Input', 'Roman Numerals', 4.2, 321),
@@ -832,6 +977,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Шрифтов Facebook — Стиль для Постов и Био',
         description: 'Создавайте стильные шрифты для постов, био и комментариев в Facebook. Копируйте и вставляйте мгновенно. Бесплатно.',
         shortDescription: 'Стильные FB‑шрифты для постов и био.',
+      },
+      de: {
+        title: 'Facebook Schriftarten-Generator — Stylischer Text für Posts & Bios',
+        description: 'Generieren Sie stylische Facebook-Schriftarten für Posts, Bios und Kommentare. Sofort kopieren & einfügen. Kostenlos, schnell, keine Limits.',
+        shortDescription: 'Stylische FB-Schriftarten für Posts & Bios.',
       }
     },
     schema: createAdvancedSchema('facebook-font', ['Stylish text', 'Copy & paste'], 'Text Input', 'Facebook Font', 4.5, 567),
@@ -852,6 +1002,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Шрифтов Discord — Красивые Шрифты и Ники',
         description: 'Создавайте красивые шрифты для чатов и ников в Discord. Копируйте и вставляйте мгновенно. Подходит для каналов и био.',
         shortDescription: 'Красивые шрифты для Discord.',
+      },
+      de: {
+        title: 'Discord Schriftarten-Generator — Stylische Chat-Schriftarten & Nickname-Stile',
+        description: 'Erstellen Sie stylische Discord-Schriftarten für Chats und Nicknames. Sofort kopieren & einfügen. Funktioniert für Kanäle, Bios und Server.',
+        shortDescription: 'Stylische Discord-Schriftarten für Chats & Namen.',
       }
     },
     schema: createAdvancedSchema('discord-font', ['Stylish fonts', 'Copy & paste'], 'Text Input', 'Discord Font', 4.4, 456),
@@ -872,6 +1027,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Сортировка Чисел — По Возрастанию/Убыванию, Без Дубликатов',
         description: 'Быстро сортируйте числа по возрастанию или убыванию и удаляйте дубликаты. Вставьте список и получите чистый результат.',
         shortDescription: 'Сортировка чисел и удаление дублей.',
+      },
+      de: {
+        title: 'Zahlensortierer — Zahlen Auf-/Absteigend Sortieren, Duplikate Entfernen',
+        description: 'Sortieren Sie Zahlen schnell auf- oder absteigend und entfernen Sie Duplikate. Fügen Sie Ihre Liste ein und erhalten Sie saubere Ergebnisse für Tabellen oder Code.',
+        shortDescription: 'Zahlen sortieren und Duplikate entfernen.',
       }
     },
     schema: createAdvancedSchema('number-sorter', ['Asc/Desc', 'Deduplicate'], 'Number List Input', 'Sorted Numbers', 4.3, 389),
@@ -892,6 +1052,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Переводчик Бинарного Кода — Текст ↔ Бинарный',
         description: 'Переводите текст в бинарный код и обратно мгновенно. Подходит для изучения кодировок и быстрых конвертаций. Копирование в один клик.',
         shortDescription: 'Текст ↔ бинарный код.',
+      },
+      de: {
+        title: 'Binärcode-Übersetzer – Text ↔ Binär (Online)',
+        description: 'Wandeln Sie Text sofort in Binärcode und Binärfolgen zurück in lesbaren Text. Ideal zum Lernen von Kodierungen, für Schulprojekte oder schnelle Prüfungen – inklusive Kopierfunktion.',
+        shortDescription: 'Text und Binärcode gegenseitig umwandeln.',
       }
     },
     schema: createAdvancedSchema('binary-code-translator', ['Two-way conversion', 'Instant copy'], 'Binary Input', 'Text Output', 4.2, 321),
@@ -912,6 +1077,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер UTF‑8 — Декодирование/Кодирование в Текст',
         description: 'Декодируйте UTF‑8 в читаемый текст и кодируйте обратно. Исправляйте «кракозябры» и проблемы кодировок за секунды.',
         shortDescription: 'UTF‑8 ↔ текст.',
+      },
+      de: {
+        title: 'UTF-8-Konverter – Text sicher kodieren & dekodieren',
+        description: 'Wandeln Sie Klartext in UTF‑8-Bytefolgen um oder reparieren Sie defekte Zeichen in Sekunden. BOM-Steuerung, flexible Trennzeichen und Analytics inklusive.',
+        shortDescription: 'UTF‑8 ↔ Text mit BOM- und Formatoptionen.',
       }
     },
     schema: createAdvancedSchema('utf8-converter', ['Decode', 'Encode', 'Fix garbled text'], 'Text Input', 'UTF-8 Output', 4.1, 298),
@@ -932,6 +1102,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Форматирование Текста — В Чистый Текст',
         description: 'Удаляйте жирный/курсив/шрифты, ссылки и стили из вставленного текста. Получайте чистый текст для документов, почты и кода.',
         shortDescription: 'Очистка форматирования до простого текста.',
+      },
+      de: {
+        title: 'Formatierung Entfernen — In reinen Klartext umwandeln',
+        description: 'Entfernen Sie Fett/Kursiv/Schriften, Links und Styles aus eingefügtem Text. Ideal für Dokumente, E-Mails und Code – saubere Ausgabe mit einem Klick.',
+        shortDescription: 'Formatierung auf Klartext reduzieren.',
       }
     },
     schema: createAdvancedSchema('remove-text-formatting', ['Strip styles', 'Clean output'], 'Formatted Text Input', 'Plain Text', 4.6, 678),
@@ -952,6 +1127,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Шрифтов Instagram — Стиль для Био и Подписей',
         description: 'Создавайте стильные шрифты и символы для био и подписей в Instagram. Предпросмотр и копирование в один клик. Бесплатно.',
         shortDescription: 'Стильные IG‑шрифты для био и подписей.',
+      },
+      de: {
+        title: 'Instagram Schriftarten-Generator — Stylische Schriftarten für Bios & Beschriftungen',
+        description: 'Erstellen Sie stylische Instagram-Schriftarten für Bios und Beschriftungen. Vorschau, kopieren & einfügen mit einem Klick. Kostenlos, schnell, keine Limits.',
+        shortDescription: 'Stylische IG-Schriftarten für Bios & Beschriftungen.',
       }
     },
     schema: createAdvancedSchema('instagram-fonts', ['Stylish fonts', 'Copy & paste'], 'Text Input', 'Instagram Font', 4.5, 567),
@@ -972,6 +1152,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Анализ Частоты Слов — Подсчёт Повторений',
         description: 'Анализируйте частоту слов в тексте. Подсчёты, проценты и стоп‑слова для SEO, исследований и редактирования. Экспорт результатов.',
         shortDescription: 'Частота слов и подсчёты.',
+      },
+      de: {
+        title: 'Worthäufigkeits-Analysator — Worthäufigkeiten Zählen',
+        description: 'Analysieren Sie die Worthäufigkeit in beliebigem Text. Erhalten Sie Zählungen, Prozentsätze und Stoppwort-Kontrolle für SEO, Forschung und Bearbeitung. Ergebnisse exportieren.',
+        shortDescription: 'Worthäufigkeit und Zählungen analysieren.',
       }
     },
     schema: createAdvancedSchema('word-frequency', ['Counts', 'Stop-words', 'Export'], 'Text Input', 'Word Frequency Analysis', 4.4, 456),
@@ -992,6 +1177,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Случайных Месяцев — Любые Диапазоны',
         description: 'Выбирайте случайные месяцы по названию или номеру. Указывайте диапазоны лет и генерируйте списки для планирования и тестов.',
         shortDescription: 'Случайные месяцы и списки.',
+      },
+      de: {
+        title: 'Zufalls-Monatsgenerator — Monate nach Jahrbereichen wählen',
+        description: 'Wählen Sie zufällige Monate mit Namen oder Zahlen, definieren Sie Jahrbereiche und erstellen Sie Listen für Planung, Tests oder Spiele.',
+        shortDescription: 'Zufällige Monate mit eigenen Jahrbereichen.',
       }
     },
     schema: createAdvancedSchema('random-month', ['Names/numbers', 'Year ranges', 'Bulk list'], 'Settings Input', 'Random Months', 4.3, 389),
@@ -1012,6 +1202,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер В Простой Текст — Без Форматирования',
         description: 'Преобразуйте любой текст в простой. Удалите скрытые стили, ссылки и шрифты. Идеально для писем, документов и кода.',
         shortDescription: 'Чистый простой текст.',
+      },
+      de: {
+        title: 'Klartext-Konverter — Formatierung entfernen',
+        description: 'Wandeln Sie formatierten Text sofort in reinen Klartext um. Entfernen Sie HTML, Markdown, Links, E-Mails und Sonderzeichen mit nur einem Klick.',
+        shortDescription: 'Formatierten Text in Klartext umwandeln.',
       }
     },
     schema: createAdvancedSchema('plain-text', ['Strip styles', 'One-click copy'], 'Formatted Text Input', 'Plain Text', 4.7, 789),
@@ -1052,6 +1247,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'JSON Форматировщик и Валидатор — Бесплатный Онлайн JSON Просмотрщик',
         description: 'Форматируйте, валидируйте и исследуйте JSON с подсветкой синтаксиса. Режим древа, минификация, сортировка ключей, поддержка NDJSON. Вставляйте или загружайте файлы до 10МБ. Всё работает локально в браузере.',
         shortDescription: 'Форматирование, валидация и исследование JSON онлайн.',
+      },
+      de: {
+        title: 'JSON-Formatter & Validator – Kostenloser Online-Viewer',
+        description: 'Formatieren, validieren und analysieren Sie JSON mit Syntax-Highlighting. Baumansicht, Minify, Schlüsselsortierung, NDJSON-Unterstützung. Einfügen oder Dateien bis 10 MB hochladen – alles läuft lokal im Browser.',
+        shortDescription: 'JSON online formatieren, prüfen und erkunden.',
       }
     },
     schema: createAdvancedSchema('json-formatter', ['Format', 'Validate', 'Tree view', 'Syntax highlighting', 'NDJSON'], 'JSON Input', 'Formatted JSON', 4.9, 1567),
@@ -1072,6 +1272,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'PNG → WebP Конвертер — Сжать Изображения с Качеством',
         description: 'Конвертируйте PNG в WebP для меньшего размера и отличного качества. Быстро, в браузере и безопасно. Перетаскивайте файлы.',
         shortDescription: 'Быстрый PNG → WebP.',
+      },
+      de: {
+        title: 'PNG zu WebP — Transparenz behalten, Größe reduzieren',
+        description: 'Konvertieren Sie PNG-Dateien in moderne WebP-Bilder und behalten Sie volle Transparenz bei deutlich kleineren Dateien – ideal für schnelle Webseiten und mobile Apps.',
+        shortDescription: 'PNG-Bilder in WebP umwandeln.',
       }
     },
     schema: createAdvancedSchema('png-to-webp', ['Batch convert', 'Browser-based'], 'PNG Image Input', 'WebP Image', 4.5, 567),
@@ -1092,6 +1297,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'ROT13 Кодер/Декодер — Простое Сокрытие Текста',
         description: 'Кодируйте или декодируйте текст алгоритмом ROT13 мгновенно. Быстрый способ скрыть спойлеры или ответы. Копирование в один клик.',
         shortDescription: 'ROT13 кодирование/декодирование.',
+      },
+      de: {
+        title: 'ROT13-Encoder & Decoder – Text sofort verschleiern',
+        description: 'Kodieren oder dekodieren Sie Text mit dem symmetrischen ROT13-Verfahren in Sekunden. Alphabetreferenz, Zeichen-Erhaltungsoptionen und Echtzeit-Analyse inklusive.',
+        shortDescription: 'Text per ROT13 kodieren oder dekodieren – reversibel.',
       }
     },
     schema: createAdvancedSchema('rot13', ['Encode/decode', 'Instant copy'], 'Text Input', 'ROT13 Text', 4.0, 267),
@@ -1112,6 +1322,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'URL Конвертер — Безопасное Кодирование/Декодирование',
         description: 'Кодируйте или декодируйте URL и строки запросов безопасно. Избегайте битых ссылок и недопустимых символов. Мгновенная проверка.',
         shortDescription: 'Кодирование/декодирование URL.',
+      },
+      de: {
+        title: 'URL-Konverter – URLs sicher kodieren & dekodieren',
+        description: 'Kodieren oder dekodieren Sie URLs und Query-Strings in Sekunden. Verhindern Sie defekte Links, beseitigen Sie ungültige Zeichen und kopieren Sie validierte Ergebnisse sofort.',
+        shortDescription: 'URLs, Parameter und Formdaten zuverlässig kodieren oder dekodieren.',
       }
     },
     schema: createAdvancedSchema('url-converter', ['Encode/decode', 'Validation'], 'URL Input', 'Encoded/Decoded URL', 4.6, 678),
@@ -1132,6 +1347,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'CSV ↔ JSON Конвертер — Быстро и Точно',
         description: 'Преобразуйте CSV в корректный JSON и обратно. Настраивайте заголовки, разделители и кавычки. Копируйте и загружайте.',
         shortDescription: 'CSV ↔ JSON с настройками.',
+      },
+      de: {
+        title: 'CSV-zu-JSON-Konverter – Schnelle Datenumwandlung',
+        description: 'Wandeln Sie CSV-Daten in sauberes JSON und wieder zurück. Unterstützt benutzerdefinierte Trennzeichen, Header-Steuerung sowie flexible Formatoptionen.',
+        shortDescription: 'CSV ↔ JSON mit flexiblen Optionen.',
       }
     },
     schema: createAdvancedSchema('csv-to-json', ['CSV ↔ JSON', 'Delimiter options'], 'CSV Input', 'JSON Output', 4.7, 789),
@@ -1152,6 +1372,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'MD5 Хэш — Генератор Контрольных Сумм',
         description: 'Генерируйте MD5‑хэши из текста или файлов для быстрых проверок и целостности. Копируйте или скачивайте результаты. Быстро бесплатно.',
         shortDescription: 'MD5 хэши и контрольные суммы.',
+      },
+      de: {
+        title: 'MD5 Hash-Generator — MD5 Checksums Erstellen',
+        description: 'Generieren Sie MD5-Hashes aus Text oder Dateien für schnelle Checksums und Integritätstests. Ergebnisse kopieren oder herunterladen. Kostenlos und schnell.',
+        shortDescription: 'MD5-Hashes und Checksums generieren.',
       }
     },
     schema: createAdvancedSchema('md5-hash', ['Text/file input', 'Copy/download'], 'Data Input', 'MD5 Hash', 4.8, 1234),
@@ -1174,6 +1399,12 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Генерируйте SHA-1 хэши онлайн за секунды. Получите SHA1 контрольную сумму для проверки файлов, интеграций и разработки.',
         shortDescription: 'Генерация SHA-1 хэшей из любого текста',
         alternateTitle: 'Онлайн Калькулятор SHA1 Хэша'
+      },
+      de: {
+        title: 'SHA-1 Hash-Generator – Online SHA1 Hash-Rechner',
+        description: 'Generieren Sie SHA-1 Hashes online in Sekunden. Erhalten Sie SHA1 Prüfsummen für Dateiverifizierung, Legacy-Integrationen und Entwicklung.',
+        shortDescription: 'Generieren Sie SHA-1 Hashes aus jedem Text',
+        alternateTitle: 'Online SHA1 Hash-Rechner'
       }
     },
     schema: createAdvancedSchema(
@@ -1208,6 +1439,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Slugify URL — SEO‑Чистые Ссылки из Текста',
         description: 'Преобразуйте заголовки в SEO‑дружественные слаги: нижний регистр, дефисы и безопасные символы. Для блогов и страниц.',
         shortDescription: 'Чистые SEO‑слаги из текста.',
+      },
+      de: {
+        title: 'Slugify-Tool – SEO-freundliche URLs erstellen',
+        description: 'Erzeugen Sie saubere, suchmaschinenfreundliche Slugs aus beliebigem Text mit frei wählbaren Trennzeichen, Längenlimit, Stopwort-Filter und Humanize-Modus – ideal für Blogs, Shops und CMS.',
+        shortDescription: 'URL-Slugs in Sekunden generieren und optimieren.',
       }
     },
     schema: createAdvancedSchema('slugify-url', ['Lowercase', 'Safe characters'], 'Text Input', 'URL Slug', 4.5, 567),
@@ -1228,6 +1464,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер В ВЕРХНИЙ РЕГИСТР — Uppercase',
         description: 'Преобразуйте текст в ВЕРХНИЙ РЕГИСТР мгновенно. Вставьте или введите — результат сразу готов. Поддержка больших текстов.',
         shortDescription: 'Текст в ВЕРХНИЙ РЕГИСТР.',
+      },
+      de: {
+        title: 'Großbuchstaben-Konverter – Text sofort in GROSSBUCHSTABEN',
+        description: 'Wandeln Sie jeden Text in Sekunden komplett in Großbuchstaben um – ideal für Überschriften, Hervorhebungen oder Coding-Standards.',
+        shortDescription: 'Text in GROSSBUCHSTABEN umwandeln.',
       }
     },
     schema: createAdvancedSchema('uppercase', ['Instant convert', 'Large input'], 'Text Input', 'Uppercase Text', 4.6, 678),
@@ -1248,6 +1489,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер в нижний регистр — lowercase',
         description: 'Преобразуйте текст в нижний регистр мгновенно. Вставьте или введите — получите результат. Удобно для нормализации.',
         shortDescription: 'Текст в нижний регистр.',
+      },
+      de: {
+        title: 'Kleinbuchstaben-Konverter – Text sofort kleinschreiben',
+        description: 'Wandeln Sie jeden Text in Sekunden komplett in Kleinbuchstaben um – ideal für Datenbereinigung, SEO oder einheitliche Formatierung.',
+        shortDescription: 'Text automatisch in Kleinbuchstaben.',
       }
     },
     schema: createAdvancedSchema('lowercase', ['Instant convert', 'Cleanup'], 'Text Input', 'Lowercase Text', 4.7, 789),
@@ -1268,6 +1514,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Title Case — Правильная Капитализация Заголовков',
         description: 'Преобразуйте текст в корректный Title Case по общим правилам. Исправляйте регистр в заголовках и документах.',
         shortDescription: 'Корректная капитализация заголовков.',
+      },
+      de: {
+        title: 'Title Case Konverter – Titel korrekt kapitalisieren',
+        description: 'Wandeln Sie Text in korrekte Titel-Schreibweise um. Perfekt für Überschriften, Dokumente und Artikel mit professioneller Groß-/Kleinschreibung.',
+        shortDescription: 'Text in Titel-Schreibweise umwandeln.',
       }
     },
     schema: createAdvancedSchema('title-case', ['Style rules', 'Headline ready'], 'Text Input', 'Title Case Text', 4.8, 1234),
@@ -1288,6 +1539,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Sentence case — Капитализация Предложений',
         description: 'Преобразуйте текст в Sentence case мгновенно. Исправляйте регистр на уровне предложений и приводите текст к порядку.',
         shortDescription: 'Sentence case для текста.',
+      },
+      de: {
+        title: 'Sentence Case Konverter — Sätze korrekt kapitalisieren',
+        description: 'Konvertieren Sie Text sofort in Satzschreibweise, korrigieren Sie Groß-/Kleinschreibung pro Satz und bringen Sie unruhige Inhalte in Form – kostenlos, privat und ohne Limits.',
+        shortDescription: 'Text automatisch in Satzschreibweise umwandeln.',
       }
     },
     schema: createAdvancedSchema('sentence-case', ['Instant convert', 'Cleanup'], 'Text Input', 'Sentence Case Text', 4.6, 678),
@@ -1308,6 +1564,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Alternating Case — Чередование Регистра',
         description: 'Создавайте текст с чередующимся регистром для весёлых эффектов. Вставьте или введите и копируйте мгновенно.',
         shortDescription: 'Чередование регистра для текста.',
+      },
+      de: {
+        title: 'Alternating Case — aLtErNiErEnDe GrOß-/KlEiNsChReIbUnG',
+        description: 'Erstellen Sie alternierende Groß-/Kleinschreibung für lustige Texteffekte. Einfügen oder tippen und sofort kopieren. Perfekt für Memes und spielerische Inhalte.',
+        shortDescription: 'Alternierenden Groß-/Kleinschreibung Text erstellen.',
       }
     },
     schema: createAdvancedSchema('alternating-case', ['Fun effects', 'Instant copy'], 'Text Input', 'Alternating Case Text', 4.3, 389),
@@ -1328,6 +1589,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Зеркальный Текст — Переворот и Отражение Онлайн',
         description: 'Переворачивайте или отражайте текст по горизонтали в один клик. Для креативных эффектов, головоломок и никнеймов.',
         shortDescription: 'Отразить или перевернуть текст.',
+      },
+      de: {
+        title: 'Spiegeltext-Generator — Text rückwärts spiegeln',
+        description: 'Spiegeln oder kehren Sie Text sofort um. Ideal für kreative Designs, Rätsel, Profile und jede Anwendung mit gespiegelten Effekten.',
+        shortDescription: 'Text spiegeln oder rückwärts darstellen.',
       }
     },
     schema: createAdvancedSchema('mirror-text', ['Reverse/mirror', 'One-click copy'], 'Text Input', 'Mirrored Text', 4.2, 321),
@@ -1348,6 +1614,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Повтор Текста — С Повторителями и Разделителями',
         description: 'Повторяйте строки или фразы много раз с разделителями и нумерацией. Быстро создавайте списки для тестов и демонстраций.',
         shortDescription: 'Повтор текста с разделителями.',
+      },
+      de: {
+        title: 'Textwiederholer: Text mit individuellen Trennzeichen',
+        description: 'Wiederholen Sie Texte bis zu 1000-mal mit Zeilenumbrüchen, Leerzeichen oder eigenen Trennzeichen. Ideal für Muster, Testdaten und automatisierte Inhalte.',
+        shortDescription: 'Text beliebig oft mit anpassbaren Trennzeichen wiederholen.',
       }
     },
     schema: createAdvancedSchema('repeat-text', ['Repeats', 'Numbering', 'Separators'], 'Text Input', 'Repeated Text', 4.1, 298),
@@ -1368,6 +1639,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Разрывы Строк — Компактный Однострочный Текст',
         description: 'Удаляйте переносы строк и лишние пробелы из текста. Получайте компактный однострочный вывод для форм, кода или CSV.',
         shortDescription: 'Удаление переносов и пробелов.',
+      },
+      de: {
+        title: 'Zeilenumbrüche entfernen — Text auf eine Zeile bringen',
+        description: 'Entfernen Sie unerwünschte Zeilenumbrüche und doppelte Leerzeichen aus Text. Ideal für Formulare, Code-Snippets, CSV-Daten oder Social Posts.',
+        shortDescription: 'Zeilenumbrüche und Leerzeichen entfernen.',
       }
     },
     schema: createAdvancedSchema('remove-line-breaks', ['Line-break removal', 'Trim spaces'], 'Text Input', 'Single Line Text', 4.5, 567),
@@ -1388,6 +1664,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Пунктуацию из Текста – Бесплатный Онлайн Инструмент',
         description: 'Вставьте текст и мгновенно удалите знаки пунктуации (.,!?;:–—"\' …) сохраняя слова. Опции для сохранения выбранных символов, чисел и переносов строк.',
         shortDescription: 'Удаление знаков пунктуации с выборочным сохранением.',
+      },
+      de: {
+        title: 'Satzzeichen Entfernen – Kostenloser Online-Punktuations-Entferner',
+        description: 'Fügen Sie Text ein und entfernen Sie Satzzeichen (.,!?;:–—"\' …) sofort, während Wörter erhalten bleiben. Optional können bestimmte Zeichen, Zahlen und Zeilenumbrüche behalten werden.',
+        shortDescription: 'Satzzeichen gezielt entfernen und wichtige Zeichen behalten.',
       }
     },
     schema: createAdvancedSchema('remove-punctuation', ['Selective removal', 'Custom keep list', 'Email/URL protection'], 'Text Input', 'Clean Text', 4.5, 567),
@@ -1408,6 +1689,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Удалить Дубликаты Строк — Очистка Текста',
         description: 'Удаляйте повторяющиеся строки, оставляя первые или только уникальные. Сортируйте и очищайте списки для таблиц и кода.',
         shortDescription: 'Удаление дубликатов строк.',
+      },
+      de: {
+        title: 'Doppelte Zeilen Entfernen — Text Bereinigen und Deduplizieren',
+        description: 'Entfernen Sie doppelte Zeilen aus Ihrem Text, behalten Sie nur die erste oder einzigartige. Sortieren und bereinigen Sie Listen für Tabellen und Code.',
+        shortDescription: 'Doppelte Zeilen im Text entfernen.',
       }
     },
     schema: createAdvancedSchema('duplicate-line-remover', ['Deduplicate', 'Sort options'], 'Text Input', 'Deduplicated Text', 4.4, 456),
@@ -1430,6 +1716,12 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Добавляйте номера строк мгновенно с 7 форматами, настраиваемыми разделителями и умной фильтрацией. Идеально для кода, скриптов и документов.',
         shortDescription: 'Настраиваемые номера строк с несколькими форматами и разделителями',
         alternateTitle: 'Инструмент Нумерации Строк - Добавить Номера'
+      },
+      de: {
+        title: 'Zeilennummern zu Text Hinzufügen – Kostenloser Online Nummerierungs-Tool',
+        description: 'Fügen Sie sofort Zeilennummern mit 7 Formaten, benutzerdefinierten Trennzeichen und intelligenter Filterung hinzu. Perfekt für Code, Skripte und Dokumente. Kostenloses Online-Tool.',
+        shortDescription: 'Anpassbare Zeilennummern mit mehreren Formaten und Trennzeichen hinzufügen',
+        alternateTitle: 'Zeilennummerierungs-Tool - Nummern zu Text Hinzufügen'
       }
     },
     schema: createAdvancedSchema(
@@ -1467,6 +1759,12 @@ const overrides: Array<ToolMetadataConfig> = [
         description: 'Мгновенно добавляйте префикс и суффикс к каждой строке. Идеально для форматирования комментариев кода, списков и markdown.',
         shortDescription: 'Добавление префикса и суффикса к каждой строке',
         alternateTitle: 'Инструмент Префикс и Суффикс Строк'
+      },
+      de: {
+        title: 'Präfix und Suffix zu Zeilen Hinzufügen Online – Kostenloser Text-Formatierer',
+        description: 'Fügen Sie sofort benutzerdefinierte Präfixe und Suffixe zu jeder Zeile hinzu. Perfekt für Formatierung von Code-Kommentaren, Aufzählungslisten und Markdown. Kostenloses browserbasiertes Tool.',
+        shortDescription: 'Präfix und Suffix zu jeder Textzeile hinzufügen',
+        alternateTitle: 'Präfix & Suffix Zeilen-Formatierer Tool'
       }
     },
     schema: createAdvancedSchema(
@@ -1501,6 +1799,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Сортировка Слов — Алфавитная или Обратная',
         description: 'Сортируйте слова или строки по алфавиту (А→Я/Я→А). Удаляйте дубликаты и пробелы. Подходит для списков и тегов.',
         shortDescription: 'Алфавитная сортировка слов.',
+      },
+      de: {
+        title: 'Wörter Sortieren — Alphabetisch oder Umgekehrt',
+        description: 'Sortieren Sie Wörter oder Zeilen alphabetisch (A→Z/Z→A). Duplikate entfernen und Leerzeichen trimmen. Perfekt für Listen, Tags und SEO-Bereinigung.',
+        shortDescription: 'Wörter und Listen alphabetisch sortieren.',
       }
     },
     schema: createAdvancedSchema('sort-words', ['Alphabetize', 'Deduplicate'], 'Text Input', 'Sorted Words', 4.3, 389),
@@ -1521,6 +1824,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Пузырьковый Текст — Милые Буквы (Копировать и Вставить)',
         description: 'Делайте милые пузырьковые буквы для постов и сообщений. Пишите, просматривайте и копируйте мгновенно. Бесплатно.',
         shortDescription: 'Милые пузырьковые буквы.',
+      },
+      de: {
+        title: 'Blasentext Generator — Niedliche Blasenbuchstaben (Kopieren & Einfügen)',
+        description: 'Erstellen Sie niedliche Blasenbuchstaben für Posts und Nachrichten. Tippen, Vorschau anzeigen und sofort kopieren. Kostenlos und unbegrenzt.',
+        shortDescription: 'Niedliche Blasenbuchstaben (kopieren & einfügen).',
       }
     },
     schema: createAdvancedSchema('bubble-text', ['Bubble style', 'Instant copy'], 'Text Input', 'Bubble Text', 4.6, 678),
@@ -1541,6 +1849,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Большой Текст — Крупные Буквы для Заголовков',
         description: 'Делайте крупные буквы для заголовков и баннеров. Пишите, просматривайте и копируйте одним кликом. Бесплатно без лимитов.',
         shortDescription: 'Крупные буквы для заголовков.',
+      },
+      de: {
+        title: 'Big Text Generator — Große Buchstaben für Überschriften (Kostenlos)',
+        description: 'Erstellen Sie große Buchstaben für Überschriften, Titel und Banner. Tippen, Vorschau anzeigen, kopieren & einfügen mit einem Klick. Kostenlos und unbegrenzt.',
+        shortDescription: 'Große Buchstaben für Überschriften (kostenlos).',
       }
     },
     schema: createAdvancedSchema('big-text', ['Large letters', 'Instant copy'], 'Text Input', 'Big Text', 4.5, 567),
@@ -1561,6 +1874,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Нижний Индекс — Маленькие Символы X₂ (Копировать)',
         description: 'Создавайте символы нижнего индекса (например, X₂) для математики и научной записи. Пишите, просматривайте и копируйте.',
         shortDescription: 'Нижний индекс (X₂).',
+      },
+      de: {
+        title: 'Tiefgestellter Text Generator — X₂ Kleine Zeichen (Kopieren)',
+        description: 'Erstellen Sie tiefgestellte Zeichen (wie X₂) für Mathematik und wissenschaftliche Notation. Tippen, Vorschau anzeigen und sofort kopieren. Kostenlos und unbegrenzt.',
+        shortDescription: 'Tiefgestellte Zeichen erstellen (X₂).',
       }
     },
     schema: createAdvancedSchema('subscript-text', ['Subscript', 'Instant copy'], 'Text Input', 'Subscript Text', 4.4, 456),
@@ -1581,6 +1899,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Курсив — Наклонный Unicode (Копировать и Вставить)',
         description: 'Делайте наклонный курсивный Unicode‑текст для постов, био и сообщений. Пишите, просматривайте, копируйте мгновенно.',
         shortDescription: 'Курсивный Unicode‑текст (копировать).',
+      },
+      de: {
+        title: 'Kursivtext Generator — Schräger Unicode (Kopieren & Einfügen)',
+        description: 'Erstellen Sie schrägen kursiven Unicode-Text für Posts, Bios und Nachrichten. Tippen, Vorschau anzeigen, kopieren & einfügen sofort. Kostenlos und unbegrenzt.',
+        shortDescription: 'Kursiver Unicode-Text (kopieren & einfügen).',
       }
     },
     schema: createAdvancedSchema('italic-text', ['Italic style', 'Instant copy'], 'Text Input', 'Italic Text', 4.7, 789),
@@ -1601,6 +1924,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Невидимый Текст — Пустые Символы (Копировать)',
         description: 'Создавайте невидимые символы и пустые пробелы (нулевой ширины) для форматирования и отступов. Копируйте мгновенно.',
         shortDescription: 'Пустые символы (копировать).',
+      },
+      de: {
+        title: 'Unsichtbarer Text Generator — Leere/Unsichtbare Zeichen (Kopieren)',
+        description: 'Erstellen Sie unsichtbare Zeichen und Leerzeichen (Null-Breite) für Formatierung und Abstände. Sofort kopieren & einfügen.',
+        shortDescription: 'Leere/unsichtbare Zeichen (kopieren).',
       }
     },
     schema: createAdvancedSchema('invisible-text', ['Invisible chars', 'Zero-width spaces'], 'Text Input', 'Invisible Text', 4.0, 267),
@@ -1622,6 +1950,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Замена Текста — Поиск и Замена Онлайн',
         description: 'Находите и заменяйте текст в документах, коде или любом тексте. Поддержка регистро-зависимого поиска, regex-паттернов и массовой замены.',
         shortDescription: 'Поиск и замена текста с расширенными опциями.',
+      },
+      de: {
+        title: 'Text Ersetzen — Suchen und Ersetzen Online',
+        description: 'Suchen und ersetzen Sie Text in Dokumenten, Code oder beliebigem Text. Unterstützung für groß-/kleinschreibungsabhängige Suche, Regex-Muster und Massenersetzung.',
+        shortDescription: 'Text mit erweiterten Optionen suchen und ersetzen.',
       }
     },
     schema: createAdvancedSchema('text-replace', ['Find and replace', 'Case sensitive', 'Regex support', 'Bulk replacement'], 'Text Input', 'Replaced Text', 4.6, 678),
@@ -1642,6 +1975,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Счётчик Текста — Символы, Слова, Строки и Другое',
         description: 'Считайте символы, слова, строки, предложения и абзацы в любом тексте. Получайте детальную статистику включая время чтения и частоту символов.',
         shortDescription: 'Счётчик символов, слов, строк и статистика текста.',
+      },
+      de: {
+        title: 'Textzähler — Zeichen, Wörter, Zeilen & Mehr Zählen',
+        description: 'Zählen Sie Zeichen, Wörter, Zeilen, Sätze und Absätze in beliebigem Text. Erhalten Sie detaillierte Statistiken einschließlich Lesezeit und Zeichenhäufigkeit.',
+        shortDescription: 'Zeichen, Wörter, Zeilen zählen und Textstatistiken erhalten.',
       }
     },
     schema: createAdvancedSchema('text-counter', ['Character count', 'Word count', 'Line count', 'Reading time', 'Statistics'], 'Text Input', 'Text Statistics', 4.7, 789),
@@ -1662,6 +2000,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Генератор Проклятого Текста — Unicode Стилизация',
         description: 'Создавайте проклятый, стилизованный текст с помощью Unicode символов. Уникальные шрифты для соцсетей, ников и креативных проектов.',
         shortDescription: 'Генератор проклятого Unicode текста для соцсетей.',
+      },
+      de: {
+        title: 'Verfluchter Text Generator — Unicode Stilisierter Text',
+        description: 'Generieren Sie verfluchten, stilisierten Text mit Unicode-Zeichen. Erstellen Sie einzigartige Schriftarten für Social Media, Benutzernamen und kreative Projekte.',
+        shortDescription: 'Verfluchten Unicode-Text für Social Media generieren.',
       }
     },
     schema: createAdvancedSchema('cursed-text', ['Unicode text', 'Stylish fonts', 'Social media ready', 'Creative styling'], 'Text Input', 'Cursed Text', 4.3, 389),
@@ -1682,6 +2025,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Извлечение Email из Текста — Бесплатный Экстрактор Email',
         description: 'Извлекайте и проверяйте email адреса из любого текста с помощью нашего бесплатного онлайн инструмента. Находите email в документах, веб-страницах и текстовых блоках.',
         shortDescription: 'Извлекайте и проверяйте email из текста с расширенными опциями.',
+      },
+      de: {
+        title: 'E-Mails aus Text Extrahieren — Kostenloser E-Mail-Extraktor',
+        description: 'Extrahieren und validieren Sie E-Mail-Adressen aus jedem Text mit unserem kostenlosen Online-Tool. Finden Sie E-Mails in Dokumenten, Webseiten und Textblöcken mit erweiterten Filteroptionen.',
+        shortDescription: 'E-Mails aus Text extrahieren und validieren mit erweiterten Optionen.',
       }
     },
     schema: createAdvancedSchema('extract-emails-from-text', ['Email extraction', 'Email validation', 'Multiple formats', 'Domain analysis', 'Duplicate removal'], 'Text Input', 'Extracted Emails', 4.6, 789),
@@ -1702,6 +2050,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Извлечение Email из PDF — Бесплатный Экстрактор Email из PDF',
         description: 'Загружайте PDF файлы и извлекайте email адреса с помощью нашего бесплатного онлайн инструмента. Обрабатывайте документы до 10МБ с расширенными возможностями фильтрации, проверки и экспорта.',
         shortDescription: 'Извлекайте и проверяйте email из PDF файлов с расширенной обработкой.',
+      },
+      de: {
+        title: 'E-Mails aus PDF Extrahieren — Kostenloser PDF-E-Mail-Extraktor',
+        description: 'Laden Sie PDF-Dateien hoch und extrahieren Sie E-Mail-Adressen mit unserem kostenlosen Online-Tool. Verarbeiten Sie Dokumente bis zu 10MB mit erweiterten Filter-, Validierungs- und Exportoptionen.',
+        shortDescription: 'E-Mails aus PDF-Dateien mit erweiterter Verarbeitung extrahieren und validieren.',
       }
     },
     schema: createAdvancedSchema('extract-emails-from-pdf', ['PDF processing', 'Email extraction', 'Document parsing', 'Email validation', 'File upload'], 'PDF File Upload', 'Extracted Emails', 4.7, 456),
@@ -1722,6 +2075,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Извлечь Числа из Текста – Бесплатный Онлайн Экстрактор Чисел',
         description: 'Вставьте текст и мгновенно извлеките числа (целые, десятичные, отрицательные, валюту, проценты). Опции для уникальных значений, CSV экспорта, суммы/среднего и извлечения телефонных номеров.',
         shortDescription: 'Извлечение чисел из текста с расширенными опциями и статистикой.',
+      },
+      de: {
+        title: 'Zahlen aus Text Extrahieren – Kostenloser Online-Zahlenextraktor',
+        description: 'Fügen Sie Text ein und extrahieren Sie sofort Zahlen (Ganzzahlen, Dezimalzahlen, negative Zahlen, Währungen, Prozentsätze). Optionen für eindeutige Werte, CSV-Export, Summe/Durchschnitt und Telefonnummer-Extraktion.',
+        shortDescription: 'Zahlen aus Text mit erweiterten Optionen und Statistiken extrahieren.',
       }
     },
     schema: createAdvancedSchema('extract-numbers', ['Number extraction', 'Phone detection', 'Currency handling', 'Statistics', 'CSV export'], 'Text Input', 'Extracted Numbers', 4.6, 678),
@@ -1742,6 +2100,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер CamelCase – Текст и Ключи JSON (Snake → camelCase Онлайн)',
         description: 'Преобразуйте текст, идентификаторы и ключи JSON в camelCase онлайн. Вставьте текст или JSON, обрабатывайте вложенные объекты/массивы, сохраняйте акронимы и переключайтесь между snake_case, kebab-case, PascalCase и camelCase.',
         shortDescription: 'Преобразование текста и ключей JSON в camelCase с расширенными опциями.',
+      },
+      de: {
+        title: 'Camel Case Converter – Text & JSON-Schlüssel (Snake → camelCase Online)',
+        description: 'Konvertieren Sie Text, Bezeichner und JSON-Schlüssel online in camelCase. Fügen Sie Text oder JSON ein, verarbeiten Sie verschachtelte Objekte/Arrays, behalten Sie Akronyme bei und wechseln Sie zwischen snake_case, kebab-case, PascalCase und camelCase.',
+        shortDescription: 'Text und JSON-Schlüssel mit erweiterten Optionen in camelCase konvertieren.',
       }
     },
     schema: createAdvancedSchema('camel-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'Multiple case styles'], 'Text/JSON Input', 'camelCase Output', 4.7, 892),
@@ -1762,6 +2125,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер Snake Case – camelCase и Текст в snake_case (Онлайн)',
         description: 'Конвертируйте текст, идентификаторы и ключи JSON в snake_case онлайн. Вставьте текст или JSON, обрабатывайте вложенные объекты, сохраняйте акронимы и опционально конвертируйте обратно в camelCase или UPPER_SNAKE_CASE.',
         shortDescription: 'Преобразование текста и ключей JSON в snake_case с расширенными опциями.',
+      },
+      de: {
+        title: 'Snake Case Converter – camelCase & Text zu snake_case (Online)',
+        description: 'Konvertieren Sie Text, Bezeichner und JSON-Schlüssel online in snake_case. Fügen Sie Text oder JSON ein, verarbeiten Sie verschachtelte Objekte, bewahren Sie Akronyme und konvertieren Sie optional zurück zu camelCase oder UPPER_SNAKE_CASE.',
+        shortDescription: 'Text und JSON-Schlüssel mit erweiterten Optionen in snake_case konvertieren.',
       }
     },
     schema: createAdvancedSchema('snake-case-converter', ['Text conversion', 'JSON key transformation', 'Nested object support', 'Acronym preservation', 'UPPER_SNAKE_CASE support'], 'Text/JSON Input', 'snake_case Output', 4.7, 856),
@@ -1782,6 +2150,11 @@ const overrides: Array<ToolMetadataConfig> = [
         title: 'Конвертер Kebab Case – Конвертация camelCase/snake_case ↔ kebab-case',
         description: 'Бесплатный онлайн конвертер kebab case для текста и ключей JSON. Конвертируйте camelCase, snake_case и kebab-case в обоих направлениях. Вставьте текст или JSON, выберите целевой регистр.',
         shortDescription: 'Конвертация между kebab-case, camelCase и snake_case с поддержкой JSON.',
+      },
+      de: {
+        title: 'Kebab Case Konverter – camelCase/snake_case ↔ kebab-case (Text & JSON)',
+        description: 'Kostenloser Online-Kebab-Case-Konverter für Text und JSON-Schlüssel. Konvertieren Sie camelCase, snake_case und kebab-case in beide Richtungen. Text oder JSON einfügen, Zielformat wählen, sofort exportieren.',
+        shortDescription: 'Konvertierung zwischen kebab-case, camelCase und snake_case mit JSON-Unterstützung.',
       }
     },
     schema: createAdvancedSchema(
@@ -1821,7 +2194,7 @@ const CATEGORY_SLUGS: string[] = [
   'misc-tools','random-generators','code-data-translation','text-modification-formatting','analysis-counter-tools','image-tools','social-media-text-generators','convert-case-tools'
 ];
 
-function buildDefaultI18n(slug: string): Record<SupportedLocale, LocalizedMetadataFields> {
+function buildDefaultI18n(slug: string): { en: LocalizedMetadataFields; ru?: LocalizedMetadataFields; de?: LocalizedMetadataFields } {
   const readable = slug.replace(/-/g, ' ');
   const titleEn = `${readable.charAt(0).toUpperCase()}${readable.slice(1)} — Free Online Tool`;
   const titleRu = `${readable.charAt(0).toUpperCase()}${readable.slice(1)} — Онлайн Инструмент`;
@@ -1880,6 +2253,11 @@ if (!registry.has('tools')) {
         title: 'Все Бесплатные Онлайн Инструменты — Текст, Код, Изображения',
         description: 'Просматривайте все бесплатные онлайн инструменты в одном месте: форматирование текста, генераторы случайных данных, конвертеры кода/данных, инструменты для изображений и другое.',
         shortDescription: 'Все бесплатные инструменты в одном месте.',
+      },
+      de: {
+        title: 'Alle Kostenlosen Online-Werkzeuge — Text, Code, Bild, Utilities',
+        description: 'Durchsuchen Sie alle kostenlosen Online-Werkzeuge an einem Ort. Textformatierung, Zufallsgeneratoren, Code-/Datenkonverter, Bildwerkzeuge und mehr.',
+        shortDescription: 'Alle kostenlosen Online-Werkzeuge an einem Ort.',
       }
     },
     schema: createCategorySchema('tools', 64, 'All Tools')
@@ -1902,6 +2280,11 @@ if (!registry.has('home')) {
         title: 'Text Case Converter — Бесплатные Текстовые, Кодовые и Графические Инструменты',
         description: 'Профессиональные инструменты: преобразование регистра, генераторы случайных данных, конвертеры кода/данных и инструменты для изображений. Бесплатно и без ограничений.',
         shortDescription: 'Бесплатные инструменты для текста, кода и изображений.',
+      },
+      de: {
+        title: 'Text Case Converter — Kostenlose Text-, Code- und Bildwerkzeuge',
+        description: 'Professionelle Text- und Utility-Werkzeuge: Fall-Konverter, Zufallsgeneratoren, Code-/Datenkonverter und Bildwerkzeuge. Kostenlos und unbegrenzt.',
+        shortDescription: 'Kostenlose Text-, Code- und Bildwerkzeuge. Keine Limits.',
       }
     },
     schema: createCategorySchema('home', 64, 'Text Case Converter')
@@ -1924,6 +2307,11 @@ if (!registry.has('home')) {
             title: 'О нас — Text Case Converter',
             description: 'Узнайте о Text Case Converter: наша миссия, стандарты качества и инструменты для разработчиков и создателей.',
             shortDescription: 'О Text Case Converter и нашей миссии.'
+          },
+          de: {
+            title: 'Über uns — Text Case Converter',
+            description: 'Erfahren Sie mehr über Text Case Converter: unsere Mission, Qualitätsstandards und die Werkzeuge, die wir für Entwickler und Ersteller entwickeln.',
+            shortDescription: 'Über Text Case Converter und unsere Mission.'
           }
         },
         schema: createStaticPageSchema('about-us', 'About Us')
@@ -1942,6 +2330,11 @@ if (!registry.has('home')) {
             title: 'Связаться с нами — Text Case Converter',
             description: 'Свяжитесь с командой Text Case Converter: отзывы, поддержка или партнерство.',
             shortDescription: 'Свяжитесь с командой Text Case Converter.'
+          },
+          de: {
+            title: 'Kontakt — Text Case Converter',
+            description: 'Kontaktieren Sie das Text Case Converter-Team für Feedback, Support oder Partnerschaftsanfragen.',
+            shortDescription: 'Kontaktieren Sie das Text Case Converter-Team.'
           }
         },
         schema: createStaticPageSchema('contact-us', 'Contact Us')
@@ -1960,6 +2353,11 @@ if (!registry.has('home')) {
             title: 'Политика конфиденциальности — Text Case Converter',
             description: 'Политика конфиденциальности Text Case Converter. Как мы обрабатываем данные с приоритетом приватности. Контент позже.',
             shortDescription: 'Информация о политике конфиденциальности.'
+          },
+          de: {
+            title: 'Datenschutzrichtlinie — Text Case Converter',
+            description: 'Datenschutzrichtlinie für Text Case Converter. Erfahren Sie, wie wir Daten mit Datenschutz an erster Stelle behandeln.',
+            shortDescription: 'Informationen zur Datenschutzrichtlinie.'
           }
         },
         schema: createStaticPageSchema('privacy-policy', 'Privacy Policy')
@@ -1978,6 +2376,11 @@ if (!registry.has('home')) {
             title: 'Условия использования — Text Case Converter',
             description: 'Условия использования Text Case Converter. Подробности об использовании наших сервисов. Контент позже.',
             shortDescription: 'Информация об условиях использования.'
+          },
+          de: {
+            title: 'Nutzungsbedingungen — Text Case Converter',
+            description: 'Nutzungsbedingungen für Text Case Converter. Details über die Nutzung unserer Dienste.',
+            shortDescription: 'Informationen zu den Nutzungsbedingungen.'
           }
         },
         schema: createStaticPageSchema('terms-of-service', 'Terms of Service')
@@ -2004,6 +2407,11 @@ if (!registry.has('not-found')) {
         title: 'Страница Не Найдена — Text Case Converter',
         description: 'Страница не существует. Вернитесь на главную или посмотрите все инструменты.',
         shortDescription: 'Страница не найдена. Посмотрите все инструменты.',
+      },
+      de: {
+        title: 'Seite Nicht Gefunden — Text Case Converter',
+        description: 'Die gesuchte Seite existiert nicht. Kehren Sie zur Startseite zurück oder erkunden Sie alle Werkzeuge.',
+        shortDescription: 'Seite nicht gefunden. Alle Werkzeuge erkunden.',
       }
     },
     schema: { type: 'CollectionPage', applicationCategory: 'UtilityApplication' }
@@ -2027,7 +2435,8 @@ export function getToolMetadataLocalized(slug: string, locale: SupportedLocale):
 export function validateRegistry(): ValidationIssue[] {
   const issues: ValidationIssue[] = [];
   for (const [slug, conf] of registry.entries()) {
-    for (const locale of (['en', 'ru'] as SupportedLocale[])) {
+    // Only validate required locales (en is required, ru/de are optional)
+    for (const locale of (['en'] as SupportedLocale[])) {
       const loc = conf.i18n[locale];
       if (!loc) {
         issues.push({ slug, locale, field: 'title', message: 'Missing locale block' });

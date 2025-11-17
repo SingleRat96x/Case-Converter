@@ -264,5 +264,138 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Unsichtbarer Text Generator - Null-Breite Zeichen",
+    "metaDescription": "Generieren Sie unsichtbaren Text mit Null-Breite Zeichen und Unicode. Erstellen Sie steganographischen Text, versteckte Nachrichten und Leerzeichenzeichen für spezielle Formatierungsbedürfnisse.",
+    "sections": {
+      "intro": {
+        "title": "Unsichtbarer Text Generator Tool",
+        "content": "Generieren Sie unsichtbaren Text mit Null-Breite Zeichen und unsichtbaren Unicode-Zeichen. Perfekt für Steganographie, versteckte Nachrichten, spezielle Formatierung oder zum Erstellen von Text, der leer erscheint, aber versteckte Daten enthält. Unser Tool unterstützt mehrere Methoden zum Erstellen wirklich unsichtbaren Texts."
+      },
+      "features": {
+        "title": "Unsichtbare Text-Generierungs-Funktionen",
+        "items": [
+          { "title": "Null-Breite Zeichen", "description": "Fügen Sie Null-Breite Leerzeichen, Verbinder und Nicht-Verbinder zwischen Textzeichen ein" },
+          { "title": "Unicode Unsichtbar", "description": "Verwenden Sie Funktionsanwendungen und unsichtbare Operatoren aus Unicode" },
+          { "title": "Zeichenstatistiken", "description": "Verfolgen Sie sichtbare, unsichtbare und Gesamtzeichenanzahl in Echtzeit" },
+          { "title": "Methodenauswahl", "description": "Wählen Sie zwischen Null-Breite und Unicode unsichtbaren Zeichenmethoden" },
+          { "title": "Echtzeit-Vorschau", "description": "Sehen Sie Zeichenanzahl-Updates während Sie tippen oder Methoden ändern" },
+          { "title": "Direktes Kopieren", "description": "Kopieren Sie unsichtbaren Text direkt mit einem Klick" },
+          { "title": "Datei-Upload", "description": "Verarbeiten Sie Textdateien, um unsichtbare Zeichen hinzuzufügen" },
+          { "title": "Ergebnisse Herunterladen", "description": "Speichern Sie unsichtbaren Text als Dateien zur späteren Verwendung" },
+          { "title": "Plattformübergreifend", "description": "Funktioniert auf allen Plattformen und Texteditoren" }
+        ]
+      },
+      "useCases": {
+        "title": "Kreative Verwendungen für Unsichtbaren Text",
+        "description": "Unsichtbarer Text hat verschiedene legitime Anwendungen in digitalen Inhalten und Formatierung.",
+        "items": [
+          { "title": "Steganographie", "description": "Verstecken Sie Nachrichten in scheinbar normalem Text" },
+          { "title": "Textformatierung", "description": "Erstellen Sie präzise Abstände in Webinhalten und Dokumenten" },
+          { "title": "Datenanalyse", "description": "Fügen Sie unsichtbare Markierungen für Tracking und Analyse hinzu" },
+          { "title": "Unicode-Tests", "description": "Testen Sie, wie Systeme unsichtbare Unicode-Zeichen handhaben" },
+          { "title": "Typografie", "description": "Feinabstimmung des Textlayouts mit unsichtbaren Abstandshaltern" },
+          { "title": "Webentwicklung", "description": "Erstellen Sie unsichtbare Trennzeichen in HTML-Inhalten" },
+          { "title": "Dokumentensicherheit", "description": "Fügen Sie unsichtbare Wasserzeichen zu Textdokumenten hinzu" },
+          { "title": "Forschung", "description": "Studieren Sie Textverarbeitung und Zeichenbehandlungssysteme" }
+        ]
+      },
+      "howToUse": {
+        "title": "So Generieren Sie Unsichtbaren Text",
+        "description": "Folgen Sie diesen Schritten, um Text mit unsichtbaren Zeichen zu erstellen.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Text Eingeben",
+            "description": "Geben Sie Ihren Text in das Eingabefeld ein oder fügen Sie ihn ein, oder laden Sie eine Textdatei hoch."
+          },
+          {
+            "step": 2,
+            "title": "Methode Wählen", 
+            "description": "Wählen Sie zwischen Null-Breite oder Unicode unsichtbaren Zeichenmethoden."
+          },
+          {
+            "step": 3,
+            "title": "Statistiken Anzeigen",
+            "description": "Überwachen Sie sichtbare, unsichtbare und Gesamtzeichenanzahl in Echtzeit."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen",
+            "description": "Kopieren Sie den unsichtbaren Text direkt oder laden Sie ihn als Datei herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Unsichtbare Text Beispiele",
+        "description": "Sehen Sie, wie unsichtbare Zeichen mit verschiedenen Texttypen funktionieren.",
+        "items": [
+          { "title": "Einfacher Text", "input": "Hallo Welt", "output": "H‌a‍l‌l‍o W‌e‍l‌t (mit unsichtbaren Zeichen)" },
+          { "title": "Zahlen", "input": "12345", "output": "1‌2‍3‌4‍5 (mit Null-Breite Leerzeichen)" },
+          { "title": "E-Mail-Adresse", "input": "user@beispiel.de", "output": "Unsichtbare Zeichen zwischen jedem Buchstaben" },
+          { "title": "Code-Snippet", "input": "function()", "output": "Versteckte Zeichen für Steganographie" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Unsichtbaren Text Generator Verwenden",
+        "content": "Professionelle unsichtbare Textgenerierung mit mehreren Methoden und detaillierter Analytik.",
+        "items": [
+          "Zwei verschiedene unsichtbare Zeichenmethoden",
+          "Echtzeit-Zeichenzählstatistiken",
+          "Unsichtbaren Text mit einem Klick kopieren",
+          "Datei-Upload und Download-Unterstützung",
+          "Funktioniert mit allen Unicode-Texten",
+          "Keine Registrierung erforderlich - völlig kostenlos"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Was sind Null-Breite Zeichen?",
+          "answer": "Null-Breite Zeichen sind Unicode-Zeichen, die keinen visuellen Raum einnehmen, aber dennoch im Text vorhanden sind. Sie umfassen Null-Breite Leerzeichen (U+200B), Null-Breite Nicht-Verbinder (U+200C) und Null-Breite Verbinder (U+200D)."
+        },
+        {
+          "question": "Ist die Verwendung unsichtbarer Zeichen sicher?",
+          "answer": "Ja, unsichtbare Zeichen sind Standard-Unicode-Zeichen. Beachten Sie jedoch, dass einige Systeme sie herausfiltern oder anders anzeigen können."
+        },
+        {
+          "question": "Kann unsichtbarer Text erkannt werden?",
+          "answer": "Ja, unsichtbare Zeichen können durch Untersuchung der Unicode-Codepunkte oder mit Textanalyse-Tools erkannt werden. Sie sind nicht wirklich versteckt, nur visuell unsichtbar."
+        },
+        {
+          "question": "Funktioniert unsichtbarer Text in allen Anwendungen?",
+          "answer": "Die meisten modernen Anwendungen und Browser unterstützen unsichtbare Unicode-Zeichen, aber das Verhalten kann variieren. Einige Anwendungen können diese Zeichen filtern oder normalisieren."
+        },
+        {
+          "question": "Was ist der Unterschied zwischen den beiden Methoden?",
+          "answer": "Die Null-Breite Methode verwendet Leerzeichen und Verbinder, während die Unicode-Methode Funktionsanwendungsoperatoren verwendet. Beide erzeugen unsichtbaren Text, aber mit unterschiedlichen Zeichencodes."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Textgenerierungs-Tools",
+        "items": [
+          {
+            "name": "Text Zähler",
+            "description": "Zählen Sie Zeichen, Wörter und analysieren Sie Textstatistiken",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Unicode Konverter", 
+            "description": "Konvertieren Sie Text in Unicode-Escape-Sequenzen",
+            "href": "/de/tools/unicode-converter"
+          },
+          {
+            "name": "Text Kodierer",
+            "description": "Kodieren und dekodieren Sie Text in verschiedenen Formaten",
+            "href": "/de/tools/text-encoder"
+          },
+          {
+            "name": "Binär-Übersetzer",
+            "description": "Konvertieren Sie Text in Binär und zurück",
+            "href": "/de/tools/binary-code-translator"
+          }
+        ]
+      }
+    }
   }
 }

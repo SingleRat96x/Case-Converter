@@ -268,7 +268,7 @@ ${extractedNumbers}`;
       mobileLayout="2x2"
       onDownloadPrimary={handleDownloadCSV}
       onDownloadSecondary={handleDownloadText}
-      downloadSecondaryText="Download TXT"
+      downloadSecondaryText={tool('extractNumbers.downloadTXT', 'Download TXT')}
       showSecondaryDownload={true}
     >
       <div className="space-y-3">

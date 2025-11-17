@@ -17,9 +17,11 @@ export function ChangelogContent() {
   const baseUrl = typeof window !== 'undefined' 
     ? window.location.origin 
     : process.env.NEXT_PUBLIC_BASE_URL || 'https://textcaseconverter.net';
-  const feedUrl = currentLocale === 'en' 
-    ? `${baseUrl}/changelog/feed.xml` 
-    : `${baseUrl}/ru/changelog/feed.xml`;
+  const feedUrl = currentLocale === 'en'
+    ? `${baseUrl}/changelog/feed.xml`
+    : currentLocale === 'ru'
+      ? `${baseUrl}/ru/changelog/feed.xml`
+      : `${baseUrl}/de/changelog/feed.xml`;
 
   const handleCopyFeed = async () => {
     try {
@@ -68,6 +70,12 @@ export function ChangelogContent() {
     {
       title: t('sample.month1.title'),
       entries: [
+        {
+          type: t('sample.month1.entries.0.type'),
+          title: t('sample.month1.entries.0.title'),
+          description: t('sample.month1.entries.0.description'),
+          date: t('sample.month1.entries.0.date')
+        },
         {
           type: t('sample.month1.entries.1.type'),
           title: t('sample.month1.entries.1.title'),

@@ -280,5 +280,146 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloser Phonetischer Schreibweise-Generator - Text in Phonetisches Alphabet Konvertieren",
+    "metaDescription": "Konvertieren Sie Text in phonetische Schreibweise mit mehreren Formaten, einschließlich IPA, einfachen Buchstabennamen, lautbasierter Schreibweise und NATO-Phonetischem Alphabet. Bidirektionale Konvertierung für Ausspracheführer, Sprachlernen und klare Kommunikation.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Phonetischer Schreibweise-Generator & Konverter",
+        "content": "Konvertieren Sie Text in phonetische Schreibweise und umgekehrt mit unserem umfassenden phonetischen Generator. Unterstützung für mehrere Formate, einschließlich Internationalem Phonetischem Alphabet (IPA), einfachen Buchstabennamen, lautbasierter Schreibweise und NATO-Phonetischem Alphabet. Perfekt für Ausspracheführer, Sprachlernen, Sprachtherapie und klare Kommunikation in verschiedenen Kontexten."
+      },
+      "features": {
+        "title": "Erweiterte Phonetische Konvertierungsfunktionen",
+        "items": [
+          { "title": "Mehrere Phonetische Formate", "description": "Wählen Sie aus IPA, einfachen Buchstabennamen, lautbasierter Schreibweise und NATO-Phonetischem Alphabet" },
+          { "title": "Bidirektionale Konvertierung", "description": "Konvertieren Sie Text in phonetische Schreibweise und phonetische Schreibweise nahtlos zurück in Text" },
+          { "title": "Auto-Format-Erkennung", "description": "Erkennen Sie automatisch das phonetische Format im Eingabetext für genaue Rückkonvertierung" },
+          { "title": "Echtzeit-Verarbeitung", "description": "Sofortige Konvertierung während der Eingabe mit Live-Vorschau und Formatwechsel" },
+          { "title": "IPA-Symbol-Unterstützung", "description": "Vollständige Unterstützung des Internationalen Phonetischen Alphabets für genaue Ausspracheführer" },
+          { "title": "NATO-Phonetische Integration", "description": "Militärischer und luftfahrttechnischer Standard-Phonetisches Alphabet für klare Kommunikation" },
+          { "title": "Lautbasierte Schreibweise", "description": "Vereinfachen Sie die Schreibweise basierend auf tatsächlichen Aussprachemustern" },
+          { "title": "Bildungswert", "description": "Perfekt für Sprachlernen, Aussprachepraxis und Sprachtherapie" },
+          { "title": "Datei-Upload-Unterstützung", "description": "Konvertieren Sie ganze Dokumente mit Stapelverarbeitungsfunktionen" }
+        ]
+      },
+      "useCases": {
+        "title": "Perfekt für Bildung, Kommunikation & Barrierefreiheit",
+        "description": "Unser phonetischer Schreibweise-Generator dient mehreren professionellen und bildungsbezogenen Zwecken.",
+        "items": [
+          { "title": "Sprachlernen", "description": "Helfen Sie Schülern, die richtige Aussprache mit phonetischen Führern zu lernen" },
+          { "title": "Sprachtherapie", "description": "Erstellen Sie Ausspracheübungen und Therapiematerialien" },
+          { "title": "Lehrmittel", "description": "Entwickeln Sie Bildungsinhalte mit klaren Ausspracheführern" },
+          { "title": "Kommunikationshilfen", "description": "Unterstützen Sie Menschen mit Sprachschwierigkeiten oder Hörbeeinträchtigungen" },
+          { "title": "Funkkommunikation", "description": "Verwenden Sie NATO-Phonetisch für klare Sprachkommunikation" },
+          { "title": "Linguistische Forschung", "description": "Analysieren Sie phonetische Muster und Aussprachevariationen" },
+          { "title": "Wörterbucherstellung", "description": "Fügen Sie phonetische Aussprachen zu Wortschatzressourcen hinzu" },
+          { "title": "Fremdsprachenunterstützung", "description": "Helfen Sie Nicht-Muttersprachlern mit Ausspracheführern" }
+        ]
+      },
+      "howToUse": {
+        "title": "So verwenden Sie den Phonetischen Schreibweise-Generator",
+        "description": "Befolgen Sie diese einfachen Schritte, um zwischen Text- und phonetischen Schreibweise-Formaten zu konvertieren.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Wählen Sie den Konvertierungsmodus",
+            "description": "Wählen Sie, ob Sie Text in phonetische Schreibweise konvertieren oder phonetische Schreibweise zurück in Text konvertieren möchten, indem Sie den Modus-Umschalter verwenden."
+          },
+          {
+            "step": 2,
+            "title": "Wählen Sie das Phonetische Format",
+            "description": "Wählen Sie aus IPA, einfachen Buchstabennamen, lautbasierter Schreibweise oder NATO-Phonetischem Alphabet basierend auf Ihren Bedürfnissen."
+          },
+          {
+            "step": 3,
+            "title": "Geben Sie Ihren Text ein",
+            "description": "Geben Sie Ihren Text ein oder fügen Sie ihn ein, oder laden Sie eine Datei hoch. Beobachten Sie die Echtzeit-Konvertierung während der Eingabe."
+          },
+          {
+            "step": 4,
+            "title": "Kopieren oder Herunterladen der Ergebnisse",
+            "description": "Kopieren Sie den konvertierten Text in die Zwischenablage oder laden Sie ihn als Datei für die zukünftige Verwendung herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für Phonetische Schreibweise-Konvertierung",
+        "description": "Sehen Sie, wie verschiedene phonetische Formate denselben Text für verschiedene Anwendungsfälle verarbeiten.",
+        "items": [
+          { "title": "Einfaches Format", "input": "hallo welt", "output": "ha ach ell ell oh / weh eh ell teh", "description": "Buchstabennamen-Aussprache" },
+          { "title": "NATO-Phonetisch", "input": "hilfe", "output": "Hotel India Lima Papa Echo", "description": "Militärischer/Luftfahrt-Standard" },
+          { "title": "IPA-Format", "input": "katze", "output": "ˈkatsə", "description": "Internationales Phonetisches Alphabet" },
+          { "title": "Lautbasiert", "input": "telefon", "output": "telefon", "description": "Vereinfachte Aussprache-Schreibweise" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum Unseren Phonetischen Schreibweise-Generator Verwenden",
+        "content": "Professionelle phonetische Konvertierung mit Unterstützung mehrerer Formate und Bildungsfunktionen.",
+        "items": [
+          "Unterstützung mehrerer phonetischer Formate in einem Tool",
+          "Bidirektionale Konvertierungsfähigkeiten",
+          "Echtzeit-Verarbeitung mit sofortigen Ergebnissen",
+          "Auto-Erkennung phonetischer Formate",
+          "Bildungswert für Sprachlernen",
+          "Barrierefreiheitsunterstützung für Kommunikationshilfen",
+          "Professionelle IPA-Symbol-Genauigkeit",
+          "Mobil-responsive Interface-Gestaltung",
+          "Kostenlose unbegrenzte Nutzung ohne Registrierung",
+          "Datenschutzorientierte Verarbeitung - keine Datenspeicherung"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche phonetischen Formate werden unterstützt?",
+          "answer": "Unser Tool unterstützt vier Hauptformate: Internationales Phonetisches Alphabet (IPA) für genaue Aussprache, Einfache Buchstabennamen (bee, see, dee), Lautbasierte Schreibweise (vereinfachte Aussprache) und NATO-Phonetisches Alphabet (Alpha, Bravo, Charlie) für klare Kommunikation."
+        },
+        {
+          "question": "Kann ich phonetische Schreibweise zurück in normalen Text konvertieren?",
+          "answer": "Ja! Unser Tool unterstützt bidirektionale Konvertierung. Sie können normalen Text in phonetische Schreibweise konvertieren und auch phonetische Schreibweise zurück in normalen Text konvertieren. Die Auto-Erkennungsfunktion hilft, das phonetische Format automatisch zu identifizieren."
+        },
+        {
+          "question": "Ist dieses Tool für Sprachlernen geeignet?",
+          "answer": "Absolut! Unser phonetischer Schreibweise-Generator ist perfekt für Sprachlernen, Aussprachepraxis, Sprachtherapie und Unterricht. Die mehreren Formatoptionen richten sich an verschiedene Lernstile und Bildungsbedürfnisse."
+        },
+        {
+          "question": "Wie genau ist die IPA-Konvertierung?",
+          "answer": "Unsere IPA-Konvertierung verwendet Standard-Internationale Phonetische Alphabet-Symbole und folgt etablierten Aussprachemustern. Während sie gute Annäherungen für gängige englische Laute bietet, kann eine komplexe phonetische Analyse spezialisierte linguistische Tools erfordern."
+        },
+        {
+          "question": "Kann ich dies für professionelle Kommunikation verwenden?",
+          "answer": "Ja, insbesondere das NATO-Phonetische Alphabet-Format, das der internationale Standard für Funkkommunikation in der Luftfahrt, im Militär und in Notdiensten ist. Es gewährleistet klare Kommunikation, wenn die Audioqualität schlecht ist."
+        },
+        {
+          "question": "Funktioniert das Tool mit hochgeladenen Dateien?",
+          "answer": "Ja, Sie können Textdateien in gängigen Formaten (.txt, .md usw.) für Stapelkonvertierung hochladen. Dies ist nützlich, um ganze Dokumente oder Bildungsmaterialien in phonetische Schreibweise zu konvertieren."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Kommunikations- & Sprach-Tools",
+        "items": [
+          {
+            "name": "NATO-Phonetisches Alphabet",
+            "description": "Militärischer und luftfahrttechnischer Phonetischer Alphabet-Konverter und Referenz",
+            "href": "/de/tools/nato-phonetic"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Zählen Sie Zeichen, Wörter und analysieren Sie die Textstruktur",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Online Notizblock",
+            "description": "Einfacher Texteditor zum Vorbereiten von Inhalten und Notizen",
+            "href": "/de/tools/online-notepad"
+          },
+          {
+            "name": "ASCII-Art-Generator",
+            "description": "Erstellen Sie visuelle Textkunst und kreative Typografie",
+            "href": "/de/tools/ascii-art-generator"
+          }
+        ]
+      }
+    }
   }
 }

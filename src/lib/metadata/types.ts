@@ -1,5 +1,5 @@
 
-export type SupportedLocale = 'en' | 'ru';
+export type SupportedLocale = 'en' | 'ru' | 'de';
 
 export interface LocalizedMetadataFields {
   title: string; // 30-60 chars recommended
@@ -25,8 +25,8 @@ export type MetadataCategory =
   | 'social-media';
 
 export interface ToolMetadataConfig {
-  // Bilingual localized fields
-  i18n: Record<SupportedLocale, LocalizedMetadataFields>;
+  // Bilingual localized fields (en is required, others optional)
+  i18n: { en: LocalizedMetadataFields; ru?: LocalizedMetadataFields; de?: LocalizedMetadataFields };
 
   // Route information
   slug: string; // e.g., random-number, category slug, etc.

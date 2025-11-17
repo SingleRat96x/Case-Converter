@@ -184,7 +184,7 @@ export function RandomMonthGenerator() {
       
     } catch (error) {
       console.error('Error generating random months:', error);
-      setValidationErrors({ quantity: 'An error occurred while generating months' });
+      setValidationErrors({ quantity: tool('randomMonth.validation.generationError') });
     } finally {
       setIsGenerating(false);
     }

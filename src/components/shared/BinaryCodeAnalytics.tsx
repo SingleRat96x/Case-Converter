@@ -11,6 +11,7 @@ import {
   Percent,
   LucideIcon 
 } from 'lucide-react';
+import { useToolTranslations } from '@/lib/i18n/hooks';
 
 interface BinaryAnalyticsProps {
   input: string;
@@ -36,6 +37,7 @@ export function BinaryCodeAnalytics({
   showTitle = true,
   className = '' 
 }: BinaryAnalyticsProps) {
+  const { tool } = useToolTranslations('tools/code-data');
   
   // Calculate binary-specific statistics
   const analyticsData = React.useMemo((): AnalyticsData[] => {
@@ -49,28 +51,28 @@ export function BinaryCodeAnalytics({
     return [
       {
         key: 'inputChars',
-        label: 'Input Characters',
+        label: tool('binary.analytics.inputChars'),
         value: inputChars,
         icon: FileText,
         color: 'text-blue-600 dark:text-blue-400'
       },
       {
         key: 'outputBits',
-        label: 'Output Bits',
+        label: tool('binary.analytics.outputBits'),
         value: outputBits,
         icon: Binary,
         color: 'text-green-600 dark:text-green-400'
       },
       {
         key: 'bytes',
-        label: 'Bytes',
+        label: tool('binary.analytics.bytes'),
         value: bytes,
         icon: HardDrive,
         color: 'text-purple-600 dark:text-purple-400'
       },
       {
         key: 'compressionRatio',
-        label: 'Size Ratio',
+        label: tool('binary.analytics.sizeRatio'),
         value: `${(compressionRatio * 100).toFixed(1)}%`,
         icon: Percent,
         color: 'text-orange-600 dark:text-orange-400',
@@ -78,20 +80,20 @@ export function BinaryCodeAnalytics({
       },
       {
         key: 'uniqueChars',
-        label: 'Unique Chars',
+        label: tool('binary.analytics.uniqueChars'),
         value: uniqueChars,
         icon: Hash,
         color: 'text-cyan-600 dark:text-cyan-400'
       },
       {
         key: 'bitDensity',
-        label: 'Bit Density',
+        label: tool('binary.analytics.bitDensity'),
         value: `${bitDensity.toFixed(2)}`,
         icon: Activity,
         color: 'text-pink-600 dark:text-pink-400'
       }
     ];
-  }, [input, output]);
+  }, [input, output, tool]);
 
   if (variant === 'compact') {
     return (
@@ -118,7 +120,7 @@ export function BinaryCodeAnalytics({
         <CardHeader className="pb-3">
           <CardTitle className="text-base flex items-center gap-2">
             <Binary className="h-4 w-4" />
-            Binary Code Analytics
+            {tool('binary.analytics.title')}
           </CardTitle>
         </CardHeader>
       )}

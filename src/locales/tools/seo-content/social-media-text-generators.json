@@ -268,5 +268,35 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Social Media Text-Generatoren - Stilisierte Schriftarten für Social Media",
+    "metaDescription": "Kostenlose Social Media Text-Generatoren: Instagram-Schriftarten, Facebook-Schriftarten, Discord-Schriftarten. Erstellen Sie stilisierten Text für Social-Media-Posts und Bios.",
+    "sections": {
+      "intro": {
+        "title": "Stilisierte Text-Generatoren für Social Media-Plattformen",
+        "content": "Erstellen Sie auffälligen, stilisierten Text für Ihre Social-Media-Profile und Posts mit unseren spezialisierten Schriftarten-Generatoren. Perfekt für Instagram-Bios, Facebook-Posts, Discord-Nachrichten und mehr. Alle generierten Texte verwenden Unicode-Zeichen und funktionieren überall."
+      },
+      "toolsList": {
+        "title": "Verfügbare Social Media Text-Generatoren",
+        "items": [
+          {
+            "name": "Instagram-Schriftarten",
+            "href": "/de/tools/instagram-fonts",
+            "description": "Erstellen Sie stilisierte Schriftarten für Instagram-Bios, Bildunterschriften und Stories"
+          },
+          {
+            "name": "Facebook-Schriftarten",
+            "href": "/de/tools/facebook-font",
+            "description": "Generieren Sie einzigartige Schriftarten für Facebook-Posts und Profile"
+          },
+          {
+            "name": "Discord-Schriftarten",
+            "href": "/de/tools/discord-font",
+            "description": "Erstellen Sie formatierte Schriftarten für Discord-Nachrichten und Profile"
+          }
+        ]
+      }
+    }
   }
 }

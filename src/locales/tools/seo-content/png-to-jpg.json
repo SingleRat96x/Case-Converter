@@ -390,5 +390,87 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Kostenloser PNG-zu-JPG-Konverter – Dateigröße reduzieren & Transparenz ersetzen",
+    "metaDescription": "Konvertieren Sie PNG-Bilder online in JPG/JPEG mit Qualitätskontrolle und Hintergrundfarben. Sparen Sie bis zu 90 % Speicherplatz und optimieren Sie Bilder für Web, E-Mails und Print – kostenlos und unbegrenzt.",
+    "sections": {
+      "intro": {
+        "title": "PNG zu JPG – schneller Online-Konverter mit Qualitätskontrolle",
+        "content": "Wandeln Sie Ihre PNGs in JPEG um, reduzieren Sie die Dateigröße und ersetzen Sie transparente Flächen mit Ihrer Wunschfarbe. Ideal für Web-Performance, Newsletter oder Systeme ohne PNG-Unterstützung – alles lokal im Browser."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen",
+        "items": [
+          { "title": "Dateigröße reduzieren", "description": "Verkleinern Sie PNGs um 70–90 % und beschleunigen Sie Ladezeiten, Uploads und E-Mails." },
+          { "title": "Flexible Qualität", "description": "Wählen Sie Max, Hoch, Mittel oder Niedrig – je nach Einsatzzweck und gewünschter Größe." },
+          { "title": "Transparenz behandeln", "description": "Definieren Sie eigene Hintergrundfarben, um transparente Bereiche sauber zu ersetzen." },
+          { "title": "Kompression steuern", "description": "Wählen Sie keine, schnelle oder beste Kompression für optimale Balance aus Tempo und Größe." },
+          { "title": "Direkte Vorschau", "description": "Sehen Sie bereits vor dem Download, wie das JPG aussieht und wie groß es wird." },
+          { "title": "100 % privat", "description": "Keine Uploads – alle Umwandlungen passieren lokal in Ihrem Browser." }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie PNG in JPG",
+        "description": "Vier einfache Schritte:",
+        "steps": [
+          { "step": 1, "title": "PNG hochladen", "description": "Datei per Klick oder Drag & Drop (bis 10 MB)." },
+          { "step": 2, "title": "Qualität & Farbe wählen", "description": "JPEG-Qualität bestimmen, Transparenzfarbe setzen und Kompression auswählen." },
+          { "step": 3, "title": "Ergebnis kontrollieren", "description": "Vorschau und Dateigröße vergleichen." },
+          { "step": 4, "title": "JPG herunterladen", "description": "Einfach speichern oder direkt in die Zwischenablage kopieren." }
+        ]
+      },
+      "examples": {
+        "title": "Typische Ergebnisse",
+        "description": "So profitieren verschiedene Inhalte:",
+        "items": [
+          { "input": "Logo PNG 1200×600 px (800 KB)", "output": "JPG mit weißem Hintergrund (120 KB)", "description": "Perfekt für Web-Logos ohne Alphakanal." },
+          { "input": "Produktfoto PNG 2000×2000 px (2.5 MB)", "output": "JPG High Quality (350 KB)", "description": "Massive Einsparung für Shops & Galerien." },
+          { "input": "Screenshot PNG 1920×1080 px (1.8 MB)", "output": "JPG Medium (180 KB)", "description": "Ideal für Dokumentation und Support." },
+          { "input": "Grafik mit Transparenz", "output": "JPG mit Brandfarbe im Hintergrund", "description": "Einheitliche Darstellung für Präsentationen." }
+        ]
+      },
+      "useCases": {
+        "title": "Einsatzgebiete",
+        "description": "Wann sich die Umwandlung lohnt:",
+        "items": [
+          { "title": "Web-Optimierung", "description": "Kleinere Bilder für schnellere Ladezeiten und bessere Core Web Vitals." },
+          { "title": "E-Mail-Anhänge", "description": "Dateigrößen reduzieren, damit Mails schneller versendet werden." },
+          { "title": "Social Media Uploads", "description": "Richtlinien einhalten und Uploads beschleunigen." },
+          { "title": "Speicher sparen", "description": "Große Archive verschlanken, ohne sichtbar an Qualität zu verlieren." },
+          { "title": "Print & PDFs", "description": "JPEGs für Druckereien oder PDF-Erstellung liefern." },
+          { "title": "Legacy-Kompatibilität", "description": "Systeme versorgen, die keine PNGs akzeptieren." }
+        ]
+      },
+      "benefits": {
+        "title": "Ihre Vorteile",
+        "items": [
+          "Kostenlos & unbegrenzt – ohne Registrierung oder Wasserzeichen",
+          "Verarbeitung bleibt lokal – volle Datenkontrolle",
+          "Smarte Transparenz-Ersatzfarben",
+          "Feintuning via Qualitäts- und Kompressionsoptionen",
+          "Live-Vorschau vor dem Download",
+          "Mobile-optimierte Benutzeroberfläche",
+          "Schnelle Batch-Workflows (Einstellungen bleiben erhalten)"
+        ]
+      },
+      "relatedTools": {
+        "title": "Weitere Bild-Tools",
+        "description": "Ergänzen Sie Ihren Workflow:",
+        "items": [
+          { "name": "JPG zu PNG", "description": "JPGs in PNG mit Transparenz umwandeln.", "href": "/de/tools/jpg-to-png" },
+          { "name": "Bildgrößenänderer", "description": "Pixelmaße vor oder nach der Konvertierung anpassen.", "href": "/de/tools/image-resizer" },
+          { "name": "Bild-Zuschneider", "description": "Motive zuschneiden und ausrichten.", "href": "/de/tools/image-cropper" },
+          { "name": "PNG zu WebP", "description": "PNG direkt in WebP für maximale Kompression umwandeln.", "href": "/de/tools/png-to-webp" }
+        ]
+      },
+      "faqs": [
+        { "question": "Was ist der Unterschied zwischen PNG und JPG?", "answer": "PNG speichert verlustfrei und unterstützt Transparenz, ist aber größer. JPG nutzt verlustbehaftete Kompression, ist deutlich kleiner und ideal für Fotos ohne Transparenz." },
+        { "question": "Geht Qualität verloren?", "answer": "JPG komprimiert, aber Sie entscheiden über den Qualitätsgrad. Mit „Max“ bleiben Details für die meisten Anwendungen erhalten." },
+        { "question": "Was passiert mit transparenten Bereichen?", "answer": "Sie werden durch Ihre gewählte Hintergrundfarbe ersetzt – Voreinstellung ist Weiß, Sie können jede Farbe definieren." },
+        { "question": "Wie viel kleiner wird mein Bild?", "answer": "Je nach Motiv und Einstellung schrumpfen Dateien oft um 60–90 % gegenüber PNG." },
+        { "question": "Werden meine Dateien hochgeladen?", "answer": "Nein. Alles läuft lokal, Ihre Bilder verlassen das Gerät nicht." }
+      ]
+    }
   }
 }

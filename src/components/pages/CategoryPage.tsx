@@ -97,8 +97,14 @@ export function CategoryPage({
 
   // Default breadcrumbs if none provided
   const defaultBreadcrumbs: BreadcrumbItem[] = [
-    { label: currentLocale === 'ru' ? 'Главная' : 'Home', href: currentLocale === 'ru' ? '/ru' : '/' },
-    { label: currentLocale === 'ru' ? 'Все Инструменты' : 'All Tools', href: currentLocale === 'ru' ? '/ru/tools' : '/tools' },
+    { 
+      label: currentLocale === 'ru' ? 'Главная' : currentLocale === 'de' ? 'Startseite' : 'Home', 
+      href: currentLocale === 'en' ? '/' : `/${currentLocale}` 
+    },
+    { 
+      label: currentLocale === 'ru' ? 'Все Инструменты' : currentLocale === 'de' ? 'Alle Werkzeuge' : 'All Tools', 
+      href: currentLocale === 'en' ? '/tools' : `/${currentLocale}/tools` 
+    },
     { label: translations?.title || customTitle || 'Category' }
   ];
 

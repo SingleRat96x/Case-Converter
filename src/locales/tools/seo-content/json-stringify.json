@@ -352,5 +352,182 @@
         ]
       }
     }
+  },
+  "de": {
+    "title": "Kostenloses JSON-Stringify-Tool – JSON formatieren, parsen & validieren",
+    "metaDescription": "Formatieren, stringify und parsen Sie JSON mit anpassbaren Optionen. Kostenloses Online-Tool mit Pretty-Print, Schlüsselsortierung, Validierung und Syntax-Highlighting für Entwickler.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloses JSON-Stringify-Tool – JSON formatieren, parsen & validieren",
+        "content": "Bearbeiten Sie JSON-Daten mit unserem umfassenden Online-Tool. Unterstützt Pretty-Printing, Schlüsselsortierung, Validierung, individuelle Einrückungen sowie Unicode- und Kommentarsteuerung. Ideal für API-Entwicklung, Debugging und Datenverarbeitung."
+      },
+      "features": {
+        "title": "Leistungsstarke JSON-Funktionen",
+        "items": [
+          {
+            "title": "Bidirektionale Verarbeitung",
+            "description": "JSON-Objekte in sauber formatierte Strings umwandeln oder Strings zurück in formatiertes JSON parsen – inklusive schnellem Moduswechsel."
+          },
+          {
+            "title": "Flexible Formatierung",
+            "description": "Zwischen lesbarer und kompakter Ausgabe wählen, Einrückung (2/4/8 Leerzeichen) oder eigenen Wert festlegen."
+          },
+          {
+            "title": "Schlüsselsortierung",
+            "description": "Objektschlüssel automatisch alphabetisch sortieren, um konsistente Ausgaben und bessere Vergleichbarkeit zu erzielen."
+          },
+          {
+            "title": "Unicode & Escape-Steuerung",
+            "description": "Unicode-Zeichen escapen, um ASCII-kompatible Ausgaben zu generieren oder internationale Zeichen beizubehalten."
+          },
+          {
+            "title": "Kommentarentfernung",
+            "description": "In der Parse-Ansicht ein- oder mehrzeilige Kommentare aus JSON-ähnlichen Dateien entfernen."
+          },
+          {
+            "title": "Echtzeit-Analysen",
+            "description": "Statistiken zu Größe, Elementanzahl, Tiefe und Komprimierung direkt im Tool anzeigen."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien",
+        "description": "Setzen Sie das JSON-Stringify-Tool für diverse Entwicklungs- und Daten-Workflows ein.",
+        "items": [
+          {
+            "title": "API-Entwicklung",
+            "description": "Requests und Responses formatieren, validieren und für Dokumentation oder Tests vorbereiten."
+          },
+          {
+            "title": "Debugging & Testing",
+            "description": "JSON aus Logs oder Fehlerberichten lesbar machen und Strukturprobleme schneller erkennen."
+          },
+          {
+            "title": "Konfigurationsdateien",
+            "description": "Konfigurationsdateien wie config.json oder appsettings.json konsistent formatieren."
+          },
+          {
+            "title": "Datenbereinigung",
+            "description": "JSON-Daten aus verschiedenen Quellen säubern, validieren und vereinheitlichen."
+          },
+          {
+            "title": "Code- & Dokumentationsvorbereitung",
+            "description": "Formatierte JSON-Beispiele für Dokumentationen, Schulungen oder Code-Generatoren erstellen."
+          },
+          {
+            "title": "Datenmigration",
+            "description": "JSON zwischen Systemen übertragen, prüfen und standardisieren."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie das JSON-Stringify-Tool",
+        "description": "Vier Schritte von der Eingabe bis zum Export.",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Modus wählen",
+            "description": "Entscheiden Sie, ob Sie JSON stringify ausgeben oder Strings parsen und formatieren möchten."
+          },
+          {
+            "step": 2,
+            "title": "JSON eingeben",
+            "description": "JSON direkt einfügen oder eine Datei für die Verarbeitung hochladen."
+          },
+          {
+            "step": 3,
+            "title": "Optionen einstellen",
+            "description": "Einrückung, Sortierung, Unicode-Escaping und Kommentarentfernung im Optionsbereich konfigurieren."
+          },
+          {
+            "step": 4,
+            "title": "Prüfen & exportieren",
+            "description": "Ausgabe analysieren, Statistiken prüfen und Ergebnis kopieren oder herunterladen."
+          }
+        ]
+      },
+      "examples": {
+        "title": "JSON-Stringify-Beispiele",
+        "description": "Beispiele für formatierte Objekte, Arrays und verschachtelte Strukturen.",
+        "items": [
+          {
+            "title": "Objekt-Formatting",
+            "input": "{\"name\":\"Anna\",\"age\":28,\"city\":\"Berlin\"}",
+            "output": "{\n  \"name\": \"Anna\",\n  \"age\": 28,\n  \"city\": \"Berlin\"\n}"
+          },
+          {
+            "title": "Array-Verarbeitung",
+            "input": "[{\"id\":1,\"active\":true},{\"id\":2,\"active\":false}]",
+            "output": "[\n  {\n    \"id\": 1,\n    \"active\": true\n  },\n  {\n    \"id\": 2,\n    \"active\": false\n  }\n]"
+          },
+          {
+            "title": "Verschachtelte Struktur",
+            "input": "{\"user\":{\"profile\":{\"name\":\"Max\",\"settings\":{\"theme\":\"dark\"}}}}",
+            "output": "{\n  \"user\": {\n    \"profile\": {\n      \"name\": \"Max\",\n      \"settings\": {\n        \"theme\": \"dark\"\n      }\n    }\n  }\n}"
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Vorteile unseres JSON-Tools",
+        "content": "Alles, was Sie für zuverlässige JSON-Verarbeitung brauchen.",
+        "items": [
+          "Sofortige Verarbeitung in beide Richtungen",
+          "Anpassbare Einrückung und Ausgabeformate",
+          "Alphabetische Schlüsselsortierung auf Wunsch",
+          "Unicode-Escaping für ASCII-Workflows",
+          "Kommentarentfernung für JSON-ähnliche Dateien",
+          "Statistiken und Tiefenanalysen in Echtzeit",
+          "Datenschutzfreundlich – läuft komplett im Browser",
+          "Kostenlos nutzbar ohne Anmeldung"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Worin unterscheiden sich Stringify- und Parse-Modus?",
+          "answer": "Stringify konvertiert Objekte in Strings mit sauberer Einrückung. Parse nimmt JSON-Strings, validiert sie und formatiert sie lesbar."
+        },
+        {
+          "question": "Kann ich Schlüssel alphabetisch sortieren?",
+          "answer": "Ja, aktivieren Sie „Schlüssel sortieren“, um Objekt-Schlüssel rekursiv zu ordnen – hilfreich für Vergleiche und Versionskontrolle."
+        },
+        {
+          "question": "Wozu dient Unicode-Escaping?",
+          "answer": "Unicode-Escaping ersetzt Nicht-ASCII-Zeichen durch \\uXXXX-Sequenzen und sorgt für Kompatibilität mit ASCII-basierten Systemen."
+        },
+        {
+          "question": "Werden Kommentare erkannt und entfernt?",
+          "answer": "Im Parse-Modus können ein- und mehrzeilige Kommentare entfernt werden, bevor das JSON verarbeitet wird."
+        },
+        {
+          "question": "Wie läuft die Validierung ab?",
+          "answer": "Das Tool prüft die JSON-Syntax in Echtzeit und zeigt Fehler inkl. Zeilen-/Spaltenangaben an, damit Sie Probleme sofort beheben können."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte JSON- & Datentools",
+        "items": [
+          {
+            "name": "CSV-zu-JSON-Konverter",
+            "description": "CSV-Daten in JSON-Strukturen umwandeln",
+            "href": "/de/tools/csv-to-json"
+          },
+          {
+            "name": "Base64-Encoder/Decoder",
+            "description": "Daten mit Base64 kodieren oder dekodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Textzähler",
+            "description": "Textstatistiken und Strukturen analysieren",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "URL-Konverter",
+            "description": "URLs sicher kodieren und dekodieren",
+            "href": "/de/tools/url-converter"
+          }
+        ]
+      }
+    }
   }
 }

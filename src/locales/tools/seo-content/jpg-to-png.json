@@ -10,112 +10,44 @@
       "features": {
         "title": "Advanced JPG to PNG Conversion Features",
         "items": [
-          {
-            "title": "Transparency Support",
-            "description": "Enable transparency to remove solid backgrounds or preserve existing transparency for professional graphics"
-          },
-          {
-            "title": "Lossless Quality",
-            "description": "PNG format preserves every pixel without compression artifacts, maintaining perfect image quality"
-          },
-          {
-            "title": "Multiple Quality Settings",
-            "description": "Choose from Max, High, Medium, or Low quality settings to balance file size and image clarity"
-          },
-          {
-            "title": "Background Color Control",
-            "description": "Set custom background colors when transparency is disabled for consistent branding"
-          },
-          {
-            "title": "Compression Options",
-            "description": "Select from None, Fast, or Best compression methods to optimize file size and processing speed"
-          },
-          {
-            "title": "Instant Conversion",
-            "description": "Real-time processing with immediate preview and download of your converted PNG images"
-          }
+          { "title": "Transparency Support", "description": "Enable transparency to remove solid backgrounds or preserve existing transparency for professional graphics" },
+          { "title": "Lossless Quality", "description": "PNG format preserves every pixel without compression artifacts, maintaining perfect image quality" },
+          { "title": "Multiple Quality Settings", "description": "Choose from Max, High, Medium, or Low quality settings to balance file size and image clarity" },
+          { "title": "Background Color Control", "description": "Set custom background colors when transparency is disabled for consistent branding" },
+          { "title": "Compression Options", "description": "Select from None, Fast, or Best compression methods to optimize file size and processing speed" },
+          { "title": "Instant Conversion", "description": "Real-time processing with immediate preview and download of your converted PNG images" }
         ]
       },
       "howToUse": {
         "title": "How to Convert JPG to PNG Online",
         "description": "Follow these simple steps to convert your JPEG images to PNG format:",
         "steps": [
-          {
-            "step": 1,
-            "title": "Upload Your JPG Image",
-            "description": "Click or drag and drop to upload JPG or JPEG files up to 10MB in size."
-          },
-          {
-            "step": 2,
-            "title": "Configure Settings",
-            "description": "Choose quality level, enable transparency if needed, set background color, and select compression method."
-          },
-          {
-            "step": 3,
-            "title": "Preview Results",
-            "description": "View the converted PNG image with real-time preview and file size comparison."
-          },
-          {
-            "step": 4,
-            "title": "Download PNG",
-            "description": "Download your converted PNG image instantly or copy to clipboard for immediate use."
-          }
+          { "step": 1, "title": "Upload Your JPG Image", "description": "Click or drag and drop to upload JPG or JPEG files up to 10MB in size." },
+          { "step": 2, "title": "Configure Settings", "description": "Choose quality level, enable transparency if needed, set background color, and select compression method." },
+          { "step": 3, "title": "Preview Results", "description": "View the converted PNG image with real-time preview and file size comparison." },
+          { "step": 4, "title": "Download PNG", "description": "Download your converted PNG image instantly or copy to clipboard for immediate use." }
         ]
       },
       "examples": {
         "title": "JPG to PNG Conversion Examples",
         "description": "See how different conversion settings transform your images:",
         "items": [
-          {
-            "input": "Product photo JPG 2000×2000px (800KB)",
-            "output": "PNG with transparency 2000×2000px (1.2MB)",
-            "description": "Perfect for e-commerce with transparent backgrounds"
-          },
-          {
-            "input": "Logo design JPEG 1200×600px (150KB)",
-            "output": "Lossless PNG 1200×600px (400KB)",
-            "description": "Preserve crisp edges and text for brand materials"
-          },
-          {
-            "input": "Screenshot JPG 1920×1080px (300KB)",
-            "output": "High-quality PNG 1920×1080px (2.1MB)",
-            "description": "Maintain pixel-perfect clarity for documentation"
-          },
-          {
-            "input": "Graphic design JPEG with gradients",
-            "output": "PNG with preserved quality and transparency",
-            "description": "Eliminate compression artifacts in smooth gradients"
-          }
+          { "input": "Product photo JPG 2000×2000px (800KB)", "output": "PNG with transparency 2000×2000px (1.2MB)", "description": "Perfect for e-commerce with transparent backgrounds" },
+          { "input": "Logo design JPEG 1200×600px (150KB)", "output": "Lossless PNG 1200×600px (400KB)", "description": "Preserve crisp edges and text for brand materials" },
+          { "input": "Screenshot JPG 1920×1080px (300KB)", "output": "High-quality PNG 1920×1080px (2.1MB)", "description": "Maintain pixel-perfect clarity for documentation" },
+          { "input": "Graphic design JPEG with gradients", "output": "PNG with preserved quality and transparency", "description": "Eliminate compression artifacts in smooth gradients" }
         ]
       },
       "useCases": {
         "title": "Common JPG to PNG Conversion Use Cases",
         "description": "Discover when and why to convert JPEG images to PNG format:",
         "items": [
-          {
-            "title": "Web Design & Development",
-            "description": "Convert images that need transparency support for overlays, logos, icons, and UI elements with clean edges."
-          },
-          {
-            "title": "Graphics & Logo Design",
-            "description": "Preserve sharp edges, text clarity, and eliminate compression artifacts in logos, icons, and graphic elements."
-          },
-          {
-            "title": "E-commerce Product Images",
-            "description": "Create product images with transparent backgrounds for consistent presentation across different website themes."
-          },
-          {
-            "title": "Print Design Preparation",
-            "description": "Convert to PNG for lossless quality when preparing images for print materials, brochures, and high-quality publications."
-          },
-          {
-            "title": "Screenshot Documentation",
-            "description": "Maintain pixel-perfect clarity in screenshots, tutorials, and technical documentation without compression blur."
-          },
-          {
-            "title": "Digital Art & Illustrations",
-            "description": "Preserve artistic details, sharp lines, and color accuracy in digital artwork and detailed illustrations."
-          }
+          { "title": "Web Design & Development", "description": "Convert images that need transparency support for overlays, logos, icons, and UI elements with clean edges." },
+          { "title": "Graphics & Logo Design", "description": "Preserve sharp edges, text clarity, and eliminate compression artifacts in logos, icons, and graphic elements." },
+          { "title": "E-commerce Product Images", "description": "Create product images with transparent backgrounds for consistent presentation across different website themes." },
+          { "title": "Print Design Preparation", "description": "Convert to PNG for lossless quality when preparing images for print materials, brochures, and high-quality publications." },
+          { "title": "Screenshot Documentation", "description": "Maintain pixel-perfect clarity in screenshots, tutorials, and technical documentation without compression blur." },
+          { "title": "Digital Art & Illustrations", "description": "Preserve artistic details, sharp lines, and color accuracy in digital artwork and detailed illustrations." }
         ]
       },
       "benefits": {
@@ -137,61 +69,21 @@
         "title": "Related Image Conversion & Editing Tools",
         "description": "Explore other useful tools for image format conversion and optimization:",
         "items": [
-          {
-            "name": "PNG to JPG Converter",
-            "description": "Convert PNG images to JPEG format for smaller file sizes and web optimization",
-            "href": "/tools/png-to-jpg"
-          },
-          {
-            "name": "Image Resizer",
-            "description": "Resize images to specific dimensions while maintaining quality and aspect ratios",
-            "href": "/tools/image-resizer"
-          },
-          {
-            "name": "Image Cropper",
-            "description": "Crop images to specific areas and aspect ratios for social media and web design",
-            "href": "/tools/image-cropper"
-          },
-          {
-            "name": "WebP Converter",
-            "description": "Convert images to modern WebP format for faster web loading and better compression",
-            "href": "/tools/png-to-webp"
-          }
+          { "name": "PNG to JPG Converter", "description": "Convert PNG images to JPEG format for smaller file sizes and web optimization", "href": "/tools/png-to-jpg" },
+          { "name": "Image Resizer", "description": "Resize images to specific dimensions while maintaining quality and aspect ratios", "href": "/tools/image-resizer" },
+          { "name": "Image Cropper", "description": "Crop images to specific areas and aspect ratios for social media and web design", "href": "/tools/image-cropper" },
+          { "name": "WebP Converter", "description": "Convert images to modern WebP format for faster web loading and better compression", "href": "/tools/png-to-webp" }
         ]
       },
       "faqs": [
-        {
-          "question": "What's the difference between JPG and PNG formats?",
-          "answer": "JPG uses lossy compression that reduces file size but may lose some image quality, while PNG uses lossless compression that preserves every pixel perfectly. PNG also supports transparency, making it ideal for graphics, logos, and images that need transparent backgrounds."
-        },
-        {
-          "question": "Will converting JPG to PNG improve image quality?",
-          "answer": "Converting won't recover quality already lost in the original JPG, but PNG will prevent further quality loss and preserve the current image exactly as it is. PNG is better for images with text, sharp edges, or when you need transparency support."
-        },
-        {
-          "question": "Why are PNG files larger than JPG files?",
-          "answer": "PNG files are typically larger because they use lossless compression, preserving every pixel of the original image. JPG files are smaller due to lossy compression that removes some image data. The trade-off is between file size and perfect quality preservation."
-        },
-        {
-          "question": "Can I remove the background when converting JPG to PNG?",
-          "answer": "Our converter can enable transparency support, but it won't automatically remove backgrounds. You'll need to use image editing software to remove backgrounds first, then convert to PNG to preserve the transparency."
-        },
-        {
-          "question": "Is there a file size limit for JPG to PNG conversion?",
-          "answer": "Yes, we support JPEG files up to 10MB in size. This covers most high-resolution photos and graphics. Larger files may cause slower processing, so we recommend optimizing very large images before conversion."
-        },
-        {
-          "question": "Are my images stored on your servers during conversion?",
-          "answer": "No, your privacy is completely protected. All image conversion happens directly in your browser using client-side JavaScript. Your images are never uploaded to our servers or stored anywhere. They remain completely private on your device."
-        },
-        {
-          "question": "When should I use PNG instead of JPG?",
-          "answer": "Use PNG for images with text, logos, graphics with sharp edges, images requiring transparency, screenshots, and when you need lossless quality. Use JPG for photographs and images where smaller file size is more important than perfect quality."
-        },
-        {
-          "question": "Can I convert multiple JPG files to PNG at once?",
-          "answer": "Currently, you process images one at a time, but our tool maintains your settings between conversions, making it easy to process multiple images with the same quality and compression settings quickly and consistently."
-        }
+        { "question": "What's the difference between JPG and PNG formats?", "answer": "JPG uses lossy compression that reduces file size but may lose some image quality, while PNG uses lossless compression that preserves every pixel perfectly. PNG also supports transparency, making it ideal for graphics, logos, and images that need transparent backgrounds." },
+        { "question": "Will converting JPG to PNG improve image quality?", "answer": "Converting won't recover quality already lost in the original JPG, but PNG will prevent further quality loss and preserve the current image exactly as it is. PNG is better for images with text, sharp edges, or when you need transparency support." },
+        { "question": "Why are PNG files larger than JPG files?", "answer": "PNG files are typically larger because they use lossless compression, preserving every pixel of the original image. JPG files are smaller due to lossy compression that removes some image data. The trade-off is between file size and perfect quality preservation." },
+        { "question": "Can I remove the background when converting JPG to PNG?", "answer": "Our converter can enable transparency support, but it won't automatically remove backgrounds. You'll need to use image editing software to remove backgrounds first, then convert to PNG to preserve the transparency." },
+        { "question": "Is there a file size limit for JPG to PNG conversion?", "answer": "Yes, we support JPEG files up to 10MB in size. This covers most high-resolution photos and graphics. Larger files may cause slower processing, so we recommend optimizing very large images before conversion." },
+        { "question": "Are my images stored on your servers during conversion?", "answer": "No, your privacy is completely protected. All image conversion happens directly in your browser using client-side JavaScript. Your images are never uploaded to our servers or stored anywhere. They remain completely private." },
+        { "question": "When should I use PNG instead of JPG?", "answer": "Use PNG for images with text, logos, graphics with sharp edges, images requiring transparency, screenshots, and when you need lossless quality. Use JPG for photographs and images where smaller file size is more important than perfect quality." },
+        { "question": "Can I convert multiple JPG files to PNG at once?", "answer": "Currently, you process images one at a time, but our tool maintains your settings between conversions, making it easy to process multiple images with the same quality and compression settings quickly and consistently." }
       ]
     }
   },
@@ -206,112 +98,43 @@
       "features": {
         "title": "Продвинутые Функции Конвертации JPG в PNG",
         "items": [
-          {
-            "title": "Поддержка Прозрачности",
-            "description": "Включите прозрачность для удаления сплошных фонов или сохранения существующей прозрачности для профессиональной графики"
-          },
-          {
-            "title": "Качество Без Потерь",
-            "description": "PNG формат сохраняет каждый пиксель без артефактов сжатия, поддерживая идеальное качество изображения"
-          },
-          {
-            "title": "Множественные Настройки Качества",
-            "description": "Выбирайте из Максимального, Высокого, Среднего или Низкого качества для баланса размера файла и четкости изображения"
-          },
-          {
-            "title": "Контроль Цвета Фона",
-            "description": "Устанавливайте пользовательские цвета фона при отключенной прозрачности для постоянного брендинга"
-          },
-          {
-            "title": "Опции Сжатия",
-            "description": "Выбирайте из методов сжатия Нет, Быстрое или Лучшее для оптимизации размера файла и скорости обработки"
-          },
-          {
-            "title": "Мгновенная Конвертация",
-            "description": "Обработка в реальном времени с немедленным предварительным просмотром и загрузкой ваших конвертированных PNG изображений"
-          }
+          { "title": "Поддержка Прозрачности", "description": "Включите прозрачность для удаления сплошных фонов или сохранения существующей прозрачности для профессиональной графики" },
+          { "title": "Качество Без Потерь", "description": "PNG формат сохраняет каждый пиксель без артефактов сжатия, поддерживая идеальное качество изображения" },
+          { "title": "Множественные Настройки Качества", "description": "Выбирайте из Максимального, Высокого, Среднего или Низкого качества для баланса размера файла и четкости изображения" },
+          { "title": "Контроль Цвета Фона", "description": "Устанавливайте пользовательские цвета фона при отключенной прозрачности для постоянного брендинга" },
+          { "title": "Опции Сжатия", "description": "Выбирайте из методов сжатия Нет, Быстрое или Лучшее для оптимизации размера файла и скорости обработки" },
+          { "title": "Мгновенная Конвертация", "description": "Обработка в реальном времени с немедленным предварительным просмотром и загрузкой ваших конвертированных PNG изображений" }
         ]
       },
       "howToUse": {
-        "title": "Как Конвертировать JPG в PNG Онлайн",
-        "description": "Следуйте этим простым шагам для конвертации ваших JPEG изображений в PNG формат:",
+        "title": "Как Конвертировать JPG в PNG Онлайн", "description": "Следуйте этим простым шагам для конвертации ваших JPEG изображений в PNG формат:",
         "steps": [
-          {
-            "step": 1,
-            "title": "Загрузите Ваше JPG Изображение",
-            "description": "Кликните или перетащите для загрузки JPG или JPEG файлов размером до 10МБ."
-          },
-          {
-            "step": 2,
-            "title": "Настройте Параметры",
-            "description": "Выберите уровень качества, включите прозрачность при необходимости, установите цвет фона и выберите метод сжатия."
-          },
-          {
-            "step": 3,
-            "title": "Просмотрите Результаты",
-            "description": "Просмотрите конвертированное PNG изображение с предварительным просмотром в реальном времени и сравнением размера файла."
-          },
-          {
-            "step": 4,
-            "title": "Скачайте PNG",
-            "description": "Скачайте ваше конвертированное PNG изображение мгновенно или скопируйте в буфер обмена для немедленного использования."
-          }
+          { "step": 1, "title": "Загрузите Ваше JPG Изображение", "description": "Кликните или перетащите для загрузки JPG или JPEG файлов размером до 10МБ." },
+          { "step": 2, "title": "Настройте Параметры", "description": "Выберите уровень качества, включите прозрачность при необходимости, установите цвет фона и выберите метод сжатия." },
+          { "step": 3, "title": "Просмотрите Результаты", "description": "Просмотрите конвертированное PNG изображение с предварительным просмотром в реальном времени и сравнением размера файла." },
+          { "step": 4, "title": "Скачайте PNG", "description": "Скачайте ваше конвертированное PNG изображение мгновенно или скопируйте в буфер обмена для немедленного использования." }
         ]
       },
       "examples": {
         "title": "Примеры Конвертации JPG в PNG",
         "description": "Посмотрите, как различные настройки конвертации преобразуют ваши изображения:",
         "items": [
-          {
-            "input": "Фото товара JPG 2000×2000px (800КБ)",
-            "output": "PNG с прозрачностью 2000×2000px (1.2МБ)",
-            "description": "Идеально для e-commerce с прозрачными фонами"
-          },
-          {
-            "input": "Дизайн логотипа JPEG 1200×600px (150КБ)",
-            "output": "PNG без потерь 1200×600px (400КБ)",
-            "description": "Сохранение четких краев и текста для брендовых материалов"
-          },
-          {
-            "input": "Скриншот JPG 1920×1080px (300КБ)",
-            "output": "Высококачественный PNG 1920×1080px (2.1МБ)",
-            "description": "Поддержание пиксель-идеальной четкости для документации"
-          },
-          {
-            "input": "Графический дизайн JPEG с градиентами",
-            "output": "PNG с сохраненным качеством и прозрачностью",
-            "description": "Устранение артефактов сжатия в плавных градиентах"
-          }
+          { "input": "Фото товара JPG 2000×2000px (800КБ)", "output": "PNG с прозрачностью 2000×2000px (1.2МБ)", "description": "Идеально для e-commerce с прозрачными фонами" },
+          { "input": "Дизайн логотипа JPEG 1200×600px (150КБ)", "output": "PNG без потерь 1200×600px (400КБ)", "description": "Сохранение четких краев и текста для брендовых материалов" },
+          { "input": "Скриншот JPG 1920×1080px (300КБ)", "output": "Высококачественный PNG 1920×1080px (2.1МБ)", "description": "Поддержание пиксель-идеальной четкости для документации" },
+          { "input": "Графический дизайн JPEG с градиентами", "output": "PNG с сохраненным качеством и прозрачностью", "description": "Устранение артефактов сжатия в плавных градиентах" }
         ]
       },
       "useCases": {
         "title": "Обычные Случаи Использования Конвертации JPG в PNG",
         "description": "Откройте, когда и почему конвертировать JPEG изображения в PNG формат:",
         "items": [
-          {
-            "title": "Веб-Дизайн и Разработка",
-            "description": "Конвертируйте изображения, которым нужна поддержка прозрачности для наложений, логотипов, иконок и UI элементов с чистыми краями."
-          },
-          {
-            "title": "Графика и Дизайн Логотипов",
-            "description": "Сохраняйте острые края, четкость текста и устраняйте артефакты сжатия в логотипах, иконках и графических элементах."
-          },
-          {
-            "title": "Изображения Товаров E-commerce",
-            "description": "Создавайте изображения товаров с прозрачными фонами для постоянной презентации в различных темах сайтов."
-          },
-          {
-            "title": "Подготовка Печатного Дизайна",
-            "description": "Конвертируйте в PNG для качества без потерь при подготовке изображений для печатных материалов, брошюр и высококачественных публикаций."
-          },
-          {
-            "title": "Документация Скриншотов",
-            "description": "Поддерживайте пиксель-идеальную четкость в скриншотах, учебниках и технической документации без размытия сжатия."
-          },
-          {
-            "title": "Цифровое Искусство и Иллюстрации",
-            "description": "Сохраняйте художественные детали, острые линии и точность цветов в цифровом искусстве и детальных иллюстрациях."
-          }
+          { "title": "Веб-Дизайн и Разработка", "description": "Конвертируйте изображения, которым нужна поддержка прозрачности для наложений, логотипов, иконок и UI элементов с чистыми краями." },
+          { "title": "Графика и Дизайн Логотипов", "description": "Сохраняйте острые края, четкость текста и устраняйте артефакты сжатия в логотипах, иконках и графических элементах." },
+          { "title": "Изображения Товаров E-commerce", "description": "Создавайте изображения товаров с прозрачными фонами для постоянной презентации в различных темах сайтов." },
+          { "title": "Подготовка Печатного Дизайна", "description": "Конвертируйте в PNG для качества без потерь при подготовке изображений для печатных материалов, брошюр и высококачественных публикаций." },
+          { "title": "Документация Скриншотов", "description": "Поддерживайте пиксель-идеальную четкость в скриншотах, учебниках и технической документации без размытия сжатия." },
+          { "title": "Цифровое Искусство и Иллюстрации", "description": "Сохраняйте художественные детали, острые линии и точность цветов в цифровом искусстве и детальных иллюстрациях." }
         ]
       },
       "benefits": {
@@ -333,62 +156,111 @@
         "title": "Связанные Инструменты Конвертации и Редактирования Изображений",
         "description": "Изучите другие полезные инструменты для конвертации форматов изображений и оптимизации:",
         "items": [
-          {
-            "name": "Конвертер PNG в JPG",
-            "description": "Конвертируйте PNG изображения в JPEG формат для меньших размеров файлов и веб-оптимизации",
-            "href": "/tools/png-to-jpg"
-          },
-          {
-            "name": "Изменитель Размера Изображений",
-            "description": "Изменяйте размер изображений до определенных размеров сохраняя качество и пропорции",
-            "href": "/tools/image-resizer"
-          },
-          {
-            "name": "Обрезчик Изображений",
-            "description": "Обрезайте изображения до определенных областей и пропорций для социальных сетей и веб-дизайна",
-            "href": "/tools/image-cropper"
-          },
-          {
-            "name": "Конвертер WebP",
-            "description": "Конвертируйте изображения в современный WebP формат для более быстрой веб-загрузки и лучшего сжатия",
-            "href": "/tools/png-to-webp"
-          }
+          { "name": "Конвертер PNG в JPG", "description": "Конвертируйте PNG изображения в JPEG формат для меньших размеров файлов и веб-оптимизации", "href": "/tools/png-to-jpg" },
+          { "name": "Изменитель Размера Изображений", "description": "Изменяйте размер изображений до определенных размеров сохраняя качество и пропорции", "href": "/tools/image-resizer" },
+          { "name": "Обрезчик Изображений", "description": "Обрезайте изображения до определенных областей и пропорций для социальных сетей и веб-дизайна", "href": "/tools/image-cropper" },
+          { "name": "Конвертер WebP", "description": "Конвертируйте изображения в современный WebP формат для более быстрой веб-загрузки и лучшего сжатия", "href": "/tools/png-to-webp" }
         ]
       },
       "faqs": [
-        {
-          "question": "В чем разница между JPG и PNG форматами?",
-          "answer": "JPG использует сжатие с потерями, которое уменьшает размер файла, но может терять некоторое качество изображения, в то время как PNG использует сжатие без потерь, которое сохраняет каждый пиксель идеально. PNG также поддерживает прозрачность, что делает его идеальным для графики, логотипов и изображений, которым нужны прозрачные фоны."
-        },
-        {
-          "question": "Улучшит ли конвертация JPG в PNG качество изображения?",
-          "answer": "Конвертация не восстановит качество, уже потерянное в исходном JPG, но PNG предотвратит дальнейшую потерю качества и сохранит текущее изображение точно таким, какое оно есть. PNG лучше для изображений с текстом, острыми краями или когда вам нужна поддержка прозрачности."
-        },
-        {
-          "question": "Почему PNG файлы больше JPG файлов?",
-          "answer": "PNG файлы обычно больше, потому что они используют сжатие без потерь, сохраняя каждый пиксель исходного изображения. JPG файлы меньше из-за сжатия с потерями, которое удаляет некоторые данные изображения. Компромисс между размером файла и идеальным сохранением качества."
-        },
-        {
-          "question": "Могу ли я удалить фон при конвертации JPG в PNG?",
-          "answer": "Наш конвертер может включить поддержку прозрачности, но он не будет автоматически удалять фоны. Вам понадобится использовать программу редактирования изображений для удаления фонов сначала, затем конвертировать в PNG для сохранения прозрачности."
-        },
-        {
-          "question": "Есть ли ограничение размера файла для конвертации JPG в PNG?",
-          "answer": "Да, мы поддерживаем JPEG файлы размером до 10МБ. Это покрывает большинство фотографий и графики высокого разрешения. Большие файлы могут вызвать более медленную обработку, поэтому мы рекомендуем оптимизировать очень большие изображения перед конвертацией."
-        },
-        {
-          "question": "Сохраняются ли мои изображения на ваших серверах во время конвертации?",
-          "answer": "Нет, ваша приватность полностью защищена. Вся конвертация изображений происходит непосредственно в вашем браузере используя клиентский JavaScript. Ваши изображения никогда не загружаются на наши серверы и не сохраняются где-либо. Они остаются полностью приватными на вашем устройстве."
-        },
-        {
-          "question": "Когда следует использовать PNG вместо JPG?",
-          "answer": "Используйте PNG для изображений с текстом, логотипов, графики с острыми краями, изображений требующих прозрачности, скриншотов и когда вам нужно качество без потерь. Используйте JPG для фотографий и изображений, где меньший размер файла важнее идеального качества."
-        },
-        {
-          "question": "Могу ли я конвертировать множественные JPG файлы в PNG одновременно?",
-          "answer": "В настоящее время вы обрабатываете изображения по одному, но наш инструмент сохраняет ваши настройки между конвертациями, что делает легким обработку множественных изображений с одинаковыми настройками качества и сжатия быстро и постоянно."
-        }
+        { "question": "В чем разница между JPG и PNG форматами?", "answer": "JPG использует сжатие с потерями, которое уменьшает размер файла..." },
+        { "question": "Улучшит ли конвертация JPG в PNG качество изображения?", "answer": "Конвертация не восстановит качество..." },
+        { "question": "Почему PNG файлы больше JPG файлов?", "answer": "PNG файлы обычно больше..." },
+        { "question": "Могу ли я удалить фон при конвертации JPG в PNG?", "answer": "Наш конвертер может включить поддержку прозрачности..." },
+        { "question": "Есть ли ограничение размера файла для конвертации JPG в PNG?", "answer": "Да, мы поддерживаем JPEG файлы размером до 10МБ..." },
+        { "question": "Сохраняются ли мои изображения на ваших серверах во время конвертации?", "answer": "Нет, ваша приватность полностью защищена..." },
+        { "question": "Когда следует использовать PNG вместо JPG?", "answer": "Используйте PNG для изображений с текстом..." },
+        { "question": "Могу ли я конвертировать множественные JPG файлы в PNG одновременно?", "answer": "В настоящее время вы обрабатываете изображения по одному..." }
+      ]
+    }
+  },
+  "de": {
+    "title": "Kostenloser JPG-zu-PNG-Konverter – JPEG in PNG mit Transparenz umwandeln",
+    "metaDescription": "Konvertieren Sie JPG/JPEG-Bilder online in PNG mit Transparenzunterstützung und verlustfreier Qualität. Perfekt für Webdesign, Logos und Produktfotos – kostenlos und unbegrenzt.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller JPG-zu-PNG-Konverter für saubere Transparenz",
+        "content": "Wandeln Sie JPEG-Bilder in hochwertige PNG-Dateien um – inklusive Transparenz, Qualitätssteuerung und Hintergrundfarbe. Ob für Webdesign, E-Commerce, Marken-Assets oder Druckvorlagen: unser Browser-basiertes Tool liefert perfekte Ergebnisse ohne Upload auf fremde Server."
+      },
+      "features": {
+        "title": "Leistungsstarke JPG-zu-PNG-Funktionen",
+        "items": [
+          { "title": "Transparenz-Unterstützung", "description": "Entfernen oder bewahren Sie Hintergründe, um Logos, Icons oder Produktbilder mit sauberem Alphakanal zu erzeugen." },
+          { "title": "Verlustfreie Qualität", "description": "PNG speichert jeden Pixel unverändert – ideal, wenn Sie scharfe Kanten, Text oder Illustrationen benötigen." },
+          { "title": "Flexible Qualitätsstufen", "description": "Wählen Sie zwischen Max, Hoch, Mittel oder Niedrig, um Dateigröße und Qualität auszubalancieren." },
+          { "title": "Hintergrundfarbe steuern", "description": "Definieren Sie einen Markenfarbton, falls Transparenz deaktiviert ist – so bleiben Designs konsistent." },
+          { "title": "Kompressionsoptionen", "description": "Nutzen Sie Keine, Schnell oder Beste Kompression, um die Ausgabe an Performance- oder Qualitätsziele anzupassen." },
+          { "title": "Sofortige Konvertierung", "description": "Konvertierung, Vorschau und Download erfolgen in Echtzeit direkt im Browser – ohne Wartezeit." }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie JPG in PNG",
+        "description": "In vier Schritten zur perfekten PNG-Datei:",
+        "steps": [
+          { "step": 1, "title": "JPG/JPEG hochladen", "description": "Datei per Klick oder Drag & Drop hinzufügen. Unterstützt bis zu 10 MB." },
+          { "step": 2, "title": "Einstellungen anpassen", "description": "Qualität festlegen, Transparenz aktivieren, Hintergrundfarbe wählen und Kompression bestimmen." },
+          { "step": 3, "title": "Ergebnis prüfen", "description": "PNG-Vorschau und Dateigröße vergleichen, bevor Sie speichern." },
+          { "step": 4, "title": "PNG herunterladen", "description": "Datei sofort downloaden oder in die Zwischenablage kopieren." }
+        ]
+      },
+      "examples": {
+        "title": "Beispiele für JPG-zu-PNG-Konvertierungen",
+        "description": "So verändert die Konvertierung unterschiedliche Inhalte:",
+        "items": [
+          { "input": "Produktfoto JPG 2000×2000 px (800 KB)", "output": "PNG mit Transparenz 2000×2000 px (1,2 MB)", "description": "Ideal für Online-Shops mit flexiblem Hintergrund" },
+          { "input": "Logodesign JPEG 1200×600 px (150 KB)", "output": "PNG ohne Qualitätsverlust 1200×600 px (400 KB)", "description": "Bewahrt scharfe Konturen und Firmenfarben" },
+          { "input": "Screenshot JPG 1920×1080 px (300 KB)", "output": "PNG in hoher Qualität 1920×1080 px (2,1 MB)", "description": "Dokumentiert Interfaces pixelgenau" },
+          { "input": "Grafik mit Farbverläufen", "output": "PNG mit glatten Übergängen und transparenter Fläche", "description": "Entfernt Kompressionsartefakte aus JPEGs" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzgebiete",
+        "description": "Wann sich die Umwandlung besonders lohnt:",
+        "items": [
+          { "title": "Webdesign & UI", "description": "Icons, Overlays und Buttons mit sauberem Alphakanal bereitstellen." },
+          { "title": "Branding & Logos", "description": "Kanten und Texte ohne JPEG-Artefakte bewahren." },
+          { "title": "E-Commerce", "description": "Produktbilder mit transparentem Hintergrund für jeden Shop-Look." },
+          { "title": "Print & Marketing", "description": "Verlustfreie Dateien für Flyer, Broschüren und hochwertige Drucke." },
+          { "title": "Screenshots & Dokus", "description": "Pixelperfekte Darstellung für Tutorials und technische Guides." },
+          { "title": "Digital Art & Illustrationen", "description": "Feine Linien, Farbflächen und Brush-Details unverfälscht sichern." }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "items": [
+          "100 % kostenlos – keine Wasserzeichen oder Limits",
+          "Datenschutzfreundlich – Verarbeitung läuft ausschließlich lokal",
+          "Transparenz-Unterstützung für professionelle Grafiken",
+          "Verlustfreie Qualität – jedes Detail bleibt erhalten",
+          "Live-Vorschau des konvertierten Bildes",
+          "Perfekt auf Mobile & Desktop optimiert",
+          "Mehrere Qualitätsstufen für jeden Workflow",
+          "Hintergrundfarbe wählbar, wenn Transparenz nicht nötig ist",
+          "Sofortige Downloads ohne Wartezeit",
+          "Ergebnisse in Profi-Qualität für Web, Print und Design"
+        ]
+      },
+      "relatedTools": {
+        "title": "Weitere Bild-Tools",
+        "description": "Optimieren Sie Ihre Dateien entlang des gesamten Workflows:",
+        "items": [
+          { "name": "PNG-zu-JPG-Konverter", "description": "PNG in JPG umwandeln, wenn kleinere Dateien gefragt sind", "href": "/de/tools/png-to-jpg" },
+          { "name": "Bildgrößenänderer", "description": "Maße und Seitenverhältnis anpassen, ohne Qualität zu verlieren", "href": "/de/tools/image-resizer" },
+          { "name": "Bild-Zuschneider", "description": "Relevante Bereiche in Sekunden zuschneiden", "href": "/de/tools/image-cropper" },
+          { "name": "WebP-Konverter", "description": "PNG oder JPG in moderne WebP-Dateien verwandeln", "href": "/de/tools/png-to-webp" }
+        ]
+      },
+      "faqs": [
+        { "question": "Worin unterscheidet sich JPG von PNG?", "answer": "JPG nutzt verlustbehaftete Kompression und ist dadurch kleiner, verliert aber Details..." },
+        { "question": "Wird die Bildqualität verbessert?", "answer": "Bereits verlorene Qualität lässt sich nicht zurückholen..." },
+        { "question": "Warum sind PNG-Dateien größer?", "answer": "Weil jedes Pixel unverändert gespeichert wird..." },
+        { "question": "Kann ich Hintergründe automatisch entfernen?", "answer": "Das Tool kann Transparenz speichern..." },
+        { "question": "Gibt es ein Größenlimit?", "answer": "Ja, bis zu 10 MB pro JPG/JPEG..." },
+        { "question": "Werden meine Bilder hochgeladen?", "answer": "Nein. Die komplette Verarbeitung passiert lokal..." },
+        { "question": "Wann sollte ich PNG statt JPG nutzen?", "answer": "Wenn Sie Transparenz, scharfe Texte..." },
+        { "question": "Kann ich mehrere Dateien gleichzeitig konvertieren?", "answer": "Aktuell verarbeiten Sie Bilder einzeln..." }
       ]
     }
   }
 }
+

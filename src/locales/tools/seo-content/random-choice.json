@@ -378,5 +378,87 @@
         }
       ]
     }
+  },
+  "de": {
+    "title": "Kostenloser Zufallsauswahl-Generator – Entscheidungshelfer & Verlosungstool",
+    "metaDescription": "Lassen Sie unseren Zufallsauswahl-Generator faire Entscheidungen treffen. Listen eingeben, Ergebnisse zufällig ziehen und exportieren – ideal für Verlosungen, Teams, Unterricht und Alltagsentscheidungen.",
+    "sections": {
+      "intro": {
+        "title": "Professioneller Zufalls-Entscheider",
+        "content": "Unser Random-Choice-Generator nimmt Ihnen die Entscheidung ab. Ob Gewinnerziehung, Teamaufteilung, Essenswahl oder Brainstorming – Sie geben beliebige Optionen ein und erhalten mit kryptografisch sicherer Zufallslogik sofort eine faire Auswahl. Unterstützt Mehrfachauswahlen, verschiedene Ausgabeformate und den Export per Klick."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen",
+        "items": [
+          { "title": "Beliebige Listen", "description": "Eine Option pro Zeile – funktioniert mit Namen, Aufgaben, Orten, Aktivitäten oder ganzen Sätzen." },
+          { "title": "Mehrere Formate", "description": "Ausgabe als Zeilen, kommaseparierte Liste, nummerierte Liste oder Aufzählungspunkte." },
+          { "title": "Sichere Zufallsquelle", "description": "Verwendet crypto.getRandomValues() für nachweislich faire und unvorhersehbare Ergebnisse." },
+          { "title": "Duplikat-Kontrolle", "description": "Sie entscheiden, ob ein Eintrag mehrfach gezogen werden darf oder nur einmal vorkommt." },
+          { "title": "Bulk-Auswahl", "description": "Bis zu 1.000 Zufallsauswahlen in einem Durchgang – ideal für größere Gewinnspiele." },
+          { "title": "Eingabereinigung", "description": "Entfernt leere Zeilen automatisch und sorgt so für saubere Ergebnisse." },
+          { "title": "Sofortige Ausgabe", "description": "Ergebnisse erscheinen direkt, inklusive Kopier- und Download-Buttons." },
+          { "title": "Kostenlos & unbegrenzt", "description": "Keine Registrierung, keine Limits, keine Wasserzeichen." }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den Zufallsauswahl-Generator",
+        "steps": [
+          { "title": "1. Optionen eingeben", "description": "Schreiben Sie jede Option in eine eigene Zeile – alles ist erlaubt, von Speisen bis Mitarbeitende." },
+          { "title": "2. Anzahl wählen", "description": "Legen Sie fest, wie viele Ergebnisse gezogen werden sollen (1–1.000)." },
+          { "title": "3. Ausgabe konfigurieren", "description": "Format wählen, Duplikate erlauben oder verbieten und leere Zeilen entfernen lassen." },
+          { "title": "4. Zufallsauswahl starten", "description": "Button klicken – unser Tool zieht kryptografisch zufällig aus Ihrer Liste." },
+          { "title": "5. Ergebnis sichern", "description": "Ergebnisse kopieren oder als TXT-Datei herunterladen und teilen." }
+        ]
+      },
+      "examples": {
+        "title": "Anwendungsbeispiele",
+        "items": [
+          { "title": "Restaurantwahl", "input": "Pizza, Burger, Sushi, Tacos, Salad | Menge 1 | Format Zeilen", "output": "Sushi" },
+          { "title": "Gewinnspiel", "input": "John Smith, Mary Johnson, Alex Wilson, Sarah Davis | Menge 2 | Format Nummeriert", "output": "1. Mary Johnson\n2. Alex Wilson" },
+          { "title": "Team-Zuweisung", "input": "Team Alpha, Team Beta, Team Gamma, Team Delta | Menge 3 | Format Aufzählung", "output": "• Team Beta\n• Team Alpha\n• Team Delta" },
+          { "title": "Aktivitätenplan", "input": "Movie Night, Board Games, Hiking, Restaurant | Menge 2 | Format Komma", "output": "Board Games, Hiking" }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzgebiete",
+        "items": [
+          { "title": "Alltagsentscheidungen", "description": "Restaurantwahl, Filmabend, nächste Aktivität – Zufall ersetzt Diskussionen." },
+          { "title": "Gewinnspiele & Giveaways", "description": "Fairer Gewinnerzug aus Teilnehmerlisten – ohne Excel oder Skripte." },
+          { "title": "Teambuilding & Workshops", "description": "Personen zufällig Gruppen zuweisen oder Sprecher:innen bestimmen." },
+          { "title": "Unterricht & Training", "description": "Schüler:innen für Präsentationen auswählen oder Fragen zufällig ziehen." },
+          { "title": "Event-Planung", "description": "Zufällige Themen, Locations oder Spiele bestimmen." },
+          { "title": "Gaming & Kreativität", "description": "Challenges, Charaktere oder Story-Elemente zufällig auswählen." }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "items": [
+          "Zufallsauswahl mit kryptografisch sicherer API",
+          "Keine Vorgaben – beliebige Texte als Optionen",
+          "Flexible Ausgabeformate für jede Situation",
+          "Kontrolle über Duplikate und Menge der Ergebnisse",
+          "Direktes Kopieren oder Download als TXT",
+          "100 % im Browser – keine Datenweitergabe",
+          "Unbegrenzte Nutzung ohne Anmeldung"
+        ]
+      },
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          { "name": "Zufallszahlengenerator", "href": "/de/tools/random-number", "description": "Zahlen für Nummernziehungen oder Statistik erzeugen" },
+          { "name": "Zufallsbuchstaben-Generator", "href": "/de/tools/random-letter", "description": "Zufällige Buchstaben für Spiele, Aufgaben oder Passwörter" },
+          { "name": "Zufallsdatums-Generator", "href": "/de/tools/random-date", "description": "Zufällige Daten für Planung und Tests erstellen" },
+          { "name": "Zufalls-IP-Generator", "href": "/de/tools/random-ip", "description": "IPv4/IPv6-Adressen für Netzwerktests generieren" }
+        ]
+      },
+      "faqs": [
+        { "question": "Wie zufällig sind die Ergebnisse?", "answer": "Wir nutzen crypto.getRandomValues() aus dem Browser. Diese Quelle ist kryptografisch sicher und liefert faire, nicht vorhersagbare Ergebnisse." },
+        { "question": "Kann ich mehrere Gewinner auf einmal ziehen?", "answer": "Ja, bis zu 1.000 Zufallsauswahlen pro Durchlauf – ideal für größere Kampagnen oder mehrere Entscheidungen." },
+        { "question": "Was passiert bei deaktivierten Duplikaten?", "answer": "Jede Option kann nur einmal gezogen werden, bis alle einzigartigen Einträge verbraucht sind. Aktivieren Sie Duplikate, wenn Wiederholungen erlaubt sind." },
+        { "question": "Welche Ausgabeformate gibt es?", "answer": "Zeilen, kommagetrennt, nummerierte Liste oder Aufzählungspunkte – passend für Chat, Mail oder Dokumentation." },
+        { "question": "Gibt es Limits für meine Liste?", "answer": "Nein, Sie können sehr lange Listen einfügen. Das Tool entfernt leere Zeilen automatisch und verarbeitet auch große Mengen zuverlässig." },
+        { "question": "Wie speichere ich die Ergebnisse?", "answer": "Per Klick in die Zwischenablage kopieren oder als Textdatei herunterladen – perfekt zur Dokumentation oder zum Teilen mit Teams." }
+      ]
+    }
   }
 }

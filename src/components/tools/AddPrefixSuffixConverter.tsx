@@ -143,37 +143,57 @@ export function AddPrefixSuffixConverter() {
         </p>
       </div>
 
-      {/* Single Text Area with Stats */}
-      <div className="space-y-3">
-        <div className="flex items-center justify-between">
-          <Label htmlFor="text-input" className="text-sm font-medium">
-            {tool('addPrefixSuffix.inputLabel')}
-          </Label>
-          <div className="flex items-center gap-4 text-xs text-muted-foreground">
-            <span>
-              {lineCount} {lineCount === 1 ? tool('addPrefixSuffix.stats.line') : tool('addPrefixSuffix.stats.lines')}
-            </span>
-            <span>
-              {wordCount} {wordCount === 1 ? tool('addPrefixSuffix.stats.word') : tool('addPrefixSuffix.stats.words')}
-            </span>
-            <span>
-              {charCount} {charCount === 1 ? tool('addPrefixSuffix.stats.character') : tool('addPrefixSuffix.stats.characters')}
-            </span>
+      {/* Text Area and Options - Side by Side on Desktop */}
+      <div className="flex flex-col lg:flex-row gap-6">
+        {/* Text Area Section - 70% on Desktop */}
+        <div className="space-y-3 w-full lg:w-[70%]">
+          <div className="flex items-center justify-between">
+            <Label htmlFor="text-input" className="text-sm font-medium">
+              {tool('addPrefixSuffix.inputLabel')}
+            </Label>
+            <div className="flex items-center gap-4 text-xs text-muted-foreground">
+              <span>
+                {lineCount} {lineCount === 1 ? tool('addPrefixSuffix.stats.line') : tool('addPrefixSuffix.stats.lines')}
+              </span>
+              <span>
+                {wordCount} {wordCount === 1 ? tool('addPrefixSuffix.stats.word') : tool('addPrefixSuffix.stats.words')}
+              </span>
+              <span>
+                {charCount} {charCount === 1 ? tool('addPrefixSuffix.stats.character') : tool('addPrefixSuffix.stats.characters')}
+              </span>
+            </div>
           </div>
+          
+          <textarea
+            id="text-input"
+            value={text}
+            onChange={(e) => handleTextChange(e.target.value)}
+            placeholder={tool('addPrefixSuffix.inputPlaceholder')}
+            className="min-h-[300px] lg:min-h-[400px] w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-mono ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-y"
+            spellCheck={false}
+          />
+          
+          <p className="text-xs text-muted-foreground">
+            {tool('addPrefixSuffix.helperText')}
+          </p>
         </div>
-        
-        <textarea
-          id="text-input"
-          value={text}
-          onChange={(e) => handleTextChange(e.target.value)}
-          placeholder={tool('addPrefixSuffix.inputPlaceholder')}
-          className="min-h-[300px] w-full rounded-lg border border-input bg-background px-4 py-3 text-sm font-mono ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:cursor-not-allowed disabled:opacity-50 resize-y"
-          spellCheck={false}
-        />
-        
-        <p className="text-xs text-muted-foreground">
-          {tool('addPrefixSuffix.helperText')}
-        </p>
+
+        {/* Options Panel - 30% on Desktop */}
+        <div className="w-full lg:w-[30%]">
+          <PrefixSuffixOptions
+            options={options}
+            onOptionsChange={setOptions}
+            translations={{
+              title: tool('addPrefixSuffix.options.title'),
+              prefix: tool('addPrefixSuffix.options.prefix'),
+              prefixPlaceholder: tool('addPrefixSuffix.options.prefixPlaceholder'),
+              suffix: tool('addPrefixSuffix.options.suffix'),
+              suffixPlaceholder: tool('addPrefixSuffix.options.suffixPlaceholder'),
+              ignoreEmptyLabel: tool('addPrefixSuffix.options.ignoreEmptyLabel'),
+              ignoreEmptyDescription: tool('addPrefixSuffix.options.ignoreEmptyDescription')
+            }}
+          />
+        </div>
       </div>
 
       {/* Action Buttons */}
@@ -241,21 +261,6 @@ export function AddPrefixSuffixConverter() {
           </p>
         </div>
       )}
-
-      {/* Options Component */}
-      <PrefixSuffixOptions
-        options={options}
-        onOptionsChange={setOptions}
-        translations={{
-          title: tool('addPrefixSuffix.options.title'),
-          prefix: tool('addPrefixSuffix.options.prefix'),
-          prefixPlaceholder: tool('addPrefixSuffix.options.prefixPlaceholder'),
-          suffix: tool('addPrefixSuffix.options.suffix'),
-          suffixPlaceholder: tool('addPrefixSuffix.options.suffixPlaceholder'),
-          ignoreEmptyLabel: tool('addPrefixSuffix.options.ignoreEmptyLabel'),
-          ignoreEmptyDescription: tool('addPrefixSuffix.options.ignoreEmptyDescription')
-        }}
-      />
     </div>
   );
 }

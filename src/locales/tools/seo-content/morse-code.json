@@ -352,5 +352,182 @@
           ]
         }
     }
+  },
+  "de": {
+    "title": "Kostenloser Morsecode-Übersetzer – Text, Audio & Analyse",
+    "metaDescription": "Übersetzen Sie Text online in Morsecode und zurück. Mit Audio-Wiedergabe, Tempo-Kontrolle, Formatoptionen, Datei-Workflow und Live-Statistiken – kostenlos und ohne Anmeldung.",
+    "sections": {
+      "intro": {
+        "title": "Kostenloser Morsecode-Übersetzer – Text, Audio & Analyse",
+        "content": "Mit diesem Browser-Tool wandeln Sie Klartext binnen Sekunden in Morsecode um und dekodieren eingehende Signale wieder zurück. Die Anwendung liefert Echtzeit-Live-Vorschauen, Statistikmodule und eine Audio-Engine für Training, Unterricht und den Funkbetrieb – alles lokal, ohne Registrierung."
+      },
+      "features": {
+        "title": "Leistungsstarke Funktionen für Morsecode-Profis",
+        "items": [
+          {
+            "title": "Synchroner Zwei-Wege-Converter",
+            "description": "Wechseln Sie jederzeit zwischen Text-zu-Morse und Morse-zu-Text, ohne Ihre Eingaben zu verlieren."
+          },
+          {
+            "title": "Audio-Studio",
+            "description": "Authentische Punkt- und Strichsignale mit fein einstellbarer Geschwindigkeit (5–50 WPM), Frequenz und Lautstärke."
+          },
+          {
+            "title": "Flexible Formatierung",
+            "description": "Nutzen Sie Leerzeichen, Schrägstriche oder Pipes als Trenner, um den Code exakt an Funkprotokolle anzupassen."
+          },
+          {
+            "title": "Live-Statistiken",
+            "description": "Erhalten Sie Punkt-/Strich-Anzahl, Zeichenstatistik und geschätzte Sendedauer in Echtzeit."
+          },
+          {
+            "title": "Datei-Workflow",
+            "description": "Textdateien hochladen, Ergebnisse herunterladen oder direkt kopieren – ideal für Unterricht und Dokumentation."
+          },
+          {
+            "title": "Privacy-First",
+            "description": "Alle Berechnungen laufen lokal im Browser, Ihre Nachrichten verlassen niemals das Gerät."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzgebiete für Morsecode",
+        "description": "Wann lohnt sich eine moderne Morsecode-App im Browser?",
+        "items": [
+          {
+            "title": "Amateurfunk & CW-Prüfung",
+            "description": "Trainieren Sie Prüfungsfragen oder erstellen Sie praxisnahe CW-Übungen für Ihr Funklog."
+          },
+          {
+            "title": "Notfallkommunikation",
+            "description": "Bereiten Sie SOS-Sequenzen und Redundanzen für Katastrophenschutz, Outdoor- oder Bergrettung vor."
+          },
+          {
+            "title": "Ausbildung & Workshops",
+            "description": "Vermitteln Sie Morsecode in Schulen, Maker-Spaces, Pfadfinderlagern oder Technik-AGs."
+          },
+          {
+            "title": "Maritime & Aviation Training",
+            "description": "Reproduzieren Sie Leuchtturm- oder Navigationssignale und erläutern Sie historische Verfahren."
+          },
+          {
+            "title": "Rätsel & Escape Games",
+            "description": "Bauen Sie verschlüsselte Hinweise für Spiele, Geocaching oder Teamevents."
+          },
+          {
+            "title": "Historische Dokumentation",
+            "description": "Entziffern Sie Telegramme und archivierte Funkprotokolle aus Museen oder Privatsammlungen."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "So nutzen Sie den Morsecode-Übersetzer",
+        "description": "Vier Schritte reichen für eine saubere Konvertierung:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Modus definieren",
+            "description": "Wählen Sie Text → Morse oder Morse → Text je nach Aufgabe."
+          },
+          {
+            "step": 2,
+            "title": "Eingabe hinzufügen",
+            "description": "Tippen, einfügen oder via Datei-Upload importieren – das Tool erkennt alles in Echtzeit."
+          },
+          {
+            "step": 3,
+            "title": "Optionen abstimmen",
+            "description": "Passen Sie Trennzeichen, Tempo, Frequenz und Lautstärke an Ihr Szenario an."
+          },
+          {
+            "step": 4,
+            "title": "Audio anhören & Ergebnisse teilen",
+            "description": "Nutzen Sie die Audio-Wiedergabe, analysieren Sie die Statistik und kopieren oder laden Sie das Resultat herunter."
+          }
+        ]
+      },
+      "examples": {
+        "title": "Praxisbeispiele für Morsecode",
+        "description": "Ein Blick auf typische Nachrichten:",
+        "items": [
+          {
+            "title": "Kurze Begrüßung",
+            "input": "GUTEN TAG",
+            "output": "--. ..- - . -. / - .- --."
+          },
+          {
+            "title": "SOS im Notfall",
+            "input": "BRAUCHE HILFE",
+            "output": "-... .-. .- ..- -.-. .... . / .... .. .-.. ..-. ."
+          },
+          {
+            "title": "CQ-Aufruf mit Rapport",
+            "input": "CQ TEST 59",
+            "output": "-.-. --.- / - . ... - / ..... ----."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "content": "Ein moderner Morsecode-Converter für Ausbildung und Praxis:",
+        "items": [
+          "Bidirektionale Konvertierung mit Live-Vorschau",
+          "Audio-Engine mit regelbarer Geschwindigkeit, Frequenz und Lautstärke",
+          "Formatoptionen für internationale Funkstandards",
+          "Detailstatistik über Punkte, Striche, Wörter und Dauer",
+          "Upload- und Download-Workflow für Unterricht und Dokumentation",
+          "Läuft komplett lokal – keine Registrierung, keine Datenerfassung",
+          "Responsive UI für Desktop, Tablet und Smartphone",
+          "Kostenlos nutzbar, jederzeit verfügbar"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Welche Zeichen unterstützt der Übersetzer?",
+          "answer": "Der Converter deckt das internationale Morse-Alphabet inklusive Buchstaben A–Z, Zahlen 0–9 sowie gängige Satzzeichen ab. Sonderzeichen werden nach etablierten CW-Konventionen abgebildet."
+        },
+        {
+          "question": "Wie ändere ich die Wiedergabegeschwindigkeit?",
+          "answer": "Öffnen Sie den Abschnitt \"Audio-Steuerung\" und stellen Sie das Tempo zwischen 5 und 50 WPM ein. Dort finden Sie auch Frequenz- und Lautstärkeregler."
+        },
+        {
+          "question": "Kann ich Morsecode aus Audiodateien importieren?",
+          "answer": "Das Tool unterstützt aktuell Text- und Morsecode-Eingaben. Für Audiodateien benötigen Sie zunächst einen Decoder oder Sie tippen den Morsecode manuell ab."
+        },
+        {
+          "question": "Eignet sich das Tool für den Unterricht?",
+          "answer": "Ja. Lehrkräfte nutzen die Live-Statistiken, Audio-Wiedergabe und Dateifunktionen, um Übungen vorzubereiten oder Lernerfolge zu messen."
+        },
+        {
+          "question": "Benötige ich eine Internetverbindung?",
+          "answer": "Nur für das Laden der Seite. Danach läuft alles offline im Browser, solange die Registerkarte geöffnet bleibt."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Kommunikations- & Kodierungs-Tools",
+        "items": [
+          {
+            "name": "Textzähler",
+            "description": "Zeichen, Wörter und Textstatistiken analysieren",
+            "href": "/de/tools/text-counter"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Text mit Base64 kodieren oder decodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Binärcode-Übersetzer",
+            "description": "Text ↔ Binär inklusive Formatoptionen",
+            "href": "/de/tools/binary-code-translator"
+          },
+          {
+            "name": "Caesar-Verschlüsselung",
+            "description": "Texte per Caesar-Chiffre verschlüsseln & entschlüsseln",
+            "href": "/de/tools/caesar-cipher"
+          }
+        ]
+      }
+    }
   }
 }

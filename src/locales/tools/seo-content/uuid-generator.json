@@ -197,6 +197,204 @@
       ]
     }
   },
+  "de": {
+    "title": "UUID-Generator – Einzigartige Kennungen online erstellen",
+    "metaDescription": "Erzeugen Sie sichere UUIDs der Versionen 1 und 4 mit flexiblen Formaten, Groß-/Kleinschreibung und Bulk-Ausgabe – kostenlos und ohne Anmeldung.",
+    "sections": {
+      "intro": {
+        "title": "Was ist eine UUID?",
+        "content": "Eine UUID (Universally Unique Identifier) ist eine 128-Bit-Kennung, die Objekte und Datensätze weltweit eindeutig identifiziert. Sie wird in Datenbanken, APIs, Microservices oder Messaging-Systemen eingesetzt, weil sie kollisionssicher ist und ohne zentrale Koordination funktioniert."
+      },
+      "features": {
+        "title": "Funktionen unseres UUID-Generators",
+        "items": [
+          {
+            "title": "UUID v1 (zeitbasiert) erstellen",
+            "description": "Generieren Sie deterministische Kennungen, die einen Zeitstempel enthalten – ideal für Audit-Trails."
+          },
+          {
+            "title": "UUID v4 (zufällig) mit Kryptografie",
+            "description": "Nutzen Sie den Web Crypto API für echte Zufallswerte und maximale Sicherheit."
+          },
+          {
+            "title": "Alle gängigen Ausgabeformate",
+            "description": "Standard, kompakt, mit Klammern oder URN – passend für jede Plattform."
+          },
+          {
+            "title": "Bulk-Generierung bis zu 100 UUIDs",
+            "description": "Erstellen Sie ganze Listen auf einen Klick für Tests, Fixtures oder Datenimporte."
+          },
+          {
+            "title": "Groß-/Kleinschreibung & Bindestriche steuern",
+            "description": "Formatieren Sie Ihre UUIDs exakt so, wie Ihr System sie erwartet."
+          },
+          {
+            "title": "Kopieren & Download als TXT",
+            "description": "Speichern Sie Ergebnisse lokal oder fügen Sie sie sofort in Ihr Projekt ein."
+          },
+          {
+            "title": "100 % kostenlos, keine Registrierung",
+            "description": "Sofort nutzen, ohne Konto, Limits oder Werbung, die stört."
+          }
+        ]
+      },
+      "howToUse": {
+        "title": "UUID-Generator in 5 Schritten",
+        "content": "So erzeugen Sie die perfekten Kennungen für Ihren Anwendungsfall:",
+        "steps": [
+          {
+            "step": 1,
+            "title": "Version wählen",
+            "content": "Entscheiden Sie sich für v1 (zeitbasiert) oder v4 (zufällig)."
+          },
+          {
+            "step": 2,
+            "title": "Format auswählen",
+            "content": "Standard, kompakt, mit Klammern oder URN – passend zum Zielsystem."
+          },
+          {
+            "step": 3,
+            "title": "Anzahl festlegen",
+            "content": "Bestimmen Sie über den Schieberegler, wie viele UUIDs Sie benötigen (1–100)."
+          },
+          {
+            "step": 4,
+            "title": "Formatierung anpassen",
+            "content": "Großbuchstaben aktivieren oder Bindestriche entfernen, falls nötig."
+          },
+          {
+            "step": 5,
+            "title": "Generieren & verwenden",
+            "content": "UUIDs erzeugen, kopieren oder als TXT herunterladen – fertig!"
+          }
+        ]
+      },
+      "examples": {
+        "title": "UUID-Formate im Vergleich",
+        "content": "Jedes Format erfüllt andere Anforderungen – hier die wichtigsten Varianten:",
+        "items": [
+          {
+            "input": "Standardformat",
+            "output": "550e8400-e29b-41d4-a716-446655440000",
+            "description": "Der RFC-4122-Klassiker mit Bindestrichen – überall kompatibel."
+          },
+          {
+            "input": "Kompakt",
+            "output": "550e8400e29b41d4a716446655440000",
+            "description": "Ohne Bindestriche für URLs, Dateinamen oder Speicherplatz-Optimierung."
+          },
+          {
+            "input": "Mit Klammern",
+            "output": "{550e8400-e29b-41d4-a716-446655440000}",
+            "description": "Microsoft-konformes Format für Registry und COM."
+          },
+          {
+            "input": "URN",
+            "output": "urn:uuid:550e8400-e29b-41d4-a716-446655440000",
+            "description": "Formale Schreibweise für Spezifikationen und XML-Namespace."
+          }
+        ]
+      },
+      "useCases": {
+        "title": "Typische Einsatzszenarien",
+        "items": [
+          {
+            "title": "Primärschlüssel in Datenbanken",
+            "description": "Globale IDs ohne Auto-Increment-Leaks oder Merge-Konflikte."
+          },
+          {
+            "title": "API- und Sitzungstokens",
+            "description": "Zufällige, nicht erratbare Tokens für Authentifizierung und Rate-Limits."
+          },
+          {
+            "title": "Datei- & Objekt-Namen",
+            "description": "Verhindern Sie Namenskonflikte in Storage, CDN oder S3."
+          },
+          {
+            "title": "Nachrichten-IDs",
+            "description": "Eindeutige Referenzen für Event-Streaming und Messaging-Systeme."
+          },
+          {
+            "title": "Transaktionskennungen",
+            "description": "Nachvollziehbare IDs über Microservices hinweg."
+          },
+          {
+            "title": "Ressourcen in der Cloud",
+            "description": "Services, Queues oder Artefakte konsistent adressieren."
+          },
+          {
+            "title": "Microservices & Event Sourcing",
+            "description": "Saubere Korrelationen zwischen Befehlen, Events und Aggregaten."
+          },
+          {
+            "title": "Testdaten & Fixtures",
+            "description": "Schnell große Mengen eindeutiger Beispielwerte erzeugen."
+          }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieser UUID-Generator?",
+        "content": "Wir kombinieren Entwicklerkomfort mit Privacy-by-Design:",
+        "items": [
+          "Kryptografisch sichere Zufallsquelle (Web Crypto API)",
+          "RFC-4122-konform und daher überall nutzbar",
+          "Alle wichtigen Formate & Bulk-Erstellung",
+          "Keine Server-Calls – alles bleibt im Browser",
+          "Schnelles Kopieren und TXT-Download",
+          "Responsives UI für Desktop & Mobile",
+          "Kostenlos, keine Limits oder Registrierung",
+          "Optimiert für Entwickler-Workflows"
+        ]
+      },
+      "relatedTools": {
+        "title": "Dazu passende Tools",
+        "items": [
+          {
+            "name": "Passwort-Generator",
+            "description": "Starke Passwörter mit individuellen Zeichensätzen erstellen",
+            "href": "/de/tools/password-generator"
+          },
+          {
+            "name": "Zufallszahl-Generator",
+            "description": "Beliebige Zahlenbereiche für Tests und Statistiken",
+            "href": "/de/tools/random-number"
+          },
+          {
+            "name": "Base64 Encoder/Decoder",
+            "description": "Text und Dateien sicher kodieren oder dekodieren",
+            "href": "/de/tools/base64-encoder-decoder"
+          },
+          {
+            "name": "Zufälliger IP-Generator",
+            "description": "IPv4/IPv6-Adressen für Netzwerktests erzeugen",
+            "href": "/de/tools/random-ip"
+          }
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Worin unterscheiden sich UUID v1 und v4?",
+          "answer": "UUID v1 enthält Zeit- (und optional MAC-)Informationen und ist dadurch deterministischer. UUID v4 basiert ausschließlich auf Zufall und eignet sich daher für sichere Tokens oder öffentliche APIs."
+        },
+        {
+          "question": "Sind UUIDs wirklich eindeutig?",
+          "answer": "Die Kollisionwahrscheinlichkeit ist extrem gering (1 zu 2^122 bei v4). Für praktisch alle Anwendungsfälle gelten UUIDs als einzigartig."
+        },
+        {
+          "question": "Darf ich die UUIDs kommerziell nutzen?",
+          "answer": "Ja. UUIDs sind in RFC 4122 standardisiert und können frei in jedem Projekt, Framework oder Produkt verwendet werden."
+        },
+        {
+          "question": "Welches Format sollte ich wählen?",
+          "answer": "Standard funktioniert überall. Kompakt spart Platz, Klammern benötigen manche Microsoft-Stacks und URN verwenden Sie in Spezifikationen oder XML."
+        },
+        {
+          "question": "Wie viele UUIDs kann ich auf einmal erzeugen?",
+          "answer": "Bis zu 100 pro Durchlauf. Für größere Mengen führen Sie den Generator mehrfach aus oder integrieren unsere Logik direkt in Ihren Code."
+        }
+      ]
+    }
+  },
   "ru": {
     "title": "Генератор UUID - Создание Уникальных Идентификаторов Онлайн",
     "metaDescription": "Генерируйте криптографически безопасные UUID (Универсально Уникальные Идентификаторы) для ваших приложений и баз данных. Поддержка UUID v1 и v4 с множественными форматами вывода.",

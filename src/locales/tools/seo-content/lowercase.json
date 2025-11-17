@@ -135,6 +135,110 @@
       }
     }
   },
+  "de": {
+    "title": "Kostenloser Kleinbuchstaben-Konverter – Text sofort kleinschreiben",
+    "metaDescription": "Konvertieren Sie Text sekundenschnell komplett in Kleinbuchstaben – perfekt für konsistente URLs, Variablennamen, Datenbereinigung und SEO.",
+    "sections": {
+      "intro": {
+        "title": "Was macht der Kleinbuchstaben-Konverter?",
+        "content": "Unser kostenloses Tool wandelt jeden Text vollständig in Kleinbuchstaben um – direkt im Browser, ohne Upload und mit Unterstützung für alle Sprachen. Ideal für saubere URLs, Coding-Guidelines, Datenpipelines oder einfach einheitliche Schreibweisen."
+      },
+      "features": {
+        "title": "Funktionen für professionelle Workflows",
+        "items": [
+          { "title": "Live-Konvertierung", "description": "Während Sie tippen oder einfügen, erscheint sofort die kleingeschriebene Ausgabe." },
+          { "title": "Datei-Upload", "description": "Ganze .txt-, .md-, .json-, .js- oder .css-Dateien hochladen und komplett konvertieren." },
+          { "title": "Kopieren & Download", "description": "Ergebnis direkt in die Zwischenablage kopieren oder als TXT speichern." },
+          { "title": "Text-Analytics", "description": "Automatische Statistiken zu Zeichen, Wörtern, Sätzen und mehr." },
+          { "title": "Unicode & Emojis", "description": "Kompatibel mit Umlauten, Akzenten, Emojis und jedem Unicode-Zeichen." },
+          { "title": "100 % privat", "description": "Alle Berechnungen laufen lokal – keine Daten verlassen Ihren Browser." }
+        ]
+      },
+      "useCases": {
+        "title": "Wo Kleinbuchstaben unverzichtbar sind",
+        "description": "Typische Einsatzgebiete für konsistent kleingeschriebenen Text:",
+        "items": [
+          { "title": "URL- und Slug-Generierung", "description": "Pfadnamen standardisieren, um SEO- und Server-Anforderungen zu erfüllen." },
+          { "title": "Programmierung & Variablen", "description": "Identifier, Umgebungsvariablen oder CLI-Befehle angleichen." },
+          { "title": "Datenbanken & APIs", "description": "Spaltennamen, JSON-Keys oder Payloads normalisieren." },
+          { "title": "E-Mail-Adressen", "description": "Case-Sensitivität vermeiden und Eingaben vereinheitlichen." },
+          { "title": "Datei- und Asset-Namen", "description": "Konsequente Benennungen für Systeme mit Case-Sensitivity." },
+          { "title": "CSS & Utility-Klassen", "description": "Namenskonventionen (z. B. BEM, Tailwind) sauber einhalten." },
+          { "title": "Such- & Filterlogik", "description": "Suchbegriffe oder Token vor Vergleichsoperationen normalisieren." },
+          { "title": "Datenbereinigung", "description": "Rohdaten oder CSV-Spalten für Analysen vorbereiten." }
+        ]
+      },
+      "howToUse": {
+        "title": "So konvertieren Sie Text in Kleinbuchstaben",
+        "description": "Vier Schritte bis zur perfekt kleingeschriebenen Ausgabe:",
+        "steps": [
+          { "step": 1, "title": "Text eingeben oder hochladen", "description": "Fügen Sie Text ein, tippen Sie ihn ein oder laden Sie eine Datei hoch." },
+          { "step": 2, "title": "Automatisch kleinschreiben lassen", "description": "Die Ausgabe aktualisiert sich sofort, sobald Sie Text ändern." },
+          { "step": 3, "title": "Analytics prüfen", "description": "Überblick über Zeichen-, Wort-, Satzanzahl und mehr gewinnen." },
+          { "step": 4, "title": "Ergebnis exportieren", "description": "Per Klick kopieren oder als `kleinbuchstaben-text.txt` herunterladen." }
+        ]
+      },
+      "examples": {
+        "title": "Praxisbeispiele",
+        "description": "Ein Blick auf typische Umwandlungen:",
+        "items": [
+          { "title": "Mixed Case", "input": "ThIs Is MiXeD cAsE", "output": "this is mixed case" },
+          { "title": "Mit Zahlen", "input": "Version 2.5.1", "output": "version 2.5.1" },
+          { "title": "Email-Adresse", "input": "User@EXAMPLE.COM", "output": "user@example.com" },
+          { "title": "Sonderzeichen", "input": "Grüße AUS München!", "output": "grüße aus münchen!" }
+        ]
+      },
+      "benefits": {
+        "title": "Warum dieses Tool?",
+        "content": "Für Entwickler:innen, Redaktionen und Data-Teams optimiert:",
+        "items": [
+          "Unbegrenzt kostenlos nutzbar",
+          "Keine Anmeldung, kein Tracking",
+          "Client-side only – DSGVO-konform",
+          "Sofortige Ergebnisse ohne Reload",
+          "Mehrsprachig & emoji-sicher",
+          "Inklusive Text-Statistiken",
+          "Responsives UI für Desktop & Mobile",
+          "Funktioniert offline im Browser (PWA-kompatibel)"
+        ]
+      },
+      "faqs": [
+        {
+          "question": "Verändert der Konverter Zahlen oder Symbole?",
+          "answer": "Nein. Es werden ausschließlich Buchstaben in Kleinbuchstaben überführt – Zahlen, Emojis und Sonderzeichen bleiben unverändert."
+        },
+        {
+          "question": "Kann ich komplette Dateien umwandeln?",
+          "answer": "Ja. Laden Sie eine beliebige Textdatei hoch (.txt, .md, .json, .js, .css usw.) und wir konvertieren den gesamten Inhalt."
+        },
+        {
+          "question": "Unterstützt das Tool Umlaute und Unicode?",
+          "answer": "Absolut. Egal ob Deutsch, Französisch, Arabisch oder Emojis – alle Unicode-Zeichen werden korrekt verarbeitet."
+        },
+        {
+          "question": "Bleiben meine Daten privat?",
+          "answer": "Ja. Die komplette Verarbeitung geschieht lokal im Browser. Es werden keine Daten an Server übertragen."
+        },
+        {
+          "question": "Gibt es Limits oder Werbung?",
+          "answer": "Nein. Sie können das Tool ohne Limits, Werbung oder Registrierung unbegrenzt oft einsetzen."
+        },
+        {
+          "question": "Was ist mit bereits kleingeschriebenem Text?",
+          "answer": "Bereits kleingeschriebene Buchstaben bleiben identisch, es gibt also keine Formatverluste."
+        }
+      ],
+      "relatedTools": {
+        "title": "Verwandte Tools",
+        "items": [
+          { "name": "Großbuchstaben-Konverter", "description": "Text für Überschriften oder Buttons in Großbuchstaben wandeln", "href": "/de/tools/uppercase" },
+          { "name": "Titel-Konverter", "description": "Jedes Wort automatisch mit Großbuchstaben beginnen lassen", "href": "/de/tools/title-case" },
+          { "name": "Satz-Konverter", "description": "Nur den ersten Buchstaben eines Satzes großschreiben", "href": "/de/tools/sentence-case" },
+          { "name": "Alternating Case", "description": "Kreative AbWeChSeLnDe Schreibweisen erzeugen", "href": "/de/tools/alternating-case" }
+        ]
+      }
+    }
+  },
   "ru": {
     "title": "Бесплатный Онлайн Конвертер Текста в Нижний Регистр",
     "metaDescription": "Мгновенно конвертируйте любой текст в нижний регистр с помощью нашего бесплатного онлайн конвертера. Идеально для единообразия, URL, стандартов кодирования и профессионального форматирования.",
